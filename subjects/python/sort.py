@@ -9,9 +9,6 @@ csv1 = csv.reader(file1,delimiter=",")
 
 sort = sorted(csv1,key=operator.itemgetter(1),reverse = True)
 
-# for eachline in sort:
-#     print eachline
-
 
 project_id = os.path.splitext(os.path.basename(sys.argv[1]))[0]
 
@@ -24,7 +21,7 @@ outputFileWriter = csv.writer(outputFile)
 
 index=0
 while index < len(sort) and index < 10:
-    outputFileWriter.writerow([project_id,sort[index][0],sort[index][1]])
+    outputFileWriter.writerow([project_id,sort[index][0],sort[index][1],sort[index][2]])
     index+=1
 
 
