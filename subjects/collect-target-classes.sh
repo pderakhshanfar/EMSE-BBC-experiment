@@ -17,7 +17,13 @@ do
     IFS=$';' read -rd '' -a classes <<< "$modified_classes"
     for clazz in "${classes[@]}"
     do
-        echo "${clazz//[$'\t\r\n']},$pid,$bid" >> subjects/subjects.csv
+        CLEANED=${clazz//[$'\t\r\n']}
+        if [[ "$CLEANED" == *.txt ]]
+        then
+            continue
+        else
+            echo "$CLEANED,$pid,$bid" >> subjects/subjects.csv
+        fi
     done
     # IFS=$'\n' read -rd '' -a classes <<< "$(defects4j query -p $pid -q "classes.modified")"
     # for cz in "${classes[@]}"
