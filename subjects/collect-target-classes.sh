@@ -1,5 +1,5 @@
 # ! We should run this script after collect-bug
-# Output is two csv files: (i) target classes (for evosuite run) and (ii) relations between classes and bugs.
+# Output is the list of target classes for evosuite run.
 
 echo "target_class,project_id,bug_id" > subjects/subjects.csv
 
@@ -13,7 +13,7 @@ do
         counter=1
         continue
     fi
-    
+
     echo "PID: $pid, BID: $bid, date: $date_fixed, modified classes: $modified_classes"
     IFS=$';' read -rd '' -a classes <<< "$modified_classes"
     for clazz in "${classes[@]}"
