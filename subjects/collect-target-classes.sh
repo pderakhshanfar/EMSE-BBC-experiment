@@ -13,6 +13,7 @@ do
         counter=1
         continue
     fi
+    
     echo "PID: $pid, BID: $bid, date: $date_fixed, modified classes: $modified_classes"
     IFS=$';' read -rd '' -a classes <<< "$modified_classes"
     for clazz in "${classes[@]}"
@@ -25,9 +26,4 @@ do
             echo "$CLEANED,$pid,$bid" >> subjects/subjects.csv
         fi
     done
-    # IFS=$'\n' read -rd '' -a classes <<< "$(defects4j query -p $pid -q "classes.modified")"
-    # for cz in "${classes[@]}"
-    # do
-    #     echo ">>>>"$cz
-    # done
 done < subjects/bugs.csv
