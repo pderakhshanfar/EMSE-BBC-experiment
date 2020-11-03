@@ -17,10 +17,25 @@ do
     defects4j compile -w $dir
 
     currentDir=$(pwd)
+    echo "Entering $dir"
     cd $dir
+
+    if [ -f "cp-entries.txt" ]; then
+        echo "cp-entries.txt exists."
+        cd $currentDir
+        continue
+    fi
+
     cp=$(defects4j export -p cp.compile)
-    echo $cp
-    pwd
+    content=$(python ../../python/export-cp.py $cp)
+
+    if [ $content == "0" ]; then 
+        echo "!!! $cp"
+        cd $currentDir
+        break
+    else
+        echo -n $content > cp-entries.txt
+    fi
     rm -rf .git/
     rm .gitignore
 
