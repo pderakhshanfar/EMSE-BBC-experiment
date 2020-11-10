@@ -1,0 +1,1 @@
+docker image build -t test-generation-img $(pwd)

@@ -1,0 +1,125 @@
+
+# Add new separator
+OLDIFS=$IFS
+IFS=,
+
+# number of parallel processes
+LIMIT=$1
+FirstRound=$2
+LastRound=$3
+Budget=$4
+Mem=$5
+CONFIGURATIONS_FILE=$6
+INPUT=$7
+
+
+
+
+# Check input CSV file
+[ ! -f $INPUT ] && { die "$INPUT file not found"; }
+
+num_classes="$(( $(wc -l < "${INPUT}") - 1 ))"  
+num_rounds="$((LastRound - FirstRound + 1))"
+num_configs="$(( $(wc -l < "${CONFIGURATIONS_FILE}") - 1 ))"  
+num_executions="$(( num_rounds * num_configs * num_classes ))"
+echo "number of classes $num_classes, number of rounds $num_rounds, number of configurations $num_configs."
+echo "Total number of executions: $num_executions"
+echo "Time budget: $Budget"
+echo "Memory: $Mem"
+
+if [ ! -d $8 ] || [[ $8 = "" ]]; then
+  SEED="0"
+  echo "**New Experiment**"
+else
+  SEED=$8
+  echo "**Replicating Experiment**"
+fi
+echo $8
+
+# make a directory for used SEED
+if [ -d "results/SEED" ]; then
+  rm -rf "results/SEED"
+fi
+
+
+class_counter=0
+while read target_class project bug_id
+do
+    # skip the title row
+    if [[ "$class_counter" -eq "0" ]]; then
+        class_counter="$(( class_counter + 1 ))"
+        continue
+    fi
+    project_name=$project-$bug_id
+    echo "[$class_counter/$num_classes] Generating tests for class $target_class from project $project_name"
+
+    # Extracting classpath
+    project_directory="subjects/buggy-versions/$project_name"
+    project_cp="$(cat $project_directory/cp-entries.txt)"
+
+    # Open a nested loop for rounds
+    for (( round=FirstRound; round<=LastRound; round++ ))
+    do  
+
+      #Now, lets begin the final loop on configurations
+      configuration_header_passed=0
+      while read configuration_name args
+      do
+        # skip the title row
+        if [[ "$configuration_header_passed" -eq "0" ]]; then
+          configuration_header_passed="1"
+          continue
+        fi
+
+        echo "Generating test for $target_class using $configuration_name. Round $round/$num_rounds"
+        # Extract arguments
+        old_ifs="${IFS}"; IFS=' '; read -ra user_configuration_array <<< "${args}"; IFS="${old_ifs}";
+        # Run EvoSuite
+        . scripts/run/run_evosuite.sh $round $configuration_name $project_name $project_cp $target_class $Budget $Mem $SEED $user_configuration_array
+
+        # Wait if we reach to the limit
+        while (( $(jobs -p | wc -l) >= $LIMIT )); do
+          sleep 1
+          # wait -n       # Wait for the first sub-process to finish
+          # code=$? # Exit code of sub-process
+        done
+
+      done < $CONFIGURATIONS_FILE
+
+    done
+
+    # Increase class counter
+    class_counter="$(( class_counter + 1 ))"
+done < $INPUT
+
+
+#After finishing tasks, wait for tools to finish their test generation processes.
+while (( $(pgrep -l java | wc -l) > 0 ))
+do
+  sleep 60
+  # Check if all of the tests are generated
+  finished=true
+  while read tool execution_id project caller_class callee_class
+    do
+      if [[ "$tool" == evosuite-callee* ]]; then
+        resultDir="results/evosuite5/$project-$callee_class-$execution_id"
+      elif [[ "$tool" == evosuite-caller* ]]; then
+        resultDir="results/evosuite5/$project-$caller_class-$execution_id"
+      elif [[ "$tool" == "botsing" ]]; then
+        resultDir="results/$tool/$project-$caller_class-$callee_class-$execution_id"
+      fi
+
+      if [ ! -d "$resultDir" ]; then
+        echo "$resultDir is not available yet!"
+        finished=false
+        break
+      fi
+    done
+
+    if [ "$finished" = true ] ; then
+      echo 'Killing all of the processes'
+      kill -9 $(pgrep java)
+    fi
+done
+
+echo "Process is finished."
