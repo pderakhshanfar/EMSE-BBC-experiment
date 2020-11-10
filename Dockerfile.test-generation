@@ -1,0 +1,11 @@
+FROM openjdk:slim
+
+
+RUN         dnf upgrade --assumeyes
+RUN         dnf install findutils --assumeyes
+RUN         dnf install python2 --assumeyes
+RUN         ln -sfn /usr/bin/python2 /usr/bin/python
+
+WORKDIR /experiment
+
+COPY scripts /experiment/scripts
