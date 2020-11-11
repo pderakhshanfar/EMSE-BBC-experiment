@@ -34,7 +34,6 @@ else
   SEED=$8
   echo "**Replicating Experiment**"
 fi
-echo $8
 
 # make a directory for used SEED
 if [ -d "results/SEED" ]; then
