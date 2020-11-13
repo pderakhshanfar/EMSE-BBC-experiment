@@ -1,11 +1,9 @@
-FROM openjdk:slim
+FROM openjdk:8-jdk-alpine
 
-
-RUN         dnf upgrade --assumeyes
-RUN         dnf install findutils --assumeyes
-RUN         dnf install python2 --assumeyes
-RUN         ln -sfn /usr/bin/python2 /usr/bin/python
+RUN apk add --no-cache --upgrade bash
+# RUN         dnf upgrade --assumeyes
+# RUN         dnf install findutils --assumeyes
+# RUN         dnf install python2 --assumeyes
+# RUN         ln -sfn /usr/bin/python2 /usr/bin/python
 
 WORKDIR /experiment
-
-COPY scripts /experiment/scripts
