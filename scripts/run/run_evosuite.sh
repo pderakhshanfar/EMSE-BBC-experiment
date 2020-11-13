@@ -56,6 +56,9 @@ java -Xmx4G -jar tools/evosuite.jar \
 &> "${log_file}" &
 
 pid=$!
-
+echo ">>> $pid"
+wait $pid
+echo "$report_dir died"
+sleep 5
 # Run observer
-. scripts/run/evosuite-observer.sh &
+. scripts/run/evosuite-observer.sh $pid $log_file $report_dir $test_dir $Budget $round $configuration_name $project_name $project_cp $target_class $Mem $SEED $user_configuration_array &

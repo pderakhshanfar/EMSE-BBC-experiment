@@ -27,7 +27,7 @@ echo "Total number of executions: $num_executions"
 echo "Time budget: $Budget"
 echo "Memory: $Mem"
 
-if [ ! -d $8 ] || [[ $8 = "" ]]; then
+if [[ -z $8 ]] || [ ! -d $8 ]; then
   SEED="0"
   echo "**New Experiment**"
 else
@@ -74,7 +74,8 @@ do
         # Extract arguments
         old_ifs="${IFS}"; IFS=' '; read -ra user_configuration_array <<< "${args}"; IFS="${old_ifs}";
         # Run EvoSuite
-        . scripts/run/run_evosuite.sh $round $configuration_name $project_name $project_cp $target_class $Budget $Mem $SEED $user_configuration_array
+        . scripts/run/run_evosuite.sh $round $configuration_name $project_name $project_cp $target_class $Budget $Mem $SEED $user_configuration_array &
+        sleep 5
 
         # Wait if we reach to the limit
         while (( $(jobs -p | wc -l) >= $LIMIT )); do
