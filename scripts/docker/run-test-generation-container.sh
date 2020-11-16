@@ -13,4 +13,5 @@ ${COMMAND} run -dit --name test-generation-container  \
 --mount type=bind,source="$(pwd)/SEED",target=/experiment/SEED \
 --mount type=bind,source="$(pwd)/tools",target=/experiment/tools \
 --mount type=bind,source="$(pwd)/configurations",target=/experiment/configurations \
+--mount type=bind,source="$(pwd)/console-logs",target=/experiment/console-logs \
 test-generation-img
