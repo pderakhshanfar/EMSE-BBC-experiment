@@ -117,6 +117,15 @@ do
     fi
     attempt_counter="$(( attempt_counter + 1 ))"
 
+
+    #After finishing tasks, wait for tools to finish their test generation processes.
+    while (( $(pgrep -l java | wc -l) > 0 ))
+    do
+      echo "There are still active java processes:"
+      pgrep -l java
+      sleep 60
+    done
+
 done
 
 
@@ -137,33 +146,33 @@ done
 
 
 
-#After finishing tasks, wait for tools to finish their test generation processes.
-while (( $(pgrep -l java | wc -l) > 0 ))
-do
-  sleep 60
-  # Check if all of the tests are generated
-  finished=true
-  while read tool execution_id project caller_class callee_class
-    do
-      if [[ "$tool" == evosuite-callee* ]]; then
-        resultDir="results/evosuite5/$project-$callee_class-$execution_id"
-      elif [[ "$tool" == evosuite-caller* ]]; then
-        resultDir="results/evosuite5/$project-$caller_class-$execution_id"
-      elif [[ "$tool" == "botsing" ]]; then
-        resultDir="results/$tool/$project-$caller_class-$callee_class-$execution_id"
-      fi
+# #After finishing tasks, wait for tools to finish their test generation processes.
+# while (( $(pgrep -l java | wc -l) > 0 ))
+# do
+#   sleep 60
+#   # Check if all of the tests are generated
+#   finished=true
+#   while read tool execution_id project caller_class callee_class
+#     do
+#       if [[ "$tool" == evosuite-callee* ]]; then
+#         resultDir="results/evosuite5/$project-$callee_class-$execution_id"
+#       elif [[ "$tool" == evosuite-caller* ]]; then
+#         resultDir="results/evosuite5/$project-$caller_class-$execution_id"
+#       elif [[ "$tool" == "botsing" ]]; then
+#         resultDir="results/$tool/$project-$caller_class-$callee_class-$execution_id"
+#       fi
 
-      if [ ! -d "$resultDir" ]; then
-        echo "$resultDir is not available yet!"
-        finished=false
-        break
-      fi
-    done
+#       if [ ! -d "$resultDir" ]; then
+#         echo "$resultDir is not available yet!"
+#         finished=false
+#         break
+#       fi
+#     done
 
-    if [ "$finished" = true ] ; then
-      echo 'Killing all of the processes'
-      kill -9 $(pgrep java)
-    fi
-done
+#     if [ "$finished" = true ] ; then
+#       echo 'Killing all of the processes'
+#       kill -9 $(pgrep java)
+#     fi
+# done
 
-echo "Process is finished."
+# echo "Process is finished."
