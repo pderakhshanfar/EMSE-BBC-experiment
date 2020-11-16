@@ -2,7 +2,7 @@
 * Configuration: default
 * Going to generate test cases for class: org.jfree.chart.plot.XYPlot
 * Starting Client-0
-* Connecting to master process on port 6493
+* Connecting to master process on port 21683
 * Analyzing classpath: 
   - subjects/buggy-versions/Chart-4/build
   - subjects/buggy-versions/Chart-4/lib/servlet.jar
@@ -18,66 +18,77 @@
   - No-Exception Top-Level Method Coverage
   - Context Branch Coverage
 * Total number of test goals for DYNAMOSA: 5800
-* Using seed 3085640706
+* Using seed 1686721734
 * Starting evolution
 * Initial Number of Goals in DynaMOSA = 2064 / 5800
-[MASTER] 11:12:12.677 [logback-2] ERROR TestCluster - Failed to check cache for java.util.LinkedList<E> : Type points to itself
-[MASTER] 11:12:12.840 [logback-2] ERROR TestCluster - Failed to check cache for java.util.HashMap<K, V> : Type points to itself
-[MASTER] 11:12:16.855 [logback-2] ERROR TestCluster - Failed to check cache for java.util.Enumeration<E> : Type points to itself
-[MASTER] 11:12:20.801 [logback-1] WARN  CoverageArchive - A solution with a timeout/exception result has been added to the archive. The covered goal was [METHOD] org.jfree.chart.plot.XYPlot.getRangeAxis(I)Lorg/jfree/chart/axis/ValueAxis;
-[MASTER] 11:13:18.566 [logback-2] ERROR TestCluster - Failed to check cache for java.util.function.Function<T, R> : Type points to itself
-[MASTER] 11:13:54.341 [logback-2] ERROR TestCluster - Failed to check cache for java.util.function.Predicate<T> : Type points to itself
-[MASTER] 11:14:47.872 [logback-2] ERROR TestCluster - Failed to check cache for java.time.temporal.TemporalQuery<R> : Type points to itself
-* Search finished after 305s and 255 generations, 139540 statements, best individual has fitness: 2280.0
+[MASTER] 14:24:48.346 [logback-2] ERROR TestCluster - Failed to check cache for java.util.LinkedList<E> : Type points to itself
+[MASTER] 14:24:48.367 [logback-2] ERROR TestCluster - Failed to check cache for java.util.HashMap<K, V> : Type points to itself
+[MASTER] 14:24:48.407 [logback-2] ERROR TestCluster - Failed to check cache for javax.swing.JLayer<V> : Type points to itself
+[MASTER] 14:25:02.027 [logback-2] ERROR TestCluster - Failed to check cache for java.util.Comparator<T> : Type points to itself
+[MASTER] 14:26:02.121 [logback-2] ERROR TestCluster - Failed to check cache for java.util.Enumeration<E> : Type points to itself
+[MASTER] 14:27:46.721 [logback-2] ERROR TestCluster - Failed to check cache for java.util.function.Function<T, R> : Type points to itself
+* Search finished after 304s and 347 generations, 194299 statements, best individual has fitness: 1952.0
 * Minimizing test suite
-[MASTER] 11:18:17.895 [logback-1] WARN  TestSuiteMinimizer - Minimization timeout. Roll back to original test suite
+[MASTER] 14:31:09.167 [logback-1] WARN  TestSuiteMinimizer - Minimization timeout. Roll back to original test suite
 * Going to analyze the coverage criteria
 * Coverage analysis for criterion LINE
-* Coverage of criterion LINE: 65%
+* Coverage of criterion LINE: 74%
 * Total number of goals: 1743
-* Number of covered goals: 1126
+* Number of covered goals: 1283
 * Coverage analysis for criterion BRANCH
-* Coverage of criterion BRANCH: 59%
+* Coverage of criterion BRANCH: 66%
 * Total number of goals: 1077
-* Number of covered goals: 633
+* Number of covered goals: 711
 * Coverage analysis for criterion EXCEPTION
 * Coverage of criterion EXCEPTION: 100%
-* Total number of goals: 86
-* Number of covered goals: 86
+* Total number of goals: 93
+* Number of covered goals: 93
 * Coverage analysis for criterion WEAKMUTATION
-* Coverage of criterion WEAKMUTATION: 70%
+* Coverage of criterion WEAKMUTATION: 75%
 * Total number of goals: 742
-* Number of covered goals: 523
+* Number of covered goals: 556
 * Coverage analysis for criterion OUTPUT
-* Coverage of criterion OUTPUT: 42%
+* Coverage of criterion OUTPUT: 39%
 * Total number of goals: 717
-* Number of covered goals: 298
+* Number of covered goals: 281
 * Coverage analysis for criterion METHOD
 * Coverage of criterion METHOD: 100%
 * Total number of goals: 222
-* Number of covered goals: 221
+* Number of covered goals: 222
 * Coverage analysis for criterion METHODNOEXCEPTION
-* Coverage of criterion METHODNOEXCEPTION: 97%
+* Coverage of criterion METHODNOEXCEPTION: 99%
 * Total number of goals: 222
-* Number of covered goals: 216
+* Number of covered goals: 220
 * Coverage analysis for criterion CBRANCH
-* Coverage of criterion CBRANCH: 52%
+* Coverage of criterion CBRANCH: 59%
 * Total number of goals: 1077
-* Number of covered goals: 557
-* Generated 677 tests with total length 7420
-* Resulting test suite's coverage: 68% (average coverage for all fitness functions)
+* Number of covered goals: 635
+* Generated 711 tests with total length 9127
+* Resulting test suite's coverage: 72% (average coverage for all fitness functions)
 * Generating assertions
-[MASTER] 11:19:28.716 [logback-1] WARN  SimpleMutationAssertionGenerator - Assertion minimization is taking too long (0.68595% of time used, but only 106/677 tests minimized), falling back to using all assertions
-* Resulting test suite's mutation score: 8%
+[MASTER] 14:32:31.583 [logback-1] WARN  SimpleMutationAssertionGenerator - Reached maximum time to generate assertions, aborting assertion generation
+* Resulting test suite's mutation score: 3%
 * Compiling and checking tests
+[MASTER] 14:33:24.543 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class java.lang.StackOverflowError: null
+[MASTER] 14:33:24.552 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ CyclicNumberAxis cyclicNumberAxis0 = new CyclicNumberAxis((-2300.16223744), (-2300.16223744));
+CombinedDomainXYPlot combinedDomainXYPlot0 = new CombinedDomainXYPlot(cyclicNumberAxis0);
+combinedDomainXYPlot0.add((XYPlot) combinedDomainXYPlot0, combinedDomainXYPlot0.MINIMUM_WIDTH_TO_DRAW);
+combinedDomainXYPlot0.setDomainCrosshairPaint(combinedDomainXYPlot0.DEFAULT_GRIDLINE_PAINT);
+XYIntervalSeriesCollection xYIntervalSeriesCollection0 = new XYIntervalSeriesCollection();
+
 * Permissions denied during test execution: 
   - java.io.FilePermission: 
-         write /tmp/+~JT3435840941219490811.tmp: 1
+         write /tmp/+~JT6638263222847883623.tmp: 1
+         write /tmp/+~JT6556053590789158783.tmp: 1
+         write /tmp/+~JT2511152259422188122.tmp: 1
+         and other 3 cases of action/name for this exception class
   - java.net.URLPermission: 
          *:* http://www.someFakeButWellFormedURL.org/fooExample: 1
   - java.lang.RuntimePermission: 
-         loadLibrary.javalcms: 1036
-         queuePrintJob: 1
-         writeFileDescriptor: 2
+         writeFileDescriptor: 4
 * Writing tests to file
 * Writing JUnit test case 'XYPlot_ESTest' to results/Chart-4/org.jfree.chart.plot.XYPlot/default/tests/2
+* Done!
+
+* Computation finished
