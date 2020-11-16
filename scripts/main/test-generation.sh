@@ -35,10 +35,10 @@ else
   echo "**Replicating Experiment**"
 fi
 
-# make a directory for used SEED
-if [ -d "results/SEED" ]; then
-  rm -rf "results/SEED"
-fi
+# # make a directory for used SEED
+# if [ -d "results/SEED" ]; then
+#   rm -rf "results/SEED"
+# fi
 
 need_to_rerun=true
 attempt_counter=1
