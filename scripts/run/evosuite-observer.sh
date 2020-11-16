@@ -13,14 +13,16 @@ Mem=${11}
 SEED=${12}
 user_configuration_array=${13}
 ## Wait until either the process ends or the process stays inactive for 5 minutes
-# TIMEOUT="$(( budget * 2 ))"
+TIMEOUT="$(( budget * 2 ))"
 echo ">>>>"$pid
 
-# timeout -t "${TIMEOUT}" wait $pid
-echo "Process is finished. Checking $report_dir"
-#Kill process
-kill "$pid"
-echo "killing process $pid"
+
+# # timeout -t $TIMEOUT tail --pid=$pid -f /dev/null
+# # timeout -t "${TIMEOUT}" wait $pid
+# echo "Process is finished. Checking $report_dir"
+# #Kill process
+# kill "$pid"
+# echo "killing process $pid"
 
 # Check if report is available
 if [ -f "$report_dir/statistics.csv" ]; then

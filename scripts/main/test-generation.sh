@@ -40,57 +40,101 @@ if [ -d "results/SEED" ]; then
   rm -rf "results/SEED"
 fi
 
-
-class_counter=0
-while read target_class project bug_id
+need_to_rerun=true
+attempt_counter=1
+while [ "$need_to_rerun" = true ] ; 
 do
-    # skip the title row
-    if [[ "$class_counter" -eq "0" ]]; then
+    echo "Attempt number $attempt_counter"
+
+    class_counter=0
+    new_execution=false
+    while read target_class project bug_id
+    do
+      # skip the title row
+      if [[ "$class_counter" -eq "0" ]]; then
         class_counter="$(( class_counter + 1 ))"
         continue
-    fi
-    project_name=$project-$bug_id
-    echo "[$class_counter/$num_classes] Generating tests for class $target_class from project $project_name"
+      fi
 
-    # Extracting classpath
-    project_directory="subjects/buggy-versions/$project_name"
-    project_cp="$(cat $project_directory/cp-entries.txt)"
+      project_name=$project-$bug_id
+      echo "[$class_counter/$num_classes] Generating tests for class $target_class from project $project_name"
 
-    # Open a nested loop for rounds
-    for (( round=FirstRound; round<=LastRound; round++ ))
-    do  
+      # Extracting classpath
+      project_directory="subjects/buggy-versions/$project_name"
+      project_cp="$(cat $project_directory/cp-entries.txt)"
 
-      #Now, lets begin the final loop on configurations
-      configuration_header_passed=0
-      while read configuration_name args
+      # Open a nested loop for rounds
+      for (( round=FirstRound; round<=LastRound; round++ ))
       do
-        # skip the title row
-        if [[ "$configuration_header_passed" -eq "0" ]]; then
-          configuration_header_passed="1"
-          continue
-        fi
 
-        echo "Generating test for $target_class using $configuration_name. Round $round/$num_rounds"
-        # Extract arguments
-        old_ifs="${IFS}"; IFS=' '; read -ra user_configuration_array <<< "${args}"; IFS="${old_ifs}";
-        # Run EvoSuite
-        . scripts/run/run_evosuite.sh $round $configuration_name $project_name $project_cp $target_class $Budget $Mem $SEED $user_configuration_array &
-        sleep 5
+        #Now, lets begin the final loop on configurations
+        configuration_header_passed=0
+        while read configuration_name args
+          do
+            # skip the title row
+            if [[ "$configuration_header_passed" -eq "0" ]]; then
+              configuration_header_passed="1"
+              continue
+            fi
 
-        # Wait if we reach to the limit
-        while (( $(jobs -p | wc -l) >= $LIMIT )); do
-          sleep 1
-          # wait -n       # Wait for the first sub-process to finish
-          # code=$? # Exit code of sub-process
-        done
+            report_dir="results/$project_name/$target_class/$configuration_name/reports/$round"
 
-      done < $CONFIGURATIONS_FILE
+            # If reprot is already available
+            if [ -f "$report_dir/statistics.csv" ]; then
+              echo "Report is already available at $report_dir"
+              continue
+            else
+              new_execution=true
+            fi
 
-    done
+            echo "Generating test for $target_class using $configuration_name. Round $round/$num_rounds"
 
-    # Increase class counter
-    class_counter="$(( class_counter + 1 ))"
-done < $INPUT
+            # Extract arguments
+            old_ifs="${IFS}"; IFS=' '; read -ra user_configuration_array <<< "${args}"; IFS="${old_ifs}";
+            old_processes=$(pgrep -l java | wc -l)
+            # Run EvoSuite
+            . scripts/run/run_evosuite.sh $round $configuration_name $project_name $project_cp $target_class $Budget $Mem $SEED $user_configuration_array
+
+            # Wait if we reach to the limit
+            while (( $(jobs -p | wc -l) >= $LIMIT )); 
+            do
+              sleep 1
+              # wait -n       # Wait for the first sub-process to finish
+              # code=$? # Exit code of sub-process
+            done
+
+          done < $CONFIGURATIONS_FILE
+
+      done
+
+      # Increase class counter
+      class_counter="$(( class_counter + 1 ))"
+    done < $INPUT
+
+    if [ "$new_execution" = false ] ; then
+      echo 'No new execution'
+      need_to_rerun=false
+    fi
+    attempt_counter="$(( attempt_counter + 1 ))"
+
+done
+
+
+
+
+
+
+    
+
+    
+
+    
+      
+
+        
+
+
+
 
 
 #After finishing tasks, wait for tools to finish their test generation processes.

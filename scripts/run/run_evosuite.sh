@@ -51,14 +51,30 @@ java -Xmx4G -jar tools/evosuite.jar \
 -Dshow_progress='false' \
 -Dplot='false' \
 -Dtimeline_interval=10000 \
--Doutput_variables=TARGET_CLASS,search_budget,Total_Time,Length,Size,LineCoverage,BranchCoverage,OutputCoverage,WeakMutationScore,Implicit_MethodExceptions,MutationScore \
+-Dsearch_budget="${Budget}" \
+-Doutput_variables=TARGET_CLASS,search_budget,Total_Time,Length,Size,LineCoverage,BranchCoverage,OutputCoverage,WeakMutationScore,Implicit_MethodExceptions \
 "${user_configuration_array[@]}" \
 &> "${log_file}" &
 
-pid=$!
-echo ">>> $pid"
-wait $pid
-echo "$report_dir died"
-sleep 5
+# pid=$!
+# wait $pid
+
+# echo "Process is finished. Checking $report_dir"
+
+
+# # Check if report is available
+# if [ -f "$report_dir/statistics.csv" ]; then
+#     echo "Report is saved at $report_dir"
+# else
+#     echo "Report is not available at $report_dir. Will rerun the process."
+#     {
+#         flock -x 3                       # grab a lock on file descriptor #3
+#         new_row="$project_name, $target_class, $configuration_name, ${user_configuration_array[@]}" 
+#         echo "@> $new_row"
+#         printf "$new_row" >&3   # Write new content to the FD
+#     } 3>>text.txt                      
+#     # . scripts/run/run_evosuite.sh $round $configuration_name $project_name $project_cp $target_class $budget $Mem $SEED $user_configuration_array &
+# fi
+
 # Run observer
-. scripts/run/evosuite-observer.sh $pid $log_file $report_dir $test_dir $Budget $round $configuration_name $project_name $project_cp $target_class $Mem $SEED $user_configuration_array &
+# . scripts/run/evosuite-observer.sh $pid $log_file $report_dir $test_dir $Budget $round $configuration_name $project_name $project_cp $target_class $Mem $SEED $user_configuration_array &
