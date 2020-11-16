@@ -41,7 +41,7 @@ mkdir -p "results/$project_name/$target_class/$configuration_name/logs/"
 echo "${user_configuration_array[@]}"
 
 # Run EvoSuite
-timeout -t $TIMEOUT /usr/bin/env java -Xmx4G -jar tools/evosuite.jar \
+timeout -k $TIMEOUT $TIMEOUT /usr/bin/env java -Xmx4G -jar tools/evosuite.jar \
 -mem "${Mem}" \
 -Dconfiguration_id="${configuration_name}" \
 -Dgroup_id="${project_name}" \
