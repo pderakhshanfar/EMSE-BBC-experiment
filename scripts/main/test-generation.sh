@@ -121,7 +121,8 @@ do
     #After finishing tasks, wait for tools to finish their test generation processes.
     while (( $(pgrep -l java | wc -l) > 0 ))
     do
-      echo "There are still active java processes:"
+      activeProcesses=$(pgrep -l java | wc -l)
+      echo "There are still $activeProcesses active java processes: "
       pgrep -l java
       sleep 60
     done

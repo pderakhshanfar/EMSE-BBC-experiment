@@ -35,11 +35,13 @@ report_dir="results/$project_name/$target_class/$configuration_name/reports/$rou
 test_dir="results/$project_name/$target_class/$configuration_name/tests/$round"
 log_file="results/$project_name/$target_class/$configuration_name/logs/$round"
 
+TIMEOUT="$(( Budget * 2 ))"
+
 mkdir -p "results/$project_name/$target_class/$configuration_name/logs/"
 echo "${user_configuration_array[@]}"
 
 # Run EvoSuite
-java -Xmx4G -jar tools/evosuite.jar \
+timeout -t $TIMEOUT /usr/bin/env java -Xmx4G -jar tools/evosuite.jar \
 -mem "${Mem}" \
 -Dconfiguration_id="${configuration_name}" \
 -Dgroup_id="${project_name}" \
