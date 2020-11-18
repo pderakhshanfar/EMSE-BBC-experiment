@@ -1,0 +1,105 @@
+* EvoSuite 1.1.1-SNAPSHOT
+* Configuration: BBC-F0
+* Going to generate test cases for class: com.fasterxml.jackson.core.json.UTF8StreamJsonParser
+* Starting Client-0
+* Connecting to master process on port 13783
+* Analyzing classpath: 
+  - subjects/buggy-versions/JacksonCore-19/target/classes
+* Finished analyzing classpath
+* Generating tests for class com.fasterxml.jackson.core.json.UTF8StreamJsonParser
+* Test criteria:
+  - Line Coverage
+  - Branch Coverage
+  - Exception
+  - Mutation testing (weak)
+  - Method-Output Coverage
+  - Top-Level Method Coverage
+  - No-Exception Top-Level Method Coverage
+  - Context Branch Coverage
+* Total number of test goals for DYNAMOSA: 6277
+* Using seed 174141093
+* Starting evolution
+* Initial Number of Goals in DynaMOSA = 1140 / 6277
+[MASTER] 11:29:15.837 [logback-1] WARN  TestChromosome - Functional mock problem: org.evosuite.ga.ConstructionFailedException: Have no generator for class com.fasterxml.jackson.core.json.UTF8StreamJsonParser canUseFunctionalMocks=false, canBeMocked: false
+[MASTER] 11:30:06.296 [logback-1] WARN  TestChromosome - Functional mock problem: org.evosuite.ga.ConstructionFailedException: Failed to add constructor for com.fasterxml.jackson.core.io.IOContext due to org.evosuite.ga.ConstructionFailedException: Have no generator for class com.fasterxml.jackson.core.json.UTF8StreamJsonParser canUseFunctionalMocks=false, canBeMocked: false
+* Search finished after 305s and 36 generations, 41298 statements, best individual has fitness: 4570.0
+* Minimizing test suite
+[MASTER] 11:34:46.383 [logback-1] WARN  TestSuiteMinimizer - Minimization timeout. Roll back to original test suite
+* Going to analyze the coverage criteria
+* Coverage analysis for criterion LINE
+* Coverage of criterion LINE: 30%
+* Total number of goals: 1814
+* Number of covered goals: 551
+* Coverage analysis for criterion BRANCH
+* Coverage of criterion BRANCH: 27%
+* Total number of goals: 1454
+* Number of covered goals: 388
+* Coverage analysis for criterion EXCEPTION
+* Coverage of criterion EXCEPTION: 100%
+* Total number of goals: 103
+* Number of covered goals: 103
+* Coverage analysis for criterion WEAKMUTATION
+* Coverage of criterion WEAKMUTATION: 29%
+* Total number of goals: 1226
+* Number of covered goals: 350
+* Coverage analysis for criterion OUTPUT
+* Coverage of criterion OUTPUT: 23%
+* Total number of goals: 213
+* Number of covered goals: 50
+* Coverage analysis for criterion METHOD
+* Coverage of criterion METHOD: 93%
+* Total number of goals: 58
+* Number of covered goals: 54
+* Coverage analysis for criterion METHODNOEXCEPTION
+* Coverage of criterion METHODNOEXCEPTION: 53%
+* Total number of goals: 58
+* Number of covered goals: 31
+* Coverage analysis for criterion CBRANCH
+* Coverage of criterion CBRANCH: 27%
+* Total number of goals: 1454
+* Number of covered goals: 388
+* Generated 262 tests with total length 4795
+* Resulting test suite's coverage: 42% (average coverage for all fitness functions)
+* Generating assertions
+[MASTER] 11:36:16.325 [logback-1] WARN  SimpleMutationAssertionGenerator - Assertion minimization is taking too long (0.7948666666666667% of time used, but only 20/262 tests minimized), falling back to using all assertions
+* Resulting test suite's mutation score: 0%
+* Compiling and checking tests
+[MASTER] 11:37:21.229 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class com.fasterxml.jackson.core.JsonParseException: Illegal unquoted character ((CTRL-CHAR, code 0)): has to be escaped using backslash to be included in name
+ at [Source: UNKNOWN; line: 1, column: 2]
+[MASTER] 11:37:21.230 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ BufferRecycler bufferRecycler0 = new BufferRecycler();
+IOContext iOContext0 = new IOContext(bufferRecycler0, bufferRecycler0, false);
+PipedInputStream pipedInputStream0 = new PipedInputStream();
+ByteQuadsCanonicalizer byteQuadsCanonicalizer0 = ByteQuadsCanonicalizer.createRoot();
+ByteQuadsCanonicalizer byteQuadsCanonicalizer1 = byteQuadsCanonicalizer0.makeChild(3);
+byte[] byteArray0 = new byte[5];
+UTF8StreamJsonParser uTF8StreamJsonParser0 = new UTF8StreamJsonParser(iOContext0, 3, pipedInputStream0, (ObjectCodec) null, byteQuadsCanonicalizer0, byteArray0, 2, 73, false);
+uTF8StreamJsonParser0.getTypeId();
+IOContext iOContext1 = new IOContext(bufferRecycler0, (Object) null, false);
+JsonEncoding jsonEncoding0 = JsonEncoding.UTF8;
+IOContext iOContext2 = iOContext1.withEncoding(jsonEncoding0);
+UTF8StreamJsonParser uTF8StreamJsonParser1 = new UTF8StreamJsonParser(iOContext2, 0, pipedInputStream0, (ObjectCodec) null, byteQuadsCanonicalizer1, byteArray0, 3, (-2850), false);
+uTF8StreamJsonParser1.parseMediumName2(1, (-1782));
+
+[MASTER] 11:37:21.816 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class com.fasterxml.jackson.core.JsonParseException: Illegal unquoted character ((CTRL-CHAR, code 0)): has to be escaped using backslash to be included in name
+ at [Source: com.fasterxml.jackson.core.util.BufferRecycler@1; line: 1, column: 2]
+[MASTER] 11:37:21.817 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ BufferRecycler bufferRecycler0 = new BufferRecycler();
+IOContext iOContext0 = new IOContext(bufferRecycler0, bufferRecycler0, false);
+PipedInputStream pipedInputStream0 = new PipedInputStream();
+ByteQuadsCanonicalizer byteQuadsCanonicalizer0 = ByteQuadsCanonicalizer.createRoot();
+byteQuadsCanonicalizer0.makeChild(3);
+byte[] byteArray0 = new byte[5];
+UTF8StreamJsonParser uTF8StreamJsonParser0 = new UTF8StreamJsonParser(iOContext0, 3, pipedInputStream0, (ObjectCodec) null, byteQuadsCanonicalizer0, byteArray0, 2, 73, false);
+JsonToken jsonToken0 = JsonToken.START_OBJECT;
+uTF8StreamJsonParser0._getText2(jsonToken0);
+uTF8StreamJsonParser0.parseLongName(43, (-315), (-315));
+
+* Permissions denied during test execution: 
+  - java.lang.RuntimePermission: 
+         writeFileDescriptor: 4
+* Writing tests to file
+* Writing JUnit test case 'UTF8StreamJsonParser_ESTest' to results/JacksonCore-19/com.fasterxml.jackson.core.json.UTF8StreamJsonParser/BBC-F0/tests/13
+* Done!
+
+* Computation finished

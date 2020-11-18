@@ -1,0 +1,99 @@
+* EvoSuite 1.1.1-SNAPSHOT
+* Configuration: BBC-F0
+* Going to generate test cases for class: com.fasterxml.jackson.core.json.UTF8StreamJsonParser
+* Starting Client-0
+* Connecting to master process on port 18845
+* Analyzing classpath: 
+  - subjects/buggy-versions/JacksonCore-19/target/classes
+* Finished analyzing classpath
+* Generating tests for class com.fasterxml.jackson.core.json.UTF8StreamJsonParser
+* Test criteria:
+  - Line Coverage
+  - Branch Coverage
+  - Exception
+  - Mutation testing (weak)
+  - Method-Output Coverage
+  - Top-Level Method Coverage
+  - No-Exception Top-Level Method Coverage
+  - Context Branch Coverage
+* Total number of test goals for DYNAMOSA: 6277
+* Using seed 2823262394
+* Starting evolution
+* Initial Number of Goals in DynaMOSA = 1140 / 6277
+* Search finished after 307s and 31 generations, 32883 statements, best individual has fitness: 4644.0
+* Minimizing test suite
+[MASTER] 11:35:20.391 [logback-1] WARN  TestSuiteMinimizer - Minimization timeout. Roll back to original test suite
+* Going to analyze the coverage criteria
+* Coverage analysis for criterion LINE
+* Coverage of criterion LINE: 30%
+* Total number of goals: 1814
+* Number of covered goals: 538
+* Coverage analysis for criterion BRANCH
+* Coverage of criterion BRANCH: 25%
+* Total number of goals: 1454
+* Number of covered goals: 366
+* Coverage analysis for criterion EXCEPTION
+* Coverage of criterion EXCEPTION: 100%
+* Total number of goals: 103
+* Number of covered goals: 103
+* Coverage analysis for criterion WEAKMUTATION
+* Coverage of criterion WEAKMUTATION: 29%
+* Total number of goals: 1226
+* Number of covered goals: 353
+* Coverage analysis for criterion OUTPUT
+* Coverage of criterion OUTPUT: 22%
+* Total number of goals: 213
+* Number of covered goals: 46
+* Coverage analysis for criterion METHOD
+* Coverage of criterion METHOD: 95%
+* Total number of goals: 58
+* Number of covered goals: 55
+* Coverage analysis for criterion METHODNOEXCEPTION
+* Coverage of criterion METHODNOEXCEPTION: 53%
+* Total number of goals: 58
+* Number of covered goals: 31
+* Coverage analysis for criterion CBRANCH
+* Coverage of criterion CBRANCH: 25%
+* Total number of goals: 1454
+* Number of covered goals: 357
+* Generated 229 tests with total length 4014
+* Resulting test suite's coverage: 42% (average coverage for all fitness functions)
+* Generating assertions
+[MASTER] 11:36:32.131 [logback-1] WARN  SimpleMutationAssertionGenerator - Assertion minimization is taking too long (0.6972166666666667% of time used, but only 14/229 tests minimized), falling back to using all assertions
+* Resulting test suite's mutation score: 0%
+* Compiling and checking tests
+[MASTER] 11:37:26.703 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class com.fasterxml.jackson.core.JsonParseException: Illegal unquoted character ((CTRL-CHAR, code 0)): has to be escaped using backslash to be included in name
+ at [Source: UNKNOWN; line: 1, column: 1]
+[MASTER] 11:37:26.706 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ IOContext iOContext0 = new IOContext((BufferRecycler) null, (Object) null, false);
+PipedOutputStream pipedOutputStream0 = new PipedOutputStream();
+PipedInputStream pipedInputStream0 = new PipedInputStream(pipedOutputStream0);
+ByteQuadsCanonicalizer byteQuadsCanonicalizer0 = ByteQuadsCanonicalizer.createRoot();
+byte[] byteArray0 = new byte[8];
+byteArray0[0] = (byte)69;
+byteArray0[1] = (byte)51;
+byteArray0[2] = (byte) (-33);
+byteArray0[3] = (byte) (-96);
+byteArray0[4] = (byte)98;
+byteArray0[5] = (byte) (-2);
+byteArray0[6] = (byte)0;
+byteArray0[7] = (byte) (-72);
+UTF8StreamJsonParser uTF8StreamJsonParser0 = new UTF8StreamJsonParser(iOContext0, 0, pipedInputStream0, (ObjectCodec) null, byteQuadsCanonicalizer0, byteArray0, (byte) (-72), (byte)69, true);
+int[] intArray0 = new int[9];
+intArray0[0] = (int) (byte) (-33);
+intArray0[1] = (int) (byte)51;
+intArray0[2] = (int) (byte)98;
+intArray0[3] = (int) (byte)69;
+intArray0[4] = (int) (byte) (-72);
+intArray0[5] = (int) (byte)0;
+intArray0[6] = (-3847);
+intArray0[7] = (int) (byte) (-2);
+intArray0[8] = (int) (byte)98;
+uTF8StreamJsonParser0.parseEscapedName(intArray0, (-3847), (-155), 0, (byte) (-2));
+
+[MASTER] 11:37:38.189 [logback-2] ERROR JUnitAnalyzer - Ran out of time while checking tests
+* Writing tests to file
+* Writing JUnit test case 'UTF8StreamJsonParser_ESTest' to results/JacksonCore-19/com.fasterxml.jackson.core.json.UTF8StreamJsonParser/BBC-F0/tests/15
+* Done!
+
+* Computation finished

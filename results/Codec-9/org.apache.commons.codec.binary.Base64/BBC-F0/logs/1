@@ -1,0 +1,136 @@
+* EvoSuite 1.1.1-SNAPSHOT
+* Configuration: BBC-F0
+* Going to generate test cases for class: org.apache.commons.codec.binary.Base64
+* Starting Client-0
+* Connecting to master process on port 17697
+* Analyzing classpath: 
+  - subjects/buggy-versions/Codec-9/target/classes
+* Finished analyzing classpath
+* Generating tests for class org.apache.commons.codec.binary.Base64
+* Test criteria:
+  - Line Coverage
+  - Branch Coverage
+  - Exception
+  - Mutation testing (weak)
+  - Method-Output Coverage
+  - Top-Level Method Coverage
+  - No-Exception Top-Level Method Coverage
+  - Context Branch Coverage
+* Total number of test goals for DYNAMOSA: 1539
+* Using seed 621172839
+* Starting evolution
+* Initial Number of Goals in DynaMOSA = 419 / 1539
+* Search finished after 303s and 101 generations, 62333 statements, best individual has fitness: 91.0
+* Minimizing test suite
+[MASTER] 03:39:10.317 [logback-1] WARN  TestSuiteMinimizer - Minimization timeout. Roll back to original test suite
+* Going to analyze the coverage criteria
+* Coverage analysis for criterion LINE
+* Coverage of criterion LINE: 100%
+* Total number of goals: 216
+* Number of covered goals: 215
+* Coverage analysis for criterion BRANCH
+* Coverage of criterion BRANCH: 95%
+* Total number of goals: 193
+* Number of covered goals: 184
+* Coverage analysis for criterion EXCEPTION
+* Coverage of criterion EXCEPTION: 100%
+* Total number of goals: 21
+* Number of covered goals: 21
+* Coverage analysis for criterion WEAKMUTATION
+* Coverage of criterion WEAKMUTATION: 96%
+* Total number of goals: 787
+* Number of covered goals: 759
+* Coverage analysis for criterion OUTPUT
+* Coverage of criterion OUTPUT: 90%
+* Total number of goals: 80
+* Number of covered goals: 72
+* Coverage analysis for criterion METHOD
+* Coverage of criterion METHOD: 100%
+* Total number of goals: 35
+* Number of covered goals: 35
+* Coverage analysis for criterion METHODNOEXCEPTION
+* Coverage of criterion METHODNOEXCEPTION: 100%
+* Total number of goals: 35
+* Number of covered goals: 35
+* Coverage analysis for criterion CBRANCH
+* Coverage of criterion CBRANCH: 88%
+* Total number of goals: 193
+* Number of covered goals: 170
+* Generated 87 tests with total length 1452
+* Resulting test suite's coverage: 90% (average coverage for all fitness functions)
+* Generating assertions
+[MASTER] 03:40:11.067 [logback-1] WARN  SimpleMutationAssertionGenerator - Reached maximum time to generate assertions, aborting assertion generation
+* Resulting test suite's mutation score: 45%
+* Compiling and checking tests
+[MASTER] 03:40:29.058 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class org.junit.internal.ArrayComparisonFailure: arrays first differed at element [2]; expected:<-94> but was:<13>
+[MASTER] 03:40:29.059 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ byte[] byteArray0 = new byte[3];
+byteArray0[0] = (byte) (-1);
+byteArray0[1] = (byte) (-98);
+byteArray0[2] = (byte)38;
+Base64 base64_0 = new Base64(0, byteArray0, true);
+BigInteger bigInteger0 = BigInteger.ONE;
+BigInteger bigInteger1 = BigInteger.ONE;
+bigInteger1.shiftLeft((byte) (-98));
+BigInteger.valueOf((byte)38);
+BigInteger bigInteger2 = BigInteger.ZERO;
+bigInteger2.isProbablePrime(0);
+bigInteger2.longValue();
+bigInteger2.remainder(bigInteger1);
+bigInteger1.max(bigInteger2);
+bigInteger1.intValueExact();
+bigInteger0.multiply(bigInteger1);
+bigInteger0.equals(base64_0);
+assertTrue(base64_0.isUrlSafe());
+
+byte[] byteArray1 = Base64.toIntegerBytes(bigInteger0);
+byte[] byteArray2 = Base64.encodeBase64(byteArray0, false);
+assertArrayEquals(new byte[] {(byte)47, (byte)53, (byte)52, (byte)109}, byteArray2);
+
+base64_0.isUrlSafe();
+base64_0.isUrlSafe();
+byte[] byteArray3 = Base64.encodeBase64(byteArray1, true, true, (int) (byte)38);
+assertArrayEquals(new byte[] {(byte)65, (byte)81, (byte) (-94), (byte)10}, byteArray3);
+assertEquals(4, byteArray3.length);
+
+byte[] byteArray4 = Base64.encodeInteger(bigInteger0);
+assertArrayEquals(new byte[] {(byte)65, (byte)81, (byte)61, (byte)61}, byteArray4);
+
+
+[MASTER] 03:40:36.909 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class org.junit.ComparisonFailure: expected:<QUE9PQ[AA]> but was:<QUE9PQ[0K]>
+[MASTER] 03:40:36.910 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ byte[] byteArray0 = new byte[1];
+byte[] byteArray1 = Base64.encodeBase64Chunked(byteArray0);
+String string0 = Base64.encodeBase64String(byteArray1);
+assertEquals("QUE9PQAA", string0);
+
+Base64.decodeBase64((String) null);
+Base64 base64_0 = new Base64(true);
+Base64.decodeBase64((String) null);
+byte[] byteArray2 = Base64.CHUNK_SEPARATOR;
+byte[] byteArray3 = Base64.discardWhitespace(byteArray0);
+byte[] byteArray4 = Base64.discardWhitespace(byteArray0);
+Base64 base64_1 = new Base64(7, byteArray3);
+assertEquals(1, byteArray3.length);
+
+String string1 = base64_1.encodeToString(byteArray1);
+assertNotSame(byteArray3, byteArray4);
+assertEquals("QUE9\u0000PQAA\u0000", string1);
+
+
+[MASTER] 03:40:59.303 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test82 -> class org.junit.runners.model.TestTimedOutException: test timed out after 4000 milliseconds
+[MASTER] 03:40:59.304 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ MockRandom mockRandom0 = new MockRandom();
+BigInteger bigInteger0 = new BigInteger(1908874353, mockRandom0);
+MockRandom mockRandom1 = new MockRandom(8188);
+BigInteger bigInteger1 = new BigInteger(8188, mockRandom1);
+Base64.encodeInteger(bigInteger0);
+
+* Permissions denied during test execution: 
+  - java.lang.RuntimePermission: 
+         writeFileDescriptor: 8
+* Writing tests to file
+* Writing JUnit test case 'Base64_ESTest' to results/Codec-9/org.apache.commons.codec.binary.Base64/BBC-F0/tests/1
+* Done!
+
+* Computation finished

@@ -1,0 +1,704 @@
+* EvoSuite 1.1.1-SNAPSHOT
+* Configuration: BBC-F0
+* Going to generate test cases for class: org.apache.commons.collections4.IteratorUtils
+* Starting Client-0
+* Connecting to master process on port 12308
+* Analyzing classpath: 
+  - subjects/buggy-versions/Collections-25/target/classes
+* Finished analyzing classpath
+* Generating tests for class org.apache.commons.collections4.IteratorUtils
+* Test criteria:
+  - Line Coverage
+  - Branch Coverage
+  - Exception
+  - Mutation testing (weak)
+  - Method-Output Coverage
+  - Top-Level Method Coverage
+  - No-Exception Top-Level Method Coverage
+  - Context Branch Coverage
+* Total number of test goals for DYNAMOSA: 1080
+* Using seed 844710898
+* Starting evolution
+* Initial Number of Goals in DynaMOSA = 453 / 1080
+[MASTER] 04:17:33.824 [logback-2] ERROR TestCluster - Failed to check cache for java.util.Hashtable<K, V> : Type points to itself
+[MASTER] 04:17:33.829 [logback-2] ERROR TestCluster - Failed to check cache for java.util.ArrayDeque<E> : Type points to itself
+[MASTER] 04:17:33.830 [logback-2] ERROR TestCluster - Failed to check cache for java.util.ArrayList<E> : Type points to itself
+[MASTER] 04:17:33.830 [logback-2] ERROR TestCluster - Failed to check cache for java.util.EnumSet<E> : Type points to itself
+[MASTER] 04:17:33.830 [logback-2] ERROR TestCluster - Failed to check cache for java.util.HashSet<E> : Type points to itself
+[MASTER] 04:17:33.831 [logback-2] ERROR TestCluster - Failed to check cache for java.util.LinkedHashSet<E> : Type points to itself
+[MASTER] 04:17:33.831 [logback-2] ERROR TestCluster - Failed to check cache for java.util.LinkedList<E> : Type points to itself
+[MASTER] 04:17:33.831 [logback-2] ERROR TestCluster - Failed to check cache for java.util.PriorityQueue<E> : Type points to itself
+[MASTER] 04:17:33.831 [logback-2] ERROR TestCluster - Failed to check cache for java.util.ServiceLoader<S> : Type points to itself
+[MASTER] 04:17:33.832 [logback-2] ERROR TestCluster - Failed to check cache for java.util.Stack<E> : Type points to itself
+[MASTER] 04:17:33.832 [logback-2] ERROR TestCluster - Failed to check cache for java.util.TreeSet<E> : Type points to itself
+[MASTER] 04:17:33.833 [logback-2] ERROR TestCluster - Failed to check cache for java.util.Vector<E> : Type points to itself
+[MASTER] 04:17:33.833 [logback-2] ERROR TestCluster - Failed to check cache for java.util.HashMap<K, V> : Type points to itself
+[MASTER] 04:17:41.307 [logback-2] ERROR TestCluster - Failed to check cache for org.apache.commons.collections4.Closure<T> : Type points to itself
+[MASTER] 04:17:54.510 [logback-2] ERROR TestCluster - Failed to check cache for org.apache.commons.collections4.Transformer<I, O> : Type points to itself
+[MASTER] 04:19:40.505 [logback-2] ERROR TestCluster - Failed to check cache for java.util.Comparator<T> : Type points to itself
+[MASTER] 04:20:46.948 [logback-2] ERROR TestCluster - Failed to check cache for java.util.Iterator<E> : Type points to itself
+* Search finished after 303s and 9 generations, 7185 statements, best individual has fitness: 401.0
+* Minimizing test suite
+* Going to analyze the coverage criteria
+* Coverage analysis for criterion LINE
+* Coverage of criterion LINE: 69%
+* Total number of goals: 208
+* Number of covered goals: 143
+* Coverage analysis for criterion BRANCH
+* Coverage of criterion BRANCH: 67%
+* Total number of goals: 167
+* Number of covered goals: 112
+* Coverage analysis for criterion EXCEPTION
+* Coverage of criterion EXCEPTION: 100%
+* Total number of goals: 38
+* Number of covered goals: 38
+* Coverage analysis for criterion WEAKMUTATION
+* Coverage of criterion WEAKMUTATION: 75%
+* Total number of goals: 225
+* Number of covered goals: 168
+* Coverage analysis for criterion OUTPUT
+* Coverage of criterion OUTPUT: 35%
+* Total number of goals: 181
+* Number of covered goals: 64
+* Coverage analysis for criterion METHOD
+* Coverage of criterion METHOD: 88%
+* Total number of goals: 66
+* Number of covered goals: 58
+* Coverage analysis for criterion METHODNOEXCEPTION
+* Coverage of criterion METHODNOEXCEPTION: 74%
+* Total number of goals: 66
+* Number of covered goals: 49
+* Coverage analysis for criterion CBRANCH
+* Coverage of criterion CBRANCH: 66%
+* Total number of goals: 167
+* Number of covered goals: 110
+* Generated 87 tests with total length 240
+* Resulting test suite's coverage: 67% (average coverage for all fitness functions)
+* Generating assertions
+* Resulting test suite's mutation score: 35%
+* Compiling and checking tests
+[MASTER] 04:23:13.027 [logback-2] ERROR JUnitAnalyzer - Compilation failed on compilation units: [RegularFileObject[/tmp/EvoSuite_7_1605586992818/org/apache/commons/collections4/IteratorUtils_7_tmp__ESTest.java], RegularFileObject[/tmp/EvoSuite_7_1605586992818/org/apache/commons/collections4/IteratorUtils_7_tmp__ESTest_scaffolding.java]]
+[MASTER] 04:23:13.027 [logback-2] ERROR JUnitAnalyzer - Classpath: subjects/buggy-versions/Collections-25/target/classes:/experiment/tools/evosuite.jar:/experiment/subjects/buggy-versions/Collections-25/target/classes
+[MASTER] 04:23:13.027 [logback-2] ERROR JUnitAnalyzer - evosuiteCP: /experiment/tools/evosuite.jar:/experiment/subjects/buggy-versions/Collections-25/target/classes
+[MASTER] 04:23:13.077 [logback-2] ERROR JUnitAnalyzer - Diagnostic: incompatible types: org.apache.commons.collections4.iterators.SingletonIterator<java.sql.SQLTransientException> cannot be converted to java.util.Iterator<java.util.PriorityQueue<java.util.EnumSet>>: 30
+[MASTER] 04:23:13.080 [logback-2] ERROR JUnitAnalyzer - RegularFileObject[/tmp/EvoSuite_7_1605586992818/org/apache/commons/collections4/IteratorUtils_7_tmp__ESTest.java]
+1: /*
+2:  * This file was automatically generated by EvoSuite
+3:  * Tue Nov 17 04:23:12 GMT 2020
+4:  */
+5: 
+6: package org.apache.commons.collections4;
+7: 
+8: import org.junit.Test;
+9: import static org.junit.Assert.*;
+10: import java.sql.SQLTimeoutException;
+11: import java.sql.SQLTransientConnectionException;
+12: import java.sql.SQLTransientException;
+13: import java.util.EnumSet;
+14: import java.util.Iterator;
+15: import java.util.PriorityQueue;
+16: import org.apache.commons.collections4.IteratorUtils;
+17: import org.apache.commons.collections4.iterators.SingletonIterator;
+18: import org.evosuite.runtime.EvoRunner;
+19: import org.evosuite.runtime.EvoRunnerParameters;
+20: import org.junit.runner.RunWith;
+21: 
+22: @RunWith(EvoRunner.class) @EvoRunnerParameters(mockJVMNonDeterminism = true, useVFS = true, useVNET = true, resetStaticState = true) 
+23: public class IteratorUtils_7_tmp__ESTest extends IteratorUtils_7_tmp__ESTest_scaffolding {
+24: 
+25:   @Test(timeout = 4000)
+26:   public void test0()  throws Throwable  {
+27:       SQLTimeoutException sQLTimeoutException0 = new SQLTimeoutException("]l3Xwo", "]l3Xwo", 2);
+28:       SQLTransientConnectionException sQLTransientConnectionException0 = new SQLTransientConnectionException(sQLTimeoutException0);
+29:       SingletonIterator<SQLTransientException> singletonIterator0 = new SingletonIterator<SQLTransientException>(sQLTransientConnectionException0);
+30:       boolean boolean0 = IteratorUtils.contains((Iterator<PriorityQueue<EnumSet>>) singletonIterator0, (Object) sQLTimeoutException0);
+31:       assertFalse(singletonIterator0.hasNext());
+32:       assertFalse(boolean0);
+33:   }
+34: }
+RegularFileObject[/tmp/EvoSuite_7_1605586992818/org/apache/commons/collections4/IteratorUtils_7_tmp__ESTest.java]
+1: /**
+2:  * Scaffolding file used to store all the setups needed to run 
+3:  * tests automatically generated by EvoSuite
+4:  * Tue Nov 17 04:23:12 GMT 2020
+5:  */
+6: 
+7: package org.apache.commons.collections4;
+8: 
+9: import org.evosuite.runtime.annotation.EvoSuiteClassExclude;
+10: import org.junit.BeforeClass;
+11: import org.junit.Before;
+12: import org.junit.After;
+13: import org.junit.AfterClass;
+14: import org.evosuite.runtime.sandbox.Sandbox;
+15: import org.evosuite.runtime.sandbox.Sandbox.SandboxMode;
+16: 
+17: @EvoSuiteClassExclude
+18: public class IteratorUtils_7_tmp__ESTest_scaffolding {
+19: 
+20:   @org.junit.Rule 
+21:   public org.evosuite.runtime.vnet.NonFunctionalRequirementRule nfr = new org.evosuite.runtime.vnet.NonFunctionalRequirementRule();
+22: 
+23:   private static final java.util.Properties defaultProperties = (java.util.Properties) java.lang.System.getProperties().clone(); 
+24: 
+25:   private org.evosuite.runtime.thread.ThreadStopper threadStopper =  new org.evosuite.runtime.thread.ThreadStopper (org.evosuite.runtime.thread.KillSwitchHandler.getInstance(), 3000);
+26: 
+27: 
+28:   @BeforeClass 
+29:   public static void initEvoSuiteFramework() { 
+30:     org.evosuite.runtime.RuntimeSettings.className = "org.apache.commons.collections4.IteratorUtils"; 
+31:     org.evosuite.runtime.GuiSupport.initialize(); 
+32:     org.evosuite.runtime.RuntimeSettings.maxNumberOfThreads = 100; 
+33:     org.evosuite.runtime.RuntimeSettings.maxNumberOfIterationsPerLoop = 10000; 
+34:     org.evosuite.runtime.RuntimeSettings.mockSystemIn = true; 
+35:     org.evosuite.runtime.RuntimeSettings.sandboxMode = org.evosuite.runtime.sandbox.Sandbox.SandboxMode.RECOMMENDED; 
+36:     org.evosuite.runtime.sandbox.Sandbox.initializeSecurityManagerForSUT(); 
+37:     org.evosuite.runtime.classhandling.JDKClassResetter.init();
+38:     setSystemProperties();
+39:     initializeClasses();
+40:     org.evosuite.runtime.Runtime.getInstance().resetRuntime(); 
+41:   } 
+42: 
+43:   @AfterClass 
+44:   public static void clearEvoSuiteFramework(){ 
+45:     Sandbox.resetDefaultSecurityManager(); 
+46:     java.lang.System.setProperties((java.util.Properties) defaultProperties.clone()); 
+47:   } 
+48: 
+49:   @Before 
+50:   public void initTestCase(){ 
+51:     threadStopper.storeCurrentThreads();
+52:     threadStopper.startRecordingTime();
+53:     org.evosuite.runtime.jvm.ShutdownHookHandler.getInstance().initHandler(); 
+54:     org.evosuite.runtime.sandbox.Sandbox.goingToExecuteSUTCode(); 
+55:     setSystemProperties(); 
+56:     org.evosuite.runtime.GuiSupport.setHeadless(); 
+57:     org.evosuite.runtime.Runtime.getInstance().resetRuntime(); 
+58:     org.evosuite.runtime.agent.InstrumentingAgent.activate(); 
+59:   } 
+60: 
+61:   @After 
+62:   public void doneWithTestCase(){ 
+63:     threadStopper.killAndJoinClientThreads();
+64:     org.evosuite.runtime.jvm.ShutdownHookHandler.getInstance().safeExecuteAddedHooks(); 
+65:     org.evosuite.runtime.classhandling.JDKClassResetter.reset(); 
+66:     resetClasses(); 
+67:     org.evosuite.runtime.sandbox.Sandbox.doneWithExecutingSUTCode(); 
+68:     org.evosuite.runtime.agent.InstrumentingAgent.deactivate(); 
+69:     org.evosuite.runtime.GuiSupport.restoreHeadlessMode(); 
+70:   } 
+71: 
+72:   public static void setSystemProperties() {
+73:  
+74:     java.lang.System.setProperties((java.util.Properties) defaultProperties.clone()); 
+75:     java.lang.System.setProperty("user.dir", "/experiment"); 
+76:     java.lang.System.setProperty("java.io.tmpdir", "/tmp"); 
+77:   }
+78: 
+79:   private static void initializeClasses() {
+80:     org.evosuite.runtime.classhandling.ClassStateSupport.initializeClasses(IteratorUtils_7_tmp__ESTest_scaffolding.class.getClassLoader() ,
+81:       "org.apache.commons.collections4.functors.MapTransformer",
+82:       "org.apache.commons.collections4.IteratorUtils",
+83:       "org.apache.commons.collections4.iterators.EmptyListIterator",
+84:       "org.apache.commons.collections4.functors.ComparatorPredicate$1",
+85:       "org.apache.commons.collections4.iterators.FilterIterator",
+86:       "org.apache.commons.collections4.functors.InstanceofPredicate",
+87:       "org.apache.commons.collections4.functors.EqualPredicate",
+88:       "org.apache.commons.collections4.iterators.UnmodifiableMapIterator",
+89:       "org.apache.commons.collections4.functors.ComparatorPredicate",
+90:       "org.apache.commons.collections4.IterableUtils$5$1",
+91:       "org.apache.commons.collections4.iterators.SkippingIterator",
+92:       "org.apache.commons.collections4.iterators.EmptyOrderedMapIterator",
+93:       "org.apache.commons.collections4.iterators.FilterListIterator",
+94:       "org.apache.commons.collections4.iterators.IteratorIterable$1",
+95:       "org.apache.commons.collections4.functors.TransformerPredicate",
+96:       "org.apache.commons.collections4.iterators.SingletonListIterator",
+97:       "org.apache.commons.collections4.iterators.ArrayIterator",
+98:       "org.apache.commons.collections4.iterators.LazyIteratorChain",
+99:       "org.apache.commons.collections4.functors.PredicateDecorator",
+100:       "org.apache.commons.collections4.iterators.LoopingListIterator",
+101:       "org.apache.commons.collections4.iterators.AbstractOrderedMapIteratorDecorator",
+102:       "org.apache.commons.collections4.Transformer",
+103:       "org.apache.commons.collections4.iterators.CollatingIterator",
+104:       "org.apache.commons.collections4.iterators.ObjectArrayListIterator",
+105:       "org.apache.commons.collections4.iterators.UnmodifiableIterator",
+106:       "org.apache.commons.collections4.iterators.PushbackIterator",
+107:       "org.apache.commons.collections4.OrderedMapIterator",
+108:       "org.apache.commons.collections4.iterators.EmptyIterator",
+109:       "org.apache.commons.collections4.collection.AbstractCollectionDecorator",
+110:       "org.apache.commons.collections4.IterableUtils$5",
+111:       "org.apache.commons.collections4.iterators.EmptyMapIterator",
+112:       "org.apache.commons.collections4.iterators.ObjectArrayIterator",
+113:       "org.apache.commons.collections4.iterators.PeekingIterator",
+114:       "org.apache.commons.collections4.iterators.EmptyOrderedIterator",
+115:       "org.apache.commons.collections4.iterators.SingletonIterator",
+116:       "org.apache.commons.collections4.MapIterator",
+117:       "org.apache.commons.collections4.iterators.IteratorChain",
+118:       "org.apache.commons.collections4.functors.ComparatorPredicate$Criterion",
+119:       "org.apache.commons.collections4.Predicate",
+120:       "org.apache.commons.collections4.iterators.AbstractEmptyMapIterator",
+121:       "org.apache.commons.collections4.iterators.ZippingIterator",
+122:       "org.apache.commons.collections4.iterators.UnmodifiableListIterator",
+123:       "org.apache.commons.collections4.Closure",
+124:       "org.apache.commons.collections4.functors.TruePredicate",
+125:       "org.apache.commons.collections4.iterators.AbstractEmptyIterator",
+126:       "org.apache.commons.collections4.iterators.BoundedIterator",
+127:       "org.apache.commons.collections4.iterators.LoopingIterator",
+128:       "org.apache.commons.collections4.CollectionUtils",
+129:       "org.apache.commons.collections4.iterators.EntrySetMapIterator",
+130:       "org.apache.commons.collections4.iterators.IteratorEnumeration",
+131:       "org.apache.commons.collections4.IterableUtils",
+132:       "org.apache.commons.collections4.iterators.ListIteratorWrapper",
+133:       "org.apache.commons.collections4.FunctorException",
+134:       "org.apache.commons.collections4.functors.StringValueTransformer",
+135:       "org.apache.commons.collections4.iterators.IteratorIterable",
+136:       "org.apache.commons.collections4.iterators.AbstractIteratorDecorator",
+137:       "org.apache.commons.collections4.Unmodifiable",
+138:       "org.apache.commons.collections4.iterators.ObjectGraphIterator",
+139:       "org.apache.commons.collections4.functors.NotPredicate",
+140:       "org.apache.commons.collections4.iterators.ArrayListIterator",
+141:       "org.apache.commons.collections4.iterators.AbstractMapIteratorDecorator",
+142:       "org.apache.commons.collections4.FluentIterable",
+143:       "org.apache.commons.collections4.functors.AndPredicate",
+144:       "org.apache.commons.collections4.collection.UnmodifiableCollection",
+145:       "org.apache.commons.collections4.functors.ConstantTransformer",
+146:       "org.apache.commons.collections4.functors.InvokerTransformer",
+147:       "org.apache.commons.collections4.ResettableIterator",
+148:       "org.apache.commons.collections4.TransformerUtils",
+149:       "org.apache.commons.collections4.iterators.EnumerationIterator",
+150:       "org.apache.commons.collections4.ResettableListIterator",
+151:       "org.apache.commons.collections4.OrderedIterator",
+152:       "org.apache.commons.collections4.iterators.NodeListIterator",
+153:       "org.apache.commons.collections4.iterators.AbstractUntypedIteratorDecorator"
+154:     );
+155:   } 
+156: 
+157:   private static void resetClasses() {
+158:     org.evosuite.runtime.classhandling.ClassResetter.getInstance().setClassLoader(IteratorUtils_7_tmp__ESTest_scaffolding.class.getClassLoader()); 
+159: 
+160:     org.evosuite.runtime.classhandling.ClassStateSupport.resetClasses(
+161:       "org.apache.commons.collections4.iterators.AbstractEmptyIterator",
+162:       "org.apache.commons.collections4.iterators.EmptyIterator",
+163:       "org.apache.commons.collections4.iterators.EmptyListIterator",
+164:       "org.apache.commons.collections4.iterators.EmptyOrderedIterator",
+165:       "org.apache.commons.collections4.iterators.AbstractEmptyMapIterator",
+166:       "org.apache.commons.collections4.iterators.EmptyMapIterator",
+167:       "org.apache.commons.collections4.iterators.EmptyOrderedMapIterator",
+168:       "org.apache.commons.collections4.IteratorUtils",
+169:       "org.apache.commons.collections4.functors.NullPredicate",
+170:       "org.apache.commons.collections4.functors.StringValueTransformer",
+171:       "org.apache.commons.collections4.iterators.NodeListIterator",
+172:       "org.apache.commons.collections4.iterators.ObjectArrayIterator",
+173:       "org.apache.commons.collections4.functors.InvokerTransformer",
+174:       "org.apache.commons.collections4.functors.NullIsTruePredicate",
+175:       "org.apache.commons.collections4.functors.AbstractQuantifierPredicate",
+176:       "org.apache.commons.collections4.functors.NonePredicate",
+177:       "org.apache.commons.collections4.functors.AndPredicate",
+178:       "org.apache.commons.collections4.functors.AllPredicate",
+179:       "org.apache.commons.collections4.functors.PredicateTransformer",
+180:       "org.apache.commons.collections4.functors.TransformerPredicate",
+181:       "org.apache.commons.collections4.functors.DefaultEquator",
+182:       "org.apache.commons.collections4.functors.EqualPredicate",
+183:       "org.apache.commons.collections4.functors.FunctorUtils",
+184:       "org.apache.commons.collections4.functors.TruePredicate",
+185:       "org.apache.commons.collections4.iterators.ArrayIterator",
+186:       "org.apache.commons.collections4.iterators.ArrayListIterator",
+187:       "org.apache.commons.collections4.iterators.UnmodifiableMapIterator",
+188:       "org.apache.commons.collections4.iterators.AbstractMapIteratorDecorator",
+189:       "org.apache.commons.collections4.iterators.BoundedIterator",
+190:       "org.apache.commons.collections4.iterators.LoopingListIterator",
+191:       "org.apache.commons.collections4.iterators.ObjectArrayListIterator",
+192:       "org.apache.commons.collections4.iterators.SingletonIterator",
+193:       "org.apache.commons.collections4.iterators.ReverseListIterator",
+194:       "org.apache.commons.collections4.iterators.LoopingIterator",
+195:       "org.apache.commons.collections4.iterators.PushbackIterator",
+196:       "org.apache.commons.collections4.iterators.UnmodifiableIterator",
+197:       "org.apache.commons.collections4.functors.ComparatorPredicate",
+198:       "org.apache.commons.collections4.functors.NullIsFalsePredicate",
+199:       "org.apache.commons.collections4.functors.ChainedClosure",
+200:       "org.apache.commons.collections4.functors.InstanceofPredicate",
+201:       "org.apache.commons.collections4.iterators.ListIteratorWrapper",
+202:       "org.apache.commons.collections4.iterators.FilterListIterator",
+203:       "org.apache.commons.collections4.iterators.IteratorEnumeration",
+204:       "org.apache.commons.collections4.iterators.EnumerationIterator",
+205:       "org.apache.commons.collections4.iterators.IteratorChain",
+206:       "org.apache.commons.collections4.iterators.EntrySetMapIterator",
+207:       "org.apache.commons.collections4.iterators.IteratorIterable",
+208:       "org.apache.commons.collections4.iterators.IteratorIterable$1",
+209:       "org.apache.commons.collections4.functors.ConstantTransformer",
+210:       "org.apache.commons.collections4.iterators.ObjectGraphIterator",
+211:       "org.apache.commons.collections4.collection.AbstractCollectionDecorator",
+212:       "org.apache.commons.collections4.collection.UnmodifiableCollection",
+213:       "org.apache.commons.collections4.CollectionUtils",
+214:       "org.apache.commons.collections4.iterators.CollatingIterator",
+215:       "org.apache.commons.collections4.functors.InstantiateFactory",
+216:       "org.apache.commons.collections4.iterators.SingletonListIterator",
+217:       "org.apache.commons.collections4.iterators.AbstractOrderedMapIteratorDecorator",
+218:       "org.apache.commons.collections4.functors.MapTransformer",
+219:       "org.apache.commons.collections4.iterators.UnmodifiableOrderedMapIterator",
+220:       "org.apache.commons.collections4.functors.OnePredicate",
+221:       "org.apache.commons.collections4.functors.TransformerClosure",
+222:       "org.apache.commons.collections4.functors.ForClosure",
+223:       "org.apache.commons.collections4.functors.IfClosure",
+224:       "org.apache.commons.collections4.functors.SwitchClosure",
+225:       "org.apache.commons.collections4.functors.WhileClosure",
+226:       "org.apache.commons.collections4.functors.UniquePredicate",
+227:       "org.apache.commons.collections4.functors.NullIsExceptionPredicate",
+228:       "org.apache.commons.collections4.functors.FalsePredicate",
+229:       "org.apache.commons.collections4.iterators.UnmodifiableListIterator",
+230:       "org.apache.commons.collections4.iterators.AbstractUntypedIteratorDecorator",
+231:       "org.apache.commons.collections4.iterators.AbstractIteratorDecorator",
+232:       "org.apache.commons.collections4.iterators.SkippingIterator",
+233:       "org.apache.commons.collections4.functors.NotPredicate",
+234:       "org.apache.commons.collections4.functors.ExceptionTransformer",
+235:       "org.apache.commons.collections4.functors.TransformedPredicate",
+236:       "org.apache.commons.collections4.functors.FactoryTransformer",
+237:       "org.apache.commons.collections4.functors.IfTransformer",
+238:       "org.apache.commons.collections4.functors.ConstantFactory",
+239:       "org.apache.commons.collections4.functors.OrPredicate",
+240:       "org.apache.commons.collections4.functors.ComparatorPredicate$1",
+241:       "org.apache.commons.collections4.iterators.ZippingIterator",
+242:       "org.apache.commons.collections4.functors.AnyPredicate",
+243:       "org.apache.commons.collections4.FluentIterable",
+244:       "org.apache.commons.collections4.IterableUtils",
+245:       "org.apache.commons.collections4.IterableUtils$5",
+246:       "org.apache.commons.collections4.iterators.LazyIteratorChain",
+247:       "org.apache.commons.collections4.IterableUtils$5$1",
+248:       "org.apache.commons.collections4.iterators.PeekingIterator",
+249:       "org.apache.commons.collections4.TransformerUtils",
+250:       "org.apache.commons.collections4.FunctorException",
+251:       "org.apache.commons.collections4.functors.NotNullPredicate",
+252:       "org.apache.commons.collections4.iterators.FilterIterator"
+253:     );
+254:   }
+255: }
+
+[MASTER] 04:23:13.083 [logback-2] ERROR JUnitAnalyzer - Failed to compile test case:
+SQLTimeoutException sQLTimeoutException0 = new SQLTimeoutException("]l3Xwo", "]l3Xwo", 2);
+SQLTransientConnectionException sQLTransientConnectionException0 = new SQLTransientConnectionException(sQLTimeoutException0);
+SingletonIterator<SQLTransientException> singletonIterator0 = new SingletonIterator<SQLTransientException>(sQLTransientConnectionException0);
+boolean boolean0 = IteratorUtils.contains((Iterator<PriorityQueue<EnumSet>>) singletonIterator0, (Object) sQLTimeoutException0);
+assertFalse(singletonIterator0.hasNext());
+assertFalse(boolean0);
+
+
+[MASTER] 04:23:20.925 [logback-2] ERROR JUnitAnalyzer - Compilation failed on compilation units: [RegularFileObject[/tmp/EvoSuite_52_1605587000832/org/apache/commons/collections4/IteratorUtils_52_tmp__ESTest.java], RegularFileObject[/tmp/EvoSuite_52_1605587000832/org/apache/commons/collections4/IteratorUtils_52_tmp__ESTest_scaffolding.java]]
+[MASTER] 04:23:20.955 [logback-2] ERROR JUnitAnalyzer - Classpath: subjects/buggy-versions/Collections-25/target/classes:/experiment/tools/evosuite.jar:/experiment/subjects/buggy-versions/Collections-25/target/classes
+[MASTER] 04:23:20.955 [logback-2] ERROR JUnitAnalyzer - evosuiteCP: /experiment/tools/evosuite.jar:/experiment/subjects/buggy-versions/Collections-25/target/classes
+[MASTER] 04:23:20.956 [logback-2] ERROR JUnitAnalyzer - Diagnostic: incompatible types: org.apache.commons.collections4.OrderedMapIterator<java.sql.SQLInvalidAuthorizationSpecException,java.sql.DataTruncation> cannot be converted to org.apache.commons.collections4.MapIterator<java.util.Properties,org.apache.commons.collections4.Transformer<java.util.TreeSet,org.apache.commons.collections4.Transformer<java.lang.Object,java.sql.SQLClientInfoException>>>: 34
+[MASTER] 04:23:20.957 [logback-2] ERROR JUnitAnalyzer - RegularFileObject[/tmp/EvoSuite_52_1605587000832/org/apache/commons/collections4/IteratorUtils_52_tmp__ESTest.java]
+1: /*
+2:  * This file was automatically generated by EvoSuite
+3:  * Tue Nov 17 04:23:20 GMT 2020
+4:  */
+5: 
+6: package org.apache.commons.collections4;
+7: 
+8: import org.junit.Test;
+9: import static org.junit.Assert.*;
+10: import static org.evosuite.runtime.EvoAssertions.*;
+11: import java.sql.DataTruncation;
+12: import java.sql.SQLClientInfoException;
+13: import java.sql.SQLInvalidAuthorizationSpecException;
+14: import java.util.Iterator;
+15: import java.util.Properties;
+16: import java.util.TreeSet;
+17: import org.apache.commons.collections4.IteratorUtils;
+18: import org.apache.commons.collections4.MapIterator;
+19: import org.apache.commons.collections4.OrderedMapIterator;
+20: import org.apache.commons.collections4.Predicate;
+21: import org.apache.commons.collections4.Transformer;
+22: import org.apache.commons.collections4.functors.InstanceofPredicate;
+23: import org.evosuite.runtime.EvoRunner;
+24: import org.evosuite.runtime.EvoRunnerParameters;
+25: import org.junit.runner.RunWith;
+26: 
+27: @RunWith(EvoRunner.class) @EvoRunnerParameters(mockJVMNonDeterminism = true, useVFS = true, useVNET = true, resetStaticState = true) 
+28: public class IteratorUtils_52_tmp__ESTest extends IteratorUtils_52_tmp__ESTest_scaffolding {
+29: 
+30:   @Test(timeout = 4000)
+31:   public void test0()  throws Throwable  {
+32:       InstanceofPredicate[] instanceofPredicateArray0 = new InstanceofPredicate[3];
+33:       OrderedMapIterator<SQLInvalidAuthorizationSpecException, DataTruncation> orderedMapIterator0 = IteratorUtils.emptyOrderedMapIterator();
+34:       MapIterator<Properties, Transformer<TreeSet, Transformer<Object, SQLClientInfoException>>> mapIterator0 = IteratorUtils.unmodifiableMapIterator((MapIterator<Properties, Transformer<TreeSet, Transformer<Object, SQLClientInfoException>>>) orderedMapIterator0);
+35:       // Undeclared exception!
+36:       try { 
+37:         IteratorUtils.matchesAll((Iterator<Properties>) mapIterator0, (Predicate<? super Properties>) instanceofPredicateArray0[0]);
+38:         fail("Expecting exception: NullPointerException");
+39:       
+40:       } catch(NullPointerException e) {
+41:          //
+42:          // Predicate must not be null
+43:          //
+44:          verifyException("org.apache.commons.collections4.IteratorUtils", e);
+45:       }
+46:   }
+47: }
+RegularFileObject[/tmp/EvoSuite_52_1605587000832/org/apache/commons/collections4/IteratorUtils_52_tmp__ESTest.java]
+1: /**
+2:  * Scaffolding file used to store all the setups needed to run 
+3:  * tests automatically generated by EvoSuite
+4:  * Tue Nov 17 04:23:20 GMT 2020
+5:  */
+6: 
+7: package org.apache.commons.collections4;
+8: 
+9: import org.evosuite.runtime.annotation.EvoSuiteClassExclude;
+10: import org.junit.BeforeClass;
+11: import org.junit.Before;
+12: import org.junit.After;
+13: import org.junit.AfterClass;
+14: import org.evosuite.runtime.sandbox.Sandbox;
+15: import org.evosuite.runtime.sandbox.Sandbox.SandboxMode;
+16: 
+17: @EvoSuiteClassExclude
+18: public class IteratorUtils_52_tmp__ESTest_scaffolding {
+19: 
+20:   @org.junit.Rule 
+21:   public org.evosuite.runtime.vnet.NonFunctionalRequirementRule nfr = new org.evosuite.runtime.vnet.NonFunctionalRequirementRule();
+22: 
+23:   private static final java.util.Properties defaultProperties = (java.util.Properties) java.lang.System.getProperties().clone(); 
+24: 
+25:   private org.evosuite.runtime.thread.ThreadStopper threadStopper =  new org.evosuite.runtime.thread.ThreadStopper (org.evosuite.runtime.thread.KillSwitchHandler.getInstance(), 3000);
+26: 
+27: 
+28:   @BeforeClass 
+29:   public static void initEvoSuiteFramework() { 
+30:     org.evosuite.runtime.RuntimeSettings.className = "org.apache.commons.collections4.IteratorUtils"; 
+31:     org.evosuite.runtime.GuiSupport.initialize(); 
+32:     org.evosuite.runtime.RuntimeSettings.maxNumberOfThreads = 100; 
+33:     org.evosuite.runtime.RuntimeSettings.maxNumberOfIterationsPerLoop = 10000; 
+34:     org.evosuite.runtime.RuntimeSettings.mockSystemIn = true; 
+35:     org.evosuite.runtime.RuntimeSettings.sandboxMode = org.evosuite.runtime.sandbox.Sandbox.SandboxMode.RECOMMENDED; 
+36:     org.evosuite.runtime.sandbox.Sandbox.initializeSecurityManagerForSUT(); 
+37:     org.evosuite.runtime.classhandling.JDKClassResetter.init();
+38:     setSystemProperties();
+39:     initializeClasses();
+40:     org.evosuite.runtime.Runtime.getInstance().resetRuntime(); 
+41:   } 
+42: 
+43:   @AfterClass 
+44:   public static void clearEvoSuiteFramework(){ 
+45:     Sandbox.resetDefaultSecurityManager(); 
+46:     java.lang.System.setProperties((java.util.Properties) defaultProperties.clone()); 
+47:   } 
+48: 
+49:   @Before 
+50:   public void initTestCase(){ 
+51:     threadStopper.storeCurrentThreads();
+52:     threadStopper.startRecordingTime();
+53:     org.evosuite.runtime.jvm.ShutdownHookHandler.getInstance().initHandler(); 
+54:     org.evosuite.runtime.sandbox.Sandbox.goingToExecuteSUTCode(); 
+55:     setSystemProperties(); 
+56:     org.evosuite.runtime.GuiSupport.setHeadless(); 
+57:     org.evosuite.runtime.Runtime.getInstance().resetRuntime(); 
+58:     org.evosuite.runtime.agent.InstrumentingAgent.activate(); 
+59:   } 
+60: 
+61:   @After 
+62:   public void doneWithTestCase(){ 
+63:     threadStopper.killAndJoinClientThreads();
+64:     org.evosuite.runtime.jvm.ShutdownHookHandler.getInstance().safeExecuteAddedHooks(); 
+65:     org.evosuite.runtime.classhandling.JDKClassResetter.reset(); 
+66:     resetClasses(); 
+67:     org.evosuite.runtime.sandbox.Sandbox.doneWithExecutingSUTCode(); 
+68:     org.evosuite.runtime.agent.InstrumentingAgent.deactivate(); 
+69:     org.evosuite.runtime.GuiSupport.restoreHeadlessMode(); 
+70:   } 
+71: 
+72:   public static void setSystemProperties() {
+73:  
+74:     java.lang.System.setProperties((java.util.Properties) defaultProperties.clone()); 
+75:     java.lang.System.setProperty("user.dir", "/experiment"); 
+76:     java.lang.System.setProperty("java.io.tmpdir", "/tmp"); 
+77:   }
+78: 
+79:   private static void initializeClasses() {
+80:     org.evosuite.runtime.classhandling.ClassStateSupport.initializeClasses(IteratorUtils_52_tmp__ESTest_scaffolding.class.getClassLoader() ,
+81:       "org.apache.commons.collections4.functors.MapTransformer",
+82:       "org.apache.commons.collections4.IteratorUtils",
+83:       "org.apache.commons.collections4.iterators.EmptyListIterator",
+84:       "org.apache.commons.collections4.functors.ComparatorPredicate$1",
+85:       "org.apache.commons.collections4.iterators.FilterIterator",
+86:       "org.apache.commons.collections4.functors.InstanceofPredicate",
+87:       "org.apache.commons.collections4.functors.EqualPredicate",
+88:       "org.apache.commons.collections4.iterators.UnmodifiableMapIterator",
+89:       "org.apache.commons.collections4.functors.ComparatorPredicate",
+90:       "org.apache.commons.collections4.IterableUtils$5$1",
+91:       "org.apache.commons.collections4.iterators.SkippingIterator",
+92:       "org.apache.commons.collections4.iterators.EmptyOrderedMapIterator",
+93:       "org.apache.commons.collections4.iterators.FilterListIterator",
+94:       "org.apache.commons.collections4.iterators.IteratorIterable$1",
+95:       "org.apache.commons.collections4.functors.TransformerPredicate",
+96:       "org.apache.commons.collections4.iterators.SingletonListIterator",
+97:       "org.apache.commons.collections4.iterators.ArrayIterator",
+98:       "org.apache.commons.collections4.iterators.LazyIteratorChain",
+99:       "org.apache.commons.collections4.functors.PredicateDecorator",
+100:       "org.apache.commons.collections4.iterators.LoopingListIterator",
+101:       "org.apache.commons.collections4.iterators.AbstractOrderedMapIteratorDecorator",
+102:       "org.apache.commons.collections4.Transformer",
+103:       "org.apache.commons.collections4.iterators.CollatingIterator",
+104:       "org.apache.commons.collections4.iterators.ObjectArrayListIterator",
+105:       "org.apache.commons.collections4.iterators.UnmodifiableIterator",
+106:       "org.apache.commons.collections4.iterators.PushbackIterator",
+107:       "org.apache.commons.collections4.OrderedMapIterator",
+108:       "org.apache.commons.collections4.iterators.EmptyIterator",
+109:       "org.apache.commons.collections4.collection.AbstractCollectionDecorator",
+110:       "org.apache.commons.collections4.IterableUtils$5",
+111:       "org.apache.commons.collections4.iterators.EmptyMapIterator",
+112:       "org.apache.commons.collections4.iterators.ObjectArrayIterator",
+113:       "org.apache.commons.collections4.iterators.PeekingIterator",
+114:       "org.apache.commons.collections4.iterators.EmptyOrderedIterator",
+115:       "org.apache.commons.collections4.iterators.SingletonIterator",
+116:       "org.apache.commons.collections4.MapIterator",
+117:       "org.apache.commons.collections4.iterators.IteratorChain",
+118:       "org.apache.commons.collections4.functors.ComparatorPredicate$Criterion",
+119:       "org.apache.commons.collections4.Predicate",
+120:       "org.apache.commons.collections4.iterators.AbstractEmptyMapIterator",
+121:       "org.apache.commons.collections4.iterators.ZippingIterator",
+122:       "org.apache.commons.collections4.iterators.UnmodifiableListIterator",
+123:       "org.apache.commons.collections4.Closure",
+124:       "org.apache.commons.collections4.functors.TruePredicate",
+125:       "org.apache.commons.collections4.iterators.AbstractEmptyIterator",
+126:       "org.apache.commons.collections4.iterators.BoundedIterator",
+127:       "org.apache.commons.collections4.iterators.LoopingIterator",
+128:       "org.apache.commons.collections4.CollectionUtils",
+129:       "org.apache.commons.collections4.iterators.EntrySetMapIterator",
+130:       "org.apache.commons.collections4.iterators.IteratorEnumeration",
+131:       "org.apache.commons.collections4.IterableUtils",
+132:       "org.apache.commons.collections4.iterators.ListIteratorWrapper",
+133:       "org.apache.commons.collections4.FunctorException",
+134:       "org.apache.commons.collections4.functors.StringValueTransformer",
+135:       "org.apache.commons.collections4.iterators.IteratorIterable",
+136:       "org.apache.commons.collections4.iterators.AbstractIteratorDecorator",
+137:       "org.apache.commons.collections4.Unmodifiable",
+138:       "org.apache.commons.collections4.iterators.ObjectGraphIterator",
+139:       "org.apache.commons.collections4.functors.NotPredicate",
+140:       "org.apache.commons.collections4.iterators.ArrayListIterator",
+141:       "org.apache.commons.collections4.iterators.AbstractMapIteratorDecorator",
+142:       "org.apache.commons.collections4.FluentIterable",
+143:       "org.apache.commons.collections4.functors.AndPredicate",
+144:       "org.apache.commons.collections4.collection.UnmodifiableCollection",
+145:       "org.apache.commons.collections4.functors.ConstantTransformer",
+146:       "org.apache.commons.collections4.functors.InvokerTransformer",
+147:       "org.apache.commons.collections4.ResettableIterator",
+148:       "org.apache.commons.collections4.TransformerUtils",
+149:       "org.apache.commons.collections4.iterators.EnumerationIterator",
+150:       "org.apache.commons.collections4.ResettableListIterator",
+151:       "org.apache.commons.collections4.OrderedIterator",
+152:       "org.apache.commons.collections4.iterators.NodeListIterator",
+153:       "org.apache.commons.collections4.iterators.AbstractUntypedIteratorDecorator"
+154:     );
+155:   } 
+156: 
+157:   private static void resetClasses() {
+158:     org.evosuite.runtime.classhandling.ClassResetter.getInstance().setClassLoader(IteratorUtils_52_tmp__ESTest_scaffolding.class.getClassLoader()); 
+159: 
+160:     org.evosuite.runtime.classhandling.ClassStateSupport.resetClasses(
+161:       "org.apache.commons.collections4.iterators.AbstractEmptyIterator",
+162:       "org.apache.commons.collections4.iterators.EmptyIterator",
+163:       "org.apache.commons.collections4.iterators.EmptyListIterator",
+164:       "org.apache.commons.collections4.iterators.EmptyOrderedIterator",
+165:       "org.apache.commons.collections4.iterators.AbstractEmptyMapIterator",
+166:       "org.apache.commons.collections4.iterators.EmptyMapIterator",
+167:       "org.apache.commons.collections4.iterators.EmptyOrderedMapIterator",
+168:       "org.apache.commons.collections4.IteratorUtils",
+169:       "org.apache.commons.collections4.functors.NullPredicate",
+170:       "org.apache.commons.collections4.functors.StringValueTransformer",
+171:       "org.apache.commons.collections4.iterators.NodeListIterator",
+172:       "org.apache.commons.collections4.iterators.ObjectArrayIterator",
+173:       "org.apache.commons.collections4.functors.InvokerTransformer",
+174:       "org.apache.commons.collections4.functors.NullIsTruePredicate",
+175:       "org.apache.commons.collections4.functors.AbstractQuantifierPredicate",
+176:       "org.apache.commons.collections4.functors.NonePredicate",
+177:       "org.apache.commons.collections4.functors.AndPredicate",
+178:       "org.apache.commons.collections4.functors.AllPredicate",
+179:       "org.apache.commons.collections4.functors.PredicateTransformer",
+180:       "org.apache.commons.collections4.functors.TransformerPredicate",
+181:       "org.apache.commons.collections4.functors.DefaultEquator",
+182:       "org.apache.commons.collections4.functors.EqualPredicate",
+183:       "org.apache.commons.collections4.functors.FunctorUtils",
+184:       "org.apache.commons.collections4.functors.TruePredicate",
+185:       "org.apache.commons.collections4.iterators.ArrayIterator",
+186:       "org.apache.commons.collections4.iterators.ArrayListIterator",
+187:       "org.apache.commons.collections4.iterators.UnmodifiableMapIterator",
+188:       "org.apache.commons.collections4.iterators.AbstractMapIteratorDecorator",
+189:       "org.apache.commons.collections4.iterators.BoundedIterator",
+190:       "org.apache.commons.collections4.iterators.LoopingListIterator",
+191:       "org.apache.commons.collections4.iterators.ObjectArrayListIterator",
+192:       "org.apache.commons.collections4.iterators.SingletonIterator",
+193:       "org.apache.commons.collections4.iterators.ReverseListIterator",
+194:       "org.apache.commons.collections4.iterators.LoopingIterator",
+195:       "org.apache.commons.collections4.iterators.PushbackIterator",
+196:       "org.apache.commons.collections4.iterators.UnmodifiableIterator",
+197:       "org.apache.commons.collections4.functors.ComparatorPredicate",
+198:       "org.apache.commons.collections4.functors.NullIsFalsePredicate",
+199:       "org.apache.commons.collections4.functors.ChainedClosure",
+200:       "org.apache.commons.collections4.functors.InstanceofPredicate",
+201:       "org.apache.commons.collections4.iterators.ListIteratorWrapper",
+202:       "org.apache.commons.collections4.iterators.FilterListIterator",
+203:       "org.apache.commons.collections4.iterators.IteratorEnumeration",
+204:       "org.apache.commons.collections4.iterators.EnumerationIterator",
+205:       "org.apache.commons.collections4.iterators.IteratorChain",
+206:       "org.apache.commons.collections4.iterators.EntrySetMapIterator",
+207:       "org.apache.commons.collections4.iterators.IteratorIterable",
+208:       "org.apache.commons.collections4.iterators.IteratorIterable$1",
+209:       "org.apache.commons.collections4.functors.ConstantTransformer",
+210:       "org.apache.commons.collections4.iterators.ObjectGraphIterator",
+211:       "org.apache.commons.collections4.collection.AbstractCollectionDecorator",
+212:       "org.apache.commons.collections4.collection.UnmodifiableCollection",
+213:       "org.apache.commons.collections4.CollectionUtils",
+214:       "org.apache.commons.collections4.iterators.CollatingIterator",
+215:       "org.apache.commons.collections4.functors.InstantiateFactory",
+216:       "org.apache.commons.collections4.iterators.SingletonListIterator",
+217:       "org.apache.commons.collections4.iterators.AbstractOrderedMapIteratorDecorator",
+218:       "org.apache.commons.collections4.functors.MapTransformer",
+219:       "org.apache.commons.collections4.iterators.UnmodifiableOrderedMapIterator",
+220:       "org.apache.commons.collections4.functors.OnePredicate",
+221:       "org.apache.commons.collections4.functors.TransformerClosure",
+222:       "org.apache.commons.collections4.functors.ForClosure",
+223:       "org.apache.commons.collections4.functors.IfClosure",
+224:       "org.apache.commons.collections4.functors.SwitchClosure",
+225:       "org.apache.commons.collections4.functors.WhileClosure",
+226:       "org.apache.commons.collections4.functors.UniquePredicate",
+227:       "org.apache.commons.collections4.functors.NullIsExceptionPredicate",
+228:       "org.apache.commons.collections4.functors.FalsePredicate",
+229:       "org.apache.commons.collections4.iterators.UnmodifiableListIterator",
+230:       "org.apache.commons.collections4.iterators.AbstractUntypedIteratorDecorator",
+231:       "org.apache.commons.collections4.iterators.AbstractIteratorDecorator",
+232:       "org.apache.commons.collections4.iterators.SkippingIterator",
+233:       "org.apache.commons.collections4.functors.NotPredicate",
+234:       "org.apache.commons.collections4.functors.ExceptionTransformer",
+235:       "org.apache.commons.collections4.functors.TransformedPredicate",
+236:       "org.apache.commons.collections4.functors.FactoryTransformer",
+237:       "org.apache.commons.collections4.functors.IfTransformer",
+238:       "org.apache.commons.collections4.functors.ConstantFactory",
+239:       "org.apache.commons.collections4.functors.OrPredicate",
+240:       "org.apache.commons.collections4.functors.ComparatorPredicate$1",
+241:       "org.apache.commons.collections4.iterators.ZippingIterator",
+242:       "org.apache.commons.collections4.functors.AnyPredicate",
+243:       "org.apache.commons.collections4.FluentIterable",
+244:       "org.apache.commons.collections4.IterableUtils",
+245:       "org.apache.commons.collections4.IterableUtils$5",
+246:       "org.apache.commons.collections4.iterators.LazyIteratorChain",
+247:       "org.apache.commons.collections4.IterableUtils$5$1",
+248:       "org.apache.commons.collections4.iterators.PeekingIterator",
+249:       "org.apache.commons.collections4.TransformerUtils",
+250:       "org.apache.commons.collections4.FunctorException",
+251:       "org.apache.commons.collections4.functors.NotNullPredicate",
+252:       "org.apache.commons.collections4.iterators.FilterIterator"
+253:     );
+254:   }
+255: }
+
+[MASTER] 04:23:20.958 [logback-2] ERROR JUnitAnalyzer - Failed to compile test case:
+InstanceofPredicate[] instanceofPredicateArray0 = new InstanceofPredicate[3];
+OrderedMapIterator<SQLInvalidAuthorizationSpecException, DataTruncation> orderedMapIterator0 = IteratorUtils.emptyOrderedMapIterator();
+MapIterator<Properties, Transformer<TreeSet, Transformer<Object, SQLClientInfoException>>> mapIterator0 = IteratorUtils.unmodifiableMapIterator((MapIterator<Properties, Transformer<TreeSet, Transformer<Object, SQLClientInfoException>>>) orderedMapIterator0);
+IteratorUtils.matchesAll((Iterator<Properties>) mapIterator0, (Predicate<? super Properties>) instanceofPredicateArray0[0]);
+
+* Writing tests to file
+* Writing JUnit test case 'IteratorUtils_ESTest' to results/Collections-25/org.apache.commons.collections4.IteratorUtils/BBC-F0/tests/8
+* Done!
+
+* Computation finished

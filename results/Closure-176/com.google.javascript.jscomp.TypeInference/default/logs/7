@@ -1,0 +1,124 @@
+* EvoSuite 1.1.1-SNAPSHOT
+* Configuration: default
+* Going to generate test cases for class: com.google.javascript.jscomp.TypeInference
+* Starting Client-0
+* Connecting to master process on port 13568
+* Analyzing classpath: 
+  - subjects/buggy-versions/Closure-176/build/classes
+  - subjects/buggy-versions/Closure-176/lib/args4j.jar
+  - subjects/buggy-versions/Closure-176/lib/guava.jar
+  - subjects/buggy-versions/Closure-176/lib/json.jar
+  - subjects/buggy-versions/Closure-176/lib/jsr305.jar
+  - subjects/buggy-versions/Closure-176/lib/protobuf-java.jar
+  - subjects/buggy-versions/Closure-176/build/lib/rhino.jar
+  - subjects/buggy-versions/Closure-176/lib/ant.jar
+* Finished analyzing classpath
+* Generating tests for class com.google.javascript.jscomp.TypeInference
+* Test criteria:
+  - Line Coverage
+  - Branch Coverage
+  - Exception
+  - Mutation testing (weak)
+  - Method-Output Coverage
+  - Top-Level Method Coverage
+  - No-Exception Top-Level Method Coverage
+  - Context Branch Coverage
+* Total number of test goals for DYNAMOSA: 3073
+* Using seed 2526208093
+* Starting evolution
+* Initial Number of Goals in DynaMOSA = 890 / 3073
+[MASTER] 00:29:07.179 [logback-2] ERROR TestCluster - Failed to check cache for java.util.Comparator<T> : Type points to itself
+[MASTER] 00:30:24.483 [logback-2] ERROR TestCluster - Failed to check cache for java.util.Iterator<E> : Type points to itself
+* Search finished after 307s and 101 generations, 84310 statements, best individual has fitness: 2417.0
+* Minimizing test suite
+* Going to analyze the coverage criteria
+* Coverage analysis for criterion LINE
+* Coverage of criterion LINE: 18%
+* Total number of goals: 619
+* Number of covered goals: 110
+* Coverage analysis for criterion BRANCH
+* Coverage of criterion BRANCH: 32%
+* Total number of goals: 793
+* Number of covered goals: 250
+* Coverage analysis for criterion EXCEPTION
+* Coverage of criterion EXCEPTION: 100%
+* Total number of goals: 7
+* Number of covered goals: 7
+* Coverage analysis for criterion WEAKMUTATION
+* Coverage of criterion WEAKMUTATION: 5%
+* Total number of goals: 836
+* Number of covered goals: 45
+* Coverage analysis for criterion OUTPUT
+* Coverage of criterion OUTPUT: 57%
+* Total number of goals: 14
+* Number of covered goals: 8
+* Coverage analysis for criterion METHOD
+* Coverage of criterion METHOD: 67%
+* Total number of goals: 9
+* Number of covered goals: 6
+* Coverage analysis for criterion METHODNOEXCEPTION
+* Coverage of criterion METHODNOEXCEPTION: 67%
+* Total number of goals: 9
+* Number of covered goals: 6
+* Coverage analysis for criterion CBRANCH
+* Coverage of criterion CBRANCH: 31%
+* Total number of goals: 793
+* Number of covered goals: 249
+* Generated 77 tests with total length 889
+* Resulting test suite's coverage: 42% (average coverage for all fitness functions)
+* Generating assertions
+* Resulting test suite's mutation score: 3%
+* Compiling and checking tests
+[MASTER] 00:36:27.483 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class org.evosuite.runtime.mock.java.lang.MockIllegalArgumentException: Multiple entries with same key: stableIdGenerator=NOT_IMPLEMENTED and stableIdGenerator=STABLEIDGENERATOR
+[MASTER] 00:36:27.484 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ Compiler compiler0 = new Compiler();
+SyntacticScopeCreator syntacticScopeCreator0 = new SyntacticScopeCreator(compiler0);
+Node node0 = Normalize.parseAndNormalizeTestCode(compiler0, "!hxq9");
+Scope scope0 = syntacticScopeCreator0.createScope(node0, (Scope) null);
+ControlFlowGraph<Node> controlFlowGraph0 = new ControlFlowGraph<Node>(node0, false, false);
+CodingConvention codingConvention0 = compiler0.getCodingConvention();
+JSTypeRegistry jSTypeRegistry0 = compiler0.getTypeRegistry();
+SemanticReverseAbstractInterpreter semanticReverseAbstractInterpreter0 = new SemanticReverseAbstractInterpreter(codingConvention0, jSTypeRegistry0);
+TypeInference typeInference0 = new TypeInference(compiler0, controlFlowGraph0, semanticReverseAbstractInterpreter0, scope0, (Map<String, CodingConvention.AssertionFunctionSpec>) null);
+LinkedFlowScope linkedFlowScope0 = LinkedFlowScope.createEntryLattice(scope0);
+Node node1 = new Node(46, 648, (-2232));
+typeInference0.branchedFlowThrough(node1, linkedFlowScope0);
+
+[MASTER] 00:36:34.933 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class org.evosuite.runtime.mock.java.lang.MockIllegalArgumentException: Multiple entries with same key: stableIdGenerator=NOT_IMPLEMENTED and stableIdGenerator=STABLEIDGENERATOR
+[MASTER] 00:36:34.933 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ Compiler compiler0 = new Compiler();
+SyntacticScopeCreator syntacticScopeCreator0 = new SyntacticScopeCreator(compiler0);
+Node node0 = Normalize.parseAndNormalizeTestCode(compiler0, "!hxq9");
+Scope scope0 = syntacticScopeCreator0.createScope(node0, (Scope) null);
+ControlFlowGraph<Node> controlFlowGraph0 = new ControlFlowGraph<Node>(node0, false, false);
+CodingConvention codingConvention0 = compiler0.getCodingConvention();
+JSTypeRegistry jSTypeRegistry0 = compiler0.getTypeRegistry();
+SemanticReverseAbstractInterpreter semanticReverseAbstractInterpreter0 = new SemanticReverseAbstractInterpreter(codingConvention0, jSTypeRegistry0);
+TypeInference typeInference0 = new TypeInference(compiler0, controlFlowGraph0, semanticReverseAbstractInterpreter0, scope0, (Map<String, CodingConvention.AssertionFunctionSpec>) null);
+FlowScope flowScope0 = typeInference0.createEntryLattice();
+assertNotNull(flowScope0);
+
+
+[MASTER] 00:36:39.811 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class org.evosuite.runtime.mock.java.lang.MockIllegalArgumentException: Multiple entries with same key: stableIdGenerator=NOT_IMPLEMENTED and stableIdGenerator=STABLEIDGENERATOR
+[MASTER] 00:36:39.815 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ Compiler compiler0 = new Compiler();
+SyntacticScopeCreator syntacticScopeCreator0 = new SyntacticScopeCreator(compiler0);
+Node node0 = Normalize.parseAndNormalizeTestCode(compiler0, "hxqa");
+Scope scope0 = syntacticScopeCreator0.createScope(node0, (Scope) null);
+ControlFlowGraph<Node> controlFlowGraph0 = new ControlFlowGraph<Node>(node0, false, false);
+CodingConvention codingConvention0 = compiler0.getCodingConvention();
+SemanticReverseAbstractInterpreter semanticReverseAbstractInterpreter0 = new SemanticReverseAbstractInterpreter(codingConvention0, (JSTypeRegistry) null);
+TypeInference typeInference0 = new TypeInference(compiler0, controlFlowGraph0, semanticReverseAbstractInterpreter0, scope0, (Map<String, CodingConvention.AssertionFunctionSpec>) null);
+Node node1 = new Node(101, 138, 15);
+LinkedFlowScope linkedFlowScope0 = LinkedFlowScope.createEntryLattice((Scope) null);
+typeInference0.branchedFlowThrough(node1, linkedFlowScope0);
+
+[MASTER] 00:36:40.175 [logback-2] ERROR JUnitAnalyzer - Ran out of time while checking tests
+* Permissions denied during test execution: 
+  - java.lang.RuntimePermission: 
+         writeFileDescriptor: 5
+* Writing tests to file
+* Writing JUnit test case 'TypeInference_ESTest' to results/Closure-176/com.google.javascript.jscomp.TypeInference/default/tests/7
+* Done!
+
+* Computation finished

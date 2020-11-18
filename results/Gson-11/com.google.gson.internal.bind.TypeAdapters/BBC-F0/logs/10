@@ -1,0 +1,79 @@
+* EvoSuite 1.1.1-SNAPSHOT
+* Configuration: BBC-F0
+* Going to generate test cases for class: com.google.gson.internal.bind.TypeAdapters
+* Starting Client-0
+* Connecting to master process on port 4511
+* Analyzing classpath: 
+  - subjects/buggy-versions/Gson-11/target/classes
+* Finished analyzing classpath
+* Generating tests for class com.google.gson.internal.bind.TypeAdapters
+* Test criteria:
+  - Line Coverage
+  - Branch Coverage
+  - Exception
+  - Mutation testing (weak)
+  - Method-Output Coverage
+  - Top-Level Method Coverage
+  - No-Exception Top-Level Method Coverage
+  - Context Branch Coverage
+* Total number of test goals for DYNAMOSA: 1475
+* Using seed 449626339
+* Starting evolution
+* Initial Number of Goals in DynaMOSA = 537 / 1475
+[MASTER] 09:06:47.884 [logback-2] ERROR TestCluster - Failed to check cache for com.google.gson.reflect.TypeToken<T> : Type points to itself
+[MASTER] 09:08:05.115 [logback-2] ERROR TestCluster - Failed to check cache for java.util.function.Function<T, R> : Type points to itself
+* Search finished after 302s and 180 generations, 97400 statements, best individual has fitness: 636.0
+* Minimizing test suite
+* Going to analyze the coverage criteria
+* Coverage analysis for criterion LINE
+* Coverage of criterion LINE: 59%
+* Total number of goals: 388
+* Number of covered goals: 228
+* Coverage analysis for criterion BRANCH
+* Coverage of criterion BRANCH: 51%
+* Total number of goals: 283
+* Number of covered goals: 143
+* Coverage analysis for criterion EXCEPTION
+* Coverage of criterion EXCEPTION: 100% (no goals)
+* Coverage analysis for criterion WEAKMUTATION
+* Coverage of criterion WEAKMUTATION: 63%
+* Total number of goals: 497
+* Number of covered goals: 311
+* Coverage analysis for criterion OUTPUT
+* Coverage of criterion OUTPUT: 50%
+* Total number of goals: 10
+* Number of covered goals: 5
+* Coverage analysis for criterion METHOD
+* Coverage of criterion METHOD: 71%
+* Total number of goals: 7
+* Number of covered goals: 5
+* Coverage analysis for criterion METHODNOEXCEPTION
+* Coverage of criterion METHODNOEXCEPTION: 71%
+* Total number of goals: 7
+* Number of covered goals: 5
+* Coverage analysis for criterion CBRANCH
+* Coverage of criterion CBRANCH: 50%
+* Total number of goals: 283
+* Number of covered goals: 142
+* Generated 64 tests with total length 244
+* Resulting test suite's coverage: 64% (average coverage for all fitness functions)
+* Generating assertions
+[MASTER] 09:12:57.087 [logback-1] WARN  SimpleMutationAssertionGenerator - Reached maximum time to generate assertions, aborting assertion generation
+* Resulting test suite's mutation score: 24%
+* Compiling and checking tests
+[MASTER] 09:13:28.833 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class java.lang.ClassCastException: java.net.Inet4Address cannot be cast to java.lang.Class
+[MASTER] 09:13:28.834 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ Class<InetAddress> class0 = InetAddress.class;
+Gson gson0 = new Gson();
+Class<Currency> class1 = gson0.fromJson("Fx", (Type) class0);
+assertNotNull(class1);
+
+
+* Permissions denied during test execution: 
+  - java.lang.RuntimePermission: 
+         writeFileDescriptor: 16
+* Writing tests to file
+* Writing JUnit test case 'TypeAdapters_ESTest' to results/Gson-11/com.google.gson.internal.bind.TypeAdapters/BBC-F0/tests/10
+* Done!
+
+* Computation finished

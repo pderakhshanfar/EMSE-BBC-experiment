@@ -1,0 +1,124 @@
+* EvoSuite 1.1.1-SNAPSHOT
+* Configuration: default
+* Going to generate test cases for class: org.apache.commons.codec.binary.Base64
+* Starting Client-0
+* Connecting to master process on port 2661
+* Analyzing classpath: 
+  - subjects/buggy-versions/Codec-9/target/classes
+* Finished analyzing classpath
+* Generating tests for class org.apache.commons.codec.binary.Base64
+* Test criteria:
+  - Line Coverage
+  - Branch Coverage
+  - Exception
+  - Mutation testing (weak)
+  - Method-Output Coverage
+  - Top-Level Method Coverage
+  - No-Exception Top-Level Method Coverage
+  - Context Branch Coverage
+* Total number of test goals for DYNAMOSA: 1539
+* Using seed 2384472582
+* Starting evolution
+* Initial Number of Goals in DynaMOSA = 419 / 1539
+* Search finished after 301s and 257 generations, 141876 statements, best individual has fitness: 97.0
+* Minimizing test suite
+* Going to analyze the coverage criteria
+* Coverage analysis for criterion LINE
+* Coverage of criterion LINE: 98%
+* Total number of goals: 216
+* Number of covered goals: 212
+* Coverage analysis for criterion BRANCH
+* Coverage of criterion BRANCH: 95%
+* Total number of goals: 193
+* Number of covered goals: 183
+* Coverage analysis for criterion EXCEPTION
+* Coverage of criterion EXCEPTION: 100%
+* Total number of goals: 19
+* Number of covered goals: 19
+* Coverage analysis for criterion WEAKMUTATION
+* Coverage of criterion WEAKMUTATION: 95%
+* Total number of goals: 787
+* Number of covered goals: 749
+* Coverage analysis for criterion OUTPUT
+* Coverage of criterion OUTPUT: 91%
+* Total number of goals: 80
+* Number of covered goals: 73
+* Coverage analysis for criterion METHOD
+* Coverage of criterion METHOD: 100%
+* Total number of goals: 35
+* Number of covered goals: 35
+* Coverage analysis for criterion METHODNOEXCEPTION
+* Coverage of criterion METHODNOEXCEPTION: 100%
+* Total number of goals: 35
+* Number of covered goals: 35
+* Coverage analysis for criterion CBRANCH
+* Coverage of criterion CBRANCH: 89%
+* Total number of goals: 193
+* Number of covered goals: 171
+* Generated 96 tests with total length 236
+* Resulting test suite's coverage: 90% (average coverage for all fitness functions)
+* Generating assertions
+* Resulting test suite's mutation score: 53%
+* Compiling and checking tests
+[MASTER] 03:49:28.046 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class org.junit.internal.ArrayComparisonFailure: arrays first differed at element [4]; expected:<-74> but was:<13>
+[MASTER] 03:49:28.047 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ byte[] byteArray0 = new byte[3];
+Base64 base64_0 = new Base64((byte)7);
+byte[] byteArray1 = base64_0.encode(byteArray0);
+assertArrayEquals(new byte[] {(byte)65, (byte)65, (byte)65, (byte)65, (byte) (-74), (byte)10}, byteArray1);
+assertFalse(base64_0.isUrlSafe());
+assertEquals(6, byteArray1.length);
+
+
+[MASTER] 03:49:28.167 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class java.lang.AssertionError: null
+[MASTER] 03:49:28.168 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ byte[] byteArray0 = Base64.CHUNK_SEPARATOR;
+boolean boolean0 = Base64.isBase64(byteArray0);
+assertFalse(boolean0);
+
+
+[MASTER] 03:49:29.240 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class org.junit.internal.ArrayComparisonFailure: array lengths differed, expected.length=1 actual.length=0; arrays first differed at element [0]; expected:<-74> but was:<end of array>
+[MASTER] 03:49:29.240 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ byte[] byteArray0 = Base64.CHUNK_SEPARATOR;
+byte[] byteArray1 = Base64.discardWhitespace(byteArray0);
+assertArrayEquals(new byte[] {(byte) (-74)}, byteArray1);
+assertEquals(1, byteArray1.length);
+
+
+[MASTER] 03:49:30.871 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class org.junit.ComparisonFailure: expected:<...c2U2NGRlY29kZWlzbm90[AAphYnl0ZW9yYVN0cmluZz09AA]o> but was:<...c2U2NGRlY29kZWlzbm90[DQphYnl0ZW9yYVN0cmluZz09DQ]o>
+[MASTER] 03:49:30.871 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ byte[] byteArray0 = Base64.decodeBase64("Parameter supplied to Base64 decode is not a byte[] or a String");
+Base64 base64_0 = new Base64(36);
+byte[] byteArray1 = base64_0.encode(byteArray0);
+String string0 = Base64.encodeBase64URLSafeString(byteArray1);
+assertEquals("UGFyYW1ldGVyc3VwcGxpZWR0b0Jhc2U2NGRlY29kZWlzbm90AAphYnl0ZW9yYVN0cmluZz09AAo", string0);
+
+
+[MASTER] 03:49:31.629 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class org.junit.internal.ArrayComparisonFailure: arrays first differed at element [8]; expected:<0> but was:<13>
+[MASTER] 03:49:31.629 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ byte[] byteArray0 = Base64.decodeBase64("UTF-16LE");
+byte[] byteArray1 = Base64.encodeBase64(byteArray0, true);
+BigInteger bigInteger0 = Base64.decodeInteger(byteArray1);
+assertEquals(10, byteArray1.length);
+assertArrayEquals(new byte[] {(byte)85, (byte)84, (byte)70, (byte)43, (byte)49, (byte)54, (byte)76, (byte)69, (byte)0, (byte)10}, byteArray1);
+assertEquals((short) (-23868), bigInteger0.shortValue());
+
+
+[MASTER] 03:49:40.321 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class org.junit.internal.ArrayComparisonFailure: arrays first differed at element [0]; expected:<81> but was:<82>
+[MASTER] 03:49:40.322 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ byte[] byteArray0 = Base64.CHUNK_SEPARATOR;
+Base64 base64_0 = new Base64((-915));
+byte[] byteArray1 = base64_0.encode(byteArray0);
+byte[] byteArray2 = Base64.encodeBase64(byteArray1, false, false, 10);
+assertEquals(8, byteArray2.length);
+assertArrayEquals(new byte[] {(byte)81, (byte)85, (byte)70, (byte)118, (byte)80, (byte)81, (byte)61, (byte)61}, byteArray2);
+
+
+* Permissions denied during test execution: 
+  - java.lang.RuntimePermission: 
+         writeFileDescriptor: 7
+* Writing tests to file
+* Writing JUnit test case 'Base64_ESTest' to results/Codec-9/org.apache.commons.codec.binary.Base64/default/tests/28
+* Done!
+
+* Computation finished

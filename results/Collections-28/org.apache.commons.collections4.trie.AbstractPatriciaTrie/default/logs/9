@@ -1,0 +1,301 @@
+* EvoSuite 1.1.1-SNAPSHOT
+* Configuration: default
+* Going to generate test cases for class: org.apache.commons.collections4.trie.AbstractPatriciaTrie
+* Starting Client-0
+* Connecting to master process on port 16454
+* Analyzing classpath: 
+  - subjects/buggy-versions/Collections-28/target/classes
+* Finished analyzing classpath
+* Generating tests for class org.apache.commons.collections4.trie.AbstractPatriciaTrie
+* Test criteria:
+  - Line Coverage
+  - Branch Coverage
+  - Exception
+  - Mutation testing (weak)
+  - Method-Output Coverage
+  - Top-Level Method Coverage
+  - No-Exception Top-Level Method Coverage
+  - Context Branch Coverage
+* Total number of test goals for DYNAMOSA: 3013
+* Using seed 1444640734
+* Starting evolution
+* Initial Number of Goals in DynaMOSA = 988 / 3013
+[MASTER] 03:45:48.259 [logback-2] ERROR TestCluster - Failed to check cache for java.util.AbstractMap<K, V>.SimpleEntry<K, V> : Type points to itself
+[MASTER] 03:45:48.261 [logback-2] ERROR TestCluster - Failed to check cache for java.util.AbstractMap<K, V>.SimpleImmutableEntry<K, V> : Type points to itself
+[MASTER] 03:46:34.330 [logback-2] ERROR TestCluster - Failed to check cache for java.util.Comparator<T> : Type points to itself
+[MASTER] 03:47:47.639 [logback-1] WARN  TestChromosome - Functional mock problem: org.evosuite.ga.ConstructionFailedException: Have no generator for org.apache.commons.collections4.trie.AbstractPatriciaTrie<java.lang.Comparable<java.lang.Integer>, java.lang.String>.TrieEntry<java.lang.Comparable<java.lang.Object>, java.lang.Integer> canUseFunctionalMocks=false, canBeMocked: false
+* Search finished after 304s and 81 generations, 44210 statements, best individual has fitness: 1428.0
+* Minimizing test suite
+* Going to analyze the coverage criteria
+* Coverage analysis for criterion LINE
+* Coverage of criterion LINE: 58%
+* Total number of goals: 822
+* Number of covered goals: 478
+* Coverage analysis for criterion BRANCH
+* Coverage of criterion BRANCH: 51%
+* Total number of goals: 602
+* Number of covered goals: 307
+* Coverage analysis for criterion EXCEPTION
+* Coverage of criterion EXCEPTION: 100%
+* Total number of goals: 25
+* Number of covered goals: 25
+* Coverage analysis for criterion WEAKMUTATION
+* Coverage of criterion WEAKMUTATION: 56%
+* Total number of goals: 569
+* Number of covered goals: 321
+* Coverage analysis for criterion OUTPUT
+* Coverage of criterion OUTPUT: 60%
+* Total number of goals: 186
+* Number of covered goals: 111
+* Coverage analysis for criterion METHOD
+* Coverage of criterion METHOD: 41%
+* Total number of goals: 116
+* Number of covered goals: 47
+* Coverage analysis for criterion METHODNOEXCEPTION
+* Coverage of criterion METHODNOEXCEPTION: 41%
+* Total number of goals: 116
+* Number of covered goals: 47
+* Coverage analysis for criterion CBRANCH
+* Coverage of criterion CBRANCH: 50%
+* Total number of goals: 602
+* Number of covered goals: 304
+* Generated 138 tests with total length 475
+* Resulting test suite's coverage: 51% (average coverage for all fitness functions)
+* Generating assertions
+[MASTER] 03:52:37.789 [logback-1] WARN  SimpleMutationAssertionGenerator - Assertion minimization is taking too long (0.6699333333333334% of time used, but only 35/138 tests minimized), falling back to using all assertions
+* Resulting test suite's mutation score: 13%
+* Compiling and checking tests
+[MASTER] 03:53:00.851 [logback-2] ERROR JUnitAnalyzer - Compilation failed on compilation units: [RegularFileObject[/tmp/EvoSuite_108_1605585180629/org/apache/commons/collections4/trie/AbstractPatriciaTrie_108_tmp__ESTest.java], RegularFileObject[/tmp/EvoSuite_108_1605585180629/org/apache/commons/collections4/trie/AbstractPatriciaTrie_108_tmp__ESTest_scaffolding.java]]
+[MASTER] 03:53:00.853 [logback-2] ERROR JUnitAnalyzer - Classpath: subjects/buggy-versions/Collections-28/target/classes:/experiment/tools/evosuite.jar:/experiment/subjects/buggy-versions/Collections-28/target/classes
+[MASTER] 03:53:00.854 [logback-2] ERROR JUnitAnalyzer - evosuiteCP: /experiment/tools/evosuite.jar:/experiment/subjects/buggy-versions/Collections-28/target/classes
+[MASTER] 03:53:00.860 [logback-2] ERROR JUnitAnalyzer - Diagnostic: incompatible types: java.util.Comparator<java.util.Map.Entry<java.lang.Object,java.lang.Object>> cannot be converted to java.util.Comparator<java.util.Map.Entry<java.lang.Object,java.util.AbstractMap.SimpleEntry<java.lang.Integer,java.util.AbstractMap.SimpleEntry<java.lang.Object,java.util.AbstractMap.SimpleEntry>>>>: 27
+[MASTER] 03:53:00.879 [logback-2] ERROR JUnitAnalyzer - Diagnostic: /tmp/EvoSuite_108_1605585180629/org/apache/commons/collections4/trie/AbstractPatriciaTrie_108_tmp__ESTest.java uses unchecked or unsafe operations.: -1
+[MASTER] 03:53:00.895 [logback-2] ERROR JUnitAnalyzer - Diagnostic: Recompile with -Xlint:unchecked for details.: -1
+[MASTER] 03:53:00.897 [logback-2] ERROR JUnitAnalyzer - RegularFileObject[/tmp/EvoSuite_108_1605585180629/org/apache/commons/collections4/trie/AbstractPatriciaTrie_108_tmp__ESTest.java]
+1: /*
+2:  * This file was automatically generated by EvoSuite
+3:  * Tue Nov 17 03:53:00 GMT 2020
+4:  */
+5: 
+6: package org.apache.commons.collections4.trie;
+7: 
+8: import org.junit.Test;
+9: import static org.junit.Assert.*;
+10: import static org.evosuite.shaded.org.mockito.Mockito.*;
+11: import java.util.AbstractMap;
+12: import java.util.Comparator;
+13: import java.util.Map;
+14: import org.apache.commons.collections4.trie.AbstractPatriciaTrie;
+15: import org.apache.commons.collections4.trie.PatriciaTrie;
+16: import org.evosuite.runtime.EvoRunner;
+17: import org.evosuite.runtime.EvoRunnerParameters;
+18: import org.evosuite.runtime.ViolatedAssumptionAnswer;
+19: import org.junit.runner.RunWith;
+20: 
+21: @RunWith(EvoRunner.class) @EvoRunnerParameters(mockJVMNonDeterminism = true, useVFS = true, useVNET = true, resetStaticState = true) 
+22: public class AbstractPatriciaTrie_108_tmp__ESTest extends AbstractPatriciaTrie_108_tmp__ESTest_scaffolding {
+23: 
+24:   @Test(timeout = 4000)
+25:   public void test0()  throws Throwable  {
+26:       Comparator<Object> comparator0 = (Comparator<Object>) mock(Comparator.class, new ViolatedAssumptionAnswer());
+27:       Comparator<Map.Entry<Object, AbstractMap.SimpleEntry<Integer, AbstractMap.SimpleEntry<Object, AbstractMap.SimpleEntry>>>> comparator1 = (Comparator<Map.Entry<Object, AbstractMap.SimpleEntry<Integer, AbstractMap.SimpleEntry<Object, AbstractMap.SimpleEntry>>>>)Map.Entry.comparingByKey((Comparator<? super Object>) comparator0);
+28:       assertNotNull(comparator1);
+29:       
+30:       PatriciaTrie<Object> patriciaTrie0 = new PatriciaTrie<Object>();
+31:       assertNotNull(patriciaTrie0);
+32:       
+33:       AbstractPatriciaTrie.TrieEntry<String, Object> abstractPatriciaTrie_TrieEntry0 = new AbstractPatriciaTrie.TrieEntry<String, Object>("", comparator1, 1586);
+34:       assertFalse(abstractPatriciaTrie_TrieEntry0.isEmpty());
+35:       assertTrue(abstractPatriciaTrie_TrieEntry0.isExternalNode());
+36:       assertFalse(abstractPatriciaTrie_TrieEntry0.isInternalNode());
+37:       assertNotNull(abstractPatriciaTrie_TrieEntry0);
+38:       
+39:       AbstractPatriciaTrie.TrieEntry<String, Object> abstractPatriciaTrie_TrieEntry1 = patriciaTrie0.followRight(abstractPatriciaTrie_TrieEntry0);
+40:       assertFalse(abstractPatriciaTrie_TrieEntry0.isEmpty());
+41:       assertTrue(abstractPatriciaTrie_TrieEntry0.isExternalNode());
+42:       assertFalse(abstractPatriciaTrie_TrieEntry0.isInternalNode());
+43:       assertNull(abstractPatriciaTrie_TrieEntry1);
+44:   }
+45: }
+RegularFileObject[/tmp/EvoSuite_108_1605585180629/org/apache/commons/collections4/trie/AbstractPatriciaTrie_108_tmp__ESTest.java]
+1: /**
+2:  * Scaffolding file used to store all the setups needed to run 
+3:  * tests automatically generated by EvoSuite
+4:  * Tue Nov 17 03:53:00 GMT 2020
+5:  */
+6: 
+7: package org.apache.commons.collections4.trie;
+8: 
+9: import org.evosuite.runtime.annotation.EvoSuiteClassExclude;
+10: import org.junit.BeforeClass;
+11: import org.junit.Before;
+12: import org.junit.After;
+13: import org.junit.AfterClass;
+14: import org.evosuite.runtime.sandbox.Sandbox;
+15: import org.evosuite.runtime.sandbox.Sandbox.SandboxMode;
+16: 
+17: import static org.evosuite.shaded.org.mockito.Mockito.*;
+18: @EvoSuiteClassExclude
+19: public class AbstractPatriciaTrie_108_tmp__ESTest_scaffolding {
+20: 
+21:   @org.junit.Rule 
+22:   public org.evosuite.runtime.vnet.NonFunctionalRequirementRule nfr = new org.evosuite.runtime.vnet.NonFunctionalRequirementRule();
+23: 
+24:   private static final java.util.Properties defaultProperties = (java.util.Properties) java.lang.System.getProperties().clone(); 
+25: 
+26:   private org.evosuite.runtime.thread.ThreadStopper threadStopper =  new org.evosuite.runtime.thread.ThreadStopper (org.evosuite.runtime.thread.KillSwitchHandler.getInstance(), 3000);
+27: 
+28: 
+29:   @BeforeClass 
+30:   public static void initEvoSuiteFramework() { 
+31:     org.evosuite.runtime.RuntimeSettings.className = "org.apache.commons.collections4.trie.AbstractPatriciaTrie"; 
+32:     org.evosuite.runtime.GuiSupport.initialize(); 
+33:     org.evosuite.runtime.RuntimeSettings.maxNumberOfThreads = 100; 
+34:     org.evosuite.runtime.RuntimeSettings.maxNumberOfIterationsPerLoop = 10000; 
+35:     org.evosuite.runtime.RuntimeSettings.mockSystemIn = true; 
+36:     org.evosuite.runtime.RuntimeSettings.sandboxMode = org.evosuite.runtime.sandbox.Sandbox.SandboxMode.RECOMMENDED; 
+37:     org.evosuite.runtime.sandbox.Sandbox.initializeSecurityManagerForSUT(); 
+38:     org.evosuite.runtime.classhandling.JDKClassResetter.init();
+39:     setSystemProperties();
+40:     initializeClasses();
+41:     org.evosuite.runtime.Runtime.getInstance().resetRuntime(); 
+42:     try { initMocksToAvoidTimeoutsInTheTests(); } catch(ClassNotFoundException e) {} 
+43:   } 
+44: 
+45:   @AfterClass 
+46:   public static void clearEvoSuiteFramework(){ 
+47:     Sandbox.resetDefaultSecurityManager(); 
+48:     java.lang.System.setProperties((java.util.Properties) defaultProperties.clone()); 
+49:   } 
+50: 
+51:   @Before 
+52:   public void initTestCase(){ 
+53:     threadStopper.storeCurrentThreads();
+54:     threadStopper.startRecordingTime();
+55:     org.evosuite.runtime.jvm.ShutdownHookHandler.getInstance().initHandler(); 
+56:     org.evosuite.runtime.sandbox.Sandbox.goingToExecuteSUTCode(); 
+57:     setSystemProperties(); 
+58:     org.evosuite.runtime.GuiSupport.setHeadless(); 
+59:     org.evosuite.runtime.Runtime.getInstance().resetRuntime(); 
+60:     org.evosuite.runtime.agent.InstrumentingAgent.activate(); 
+61:   } 
+62: 
+63:   @After 
+64:   public void doneWithTestCase(){ 
+65:     threadStopper.killAndJoinClientThreads();
+66:     org.evosuite.runtime.jvm.ShutdownHookHandler.getInstance().safeExecuteAddedHooks(); 
+67:     org.evosuite.runtime.classhandling.JDKClassResetter.reset(); 
+68:     resetClasses(); 
+69:     org.evosuite.runtime.sandbox.Sandbox.doneWithExecutingSUTCode(); 
+70:     org.evosuite.runtime.agent.InstrumentingAgent.deactivate(); 
+71:     org.evosuite.runtime.GuiSupport.restoreHeadlessMode(); 
+72:   } 
+73: 
+74:   public static void setSystemProperties() {
+75:  
+76:     java.lang.System.setProperties((java.util.Properties) defaultProperties.clone()); 
+77:     java.lang.System.setProperty("user.dir", "/experiment"); 
+78:     java.lang.System.setProperty("java.io.tmpdir", "/tmp"); 
+79:   }
+80: 
+81:   private static void initializeClasses() {
+82:     org.evosuite.runtime.classhandling.ClassStateSupport.initializeClasses(AbstractPatriciaTrie_108_tmp__ESTest_scaffolding.class.getClassLoader() ,
+83:       "org.apache.commons.collections4.MapIterator",
+84:       "org.apache.commons.collections4.trie.AbstractBitwiseTrie",
+85:       "org.apache.commons.collections4.trie.AbstractPatriciaTrie$KeySet$KeyIterator",
+86:       "org.apache.commons.collections4.trie.PatriciaTrie",
+87:       "org.apache.commons.collections4.trie.AbstractPatriciaTrie$PrefixRangeMap",
+88:       "org.apache.commons.collections4.trie.AbstractPatriciaTrie$TrieEntry",
+89:       "org.apache.commons.collections4.trie.AbstractPatriciaTrie$Reference",
+90:       "org.apache.commons.collections4.Get",
+91:       "org.apache.commons.collections4.trie.AbstractPatriciaTrie$Values$ValueIterator",
+92:       "org.apache.commons.collections4.Trie",
+93:       "org.apache.commons.collections4.trie.analyzer.StringKeyAnalyzer",
+94:       "org.apache.commons.collections4.trie.AbstractPatriciaTrie$TrieIterator",
+95:       "org.apache.commons.collections4.trie.AbstractPatriciaTrie$PrefixRangeEntrySet",
+96:       "org.apache.commons.collections4.trie.AbstractBitwiseTrie$BasicEntry",
+97:       "org.apache.commons.collections4.trie.AbstractPatriciaTrie$RangeEntrySet$EntryIterator",
+98:       "org.apache.commons.collections4.trie.AbstractPatriciaTrie$EntrySet$EntryIterator",
+99:       "org.apache.commons.collections4.IterableSortedMap",
+100:       "org.apache.commons.collections4.OrderedMap",
+101:       "org.apache.commons.collections4.trie.AbstractPatriciaTrie",
+102:       "org.apache.commons.collections4.trie.AbstractPatriciaTrie$Values",
+103:       "org.apache.commons.collections4.trie.AbstractPatriciaTrie$RangeMap",
+104:       "org.apache.commons.collections4.OrderedMapIterator",
+105:       "org.apache.commons.collections4.trie.AbstractPatriciaTrie$RangeEntrySet",
+106:       "org.apache.commons.collections4.Put",
+107:       "org.apache.commons.collections4.trie.AbstractPatriciaTrie$KeySet",
+108:       "org.apache.commons.collections4.trie.KeyAnalyzer",
+109:       "org.apache.commons.collections4.trie.AbstractPatriciaTrie$RangeEntryMap",
+110:       "org.apache.commons.collections4.IterableMap",
+111:       "org.apache.commons.collections4.trie.AbstractPatriciaTrie$TrieMapIterator",
+112:       "org.apache.commons.collections4.trie.AbstractPatriciaTrie$EntrySet",
+113:       "org.apache.commons.collections4.OrderedIterator",
+114:       "org.apache.commons.collections4.IterableGet"
+115:     );
+116:   } 
+117:   private static void initMocksToAvoidTimeoutsInTheTests() throws ClassNotFoundException { 
+118:     mock(Class.forName("java.util.Comparator", false, AbstractPatriciaTrie_108_tmp__ESTest_scaffolding.class.getClassLoader()));
+119:   }
+120: 
+121:   private static void resetClasses() {
+122:     org.evosuite.runtime.classhandling.ClassResetter.getInstance().setClassLoader(AbstractPatriciaTrie_108_tmp__ESTest_scaffolding.class.getClassLoader()); 
+123: 
+124:     org.evosuite.runtime.classhandling.ClassStateSupport.resetClasses(
+125:       "org.apache.commons.collections4.trie.AbstractBitwiseTrie",
+126:       "org.apache.commons.collections4.trie.AbstractPatriciaTrie",
+127:       "org.apache.commons.collections4.trie.AbstractBitwiseTrie$BasicEntry",
+128:       "org.apache.commons.collections4.trie.AbstractPatriciaTrie$TrieEntry",
+129:       "org.apache.commons.collections4.trie.AbstractPatriciaTrie$Reference",
+130:       "org.apache.commons.collections4.trie.AbstractPatriciaTrie$EntrySet",
+131:       "org.apache.commons.collections4.trie.AbstractPatriciaTrie$KeySet",
+132:       "org.apache.commons.collections4.trie.AbstractPatriciaTrie$Values",
+133:       "org.apache.commons.collections4.trie.AbstractPatriciaTrie$TrieIterator",
+134:       "org.apache.commons.collections4.trie.AbstractPatriciaTrie$TrieMapIterator",
+135:       "org.apache.commons.collections4.trie.AbstractPatriciaTrie$RangeMap",
+136:       "org.apache.commons.collections4.trie.AbstractPatriciaTrie$PrefixRangeMap",
+137:       "org.apache.commons.collections4.trie.AbstractPatriciaTrie$RangeEntryMap",
+138:       "org.apache.commons.collections4.trie.PatriciaTrie",
+139:       "org.apache.commons.collections4.trie.KeyAnalyzer",
+140:       "org.apache.commons.collections4.trie.analyzer.StringKeyAnalyzer",
+141:       "org.apache.commons.collections4.trie.AbstractPatriciaTrie$RangeEntrySet",
+142:       "org.apache.commons.collections4.trie.AbstractPatriciaTrie$RangeEntrySet$EntryIterator",
+143:       "org.apache.commons.collections4.trie.AbstractPatriciaTrie$EntrySet$EntryIterator",
+144:       "org.apache.commons.collections4.trie.AbstractPatriciaTrie$PrefixRangeEntrySet",
+145:       "org.apache.commons.collections4.trie.AbstractPatriciaTrie$KeySet$KeyIterator",
+146:       "org.apache.commons.collections4.trie.AbstractPatriciaTrie$Values$ValueIterator",
+147:       "org.apache.commons.collections4.trie.AbstractPatriciaTrie$PrefixRangeEntrySet$SingletonIterator"
+148:     );
+149:   }
+150: }
+
+[MASTER] 03:53:00.905 [logback-2] ERROR JUnitAnalyzer - Failed to compile test case:
+Comparator<Object> comparator0 = (Comparator<Object>) mock(Comparator.class, new ViolatedAssumptionAnswer());
+Comparator<Map.Entry<Object, AbstractMap.SimpleEntry<Integer, AbstractMap.SimpleEntry<Object, AbstractMap.SimpleEntry>>>> comparator1 = (Comparator<Map.Entry<Object, AbstractMap.SimpleEntry<Integer, AbstractMap.SimpleEntry<Object, AbstractMap.SimpleEntry>>>>)Map.Entry.comparingByKey((Comparator<? super Object>) comparator0);
+assertNotNull(comparator1);
+
+PatriciaTrie<Object> patriciaTrie0 = new PatriciaTrie<Object>();
+assertNotNull(patriciaTrie0);
+
+AbstractPatriciaTrie.TrieEntry<String, Object> abstractPatriciaTrie_TrieEntry0 = new AbstractPatriciaTrie.TrieEntry<String, Object>("", comparator1, 1586);
+assertFalse(abstractPatriciaTrie_TrieEntry0.isEmpty());
+assertTrue(abstractPatriciaTrie_TrieEntry0.isExternalNode());
+assertFalse(abstractPatriciaTrie_TrieEntry0.isInternalNode());
+assertNotNull(abstractPatriciaTrie_TrieEntry0);
+
+AbstractPatriciaTrie.TrieEntry<String, Object> abstractPatriciaTrie_TrieEntry1 = patriciaTrie0.followRight(abstractPatriciaTrie_TrieEntry0);
+assertFalse(abstractPatriciaTrie_TrieEntry0.isEmpty());
+assertTrue(abstractPatriciaTrie_TrieEntry0.isExternalNode());
+assertFalse(abstractPatriciaTrie_TrieEntry0.isInternalNode());
+assertNull(abstractPatriciaTrie_TrieEntry1);
+
+
+[MASTER] 03:53:38.740 [logback-2] ERROR JUnitAnalyzer - Ran out of time while checking tests
+* Permissions denied during test execution: 
+  - java.lang.RuntimePermission: 
+         writeFileDescriptor: 3
+* Writing tests to file
+* Writing JUnit test case 'AbstractPatriciaTrie_ESTest' to results/Collections-28/org.apache.commons.collections4.trie.AbstractPatriciaTrie/default/tests/9
+* Done!
+
+* Computation finished

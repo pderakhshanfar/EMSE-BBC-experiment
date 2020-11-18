@@ -1,0 +1,112 @@
+* EvoSuite 1.1.1-SNAPSHOT
+* Configuration: BBC-F0
+* Going to generate test cases for class: com.google.javascript.jscomp.parsing.JsDocInfoParser
+* Starting Client-0
+* Connecting to master process on port 21514
+* Analyzing classpath: 
+  - subjects/buggy-versions/Closure-109/build/classes
+  - subjects/buggy-versions/Closure-109/lib/args4j.jar
+  - subjects/buggy-versions/Closure-109/lib/guava.jar
+  - subjects/buggy-versions/Closure-109/lib/json.jar
+  - subjects/buggy-versions/Closure-109/lib/jsr305.jar
+  - subjects/buggy-versions/Closure-109/lib/protobuf-java.jar
+  - subjects/buggy-versions/Closure-109/build/lib/rhino.jar
+  - subjects/buggy-versions/Closure-109/lib/ant.jar
+* Finished analyzing classpath
+* Generating tests for class com.google.javascript.jscomp.parsing.JsDocInfoParser
+* Test criteria:
+  - Line Coverage
+  - Branch Coverage
+  - Exception
+  - Mutation testing (weak)
+  - Method-Output Coverage
+  - Top-Level Method Coverage
+  - No-Exception Top-Level Method Coverage
+  - Context Branch Coverage
+* Total number of test goals for DYNAMOSA: 4198
+* Using seed 2416098270
+* Starting evolution
+* Initial Number of Goals in DynaMOSA = 1231 / 4198
+[MASTER] 00:40:24.126 [logback-2] ERROR TestCluster - Failed to check cache for java.util.Comparator<T> : Type points to itself
+[MASTER] 00:41:02.615 [logback-1] WARN  TestUsageChecker - class com.google.javascript.rhino.head.ContextFactory$1GlobalSetterImpl looks like an anonymous class, ignoring it (although reflection says false) GlobalSetterImpl
+[MASTER] 00:43:02.591 [logback-2] ERROR TestCluster - Failed to check cache for java.util.Iterator<E> : Type points to itself
+* Search finished after 304s and 74 generations, 66272 statements, best individual has fitness: 2820.0
+* Minimizing test suite
+* Going to analyze the coverage criteria
+* Coverage analysis for criterion LINE
+* Coverage of criterion LINE: 28%
+* Total number of goals: 1023
+* Number of covered goals: 282
+* Coverage analysis for criterion BRANCH
+* Coverage of criterion BRANCH: 24%
+* Total number of goals: 861
+* Number of covered goals: 203
+* Coverage analysis for criterion EXCEPTION
+* Coverage of criterion EXCEPTION: 70%
+* Total number of goals: 10
+* Number of covered goals: 7
+* Coverage analysis for criterion WEAKMUTATION
+* Coverage of criterion WEAKMUTATION: 41%
+* Total number of goals: 793
+* Number of covered goals: 328
+* Coverage analysis for criterion OUTPUT
+* Coverage of criterion OUTPUT: 43%
+* Total number of goals: 630
+* Number of covered goals: 274
+* Coverage analysis for criterion METHOD
+* Coverage of criterion METHOD: 67%
+* Total number of goals: 15
+* Number of covered goals: 10
+* Coverage analysis for criterion METHODNOEXCEPTION
+* Coverage of criterion METHODNOEXCEPTION: 67%
+* Total number of goals: 15
+* Number of covered goals: 10
+* Coverage analysis for criterion CBRANCH
+* Coverage of criterion CBRANCH: 23%
+* Total number of goals: 861
+* Number of covered goals: 199
+* Generated 40 tests with total length 327
+* Resulting test suite's coverage: 46% (average coverage for all fitness functions)
+* Generating assertions
+[MASTER] 00:45:22.400 [logback-1] WARN  SimpleMutationAssertionGenerator - Assertion minimization is taking too long (0.6760666666666667% of time used, but only 19/40 tests minimized), falling back to using all assertions
+* Resulting test suite's mutation score: 13%
+* Compiling and checking tests
+[MASTER] 00:46:07.711 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class java.lang.NullPointerException: null
+[MASTER] 00:46:07.712 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ JsDocTokenStream jsDocTokenStream0 = new JsDocTokenStream("undefined", 1527, 1527);
+Token.CommentType token_CommentType0 = Token.CommentType.HTML;
+Node node0 = JsDocInfoParser.parseTypeString("stringify");
+Charset charset0 = Charset.defaultCharset();
+Set<String> set0 = charset0.aliases();
+Config.LanguageMode config_LanguageMode0 = Config.LanguageMode.ECMASCRIPT3;
+Config config0 = new Config(set0, set0, true, config_LanguageMode0, true);
+Context context0 = Context.getCurrentContext();
+ErrorReporter errorReporter0 = context0.getErrorReporter();
+node0.setSourceFileForTesting((String) null);
+Comment comment0 = new Comment(9, 53, token_CommentType0, "JavaException");
+JsDocInfoParser jsDocInfoParser0 = new JsDocInfoParser(jsDocTokenStream0, comment0, node0, config0, errorReporter0);
+jsDocInfoParser0.parseInlineTypeDoc();
+
+[MASTER] 00:46:18.592 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class java.lang.NullPointerException: null
+[MASTER] 00:46:18.610 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ JsDocTokenStream jsDocTokenStream0 = new JsDocTokenStream("undefined", 1527, 1527);
+Node node0 = JsDocInfoParser.parseTypeString("stringify");
+Charset charset0 = Charset.defaultCharset();
+Set<String> set0 = charset0.aliases();
+Config.LanguageMode config_LanguageMode0 = Config.LanguageMode.ECMASCRIPT3;
+Config config0 = new Config(set0, set0, true, config_LanguageMode0, true);
+Context context0 = Context.getCurrentContext();
+ErrorReporter errorReporter0 = context0.getErrorReporter();
+JsDocInfoParser jsDocInfoParser0 = new JsDocInfoParser(jsDocTokenStream0, (Comment) null, node0, config0, errorReporter0);
+JsDocToken jsDocToken0 = JsDocToken.LC;
+jsDocInfoParser0.parseAndRecordTypeNode(jsDocToken0);
+
+[MASTER] 00:46:23.562 [logback-2] ERROR JUnitAnalyzer - Ran out of time while checking tests
+* Permissions denied during test execution: 
+  - java.lang.RuntimePermission: 
+         writeFileDescriptor: 2
+* Writing tests to file
+* Writing JUnit test case 'JsDocInfoParser_ESTest' to results/Closure-109/com.google.javascript.jscomp.parsing.JsDocInfoParser/BBC-F0/tests/5
+* Done!
+
+* Computation finished

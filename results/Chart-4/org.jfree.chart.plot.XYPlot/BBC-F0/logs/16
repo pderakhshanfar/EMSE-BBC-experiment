@@ -1,0 +1,90 @@
+* EvoSuite 1.1.1-SNAPSHOT
+* Configuration: BBC-F0
+* Going to generate test cases for class: org.jfree.chart.plot.XYPlot
+* Starting Client-0
+* Connecting to master process on port 6110
+* Analyzing classpath: 
+  - subjects/buggy-versions/Chart-4/build
+  - subjects/buggy-versions/Chart-4/lib/servlet.jar
+* Finished analyzing classpath
+* Generating tests for class org.jfree.chart.plot.XYPlot
+* Test criteria:
+  - Line Coverage
+  - Branch Coverage
+  - Exception
+  - Mutation testing (weak)
+  - Method-Output Coverage
+  - Top-Level Method Coverage
+  - No-Exception Top-Level Method Coverage
+  - Context Branch Coverage
+* Total number of test goals for DYNAMOSA: 5800
+* Using seed 979697221
+* Starting evolution
+* Initial Number of Goals in DynaMOSA = 2064 / 5800
+[MASTER] 12:03:14.734 [logback-2] ERROR TestCluster - Failed to check cache for java.util.LinkedList<E> : Type points to itself
+[MASTER] 12:03:15.085 [logback-2] ERROR TestCluster - Failed to check cache for java.util.HashMap<K, V> : Type points to itself
+* Search finished after 310s and 22 generations, 20550 statements, best individual has fitness: 2976.0
+* Minimizing test suite
+[MASTER] 12:09:29.192 [logback-1] WARN  TestSuiteMinimizer - Minimization timeout. Roll back to original test suite
+* Going to analyze the coverage criteria
+* Coverage analysis for criterion LINE
+* Coverage of criterion LINE: 57%
+* Total number of goals: 1743
+* Number of covered goals: 987
+* Coverage analysis for criterion BRANCH
+* Coverage of criterion BRANCH: 49%
+* Total number of goals: 1077
+* Number of covered goals: 532
+* Coverage analysis for criterion EXCEPTION
+* Coverage of criterion EXCEPTION: 100%
+* Total number of goals: 30
+* Number of covered goals: 30
+* Coverage analysis for criterion WEAKMUTATION
+* Coverage of criterion WEAKMUTATION: 59%
+* Total number of goals: 742
+* Number of covered goals: 440
+* Coverage analysis for criterion OUTPUT
+* Coverage of criterion OUTPUT: 22%
+* Total number of goals: 717
+* Number of covered goals: 158
+* Coverage analysis for criterion METHOD
+* Coverage of criterion METHOD: 77%
+* Total number of goals: 222
+* Number of covered goals: 171
+* Coverage analysis for criterion METHODNOEXCEPTION
+* Coverage of criterion METHODNOEXCEPTION: 75%
+* Total number of goals: 222
+* Number of covered goals: 166
+* Coverage analysis for criterion CBRANCH
+* Coverage of criterion CBRANCH: 37%
+* Total number of goals: 1077
+* Number of covered goals: 397
+* Generated 196 tests with total length 4488
+* Resulting test suite's coverage: 55% (average coverage for all fitness functions)
+* Generating assertions
+[MASTER] 12:10:39.819 [logback-1] WARN  SimpleMutationAssertionGenerator - Assertion minimization is taking too long (0.6983166666666667% of time used, but only 11/196 tests minimized), falling back to using all assertions
+[MASTER] 12:10:48.583 [logback-2] ERROR ClientNodeImpl - Error when generating tests for: org.jfree.chart.plot.XYPlot with seed 979697221. Configuration id : BBC-F0
+java.lang.Error: java.lang.IllegalStateException: Trying to set up the sandbox while executing a test case
+	at org.evosuite.assertion.AssertionGenerator.runTest(AssertionGenerator.java:145)
+	at org.evosuite.assertion.CompleteAssertionGenerator.addAssertions(CompleteAssertionGenerator.java:45)
+	at org.evosuite.assertion.SimpleMutationAssertionGenerator.addAssertions(SimpleMutationAssertionGenerator.java:86)
+	at org.evosuite.TestSuiteGeneratorHelper.addAssertions(TestSuiteGeneratorHelper.java:282)
+	at org.evosuite.TestSuiteGenerator.postProcessTests(TestSuiteGenerator.java:499)
+	at org.evosuite.TestSuiteGenerator.generateTestSuite(TestSuiteGenerator.java:215)
+	at org.evosuite.rmi.service.ClientNodeImpl.lambda$startNewSearch$101(ClientNodeImpl.java:150)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.lang.IllegalStateException: Trying to set up the sandbox while executing a test case
+	at org.evosuite.runtime.sandbox.MSecurityManager.goingToExecuteTestCase(MSecurityManager.java:347)
+	at org.evosuite.runtime.sandbox.Sandbox.goingToExecuteSUTCode(Sandbox.java:130)
+	at org.evosuite.testcase.execution.reset.ClassReInitializeExecutor.resetClass(ClassReInitializeExecutor.java:102)
+	at org.evosuite.testcase.execution.reset.ClassReInitializeExecutor.resetClasses(ClassReInitializeExecutor.java:89)
+	at org.evosuite.testcase.execution.reset.ClassReInitializer.reInitializeClassesAfterTestExecution(ClassReInitializer.java:181)
+	at org.evosuite.testcase.execution.TestCaseExecutor.execute(TestCaseExecutor.java:279)
+	at org.evosuite.testcase.execution.TestCaseExecutor.execute(TestCaseExecutor.java:262)
+	at org.evosuite.assertion.AssertionGenerator.runTest(AssertionGenerator.java:132)
+	... 11 common frames omitted
+* Computation finished

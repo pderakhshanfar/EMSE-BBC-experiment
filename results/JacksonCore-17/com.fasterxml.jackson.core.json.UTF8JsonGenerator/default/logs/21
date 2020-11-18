@@ -1,0 +1,177 @@
+* EvoSuite 1.1.1-SNAPSHOT
+* Configuration: default
+* Going to generate test cases for class: com.fasterxml.jackson.core.json.UTF8JsonGenerator
+* Starting Client-0
+* Connecting to master process on port 10737
+* Analyzing classpath: 
+  - subjects/buggy-versions/JacksonCore-17/target/classes
+* Finished analyzing classpath
+* Generating tests for class com.fasterxml.jackson.core.json.UTF8JsonGenerator
+* Test criteria:
+  - Line Coverage
+  - Branch Coverage
+  - Exception
+  - Mutation testing (weak)
+  - Method-Output Coverage
+  - Top-Level Method Coverage
+  - No-Exception Top-Level Method Coverage
+  - Context Branch Coverage
+* Total number of test goals for DYNAMOSA: 2877
+* Using seed 344264368
+* Starting evolution
+* Initial Number of Goals in DynaMOSA = 783 / 2877
+[MASTER] 12:23:48.649 [logback-1] WARN  CoverageArchive - A solution with a timeout/exception result has been added to the archive. The covered goal was [METHOD] com.fasterxml.jackson.core.json.UTF8JsonGenerator.writeString(Ljava/lang/String;)V
+[MASTER] 12:23:48.657 [logback-1] WARN  CoverageArchive - A solution with a timeout/exception result has been added to the archive. The covered goal was [METHODNOEX] com.fasterxml.jackson.core.json.UTF8JsonGenerator.writeString(Ljava/lang/String;)V
+[MASTER] 12:23:48.678 [logback-1] WARN  CoverageArchive - A solution with a timeout/exception result has been added to the archive. The covered goal was Branch com.fasterxml.jackson.core.json.UTF8JsonGenerator.writeString(Ljava/lang/String;)V: I26 Branch 47 IF_ICMPLE L417 - false in context: com.fasterxml.jackson.core.json.UTF8JsonGenerator:writeString(Ljava/lang/String;)V
+[MASTER] 12:23:48.697 [logback-1] WARN  CoverageArchive - A solution with a timeout/exception result has been added to the archive. The covered goal was Branch com.fasterxml.jackson.core.json.UTF8JsonGenerator.writeString(Ljava/lang/String;)V: I8 Branch 46 IFNONNULL L411 - true in context: com.fasterxml.jackson.core.json.UTF8JsonGenerator:writeString(Ljava/lang/String;)V
+[MASTER] 12:23:48.876 [logback-1] WARN  CoverageArchive - A solution with a timeout/exception result has been added to the archive. The covered goal was Weak Mutation 4378: com.fasterxml.jackson.core.json.UTF8JsonGenerator._writeStringSegments(Ljava/lang/String;Z)V:1115 - ReplaceComparisonOperator < -> -2
+[MASTER] 12:24:00.549 [logback-1] WARN  CoverageArchive - A solution with a timeout/exception result has been added to the archive. The covered goal was com.fasterxml.jackson.core.json.UTF8JsonGenerator._writeStringSegments(Ljava/lang/String;Z)V: Line 1132
+[MASTER] 12:24:00.550 [logback-1] WARN  CoverageArchive - A solution with a timeout/exception result has been added to the archive. The covered goal was com.fasterxml.jackson.core.json.UTF8JsonGenerator._writeStringSegments(Ljava/lang/String;Z)V: Line 1131
+[MASTER] 12:24:00.551 [logback-1] WARN  CoverageArchive - A solution with a timeout/exception result has been added to the archive. The covered goal was com.fasterxml.jackson.core.json.UTF8JsonGenerator._writeStringSegments(Ljava/lang/String;Z)V: Line 1130
+[MASTER] 12:24:00.552 [logback-1] WARN  CoverageArchive - A solution with a timeout/exception result has been added to the archive. The covered goal was com.fasterxml.jackson.core.json.UTF8JsonGenerator._writeStringSegments(Ljava/lang/String;Z)V: Line 1129
+[MASTER] 12:24:00.570 [logback-1] WARN  CoverageArchive - A solution with a timeout/exception result has been added to the archive. The covered goal was Weak Mutation 4484: com.fasterxml.jackson.core.json.UTF8JsonGenerator._writeStringSegments(Ljava/lang/String;Z)V:1126 - ReplaceComparisonOperator <= -> <
+* Search finished after 304s and 85 generations, 74677 statements, best individual has fitness: 1323.0
+* Minimizing test suite
+[MASTER] 12:29:55.758 [logback-1] WARN  TestSuiteMinimizer - Minimization timeout. Roll back to original test suite
+* Going to analyze the coverage criteria
+* Coverage analysis for criterion LINE
+* Coverage of criterion LINE: 62%
+* Total number of goals: 979
+* Number of covered goals: 607
+* Coverage analysis for criterion BRANCH
+* Coverage of criterion BRANCH: 59%
+* Total number of goals: 539
+* Number of covered goals: 319
+* Coverage analysis for criterion EXCEPTION
+* Coverage of criterion EXCEPTION: 100%
+* Total number of goals: 102
+* Number of covered goals: 102
+* Coverage analysis for criterion WEAKMUTATION
+* Coverage of criterion WEAKMUTATION: 43%
+* Total number of goals: 716
+* Number of covered goals: 305
+* Coverage analysis for criterion OUTPUT
+* Coverage of criterion OUTPUT: 29%
+* Total number of goals: 14
+* Number of covered goals: 4
+* Coverage analysis for criterion METHOD
+* Coverage of criterion METHOD: 96%
+* Total number of goals: 45
+* Number of covered goals: 43
+* Coverage analysis for criterion METHODNOEXCEPTION
+* Coverage of criterion METHODNOEXCEPTION: 78%
+* Total number of goals: 45
+* Number of covered goals: 35
+* Coverage analysis for criterion CBRANCH
+* Coverage of criterion CBRANCH: 59%
+* Total number of goals: 539
+* Number of covered goals: 318
+* Generated 345 tests with total length 5412
+* Resulting test suite's coverage: 60% (average coverage for all fitness functions)
+* Generating assertions
+[MASTER] 12:31:09.829 [logback-1] WARN  SimpleMutationAssertionGenerator - Assertion minimization is taking too long (0.9370333333333334% of time used, but only 6/345 tests minimized), falling back to using all assertions
+[MASTER] 12:31:14.016 [logback-1] WARN  SimpleMutationAssertionGenerator - Reached maximum time to generate assertions, aborting assertion generation
+* Resulting test suite's mutation score: 2%
+* Compiling and checking tests
+[MASTER] 12:32:11.609 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class java.lang.AssertionError: expected:<25> but was:<26>
+[MASTER] 12:32:11.610 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ BufferRecycler bufferRecycler0 = new BufferRecycler();
+assertNotNull(bufferRecycler0);
+assertEquals(0, BufferRecycler.BYTE_READ_IO_BUFFER);
+assertEquals(0, BufferRecycler.CHAR_TOKEN_BUFFER);
+assertEquals(3, BufferRecycler.BYTE_BASE64_CODEC_BUFFER);
+assertEquals(3, BufferRecycler.CHAR_NAME_COPY_BUFFER);
+assertEquals(1, BufferRecycler.BYTE_WRITE_ENCODING_BUFFER);
+assertEquals(1, BufferRecycler.CHAR_CONCAT_BUFFER);
+assertEquals(2, BufferRecycler.BYTE_WRITE_CONCAT_BUFFER);
+assertEquals(2, BufferRecycler.CHAR_TEXT_BUFFER);
+
+IOContext iOContext0 = new IOContext(bufferRecycler0, bufferRecycler0, true);
+assertNotNull(iOContext0);
+assertTrue(iOContext0.isResourceManaged());
+assertNull(iOContext0.getEncoding());
+assertEquals(0, BufferRecycler.BYTE_READ_IO_BUFFER);
+assertEquals(0, BufferRecycler.CHAR_TOKEN_BUFFER);
+assertEquals(3, BufferRecycler.BYTE_BASE64_CODEC_BUFFER);
+assertEquals(3, BufferRecycler.CHAR_NAME_COPY_BUFFER);
+assertEquals(1, BufferRecycler.BYTE_WRITE_ENCODING_BUFFER);
+assertEquals(1, BufferRecycler.CHAR_CONCAT_BUFFER);
+assertEquals(2, BufferRecycler.BYTE_WRITE_CONCAT_BUFFER);
+assertEquals(2, BufferRecycler.CHAR_TEXT_BUFFER);
+
+ByteArrayOutputStream byteArrayOutputStream0 = new ByteArrayOutputStream();
+assertNotNull(byteArrayOutputStream0);
+assertEquals("", byteArrayOutputStream0.toString());
+assertEquals(0, byteArrayOutputStream0.size());
+
+byte[] byteArray0 = new byte[4];
+byteArray0[0] = (byte)115;
+byteArray0[1] = (byte)115;
+byteArray0[2] = (byte)115;
+byteArray0[3] = (byte)115;
+ByteArrayInputStream byteArrayInputStream0 = new ByteArrayInputStream(byteArray0);
+assertArrayEquals(new byte[] {(byte)115, (byte)115, (byte)115, (byte)115}, byteArray0);
+assertEquals(4, byteArray0.length);
+assertNotNull(byteArrayInputStream0);
+assertEquals(4, byteArrayInputStream0.available());
+
+PushbackInputStream pushbackInputStream0 = new PushbackInputStream(byteArrayInputStream0);
+assertArrayEquals(new byte[] {(byte)115, (byte)115, (byte)115, (byte)115}, byteArray0);
+assertEquals(4, byteArray0.length);
+assertNotNull(pushbackInputStream0);
+assertEquals(4, byteArrayInputStream0.available());
+
+MockPrintStream mockPrintStream0 = new MockPrintStream(byteArrayOutputStream0, true);
+assertNotNull(mockPrintStream0);
+
+Object object0 = new Object();
+assertNotNull(object0);
+
+mockPrintStream0.println(object0);
+assertEquals(25, byteArrayOutputStream0.size());
+
+UTF8JsonGenerator uTF8JsonGenerator0 = new UTF8JsonGenerator(iOContext0, 4096, (ObjectCodec) null, mockPrintStream0, byteArray0, (byte)115, true);
+assertArrayEquals(new byte[] {(byte)115, (byte)115, (byte)115, (byte)115}, byteArray0);
+assertEquals(4, byteArray0.length);
+assertNotNull(uTF8JsonGenerator0);
+assertTrue(iOContext0.isResourceManaged());
+assertNull(iOContext0.getEncoding());
+assertEquals(25, byteArrayOutputStream0.size());
+assertFalse(uTF8JsonGenerator0.canWriteTypeId());
+assertTrue(uTF8JsonGenerator0.canOmitFields());
+assertFalse(uTF8JsonGenerator0.isClosed());
+assertFalse(uTF8JsonGenerator0.canWriteFormattedNumbers());
+assertFalse(uTF8JsonGenerator0.canWriteObjectId());
+assertEquals(0, uTF8JsonGenerator0.getHighestEscapedChar());
+assertEquals(115, uTF8JsonGenerator0.getOutputBuffered());
+assertEquals(0, uTF8JsonGenerator0.getFormatFeatures());
+assertFalse(uTF8JsonGenerator0.canWriteBinaryNatively());
+assertEquals(4096, uTF8JsonGenerator0.getFeatureMask());
+assertEquals(0, BufferRecycler.BYTE_READ_IO_BUFFER);
+assertEquals(0, BufferRecycler.CHAR_TOKEN_BUFFER);
+assertEquals(3, BufferRecycler.BYTE_BASE64_CODEC_BUFFER);
+assertEquals(3, BufferRecycler.CHAR_NAME_COPY_BUFFER);
+assertEquals(1, BufferRecycler.BYTE_WRITE_ENCODING_BUFFER);
+assertEquals(1, BufferRecycler.CHAR_CONCAT_BUFFER);
+assertEquals(2, BufferRecycler.BYTE_WRITE_CONCAT_BUFFER);
+assertEquals(2, BufferRecycler.CHAR_TEXT_BUFFER);
+assertEquals(55296, GeneratorBase.SURR1_FIRST);
+assertEquals(57343, GeneratorBase.SURR2_LAST);
+assertEquals(56319, GeneratorBase.SURR1_LAST);
+assertEquals(56320, GeneratorBase.SURR2_FIRST);
+
+BigDecimal bigDecimal0 = BigDecimal.ZERO;
+assertNotNull(bigDecimal0);
+assertEquals((short)0, bigDecimal0.shortValue());
+assertEquals((byte)0, bigDecimal0.byteValue());
+
+uTF8JsonGenerator0.writeNumber(bigDecimal0);
+
+* Permissions denied during test execution: 
+  - java.lang.RuntimePermission: 
+         writeFileDescriptor: 15
+* Writing tests to file
+* Writing JUnit test case 'UTF8JsonGenerator_ESTest' to results/JacksonCore-17/com.fasterxml.jackson.core.json.UTF8JsonGenerator/default/tests/21
+* Done!
+
+* Computation finished
