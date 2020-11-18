@@ -1,0 +1,109 @@
+* EvoSuite 1.1.1-SNAPSHOT
+* Configuration: default
+* Going to generate test cases for class: com.fasterxml.jackson.databind.util.StdDateFormat
+* Starting Client-0
+* Connecting to master process on port 11813
+* Analyzing classpath: 
+  - subjects/buggy-versions/JacksonDatabind-104/target/classes
+  - defects4j/framework/projects/JacksonDatabind/lib/com/fasterxml/jackson/core/jackson-annotations/2.9.0/jackson-annotations-2.9.0.jar
+  - defects4j/framework/projects/JacksonDatabind/lib/com/fasterxml/jackson/core/jackson-core/2.9.8/jackson-core-2.9.8.jar
+* Finished analyzing classpath
+* Generating tests for class com.fasterxml.jackson.databind.util.StdDateFormat
+* Test criteria:
+  - Line Coverage
+  - Branch Coverage
+  - Exception
+  - Mutation testing (weak)
+  - Method-Output Coverage
+  - Top-Level Method Coverage
+  - No-Exception Top-Level Method Coverage
+  - Context Branch Coverage
+* Total number of test goals for DYNAMOSA: 1396
+* Using seed 2745811141
+* Starting evolution
+* Initial Number of Goals in DynaMOSA = 666 / 1396
+[MASTER] 21:26:33.415 [logback-2] ERROR TestCluster - Failed to check cache for java.time.temporal.TemporalQuery<R> : Type points to itself
+* Search finished after 302s and 799 generations, 188308 statements, best individual has fitness: 192.0
+* Minimizing test suite
+* Going to analyze the coverage criteria
+* Coverage analysis for criterion LINE
+* Coverage of criterion LINE: 84%
+* Total number of goals: 234
+* Number of covered goals: 196
+* Coverage analysis for criterion BRANCH
+* Coverage of criterion BRANCH: 82%
+* Total number of goals: 146
+* Number of covered goals: 120
+* Coverage analysis for criterion EXCEPTION
+* Coverage of criterion EXCEPTION: 97%
+* Total number of goals: 29
+* Number of covered goals: 28
+* Coverage analysis for criterion WEAKMUTATION
+* Coverage of criterion WEAKMUTATION: 95%
+* Total number of goals: 714
+* Number of covered goals: 675
+* Coverage analysis for criterion OUTPUT
+* Coverage of criterion OUTPUT: 59%
+* Total number of goals: 90
+* Number of covered goals: 53
+* Coverage analysis for criterion METHOD
+* Coverage of criterion METHOD: 100%
+* Total number of goals: 33
+* Number of covered goals: 33
+* Coverage analysis for criterion METHODNOEXCEPTION
+* Coverage of criterion METHODNOEXCEPTION: 100%
+* Total number of goals: 33
+* Number of covered goals: 33
+* Coverage analysis for criterion CBRANCH
+* Coverage of criterion CBRANCH: 82%
+* Total number of goals: 146
+* Number of covered goals: 120
+* Generated 85 tests with total length 298
+* Resulting test suite's coverage: 82% (average coverage for all fitness functions)
+* Generating assertions
+* Resulting test suite's mutation score: 29%
+* Compiling and checking tests
+[MASTER] 21:28:45.060 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class java.lang.AssertionError: Expecting exception: IllegalStateException
+[MASTER] 21:28:45.060 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ StdDateFormat stdDateFormat0 = new StdDateFormat();
+ParsePosition parsePosition0 = new ParsePosition((-1189));
+stdDateFormat0.parse("0000-00-00T00:00", parsePosition0);
+
+[MASTER] 21:28:48.551 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class java.lang.AssertionError: Expecting exception: IllegalStateException
+[MASTER] 21:28:48.551 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ StdDateFormat stdDateFormat0 = StdDateFormat.instance;
+stdDateFormat0.parse("0000-00-00T00:00");
+
+[MASTER] 21:28:49.912 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class org.junit.ComparisonFailure: expected:<...yyyy HH:mm:ss zzz' ([stric]t)]> but was:<...yyyy HH:mm:ss zzz' ([lenien]t)]>
+[MASTER] 21:28:49.912 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ StdDateFormat stdDateFormat0 = new StdDateFormat();
+String string0 = stdDateFormat0.instance.toPattern();
+assertEquals("[one of: 'yyyy-MM-dd'T'HH:mm:ss.SSSZ', 'EEE, dd MMM yyyy HH:mm:ss zzz' (strict)]", string0);
+assertFalse(stdDateFormat0.isColonIncludedInTimeZone());
+
+
+[MASTER] 21:28:53.363 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class java.lang.AssertionError: Expecting exception: IllegalStateException
+[MASTER] 21:28:53.363 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ StdDateFormat stdDateFormat0 = new StdDateFormat();
+ParsePosition parsePosition0 = new ParsePosition(2118);
+stdDateFormat0._parseAsISO8601("0000-00-00T00:00", parsePosition0);
+
+[MASTER] 21:28:53.814 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class java.lang.AssertionError: Expecting exception: IllegalStateException
+[MASTER] 21:28:53.814 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ StdDateFormat stdDateFormat0 = StdDateFormat.instance;
+stdDateFormat0._parseDate("0000-00-00T00:00", (ParsePosition) null);
+
+[MASTER] 21:28:55.106 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class java.lang.AssertionError: Expecting exception: IllegalStateException
+[MASTER] 21:28:55.107 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ StdDateFormat stdDateFormat0 = StdDateFormat.instance;
+ParsePosition parsePosition0 = new ParsePosition(1800);
+stdDateFormat0.parseAsISO8601("0000-00-00T00:00", parsePosition0);
+
+* Permissions denied during test execution: 
+  - java.lang.RuntimePermission: 
+         writeFileDescriptor: 3
+* Writing tests to file
+* Writing JUnit test case 'StdDateFormat_ESTest' to results/JacksonDatabind-104/com.fasterxml.jackson.databind.util.StdDateFormat/default/tests/10
+* Done!
+
+* Computation finished

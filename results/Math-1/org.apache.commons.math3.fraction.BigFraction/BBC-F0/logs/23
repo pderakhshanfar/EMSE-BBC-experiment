@@ -1,0 +1,85 @@
+* EvoSuite 1.1.1-SNAPSHOT
+* Configuration: BBC-F0
+* Going to generate test cases for class: org.apache.commons.math3.fraction.BigFraction
+* Starting Client-0
+* Connecting to master process on port 20837
+* Analyzing classpath: 
+  - subjects/buggy-versions/Math-1/target/classes
+* Finished analyzing classpath
+* Generating tests for class org.apache.commons.math3.fraction.BigFraction
+* Test criteria:
+  - Line Coverage
+  - Branch Coverage
+  - Exception
+  - Mutation testing (weak)
+  - Method-Output Coverage
+  - Top-Level Method Coverage
+  - No-Exception Top-Level Method Coverage
+  - Context Branch Coverage
+* Total number of test goals for DYNAMOSA: 1792
+* Using seed 3336534312
+* Starting evolution
+* Initial Number of Goals in DynaMOSA = 621 / 1792
+* Search finished after 302s and 71 generations, 23356 statements, best individual has fitness: 120.0
+* Minimizing test suite
+* Going to analyze the coverage criteria
+* Coverage analysis for criterion LINE
+* Coverage of criterion LINE: 98%
+* Total number of goals: 214
+* Number of covered goals: 209
+* Coverage analysis for criterion BRANCH
+* Coverage of criterion BRANCH: 98%
+* Total number of goals: 133
+* Number of covered goals: 130
+* Coverage analysis for criterion EXCEPTION
+* Coverage of criterion EXCEPTION: 97%
+* Total number of goals: 33
+* Number of covered goals: 32
+* Coverage analysis for criterion WEAKMUTATION
+* Coverage of criterion WEAKMUTATION: 95%
+* Total number of goals: 963
+* Number of covered goals: 916
+* Coverage analysis for criterion OUTPUT
+* Coverage of criterion OUTPUT: 86%
+* Total number of goals: 243
+* Number of covered goals: 209
+* Coverage analysis for criterion METHOD
+* Coverage of criterion METHOD: 100%
+* Total number of goals: 53
+* Number of covered goals: 53
+* Coverage analysis for criterion METHODNOEXCEPTION
+* Coverage of criterion METHODNOEXCEPTION: 100%
+* Total number of goals: 53
+* Number of covered goals: 53
+* Coverage analysis for criterion CBRANCH
+* Coverage of criterion CBRANCH: 98%
+* Total number of goals: 133
+* Number of covered goals: 130
+* Generated 156 tests with total length 361
+* Resulting test suite's coverage: 91% (average coverage for all fitness functions)
+* Generating assertions
+[MASTER] 07:43:27.901 [logback-2] ERROR ClientNodeImpl - Error when generating tests for: org.apache.commons.math3.fraction.BigFraction with seed 3336534312. Configuration id : BBC-F0
+java.lang.Error: java.lang.IllegalStateException: Trying to set up the sandbox while executing a test case
+	at org.evosuite.assertion.MutationAssertionGenerator.runTest(MutationAssertionGenerator.java:162)
+	at org.evosuite.assertion.SimpleMutationAssertionGenerator.addAssertions(SimpleMutationAssertionGenerator.java:199)
+	at org.evosuite.assertion.SimpleMutationAssertionGenerator.addAssertions(SimpleMutationAssertionGenerator.java:113)
+	at org.evosuite.assertion.SimpleMutationAssertionGenerator.addAssertions(SimpleMutationAssertionGenerator.java:90)
+	at org.evosuite.TestSuiteGeneratorHelper.addAssertions(TestSuiteGeneratorHelper.java:282)
+	at org.evosuite.TestSuiteGenerator.postProcessTests(TestSuiteGenerator.java:499)
+	at org.evosuite.TestSuiteGenerator.generateTestSuite(TestSuiteGenerator.java:215)
+	at org.evosuite.rmi.service.ClientNodeImpl.lambda$startNewSearch$101(ClientNodeImpl.java:150)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.lang.IllegalStateException: Trying to set up the sandbox while executing a test case
+	at org.evosuite.runtime.sandbox.MSecurityManager.goingToExecuteTestCase(MSecurityManager.java:347)
+	at org.evosuite.runtime.sandbox.Sandbox.goingToExecuteSUTCode(Sandbox.java:130)
+	at org.evosuite.testcase.execution.TestCaseExecutor.execute(TestCaseExecutor.java:329)
+	at org.evosuite.testcase.execution.TestCaseExecutor.execute(TestCaseExecutor.java:275)
+	at org.evosuite.testcase.execution.TestCaseExecutor.execute(TestCaseExecutor.java:262)
+	at org.evosuite.assertion.MutationAssertionGenerator.runTest(MutationAssertionGenerator.java:145)
+	... 12 common frames omitted
+* Computation finished
+[MASTER] 07:43:27.932 [logback-2] ERROR Sandbox - Sandbox is not initialized!

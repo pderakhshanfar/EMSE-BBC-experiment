@@ -1,0 +1,83 @@
+* EvoSuite 1.1.1-SNAPSHOT
+* Configuration: BBC-F0
+* Going to generate test cases for class: org.joda.time.DateTimeZone
+* Starting Client-0
+* Connecting to master process on port 10112
+* Analyzing classpath: 
+  - subjects/buggy-versions/Time-9/target/classes
+  - defects4j/framework/projects/Time/lib/org/joda/joda-convert/1.2/joda-convert-1.2.jar
+* Finished analyzing classpath
+* Generating tests for class org.joda.time.DateTimeZone
+* Test criteria:
+  - Line Coverage
+  - Branch Coverage
+  - Exception
+  - Mutation testing (weak)
+  - Method-Output Coverage
+  - Top-Level Method Coverage
+  - No-Exception Top-Level Method Coverage
+  - Context Branch Coverage
+* Total number of test goals for DYNAMOSA: 1704
+* Using seed 3221867360
+* Starting evolution
+* Initial Number of Goals in DynaMOSA = 561 / 1704
+[MASTER] 14:19:22.828 [logback-2] ERROR TestCluster - Failed to check cache for java.lang.ref.PhantomReference<T> : Type points to itself
+[MASTER] 14:19:22.828 [logback-2] ERROR TestCluster - Failed to check cache for java.lang.ref.SoftReference<T> : Type points to itself
+[MASTER] 14:19:22.828 [logback-2] ERROR TestCluster - Failed to check cache for java.lang.ref.WeakReference<T> : Type points to itself
+[MASTER] 14:20:05.955 [logback-2] ERROR TestCluster - Failed to check cache for java.time.temporal.TemporalQuery<R> : Type points to itself
+* Search finished after 302s and 414 generations, 130398 statements, best individual has fitness: 242.0
+* Minimizing test suite
+* Going to analyze the coverage criteria
+* Coverage analysis for criterion LINE
+* Coverage of criterion LINE: 87%
+* Total number of goals: 346
+* Number of covered goals: 302
+* Coverage analysis for criterion BRANCH
+* Coverage of criterion BRANCH: 82%
+* Total number of goals: 194
+* Number of covered goals: 159
+* Coverage analysis for criterion EXCEPTION
+* Coverage of criterion EXCEPTION: 100%
+* Total number of goals: 9
+* Number of covered goals: 9
+* Coverage analysis for criterion WEAKMUTATION
+* Coverage of criterion WEAKMUTATION: 91%
+* Total number of goals: 801
+* Number of covered goals: 727
+* Coverage analysis for criterion OUTPUT
+* Coverage of criterion OUTPUT: 65%
+* Total number of goals: 95
+* Number of covered goals: 62
+* Coverage analysis for criterion METHOD
+* Coverage of criterion METHOD: 100%
+* Total number of goals: 37
+* Number of covered goals: 37
+* Coverage analysis for criterion METHODNOEXCEPTION
+* Coverage of criterion METHODNOEXCEPTION: 100%
+* Total number of goals: 37
+* Number of covered goals: 37
+* Coverage analysis for criterion CBRANCH
+* Coverage of criterion CBRANCH: 82%
+* Total number of goals: 194
+* Number of covered goals: 159
+* Generated 97 tests with total length 226
+* Resulting test suite's coverage: 78% (average coverage for all fitness functions)
+* Generating assertions
+* Resulting test suite's mutation score: 50%
+* Compiling and checking tests
+[MASTER] 14:25:56.333 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class org.junit.ComparisonFailure: expected:<[]UTC> but was:<[Etc/]UTC>
+[MASTER] 14:25:56.341 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ UTCProvider uTCProvider0 = new UTCProvider();
+DateTimeZone.setProvider(uTCProvider0);
+DateTimeZone dateTimeZone0 = DateTimeZone.getDefault();
+assertEquals("UTC", dateTimeZone0.toString());
+
+
+* Permissions denied during test execution: 
+  - java.lang.RuntimePermission: 
+         writeFileDescriptor: 3
+* Writing tests to file
+* Writing JUnit test case 'DateTimeZone_ESTest' to results/Time-9/org.joda.time.DateTimeZone/BBC-F0/tests/22
+* Done!
+
+* Computation finished

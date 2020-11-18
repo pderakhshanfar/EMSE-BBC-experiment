@@ -1,0 +1,123 @@
+* EvoSuite 1.1.1-SNAPSHOT
+* Configuration: BBC-F0
+* Going to generate test cases for class: org.apache.commons.jxpath.ri.compiler.CoreFunction
+* Starting Client-0
+* Connecting to master process on port 5050
+* Analyzing classpath: 
+  - subjects/buggy-versions/JxPath-14/target/classes
+  - subjects/buggy-versions/JxPath-14/src/java
+  - subjects/buggy-versions/JxPath-14/target/lib/commons-beanutils-1.7.0.jar
+  - subjects/buggy-versions/JxPath-14/target/lib/commons-logging-1.1.jar
+  - subjects/buggy-versions/JxPath-14/target/lib/jdom-1.0.jar
+  - subjects/buggy-versions/JxPath-14/target/lib/jsp-api-2.0.jar
+  - subjects/buggy-versions/JxPath-14/target/lib/junit-3.8.2.jar
+  - subjects/buggy-versions/JxPath-14/target/lib/mockrunner-0.4.1.jar
+  - subjects/buggy-versions/JxPath-14/target/lib/servletapi-2.4.jar
+  - subjects/buggy-versions/JxPath-14/target/lib/xerces-2.4.0.jar
+  - subjects/buggy-versions/JxPath-14/target/lib/xml-apis-2.0.2.jar
+* Finished analyzing classpath
+* Generating tests for class org.apache.commons.jxpath.ri.compiler.CoreFunction
+* Test criteria:
+  - Line Coverage
+  - Branch Coverage
+  - Exception
+  - Mutation testing (weak)
+  - Method-Output Coverage
+  - Top-Level Method Coverage
+  - No-Exception Top-Level Method Coverage
+  - Context Branch Coverage
+* Total number of test goals for DYNAMOSA: 1832
+* Using seed 954020589
+* Starting evolution
+* Initial Number of Goals in DynaMOSA = 654 / 1832
+[MASTER] 05:16:12.899 [logback-2] ERROR TestCluster - Failed to check cache for java.util.LinkedList<E> : Type points to itself
+[MASTER] 05:17:47.816 [logback-1] WARN  TestChromosome - Functional mock problem: org.evosuite.ga.ConstructionFailedException: Failed to add constructor for org.apache.commons.jxpath.ri.JXPathContextReferenceImpl due to org.evosuite.ga.ConstructionFailedException: Failed to add constructor for org.apache.commons.jxpath.ri.axes.RootContext due to org.evosuite.ga.ConstructionFailedException: Failed to add constructor for org.apache.commons.jxpath.ri.model.VariablePointer due to org.evosuite.ga.ConstructionFailedException: Max recursion depth reached
+[MASTER] 05:17:48.116 [logback-1] WARN  TestChromosome - Functional mock problem: org.evosuite.ga.ConstructionFailedException: Failed to add constructor for org.apache.commons.jxpath.ri.JXPathContextReferenceImpl due to org.evosuite.ga.ConstructionFailedException: Failed to add constructor for org.apache.commons.jxpath.ri.axes.AncestorContext due to org.evosuite.ga.ConstructionFailedException: Failed to add constructor for org.apache.commons.jxpath.ri.axes.AttributeContext due to org.evosuite.ga.ConstructionFailedException: Failed to add constructor for org.apache.commons.jxpath.ri.axes.UnionContext due to org.evosuite.ga.ConstructionFailedException: Max recursion depth reached
+[MASTER] 05:18:34.151 [logback-1] WARN  TestChromosome - Functional mock problem: org.evosuite.ga.ConstructionFailedException: Failed to add constructor for org.apache.commons.jxpath.ri.NamespaceResolver due to org.evosuite.ga.ConstructionFailedException: Failed to add constructor for org.apache.commons.jxpath.ri.JXPathContextReferenceImpl due to org.evosuite.ga.ConstructionFailedException: Failed to add constructor for org.apache.commons.jxpath.ri.axes.AncestorContext due to org.evosuite.ga.ConstructionFailedException: Max recursion depth reached
+[MASTER] 05:20:10.078 [logback-1] WARN  TestChromosome - Functional mock problem: org.evosuite.ga.ConstructionFailedException: Have no generator for class org.apache.commons.jxpath.ri.JXPathContextReferenceImpl canUseFunctionalMocks=false, canBeMocked: true
+* Search finished after 304s and 425 generations, 186557 statements, best individual has fitness: 447.0
+* Minimizing test suite
+[MASTER] 05:22:23.176 [logback-1] WARN  TestSuiteMinimizer - Minimization timeout. Roll back to original test suite
+* Going to analyze the coverage criteria
+* Coverage analysis for criterion LINE
+* Coverage of criterion LINE: 82%
+* Total number of goals: 344
+* Number of covered goals: 281
+* Coverage analysis for criterion BRANCH
+* Coverage of criterion BRANCH: 86%
+* Total number of goals: 355
+* Number of covered goals: 305
+* Coverage analysis for criterion EXCEPTION
+* Coverage of criterion EXCEPTION: 100%
+* Total number of goals: 136
+* Number of covered goals: 136
+* Coverage analysis for criterion WEAKMUTATION
+* Coverage of criterion WEAKMUTATION: 84%
+* Total number of goals: 616
+* Number of covered goals: 520
+* Coverage analysis for criterion OUTPUT
+* Coverage of criterion OUTPUT: 37%
+* Total number of goals: 82
+* Number of covered goals: 30
+* Coverage analysis for criterion METHOD
+* Coverage of criterion METHOD: 100%
+* Total number of goals: 40
+* Number of covered goals: 40
+* Coverage analysis for criterion METHODNOEXCEPTION
+* Coverage of criterion METHODNOEXCEPTION: 92%
+* Total number of goals: 40
+* Number of covered goals: 37
+* Coverage analysis for criterion CBRANCH
+* Coverage of criterion CBRANCH: 86%
+* Total number of goals: 355
+* Number of covered goals: 305
+* Generated 329 tests with total length 5286
+* Resulting test suite's coverage: 77% (average coverage for all fitness functions)
+* Generating assertions
+[MASTER] 05:23:09.902 [logback-1] WARN  SimpleMutationAssertionGenerator - Assertion minimization is taking too long (0.67235% of time used, but only 22/329 tests minimized), falling back to using all assertions
+* Resulting test suite's mutation score: 4%
+* Compiling and checking tests
+[MASTER] 05:24:13.876 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class java.lang.StackOverflowError: null
+[MASTER] 05:24:13.879 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ Expression[] expressionArray0 = new Expression[7];
+CoreOperationAdd coreOperationAdd0 = new CoreOperationAdd(expressionArray0);
+CoreOperationMultiply coreOperationMultiply0 = new CoreOperationMultiply(coreOperationAdd0, coreOperationAdd0);
+expressionArray0[0] = (Expression) coreOperationMultiply0;
+CoreOperationLessThanOrEqual coreOperationLessThanOrEqual0 = new CoreOperationLessThanOrEqual(coreOperationAdd0, coreOperationAdd0);
+expressionArray0[1] = (Expression) coreOperationLessThanOrEqual0;
+CoreOperationLessThanOrEqual coreOperationLessThanOrEqual1 = new CoreOperationLessThanOrEqual(coreOperationMultiply0, expressionArray0[0]);
+expressionArray0[2] = (Expression) coreOperationLessThanOrEqual1;
+QName qName0 = new QName("");
+VariableReference variableReference0 = new VariableReference(qName0);
+expressionArray0[3] = (Expression) variableReference0;
+Double double0 = Expression.NOT_A_NUMBER;
+Constant constant0 = new Constant(double0);
+expressionArray0[4] = (Expression) constant0;
+Step[] stepArray0 = new Step[5];
+NodeNameTest nodeNameTest0 = new NodeNameTest(qName0, "");
+Step step0 = new Step(3100, nodeNameTest0, expressionArray0);
+stepArray0[0] = step0;
+Step step1 = new Step((-3530), nodeNameTest0, expressionArray0);
+stepArray0[1] = step1;
+Step step2 = new Step((-2834), nodeNameTest0, expressionArray0);
+stepArray0[2] = step2;
+Step step3 = new Step((-2834), nodeNameTest0, expressionArray0);
+stepArray0[3] = step3;
+NodeNameTest nodeNameTest1 = new NodeNameTest(qName0, "");
+Step step4 = new Step(0, nodeNameTest1, expressionArray0);
+stepArray0[4] = step4;
+LocationPath locationPath0 = new LocationPath(false, stepArray0);
+expressionArray0[5] = (Expression) locationPath0;
+LocationPath locationPath1 = new LocationPath(false, stepArray0);
+expressionArray0[6] = (Expression) locationPath1;
+CoreFunction coreFunction0 = new CoreFunction(3100, expressionArray0);
+coreFunction0.functionNot((EvalContext) null);
+
+* Permissions denied during test execution: 
+  - java.lang.RuntimePermission: 
+         writeFileDescriptor: 5
+* Writing tests to file
+* Writing JUnit test case 'CoreFunction_ESTest' to results/JxPath-14/org.apache.commons.jxpath.ri.compiler.CoreFunction/BBC-F0/tests/3
+* Done!
+
+* Computation finished

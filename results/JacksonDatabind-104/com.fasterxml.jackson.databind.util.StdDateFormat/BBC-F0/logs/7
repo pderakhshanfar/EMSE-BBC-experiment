@@ -1,0 +1,312 @@
+* EvoSuite 1.1.1-SNAPSHOT
+* Configuration: BBC-F0
+* Going to generate test cases for class: com.fasterxml.jackson.databind.util.StdDateFormat
+* Starting Client-0
+* Connecting to master process on port 6186
+* Analyzing classpath: 
+  - subjects/buggy-versions/JacksonDatabind-104/target/classes
+  - defects4j/framework/projects/JacksonDatabind/lib/com/fasterxml/jackson/core/jackson-annotations/2.9.0/jackson-annotations-2.9.0.jar
+  - defects4j/framework/projects/JacksonDatabind/lib/com/fasterxml/jackson/core/jackson-core/2.9.8/jackson-core-2.9.8.jar
+* Finished analyzing classpath
+* Generating tests for class com.fasterxml.jackson.databind.util.StdDateFormat
+* Test criteria:
+  - Line Coverage
+  - Branch Coverage
+  - Exception
+  - Mutation testing (weak)
+  - Method-Output Coverage
+  - Top-Level Method Coverage
+  - No-Exception Top-Level Method Coverage
+  - Context Branch Coverage
+* Total number of test goals for DYNAMOSA: 1396
+* Using seed 4073554756
+* Starting evolution
+* Initial Number of Goals in DynaMOSA = 666 / 1396
+[MASTER] 21:25:20.951 [logback-2] ERROR TestCluster - Failed to check cache for java.time.temporal.TemporalQuery<R> : Type points to itself
+[MASTER] 21:25:30.630 [logback-2] ERROR TestCluster - Failed to check cache for java.util.function.Function<T, R> : Type points to itself
+[MASTER] 21:26:17.246 [logback-2] ERROR TestCluster - Failed to check cache for java.util.List<E> : Type points to itself
+* Search finished after 301s and 571 generations, 180461 statements, best individual has fitness: 187.0
+* Minimizing test suite
+* Going to analyze the coverage criteria
+* Coverage analysis for criterion LINE
+* Coverage of criterion LINE: 84%
+* Total number of goals: 234
+* Number of covered goals: 196
+* Coverage analysis for criterion BRANCH
+* Coverage of criterion BRANCH: 83%
+* Total number of goals: 146
+* Number of covered goals: 121
+* Coverage analysis for criterion EXCEPTION
+* Coverage of criterion EXCEPTION: 100%
+* Total number of goals: 28
+* Number of covered goals: 28
+* Coverage analysis for criterion WEAKMUTATION
+* Coverage of criterion WEAKMUTATION: 95%
+* Total number of goals: 714
+* Number of covered goals: 681
+* Coverage analysis for criterion OUTPUT
+* Coverage of criterion OUTPUT: 58%
+* Total number of goals: 90
+* Number of covered goals: 52
+* Coverage analysis for criterion METHOD
+* Coverage of criterion METHOD: 100%
+* Total number of goals: 33
+* Number of covered goals: 33
+* Coverage analysis for criterion METHODNOEXCEPTION
+* Coverage of criterion METHODNOEXCEPTION: 100%
+* Total number of goals: 33
+* Number of covered goals: 33
+* Coverage analysis for criterion CBRANCH
+* Coverage of criterion CBRANCH: 83%
+* Total number of goals: 146
+* Number of covered goals: 121
+* Generated 87 tests with total length 349
+* Resulting test suite's coverage: 82% (average coverage for all fitness functions)
+* Generating assertions
+[MASTER] 21:27:58.736 [logback-1] WARN  SimpleMutationAssertionGenerator - Assertion minimization is taking too long (0.69545% of time used, but only 37/87 tests minimized), falling back to using all assertions
+* Resulting test suite's mutation score: 29%
+* Compiling and checking tests
+[MASTER] 21:28:22.787 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class java.lang.AssertionError: null
+[MASTER] 21:28:22.787 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ StdDateFormat stdDateFormat0 = StdDateFormat.instance;
+Boolean boolean0 = Boolean.valueOf(true);
+StdDateFormat stdDateFormat1 = stdDateFormat0.withLenient(boolean0);
+boolean boolean1 = stdDateFormat1.isLenient();
+assertTrue(boolean1);
+assertFalse(stdDateFormat0.isLenient());
+
+
+[MASTER] 21:28:25.328 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class java.lang.AssertionError: Expecting exception: IllegalStateException
+[MASTER] 21:28:25.328 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ StdDateFormat stdDateFormat0 = StdDateFormat.instance;
+stdDateFormat0.parse("0000-00-00T00:00");
+
+[MASTER] 21:28:26.062 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class java.lang.AssertionError: null
+[MASTER] 21:28:26.062 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ StdDateFormat stdDateFormat0 = StdDateFormat.instance;
+assertFalse(stdDateFormat0.isLenient());
+assertFalse(stdDateFormat0.isColonIncludedInTimeZone());
+assertNotNull(stdDateFormat0);
+
+boolean boolean0 = stdDateFormat0.isLenient();
+assertFalse(stdDateFormat0.isLenient());
+assertFalse(stdDateFormat0.isColonIncludedInTimeZone());
+assertFalse(boolean0);
+
+
+[MASTER] 21:28:26.547 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class java.lang.AssertionError: null
+[MASTER] 21:28:26.548 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ StdDateFormat stdDateFormat0 = StdDateFormat.instance;
+assertFalse(stdDateFormat0.isColonIncludedInTimeZone());
+assertFalse(stdDateFormat0.isLenient());
+assertNotNull(stdDateFormat0);
+
+ParsePosition parsePosition0 = new ParsePosition(0);
+assertEquals((-1), parsePosition0.getErrorIndex());
+assertEquals("java.text.ParsePosition[index=0,errorIndex=-1]", parsePosition0.toString());
+assertEquals(0, parsePosition0.getIndex());
+assertNotNull(parsePosition0);
+
+stdDateFormat0._parseAsISO8601("0000-00-00T00:00", parsePosition0);
+
+[MASTER] 21:28:26.964 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class java.lang.AssertionError: Expecting exception: IllegalStateException
+[MASTER] 21:28:26.965 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ StdDateFormat stdDateFormat0 = new StdDateFormat();
+assertTrue(stdDateFormat0.isLenient());
+assertFalse(stdDateFormat0.isColonIncludedInTimeZone());
+assertNotNull(stdDateFormat0);
+
+ParsePosition parsePosition0 = new ParsePosition((-2080));
+assertEquals((-2080), parsePosition0.getIndex());
+assertEquals("java.text.ParsePosition[index=-2080,errorIndex=-1]", parsePosition0.toString());
+assertEquals((-1), parsePosition0.getErrorIndex());
+assertNotNull(parsePosition0);
+
+stdDateFormat0._parseDate("0000-00-00T00:00", parsePosition0);
+
+[MASTER] 21:28:27.086 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class java.lang.AssertionError: null
+[MASTER] 21:28:27.087 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ StdDateFormat stdDateFormat0 = StdDateFormat.instance;
+assertFalse(stdDateFormat0.isLenient());
+assertFalse(stdDateFormat0.isColonIncludedInTimeZone());
+assertNotNull(stdDateFormat0);
+
+stdDateFormat0.instance._parseDate("yyyy-MM-dd'T'HH:mm:ss.SSSZ", (ParsePosition) null);
+
+[MASTER] 21:28:27.277 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class java.lang.AssertionError: null
+[MASTER] 21:28:27.277 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ StdDateFormat stdDateFormat0 = StdDateFormat.instance;
+assertFalse(stdDateFormat0.isLenient());
+assertFalse(stdDateFormat0.isColonIncludedInTimeZone());
+assertNotNull(stdDateFormat0);
+
+ParsePosition parsePosition0 = new ParsePosition(1291);
+assertEquals("java.text.ParsePosition[index=1291,errorIndex=-1]", parsePosition0.toString());
+assertEquals((-1), parsePosition0.getErrorIndex());
+assertEquals(1291, parsePosition0.getIndex());
+assertNotNull(parsePosition0);
+
+stdDateFormat0._parseDate("1970-01-01T00:00:01.291+0000", parsePosition0);
+
+[MASTER] 21:28:28.157 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class java.lang.AssertionError: null
+[MASTER] 21:28:28.157 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ StdDateFormat stdDateFormat0 = StdDateFormat.instance;
+assertFalse(stdDateFormat0.isLenient());
+assertFalse(stdDateFormat0.isColonIncludedInTimeZone());
+assertNotNull(stdDateFormat0);
+
+stdDateFormat0.parse((String) null);
+
+[MASTER] 21:28:28.317 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class java.lang.AssertionError: null
+[MASTER] 21:28:28.318 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ StdDateFormat stdDateFormat0 = StdDateFormat.instance;
+assertFalse(stdDateFormat0.isColonIncludedInTimeZone());
+assertFalse(stdDateFormat0.isLenient());
+assertNotNull(stdDateFormat0);
+
+stdDateFormat0.parse("");
+
+[MASTER] 21:28:28.470 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class java.lang.AssertionError: Expecting exception: IllegalStateException
+[MASTER] 21:28:28.471 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ Locale locale0 = Locale.GERMAN;
+assertEquals("", locale0.getVariant());
+assertEquals("de", locale0.getLanguage());
+assertEquals("de", locale0.toString());
+assertEquals("deu", locale0.getISO3Language());
+assertEquals("", locale0.getCountry());
+assertEquals("", locale0.getISO3Country());
+assertNotNull(locale0);
+
+StdDateFormat stdDateFormat0 = new StdDateFormat((TimeZone) null, locale0);
+assertEquals("", locale0.getVariant());
+assertEquals("de", locale0.getLanguage());
+assertEquals("de", locale0.toString());
+assertEquals("deu", locale0.getISO3Language());
+assertEquals("", locale0.getCountry());
+assertEquals("", locale0.getISO3Country());
+assertTrue(stdDateFormat0.isLenient());
+assertFalse(stdDateFormat0.isColonIncludedInTimeZone());
+assertNotNull(stdDateFormat0);
+
+ParsePosition parsePosition0 = new ParsePosition((-547));
+assertEquals("java.text.ParsePosition[index=-547,errorIndex=-1]", parsePosition0.toString());
+assertEquals((-1), parsePosition0.getErrorIndex());
+assertEquals((-547), parsePosition0.getIndex());
+assertNotNull(parsePosition0);
+
+stdDateFormat0.parse("0000-00-00T00:00", parsePosition0);
+
+[MASTER] 21:28:29.000 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class java.lang.AssertionError: Expecting exception: IllegalStateException
+[MASTER] 21:28:29.000 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ StdDateFormat stdDateFormat0 = new StdDateFormat();
+assertFalse(stdDateFormat0.isColonIncludedInTimeZone());
+assertTrue(stdDateFormat0.isLenient());
+assertNotNull(stdDateFormat0);
+
+ParsePosition parsePosition0 = new ParsePosition(2);
+assertEquals("java.text.ParsePosition[index=2,errorIndex=-1]", parsePosition0.toString());
+assertEquals(2, parsePosition0.getIndex());
+assertEquals((-1), parsePosition0.getErrorIndex());
+assertNotNull(parsePosition0);
+
+stdDateFormat0.instance.parseAsISO8601("0000-00-00T00:00", parsePosition0);
+
+[MASTER] 21:28:29.677 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class java.lang.AssertionError: null
+[MASTER] 21:28:29.677 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ StdDateFormat stdDateFormat0 = StdDateFormat.instance;
+assertFalse(stdDateFormat0.isColonIncludedInTimeZone());
+assertFalse(stdDateFormat0.isLenient());
+assertNotNull(stdDateFormat0);
+
+ParsePosition parsePosition0 = new ParsePosition((-28));
+assertEquals((-28), parsePosition0.getIndex());
+assertEquals((-1), parsePosition0.getErrorIndex());
+assertEquals("java.text.ParsePosition[index=-28,errorIndex=-1]", parsePosition0.toString());
+assertNotNull(parsePosition0);
+
+stdDateFormat0.parseAsRFC1123("", parsePosition0);
+
+[MASTER] 21:28:31.806 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class java.lang.AssertionError: null
+[MASTER] 21:28:31.808 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ StdDateFormat stdDateFormat0 = StdDateFormat.instance;
+assertFalse(stdDateFormat0.isLenient());
+assertFalse(stdDateFormat0.isColonIncludedInTimeZone());
+assertNotNull(stdDateFormat0);
+
+SimpleTimeZone simpleTimeZone0 = new SimpleTimeZone((-556), "yyyy-MM-dd'T'HH:mm:ss.SSSZ");
+assertEquals(0, simpleTimeZone0.getDSTSavings());
+assertEquals("yyyy-MM-dd'T'HH:mm:ss.SSSZ", simpleTimeZone0.getID());
+assertEquals("java.util.SimpleTimeZone[id=yyyy-MM-dd'T'HH:mm:ss.SSSZ,offset=-556,dstSavings=3600000,useDaylight=false,startYear=0,startMode=0,startMonth=0,startDay=0,startDayOfWeek=0,startTime=0,startTimeMode=0,endMode=0,endMonth=0,endDay=0,endDayOfWeek=0,endTime=0,endTimeMode=0]", simpleTimeZone0.toString());
+assertFalse(simpleTimeZone0.useDaylightTime());
+assertEquals((-556), simpleTimeZone0.getRawOffset());
+assertNotNull(simpleTimeZone0);
+
+StdDateFormat stdDateFormat1 = stdDateFormat0.withTimeZone(simpleTimeZone0);
+assertFalse(stdDateFormat0.isLenient());
+assertFalse(stdDateFormat0.isColonIncludedInTimeZone());
+assertEquals(0, simpleTimeZone0.getDSTSavings());
+assertEquals("yyyy-MM-dd'T'HH:mm:ss.SSSZ", simpleTimeZone0.getID());
+assertEquals("java.util.SimpleTimeZone[id=yyyy-MM-dd'T'HH:mm:ss.SSSZ,offset=-556,dstSavings=3600000,useDaylight=false,startYear=0,startMode=0,startMonth=0,startDay=0,startDayOfWeek=0,startTime=0,startTimeMode=0,endMode=0,endMonth=0,endDay=0,endDayOfWeek=0,endTime=0,endTimeMode=0]", simpleTimeZone0.toString());
+assertFalse(simpleTimeZone0.useDaylightTime());
+assertEquals((-556), simpleTimeZone0.getRawOffset());
+assertFalse(stdDateFormat1.isLenient());
+assertFalse(stdDateFormat1.isColonIncludedInTimeZone());
+assertFalse(stdDateFormat1.equals((Object)stdDateFormat0));
+assertNotNull(stdDateFormat1);
+assertNotSame(stdDateFormat0, stdDateFormat1);
+assertNotSame(stdDateFormat1, stdDateFormat0);
+
+TimeZone timeZone0 = stdDateFormat1.getTimeZone();
+assertFalse(stdDateFormat0.isLenient());
+assertFalse(stdDateFormat0.isColonIncludedInTimeZone());
+assertEquals(0, simpleTimeZone0.getDSTSavings());
+assertEquals("yyyy-MM-dd'T'HH:mm:ss.SSSZ", simpleTimeZone0.getID());
+assertEquals("java.util.SimpleTimeZone[id=yyyy-MM-dd'T'HH:mm:ss.SSSZ,offset=-556,dstSavings=3600000,useDaylight=false,startYear=0,startMode=0,startMonth=0,startDay=0,startDayOfWeek=0,startTime=0,startTimeMode=0,endMode=0,endMonth=0,endDay=0,endDayOfWeek=0,endTime=0,endTimeMode=0]", simpleTimeZone0.toString());
+assertFalse(simpleTimeZone0.useDaylightTime());
+assertEquals((-556), simpleTimeZone0.getRawOffset());
+assertFalse(stdDateFormat1.isLenient());
+assertFalse(stdDateFormat1.isColonIncludedInTimeZone());
+assertEquals(0, timeZone0.getDSTSavings());
+assertEquals("yyyy-MM-dd'T'HH:mm:ss.SSSZ", timeZone0.getID());
+assertEquals((-556), timeZone0.getRawOffset());
+assertFalse(timeZone0.useDaylightTime());
+assertEquals("java.util.SimpleTimeZone[id=yyyy-MM-dd'T'HH:mm:ss.SSSZ,offset=-556,dstSavings=3600000,useDaylight=false,startYear=0,startMode=0,startMonth=0,startDay=0,startDayOfWeek=0,startTime=0,startTimeMode=0,endMode=0,endMonth=0,endDay=0,endDayOfWeek=0,endTime=0,endTimeMode=0]", timeZone0.toString());
+assertFalse(stdDateFormat0.equals((Object)stdDateFormat1));
+assertFalse(stdDateFormat1.equals((Object)stdDateFormat0));
+assertNotNull(timeZone0);
+assertNotSame(stdDateFormat0, stdDateFormat1);
+assertSame(simpleTimeZone0, timeZone0);
+assertNotSame(stdDateFormat1, stdDateFormat0);
+assertSame(timeZone0, simpleTimeZone0);
+
+
+[MASTER] 21:28:33.860 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class java.lang.AssertionError: expected null, but was:<Fri Feb 14 20:21:21 GMT 2014>
+[MASTER] 21:28:33.861 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ StdDateFormat stdDateFormat0 = StdDateFormat.instance;
+assertFalse(stdDateFormat0.isColonIncludedInTimeZone());
+assertTrue(stdDateFormat0.isLenient());
+assertNotNull(stdDateFormat0);
+
+ParsePosition parsePosition0 = new ParsePosition(1291);
+assertEquals((-1), parsePosition0.getErrorIndex());
+assertEquals(1291, parsePosition0.getIndex());
+assertEquals("java.text.ParsePosition[index=1291,errorIndex=-1]", parsePosition0.toString());
+assertNotNull(parsePosition0);
+
+Date date0 = stdDateFormat0.parse("1970-01-01T00:00:01.291+0000", parsePosition0);
+assertFalse(stdDateFormat0.isColonIncludedInTimeZone());
+assertTrue(stdDateFormat0.isLenient());
+assertEquals((-1), parsePosition0.getErrorIndex());
+assertEquals(1291, parsePosition0.getIndex());
+assertEquals("java.text.ParsePosition[index=1291,errorIndex=-1]", parsePosition0.toString());
+assertNull(date0);
+
+
+* Permissions denied during test execution: 
+  - java.lang.RuntimePermission: 
+         writeFileDescriptor: 4
+* Writing tests to file
+* Writing JUnit test case 'StdDateFormat_ESTest' to results/JacksonDatabind-104/com.fasterxml.jackson.databind.util.StdDateFormat/BBC-F0/tests/7
+* Done!
+
+* Computation finished

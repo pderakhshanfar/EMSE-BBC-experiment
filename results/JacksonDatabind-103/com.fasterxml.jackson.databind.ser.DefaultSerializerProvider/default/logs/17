@@ -1,0 +1,101 @@
+* EvoSuite 1.1.1-SNAPSHOT
+* Configuration: default
+* Going to generate test cases for class: com.fasterxml.jackson.databind.ser.DefaultSerializerProvider
+* Starting Client-0
+* Connecting to master process on port 4567
+* Analyzing classpath: 
+  - subjects/buggy-versions/JacksonDatabind-103/target/classes
+  - defects4j/framework/projects/JacksonDatabind/lib/com/fasterxml/jackson/core/jackson-annotations/2.9.0/jackson-annotations-2.9.0.jar
+  - defects4j/framework/projects/JacksonDatabind/lib/com/fasterxml/jackson/core/jackson-core/2.9.7/jackson-core-2.9.7.jar
+* Finished analyzing classpath
+* Generating tests for class com.fasterxml.jackson.databind.ser.DefaultSerializerProvider
+* Test criteria:
+  - Line Coverage
+  - Branch Coverage
+  - Exception
+  - Mutation testing (weak)
+  - Method-Output Coverage
+  - Top-Level Method Coverage
+  - No-Exception Top-Level Method Coverage
+  - Context Branch Coverage
+* Total number of test goals for DYNAMOSA: 719
+* Using seed 2801583982
+* Starting evolution
+* Initial Number of Goals in DynaMOSA = 179 / 719
+[MASTER] 00:00:29.027 [logback-2] ERROR TestCluster - Failed to check cache for java.util.HashSet<E> : Type points to itself
+[MASTER] 00:00:29.372 [logback-2] ERROR TestCluster - Failed to check cache for java.util.Map<K, V> : Type points to itself
+[MASTER] 00:00:34.510 [logback-2] ERROR TestCluster - Failed to check cache for com.fasterxml.jackson.annotation.ObjectIdGenerator<T> : Type points to itself
+[MASTER] 00:00:35.642 [logback-2] ERROR TestCluster - Failed to check cache for com.fasterxml.jackson.databind.JsonDeserializer<T> : Type points to itself
+[MASTER] 00:00:37.959 [logback-2] ERROR TestCluster - Failed to check cache for java.util.Comparator<T> : Type points to itself
+[MASTER] 00:00:49.098 [logback-2] ERROR TestCluster - Failed to check cache for java.util.function.BiFunction<T, U, R> : Type points to itself
+[MASTER] 00:00:54.201 [logback-2] ERROR TestCluster - Failed to check cache for com.fasterxml.jackson.databind.JsonSerializer<T> : Type points to itself
+[MASTER] 00:01:33.927 [logback-2] ERROR TestCluster - Failed to check cache for java.util.function.Function<T, R> : Type points to itself
+[MASTER] 00:02:54.238 [logback-2] ERROR TestCluster - Failed to check cache for java.util.Enumeration<E> : Type points to itself
+[MASTER] 00:04:26.189 [logback-2] ERROR TestCluster - Failed to check cache for java.util.List<E> : Type points to itself
+* Search finished after 301s and 488 generations, 97708 statements, best individual has fitness: 378.0
+* Minimizing test suite
+* Going to analyze the coverage criteria
+* Coverage analysis for criterion LINE
+* Coverage of criterion LINE: 55%
+* Total number of goals: 201
+* Number of covered goals: 111
+* Coverage analysis for criterion BRANCH
+* Coverage of criterion BRANCH: 51%
+* Total number of goals: 128
+* Number of covered goals: 65
+* Coverage analysis for criterion EXCEPTION
+* Coverage of criterion EXCEPTION: 100%
+* Total number of goals: 20
+* Number of covered goals: 20
+* Coverage analysis for criterion WEAKMUTATION
+* Coverage of criterion WEAKMUTATION: 49%
+* Total number of goals: 170
+* Number of covered goals: 84
+* Coverage analysis for criterion OUTPUT
+* Coverage of criterion OUTPUT: 21%
+* Total number of goals: 48
+* Number of covered goals: 10
+* Coverage analysis for criterion METHOD
+* Coverage of criterion METHOD: 91%
+* Total number of goals: 22
+* Number of covered goals: 20
+* Coverage analysis for criterion METHODNOEXCEPTION
+* Coverage of criterion METHODNOEXCEPTION: 77%
+* Total number of goals: 22
+* Number of covered goals: 17
+* Coverage analysis for criterion CBRANCH
+* Coverage of criterion CBRANCH: 51%
+* Total number of goals: 128
+* Number of covered goals: 65
+* Generated 47 tests with total length 201
+* Resulting test suite's coverage: 49% (average coverage for all fitness functions)
+* Generating assertions
+* Resulting test suite's mutation score: 19%
+* Compiling and checking tests
+[MASTER] 00:06:20.441 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class java.io.IOException: Pipe not connected
+[MASTER] 00:06:20.443 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ ObjectMapper objectMapper0 = new ObjectMapper();
+JsonFactory jsonFactory0 = new JsonFactory(objectMapper0);
+PipedOutputStream pipedOutputStream0 = new PipedOutputStream();
+objectMapper0.writeValue((OutputStream) pipedOutputStream0, (Object) jsonFactory0);
+
+[MASTER] 00:06:32.724 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class com.fasterxml.jackson.databind.exc.InvalidDefinitionException: AnnotationIntrospector returned serializer definition of type java.lang.Object; expected type JsonSerializer or Class<JsonSerializer> instead
+[MASTER] 00:06:32.725 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ DefaultSerializerProvider.Impl defaultSerializerProvider_Impl0 = new DefaultSerializerProvider.Impl();
+TypeFactory typeFactory0 = TypeFactory.defaultInstance();
+Class<Integer> class0 = Integer.class;
+ArrayList<JavaType> arrayList0 = new ArrayList<JavaType>();
+TypeBindings typeBindings0 = TypeBindings.create((Class<?>) class0, (List<JavaType>) arrayList0);
+TypeResolutionContext.Basic typeResolutionContext_Basic0 = new TypeResolutionContext.Basic(typeFactory0, typeBindings0);
+VirtualAnnotatedMember virtualAnnotatedMember0 = new VirtualAnnotatedMember(typeResolutionContext_Basic0, class0, "", (JavaType) null);
+Object object0 = new Object();
+defaultSerializerProvider_Impl0.serializerInstance(virtualAnnotatedMember0, object0);
+
+* Permissions denied during test execution: 
+  - java.lang.RuntimePermission: 
+         writeFileDescriptor: 35
+* Writing tests to file
+* Writing JUnit test case 'DefaultSerializerProvider_ESTest' to results/JacksonDatabind-103/com.fasterxml.jackson.databind.ser.DefaultSerializerProvider/default/tests/17
+* Done!
+
+* Computation finished

@@ -1,0 +1,115 @@
+* EvoSuite 1.1.1-SNAPSHOT
+* Configuration: BBC-F0
+* Going to generate test cases for class: org.apache.commons.jxpath.ri.compiler.CoreFunction
+* Starting Client-0
+* Connecting to master process on port 9920
+* Analyzing classpath: 
+  - subjects/buggy-versions/JxPath-14/target/classes
+  - subjects/buggy-versions/JxPath-14/src/java
+  - subjects/buggy-versions/JxPath-14/target/lib/commons-beanutils-1.7.0.jar
+  - subjects/buggy-versions/JxPath-14/target/lib/commons-logging-1.1.jar
+  - subjects/buggy-versions/JxPath-14/target/lib/jdom-1.0.jar
+  - subjects/buggy-versions/JxPath-14/target/lib/jsp-api-2.0.jar
+  - subjects/buggy-versions/JxPath-14/target/lib/junit-3.8.2.jar
+  - subjects/buggy-versions/JxPath-14/target/lib/mockrunner-0.4.1.jar
+  - subjects/buggy-versions/JxPath-14/target/lib/servletapi-2.4.jar
+  - subjects/buggy-versions/JxPath-14/target/lib/xerces-2.4.0.jar
+  - subjects/buggy-versions/JxPath-14/target/lib/xml-apis-2.0.2.jar
+* Finished analyzing classpath
+* Generating tests for class org.apache.commons.jxpath.ri.compiler.CoreFunction
+* Test criteria:
+  - Line Coverage
+  - Branch Coverage
+  - Exception
+  - Mutation testing (weak)
+  - Method-Output Coverage
+  - Top-Level Method Coverage
+  - No-Exception Top-Level Method Coverage
+  - Context Branch Coverage
+* Total number of test goals for DYNAMOSA: 1832
+* Using seed 1897059164
+* Starting evolution
+* Initial Number of Goals in DynaMOSA = 654 / 1832
+[MASTER] 05:16:40.673 [logback-2] ERROR TestCluster - Failed to check cache for java.util.LinkedList<E> : Type points to itself
+[MASTER] 05:20:05.331 [logback-1] WARN  TestChromosome - Functional mock problem: org.evosuite.ga.ConstructionFailedException: Failed to add constructor for org.apache.commons.jxpath.ri.JXPathContextReferenceImpl due to org.evosuite.ga.ConstructionFailedException: Have no generator for class org.apache.commons.jxpath.ri.axes.AncestorContext canUseFunctionalMocks=false, canBeMocked: true
+* Search finished after 304s and 355 generations, 171545 statements, best individual has fitness: 474.0
+* Minimizing test suite
+[MASTER] 05:22:52.468 [logback-1] WARN  TestSuiteMinimizer - Minimization timeout. Roll back to original test suite
+* Going to analyze the coverage criteria
+* Coverage analysis for criterion LINE
+* Coverage of criterion LINE: 81%
+* Total number of goals: 344
+* Number of covered goals: 278
+* Coverage analysis for criterion BRANCH
+* Coverage of criterion BRANCH: 85%
+* Total number of goals: 355
+* Number of covered goals: 300
+* Coverage analysis for criterion EXCEPTION
+* Coverage of criterion EXCEPTION: 100%
+* Total number of goals: 136
+* Number of covered goals: 136
+* Coverage analysis for criterion WEAKMUTATION
+* Coverage of criterion WEAKMUTATION: 80%
+* Total number of goals: 616
+* Number of covered goals: 491
+* Coverage analysis for criterion OUTPUT
+* Coverage of criterion OUTPUT: 35%
+* Total number of goals: 82
+* Number of covered goals: 29
+* Coverage analysis for criterion METHOD
+* Coverage of criterion METHOD: 100%
+* Total number of goals: 40
+* Number of covered goals: 40
+* Coverage analysis for criterion METHODNOEXCEPTION
+* Coverage of criterion METHODNOEXCEPTION: 92%
+* Total number of goals: 40
+* Number of covered goals: 37
+* Coverage analysis for criterion CBRANCH
+* Coverage of criterion CBRANCH: 85%
+* Total number of goals: 355
+* Number of covered goals: 300
+* Generated 293 tests with total length 4905
+* Resulting test suite's coverage: 76% (average coverage for all fitness functions)
+* Generating assertions
+[MASTER] 05:23:37.613 [logback-1] WARN  SimpleMutationAssertionGenerator - Assertion minimization is taking too long (0.66735% of time used, but only 36/293 tests minimized), falling back to using all assertions
+* Resulting test suite's mutation score: 14%
+* Compiling and checking tests
+[MASTER] 05:24:45.389 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class java.lang.StackOverflowError: null
+[MASTER] 05:24:45.392 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ Expression[] expressionArray0 = new Expression[8];
+QName qName0 = new QName("N[Tm)S", "N[Tm)S");
+ExtensionFunction extensionFunction0 = new ExtensionFunction(qName0, expressionArray0);
+CoreOperationSubtract coreOperationSubtract0 = new CoreOperationSubtract(extensionFunction0, extensionFunction0);
+CoreOperationGreaterThan coreOperationGreaterThan0 = new CoreOperationGreaterThan(coreOperationSubtract0, coreOperationSubtract0);
+extensionFunction0.toString();
+expressionArray0[0] = (Expression) coreOperationGreaterThan0;
+CoreOperationDivide coreOperationDivide0 = new CoreOperationDivide(extensionFunction0, coreOperationSubtract0);
+expressionArray0[1] = (Expression) coreOperationDivide0;
+CoreOperationMod coreOperationMod0 = new CoreOperationMod(expressionArray0[0], expressionArray0[0]);
+expressionArray0[2] = (Expression) coreOperationMod0;
+Step[] stepArray0 = new Step[0];
+ExpressionPath expressionPath0 = new ExpressionPath(extensionFunction0, expressionArray0, stepArray0);
+expressionArray0[3] = (Expression) expressionPath0;
+ExtensionFunction extensionFunction1 = new ExtensionFunction(qName0, expressionArray0);
+expressionArray0[4] = (Expression) extensionFunction1;
+CoreOperationSubtract coreOperationSubtract1 = new CoreOperationSubtract(expressionArray0[2], coreOperationMod0);
+expressionArray0[5] = (Expression) coreOperationSubtract1;
+CoreOperationNegate coreOperationNegate0 = new CoreOperationNegate(extensionFunction1);
+expressionArray0[6] = (Expression) coreOperationNegate0;
+CoreOperationSubtract coreOperationSubtract2 = new CoreOperationSubtract(coreOperationDivide0, coreOperationDivide0);
+expressionArray0[7] = (Expression) coreOperationSubtract2;
+CoreFunction coreFunction0 = new CoreFunction(1015, expressionArray0);
+EvalContext evalContext0 = null;
+NodeTypeTest nodeTypeTest0 = new NodeTypeTest(1015);
+nodeTypeTest0.toString();
+AncestorContext ancestorContext0 = new AncestorContext((EvalContext) null, true, nodeTypeTest0);
+coreFunction0.functionID(ancestorContext0);
+
+* Permissions denied during test execution: 
+  - java.lang.RuntimePermission: 
+         writeFileDescriptor: 6
+* Writing tests to file
+* Writing JUnit test case 'CoreFunction_ESTest' to results/JxPath-14/org.apache.commons.jxpath.ri.compiler.CoreFunction/BBC-F0/tests/5
+* Done!
+
+* Computation finished

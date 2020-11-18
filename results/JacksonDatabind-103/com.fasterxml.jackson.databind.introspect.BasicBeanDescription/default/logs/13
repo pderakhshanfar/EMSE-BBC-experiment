@@ -1,0 +1,127 @@
+* EvoSuite 1.1.1-SNAPSHOT
+* Configuration: default
+* Going to generate test cases for class: com.fasterxml.jackson.databind.introspect.BasicBeanDescription
+* Starting Client-0
+* Connecting to master process on port 15143
+* Analyzing classpath: 
+  - subjects/buggy-versions/JacksonDatabind-103/target/classes
+  - defects4j/framework/projects/JacksonDatabind/lib/com/fasterxml/jackson/core/jackson-annotations/2.9.0/jackson-annotations-2.9.0.jar
+  - defects4j/framework/projects/JacksonDatabind/lib/com/fasterxml/jackson/core/jackson-core/2.9.7/jackson-core-2.9.7.jar
+* Finished analyzing classpath
+* Generating tests for class com.fasterxml.jackson.databind.introspect.BasicBeanDescription
+* Test criteria:
+  - Line Coverage
+  - Branch Coverage
+  - Exception
+  - Mutation testing (weak)
+  - Method-Output Coverage
+  - Top-Level Method Coverage
+  - No-Exception Top-Level Method Coverage
+  - Context Branch Coverage
+* Total number of test goals for DYNAMOSA: 1196
+* Using seed 2190066830
+* Starting evolution
+* Initial Number of Goals in DynaMOSA = 441 / 1196
+[MASTER] 23:48:31.262 [logback-2] ERROR TestCluster - Failed to check cache for java.util.HashMap<K, V> : Type points to itself
+[MASTER] 23:48:31.344 [logback-2] ERROR TestCluster - Failed to check cache for java.util.ArrayList<E> : Type points to itself
+[MASTER] 23:48:31.390 [logback-2] ERROR TestCluster - Failed to check cache for com.fasterxml.jackson.annotation.ObjectIdGenerator<T> : Type points to itself
+[MASTER] 23:48:34.489 [logback-2] ERROR TestCluster - Failed to check cache for com.fasterxml.jackson.databind.JsonDeserializer<T> : Type points to itself
+[MASTER] 23:49:34.487 [logback-2] ERROR TestCluster - Failed to check cache for com.fasterxml.jackson.databind.JsonSerializer<T> : Type points to itself
+[MASTER] 23:50:03.868 [logback-1] WARN  TestChromosome - Functional mock problem: org.evosuite.ga.ConstructionFailedException: Failed to add constructor for com.fasterxml.jackson.databind.type.ResolvedRecursiveType due to org.evosuite.ga.ConstructionFailedException: Max recursion depth reached
+[MASTER] 23:50:06.090 [logback-2] ERROR TestCluster - Failed to check cache for java.util.Comparator<T> : Type points to itself
+[MASTER] 23:50:48.130 [logback-1] WARN  TestChromosome - Functional mock problem: org.evosuite.ga.ConstructionFailedException: Max recursion depth reached
+[MASTER] 23:51:15.024 [logback-2] ERROR TestCluster - Failed to check cache for java.time.temporal.TemporalQuery<R> : Type points to itself
+[MASTER] 23:53:03.019 [logback-2] ERROR TestCluster - Failed to check cache for java.util.Enumeration<E> : Type points to itself
+* Search finished after 302s and 497 generations, 118942 statements, best individual has fitness: 647.0
+* Minimizing test suite
+* Going to analyze the coverage criteria
+* Coverage analysis for criterion LINE
+* Coverage of criterion LINE: 64%
+* Total number of goals: 234
+* Number of covered goals: 150
+* Coverage analysis for criterion BRANCH
+* Coverage of criterion BRANCH: 51%
+* Total number of goals: 197
+* Number of covered goals: 101
+* Coverage analysis for criterion EXCEPTION
+* Coverage of criterion EXCEPTION: 95%
+* Total number of goals: 19
+* Number of covered goals: 18
+* Coverage analysis for criterion WEAKMUTATION
+* Coverage of criterion WEAKMUTATION: 42%
+* Total number of goals: 248
+* Number of covered goals: 103
+* Coverage analysis for criterion OUTPUT
+* Coverage of criterion OUTPUT: 17%
+* Total number of goals: 230
+* Number of covered goals: 39
+* Coverage analysis for criterion METHOD
+* Coverage of criterion METHOD: 98%
+* Total number of goals: 45
+* Number of covered goals: 44
+* Coverage analysis for criterion METHODNOEXCEPTION
+* Coverage of criterion METHODNOEXCEPTION: 78%
+* Total number of goals: 45
+* Number of covered goals: 35
+* Coverage analysis for criterion CBRANCH
+* Coverage of criterion CBRANCH: 51%
+* Total number of goals: 197
+* Number of covered goals: 101
+* Generated 59 tests with total length 188
+* Resulting test suite's coverage: 56% (average coverage for all fitness functions)
+* Generating assertions
+* Resulting test suite's mutation score: 21%
+* Compiling and checking tests
+[MASTER] 23:54:49.551 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class java.lang.AssertionError: Expecting exception: NullPointerException
+[MASTER] 23:54:49.551 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ BasicBeanDescription basicBeanDescription0 = BasicClassIntrospector.STRING_DESC;
+basicBeanDescription0.hasProperty((PropertyName) null);
+
+[MASTER] 23:54:53.800 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class java.lang.AssertionError: Expecting exception: NullPointerException
+[MASTER] 23:54:53.802 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ BasicBeanDescription basicBeanDescription0 = BasicClassIntrospector.STRING_DESC;
+JsonFactory jsonFactory0 = new JsonFactory();
+ObjectMapper objectMapper0 = new ObjectMapper(jsonFactory0);
+SerializationFeature serializationFeature0 = SerializationFeature.CLOSE_CLOSEABLE;
+SerializationFeature[] serializationFeatureArray0 = new SerializationFeature[6];
+serializationFeatureArray0[0] = serializationFeature0;
+serializationFeatureArray0[1] = serializationFeature0;
+serializationFeatureArray0[2] = serializationFeature0;
+serializationFeatureArray0[3] = serializationFeature0;
+serializationFeatureArray0[4] = serializationFeature0;
+serializationFeatureArray0[5] = serializationFeature0;
+ObjectMapper objectMapper1 = objectMapper0.disable(serializationFeature0, serializationFeatureArray0);
+AnnotationIntrospector annotationIntrospector0 = AnnotationIntrospector.nopInstance();
+ObjectMapper objectMapper2 = objectMapper1.setAnnotationIntrospector(annotationIntrospector0);
+JsonGenerator.Feature[] jsonGenerator_FeatureArray0 = new JsonGenerator.Feature[6];
+JsonGenerator.Feature jsonGenerator_Feature0 = JsonGenerator.Feature.FLUSH_PASSED_TO_STREAM;
+jsonGenerator_FeatureArray0[0] = jsonGenerator_Feature0;
+JsonGenerator.Feature jsonGenerator_Feature1 = JsonGenerator.Feature.WRITE_BIGDECIMAL_AS_PLAIN;
+jsonGenerator_FeatureArray0[1] = jsonGenerator_Feature1;
+JsonGenerator.Feature jsonGenerator_Feature2 = JsonGenerator.Feature.WRITE_NUMBERS_AS_STRINGS;
+jsonGenerator_FeatureArray0[2] = jsonGenerator_Feature2;
+JsonGenerator.Feature jsonGenerator_Feature3 = JsonGenerator.Feature.ESCAPE_NON_ASCII;
+jsonGenerator_FeatureArray0[3] = jsonGenerator_Feature3;
+JsonGenerator.Feature jsonGenerator_Feature4 = JsonGenerator.Feature.QUOTE_NON_NUMERIC_NUMBERS;
+jsonGenerator_FeatureArray0[4] = jsonGenerator_Feature4;
+JsonGenerator.Feature jsonGenerator_Feature5 = JsonGenerator.Feature.STRICT_DUPLICATE_DETECTION;
+jsonGenerator_FeatureArray0[5] = jsonGenerator_Feature5;
+ObjectMapper objectMapper3 = objectMapper2.enable(jsonGenerator_FeatureArray0);
+SerializationFeature serializationFeature1 = SerializationFeature.WRITE_EMPTY_JSON_ARRAYS;
+ObjectMapper objectMapper4 = objectMapper3.enable(serializationFeature1);
+List<Module> list0 = ObjectMapper.findModules((ClassLoader) null);
+TreeSet<Module> treeSet0 = new TreeSet<Module>(list0);
+ObjectMapper objectMapper5 = objectMapper4.registerModules((Iterable<? extends Module>) treeSet0);
+Class<Object> class0 = Object.class;
+objectMapper5.readerFor(class0);
+PropertyName propertyName0 = new PropertyName("JSON", "of");
+basicBeanDescription0.findProperty(propertyName0);
+
+* Permissions denied during test execution: 
+  - java.lang.RuntimePermission: 
+         writeFileDescriptor: 1
+* Writing tests to file
+* Writing JUnit test case 'BasicBeanDescription_ESTest' to results/JacksonDatabind-103/com.fasterxml.jackson.databind.introspect.BasicBeanDescription/default/tests/13
+* Done!
+
+* Computation finished

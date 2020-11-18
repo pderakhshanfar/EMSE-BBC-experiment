@@ -1,0 +1,85 @@
+* EvoSuite 1.1.1-SNAPSHOT
+* Configuration: BBC-F0
+* Going to generate test cases for class: org.apache.commons.math3.distribution.DiscreteDistribution
+* Starting Client-0
+* Connecting to master process on port 6302
+* Analyzing classpath: 
+  - subjects/buggy-versions/Math-8/target/classes
+* Finished analyzing classpath
+* Generating tests for class org.apache.commons.math3.distribution.DiscreteDistribution
+* Test criteria:
+  - Line Coverage
+  - Branch Coverage
+  - Exception
+  - Mutation testing (weak)
+  - Method-Output Coverage
+  - Top-Level Method Coverage
+  - No-Exception Top-Level Method Coverage
+  - Context Branch Coverage
+* Total number of test goals for DYNAMOSA: 245
+* Using seed 1960304150
+* Starting evolution
+* Initial Number of Goals in DynaMOSA = 62 / 245
+[MASTER] 09:58:16.047 [logback-2] ERROR TestCluster - Failed to check cache for org.apache.commons.math3.util.Pair<K, V> : Type points to itself
+* Search finished after 302s and 59 generations, 28469 statements, best individual has fitness: 34.0
+* Minimizing test suite
+[MASTER] 10:04:16.411 [logback-1] WARN  TestSuiteMinimizer - Minimization timeout. Roll back to original test suite
+* Going to analyze the coverage criteria
+* Coverage analysis for criterion LINE
+* Coverage of criterion LINE: 95%
+* Total number of goals: 38
+* Number of covered goals: 36
+* Coverage analysis for criterion BRANCH
+* Coverage of criterion BRANCH: 96%
+* Total number of goals: 26
+* Number of covered goals: 25
+* Coverage analysis for criterion EXCEPTION
+* Coverage of criterion EXCEPTION: 100%
+* Total number of goals: 12
+* Number of covered goals: 12
+* Coverage analysis for criterion WEAKMUTATION
+* Coverage of criterion WEAKMUTATION: 91%
+* Total number of goals: 127
+* Number of covered goals: 115
+* Coverage analysis for criterion OUTPUT
+* Coverage of criterion OUTPUT: 50%
+* Total number of goals: 14
+* Number of covered goals: 7
+* Coverage analysis for criterion METHOD
+* Coverage of criterion METHOD: 100%
+* Total number of goals: 7
+* Number of covered goals: 7
+* Coverage analysis for criterion METHODNOEXCEPTION
+* Coverage of criterion METHODNOEXCEPTION: 100%
+* Total number of goals: 7
+* Number of covered goals: 7
+* Coverage analysis for criterion CBRANCH
+* Coverage of criterion CBRANCH: 96%
+* Total number of goals: 26
+* Number of covered goals: 25
+* Generated 26 tests with total length 524
+* Resulting test suite's coverage: 85% (average coverage for all fitness functions)
+* Generating assertions
+[MASTER] 10:05:18.015 [logback-1] WARN  SimpleMutationAssertionGenerator - Reached maximum time to generate assertions, aborting assertion generation
+* Resulting test suite's mutation score: 35%
+* Compiling and checking tests
+[MASTER] 10:05:50.141 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class java.lang.OutOfMemoryError: Java heap space
+[MASTER] 10:05:50.144 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ long long0 = 6722166367014452318L;
+System.setCurrentTimeMillis(6722166367014452318L);
+LinkedList<Pair<Float, Double>> linkedList0 = new LinkedList<Pair<Float, Double>>();
+Float float0 = new Float((-747.2460638908516));
+Double double0 = new Double(6722166367014452318L);
+Pair<Float, Double> pair0 = new Pair<Float, Double>(float0, double0);
+linkedList0.add(pair0);
+DiscreteDistribution<Float> discreteDistribution0 = new DiscreteDistribution<Float>(linkedList0);
+discreteDistribution0.sample(2145996433);
+
+* Permissions denied during test execution: 
+  - java.lang.RuntimePermission: 
+         writeFileDescriptor: 7
+* Writing tests to file
+* Writing JUnit test case 'DiscreteDistribution_ESTest' to results/Math-8/org.apache.commons.math3.distribution.DiscreteDistribution/BBC-F0/tests/7
+* Done!
+
+* Computation finished

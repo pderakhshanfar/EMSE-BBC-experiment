@@ -1,0 +1,97 @@
+* EvoSuite 1.1.1-SNAPSHOT
+* Configuration: default
+* Going to generate test cases for class: org.joda.time.format.DateTimeFormatter
+* Starting Client-0
+* Connecting to master process on port 17874
+* Analyzing classpath: 
+  - subjects/buggy-versions/Time-7/target/classes
+  - defects4j/framework/projects/Time/lib/org/joda/joda-convert/1.2/joda-convert-1.2.jar
+* Finished analyzing classpath
+* Generating tests for class org.joda.time.format.DateTimeFormatter
+* Test criteria:
+  - Line Coverage
+  - Branch Coverage
+  - Exception
+  - Mutation testing (weak)
+  - Method-Output Coverage
+  - Top-Level Method Coverage
+  - No-Exception Top-Level Method Coverage
+  - Context Branch Coverage
+* Total number of test goals for DYNAMOSA: 984
+* Using seed 3485310342
+* Starting evolution
+* Initial Number of Goals in DynaMOSA = 473 / 984
+[MASTER] 14:53:11.709 [logback-2] ERROR TestCluster - Failed to check cache for java.util.function.Function<T, R> : Type points to itself
+[MASTER] 14:56:29.233 [logback-2] ERROR TestCluster - Failed to check cache for java.util.Comparator<T> : Type points to itself
+* Search finished after 301s and 1157 generations, 457143 statements, best individual has fitness: 123.0
+* Minimizing test suite
+* Going to analyze the coverage criteria
+* Coverage analysis for criterion LINE
+* Coverage of criterion LINE: 97%
+* Total number of goals: 208
+* Number of covered goals: 201
+* Coverage analysis for criterion BRANCH
+* Coverage of criterion BRANCH: 94%
+* Total number of goals: 113
+* Number of covered goals: 106
+* Coverage analysis for criterion EXCEPTION
+* Coverage of criterion EXCEPTION: 100%
+* Total number of goals: 74
+* Number of covered goals: 74
+* Coverage analysis for criterion WEAKMUTATION
+* Coverage of criterion WEAKMUTATION: 95%
+* Total number of goals: 325
+* Number of covered goals: 309
+* Coverage analysis for criterion OUTPUT
+* Coverage of criterion OUTPUT: 82%
+* Total number of goals: 147
+* Number of covered goals: 121
+* Coverage analysis for criterion METHOD
+* Coverage of criterion METHOD: 100%
+* Total number of goals: 39
+* Number of covered goals: 39
+* Coverage analysis for criterion METHODNOEXCEPTION
+* Coverage of criterion METHODNOEXCEPTION: 100%
+* Total number of goals: 39
+* Number of covered goals: 39
+* Coverage analysis for criterion CBRANCH
+* Coverage of criterion CBRANCH: 88%
+* Total number of goals: 113
+* Number of covered goals: 99
+* Generated 176 tests with total length 753
+* Resulting test suite's coverage: 89% (average coverage for all fitness functions)
+* Generating assertions
+* Resulting test suite's mutation score: 40%
+* Compiling and checking tests
+[MASTER] 14:58:04.200 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class java.lang.OutOfMemoryError: Java heap space
+[MASTER] 14:58:04.201 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ DateTimeFieldType dateTimeFieldType0 = DateTimeFieldType.yearOfCentury();
+DateTimeFormatterBuilder.PaddedNumber dateTimeFormatterBuilder_PaddedNumber0 = new DateTimeFormatterBuilder.PaddedNumber(dateTimeFieldType0, 2139095040, false, 0);
+DateTimeFormatter dateTimeFormatter0 = new DateTimeFormatter(dateTimeFormatterBuilder_PaddedNumber0, dateTimeFormatterBuilder_PaddedNumber0);
+dateTimeFormatter0.print((long) 2139095040);
+
+[MASTER] 14:58:07.437 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class java.lang.OutOfMemoryError: Java heap space
+[MASTER] 14:58:07.437 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ DateTimeFieldType dateTimeFieldType0 = DateTimeFieldType.minuteOfDay();
+DateTimeFormatterBuilder.FixedNumber dateTimeFormatterBuilder_FixedNumber0 = new DateTimeFormatterBuilder.FixedNumber(dateTimeFieldType0, 2146606407, true);
+DateTimeFormatter dateTimeFormatter0 = new DateTimeFormatter(dateTimeFormatterBuilder_FixedNumber0, dateTimeFormatterBuilder_FixedNumber0);
+DateTimeZone dateTimeZone0 = DateTimeZone.forOffsetMillis(4247);
+DateTime dateTime0 = new DateTime((long) 2146606407, dateTimeZone0);
+dateTimeFormatter0.print((ReadableInstant) dateTime0);
+
+[MASTER] 14:58:10.110 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class java.lang.OutOfMemoryError: Java heap space
+[MASTER] 14:58:10.110 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ DateTimeFieldType dateTimeFieldType0 = DateTimeFieldType.yearOfEra();
+DateTimeFormatterBuilder.PaddedNumber dateTimeFormatterBuilder_PaddedNumber0 = new DateTimeFormatterBuilder.PaddedNumber(dateTimeFieldType0, 2147483216, true, 1900);
+DateTimeFormatter dateTimeFormatter0 = new DateTimeFormatter(dateTimeFormatterBuilder_PaddedNumber0, dateTimeFormatterBuilder_PaddedNumber0);
+LocalDate localDate0 = new LocalDate();
+dateTimeFormatter0.print((ReadablePartial) localDate0);
+
+* Permissions denied during test execution: 
+  - java.lang.RuntimePermission: 
+         writeFileDescriptor: 146
+* Writing tests to file
+* Writing JUnit test case 'DateTimeFormatter_ESTest' to results/Time-7/org.joda.time.format.DateTimeFormatter/default/tests/26
+* Done!
+
+* Computation finished
