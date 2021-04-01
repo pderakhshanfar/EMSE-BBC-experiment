@@ -78,6 +78,12 @@ do
             fi
 
             report_dir="results/$project_name/$target_class/$configuration_name/reports/$round"
+            # If it is replication of an experiment and this is our first attempt, we remove the report file to make sure that the execution will run again
+            if [[ "$SEED" != "0" && attempt_counter -eq 1 ]]; then
+              if [ -f "$report_dir/statistics.csv" ]; then
+                rm "$report_dir/statistics.csv"
+              fi
+            fi
 
             # If reprot is already available
             if [ -f "$report_dir/statistics.csv" ]; then
@@ -128,6 +134,10 @@ do
     done
 
 done
+
+
+# Generate the final CSV file
+# . scripts/csv/generate_final_csv.sh $FirstRound $LastRound $CONFIGURATIONS_FILE $INPUT
 
 
 

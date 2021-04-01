@@ -57,7 +57,7 @@ timeout -k $TIMEOUT $TIMEOUT /usr/bin/env java -Xmx4G -jar tools/evosuite.jar \
 -Doutput_variables=TARGET_CLASS,search_budget,Total_Time,Length,Size,LineCoverage,BranchCoverage,OutputCoverage,WeakMutationScore,Implicit_MethodExceptions \
 "${user_configuration_array[@]}" \
 &> "${log_file}" &
-
+sleep 1
 # pid=$!
 # wait $pid
 
