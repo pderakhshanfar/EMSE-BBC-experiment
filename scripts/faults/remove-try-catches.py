@@ -5,13 +5,7 @@ import shutil
 dir_path = os.path.dirname(os.path.realpath(__file__))
 root_path = os.path.join(dir_path,"..","..")
 data_path = os.path.join(root_path,"data")
-configuration_path= os.path.join(root_path,"configurations","configurations-completed.csv")
-
-# exceptionListDir = os.path.join(data_path,"exception_list.csv")
-# exceptionListFile = open(exceptionListDir,"wb")
-# exceptionListWriter = csv.writer(exceptionListFile)
-# fieldnames = ['tool', 'execution_id','project', 'target_class', 'testName', 'exception_type']
-# exceptionListWriter.writerow(fieldnames)
+configuration_path= os.path.join(root_path,"configurations","configurations.csv")
 
 
 with open(configuration_path) as f:
@@ -19,10 +13,10 @@ with open(configuration_path) as f:
     configs = list(reader)
     configs.pop(0)
 
-first_round = 23
+first_round = 1
 last_round = 30
 
-with open(os.path.join(root_path, "subjects", "subjects-completed.csv"), 'r') as _filehandler:
+with open(os.path.join(root_path, "subjects", "subjects.csv"), 'r') as _filehandler:
     csv_file_reader = csv.DictReader(_filehandler)
     for row in csv_file_reader:
         target_class=row["target_class"]

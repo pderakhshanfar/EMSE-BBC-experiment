@@ -6,7 +6,7 @@ dir_path = os.path.dirname(os.path.realpath(__file__))
 root_path = os.path.join(dir_path,"..","..")
 data_path = os.path.join(root_path,"data")
 subjects_csv=os.path.join(root_path, "subjects", "subjects.csv")
-configurations_csv=os.path.join(root_path,"configurations","configurations-completed.csv")
+configurations_csv=os.path.join(root_path,"configurations","configurations.csv")
 
 
 def collect_stacktraces_in_file(current_test_execution_path):
