@@ -6,7 +6,7 @@ __!__ Requirements: Defects4j
 ### Collect selected bugs:
 
 ```
-bash subjects/collect-bugs.sh 
+bash subjects/collect-bugs.sh
 ```
 
 This script generates `bugs.csv` that contains project_id, bug_id, date fixed, and modified classes of selected bugs.
@@ -14,7 +14,7 @@ This script generates `bugs.csv` that contains project_id, bug_id, date fixed, a
 ### Collect subjects
 
 ```
-bash subjects/collect-target-classes.sh 
+bash subjects/collect-target-classes.sh
 ```
 
 This script generates `subjects.csv` in which all of the class under tests are indicated. This csv file will be used for the test generation process.
@@ -67,7 +67,7 @@ For collecting the whole results in the csv file, run the following script:
 ```
 . scripts/csv/generate_final_csv.sh 1 30 configurations/configurations.csv subjects/subjects.csv
 ```
-Thw csv will be saved at `results/results.csv`.
+The csv will be saved at `results/results.csv`.
 
 # Captured failures
 ## Bug exposing stacktraces
@@ -78,17 +78,22 @@ __!__ All of the bug exposing stack traces are already saved in the root directo
 ## Remove try/catches
 For making sure that the infrustracture can collect all of the captured exceptions, first, we need to run the following script to remove all of the try catches from the generated test suites:
 ```
-python scripts/faults/remove-try-catches.py 
+python scripts/faults/remove-try-catches.py
 ```
 
 ## Analyze captured exceptions
 Finally, to collect the fault coverages, simply run the following script:
 ```
-python scripts/faults/analyze-stacktraces.py 
+python scripts/faults/analyze-stacktraces.py
 ```
 
 The csv file reporting the fault coverages will be saved as `data/captured_exceptions.csv`. Currently, this file contains the results that we have collected from our main experiment.
 
 
 # Data analysis
-__@Xavier:__ Please complete this part.
+
+The R scripts used for the data analysis are available in the `data-analysis/` folder. To run the data analysis on the results, run the following command from the `data-analysis/` folder:
+```
+Rscript analysis.r
+```
+The graphs and table will be generated in the `data-analysis/output/` folder.
