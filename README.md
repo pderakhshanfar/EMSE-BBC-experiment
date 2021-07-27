@@ -49,7 +49,7 @@ docker exec -it test-generation-container bash -c ". scripts/main/test-generatio
 All of the seeds used for our eperiment is already saved in `results/SEED`. For replicating our experiment, you need to pass this address to the main test generation script:
 
 ```
-docker exec -it test-generation-container bash -c ". scripts/main/test-generation.sh 30 1 30 600 3000 configurations/configurations.csv subjects/subjects.csv results/SEED/
+docker exec -it test-generation-container bash -c ". scripts/main/test-generation.sh 30 1 30 600 3000 configurations/configurations.csv subjects/subjects.csv results/SEED/"
 ```
 
 ## Running the experiment with new seeds
