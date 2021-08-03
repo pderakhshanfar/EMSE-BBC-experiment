@@ -1,0 +1,353 @@
+* EvoSuite 1.1.1-SNAPSHOT
+* Configuration: BBC-F0-50
+* Going to generate test cases for class: com.google.javascript.jscomp.ScopedAliases
+* Starting Client-0
+* Connecting to master process on port 15675
+* Analyzing classpath: 
+  - subjects/buggy-versions/Closure-110/build/classes
+  - subjects/buggy-versions/Closure-110/lib/args4j.jar
+  - subjects/buggy-versions/Closure-110/lib/guava.jar
+  - subjects/buggy-versions/Closure-110/lib/json.jar
+  - subjects/buggy-versions/Closure-110/lib/jsr305.jar
+  - subjects/buggy-versions/Closure-110/lib/protobuf-java.jar
+  - subjects/buggy-versions/Closure-110/build/lib/rhino.jar
+  - subjects/buggy-versions/Closure-110/lib/ant.jar
+* Finished analyzing classpath
+* Generating tests for class com.google.javascript.jscomp.ScopedAliases
+* Test criteria:
+  - Line Coverage
+  - Branch Coverage
+  - Exception
+  - Mutation testing (weak)
+  - Method-Output Coverage
+  - Top-Level Method Coverage
+  - No-Exception Top-Level Method Coverage
+  - Context Branch Coverage
+* Total number of test goals for DYNAMOSA: 893
+* Using seed 3363768754
+* Starting evolution
+bbc usage percentage is: 50%
+* Initial Number of Goals in DynaMOSA = 246 / 893
+[MASTER] 12:20:09.414 [logback-1] ERROR TestCluster - Failed to check cache for java.lang.Comparable<T> : Type points to itself
+[MASTER] 12:20:26.929 [logback-1] ERROR TestCluster - Failed to check cache for java.util.Enumeration<E> : Type points to itself
+[MASTER] 12:23:45.015 [logback-1] ERROR TestCluster - Failed to check cache for java.util.Comparator<T> : Type points to itself
+[MASTER] 12:27:37.310 [logback-1] ERROR TestCluster - Failed to check cache for java.util.Iterator<E> : Type points to itself
+[MASTER] 13:09:28.218 [main] ERROR EvoSuite - Fatal crash on main EvoSuite process. Class com.google.javascript.jscomp.ScopedAliases using seed 3363768754. Configuration id : BBC-F0-50
+java.lang.NullPointerException: null
+	at org.evosuite.utils.ExternalProcessGroupHandler.waitForResult(ExternalProcessGroupHandler.java:709)
+	at org.evosuite.executionmode.TestGeneration.generateTests(TestGeneration.java:515)
+	at org.evosuite.executionmode.TestGeneration.executeTestGeneration(TestGeneration.java:80)
+	at org.evosuite.EvoSuite.parseCommandLine(EvoSuite.java:349)
+	at org.evosuite.EvoSuite.main(EvoSuite.java:115)
+[MASTER] 13:09:28.400 [logback-1] ERROR ClientNodeImpl - Cannot inform master of change of state
+java.rmi.ConnectException: Connection refused to host: 127.0.0.1; nested exception is: 
+	java.net.ConnectException: Connection refused (Connection refused)
+	at sun.rmi.transport.tcp.TCPEndpoint.newSocket(TCPEndpoint.java:623)
+	at sun.rmi.transport.tcp.TCPChannel.createConnection(TCPChannel.java:216)
+	at sun.rmi.transport.tcp.TCPChannel.newConnection(TCPChannel.java:202)
+	at sun.rmi.server.UnicastRef.invoke(UnicastRef.java:132)
+	at java.rmi.server.RemoteObjectInvocationHandler.invokeRemoteMethod(RemoteObjectInvocationHandler.java:235)
+	at java.rmi.server.RemoteObjectInvocationHandler.invoke(RemoteObjectInvocationHandler.java:180)
+	at com.sun.proxy.$Proxy7.evosuite_informChangeOfStateInClient(Unknown Source)
+	at org.evosuite.rmi.service.ClientNodeImpl.changeState(ClientNodeImpl.java:242)
+	at org.evosuite.ProgressMonitor.updateStatus(ProgressMonitor.java:87)
+	at org.evosuite.ProgressMonitor.iteration(ProgressMonitor.java:120)
+	at org.evosuite.ga.metaheuristics.GeneticAlgorithm.lambda$notifyIteration$9(GeneticAlgorithm.java:820)
+	at java.lang.Iterable.forEach(Iterable.java:75)
+	at org.evosuite.ga.metaheuristics.GeneticAlgorithm.notifyIteration(GeneticAlgorithm.java:820)
+	at org.evosuite.ga.metaheuristics.TestSuiteAdapter.notifyIteration(TestSuiteAdapter.java:462)
+	at org.evosuite.ga.metaheuristics.AdapteeListener.iteration(AdapteeListener.java:38)
+	at org.evosuite.ga.metaheuristics.GeneticAlgorithm.lambda$notifyIteration$9(GeneticAlgorithm.java:820)
+	at java.lang.Iterable.forEach(Iterable.java:75)
+	at org.evosuite.ga.metaheuristics.GeneticAlgorithm.notifyIteration(GeneticAlgorithm.java:820)
+	at org.evosuite.ga.metaheuristics.mosa.AbstractMOSA.notifyIteration(AbstractMOSA.java:473)
+	at org.evosuite.ga.metaheuristics.mosa.DynaMOSA.generateSolution(DynaMOSA.java:175)
+	at org.evosuite.ga.metaheuristics.TestSuiteAdapter.generateSolution(TestSuiteAdapter.java:114)
+	at org.evosuite.strategy.MOSuiteStrategy.generateTests(MOSuiteStrategy.java:123)
+	at org.evosuite.TestSuiteGenerator.generateTests(TestSuiteGenerator.java:630)
+	at org.evosuite.TestSuiteGenerator.generateTestSuite(TestSuiteGenerator.java:205)
+	at org.evosuite.rmi.service.ClientNodeImpl.lambda$startNewSearch$0(ClientNodeImpl.java:150)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.net.ConnectException: Connection refused (Connection refused)
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:607)
+	at java.net.Socket.connect(Socket.java:556)
+	at java.net.Socket.<init>(Socket.java:452)
+	at java.net.Socket.<init>(Socket.java:229)
+	at sun.rmi.transport.proxy.RMIDirectSocketFactory.createSocket(RMIDirectSocketFactory.java:40)
+	at sun.rmi.transport.proxy.RMIMasterSocketFactory.createSocket(RMIMasterSocketFactory.java:148)
+	at sun.rmi.transport.tcp.TCPEndpoint.newSocket(TCPEndpoint.java:617)
+	... 29 common frames omitted
+[MASTER] 13:09:28.401 [logback-1] ERROR ClientNodeImpl - Cannot inform master of change of state
+java.rmi.ConnectException: Connection refused to host: 127.0.0.1; nested exception is: 
+	java.net.ConnectException: Connection refused (Connection refused)
+	at sun.rmi.transport.tcp.TCPEndpoint.newSocket(TCPEndpoint.java:623)
+	at sun.rmi.transport.tcp.TCPChannel.createConnection(TCPChannel.java:216)
+	at sun.rmi.transport.tcp.TCPChannel.newConnection(TCPChannel.java:202)
+	at sun.rmi.server.UnicastRef.invoke(UnicastRef.java:132)
+	at java.rmi.server.RemoteObjectInvocationHandler.invokeRemoteMethod(RemoteObjectInvocationHandler.java:235)
+	at java.rmi.server.RemoteObjectInvocationHandler.invoke(RemoteObjectInvocationHandler.java:180)
+	at com.sun.proxy.$Proxy7.evosuite_collectStatistics(Unknown Source)
+	at org.evosuite.rmi.service.ClientNodeImpl.updateStatistics(ClientNodeImpl.java:261)
+	at org.evosuite.statistics.StatisticsSender.sendIndividualToMaster(StatisticsSender.java:68)
+	at org.evosuite.statistics.StatisticsListener.lambda$new$0(StatisticsListener.java:77)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.net.ConnectException: Connection refused (Connection refused)
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:607)
+	at java.net.Socket.connect(Socket.java:556)
+	at java.net.Socket.<init>(Socket.java:452)
+	at java.net.Socket.<init>(Socket.java:229)
+	at sun.rmi.transport.proxy.RMIDirectSocketFactory.createSocket(RMIDirectSocketFactory.java:40)
+	at sun.rmi.transport.proxy.RMIMasterSocketFactory.createSocket(RMIMasterSocketFactory.java:148)
+	at sun.rmi.transport.tcp.TCPEndpoint.newSocket(TCPEndpoint.java:617)
+	... 10 common frames omitted
+[MASTER] 13:09:28.748 [logback-1] ERROR ClientNodeImpl - Error when exporting statistics: TotalExceptionsTimeline=0
+java.rmi.ConnectException: Connection refused to host: 127.0.0.1; nested exception is: 
+	java.net.ConnectException: Connection refused (Connection refused)
+	at sun.rmi.transport.tcp.TCPEndpoint.newSocket(TCPEndpoint.java:623)
+	at sun.rmi.transport.tcp.TCPChannel.createConnection(TCPChannel.java:216)
+	at sun.rmi.transport.tcp.TCPChannel.newConnection(TCPChannel.java:202)
+	at sun.rmi.server.UnicastRef.invoke(UnicastRef.java:132)
+	at java.rmi.server.RemoteObjectInvocationHandler.invokeRemoteMethod(RemoteObjectInvocationHandler.java:235)
+	at java.rmi.server.RemoteObjectInvocationHandler.invoke(RemoteObjectInvocationHandler.java:180)
+	at com.sun.proxy.$Proxy7.evosuite_collectStatistics(Unknown Source)
+	at org.evosuite.rmi.service.ClientNodeImpl$1.run(ClientNodeImpl.java:382)
+Caused by: java.net.ConnectException: Connection refused (Connection refused)
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:607)
+	at java.net.Socket.connect(Socket.java:556)
+	at java.net.Socket.<init>(Socket.java:452)
+	at java.net.Socket.<init>(Socket.java:229)
+	at sun.rmi.transport.proxy.RMIDirectSocketFactory.createSocket(RMIDirectSocketFactory.java:40)
+	at sun.rmi.transport.proxy.RMIMasterSocketFactory.createSocket(RMIMasterSocketFactory.java:148)
+	at sun.rmi.transport.tcp.TCPEndpoint.newSocket(TCPEndpoint.java:617)
+	... 7 common frames omitted
+[MASTER] 13:09:28.760 [logback-1] ERROR ClientNodeImpl - Cannot inform master of change of state
+java.rmi.ConnectException: Connection refused to host: 127.0.0.1; nested exception is: 
+	java.net.ConnectException: Connection refused (Connection refused)
+	at sun.rmi.transport.tcp.TCPEndpoint.newSocket(TCPEndpoint.java:623)
+	at sun.rmi.transport.tcp.TCPChannel.createConnection(TCPChannel.java:216)
+	at sun.rmi.transport.tcp.TCPChannel.newConnection(TCPChannel.java:202)
+	at sun.rmi.server.UnicastRef.invoke(UnicastRef.java:132)
+	at java.rmi.server.RemoteObjectInvocationHandler.invokeRemoteMethod(RemoteObjectInvocationHandler.java:235)
+	at java.rmi.server.RemoteObjectInvocationHandler.invoke(RemoteObjectInvocationHandler.java:180)
+	at com.sun.proxy.$Proxy7.evosuite_collectStatistics(Unknown Source)
+	at org.evosuite.rmi.service.ClientNodeImpl.updateStatistics(ClientNodeImpl.java:261)
+	at org.evosuite.statistics.StatisticsSender.sendIndividualToMaster(StatisticsSender.java:68)
+	at org.evosuite.statistics.StatisticsListener.lambda$new$0(StatisticsListener.java:77)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.net.ConnectException: Connection refused (Connection refused)
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:607)
+	at java.net.Socket.connect(Socket.java:556)
+	at java.net.Socket.<init>(Socket.java:452)
+	at java.net.Socket.<init>(Socket.java:229)
+	at sun.rmi.transport.proxy.RMIDirectSocketFactory.createSocket(RMIDirectSocketFactory.java:40)
+	at sun.rmi.transport.proxy.RMIMasterSocketFactory.createSocket(RMIMasterSocketFactory.java:148)
+	at sun.rmi.transport.tcp.TCPEndpoint.newSocket(TCPEndpoint.java:617)
+	... 10 common frames omitted
+Number of times BBC is called for com.google.javascript.jscomp.ScopedAliases$Traversal.findAliases(Lcom/google/javascript/jscomp/NodeTraversal;)V: Line 422: 37524
+Number of times BBC is called for com.google.javascript.jscomp.ScopedAliases$AliasUsage.referencesOtherAlias()Z: Line 204: 37524
+Number of times BBC is called for com.google.javascript.jscomp.ScopedAliases$AliasUsage.referencesOtherAlias()Z: Line 203: 37524
+Number of times BBC is called for com.google.javascript.jscomp.ScopedAliases$AliasUsage.<init>(Lcom/google/javascript/jscomp/ScopedAliases;Lcom/google/javascript/jscomp/Scope$Var;Lcom/google/javascript/rhino/Node;)V: root-Branch: 37524
+Number of times BBC is called for com.google.javascript.jscomp.ScopedAliases$AliasUsage.referencesOtherAlias()Z: Line 205: 37524
+Number of times BBC is called for com.google.javascript.jscomp.ScopedAliases$AliasUsage.referencesOtherAlias()Z: Line 202: 37524
+Number of times BBC is called for com.google.javascript.jscomp.ScopedAliases$Traversal.shouldTraverse(Lcom/google/javascript/jscomp/NodeTraversal;Lcom/google/javascript/rhino/Node;Lcom/google/javascript/rhino/Node;)Z: I7 Branch 21 IFEQ L320 - false: 30119
+Number of times BBC is called for com.google.javascript.jscomp.ScopedAliases$Traversal.renameNamespaceShadows(Lcom/google/javascript/jscomp/NodeTraversal;)V: I4 Branch 46 IFEQ L462 - false: 37524
+Number of times BBC is called for com.google.javascript.jscomp.ScopedAliases$Traversal.visit(Lcom/google/javascript/jscomp/NodeTraversal;Lcom/google/javascript/rhino/Node;Lcom/google/javascript/rhino/Node;)V: I36 Branch 56 IF_ICMPNE L511 - false: 30114
+Number of times BBC is called for com.google.javascript.jscomp.ScopedAliases$Traversal.shouldTraverse(Lcom/google/javascript/jscomp/NodeTraversal;Lcom/google/javascript/rhino/Node;Lcom/google/javascript/rhino/Node;)Z: I7 Branch 21 IFEQ L320 - true: 30119
+Number of times BBC is called for com.google.javascript.jscomp.ScopedAliases$Traversal.renameNamespaceShadows(Lcom/google/javascript/jscomp/NodeTraversal;)V: I4 Branch 46 IFEQ L462 - true: 37524
+Number of times BBC is called for com.google.javascript.jscomp.ScopedAliases.hotSwapScript(Lcom/google/javascript/rhino/Node;Lcom/google/javascript/rhino/Node;)V: I123 Branch 7 IFEQ L163 - false: 30114
+Number of times BBC is called for com.google.javascript.jscomp.ScopedAliases$Traversal.visit(Lcom/google/javascript/jscomp/NodeTraversal;Lcom/google/javascript/rhino/Node;Lcom/google/javascript/rhino/Node;)V: I36 Branch 56 IF_ICMPNE L511 - true: 30114
+Number of times BBC is called for com.google.javascript.jscomp.ScopedAliases.hotSwapScript(Lcom/google/javascript/rhino/Node;Lcom/google/javascript/rhino/Node;)V: I36 Branch 3 IFNE L141 - false: 30114
+Number of times BBC is called for com.google.javascript.jscomp.ScopedAliases$Traversal.isCallToScopeMethod(Lcom/google/javascript/rhino/Node;)Z: I4 Branch 14 IFEQ L289 - false: 911
+Number of times BBC is called for com.google.javascript.jscomp.ScopedAliases$Traversal.fixTypeNode(Lcom/google/javascript/rhino/Node;)V: Line 580: 37524
+Number of times BBC is called for com.google.javascript.jscomp.ScopedAliases$Traversal.fixTypeNode(Lcom/google/javascript/rhino/Node;)V: Line 584: 37524
+Number of times BBC is called for com.google.javascript.jscomp.ScopedAliases$AliasedTypeNode.<init>(Lcom/google/javascript/jscomp/ScopedAliases;Lcom/google/javascript/jscomp/Scope$Var;Lcom/google/javascript/rhino/Node;)V: Line 227: 37524
+Number of times BBC is called for com.google.javascript.jscomp.ScopedAliases$AliasedNode.applyAlias()V: Line 221: 37524
+Number of times BBC is called for com.google.javascript.jscomp.ScopedAliases$AliasedTypeNode.<init>(Lcom/google/javascript/jscomp/ScopedAliases;Lcom/google/javascript/jscomp/Scope$Var;Lcom/google/javascript/rhino/Node;)V: Line 226: 37524
+Number of times BBC is called for com.google.javascript.jscomp.ScopedAliases$AliasedNode.applyAlias()V: Line 219: 37524
+Number of times BBC is called for com.google.javascript.jscomp.ScopedAliases$Traversal.visit(Lcom/google/javascript/jscomp/NodeTraversal;Lcom/google/javascript/rhino/Node;Lcom/google/javascript/rhino/Node;)V: I19 Branch 55 IF_ICMPGE L505 - true: 30110
+Number of times BBC is called for com.google.javascript.jscomp.ScopedAliases$AliasedTypeNode.<init>(Lcom/google/javascript/jscomp/ScopedAliases;Lcom/google/javascript/jscomp/Scope$Var;Lcom/google/javascript/rhino/Node;)V: Line 225: 37524
+Number of times BBC is called for com.google.javascript.jscomp.ScopedAliases.hotSwapScript(Lcom/google/javascript/rhino/Node;Lcom/google/javascript/rhino/Node;)V: I19 Branch 1 IFNE L136 - true: 30110
+Number of times BBC is called for com.google.javascript.jscomp.ScopedAliases$AliasedNode.applyAlias()V: Line 218: 37524
+Number of times BBC is called for com.google.javascript.jscomp.ScopedAliases$Traversal.fixTypeNode(Lcom/google/javascript/rhino/Node;)V: Line 567: 37524
+Number of times BBC is called for com.google.javascript.jscomp.ScopedAliases.hotSwapScript(Lcom/google/javascript/rhino/Node;Lcom/google/javascript/rhino/Node;)V: I211 Branch 13 IFLE L183 - false: 30114
+Number of times BBC is called for com.google.javascript.jscomp.ScopedAliases$Traversal.validateScopeCall(Lcom/google/javascript/jscomp/NodeTraversal;Lcom/google/javascript/rhino/Node;Lcom/google/javascript/rhino/Node;)V: Line 497: 37524
+Number of times BBC is called for com.google.javascript.jscomp.ScopedAliases$Traversal.findAliases(Lcom/google/javascript/jscomp/NodeTraversal;)V: Line 353: 37524
+Number of times BBC is called for com.google.javascript.jscomp.ScopedAliases$Traversal.findAliases(Lcom/google/javascript/jscomp/NodeTraversal;)V: Line 354: 37524
+Number of times BBC is called for com.google.javascript.jscomp.ScopedAliases$Traversal.validateScopeCall(Lcom/google/javascript/jscomp/NodeTraversal;Lcom/google/javascript/rhino/Node;Lcom/google/javascript/rhino/Node;)V: Line 477: 37524
+Number of times BBC is called for com.google.javascript.jscomp.ScopedAliases$Traversal.validateScopeCall(Lcom/google/javascript/jscomp/NodeTraversal;Lcom/google/javascript/rhino/Node;Lcom/google/javascript/rhino/Node;)V: Line 483: 37524
+Number of times BBC is called for com.google.javascript.jscomp.ScopedAliases$Traversal.validateScopeCall(Lcom/google/javascript/jscomp/NodeTraversal;Lcom/google/javascript/rhino/Node;Lcom/google/javascript/rhino/Node;)V: Line 480: 37524
+Number of times BBC is called for com.google.javascript.jscomp.ScopedAliases.hotSwapScript(Lcom/google/javascript/rhino/Node;Lcom/google/javascript/rhino/Node;)V: I162 Branch 10 IFEQ L173 - false: 30114
+Number of times BBC is called for com.google.javascript.jscomp.ScopedAliases$Traversal.exitScope(Lcom/google/javascript/jscomp/NodeTraversal;)V: I5 Branch 18 IF_ICMPLE L305 - false: 30110
+Number of times BBC is called for com.google.javascript.jscomp.ScopedAliases.hotSwapScript(Lcom/google/javascript/rhino/Node;Lcom/google/javascript/rhino/Node;)V: I133 Branch 8 IFEQ L164 - false: 30114
+Number of times BBC is called for com.google.javascript.jscomp.ScopedAliases$AliasUsage.<init>(Lcom/google/javascript/jscomp/ScopedAliases;Lcom/google/javascript/jscomp/Scope$Var;Lcom/google/javascript/rhino/Node;)V: Line 197: 37524
+Number of times BBC is called for com.google.javascript.jscomp.ScopedAliases$Traversal.getSourceRegion(Lcom/google/javascript/rhino/Node;)Lcom/google/javascript/rhino/SourcePosition;: I29 Branch 26 IFNONNULL L337 - true: 37524
+Number of times BBC is called for com.google.javascript.jscomp.ScopedAliases$AliasedNode.<init>(Lcom/google/javascript/jscomp/ScopedAliases;Lcom/google/javascript/jscomp/Scope$Var;Lcom/google/javascript/rhino/Node;)V: Line 213: 37524
+Number of times BBC is called for com.google.javascript.jscomp.ScopedAliases$AliasUsage.<init>(Lcom/google/javascript/jscomp/ScopedAliases;Lcom/google/javascript/jscomp/Scope$Var;Lcom/google/javascript/rhino/Node;)V: Line 196: 37524
+Number of times BBC is called for com.google.javascript.jscomp.ScopedAliases$AliasedNode.<init>(Lcom/google/javascript/jscomp/ScopedAliases;Lcom/google/javascript/jscomp/Scope$Var;Lcom/google/javascript/rhino/Node;)V: Line 212: 37524
+Number of times BBC is called for com.google.javascript.jscomp.ScopedAliases$AliasUsage.<init>(Lcom/google/javascript/jscomp/ScopedAliases;Lcom/google/javascript/jscomp/Scope$Var;Lcom/google/javascript/rhino/Node;)V: Line 195: 37524
+Number of times BBC is called for com.google.javascript.jscomp.ScopedAliases$AliasedNode.<init>(Lcom/google/javascript/jscomp/ScopedAliases;Lcom/google/javascript/jscomp/Scope$Var;Lcom/google/javascript/rhino/Node;)V: Line 214: 37524
+[MASTER] 13:09:31.768 [logback-1] ERROR ClientNodeImpl - Cannot inform master of change of state
+java.rmi.ConnectException: Connection refused to host: 127.0.0.1; nested exception is: 
+	java.net.ConnectException: Connection refused (Connection refused)
+	at sun.rmi.transport.tcp.TCPEndpoint.newSocket(TCPEndpoint.java:623)
+	at sun.rmi.transport.tcp.TCPChannel.createConnection(TCPChannel.java:216)
+	at sun.rmi.transport.tcp.TCPChannel.newConnection(TCPChannel.java:202)
+	at sun.rmi.server.UnicastRef.invoke(UnicastRef.java:132)
+	at java.rmi.server.RemoteObjectInvocationHandler.invokeRemoteMethod(RemoteObjectInvocationHandler.java:235)
+	at java.rmi.server.RemoteObjectInvocationHandler.invoke(RemoteObjectInvocationHandler.java:180)
+	at com.sun.proxy.$Proxy7.evosuite_collectStatistics(Unknown Source)
+	at org.evosuite.rmi.service.ClientNodeImpl.updateStatistics(ClientNodeImpl.java:261)
+	at org.evosuite.statistics.StatisticsSender.sendIndividualToMaster(StatisticsSender.java:68)
+	at org.evosuite.statistics.StatisticsSender.executedAndThenSendIndividualToMaster(StatisticsSender.java:97)
+	at org.evosuite.TestSuiteGenerator.generateTests(TestSuiteGenerator.java:636)
+	at org.evosuite.TestSuiteGenerator.generateTestSuite(TestSuiteGenerator.java:205)
+	at org.evosuite.rmi.service.ClientNodeImpl.lambda$startNewSearch$0(ClientNodeImpl.java:150)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.net.ConnectException: Connection refused (Connection refused)
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:607)
+	at java.net.Socket.connect(Socket.java:556)
+	at java.net.Socket.<init>(Socket.java:452)
+	at java.net.Socket.<init>(Socket.java:229)
+	at sun.rmi.transport.proxy.RMIDirectSocketFactory.createSocket(RMIDirectSocketFactory.java:40)
+	at sun.rmi.transport.proxy.RMIMasterSocketFactory.createSocket(RMIMasterSocketFactory.java:148)
+	at sun.rmi.transport.tcp.TCPEndpoint.newSocket(TCPEndpoint.java:617)
+	... 17 common frames omitted
+Number of times BBC is called for com.google.javascript.jscomp.ScopedAliases.hotSwapScript(Lcom/google/javascript/rhino/Node;Lcom/google/javascript/rhino/Node;)V: I133 Branch 8 IFEQ L164 - true: 30114
+Number of times BBC is called for com.google.javascript.jscomp.ScopedAliases$Traversal.getSourceRegion(Lcom/google/javascript/rhino/Node;)Lcom/google/javascript/rhino/SourcePosition;: I29 Branch 26 IFNONNULL L337 - false: 37524
+Number of times BBC is called for com.google.javascript.jscomp.ScopedAliases$AliasUsage.<init>(Lcom/google/javascript/jscomp/ScopedAliases;Lcom/google/javascript/jscomp/Scope$Var;Lcom/google/javascript/rhino/Node;)V: Line 198: 37524
+Number of times BBC is called for com.google.javascript.jscomp.ScopedAliases.hotSwapScript(Lcom/google/javascript/rhino/Node;Lcom/google/javascript/rhino/Node;)V: I203 Branch 11 IFGT L183 - true: 30114
+Number of times BBC is called for com.google.javascript.jscomp.ScopedAliases$Traversal.getSourceRegion(Lcom/google/javascript/rhino/Node;)Lcom/google/javascript/rhino/SourcePosition;: Line 343: 37524
+Number of times BBC is called for com.google.javascript.jscomp.ScopedAliases$Traversal.getSourceRegion(Lcom/google/javascript/rhino/Node;)Lcom/google/javascript/rhino/SourcePosition;: Line 341: 37524
+Number of times BBC is called for com.google.javascript.jscomp.ScopedAliases$Traversal.getSourceRegion(Lcom/google/javascript/rhino/Node;)Lcom/google/javascript/rhino/SourcePosition;: Line 339: 37524
+Number of times BBC is called for com.google.javascript.jscomp.ScopedAliases$Traversal.getSourceRegion(Lcom/google/javascript/rhino/Node;)Lcom/google/javascript/rhino/SourcePosition;: Line 338: 37524
+Number of times BBC is called for com.google.javascript.jscomp.ScopedAliases$Traversal.getSourceRegion(Lcom/google/javascript/rhino/Node;)Lcom/google/javascript/rhino/SourcePosition;: Line 337: 37524
+Number of times BBC is called for com.google.javascript.jscomp.ScopedAliases$Traversal.report(Lcom/google/javascript/jscomp/NodeTraversal;Lcom/google/javascript/rhino/Node;Lcom/google/javascript/jscomp/DiagnosticType;[Ljava/lang/String;)V: root-Branch: 37524
+Number of times BBC is called for com.google.javascript.jscomp.ScopedAliases$Traversal.getSourceRegion(Lcom/google/javascript/rhino/Node;)Lcom/google/javascript/rhino/SourcePosition;: Line 331: 37524
+Number of times BBC is called for com.google.javascript.jscomp.ScopedAliases$Traversal.getSourceRegion(Lcom/google/javascript/rhino/Node;)Lcom/google/javascript/rhino/SourcePosition;: Line 330: 37524
+Number of times BBC is called for com.google.javascript.jscomp.ScopedAliases$Traversal.fixTypeNode(Lcom/google/javascript/rhino/Node;)V: I4 Branch 70 IFEQ L567 - false: 37524
+Number of times BBC is called for com.google.javascript.jscomp.ScopedAliases$Traversal.visit(Lcom/google/javascript/jscomp/NodeTraversal;Lcom/google/javascript/rhino/Node;Lcom/google/javascript/rhino/Node;)V: I5 Branch 54 IFEQ L501 - false: 30110
+Number of times BBC is called for com.google.javascript.jscomp.ScopedAliases.hotSwapScript(Lcom/google/javascript/rhino/Node;Lcom/google/javascript/rhino/Node;)V: I207 Branch 12 IFGT L183 - true: 30114
+Number of times BBC is called for com.google.javascript.jscomp.ScopedAliases$AliasedTypeNode.<init>(Lcom/google/javascript/jscomp/ScopedAliases;Lcom/google/javascript/jscomp/Scope$Var;Lcom/google/javascript/rhino/Node;)V: root-Branch: 37524
+Number of times BBC is called for com.google.javascript.jscomp.ScopedAliases$AliasedNode.applyAlias()V: root-Branch: 37524
+Number of times BBC is called for com.google.javascript.jscomp.ScopedAliases$Traversal.isCallToScopeMethod(Lcom/google/javascript/rhino/Node;)Z: I10 Branch 15 IFLE L289 - true: 915
+Number of times BBC is called for com.google.javascript.jscomp.ScopedAliases$Traversal.shouldTraverse(Lcom/google/javascript/jscomp/NodeTraversal;Lcom/google/javascript/rhino/Node;Lcom/google/javascript/rhino/Node;)Z: I4 Branch 20 IFEQ L320 - false: 30115
+Number of times BBC is called for com.google.javascript.jscomp.ScopedAliases$Traversal.enterScope(Lcom/google/javascript/jscomp/NodeTraversal;)V: I13 Branch 17 IFEQ L296 - false: 20700
+Number of times BBC is called for com.google.javascript.jscomp.ScopedAliases$AliasedTypeNode.applyAlias()V: Line 232: 37524
+Number of times BBC is called for com.google.javascript.jscomp.ScopedAliases$Traversal.validateScopeCall(Lcom/google/javascript/jscomp/NodeTraversal;Lcom/google/javascript/rhino/Node;Lcom/google/javascript/rhino/Node;)V: I5 Branch 48 IFNULL L477 - true: 37524
+Number of times BBC is called for com.google.javascript.jscomp.ScopedAliases$AliasedTypeNode.applyAlias()V: Line 231: 37524
+Number of times BBC is called for com.google.javascript.jscomp.ScopedAliases$AliasedTypeNode.applyAlias()V: Line 236: 37524
+Number of times BBC is called for com.google.javascript.jscomp.ScopedAliases$AliasedTypeNode.applyAlias()V: Line 234: 37524
+Number of times BBC is called for com.google.javascript.jscomp.ScopedAliases$AliasedTypeNode.applyAlias()V: Line 233: 37524
+Number of times BBC is called for com.google.javascript.jscomp.ScopedAliases$Traversal.enterScope(Lcom/google/javascript/jscomp/NodeTraversal;)V: I13 Branch 17 IFEQ L296 - true: 22
+Number of times BBC is called for com.google.javascript.jscomp.ScopedAliases$AliasedTypeNode.applyAlias()V: Line 238: 37524
+Number of times BBC is called for com.google.javascript.jscomp.ScopedAliases$Traversal.fixTypeNode(Lcom/google/javascript/rhino/Node;)V: I4 Branch 70 IFEQ L567 - true: 37524
+Number of times BBC is called for com.google.javascript.jscomp.ScopedAliases$AliasedTypeNode.applyAlias()V: Line 237: 37524
+Number of times BBC is called for com.google.javascript.jscomp.ScopedAliases$Traversal.enterScope(Lcom/google/javascript/jscomp/NodeTraversal;)V: I9 Branch 16 IFNULL L296 - false: 18
+Number of times BBC is called for com.google.javascript.jscomp.ScopedAliases$Traversal.findAliases(Lcom/google/javascript/jscomp/NodeTraversal;)V: I14 Branch 28 IFEQ L354 - false: 37524
+Number of times BBC is called for com.google.javascript.jscomp.ScopedAliases$Traversal.report(Lcom/google/javascript/jscomp/NodeTraversal;Lcom/google/javascript/rhino/Node;Lcom/google/javascript/jscomp/DiagnosticType;[Ljava/lang/String;)V: Line 350: 37524
+Number of times BBC is called for com.google.javascript.jscomp.ScopedAliases$Traversal.report(Lcom/google/javascript/jscomp/NodeTraversal;Lcom/google/javascript/rhino/Node;Lcom/google/javascript/jscomp/DiagnosticType;[Ljava/lang/String;)V: Line 349: 37524
+Number of times BBC is called for com.google.javascript.jscomp.ScopedAliases$Traversal.report(Lcom/google/javascript/jscomp/NodeTraversal;Lcom/google/javascript/rhino/Node;Lcom/google/javascript/jscomp/DiagnosticType;[Ljava/lang/String;)V: Line 348: 37524
+Number of times BBC is called for com.google.javascript.jscomp.ScopedAliases$Traversal.validateScopeCall(Lcom/google/javascript/jscomp/NodeTraversal;Lcom/google/javascript/rhino/Node;Lcom/google/javascript/rhino/Node;)V: I5 Branch 48 IFNULL L477 - false: 37524
+Number of times BBC is called for com.google.javascript.jscomp.ScopedAliases.hotSwapScript(Lcom/google/javascript/rhino/Node;Lcom/google/javascript/rhino/Node;)V: I30 Branch 2 IFLE L141 - true: 30114
+Number of times BBC is called for com.google.javascript.jscomp.ScopedAliases$Traversal.findAliases(Lcom/google/javascript/jscomp/NodeTraversal;)V: I14 Branch 28 IFEQ L354 - true: 37524
+Number of times BBC is called for com.google.javascript.jscomp.ScopedAliases$Traversal.getSourceRegion(Lcom/google/javascript/rhino/Node;)Lcom/google/javascript/rhino/SourcePosition;: I40 Branch 27 IFNONNULL L338 - false: 37524
+Number of times BBC is called for com.google.javascript.jscomp.ScopedAliases$Traversal.renameNamespaceShadows(Lcom/google/javascript/jscomp/NodeTraversal;)V: Line 474: 37524
+Number of times BBC is called for com.google.javascript.jscomp.ScopedAliases$Traversal.getSourceRegion(Lcom/google/javascript/rhino/Node;)Lcom/google/javascript/rhino/SourcePosition;: I40 Branch 27 IFNONNULL L338 - true: 37524
+Number of times BBC is called for com.google.javascript.jscomp.ScopedAliases$Traversal.renameNamespaceShadows(Lcom/google/javascript/jscomp/NodeTraversal;)V: Line 462: 37524
+Number of times BBC is called for com.google.javascript.jscomp.ScopedAliases$Traversal.validateScopeCall(Lcom/google/javascript/jscomp/NodeTraversal;Lcom/google/javascript/rhino/Node;Lcom/google/javascript/rhino/Node;)V: I33 Branch 50 IF_ICMPEQ L483 - false: 37524
+Number of times BBC is called for com.google.javascript.jscomp.ScopedAliases$Traversal.getSourceRegion(Lcom/google/javascript/rhino/Node;)Lcom/google/javascript/rhino/SourcePosition;: I11 Branch 24 IFNONNULL L332 - false: 37524
+Number of times BBC is called for com.google.javascript.jscomp.ScopedAliases$Traversal.getSourceRegion(Lcom/google/javascript/rhino/Node;)Lcom/google/javascript/rhino/SourcePosition;: I11 Branch 24 IFNONNULL L332 - true: 37524
+Number of times BBC is called for com.google.javascript.jscomp.ScopedAliases$Traversal.validateScopeCall(Lcom/google/javascript/jscomp/NodeTraversal;Lcom/google/javascript/rhino/Node;Lcom/google/javascript/rhino/Node;)V: I33 Branch 50 IF_ICMPEQ L483 - true: 37524
+Number of times BBC is called for com.google.javascript.jscomp.ScopedAliases$Traversal.validateScopeCall(Lcom/google/javascript/jscomp/NodeTraversal;Lcom/google/javascript/rhino/Node;Lcom/google/javascript/rhino/Node;)V: I18 Branch 49 IFNE L480 - false: 37524
+Number of times BBC is called for com.google.javascript.jscomp.ScopedAliases$Traversal.findNamespaceShadows(Lcom/google/javascript/jscomp/NodeTraversal;)V: I4 Branch 42 IFEQ L443 - true: 37524
+Number of times BBC is called for com.google.javascript.jscomp.ScopedAliases$Traversal.findNamespaceShadows(Lcom/google/javascript/jscomp/NodeTraversal;)V: I4 Branch 42 IFEQ L443 - false: 37524
+Number of times BBC is called for com.google.javascript.jscomp.ScopedAliases$Traversal$1.<init>(Lcom/google/javascript/jscomp/ScopedAliases$Traversal;)V: root-Branch: 37524
+Number of times BBC is called for com.google.javascript.jscomp.ScopedAliases.hotSwapScript(Lcom/google/javascript/rhino/Node;Lcom/google/javascript/rhino/Node;)V: I49 Branch 4 IFEQ L143 - false: 30114
+Number of times BBC is called for com.google.javascript.jscomp.ScopedAliases$Traversal.recordAlias(Lcom/google/javascript/jscomp/Scope$Var;)V: Line 430: 37524
+Number of times BBC is called for com.google.javascript.jscomp.ScopedAliases$Traversal.recordAlias(Lcom/google/javascript/jscomp/Scope$Var;)V: Line 433: 37524
+Number of times BBC is called for com.google.javascript.jscomp.ScopedAliases$Traversal.recordAlias(Lcom/google/javascript/jscomp/Scope$Var;)V: Line 432: 37524
+Number of times BBC is called for com.google.javascript.jscomp.ScopedAliases$AliasUsage.referencesOtherAlias()Z: I23 Branch 74 IFNULL L205 - true: 37524
+Number of times BBC is called for com.google.javascript.jscomp.ScopedAliases$Traversal.recordAlias(Lcom/google/javascript/jscomp/Scope$Var;)V: Line 426: 37524
+Number of times BBC is called for com.google.javascript.jscomp.ScopedAliases$Traversal.findNamespaceShadows(Lcom/google/javascript/jscomp/NodeTraversal;)V: Line 443: 37524
+Number of times BBC is called for com.google.javascript.jscomp.ScopedAliases$Traversal.recordAlias(Lcom/google/javascript/jscomp/Scope$Var;)V: Line 428: 37524
+Number of times BBC is called for com.google.javascript.jscomp.ScopedAliases$Traversal.recordAlias(Lcom/google/javascript/jscomp/Scope$Var;)V: Line 425: 37524
+Number of times BBC is called for com.google.javascript.jscomp.ScopedAliases.hotSwapScript(Lcom/google/javascript/rhino/Node;Lcom/google/javascript/rhino/Node;)V: I49 Branch 4 IFEQ L143 - true: 30114
+Number of times BBC is called for com.google.javascript.jscomp.ScopedAliases$Traversal.exitScope(Lcom/google/javascript/jscomp/NodeTraversal;)V: I16 Branch 19 IF_ICMPNE L309 - false: 30110
+Number of times BBC is called for com.google.javascript.jscomp.ScopedAliases$AliasUsage.referencesOtherAlias()Z: I23 Branch 74 IFNULL L205 - false: 37524
+Number of times BBC is called for com.google.javascript.jscomp.ScopedAliases$AliasedTypeNode.applyAlias()V: root-Branch: 37524
+Number of times BBC is called for com.google.javascript.jscomp.ScopedAliases$Traversal.recordAlias(Lcom/google/javascript/jscomp/Scope$Var;)V: I36 Branch 39 IF_ICMPEQ L433 - true: 37524
+Number of times BBC is called for com.google.javascript.jscomp.ScopedAliases$AliasedNode.<init>(Lcom/google/javascript/jscomp/ScopedAliases;Lcom/google/javascript/jscomp/Scope$Var;Lcom/google/javascript/rhino/Node;)V: root-Branch: 37524
+Number of times BBC is called for com.google.javascript.jscomp.ScopedAliases$Traversal.recordAlias(Lcom/google/javascript/jscomp/Scope$Var;)V: I36 Branch 39 IF_ICMPEQ L433 - false: 37524
+Number of times BBC is called for com.google.javascript.jscomp.ScopedAliases$Traversal.recordAlias(Lcom/google/javascript/jscomp/Scope$Var;)V: Line 439: 37524
+Number of times BBC is called for com.google.javascript.jscomp.ScopedAliases$Traversal.isCallToScopeMethod(Lcom/google/javascript/rhino/Node;)Z: I10 Branch 15 IFLE L289 - false: 21170
+Number of times BBC is called for com.google.javascript.jscomp.ScopedAliases$Traversal.validateScopeCall(Lcom/google/javascript/jscomp/NodeTraversal;Lcom/google/javascript/rhino/Node;Lcom/google/javascript/rhino/Node;)V: I18 Branch 49 IFNE L480 - true: 37524
+Number of times BBC is called in total: 3865661
+[MASTER] 13:09:31.808 [logback-1] ERROR ClientNodeImpl - Cannot inform master of change of state
+java.rmi.ConnectException: Connection refused to host: 127.0.0.1; nested exception is: 
+	java.net.ConnectException: Connection refused (Connection refused)
+	at sun.rmi.transport.tcp.TCPEndpoint.newSocket(TCPEndpoint.java:623)
+	at sun.rmi.transport.tcp.TCPChannel.createConnection(TCPChannel.java:216)
+	at sun.rmi.transport.tcp.TCPChannel.newConnection(TCPChannel.java:202)
+	at sun.rmi.server.UnicastRef.invoke(UnicastRef.java:132)
+	at java.rmi.server.RemoteObjectInvocationHandler.invokeRemoteMethod(RemoteObjectInvocationHandler.java:235)
+	at java.rmi.server.RemoteObjectInvocationHandler.invoke(RemoteObjectInvocationHandler.java:180)
+	at com.sun.proxy.$Proxy7.evosuite_informChangeOfStateInClient(Unknown Source)
+	at org.evosuite.rmi.service.ClientNodeImpl.changeState(ClientNodeImpl.java:242)
+	at org.evosuite.rmi.service.ClientNodeImpl.changeState(ClientNodeImpl.java:228)
+	at org.evosuite.TestSuiteGenerator.postProcessTests(TestSuiteGenerator.java:383)
+	at org.evosuite.TestSuiteGenerator.generateTestSuite(TestSuiteGenerator.java:215)
+	at org.evosuite.rmi.service.ClientNodeImpl.lambda$startNewSearch$0(ClientNodeImpl.java:150)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.net.ConnectException: Connection refused (Connection refused)
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:607)
+	at java.net.Socket.connect(Socket.java:556)
+	at java.net.Socket.<init>(Socket.java:452)
+	at java.net.Socket.<init>(Socket.java:229)
+	at sun.rmi.transport.proxy.RMIDirectSocketFactory.createSocket(RMIDirectSocketFactory.java:40)
+	at sun.rmi.transport.proxy.RMIMasterSocketFactory.createSocket(RMIMasterSocketFactory.java:148)
+	at sun.rmi.transport.tcp.TCPEndpoint.newSocket(TCPEndpoint.java:617)
+	... 16 common frames omitted
+* Search finished after 2970s and 441 generations, 178863 statements, best individual has fitness: 761.0
+[MASTER] 13:09:31.803 [logback-2] WARN  TimeController - Phase SEARCH lasted too long, 2370 seconds more than allowed.

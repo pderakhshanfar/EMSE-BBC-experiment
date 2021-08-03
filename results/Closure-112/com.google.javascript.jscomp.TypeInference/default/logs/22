@@ -1,0 +1,266 @@
+* EvoSuite 1.1.1-SNAPSHOT
+* Configuration: default
+* Going to generate test cases for class: com.google.javascript.jscomp.TypeInference
+* Starting Client-0
+* Connecting to master process on port 17737
+* Analyzing classpath: 
+  - subjects/buggy-versions/Closure-112/build/classes
+  - subjects/buggy-versions/Closure-112/lib/args4j.jar
+  - subjects/buggy-versions/Closure-112/lib/guava.jar
+  - subjects/buggy-versions/Closure-112/lib/json.jar
+  - subjects/buggy-versions/Closure-112/lib/jsr305.jar
+  - subjects/buggy-versions/Closure-112/lib/protobuf-java.jar
+  - subjects/buggy-versions/Closure-112/build/lib/rhino.jar
+  - subjects/buggy-versions/Closure-112/lib/ant.jar
+* Finished analyzing classpath
+* Generating tests for class com.google.javascript.jscomp.TypeInference
+* Test criteria:
+  - Line Coverage
+  - Branch Coverage
+  - Exception
+  - Mutation testing (weak)
+  - Method-Output Coverage
+  - Top-Level Method Coverage
+  - No-Exception Top-Level Method Coverage
+  - Context Branch Coverage
+* Total number of test goals for DYNAMOSA: 2994
+* Using seed 4169931951
+* Starting evolution
+* Initial Number of Goals in DynaMOSA = 886 / 2994
+[MASTER] 19:46:46.601 [logback-2] ERROR TestCluster - Failed to check cache for java.util.Comparator<T> : Type points to itself
+[MASTER] 19:50:10.470 [logback-2] ERROR TestCluster - Failed to check cache for java.util.Iterator<E> : Type points to itself
+[MASTER] 19:52:17.260 [logback-2] ERROR TestCluster - Failed to check cache for java.util.Enumeration<E> : Type points to itself
+Number of times BBC is called in total: 0
+* Search finished after 601s and 513 generations, 296110 statements, best individual has fitness: 2197.0
+* Minimizing test suite
+* Going to analyze the coverage criteria
+* Coverage analysis for criterion LINE
+* Coverage of criterion LINE: 23%
+* Total number of goals: 603
+* Number of covered goals: 138
+* Coverage analysis for criterion BRANCH
+* Coverage of criterion BRANCH: 37%
+* Total number of goals: 769
+* Number of covered goals: 285
+* Coverage analysis for criterion EXCEPTION
+* Coverage of criterion EXCEPTION: 100%
+* Total number of goals: 8
+* Number of covered goals: 8
+* Coverage analysis for criterion WEAKMUTATION
+* Coverage of criterion WEAKMUTATION: 10%
+* Total number of goals: 821
+* Number of covered goals: 85
+* Coverage analysis for criterion OUTPUT
+* Coverage of criterion OUTPUT: 43%
+* Total number of goals: 14
+* Number of covered goals: 6
+* Coverage analysis for criterion METHOD
+* Coverage of criterion METHOD: 67%
+* Total number of goals: 9
+* Number of covered goals: 6
+* Coverage analysis for criterion METHODNOEXCEPTION
+* Coverage of criterion METHODNOEXCEPTION: 67%
+* Total number of goals: 9
+* Number of covered goals: 6
+* Coverage analysis for criterion CBRANCH
+* Coverage of criterion CBRANCH: 37%
+* Total number of goals: 769
+* Number of covered goals: 285
+* Generated 106 tests with total length 845
+* Resulting test suite's coverage: 42% (average coverage for all fitness functions)
+* Generating assertions
+* Resulting test suite's mutation score: 2%
+* Compiling and checking tests
+[MASTER] 19:57:33.617 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class org.evosuite.runtime.mock.java.lang.MockIllegalArgumentException: Multiple entries with same key: returns=NOT_IMPLEMENTED and returns=RETURN
+[MASTER] 19:57:33.617 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ ControlFlowGraph<Node> controlFlowGraph0 = new ControlFlowGraph<Node>((Node) null, false, false);
+Compiler compiler0 = new Compiler();
+Node node0 = compiler0.parseTestCode("msg.undef.profp.read");
+Scope scope0 = Scope.createLatticeBottom(node0);
+TypeInference typeInference0 = new TypeInference(compiler0, controlFlowGraph0, (ReverseAbstractInterpreter) null, scope0, (Map<String, CodingConvention.AssertionFunctionSpec>) null);
+LinkedFlowScope linkedFlowScope0 = LinkedFlowScope.createEntryLattice(scope0);
+Node node1 = new Node(101, node0);
+typeInference0.branchedFlowThrough(node1, linkedFlowScope0);
+
+[MASTER] 19:57:35.449 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class org.evosuite.runtime.mock.java.lang.MockIllegalArgumentException: Multiple entries with same key: returns=NOT_IMPLEMENTED and returns=RETURN
+[MASTER] 19:57:35.449 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ ControlFlowGraph<Node> controlFlowGraph0 = new ControlFlowGraph<Node>((Node) null, false, false);
+Compiler compiler0 = new Compiler();
+Node node0 = compiler0.parseTestCode("msg5&ndef.profpdread");
+Scope scope0 = Scope.createLatticeBottom(node0);
+Node node1 = new Node(33);
+LinkedFlowScope linkedFlowScope0 = LinkedFlowScope.createEntryLattice(scope0);
+TypeInference typeInference0 = new TypeInference(compiler0, controlFlowGraph0, (ReverseAbstractInterpreter) null, scope0, (Map<String, CodingConvention.AssertionFunctionSpec>) null);
+typeInference0.branchedFlowThrough(node1, linkedFlowScope0);
+
+[MASTER] 19:57:37.029 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class org.evosuite.runtime.mock.java.lang.MockIllegalArgumentException: Multiple entries with same key: returns=NOT_IMPLEMENTED and returns=RETURN
+[MASTER] 19:57:37.030 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ ControlFlowGraph<Node> controlFlowGraph0 = new ControlFlowGraph<Node>((Node) null, false, false);
+Compiler compiler0 = new Compiler();
+Node node0 = compiler0.parseTestCode("msg.undef.profp.read");
+Scope scope0 = Scope.createLatticeBottom(node0);
+Node node1 = new Node(10);
+TypeInference typeInference0 = new TypeInference(compiler0, controlFlowGraph0, (ReverseAbstractInterpreter) null, scope0, (Map<String, CodingConvention.AssertionFunctionSpec>) null);
+LinkedFlowScope linkedFlowScope0 = LinkedFlowScope.createEntryLattice(scope0);
+Node node2 = StatementFusion.fuseExpressionIntoExpression(node1, node0);
+typeInference0.branchedFlowThrough(node2, linkedFlowScope0);
+
+[MASTER] 19:57:38.858 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class org.evosuite.runtime.mock.java.lang.MockIllegalArgumentException: Multiple entries with same key: returns=NOT_IMPLEMENTED and returns=RETURN
+[MASTER] 19:57:38.858 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ ControlFlowGraph<Node> controlFlowGraph0 = new ControlFlowGraph<Node>((Node) null, true, true);
+Compiler compiler0 = new Compiler();
+Node node0 = compiler0.parseTestCode("msg.undef.profp.read");
+Scope scope0 = Scope.createLatticeBottom(node0);
+Node node1 = new Node(63);
+TypeInference typeInference0 = new TypeInference(compiler0, controlFlowGraph0, (ReverseAbstractInterpreter) null, scope0, (Map<String, CodingConvention.AssertionFunctionSpec>) null);
+LinkedFlowScope linkedFlowScope0 = LinkedFlowScope.createEntryLattice(scope0);
+Node node2 = StatementFusion.fuseExpressionIntoExpression(node1, node0);
+typeInference0.branchedFlowThrough(node2, linkedFlowScope0);
+
+[MASTER] 19:57:40.938 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class org.evosuite.runtime.mock.java.lang.MockIllegalArgumentException: Multiple entries with same key: returns=NOT_IMPLEMENTED and returns=RETURN
+[MASTER] 19:57:40.939 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ ControlFlowGraph<Node> controlFlowGraph0 = new ControlFlowGraph<Node>((Node) null, false, false);
+Compiler compiler0 = new Compiler();
+Node node0 = compiler0.parseTestCode("msg.undef.ro%fp.read");
+Scope scope0 = Scope.createLatticeBottom(node0);
+TypeInference typeInference0 = new TypeInference(compiler0, controlFlowGraph0, (ReverseAbstractInterpreter) null, scope0, (Map<String, CodingConvention.AssertionFunctionSpec>) null);
+FlowScope flowScope0 = typeInference0.createEntryLattice();
+assertNotNull(flowScope0);
+
+
+[MASTER] 19:57:42.947 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class org.evosuite.runtime.mock.java.lang.MockIllegalArgumentException: Multiple entries with same key: returns=NOT_IMPLEMENTED and returns=RETURN
+[MASTER] 19:57:42.947 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ ControlFlowGraph<Node> controlFlowGraph0 = new ControlFlowGraph<Node>((Node) null, true, true);
+Compiler compiler0 = new Compiler();
+Node node0 = compiler0.parseTestCode("msg.undefprofpread");
+Scope scope0 = Scope.createLatticeBottom(node0);
+Node node1 = new Node(100);
+LinkedFlowScope linkedFlowScope0 = LinkedFlowScope.createEntryLattice(scope0);
+TypeInference typeInference0 = new TypeInference(compiler0, controlFlowGraph0, (ReverseAbstractInterpreter) null, scope0, (Map<String, CodingConvention.AssertionFunctionSpec>) null);
+typeInference0.branchedFlowThrough(node1, linkedFlowScope0);
+
+[MASTER] 19:57:45.197 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class org.evosuite.runtime.mock.java.lang.MockIllegalArgumentException: Multiple entries with same key: returns=NOT_IMPLEMENTED and returns=RETURN
+[MASTER] 19:57:45.198 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ ControlFlowGraph<Node> controlFlowGraph0 = new ControlFlowGraph<Node>((Node) null, false, false);
+Compiler compiler0 = new Compiler();
+Node node0 = compiler0.parseTestCode("msg.undef.profp.refd");
+Scope scope0 = Scope.createLatticeBottom(node0);
+TypeInference typeInference0 = new TypeInference(compiler0, controlFlowGraph0, (ReverseAbstractInterpreter) null, scope0, (Map<String, CodingConvention.AssertionFunctionSpec>) null);
+FlowScope flowScope0 = typeInference0.createInitialEstimateLattice();
+List<FlowScope> list0 = typeInference0.branchedFlowThrough((Node) null, flowScope0);
+assertTrue(list0.isEmpty());
+
+
+[MASTER] 19:57:47.241 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class org.evosuite.runtime.mock.java.lang.MockIllegalArgumentException: Multiple entries with same key: returns=NOT_IMPLEMENTED and returns=RETURN
+[MASTER] 19:57:47.242 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ ControlFlowGraph<Node> controlFlowGraph0 = new ControlFlowGraph<Node>((Node) null, false, false);
+Compiler compiler0 = new Compiler();
+Node node0 = compiler0.parseTestCode("msg.undef.profp.read");
+Scope scope0 = Scope.createLatticeBottom(node0);
+Node node1 = new Node(4);
+LinkedFlowScope linkedFlowScope0 = LinkedFlowScope.createEntryLattice(scope0);
+TypeInference typeInference0 = new TypeInference(compiler0, controlFlowGraph0, (ReverseAbstractInterpreter) null, scope0, (Map<String, CodingConvention.AssertionFunctionSpec>) null);
+typeInference0.branchedFlowThrough(node1, linkedFlowScope0);
+
+[MASTER] 19:57:50.133 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class org.evosuite.runtime.mock.java.lang.MockIllegalArgumentException: Multiple entries with same key: returns=NOT_IMPLEMENTED and returns=RETURN
+[MASTER] 19:57:50.133 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ ControlFlowGraph<Node> controlFlowGraph0 = new ControlFlowGraph<Node>((Node) null, false, false);
+Compiler compiler0 = new Compiler();
+Node node0 = compiler0.parseTestCode("msg.undef.profpread");
+Scope scope0 = Scope.createLatticeBottom(node0);
+Node node1 = new Node(5);
+LinkedFlowScope linkedFlowScope0 = LinkedFlowScope.createEntryLattice(scope0);
+TypeInference typeInference0 = new TypeInference(compiler0, controlFlowGraph0, (ReverseAbstractInterpreter) null, scope0, (Map<String, CodingConvention.AssertionFunctionSpec>) null);
+typeInference0.branchedFlowThrough(node1, linkedFlowScope0);
+
+[MASTER] 19:57:52.634 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class org.evosuite.runtime.mock.java.lang.MockIllegalArgumentException: Multiple entries with same key: returns=NOT_IMPLEMENTED and returns=RETURN
+[MASTER] 19:57:52.634 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ ControlFlowGraph<Node> controlFlowGraph0 = new ControlFlowGraph<Node>((Node) null, false, false);
+Compiler compiler0 = new Compiler();
+Node node0 = compiler0.parseTestCode("msg.undef.profp.read");
+Scope scope0 = Scope.createLatticeBottom(node0);
+Node node1 = new Node(8);
+TypeInference typeInference0 = new TypeInference(compiler0, controlFlowGraph0, (ReverseAbstractInterpreter) null, scope0, (Map<String, CodingConvention.AssertionFunctionSpec>) null);
+LinkedFlowScope linkedFlowScope0 = LinkedFlowScope.createEntryLattice(scope0);
+typeInference0.branchedFlowThrough(node1, linkedFlowScope0);
+
+[MASTER] 19:57:55.344 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class org.evosuite.runtime.mock.java.lang.MockIllegalArgumentException: Multiple entries with same key: returns=NOT_IMPLEMENTED and returns=RETURN
+[MASTER] 19:57:55.344 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ ControlFlowGraph<Node> controlFlowGraph0 = new ControlFlowGraph<Node>((Node) null, false, false);
+Compiler compiler0 = new Compiler();
+Node node0 = compiler0.parseTestCode("object");
+Scope scope0 = Scope.createLatticeBottom(node0);
+Node node1 = new Node(11);
+TypeInference typeInference0 = new TypeInference(compiler0, controlFlowGraph0, (ReverseAbstractInterpreter) null, scope0, (Map<String, CodingConvention.AssertionFunctionSpec>) null);
+LinkedFlowScope linkedFlowScope0 = LinkedFlowScope.createEntryLattice(scope0);
+PeepholeFoldConstants peepholeFoldConstants0 = new PeepholeFoldConstants(false);
+Node node2 = peepholeFoldConstants0.optimizeSubtree(node1);
+FlowScope flowScope0 = typeInference0.flowThrough(node2, linkedFlowScope0);
+assertNotSame(flowScope0, linkedFlowScope0);
+
+
+[MASTER] 19:57:58.248 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class org.evosuite.runtime.mock.java.lang.MockIllegalArgumentException: Multiple entries with same key: returns=NOT_IMPLEMENTED and returns=RETURN
+[MASTER] 19:57:58.248 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ ControlFlowGraph<Node> controlFlowGraph0 = new ControlFlowGraph<Node>((Node) null, false, false);
+Compiler compiler0 = new Compiler();
+Node node0 = compiler0.parseTestCode("msg.undef.profp.read");
+Scope scope0 = Scope.createLatticeBottom(node0);
+Node node1 = new Node(12);
+LinkedFlowScope linkedFlowScope0 = LinkedFlowScope.createEntryLattice(scope0);
+TypeInference typeInference0 = new TypeInference(compiler0, controlFlowGraph0, (ReverseAbstractInterpreter) null, scope0, (Map<String, CodingConvention.AssertionFunctionSpec>) null);
+typeInference0.branchedFlowThrough(node1, linkedFlowScope0);
+
+[MASTER] 19:58:01.316 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class org.evosuite.runtime.mock.java.lang.MockIllegalArgumentException: Multiple entries with same key: returns=NOT_IMPLEMENTED and returns=RETURN
+[MASTER] 19:58:01.317 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ ControlFlowGraph<Node> controlFlowGraph0 = new ControlFlowGraph<Node>((Node) null, true, true);
+Compiler compiler0 = new Compiler();
+Node node0 = compiler0.parseTestCode("msg.undef.profp.read");
+Scope scope0 = Scope.createLatticeBottom(node0);
+Node node1 = new Node(14);
+ReverseAbstractInterpreter reverseAbstractInterpreter0 = compiler0.getReverseAbstractInterpreter();
+TypeInference typeInference0 = new TypeInference(compiler0, controlFlowGraph0, reverseAbstractInterpreter0, scope0, (Map<String, CodingConvention.AssertionFunctionSpec>) null);
+LinkedFlowScope linkedFlowScope0 = LinkedFlowScope.createEntryLattice(scope0);
+typeInference0.branchedFlowThrough(node1, linkedFlowScope0);
+
+[MASTER] 19:58:04.488 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class org.evosuite.runtime.mock.java.lang.MockIllegalArgumentException: Multiple entries with same key: returns=NOT_IMPLEMENTED and returns=RETURN
+[MASTER] 19:58:04.488 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ ControlFlowGraph<Node> controlFlowGraph0 = new ControlFlowGraph<Node>((Node) null, true, true);
+Compiler compiler0 = new Compiler();
+Node node0 = compiler0.parseTestCode("msg.undef.pr-fprja");
+Scope scope0 = Scope.createLatticeBottom(node0);
+Node node1 = new Node(15, 4, 2);
+TypeInference typeInference0 = new TypeInference(compiler0, controlFlowGraph0, (ReverseAbstractInterpreter) null, scope0, (Map<String, CodingConvention.AssertionFunctionSpec>) null);
+LinkedFlowScope linkedFlowScope0 = LinkedFlowScope.createEntryLattice(scope0);
+typeInference0.branchedFlowThrough(node1, linkedFlowScope0);
+
+[MASTER] 19:58:07.918 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class org.evosuite.runtime.mock.java.lang.MockIllegalArgumentException: Multiple entries with same key: returns=NOT_IMPLEMENTED and returns=RETURN
+[MASTER] 19:58:07.919 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ ControlFlowGraph<Node> controlFlowGraph0 = new ControlFlowGraph<Node>((Node) null, false, false);
+Compiler compiler0 = new Compiler();
+Node node0 = compiler0.parseTestCode("msg.undef.profp.read");
+Scope scope0 = Scope.createLatticeBottom(node0);
+Node node1 = new Node(16);
+TypeInference typeInference0 = new TypeInference(compiler0, controlFlowGraph0, (ReverseAbstractInterpreter) null, scope0, (Map<String, CodingConvention.AssertionFunctionSpec>) null);
+LinkedFlowScope linkedFlowScope0 = LinkedFlowScope.createEntryLattice(scope0);
+typeInference0.branchedFlowThrough(node1, linkedFlowScope0);
+
+[MASTER] 19:58:11.416 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class org.evosuite.runtime.mock.java.lang.MockIllegalArgumentException: Multiple entries with same key: returns=NOT_IMPLEMENTED and returns=RETURN
+[MASTER] 19:58:11.416 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ ControlFlowGraph<Node> controlFlowGraph0 = new ControlFlowGraph<Node>((Node) null, true, true);
+Compiler compiler0 = new Compiler();
+Node node0 = compiler0.parseTestCode("msg.undefprofpread");
+Scope scope0 = Scope.createLatticeBottom(node0);
+Node node1 = new Node(17);
+LinkedFlowScope linkedFlowScope0 = LinkedFlowScope.createEntryLattice(scope0);
+TypeInference typeInference0 = new TypeInference(compiler0, controlFlowGraph0, (ReverseAbstractInterpreter) null, scope0, (Map<String, CodingConvention.AssertionFunctionSpec>) null);
+typeInference0.branchedFlowThrough(node1, linkedFlowScope0);
+
+[MASTER] 19:58:12.517 [logback-2] ERROR JUnitAnalyzer - Ran out of time while checking tests
+* Permissions denied during test execution: 
+  - java.lang.RuntimePermission: 
+         writeFileDescriptor: 38
+* Writing tests to file
+* Writing JUnit test case 'TypeInference_ESTest' to results/Closure-112/com.google.javascript.jscomp.TypeInference/default/tests/22
+* Done!
+
+* Computation finished

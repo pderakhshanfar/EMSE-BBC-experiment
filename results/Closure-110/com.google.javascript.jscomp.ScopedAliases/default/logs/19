@@ -1,0 +1,57 @@
+* EvoSuite 1.1.1-SNAPSHOT
+* Configuration: default
+* Going to generate test cases for class: com.google.javascript.jscomp.ScopedAliases
+* Starting Client-0
+* Connecting to master process on port 21221
+* Analyzing classpath: 
+  - subjects/buggy-versions/Closure-110/build/classes
+  - subjects/buggy-versions/Closure-110/lib/args4j.jar
+  - subjects/buggy-versions/Closure-110/lib/guava.jar
+  - subjects/buggy-versions/Closure-110/lib/json.jar
+  - subjects/buggy-versions/Closure-110/lib/jsr305.jar
+  - subjects/buggy-versions/Closure-110/lib/protobuf-java.jar
+  - subjects/buggy-versions/Closure-110/build/lib/rhino.jar
+  - subjects/buggy-versions/Closure-110/lib/ant.jar
+* Finished analyzing classpath
+* Generating tests for class com.google.javascript.jscomp.ScopedAliases
+* Test criteria:
+  - Line Coverage
+  - Branch Coverage
+  - Exception
+  - Mutation testing (weak)
+  - Method-Output Coverage
+  - Top-Level Method Coverage
+  - No-Exception Top-Level Method Coverage
+  - Context Branch Coverage
+* Total number of test goals for DYNAMOSA: 893
+* Using seed 2310132168
+* Starting evolution
+* Initial Number of Goals in DynaMOSA = 246 / 893
+[MASTER] 12:20:11.676 [logback-2] ERROR TestCluster - Failed to check cache for java.util.Comparator<T> : Type points to itself
+[MASTER] 12:24:36.508 [logback-2] ERROR TestCluster - Failed to check cache for java.util.Enumeration<E> : Type points to itself
+Number of times BBC is called in total: 0
+* Search finished after 2977s and 478 generations, 196207 statements, best individual has fitness: 761.0
+[MASTER] 13:10:13.470 [main] ERROR ExternalProcessGroupHandler - Class com.google.javascript.jscomp.ScopedAliases. Clients have not finished yet, although a timeout occurred.
+Client-0: SEARCH
+
+* Computation finished
+[MASTER] 13:09:42.198 [logback-2] ERROR ClientNodeImpl - Error when exporting statistics: Statements_Executed=196207
+java.rmi.ConnectIOException: error during JRMP connection establishment; nested exception is: 
+	java.net.SocketTimeoutException: Read timed out
+	at sun.rmi.transport.tcp.TCPChannel.createConnection(TCPChannel.java:307)
+	at sun.rmi.transport.tcp.TCPChannel.newConnection(TCPChannel.java:202)
+	at sun.rmi.server.UnicastRef.invoke(UnicastRef.java:132)
+	at java.rmi.server.RemoteObjectInvocationHandler.invokeRemoteMethod(RemoteObjectInvocationHandler.java:235)
+	at java.rmi.server.RemoteObjectInvocationHandler.invoke(RemoteObjectInvocationHandler.java:180)
+	at com.sun.proxy.$Proxy7.evosuite_collectStatistics(Unknown Source)
+	at org.evosuite.rmi.service.ClientNodeImpl$1.run(ClientNodeImpl.java:382)
+Caused by: java.net.SocketTimeoutException: Read timed out
+	at java.net.SocketInputStream.socketRead0(Native Method)
+	at java.net.SocketInputStream.socketRead(SocketInputStream.java:116)
+	at java.net.SocketInputStream.read(SocketInputStream.java:171)
+	at java.net.SocketInputStream.read(SocketInputStream.java:141)
+	at java.io.BufferedInputStream.fill(BufferedInputStream.java:246)
+	at java.io.BufferedInputStream.read(BufferedInputStream.java:265)
+	at java.io.DataInputStream.readByte(DataInputStream.java:265)
+	at sun.rmi.transport.tcp.TCPChannel.createConnection(TCPChannel.java:246)
+	... 6 common frames omitted

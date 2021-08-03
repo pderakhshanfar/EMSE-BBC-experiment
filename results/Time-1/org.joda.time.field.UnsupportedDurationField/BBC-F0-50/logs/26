@@ -1,0 +1,212 @@
+* EvoSuite 1.1.1-SNAPSHOT
+* Configuration: BBC-F0-50
+* Going to generate test cases for class: org.joda.time.field.UnsupportedDurationField
+* Starting Client-0
+* Connecting to master process on port 7851
+* Analyzing classpath: 
+  - subjects/buggy-versions/Time-1/target/classes
+  - defects4j/framework/projects/Time/lib/org/joda/joda-convert/1.2/joda-convert-1.2.jar
+* Finished analyzing classpath
+* Generating tests for class org.joda.time.field.UnsupportedDurationField
+* Test criteria:
+  - Line Coverage
+  - Branch Coverage
+  - Exception
+  - Mutation testing (weak)
+  - Method-Output Coverage
+  - Top-Level Method Coverage
+  - No-Exception Top-Level Method Coverage
+  - Context Branch Coverage
+* Total number of test goals for DYNAMOSA: 252
+* Using seed 3677613717
+* Starting evolution
+bbc usage percentage is: 50%
+* Initial Number of Goals in DynaMOSA = 137 / 252
+[MASTER] 15:21:37.681 [logback-2] ERROR TestCluster - Failed to check cache for java.time.temporal.TemporalQuery<R> : Type points to itself
+[MASTER] 15:24:02.956 [logback-2] ERROR TestCluster - Failed to check cache for java.util.List<E> : Type points to itself
+[MASTER] 15:25:12.584 [logback-2] ERROR TestCluster - Failed to check cache for java.util.Comparator<T> : Type points to itself
+Number of times BBC is called for org.joda.time.field.UnsupportedDurationField.hashCode()I: Line 259: 322
+Number of times BBC is called for org.joda.time.field.UnsupportedDurationField.getValueAsLong(J)J: Line 119: 40
+Number of times BBC is called for org.joda.time.field.UnsupportedDurationField.getValueAsLong(JJ)J: Line 137: 40
+Number of times BBC is called for org.joda.time.field.UnsupportedDurationField.equals(Ljava/lang/Object;)Z: I28 Branch 7 IFNONNULL L246 - false: 351242
+Number of times BBC is called for org.joda.time.field.UnsupportedDurationField.getType()Lorg/joda/time/DurationFieldType;: root-Branch: 40
+Number of times BBC is called for org.joda.time.field.UnsupportedDurationField.readResolve()Ljava/lang/Object;: Line 275: 703740
+Number of times BBC is called for org.joda.time.field.UnsupportedDurationField.equals(Ljava/lang/Object;)Z: I23 Branch 6 IFNONNULL L245 - false: 351961
+Number of times BBC is called for org.joda.time.field.UnsupportedDurationField.getValueAsLong(JJ)J: root-Branch: 40
+Number of times BBC is called for org.joda.time.field.UnsupportedDurationField.equals(Ljava/lang/Object;)Z: I28 Branch 7 IFNONNULL L246 - true: 351242
+Number of times BBC is called for org.joda.time.field.UnsupportedDurationField.getValueAsLong(J)J: root-Branch: 40
+Number of times BBC is called for org.joda.time.field.UnsupportedDurationField.equals(Ljava/lang/Object;)Z: I23 Branch 6 IFNONNULL L245 - true: 719
+Number of times BBC is called for org.joda.time.field.UnsupportedDurationField.getType()Lorg/joda/time/DurationFieldType;: Line 79: 40
+Number of times BBC is called for org.joda.time.field.UnsupportedDurationField.equals(Ljava/lang/Object;)Z: I4 Branch 4 IF_ACMPNE L241 - false: 180
+Number of times BBC is called for org.joda.time.field.UnsupportedDurationField.compareTo(Lorg/joda/time/DurationField;)I: I4 Branch 3 IFEQ L227 - true: 3
+Number of times BBC is called for org.joda.time.field.UnsupportedDurationField.hashCode()I: root-Branch: 322
+Number of times BBC is called for org.joda.time.field.UnsupportedDurationField.readResolve()Ljava/lang/Object;: root-Branch: 703740
+Number of times BBC is called for org.joda.time.field.UnsupportedDurationField.equals(Ljava/lang/Object;)Z: I13 Branch 5 IFEQ L243 - false: 719
+Number of times BBC is called in total: 2464430
+* Search finished after 601s and 7251 generations, 1945974 statements, best individual has fitness: 105.0
+* Minimizing test suite
+* Going to analyze the coverage criteria
+* Coverage analysis for criterion LINE
+* Coverage of criterion LINE: 95%
+* Total number of goals: 43
+* Number of covered goals: 41
+* Coverage analysis for criterion BRANCH
+* Coverage of criterion BRANCH: 89%
+* Total number of goals: 35
+* Number of covered goals: 31
+* Coverage analysis for criterion EXCEPTION
+* Coverage of criterion EXCEPTION: 100%
+* Total number of goals: 34
+* Number of covered goals: 34
+* Coverage analysis for criterion WEAKMUTATION
+* Coverage of criterion WEAKMUTATION: 90%
+* Total number of goals: 31
+* Number of covered goals: 28
+* Coverage analysis for criterion OUTPUT
+* Coverage of criterion OUTPUT: 22%
+* Total number of goals: 64
+* Number of covered goals: 14
+* Coverage analysis for criterion METHOD
+* Coverage of criterion METHOD: 100%
+* Total number of goals: 22
+* Number of covered goals: 22
+* Coverage analysis for criterion METHODNOEXCEPTION
+* Coverage of criterion METHODNOEXCEPTION: 45%
+* Total number of goals: 22
+* Number of covered goals: 10
+* Coverage analysis for criterion CBRANCH
+* Coverage of criterion CBRANCH: 89%
+* Total number of goals: 35
+* Number of covered goals: 31
+* Generated 47 tests with total length 155
+* Resulting test suite's coverage: 73% (average coverage for all fitness functions)
+* Generating assertions
+* Resulting test suite's mutation score: 65%
+* Compiling and checking tests
+[MASTER] 15:30:35.702 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class java.lang.AssertionError: Expecting exception: IllegalArgumentException
+[MASTER] 15:30:35.702 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ DurationFieldType durationFieldType0 = DurationFieldType.hours();
+IslamicChronology islamicChronology0 = IslamicChronology.getInstanceUTC();
+DurationField durationField0 = durationFieldType0.getField(islamicChronology0);
+durationField0.add((-3920L), 1);
+
+[MASTER] 15:30:35.977 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class java.lang.AssertionError: Expecting exception: IllegalArgumentException
+[MASTER] 15:30:35.977 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ DurationFieldType durationFieldType0 = DurationFieldType.hours();
+IslamicChronology islamicChronology0 = IslamicChronology.getInstanceUTC();
+DurationField durationField0 = durationFieldType0.getField(islamicChronology0);
+durationField0.add(0L, 0L);
+
+[MASTER] 15:30:36.241 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class java.lang.ClassCastException: org.joda.time.chrono.LimitChronology$LimitDurationField cannot be cast to org.joda.time.field.UnsupportedDurationField
+[MASTER] 15:30:36.241 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ DurationFieldType durationFieldType0 = DurationFieldType.hours();
+IslamicChronology islamicChronology0 = IslamicChronology.getInstanceUTC();
+UnsupportedDurationField unsupportedDurationField0 = (UnsupportedDurationField)durationFieldType0.getField(islamicChronology0);
+unsupportedDurationField0.compareTo((DurationField) unsupportedDurationField0);
+
+[MASTER] 15:30:36.749 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class java.lang.AssertionError: Expecting exception: IllegalArgumentException
+[MASTER] 15:30:36.749 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ DurationFieldType durationFieldType0 = DurationFieldType.hours();
+IslamicChronology islamicChronology0 = IslamicChronology.getInstanceUTC();
+DurationField durationField0 = durationFieldType0.getField(islamicChronology0);
+durationField0.getDifference(0L, 0L);
+
+[MASTER] 15:30:37.028 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class java.lang.AssertionError: Expecting exception: IllegalArgumentException
+[MASTER] 15:30:37.029 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ DurationFieldType durationFieldType0 = DurationFieldType.hours();
+IslamicChronology islamicChronology0 = IslamicChronology.getInstanceUTC();
+DurationField durationField0 = durationFieldType0.getField(islamicChronology0);
+durationField0.getDifferenceAsLong(0L, 1);
+
+[MASTER] 15:30:37.349 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class java.lang.AssertionError: Expecting exception: IllegalArgumentException
+[MASTER] 15:30:37.350 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ DurationFieldType durationFieldType0 = DurationFieldType.hours();
+IslamicChronology islamicChronology0 = IslamicChronology.getInstanceUTC();
+DurationField durationField0 = durationFieldType0.getField(islamicChronology0);
+durationField0.getMillis(0);
+
+[MASTER] 15:30:37.599 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class java.lang.AssertionError: Expecting exception: IllegalArgumentException
+[MASTER] 15:30:37.599 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ DurationFieldType durationFieldType0 = DurationFieldType.hours();
+IslamicChronology islamicChronology0 = IslamicChronology.getInstanceUTC();
+DurationField durationField0 = durationFieldType0.getField(islamicChronology0);
+durationField0.getMillis(1, 1133L);
+
+[MASTER] 15:30:37.870 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class java.lang.AssertionError: Expecting exception: IllegalArgumentException
+[MASTER] 15:30:37.870 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ DurationFieldType durationFieldType0 = DurationFieldType.hours();
+IslamicChronology islamicChronology0 = IslamicChronology.getInstanceUTC();
+DurationField durationField0 = durationFieldType0.getField(islamicChronology0);
+durationField0.getMillis((-3347L));
+
+[MASTER] 15:30:38.150 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class java.lang.AssertionError: Expecting exception: IllegalArgumentException
+[MASTER] 15:30:38.150 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ DurationFieldType durationFieldType0 = DurationFieldType.hours();
+IslamicChronology islamicChronology0 = IslamicChronology.getInstanceUTC();
+DurationField durationField0 = durationFieldType0.getField(islamicChronology0);
+durationField0.getMillis((long) 0, 0L);
+
+[MASTER] 15:30:38.400 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class java.lang.AssertionError: Expecting exception: IllegalArgumentException
+[MASTER] 15:30:38.400 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ DurationFieldType durationFieldType0 = DurationFieldType.hours();
+IslamicChronology islamicChronology0 = IslamicChronology.getInstanceUTC();
+DurationField durationField0 = durationFieldType0.getField(islamicChronology0);
+durationField0.getName();
+
+[MASTER] 15:30:38.662 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class java.lang.AssertionError: Expecting exception: IllegalArgumentException
+[MASTER] 15:30:38.662 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ DurationFieldType durationFieldType0 = DurationFieldType.hours();
+IslamicChronology islamicChronology0 = IslamicChronology.getInstanceUTC();
+DurationField durationField0 = durationFieldType0.getField(islamicChronology0);
+durationField0.getValue((long) 1);
+
+[MASTER] 15:30:38.919 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class java.lang.AssertionError: Expecting exception: IllegalArgumentException
+[MASTER] 15:30:38.919 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ DurationFieldType durationFieldType0 = DurationFieldType.hours();
+IslamicChronology islamicChronology0 = IslamicChronology.getInstanceUTC();
+DurationField durationField0 = durationFieldType0.getField(islamicChronology0);
+durationField0.getValue((long) 1, (-209L));
+
+[MASTER] 15:30:39.184 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class java.lang.AssertionError: Expecting exception: IllegalArgumentException
+[MASTER] 15:30:39.184 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ DurationFieldType durationFieldType0 = DurationFieldType.hours();
+IslamicChronology islamicChronology0 = IslamicChronology.getInstanceUTC();
+DurationField durationField0 = durationFieldType0.getField(islamicChronology0);
+durationField0.getValueAsLong(0L);
+
+[MASTER] 15:30:39.429 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class java.lang.AssertionError: Expecting exception: IllegalArgumentException
+[MASTER] 15:30:39.429 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ DurationFieldType durationFieldType0 = DurationFieldType.hours();
+IslamicChronology islamicChronology0 = IslamicChronology.getInstanceUTC();
+DurationField durationField0 = durationFieldType0.getField(islamicChronology0);
+durationField0.getValueAsLong((long) 1, (long) 1);
+
+[MASTER] 15:30:39.912 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class java.lang.AssertionError: Expecting exception: IllegalArgumentException
+[MASTER] 15:30:39.912 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ DurationFieldType durationFieldType0 = DurationFieldType.hours();
+IslamicChronology islamicChronology0 = IslamicChronology.getInstanceUTC();
+DurationField durationField0 = durationFieldType0.getField(islamicChronology0);
+durationField0.isPrecise();
+
+[MASTER] 15:30:40.247 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class java.lang.AssertionError: Expecting exception: IllegalArgumentException
+[MASTER] 15:30:40.248 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ DurationFieldType durationFieldType0 = DurationFieldType.hours();
+IslamicChronology islamicChronology0 = IslamicChronology.getInstanceUTC();
+DurationField durationField0 = durationFieldType0.getField(islamicChronology0);
+durationField0.isSupported();
+
+[MASTER] 15:30:40.552 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class java.lang.AssertionError: Expecting exception: IllegalArgumentException
+[MASTER] 15:30:40.552 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ DurationFieldType durationFieldType0 = DurationFieldType.hours();
+IslamicChronology islamicChronology0 = IslamicChronology.getInstanceUTC();
+DurationField durationField0 = durationFieldType0.getField(islamicChronology0);
+durationField0.toString();
+
+* Permissions denied during test execution: 
+  - java.lang.RuntimePermission: 
+         writeFileDescriptor: 4
+* Writing tests to file
+* Writing JUnit test case 'UnsupportedDurationField_ESTest' to results/Time-1/org.joda.time.field.UnsupportedDurationField/BBC-F0-50/tests/26
+* Done!
+
+* Computation finished

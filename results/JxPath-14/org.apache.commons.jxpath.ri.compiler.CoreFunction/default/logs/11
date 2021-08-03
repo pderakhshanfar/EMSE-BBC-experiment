@@ -1,0 +1,635 @@
+* EvoSuite 1.1.1-SNAPSHOT
+* Configuration: default
+* Going to generate test cases for class: org.apache.commons.jxpath.ri.compiler.CoreFunction
+* Starting Client-0
+* Connecting to master process on port 18076
+* Analyzing classpath: 
+  - subjects/buggy-versions/JxPath-14/target/classes
+  - subjects/buggy-versions/JxPath-14/src/java
+  - subjects/buggy-versions/JxPath-14/target/lib/commons-beanutils-1.7.0.jar
+  - subjects/buggy-versions/JxPath-14/target/lib/commons-logging-1.1.jar
+  - subjects/buggy-versions/JxPath-14/target/lib/jdom-1.0.jar
+  - subjects/buggy-versions/JxPath-14/target/lib/jsp-api-2.0.jar
+  - subjects/buggy-versions/JxPath-14/target/lib/junit-3.8.2.jar
+  - subjects/buggy-versions/JxPath-14/target/lib/mockrunner-0.4.1.jar
+  - subjects/buggy-versions/JxPath-14/target/lib/servletapi-2.4.jar
+  - subjects/buggy-versions/JxPath-14/target/lib/xerces-2.4.0.jar
+  - subjects/buggy-versions/JxPath-14/target/lib/xml-apis-2.0.2.jar
+* Finished analyzing classpath
+* Generating tests for class org.apache.commons.jxpath.ri.compiler.CoreFunction
+* Test criteria:
+  - Line Coverage
+  - Branch Coverage
+  - Exception
+  - Mutation testing (weak)
+  - Method-Output Coverage
+  - Top-Level Method Coverage
+  - No-Exception Top-Level Method Coverage
+  - Context Branch Coverage
+* Total number of test goals for DYNAMOSA: 1832
+* Using seed 1395214694
+* Starting evolution
+* Initial Number of Goals in DynaMOSA = 654 / 1832
+[MASTER] 10:29:33.243 [logback-2] ERROR TestCluster - Failed to check cache for java.util.LinkedList<E> : Type points to itself
+[MASTER] 10:29:38.124 [logback-1] WARN  TestChromosome - Functional mock problem: org.evosuite.ga.ConstructionFailedException: Failed to add constructor for org.apache.commons.jxpath.ri.NamespaceResolver due to org.evosuite.ga.ConstructionFailedException: Have no generator for class org.apache.commons.jxpath.ri.axes.ParentContext canUseFunctionalMocks=false, canBeMocked: true
+[MASTER] 10:31:07.561 [logback-1] WARN  TestChromosome - Functional mock problem: org.evosuite.ga.ConstructionFailedException: Have no generator for class org.apache.commons.jxpath.ri.JXPathContextReferenceImpl canUseFunctionalMocks=false, canBeMocked: true
+Number of times BBC is called in total: 0
+* Search finished after 602s and 205 generations, 74614 statements, best individual has fitness: 623.0
+* Minimizing test suite
+* Going to analyze the coverage criteria
+* Coverage analysis for criterion LINE
+* Coverage of criterion LINE: 74%
+* Total number of goals: 344
+* Number of covered goals: 255
+* Coverage analysis for criterion BRANCH
+* Coverage of criterion BRANCH: 78%
+* Total number of goals: 355
+* Number of covered goals: 276
+* Coverage analysis for criterion EXCEPTION
+* Coverage of criterion EXCEPTION: 94%
+* Total number of goals: 123
+* Number of covered goals: 116
+* Coverage analysis for criterion WEAKMUTATION
+* Coverage of criterion WEAKMUTATION: 65%
+* Total number of goals: 616
+* Number of covered goals: 398
+* Coverage analysis for criterion OUTPUT
+* Coverage of criterion OUTPUT: 33%
+* Total number of goals: 82
+* Number of covered goals: 27
+* Coverage analysis for criterion METHOD
+* Coverage of criterion METHOD: 100%
+* Total number of goals: 40
+* Number of covered goals: 40
+* Coverage analysis for criterion METHODNOEXCEPTION
+* Coverage of criterion METHODNOEXCEPTION: 85%
+* Total number of goals: 40
+* Number of covered goals: 34
+* Coverage analysis for criterion CBRANCH
+* Coverage of criterion CBRANCH: 77%
+* Total number of goals: 355
+* Number of covered goals: 275
+* Generated 217 tests with total length 956
+* Resulting test suite's coverage: 70% (average coverage for all fitness functions)
+* Generating assertions
+[MASTER] 10:41:16.308 [logback-1] WARN  SimpleMutationAssertionGenerator - Assertion minimization is taking too long (0.7169333333333333% of time used, but only 82/217 tests minimized), falling back to using all assertions
+* Resulting test suite's mutation score: 13%
+* Compiling and checking tests
+[MASTER] 10:41:50.513 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class java.lang.StackOverflowError: null
+[MASTER] 10:41:50.515 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ Expression[] expressionArray0 = new Expression[5];
+CoreFunction coreFunction0 = new CoreFunction(19, expressionArray0);
+assertEquals(19, coreFunction0.getFunctionCode());
+assertEquals(5, coreFunction0.getArgumentCount());
+assertEquals(5, expressionArray0.length);
+assertNotNull(coreFunction0);
+
+QName qName0 = new QName((String) null, (String) null);
+assertNull(qName0.getPrefix());
+assertNull(qName0.getName());
+assertNull(qName0.toString());
+assertNotNull(qName0);
+
+ExtensionFunction extensionFunction0 = new ExtensionFunction(qName0, expressionArray0);
+assertNull(qName0.getPrefix());
+assertNull(qName0.getName());
+assertNull(qName0.toString());
+assertTrue(extensionFunction0.computeContextDependent());
+assertEquals(5, expressionArray0.length);
+assertNotNull(extensionFunction0);
+
+expressionArray0[2] = (Expression) extensionFunction0;
+coreFunction0.compute((EvalContext) null);
+
+[MASTER] 10:41:51.508 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class java.lang.StackOverflowError: null
+[MASTER] 10:41:51.510 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ Expression[] expressionArray0 = new Expression[8];
+Step[] stepArray0 = new Step[2];
+ProcessingInstructionTest processingInstructionTest0 = new ProcessingInstructionTest("mod");
+assertEquals("mod", processingInstructionTest0.getTarget());
+assertNotNull(processingInstructionTest0);
+
+Step step0 = new Step(31, processingInstructionTest0, expressionArray0);
+assertEquals("mod", processingInstructionTest0.getTarget());
+assertEquals(31, step0.getAxis());
+assertEquals(8, expressionArray0.length);
+assertNotNull(step0);
+
+stepArray0[0] = step0;
+LocationPath locationPath0 = new LocationPath(false, stepArray0);
+assertFalse(locationPath0.isAbsolute());
+assertEquals(2, stepArray0.length);
+assertNotNull(locationPath0);
+
+expressionArray0[5] = (Expression) locationPath0;
+CoreFunction coreFunction0 = new CoreFunction(14, expressionArray0);
+assertEquals(8, coreFunction0.getArgumentCount());
+assertEquals(14, coreFunction0.getFunctionCode());
+assertEquals(8, expressionArray0.length);
+assertNotNull(coreFunction0);
+
+coreFunction0.computeValue((EvalContext) null);
+
+[MASTER] 10:41:53.007 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class java.lang.StackOverflowError: null
+[MASTER] 10:41:53.009 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ Expression[] expressionArray0 = new Expression[6];
+Step[] stepArray0 = new Step[3];
+ProcessingInstructionTest processingInstructionTest0 = new ProcessingInstructionTest((String) null);
+assertNull(processingInstructionTest0.getTarget());
+assertNotNull(processingInstructionTest0);
+
+Step step0 = new Step(1, processingInstructionTest0, expressionArray0);
+assertNull(processingInstructionTest0.getTarget());
+assertEquals(1, step0.getAxis());
+assertEquals(6, expressionArray0.length);
+assertNotNull(step0);
+
+stepArray0[0] = step0;
+LocationPath locationPath0 = new LocationPath(true, stepArray0);
+assertTrue(locationPath0.isAbsolute());
+assertEquals(3, stepArray0.length);
+assertNotNull(locationPath0);
+
+expressionArray0[4] = (Expression) locationPath0;
+CoreFunction coreFunction0 = new CoreFunction(1, expressionArray0);
+assertEquals(1, coreFunction0.getFunctionCode());
+assertEquals(6, coreFunction0.getArgumentCount());
+assertEquals(6, expressionArray0.length);
+assertNotNull(coreFunction0);
+
+coreFunction0.functionCeiling((EvalContext) null);
+
+[MASTER] 10:41:54.902 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class java.lang.StackOverflowError: null
+[MASTER] 10:41:54.902 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ Expression[] expressionArray0 = new Expression[1];
+CoreOperationAdd coreOperationAdd0 = new CoreOperationAdd(expressionArray0);
+assertEquals("+", coreOperationAdd0.getSymbol());
+assertEquals(1, expressionArray0.length);
+assertNotNull(coreOperationAdd0);
+
+expressionArray0[0] = (Expression) coreOperationAdd0;
+CoreFunction coreFunction0 = new CoreFunction((-3845), expressionArray0);
+assertEquals((-3845), coreFunction0.getFunctionCode());
+assertEquals(1, coreFunction0.getArgumentCount());
+assertEquals(1, expressionArray0.length);
+assertNotNull(coreFunction0);
+
+ParentContext parentContext0 = new ParentContext((EvalContext) null, (NodeTest) null);
+assertTrue(parentContext0.isChildOrderingRequired());
+assertEquals(1, parentContext0.getCurrentPosition());
+assertEquals(0, parentContext0.getPosition());
+assertEquals((-1), parentContext0.getDocumentOrder());
+assertNotNull(parentContext0);
+
+AttributeContext attributeContext0 = new AttributeContext(parentContext0, (NodeTest) null);
+assertTrue(parentContext0.isChildOrderingRequired());
+assertEquals(1, parentContext0.getCurrentPosition());
+assertEquals(0, parentContext0.getPosition());
+assertEquals((-1), parentContext0.getDocumentOrder());
+assertEquals(1, attributeContext0.getDocumentOrder());
+assertEquals(0, attributeContext0.getPosition());
+assertTrue(attributeContext0.isChildOrderingRequired());
+assertNotNull(attributeContext0);
+
+EvalContext[] evalContextArray0 = new EvalContext[4];
+UnionContext unionContext0 = new UnionContext(attributeContext0, evalContextArray0);
+assertTrue(parentContext0.isChildOrderingRequired());
+assertEquals(1, parentContext0.getCurrentPosition());
+assertEquals(0, parentContext0.getPosition());
+assertEquals((-1), parentContext0.getDocumentOrder());
+assertEquals(1, attributeContext0.getDocumentOrder());
+assertEquals(0, attributeContext0.getPosition());
+assertTrue(attributeContext0.isChildOrderingRequired());
+assertEquals(0, unionContext0.getPosition());
+assertTrue(unionContext0.isChildOrderingRequired());
+assertEquals(1, unionContext0.getDocumentOrder());
+assertEquals(4, evalContextArray0.length);
+assertNotNull(unionContext0);
+
+coreFunction0.functionID(unionContext0);
+
+[MASTER] 10:41:55.170 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class java.lang.StackOverflowError: null
+[MASTER] 10:41:55.172 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ Expression[] expressionArray0 = new Expression[3];
+Float float0 = new Float((-1034.23021765));
+assertEquals((-1034.2302F), (float)float0, 0.01F);
+assertNotNull(float0);
+
+Constant constant0 = new Constant(float0);
+assertFalse(constant0.isContextDependent());
+assertFalse(constant0.computeContextDependent());
+assertNotNull(constant0);
+
+Step[] stepArray0 = new Step[2];
+QName qName0 = new QName("xml:space", "xml:space");
+assertEquals("xml:space", qName0.getPrefix());
+assertEquals("xml:space", qName0.getName());
+assertEquals("xml:space:xml:space", qName0.toString());
+assertNotNull(qName0);
+
+NodeNameTest nodeNameTest0 = new NodeNameTest(qName0);
+assertEquals("xml:space", qName0.getPrefix());
+assertEquals("xml:space", qName0.getName());
+assertEquals("xml:space:xml:space", qName0.toString());
+assertEquals("xml:space:xml:space", nodeNameTest0.toString());
+assertNull(nodeNameTest0.getNamespaceURI());
+assertFalse(nodeNameTest0.isWildcard());
+assertNotNull(nodeNameTest0);
+
+ExpressionPath expressionPath0 = new ExpressionPath(constant0, expressionArray0, stepArray0);
+assertFalse(constant0.isContextDependent());
+assertFalse(constant0.computeContextDependent());
+assertEquals(3, expressionArray0.length);
+assertEquals(2, stepArray0.length);
+assertNotNull(expressionPath0);
+
+expressionArray0[1] = (Expression) expressionPath0;
+CoreFunction coreFunction0 = new CoreFunction(18, expressionArray0);
+assertEquals(18, coreFunction0.getFunctionCode());
+assertEquals(3, coreFunction0.getArgumentCount());
+assertEquals(3, expressionArray0.length);
+assertNotNull(coreFunction0);
+
+SelfContext selfContext0 = new SelfContext((EvalContext) null, nodeNameTest0);
+assertEquals("xml:space", qName0.getPrefix());
+assertEquals("xml:space", qName0.getName());
+assertEquals("xml:space:xml:space", qName0.toString());
+assertEquals("xml:space:xml:space", nodeNameTest0.toString());
+assertNull(nodeNameTest0.getNamespaceURI());
+assertFalse(nodeNameTest0.isWildcard());
+assertEquals(0, selfContext0.getPosition());
+assertEquals(0, selfContext0.getDocumentOrder());
+assertFalse(selfContext0.isChildOrderingRequired());
+assertNotNull(selfContext0);
+
+coreFunction0.functionKey(selfContext0);
+
+[MASTER] 10:41:55.532 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class java.lang.StackOverflowError: null
+[MASTER] 10:41:55.533 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ Expression[] expressionArray0 = new Expression[1];
+CoreOperationAdd coreOperationAdd0 = new CoreOperationAdd(expressionArray0);
+assertEquals("+", coreOperationAdd0.getSymbol());
+assertEquals(1, expressionArray0.length);
+assertNotNull(coreOperationAdd0);
+
+expressionArray0[0] = (Expression) coreOperationAdd0;
+CoreFunction coreFunction0 = new CoreFunction(15, expressionArray0);
+assertEquals(1, coreFunction0.getArgumentCount());
+assertEquals(15, coreFunction0.getFunctionCode());
+assertEquals(1, expressionArray0.length);
+assertNotNull(coreFunction0);
+
+coreFunction0.functionLang((EvalContext) null);
+
+[MASTER] 10:41:57.007 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class java.lang.StackOverflowError: null
+[MASTER] 10:41:57.008 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ Expression[] expressionArray0 = new Expression[1];
+CoreOperationOr coreOperationOr0 = new CoreOperationOr(expressionArray0);
+assertEquals("or", coreOperationOr0.getSymbol());
+assertEquals(1, expressionArray0.length);
+assertNotNull(coreOperationOr0);
+
+CoreOperationMod coreOperationMod0 = new CoreOperationMod(coreOperationOr0, coreOperationOr0);
+assertEquals("or", coreOperationOr0.getSymbol());
+assertEquals("mod", coreOperationMod0.getSymbol());
+assertEquals(1, expressionArray0.length);
+assertNotNull(coreOperationMod0);
+
+expressionArray0[0] = (Expression) coreOperationMod0;
+CoreFunction coreFunction0 = new CoreFunction(12, expressionArray0);
+assertEquals(1, coreFunction0.getArgumentCount());
+assertEquals(12, coreFunction0.getFunctionCode());
+assertEquals(1, expressionArray0.length);
+assertNotNull(coreFunction0);
+
+coreFunction0.functionLocalName((EvalContext) null);
+
+[MASTER] 10:41:57.470 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class java.lang.StackOverflowError: null
+[MASTER] 10:41:57.471 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ Expression[] expressionArray0 = new Expression[3];
+Step[] stepArray0 = new Step[4];
+QName qName0 = new QName("namespace::");
+assertEquals("namespace", qName0.getPrefix());
+assertEquals(":", qName0.getName());
+assertEquals("namespace::", qName0.toString());
+assertNotNull(qName0);
+
+NodeNameTest nodeNameTest0 = new NodeNameTest(qName0, "kVZAL9p");
+assertEquals("namespace", qName0.getPrefix());
+assertEquals(":", qName0.getName());
+assertEquals("namespace::", qName0.toString());
+assertEquals("namespace::", nodeNameTest0.toString());
+assertEquals("kVZAL9p", nodeNameTest0.getNamespaceURI());
+assertFalse(nodeNameTest0.isWildcard());
+assertNotNull(nodeNameTest0);
+
+Step step0 = new Step((-4467), nodeNameTest0, expressionArray0);
+assertEquals("namespace", qName0.getPrefix());
+assertEquals(":", qName0.getName());
+assertEquals("namespace::", qName0.toString());
+assertEquals("namespace::", nodeNameTest0.toString());
+assertEquals("kVZAL9p", nodeNameTest0.getNamespaceURI());
+assertFalse(nodeNameTest0.isWildcard());
+assertEquals((-4467), step0.getAxis());
+assertEquals(3, expressionArray0.length);
+assertNotNull(step0);
+
+stepArray0[2] = step0;
+LocationPath locationPath0 = new LocationPath(false, stepArray0);
+assertFalse(locationPath0.isAbsolute());
+assertEquals(4, stepArray0.length);
+assertNotNull(locationPath0);
+
+expressionArray0[0] = (Expression) locationPath0;
+CoreFunction coreFunction0 = new CoreFunction(16, expressionArray0);
+assertEquals(16, coreFunction0.getFunctionCode());
+assertEquals(3, coreFunction0.getArgumentCount());
+assertEquals(3, expressionArray0.length);
+assertNotNull(coreFunction0);
+
+LocationPath locationPath1 = (LocationPath)coreFunction0.getArg1();
+assertSame(locationPath1, locationPath0);
+assertEquals(16, coreFunction0.getFunctionCode());
+assertEquals(3, coreFunction0.getArgumentCount());
+assertFalse(locationPath1.isAbsolute());
+assertEquals(3, expressionArray0.length);
+assertNotNull(locationPath1);
+
+coreFunction0.functionLocalName((EvalContext) null);
+
+[MASTER] 10:41:57.866 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class java.lang.StackOverflowError: null
+[MASTER] 10:41:57.867 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ Expression[] expressionArray0 = new Expression[2];
+CoreFunction coreFunction0 = new CoreFunction(16, expressionArray0);
+assertEquals(2, coreFunction0.getArgumentCount());
+assertEquals(16, coreFunction0.getFunctionCode());
+assertEquals(2, expressionArray0.length);
+assertNotNull(coreFunction0);
+
+QName qName0 = new QName("!YRB", "M+gydff@0");
+assertEquals("!YRB", qName0.getPrefix());
+assertNotNull(qName0);
+
+ExtensionFunction extensionFunction0 = new ExtensionFunction(qName0, expressionArray0);
+assertEquals("!YRB", qName0.getPrefix());
+assertTrue(extensionFunction0.computeContextDependent());
+assertEquals(2, expressionArray0.length);
+assertNotNull(extensionFunction0);
+
+expressionArray0[1] = (Expression) extensionFunction0;
+coreFunction0.functionName((EvalContext) null);
+
+[MASTER] 10:41:58.454 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class java.lang.StackOverflowError: null
+[MASTER] 10:41:58.455 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ Expression[] expressionArray0 = new Expression[3];
+QName qName0 = new QName("");
+assertNull(qName0.getPrefix());
+assertEquals("", qName0.toString());
+assertEquals("", qName0.getName());
+assertNotNull(qName0);
+
+ExtensionFunction extensionFunction0 = new ExtensionFunction(qName0, expressionArray0);
+assertNull(qName0.getPrefix());
+assertEquals("", qName0.toString());
+assertEquals("", qName0.getName());
+assertTrue(extensionFunction0.computeContextDependent());
+assertEquals(3, expressionArray0.length);
+assertNotNull(extensionFunction0);
+
+expressionArray0[1] = (Expression) extensionFunction0;
+CoreFunction coreFunction0 = new CoreFunction(23, expressionArray0);
+assertEquals(3, coreFunction0.getArgumentCount());
+assertEquals(23, coreFunction0.getFunctionCode());
+assertEquals(3, expressionArray0.length);
+assertNotNull(coreFunction0);
+
+coreFunction0.functionNamespaceURI((EvalContext) null);
+
+[MASTER] 10:41:59.253 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class java.lang.StackOverflowError: null
+[MASTER] 10:41:59.253 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ Expression[] expressionArray0 = new Expression[1];
+CoreOperationAdd coreOperationAdd0 = new CoreOperationAdd(expressionArray0);
+assertEquals("+", coreOperationAdd0.getSymbol());
+assertEquals(1, expressionArray0.length);
+assertNotNull(coreOperationAdd0);
+
+expressionArray0[0] = (Expression) coreOperationAdd0;
+CoreFunction coreFunction0 = new CoreFunction(15, expressionArray0);
+assertEquals(15, coreFunction0.getFunctionCode());
+assertEquals(1, coreFunction0.getArgumentCount());
+assertEquals(1, expressionArray0.length);
+assertNotNull(coreFunction0);
+
+coreFunction0.functionNormalizeSpace((EvalContext) null);
+
+[MASTER] 10:42:01.793 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class java.lang.StackOverflowError: null
+[MASTER] 10:42:01.794 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ Expression[] expressionArray0 = new Expression[3];
+ExpressionPath expressionPath0 = new ExpressionPath(expressionArray0[0], expressionArray0, (Step[]) null);
+assertEquals(3, expressionArray0.length);
+assertNotNull(expressionPath0);
+
+expressionArray0[1] = (Expression) expressionPath0;
+CoreFunction coreFunction0 = new CoreFunction(0, expressionArray0);
+assertEquals(0, coreFunction0.getFunctionCode());
+assertEquals(3, coreFunction0.getArgumentCount());
+assertEquals(3, expressionArray0.length);
+assertNotNull(coreFunction0);
+
+NodeTypeTest nodeTypeTest0 = new NodeTypeTest(0);
+assertEquals(0, nodeTypeTest0.getNodeType());
+assertNotNull(nodeTypeTest0);
+
+ParentContext parentContext0 = new ParentContext((EvalContext) null, nodeTypeTest0);
+assertEquals(0, nodeTypeTest0.getNodeType());
+assertEquals((-1), parentContext0.getDocumentOrder());
+assertEquals(0, parentContext0.getPosition());
+assertTrue(parentContext0.isChildOrderingRequired());
+assertEquals(1, parentContext0.getCurrentPosition());
+assertNotNull(parentContext0);
+
+PredicateContext predicateContext0 = new PredicateContext(parentContext0, expressionArray0[0]);
+assertEquals(0, nodeTypeTest0.getNodeType());
+assertEquals((-1), parentContext0.getDocumentOrder());
+assertEquals(0, parentContext0.getPosition());
+assertTrue(parentContext0.isChildOrderingRequired());
+assertEquals(1, parentContext0.getCurrentPosition());
+assertTrue(predicateContext0.isChildOrderingRequired());
+assertEquals(1, predicateContext0.getDocumentOrder());
+assertEquals(0, predicateContext0.getPosition());
+assertEquals(3, expressionArray0.length);
+assertNotNull(predicateContext0);
+
+AttributeContext attributeContext0 = new AttributeContext(predicateContext0, nodeTypeTest0);
+assertEquals(0, nodeTypeTest0.getNodeType());
+assertEquals((-1), parentContext0.getDocumentOrder());
+assertEquals(0, parentContext0.getPosition());
+assertTrue(parentContext0.isChildOrderingRequired());
+assertEquals(1, parentContext0.getCurrentPosition());
+assertTrue(predicateContext0.isChildOrderingRequired());
+assertEquals(1, predicateContext0.getDocumentOrder());
+assertEquals(0, predicateContext0.getPosition());
+assertEquals(0, attributeContext0.getPosition());
+assertTrue(attributeContext0.isChildOrderingRequired());
+assertEquals(1, attributeContext0.getDocumentOrder());
+assertEquals(3, expressionArray0.length);
+assertNotNull(attributeContext0);
+
+coreFunction0.functionNull(attributeContext0);
+
+[MASTER] 10:42:02.397 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class java.lang.StackOverflowError: null
+[MASTER] 10:42:02.397 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ Expression[] expressionArray0 = new Expression[1];
+CoreOperationAdd coreOperationAdd0 = new CoreOperationAdd(expressionArray0);
+assertEquals("+", coreOperationAdd0.getSymbol());
+assertEquals(1, expressionArray0.length);
+assertNotNull(coreOperationAdd0);
+
+expressionArray0[0] = (Expression) coreOperationAdd0;
+CoreFunction coreFunction0 = new CoreFunction(15, expressionArray0);
+assertEquals(15, coreFunction0.getFunctionCode());
+assertEquals(1, coreFunction0.getArgumentCount());
+assertEquals(1, expressionArray0.length);
+assertNotNull(coreFunction0);
+
+coreFunction0.functionNumber((EvalContext) null);
+
+[MASTER] 10:42:04.714 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class java.lang.StackOverflowError: null
+[MASTER] 10:42:04.715 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ Expression[] expressionArray0 = new Expression[2];
+QName qName0 = new QName("ALF-~GO<Xy_;@YN&/J", "R/Pt+@!pD");
+assertEquals("ALF-~GO<Xy_;@YN&/J:R/Pt+@!pD", qName0.toString());
+assertEquals("ALF-~GO<Xy_;@YN&/J", qName0.getPrefix());
+assertEquals("R/Pt+@!pD", qName0.getName());
+assertNotNull(qName0);
+
+ExtensionFunction extensionFunction0 = new ExtensionFunction(qName0, expressionArray0);
+assertEquals("ALF-~GO<Xy_;@YN&/J:R/Pt+@!pD", qName0.toString());
+assertEquals("ALF-~GO<Xy_;@YN&/J", qName0.getPrefix());
+assertEquals("R/Pt+@!pD", qName0.getName());
+assertTrue(extensionFunction0.computeContextDependent());
+assertEquals(2, expressionArray0.length);
+assertNotNull(extensionFunction0);
+
+expressionArray0[1] = (Expression) extensionFunction0;
+CoreFunction coreFunction0 = new CoreFunction((-252), expressionArray0);
+assertEquals(2, coreFunction0.getArgumentCount());
+assertEquals((-252), coreFunction0.getFunctionCode());
+assertEquals(2, expressionArray0.length);
+assertNotNull(coreFunction0);
+
+coreFunction0.functionString((EvalContext) null);
+
+[MASTER] 10:42:05.349 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class java.lang.StackOverflowError: null
+[MASTER] 10:42:05.349 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ Expression[] expressionArray0 = new Expression[1];
+CoreOperationAdd coreOperationAdd0 = new CoreOperationAdd(expressionArray0);
+assertEquals("+", coreOperationAdd0.getSymbol());
+assertEquals(1, expressionArray0.length);
+assertNotNull(coreOperationAdd0);
+
+expressionArray0[0] = (Expression) coreOperationAdd0;
+CoreFunction coreFunction0 = new CoreFunction(15, expressionArray0);
+assertEquals(15, coreFunction0.getFunctionCode());
+assertEquals(1, coreFunction0.getArgumentCount());
+assertEquals(1, expressionArray0.length);
+assertNotNull(coreFunction0);
+
+coreFunction0.functionStringLength((EvalContext) null);
+
+[MASTER] 10:42:05.770 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class java.lang.StackOverflowError: null
+[MASTER] 10:42:05.770 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ Expression[] expressionArray0 = new Expression[3];
+CoreOperationOr coreOperationOr0 = new CoreOperationOr(expressionArray0);
+assertEquals("or", coreOperationOr0.getSymbol());
+assertEquals(3, expressionArray0.length);
+assertNotNull(coreOperationOr0);
+
+expressionArray0[0] = (Expression) coreOperationOr0;
+CoreFunction coreFunction0 = new CoreFunction((-1290), expressionArray0);
+assertEquals(3, coreFunction0.getArgumentCount());
+assertEquals((-1290), coreFunction0.getFunctionCode());
+assertEquals(3, expressionArray0.length);
+assertNotNull(coreFunction0);
+
+coreFunction0.functionSubstring((EvalContext) null);
+
+[MASTER] 10:42:07.253 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class java.lang.StackOverflowError: null
+[MASTER] 10:42:07.254 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ Expression[] expressionArray0 = new Expression[1];
+CoreOperationAnd coreOperationAnd0 = new CoreOperationAnd(expressionArray0);
+assertEquals("and", coreOperationAnd0.getSymbol());
+assertEquals(1, expressionArray0.length);
+assertNotNull(coreOperationAnd0);
+
+expressionArray0[0] = (Expression) coreOperationAnd0;
+CoreFunction coreFunction0 = new CoreFunction(1129, expressionArray0);
+assertEquals(1129, coreFunction0.getFunctionCode());
+assertEquals(1, coreFunction0.getArgumentCount());
+assertEquals(1, expressionArray0.length);
+assertNotNull(coreFunction0);
+
+AncestorContext ancestorContext0 = new AncestorContext((EvalContext) null, true, (NodeTest) null);
+assertTrue(ancestorContext0.isChildOrderingRequired());
+assertEquals((-1), ancestorContext0.getDocumentOrder());
+assertEquals(0, ancestorContext0.getPosition());
+assertNotNull(ancestorContext0);
+
+coreFunction0.functionSum(ancestorContext0);
+
+[MASTER] 10:42:08.136 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class java.lang.StackOverflowError: null
+[MASTER] 10:42:08.137 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ Expression[] expressionArray0 = new Expression[2];
+CoreFunction coreFunction0 = new CoreFunction(16, expressionArray0);
+assertEquals(16, coreFunction0.getFunctionCode());
+assertEquals(2, coreFunction0.getArgumentCount());
+assertEquals(2, expressionArray0.length);
+assertNotNull(coreFunction0);
+
+QName qName0 = new QName("!YRB", "M+gydff@0");
+assertEquals("!YRB", qName0.getPrefix());
+assertNotNull(qName0);
+
+ExtensionFunction extensionFunction0 = new ExtensionFunction(qName0, expressionArray0);
+assertEquals("!YRB", qName0.getPrefix());
+assertTrue(extensionFunction0.computeContextDependent());
+assertEquals(2, expressionArray0.length);
+assertNotNull(extensionFunction0);
+
+expressionArray0[1] = (Expression) extensionFunction0;
+coreFunction0.functionTranslate((EvalContext) null);
+
+[MASTER] 10:42:10.270 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class java.lang.StackOverflowError: null
+[MASTER] 10:42:10.271 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ Expression[] expressionArray0 = new Expression[5];
+QName qName0 = new QName("&>4hS%^CqG9@Zo", "&>4hS%^CqG9@Zo");
+assertEquals("&>4hS%^CqG9@Zo", qName0.getPrefix());
+assertEquals("&>4hS%^CqG9@Zo", qName0.getName());
+assertEquals("&>4hS%^CqG9@Zo:&>4hS%^CqG9@Zo", qName0.toString());
+assertNotNull(qName0);
+
+ExtensionFunction extensionFunction0 = new ExtensionFunction(qName0, expressionArray0);
+assertEquals("&>4hS%^CqG9@Zo", qName0.getPrefix());
+assertEquals("&>4hS%^CqG9@Zo", qName0.getName());
+assertEquals("&>4hS%^CqG9@Zo:&>4hS%^CqG9@Zo", qName0.toString());
+assertTrue(extensionFunction0.computeContextDependent());
+assertEquals(5, expressionArray0.length);
+assertNotNull(extensionFunction0);
+
+expressionArray0[1] = (Expression) extensionFunction0;
+CoreFunction coreFunction0 = new CoreFunction(95, expressionArray0);
+assertEquals(95, coreFunction0.getFunctionCode());
+assertEquals(5, coreFunction0.getArgumentCount());
+assertEquals(5, expressionArray0.length);
+assertNotNull(coreFunction0);
+
+coreFunction0.toString();
+
+* Permissions denied during test execution: 
+  - java.lang.RuntimePermission: 
+         writeFileDescriptor: 10
+* Writing tests to file
+* Writing JUnit test case 'CoreFunction_ESTest' to results/JxPath-14/org.apache.commons.jxpath.ri.compiler.CoreFunction/default/tests/11
+* Done!
+
+* Computation finished

@@ -1,0 +1,911 @@
+* EvoSuite 1.1.1-SNAPSHOT
+* Configuration: BBC-F0-50
+* Going to generate test cases for class: com.google.javascript.rhino.Node
+* Starting Client-0
+* Connecting to master process on port 15883
+* Analyzing classpath: 
+  - subjects/buggy-versions/Closure-110/build/classes
+  - subjects/buggy-versions/Closure-110/lib/args4j.jar
+  - subjects/buggy-versions/Closure-110/lib/guava.jar
+  - subjects/buggy-versions/Closure-110/lib/json.jar
+  - subjects/buggy-versions/Closure-110/lib/jsr305.jar
+  - subjects/buggy-versions/Closure-110/lib/protobuf-java.jar
+  - subjects/buggy-versions/Closure-110/build/lib/rhino.jar
+  - subjects/buggy-versions/Closure-110/lib/ant.jar
+* Finished analyzing classpath
+* Generating tests for class com.google.javascript.rhino.Node
+* Test criteria:
+  - Line Coverage
+  - Branch Coverage
+  - Exception
+  - Mutation testing (weak)
+  - Method-Output Coverage
+  - Top-Level Method Coverage
+  - No-Exception Top-Level Method Coverage
+  - Context Branch Coverage
+* Total number of test goals for DYNAMOSA: 7813
+* Using seed 2411195489
+* Starting evolution
+bbc usage percentage is: 50%
+* Initial Number of Goals in DynaMOSA = 5977 / 7813
+[MASTER] 12:20:31.738 [logback-2] ERROR TestCluster - Failed to check cache for java.util.LinkedHashSet<E> : Type points to itself
+[MASTER] 12:20:33.677 [logback-2] ERROR TestCluster - Failed to check cache for java.util.Iterator<E> : Type points to itself
+[MASTER] 12:20:36.261 [logback-2] ERROR TestCluster - Failed to check cache for java.util.Comparator<T> : Type points to itself
+[MASTER] 13:09:24.703 [main] ERROR EvoSuite - Fatal crash on main EvoSuite process. Class com.google.javascript.rhino.Node using seed 2411195489. Configuration id : BBC-F0-50
+java.lang.NullPointerException: null
+	at org.evosuite.utils.ExternalProcessGroupHandler.waitForResult(ExternalProcessGroupHandler.java:709)
+	at org.evosuite.executionmode.TestGeneration.generateTests(TestGeneration.java:515)
+	at org.evosuite.executionmode.TestGeneration.executeTestGeneration(TestGeneration.java:80)
+	at org.evosuite.EvoSuite.parseCommandLine(EvoSuite.java:349)
+	at org.evosuite.EvoSuite.main(EvoSuite.java:115)
+[MASTER] 13:09:25.890 [logback-2] ERROR ClientNodeImpl - Error when exporting statistics: TotalExceptionsTimeline=0
+java.rmi.NoSuchObjectException: no such object in table
+	at sun.rmi.transport.StreamRemoteCall.exceptionReceivedFromServer(StreamRemoteCall.java:303)
+	at sun.rmi.transport.StreamRemoteCall.executeCall(StreamRemoteCall.java:279)
+	at sun.rmi.server.UnicastRef.invoke(UnicastRef.java:164)
+	at java.rmi.server.RemoteObjectInvocationHandler.invokeRemoteMethod(RemoteObjectInvocationHandler.java:235)
+	at java.rmi.server.RemoteObjectInvocationHandler.invoke(RemoteObjectInvocationHandler.java:180)
+	at com.sun.proxy.$Proxy7.evosuite_collectStatistics(Unknown Source)
+	at org.evosuite.rmi.service.ClientNodeImpl$1.run(ClientNodeImpl.java:382)
+[MASTER] 13:09:25.909 [logback-2] ERROR ClientNodeImpl - Cannot inform master of change of state
+java.rmi.ConnectException: Connection refused to host: 127.0.0.1; nested exception is: 
+	java.net.ConnectException: Connection refused (Connection refused)
+	at sun.rmi.transport.tcp.TCPEndpoint.newSocket(TCPEndpoint.java:623)
+	at sun.rmi.transport.tcp.TCPChannel.createConnection(TCPChannel.java:216)
+	at sun.rmi.transport.tcp.TCPChannel.newConnection(TCPChannel.java:202)
+	at sun.rmi.server.UnicastRef.invoke(UnicastRef.java:132)
+	at java.rmi.server.RemoteObjectInvocationHandler.invokeRemoteMethod(RemoteObjectInvocationHandler.java:235)
+	at java.rmi.server.RemoteObjectInvocationHandler.invoke(RemoteObjectInvocationHandler.java:180)
+	at com.sun.proxy.$Proxy7.evosuite_informChangeOfStateInClient(Unknown Source)
+	at org.evosuite.rmi.service.ClientNodeImpl.changeState(ClientNodeImpl.java:242)
+	at org.evosuite.ProgressMonitor.updateStatus(ProgressMonitor.java:87)
+	at org.evosuite.ProgressMonitor.iteration(ProgressMonitor.java:120)
+	at org.evosuite.ga.metaheuristics.GeneticAlgorithm.lambda$notifyIteration$9(GeneticAlgorithm.java:820)
+	at java.lang.Iterable.forEach(Iterable.java:75)
+	at org.evosuite.ga.metaheuristics.GeneticAlgorithm.notifyIteration(GeneticAlgorithm.java:820)
+	at org.evosuite.ga.metaheuristics.TestSuiteAdapter.notifyIteration(TestSuiteAdapter.java:462)
+	at org.evosuite.ga.metaheuristics.AdapteeListener.iteration(AdapteeListener.java:38)
+	at org.evosuite.ga.metaheuristics.GeneticAlgorithm.lambda$notifyIteration$9(GeneticAlgorithm.java:820)
+	at java.lang.Iterable.forEach(Iterable.java:75)
+	at org.evosuite.ga.metaheuristics.GeneticAlgorithm.notifyIteration(GeneticAlgorithm.java:820)
+	at org.evosuite.ga.metaheuristics.mosa.AbstractMOSA.notifyIteration(AbstractMOSA.java:473)
+	at org.evosuite.ga.metaheuristics.mosa.DynaMOSA.generateSolution(DynaMOSA.java:175)
+	at org.evosuite.ga.metaheuristics.TestSuiteAdapter.generateSolution(TestSuiteAdapter.java:114)
+	at org.evosuite.strategy.MOSuiteStrategy.generateTests(MOSuiteStrategy.java:123)
+	at org.evosuite.TestSuiteGenerator.generateTests(TestSuiteGenerator.java:630)
+	at org.evosuite.TestSuiteGenerator.generateTestSuite(TestSuiteGenerator.java:205)
+	at org.evosuite.rmi.service.ClientNodeImpl.lambda$startNewSearch$0(ClientNodeImpl.java:150)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.net.ConnectException: Connection refused (Connection refused)
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:607)
+	at java.net.Socket.connect(Socket.java:556)
+	at java.net.Socket.<init>(Socket.java:452)
+	at java.net.Socket.<init>(Socket.java:229)
+	at sun.rmi.transport.proxy.RMIDirectSocketFactory.createSocket(RMIDirectSocketFactory.java:40)
+	at sun.rmi.transport.proxy.RMIMasterSocketFactory.createSocket(RMIMasterSocketFactory.java:148)
+	at sun.rmi.transport.tcp.TCPEndpoint.newSocket(TCPEndpoint.java:617)
+	... 29 common frames omitted
+Number of times BBC is called for com.google.javascript.rhino.Node.getLastSibling()Lcom/google/javascript/rhino/Node;: I8 Branch 64 IFNULL L589 - true: 317
+Number of times BBC is called for com.google.javascript.rhino.Node.isComma()Z: Line 2263: 134
+Number of times BBC is called for com.google.javascript.rhino.Node.propToString(I)Ljava/lang/String;: I3 Branch 26 TABLESWITCH L114 Case 54 - false: 871
+Number of times BBC is called for com.google.javascript.rhino.Node$FileLevelJsDocBuilder.append(Ljava/lang/String;)V: Line 1871: 6771
+Number of times BBC is called for com.google.javascript.rhino.Node$FileLevelJsDocBuilder.append(Ljava/lang/String;)V: Line 1870: 6771
+Number of times BBC is called for com.google.javascript.rhino.Node.isVar()Z: I5 Branch 276 IF_ICMPNE L2435 - false: 4260
+Number of times BBC is called for com.google.javascript.rhino.Node$FileLevelJsDocBuilder.append(Ljava/lang/String;)V: Line 1872: 6771
+Number of times BBC is called for com.google.javascript.rhino.Node$FileLevelJsDocBuilder.append(Ljava/lang/String;)V: Line 1867: 6771
+Number of times BBC is called for com.google.javascript.rhino.Node$FileLevelJsDocBuilder.append(Ljava/lang/String;)V: Line 1866: 6771
+Number of times BBC is called for com.google.javascript.rhino.Node$NumberNode.isEquivalentTo(Lcom/google/javascript/rhino/Node;ZZZ)Z: I12 Branch 280 IFEQ L174 - false: 321
+Number of times BBC is called for com.google.javascript.rhino.Node.setDouble(D)V: I5 Branch 114 IF_ICMPNE L902 - false: 558
+Number of times BBC is called for com.google.javascript.rhino.Node.isGetterDef()Z: Line 2311: 47
+Number of times BBC is called for com.google.javascript.rhino.Node$NumberNode.isEquivalentTo(Lcom/google/javascript/rhino/Node;ZZZ)Z: I12 Branch 280 IFEQ L174 - true: 66
+Number of times BBC is called for com.google.javascript.rhino.Node.isParamList()Z: I5 Branch 263 IF_ICMPNE L2383 - true: 1258
+Number of times BBC is called for com.google.javascript.rhino.Node.propToString(I)Ljava/lang/String;: I3 Branch 26 TABLESWITCH L114 Case 54 - true: 1463
+Number of times BBC is called for com.google.javascript.rhino.Node.toString(Ljava/lang/StringBuilder;ZZZ)V: I127 Branch 126 IF_ICMPGE L980 - false: 147
+Number of times BBC is called for com.google.javascript.rhino.Node.isEquivalentTo(Lcom/google/javascript/rhino/Node;ZZZ)Z: I44 Branch 171 IF_ICMPNE L1527 - false: 602
+Number of times BBC is called for com.google.javascript.rhino.Node.replaceChildAfter(Lcom/google/javascript/rhino/Node;Lcom/google/javascript/rhino/Node;)V: I17 Branch 94 IFNONNULL L742 - true: 6737
+Number of times BBC is called for com.google.javascript.rhino.Node$FileLevelJsDocBuilder.append(Ljava/lang/String;)V: Line 1861: 6771
+Number of times BBC is called for com.google.javascript.rhino.Node$FileLevelJsDocBuilder.append(Ljava/lang/String;)V: Line 1860: 6771
+Number of times BBC is called for com.google.javascript.rhino.Node.isParamList()Z: I5 Branch 263 IF_ICMPNE L2383 - false: 1448
+Number of times BBC is called for com.google.javascript.rhino.Node.copyInformationFrom(Lcom/google/javascript/rhino/Node;)Lcom/google/javascript/rhino/Node;: I19 Branch 210 IFNONNULL L1747 - true: 987
+Number of times BBC is called for com.google.javascript.rhino.Node.isThis()Z: I5 Branch 271 IF_ICMPNE L2415 - true: 752
+Number of times BBC is called for com.google.javascript.rhino.Node.getLastSibling()Lcom/google/javascript/rhino/Node;: I8 Branch 64 IFNULL L589 - false: 2763
+Number of times BBC is called for com.google.javascript.rhino.Node.isExprResult()Z: I5 Branch 241 IF_ICMPNE L2295 - false: 2795
+Number of times BBC is called for com.google.javascript.rhino.Node.getChildCount()I: I11 Branch 152 IFNULL L1408 - true: 415
+Number of times BBC is called for com.google.javascript.rhino.Node$AncestorIterable$1.hasNext()Z: Line 1365: 22247
+Number of times BBC is called for com.google.javascript.rhino.Node.getChildCount()I: I11 Branch 152 IFNULL L1408 - false: 415
+Number of times BBC is called for com.google.javascript.rhino.Node.isExprResult()Z: I5 Branch 241 IF_ICMPNE L2295 - true: 517
+Number of times BBC is called for com.google.javascript.rhino.Node.propToString(I)Ljava/lang/String;: I3 Branch 19 TABLESWITCH L114 Case 47 - false: 871
+Number of times BBC is called for com.google.javascript.rhino.Node.setDirectives(Ljava/util/Set;)V: Line 1958: 3653
+Number of times BBC is called for com.google.javascript.rhino.Node.isThis()Z: I5 Branch 271 IF_ICMPNE L2415 - false: 3611
+Number of times BBC is called for com.google.javascript.rhino.Node.isEquivalentTo(Lcom/google/javascript/rhino/Node;ZZZ)Z: I83 Branch 175 IF_ICMPNE L1534 - true: 5
+Number of times BBC is called for com.google.javascript.rhino.Node.setDirectives(Ljava/util/Set;)V: Line 1959: 3653
+Number of times BBC is called for com.google.javascript.rhino.Node.replaceChild(Lcom/google/javascript/rhino/Node;Lcom/google/javascript/rhino/Node;)V: I16 Branch 90 IFNONNULL L717 - false: 995
+Number of times BBC is called for com.google.javascript.rhino.Node.getChangeTime()I: root-Branch: 415
+Number of times BBC is called for com.google.javascript.rhino.Node.isGetterDef()Z: I5 Branch 245 IF_ICMPNE L2311 - false: 1296
+Number of times BBC is called for com.google.javascript.rhino.Node.addChildrenToFront(Lcom/google/javascript/rhino/Node;)V: I49 Branch 73 IFNONNULL L627 - false: 631
+Number of times BBC is called for com.google.javascript.rhino.Node.isAssign()Z: I5 Branch 225 IF_ICMPNE L2231 - true: 134
+Number of times BBC is called for com.google.javascript.rhino.Node.isGetterDef()Z: I5 Branch 245 IF_ICMPNE L2311 - true: 47
+Number of times BBC is called for com.google.javascript.rhino.Node.isEquivalentTo(Lcom/google/javascript/rhino/Node;ZZZ)Z: I83 Branch 175 IF_ICMPNE L1534 - false: 869
+Number of times BBC is called for com.google.javascript.rhino.Node.isCase()Z: Line 2251: 995
+Number of times BBC is called for com.google.javascript.rhino.Node.isArrayLit()Z: Line 2227: 517
+Number of times BBC is called for com.google.javascript.rhino.Node.checkTreeTypeAwareEqualsImpl(Lcom/google/javascript/rhino/Node;)Lcom/google/javascript/rhino/Node$NodeMismatch;: I45 Branch 164 IFNULL L1483 - true: 2425
+Number of times BBC is called for com.google.javascript.rhino.Node.replaceChild(Lcom/google/javascript/rhino/Node;Lcom/google/javascript/rhino/Node;)V: I16 Branch 90 IFNONNULL L717 - true: 1099
+Number of times BBC is called for com.google.javascript.rhino.Node.replaceChild(Lcom/google/javascript/rhino/Node;Lcom/google/javascript/rhino/Node;)V: I4 Branch 89 IFNONNULL L715 - true: 1438
+Number of times BBC is called for com.google.javascript.rhino.Node.getLastSibling()Lcom/google/javascript/rhino/Node;: Line 588: 317
+Number of times BBC is called for com.google.javascript.rhino.Node.checkTreeTypeAwareEqualsImpl(Lcom/google/javascript/rhino/Node;)Lcom/google/javascript/rhino/Node$NodeMismatch;: I8 Branch 161 IFNE L1473 - false: 631
+Number of times BBC is called for com.google.javascript.rhino.Node.useSourceInfoFromForTree(Lcom/google/javascript/rhino/Node;)Lcom/google/javascript/rhino/Node;: I14 Branch 212 IFNULL L1793 - false: 53
+Number of times BBC is called for com.google.javascript.rhino.Node.<init>(ILcom/google/javascript/rhino/Node;Lcom/google/javascript/rhino/Node;Lcom/google/javascript/rhino/Node;Lcom/google/javascript/rhino/Node;)V: I63 Branch 48 IFNONNULL L424 - true: 3351
+Number of times BBC is called for com.google.javascript.rhino.Node.addChildrenAfter(Lcom/google/javascript/rhino/Node;Lcom/google/javascript/rhino/Node;)V: I21 Branch 82 IFNULL L670 - true: 41
+Number of times BBC is called for com.google.javascript.rhino.Node.getLastSibling()Lcom/google/javascript/rhino/Node;: Line 592: 317
+Number of times BBC is called for com.google.javascript.rhino.Node.propToString(I)Ljava/lang/String;: I3 Branch 19 TABLESWITCH L114 Case 47 - true: 1076
+Number of times BBC is called for com.google.javascript.rhino.Node.addChildrenAfter(Lcom/google/javascript/rhino/Node;Lcom/google/javascript/rhino/Node;)V: I21 Branch 82 IFNULL L670 - false: 34
+Number of times BBC is called for com.google.javascript.rhino.Node.isEquivalentTo(Lcom/google/javascript/rhino/Node;ZZZ)Z: I16 Branch 167 IF_ACMPEQ L1517 - false: 31
+Number of times BBC is called for com.google.javascript.rhino.Node.checkTreeTypeAwareEqualsImpl(Lcom/google/javascript/rhino/Node;)Lcom/google/javascript/rhino/Node$NodeMismatch;: I8 Branch 161 IFNE L1473 - true: 881
+Number of times BBC is called for com.google.javascript.rhino.Node.checkTreeTypeAwareEqualsImpl(Lcom/google/javascript/rhino/Node;)Lcom/google/javascript/rhino/Node$NodeMismatch;: I45 Branch 164 IFNULL L1483 - false: 2631
+Number of times BBC is called for com.google.javascript.rhino.Node.isDebugger()Z: I5 Branch 235 IF_ICMPNE L2271 - true: 1538
+Number of times BBC is called for com.google.javascript.rhino.Node.isEquivalentTo(Lcom/google/javascript/rhino/Node;ZZZ)Z: I182 Branch 184 IFNE L1558 - false: 527
+Number of times BBC is called for com.google.javascript.rhino.Node.replaceChild(Lcom/google/javascript/rhino/Node;Lcom/google/javascript/rhino/Node;)V: I4 Branch 89 IFNONNULL L715 - false: 995
+Number of times BBC is called for com.google.javascript.rhino.Node$StringNode.setString(Ljava/lang/String;)V: Line 223: 47
+Number of times BBC is called for com.google.javascript.rhino.Node.hasChild(Lcom/google/javascript/rhino/Node;)Z: I12 Branch 154 IF_ACMPNE L1417 - true: 486
+Number of times BBC is called for com.google.javascript.rhino.Node.getParent()Lcom/google/javascript/rhino/Node;: Line 1323: 752
+Number of times BBC is called for com.google.javascript.rhino.Node.hasChild(Lcom/google/javascript/rhino/Node;)Z: I12 Branch 154 IF_ACMPNE L1417 - false: 142
+Number of times BBC is called for com.google.javascript.rhino.Node.isFalse()Z: I5 Branch 242 IF_ICMPNE L2299 - true: 1672
+Number of times BBC is called for com.google.javascript.rhino.Node.isSetterDef()Z: I5 Branch 267 IF_ICMPNE L2399 - false: 1723
+Number of times BBC is called for com.google.javascript.rhino.Node.addChildrenToFront(Lcom/google/javascript/rhino/Node;)V: I49 Branch 73 IFNONNULL L627 - true: 956
+Number of times BBC is called for com.google.javascript.rhino.Node$NodeMismatch.<init>(Lcom/google/javascript/rhino/Node;Lcom/google/javascript/rhino/Node;)V: Line 2195: 317
+Number of times BBC is called for com.google.javascript.rhino.Node.setLineno(I)V: Line 1168: 415
+Number of times BBC is called for com.google.javascript.rhino.Node.isAssign()Z: I5 Branch 225 IF_ICMPNE L2231 - false: 449
+Number of times BBC is called for com.google.javascript.rhino.Node.setLineno(I)V: Line 1169: 415
+Number of times BBC is called for com.google.javascript.rhino.Node.<init>(ILcom/google/javascript/rhino/Node;Lcom/google/javascript/rhino/Node;Lcom/google/javascript/rhino/Node;)V: I19 Branch 38 IFNONNULL L400 - true: 2988
+Number of times BBC is called for com.google.javascript.rhino.Node$NodeMismatch.<init>(Lcom/google/javascript/rhino/Node;Lcom/google/javascript/rhino/Node;)V: Line 2197: 317
+Number of times BBC is called for com.google.javascript.rhino.Node.checkTreeEqualsImpl(Lcom/google/javascript/rhino/Node;)Lcom/google/javascript/rhino/Node$NodeMismatch;: I8 Branch 156 IFNE L1446 - true: 440
+Number of times BBC is called for com.google.javascript.rhino.Node$NodeMismatch.<init>(Lcom/google/javascript/rhino/Node;Lcom/google/javascript/rhino/Node;)V: Line 2196: 317
+Number of times BBC is called for com.google.javascript.rhino.Node.replaceChildAfter(Lcom/google/javascript/rhino/Node;Lcom/google/javascript/rhino/Node;)V: I5 Branch 93 IF_ACMPNE L739 - false: 134
+Number of times BBC is called for com.google.javascript.rhino.Node.isSetterDef()Z: I5 Branch 267 IF_ICMPNE L2399 - true: 317
+Number of times BBC is called for com.google.javascript.rhino.Node.replaceChildAfter(Lcom/google/javascript/rhino/Node;Lcom/google/javascript/rhino/Node;)V: I5 Branch 93 IF_ACMPNE L739 - true: 223
+Number of times BBC is called for com.google.javascript.rhino.Node.isFalse()Z: I5 Branch 242 IF_ICMPNE L2299 - false: 1842
+Number of times BBC is called for com.google.javascript.rhino.Node.toString(Ljava/lang/StringBuilder;ZZZ)V: I43 Branch 120 IFNULL L961 - true: 682
+Number of times BBC is called for com.google.javascript.rhino.Node.getAncestors()Lcom/google/javascript/rhino/Node$AncestorIterable;: root-Branch: 752
+Number of times BBC is called for com.google.javascript.rhino.Node.propToString(I)Ljava/lang/String;: I3 Branch 12 TABLESWITCH L114 Case 40 - true: 1401
+Number of times BBC is called for com.google.javascript.rhino.Node.isObjectLit()Z: Line 2375: 995
+Number of times BBC is called for com.google.javascript.rhino.Node.isAssign()Z: Line 2231: 134
+Number of times BBC is called for com.google.javascript.rhino.Node.setLineno(I)V: Line 1164: 415
+Number of times BBC is called for com.google.javascript.rhino.Node.propToString(I)Ljava/lang/String;: I3 Branch 12 TABLESWITCH L114 Case 40 - false: 871
+Number of times BBC is called for com.google.javascript.rhino.Node.isUnscopedQualifiedName()Z: I4 Branch 195 LOOKUPSWITCH L1616 Case 33 - true: 4830
+Number of times BBC is called for com.google.javascript.rhino.Node.setLineno(I)V: Line 1165: 415
+Number of times BBC is called for com.google.javascript.rhino.Node.isGetElem()Z: I5 Branch 246 IF_ICMPNE L2315 - false: 4808
+Number of times BBC is called for com.google.javascript.rhino.Node.isUnscopedQualifiedName()Z: I4 Branch 195 LOOKUPSWITCH L1616 Case 33 - false: 134
+Number of times BBC is called for com.google.javascript.rhino.Node.isEquivalentTo(Lcom/google/javascript/rhino/Node;ZZZ)Z: I30 Branch 169 IFNE L1523 - false: 1092
+Number of times BBC is called for com.google.javascript.rhino.Node$AncestorIterable.<init>(Lcom/google/javascript/rhino/Node;)V: Line 1356: 631
+Number of times BBC is called for com.google.javascript.rhino.Node.addChildrenAfter(Lcom/google/javascript/rhino/Node;Lcom/google/javascript/rhino/Node;)V: I7 Branch 81 IF_ACMPNE L669 - false: 34
+Number of times BBC is called for com.google.javascript.rhino.Node$ObjectPropListItem.getIntValue()I: Line 307: 22247
+Number of times BBC is called for com.google.javascript.rhino.Node$AncestorIterable$1.remove()V: Line 1380: 22247
+Number of times BBC is called for com.google.javascript.rhino.Node.isEquivalentTo(Lcom/google/javascript/rhino/Node;ZZZ)Z: I30 Branch 169 IFNE L1523 - true: 21
+Number of times BBC is called for com.google.javascript.rhino.Node.replaceChildAfter(Lcom/google/javascript/rhino/Node;Lcom/google/javascript/rhino/Node;)V: I17 Branch 94 IFNONNULL L742 - false: 134
+Number of times BBC is called for com.google.javascript.rhino.Node.setSourceEncodedPositionForTree(I)V: Line 1180: 517
+Number of times BBC is called for com.google.javascript.rhino.Node.isGetElem()Z: I5 Branch 246 IF_ICMPNE L2315 - true: 995
+Number of times BBC is called for com.google.javascript.rhino.Node$NodeMismatch.<init>(Lcom/google/javascript/rhino/Node;Lcom/google/javascript/rhino/Node;)V: Line 2198: 317
+Number of times BBC is called for com.google.javascript.rhino.Node.setSourceEncodedPositionForTree(I)V: Line 1182: 517
+Number of times BBC is called for com.google.javascript.rhino.Node.replaceChildAfter(Lcom/google/javascript/rhino/Node;Lcom/google/javascript/rhino/Node;)V: I29 Branch 95 IFNONNULL L744 - true: 134
+Number of times BBC is called for com.google.javascript.rhino.Node.propToString(I)Ljava/lang/String;: I3 Branch 5 TABLESWITCH L114 Case 33 - true: 1453
+Number of times BBC is called for com.google.javascript.rhino.Node.isDec()Z: I5 Branch 236 IF_ICMPNE L2275 - true: 752
+Number of times BBC is called for com.google.javascript.rhino.Node.setSourceEncodedPositionForTree(I)V: Line 1186: 517
+Number of times BBC is called for com.google.javascript.rhino.Node.getIndexOfChild(Lcom/google/javascript/rhino/Node;)I: I17 Branch 63 IF_ACMPNE L577 - true: 817
+Number of times BBC is called for com.google.javascript.rhino.Node.useSourceInfoIfMissingFromForTree(Lcom/google/javascript/rhino/Node;)Lcom/google/javascript/rhino/Node;: Line 1827: 134
+Number of times BBC is called for com.google.javascript.rhino.Node.useSourceInfoIfMissingFromForTree(Lcom/google/javascript/rhino/Node;)Lcom/google/javascript/rhino/Node;: Line 1826: 134
+Number of times BBC is called for com.google.javascript.rhino.Node.getIndexOfChild(Lcom/google/javascript/rhino/Node;)I: I17 Branch 63 IF_ACMPNE L577 - false: 4123
+Number of times BBC is called for com.google.javascript.rhino.Node.checkTreeTypeAwareEqualsImpl(Lcom/google/javascript/rhino/Node;)Lcom/google/javascript/rhino/Node$NodeMismatch;: Line 1473: 631
+Number of times BBC is called for com.google.javascript.rhino.Node.checkTreeEqualsImpl(Lcom/google/javascript/rhino/Node;)Lcom/google/javascript/rhino/Node$NodeMismatch;: I66 Branch 160 IFNULL L1459 - false: 2134
+Number of times BBC is called for com.google.javascript.rhino.Node$AncestorIterable.<init>(Lcom/google/javascript/rhino/Node;)V: root-Branch: 631
+Number of times BBC is called for com.google.javascript.rhino.Node.propToString(I)Ljava/lang/String;: I3 Branch 5 TABLESWITCH L114 Case 33 - false: 871
+Number of times BBC is called for com.google.javascript.rhino.Node.isDec()Z: I5 Branch 236 IF_ICMPNE L2275 - false: 8089
+Number of times BBC is called for com.google.javascript.rhino.Node.replaceChildAfter(Lcom/google/javascript/rhino/Node;Lcom/google/javascript/rhino/Node;)V: I29 Branch 95 IFNONNULL L744 - false: 5963
+Number of times BBC is called for com.google.javascript.rhino.Node$AncestorIterable.<init>(Lcom/google/javascript/rhino/Node;)V: Line 1358: 631
+Number of times BBC is called for com.google.javascript.rhino.Node$AncestorIterable.<init>(Lcom/google/javascript/rhino/Node;)V: Line 1357: 631
+Number of times BBC is called for com.google.javascript.rhino.Node.getAncestor(I)Lcom/google/javascript/rhino/Node;: Line 1337: 5453
+Number of times BBC is called for com.google.javascript.rhino.Node.isNew()Z: I5 Branch 257 IF_ICMPNE L2359 - true: 1258
+Number of times BBC is called for com.google.javascript.rhino.Node.getAncestor(I)Lcom/google/javascript/rhino/Node;: Line 1333: 5453
+Number of times BBC is called for com.google.javascript.rhino.Node.isAssignAdd()Z: I5 Branch 226 IF_ICMPNE L2235 - false: 2367
+Number of times BBC is called for com.google.javascript.rhino.Node.getAncestor(I)Lcom/google/javascript/rhino/Node;: Line 1332: 5453
+Number of times BBC is called for com.google.javascript.rhino.Node.isIn()Z: Line 2331: 134
+Number of times BBC is called for com.google.javascript.rhino.Node.addChildBefore(Lcom/google/javascript/rhino/Node;Lcom/google/javascript/rhino/Node;)V: Line 642: 968
+Number of times BBC is called for com.google.javascript.rhino.Node.isQuotedString()Z: root-Branch: 47
+Number of times BBC is called for com.google.javascript.rhino.Node.isNE()Z: I5 Branch 256 IF_ICMPNE L2355 - true: 2294
+Number of times BBC is called for com.google.javascript.rhino.Node$NumberNode.isEquivalentTo(Lcom/google/javascript/rhino/Node;ZZZ)Z: I35 Branch 282 IFNE L179 - false: 2794
+Number of times BBC is called for com.google.javascript.rhino.Node.addChildBefore(Lcom/google/javascript/rhino/Node;Lcom/google/javascript/rhino/Node;)V: Line 640: 317
+Number of times BBC is called for com.google.javascript.rhino.Node.addChildBefore(Lcom/google/javascript/rhino/Node;Lcom/google/javascript/rhino/Node;)V: Line 646: 3637
+Number of times BBC is called for com.google.javascript.rhino.Node.isFromExterns()Z: I8 Branch 134 IFNONNULL L1128 - true: 4900
+Number of times BBC is called for com.google.javascript.rhino.Node.addChildBefore(Lcom/google/javascript/rhino/Node;Lcom/google/javascript/rhino/Node;)V: Line 644: 968
+Number of times BBC is called for com.google.javascript.rhino.Node$SiblingNodeIterable.iterator()Ljava/util/Iterator;: Line 1278: 22247
+Number of times BBC is called for com.google.javascript.rhino.Node.isFor()Z: Line 2303: 995
+Number of times BBC is called for com.google.javascript.rhino.Node.copyInformationFrom(Lcom/google/javascript/rhino/Node;)Lcom/google/javascript/rhino/Node;: I5 Branch 209 IFNONNULL L1743 - true: 1424
+Number of times BBC is called for com.google.javascript.rhino.Node.isAssignAdd()Z: I5 Branch 226 IF_ICMPNE L2235 - true: 134
+Number of times BBC is called for com.google.javascript.rhino.Node.checkTreeTypeAwareEqualsImpl(Lcom/google/javascript/rhino/Node;)Lcom/google/javascript/rhino/Node$NodeMismatch;: I33 Branch 162 IFNONNULL L1480 - true: 2895
+Number of times BBC is called for com.google.javascript.rhino.Node.isFromExterns()Z: I8 Branch 134 IFNONNULL L1128 - false: 871
+Number of times BBC is called for com.google.javascript.rhino.Node.isNE()Z: I5 Branch 256 IF_ICMPNE L2355 - false: 8459
+Number of times BBC is called for com.google.javascript.rhino.Node$NumberNode.isEquivalentTo(Lcom/google/javascript/rhino/Node;ZZZ)Z: I35 Branch 282 IFNE L179 - true: 143
+Number of times BBC is called for com.google.javascript.rhino.Node.isGetProp()Z: I5 Branch 247 IF_ICMPNE L2319 - false: 3552
+Number of times BBC is called for com.google.javascript.rhino.Node.isQualifiedName()Z: I4 Branch 193 LOOKUPSWITCH L1598 Default-Case - true: 134
+Number of times BBC is called for com.google.javascript.rhino.Node$ObjectPropListItem.toString()Ljava/lang/String;: I4 Branch 289 IFNONNULL L317 - true: 22247
+Number of times BBC is called for com.google.javascript.rhino.Node$ObjectPropListItem.chain(Lcom/google/javascript/rhino/Node$PropListItem;)Lcom/google/javascript/rhino/Node$PropListItem;: root-Branch: 22247
+Number of times BBC is called for com.google.javascript.rhino.Node.isRegExp()Z: Line 2387: 134
+Number of times BBC is called for com.google.javascript.rhino.Node.checkTreeTypeAwareEqualsImpl(Lcom/google/javascript/rhino/Node;)Lcom/google/javascript/rhino/Node$NodeMismatch;: I33 Branch 162 IFNONNULL L1480 - false: 250
+Number of times BBC is called for com.google.javascript.rhino.Node$ObjectPropListItem.toString()Ljava/lang/String;: I4 Branch 289 IFNONNULL L317 - false: 22247
+Number of times BBC is called for com.google.javascript.rhino.Node.propToString(I)Ljava/lang/String;: I3 Branch 18 TABLESWITCH L114 Case 46 - true: 1393
+Number of times BBC is called for com.google.javascript.rhino.Node.isCatch()Z: I5 Branch 232 IF_ICMPNE L2259 - true: 1258
+Number of times BBC is called for com.google.javascript.rhino.Node.propToString(I)Ljava/lang/String;: I3 Branch 3 TABLESWITCH L114 Case 31 - true: 1370
+Number of times BBC is called for com.google.javascript.rhino.Node.isQualifiedName()Z: I4 Branch 193 LOOKUPSWITCH L1598 Default-Case - false: 601
+Number of times BBC is called for com.google.javascript.rhino.Node$StringNode.isEquivalentTo(Lcom/google/javascript/rhino/Node;ZZZ)Z: I8 Branch 287 IFEQ L232 - false: 87
+Number of times BBC is called for com.google.javascript.rhino.Node.propToString(I)Ljava/lang/String;: I3 Branch 27 TABLESWITCH L114 Case 55 - true: 1401
+Number of times BBC is called for com.google.javascript.rhino.Node.propToString(I)Ljava/lang/String;: I3 Branch 18 TABLESWITCH L114 Case 46 - false: 871
+Number of times BBC is called for com.google.javascript.rhino.Node.hasMoreThanOneChild()Z: I9 Branch 151 IF_ACMPEQ L1403 - false: 254
+Number of times BBC is called for com.google.javascript.rhino.Node.propToString(I)Ljava/lang/String;: I3 Branch 27 TABLESWITCH L114 Case 55 - false: 871
+Number of times BBC is called for com.google.javascript.rhino.Node.isDebugger()Z: I5 Branch 235 IF_ICMPNE L2271 - false: 5562
+Number of times BBC is called for com.google.javascript.rhino.Node.isGetProp()Z: I5 Branch 247 IF_ICMPNE L2319 - true: 517
+Number of times BBC is called for com.google.javascript.rhino.Node.isHook()Z: I5 Branch 248 IF_ICMPNE L2323 - true: 871
+Number of times BBC is called for com.google.javascript.rhino.Node.isNot()Z: Line 2363: 224
+Number of times BBC is called for com.google.javascript.rhino.Node.toStringTreeHelper(Lcom/google/javascript/rhino/Node;ILjava/lang/Appendable;)V: I39 Branch 132 IFNULL L1035 - false: 167
+Number of times BBC is called for com.google.javascript.rhino.Node.getAncestors()Lcom/google/javascript/rhino/Node$AncestorIterable;: Line 1344: 752
+Number of times BBC is called for com.google.javascript.rhino.Node.clonePropsFrom(Lcom/google/javascript/rhino/Node;)Lcom/google/javascript/rhino/Node;: I4 Branch 99 IFNONNULL L778 - true: 2449
+Number of times BBC is called for com.google.javascript.rhino.Node.isHook()Z: I5 Branch 248 IF_ICMPNE L2323 - false: 2522
+Number of times BBC is called for com.google.javascript.rhino.Node.setString(Ljava/lang/String;)V: I9 Branch 117 IF_ICMPNE L925 - false: 1344
+Number of times BBC is called for com.google.javascript.rhino.Node$AncestorIterable$1.hasNext()Z: I5 Branch 299 IFNULL L1365 - true: 22247
+Number of times BBC is called for com.google.javascript.rhino.Node.isNull()Z: Line 2367: 415
+Number of times BBC is called for com.google.javascript.rhino.Node$AncestorIterable$1.hasNext()Z: I5 Branch 299 IFNULL L1365 - false: 22247
+Number of times BBC is called for com.google.javascript.rhino.Node.clonePropsFrom(Lcom/google/javascript/rhino/Node;)Lcom/google/javascript/rhino/Node;: I4 Branch 99 IFNONNULL L778 - false: 1828
+Number of times BBC is called for com.google.javascript.rhino.Node.isOptionalArg()Z: root-Branch: 134
+Number of times BBC is called for com.google.javascript.rhino.Node.isCatch()Z: I5 Branch 232 IF_ICMPNE L2259 - false: 6227
+Number of times BBC is called for com.google.javascript.rhino.Node.isInc()Z: Line 2335: 752
+Number of times BBC is called for com.google.javascript.rhino.Node.setSideEffectFlags(Lcom/google/javascript/rhino/Node$SideEffectFlags;)V: Line 2036: 6925
+Number of times BBC is called for com.google.javascript.rhino.Node.propToString(I)Ljava/lang/String;: I3 Branch 4 TABLESWITCH L114 Case 32 - true: 1370
+Number of times BBC is called for com.google.javascript.rhino.Node.propToString(I)Ljava/lang/String;: I3 Branch 4 TABLESWITCH L114 Case 32 - false: 871
+Number of times BBC is called for com.google.javascript.rhino.Node.isEquivalentTo(Lcom/google/javascript/rhino/Node;ZZZ)Z: I170 Branch 182 IFEQ L1558 - true: 215
+Number of times BBC is called for com.google.javascript.rhino.Node.propToString(I)Ljava/lang/String;: I3 Branch 13 TABLESWITCH L114 Case 41 - true: 1401
+Number of times BBC is called for com.google.javascript.rhino.Node.isVoid()Z: Line 2439: 752
+Number of times BBC is called for com.google.javascript.rhino.Node.cloneNode()Lcom/google/javascript/rhino/Node;: root-Branch: 631
+Number of times BBC is called for com.google.javascript.rhino.Node.isEquivalentTo(Lcom/google/javascript/rhino/Node;ZZZ)Z: I170 Branch 182 IFEQ L1558 - false: 742
+Number of times BBC is called for com.google.javascript.rhino.Node.<init>(I[Lcom/google/javascript/rhino/Node;)V: I94 Branch 54 IFNONNULL L488 - true: 63
+Number of times BBC is called for com.google.javascript.rhino.Node.propToString(I)Ljava/lang/String;: I3 Branch 13 TABLESWITCH L114 Case 41 - false: 871
+Number of times BBC is called for com.google.javascript.rhino.Node.toString(Ljava/lang/StringBuilder;ZZZ)V: I162 Branch 127 LOOKUPSWITCH L987 Default-Case - true: 147
+Number of times BBC is called for com.google.javascript.rhino.Node.toString(Ljava/lang/StringBuilder;ZZZ)V: I162 Branch 127 LOOKUPSWITCH L987 Default-Case - false: 1386
+Number of times BBC is called for com.google.javascript.rhino.Node$SiblingNodeIterable.iterator()Ljava/util/Iterator;: I4 Branch 290 IFNE L1278 - true: 22247
+Number of times BBC is called for com.google.javascript.rhino.Node.isEquivalentTo(Lcom/google/javascript/rhino/Node;ZZZ)Z: I133 Branch 178 IF_ICMPNE L1547 - false: 718
+Number of times BBC is called for com.google.javascript.rhino.Node.mayMutateArguments()Z: Line 2161: 134
+Number of times BBC is called for com.google.javascript.rhino.Node.checkTreeTypeAwareEqualsImpl(Lcom/google/javascript/rhino/Node;)Lcom/google/javascript/rhino/Node$NodeMismatch;: I35 Branch 163 IFNULL L1480 - false: 2425
+Number of times BBC is called for com.google.javascript.rhino.Node$SiblingNodeIterable.iterator()Ljava/util/Iterator;: I4 Branch 290 IFNE L1278 - false: 22247
+Number of times BBC is called for com.google.javascript.rhino.Node.isNew()Z: I5 Branch 257 IF_ICMPNE L2359 - false: 3490
+Number of times BBC is called for com.google.javascript.rhino.Node.isGetElem()Z: Line 2315: 995
+Number of times BBC is called for com.google.javascript.rhino.Node$NodeMismatch.hashCode()I: Line 2211: 22247
+Number of times BBC is called for com.google.javascript.rhino.Node.hasMoreThanOneChild()Z: I4 Branch 150 IFNULL L1403 - false: 415
+Number of times BBC is called for com.google.javascript.rhino.Node.checkTreeEqualsImpl(Lcom/google/javascript/rhino/Node;)Lcom/google/javascript/rhino/Node$NodeMismatch;: I33 Branch 157 IFNONNULL L1453 - true: 2520
+Number of times BBC is called for com.google.javascript.rhino.Node.setSourceEncodedPositionForTree(I)V: I13 Branch 138 IFNULL L1183 - false: 798
+Number of times BBC is called for com.google.javascript.rhino.Node.isEquivalentToTyped(Lcom/google/javascript/rhino/Node;)Z: Line 1505: 134
+Number of times BBC is called for com.google.javascript.rhino.Node$AncestorIterable$1.next()Lcom/google/javascript/rhino/Node;: Line 1370: 22247
+Number of times BBC is called for com.google.javascript.rhino.Node.getPropListHeadForTesting()Lcom/google/javascript/rhino/Node$PropListItem;: root-Branch: 22247
+Number of times BBC is called for com.google.javascript.rhino.Node.hasMoreThanOneChild()Z: I4 Branch 150 IFNULL L1403 - true: 415
+Number of times BBC is called for com.google.javascript.rhino.Node.propToString(I)Ljava/lang/String;: I3 Branch 17 TABLESWITCH L114 Case 45 - false: 871
+Number of times BBC is called for com.google.javascript.rhino.Node.checkTreeEqualsImpl(Lcom/google/javascript/rhino/Node;)Lcom/google/javascript/rhino/Node$NodeMismatch;: I33 Branch 157 IFNONNULL L1453 - false: 125
+Number of times BBC is called for com.google.javascript.rhino.Node.setSourceEncodedPositionForTree(I)V: I13 Branch 138 IFNULL L1183 - true: 517
+Number of times BBC is called for com.google.javascript.rhino.Node.isAnd()Z: Line 2223: 2458
+Number of times BBC is called for com.google.javascript.rhino.Node.setStaticSourceFile(Lcom/google/javascript/rhino/jstype/StaticSourceFile;)V: Line 1094: 415
+Number of times BBC is called for com.google.javascript.rhino.Node.setStaticSourceFile(Lcom/google/javascript/rhino/jstype/StaticSourceFile;)V: Line 1095: 415
+Number of times BBC is called for com.google.javascript.rhino.Node.hasChild(Lcom/google/javascript/rhino/Node;)Z: I7 Branch 153 IFNULL L1416 - false: 2127
+Number of times BBC is called for com.google.javascript.rhino.Node.addChildBefore(Lcom/google/javascript/rhino/Node;Lcom/google/javascript/rhino/Node;)V: I44 Branch 78 IF_ACMPNE L646 - true: 9931
+Number of times BBC is called for com.google.javascript.rhino.Node.isStringKey()Z: Line 2407: 2294
+Number of times BBC is called for com.google.javascript.rhino.Node.propToString(I)Ljava/lang/String;: I3 Branch 17 TABLESWITCH L114 Case 45 - true: 1393
+Number of times BBC is called for com.google.javascript.rhino.Node.addChildBefore(Lcom/google/javascript/rhino/Node;Lcom/google/javascript/rhino/Node;)V: I44 Branch 78 IF_ACMPNE L646 - false: 3637
+Number of times BBC is called for com.google.javascript.rhino.Node.addChildrenToBack(Lcom/google/javascript/rhino/Node;)V: root-Branch: 871
+Number of times BBC is called for com.google.javascript.rhino.Node.isDelProp()Z: I5 Branch 238 IF_ICMPNE L2283 - false: 1049
+Number of times BBC is called for com.google.javascript.rhino.Node.getCharno()I: Line 1144: 134
+Number of times BBC is called for com.google.javascript.rhino.Node.hasChild(Lcom/google/javascript/rhino/Node;)Z: I7 Branch 153 IFNULL L1416 - true: 1985
+Number of times BBC is called for com.google.javascript.rhino.Node.removeChildAfter(Lcom/google/javascript/rhino/Node;)Lcom/google/javascript/rhino/Node;: I41 Branch 205 IF_ACMPNE L1689 - false: 4364
+Number of times BBC is called for com.google.javascript.rhino.Node.removeChildAfter(Lcom/google/javascript/rhino/Node;)Lcom/google/javascript/rhino/Node;: I41 Branch 205 IF_ACMPNE L1689 - true: 4364
+Number of times BBC is called for com.google.javascript.rhino.Node.isEmpty()Z: Line 2291: 134
+Number of times BBC is called for com.google.javascript.rhino.Node.isArrayLit()Z: I5 Branch 224 IF_ICMPNE L2227 - true: 517
+Number of times BBC is called for com.google.javascript.rhino.Node.addChildBefore(Lcom/google/javascript/rhino/Node;Lcom/google/javascript/rhino/Node;)V: I7 Branch 75 IF_ACMPNE L640 - false: 651
+Number of times BBC is called for com.google.javascript.rhino.Node.isArrayLit()Z: I5 Branch 224 IF_ICMPNE L2227 - false: 1573
+Number of times BBC is called for com.google.javascript.rhino.Node.addChildBefore(Lcom/google/javascript/rhino/Node;Lcom/google/javascript/rhino/Node;)V: I19 Branch 76 IFNONNULL L642 - true: 9898
+Number of times BBC is called for com.google.javascript.rhino.Node.mayMutateArguments()Z: I7 Branch 219 IFNE L2161 - true: 1653
+Number of times BBC is called for com.google.javascript.rhino.Node$SiblingNodeIterable.hasNext()Z: I4 Branch 291 IFNULL L1294 - true: 22247
+Number of times BBC is called for com.google.javascript.rhino.Node.addChildBefore(Lcom/google/javascript/rhino/Node;Lcom/google/javascript/rhino/Node;)V: I31 Branch 77 IFNONNULL L644 - true: 968
+Number of times BBC is called for com.google.javascript.rhino.Node.addChildBefore(Lcom/google/javascript/rhino/Node;Lcom/google/javascript/rhino/Node;)V: I19 Branch 76 IFNONNULL L642 - false: 968
+Number of times BBC is called for com.google.javascript.rhino.Node.mayMutateArguments()Z: I7 Branch 219 IFNE L2161 - false: 134
+Number of times BBC is called for com.google.javascript.rhino.Node$SiblingNodeIterable.hasNext()Z: I4 Branch 291 IFNULL L1294 - false: 22247
+Number of times BBC is called for com.google.javascript.rhino.Node.isBreak()Z: Line 2243: 752
+Number of times BBC is called for com.google.javascript.rhino.Node.addChildBefore(Lcom/google/javascript/rhino/Node;Lcom/google/javascript/rhino/Node;)V: I31 Branch 77 IFNONNULL L644 - false: 3598
+Number of times BBC is called for com.google.javascript.rhino.Node.setQuotedString()V: root-Branch: 2965
+Number of times BBC is called for com.google.javascript.rhino.Node$SiblingNodeIterable.next()Lcom/google/javascript/rhino/Node;: I4 Branch 292 IFNONNULL L1299 - false: 22247
+Number of times BBC is called for com.google.javascript.rhino.Node.isAdd()Z: I5 Branch 222 IF_ICMPNE L2219 - true: 134
+Number of times BBC is called for com.google.javascript.rhino.Node.isUnscopedQualifiedName()Z: I4 Branch 197 LOOKUPSWITCH L1616 Default-Case - true: 134
+Number of times BBC is called for com.google.javascript.rhino.Node$IntPropListItem.toString()Ljava/lang/String;: Line 349: 22247
+Number of times BBC is called for com.google.javascript.rhino.Node$SiblingNodeIterable.next()Lcom/google/javascript/rhino/Node;: I4 Branch 292 IFNONNULL L1299 - true: 22247
+Number of times BBC is called for com.google.javascript.rhino.Node.setSideEffectFlags(I)V: Line 2031: 3014
+Number of times BBC is called for com.google.javascript.rhino.Node$AncestorIterable.iterator()Ljava/util/Iterator;: root-Branch: 4726
+Number of times BBC is called for com.google.javascript.rhino.Node.isAdd()Z: I5 Branch 222 IF_ICMPNE L2219 - false: 6792
+Number of times BBC is called for com.google.javascript.rhino.Node.getSourcePosition()I: root-Branch: 134
+Number of times BBC is called for com.google.javascript.rhino.Node.isFor()Z: I5 Branch 243 IF_ICMPNE L2303 - false: 5041
+Number of times BBC is called for com.google.javascript.rhino.Node.isInc()Z: I5 Branch 251 IF_ICMPNE L2335 - true: 752
+Number of times BBC is called for com.google.javascript.rhino.Node.isEquivalentToTyped(Lcom/google/javascript/rhino/Node;)Z: root-Branch: 134
+Number of times BBC is called for com.google.javascript.rhino.Node.addChildToFront(Lcom/google/javascript/rhino/Node;)V: I42 Branch 67 IFNONNULL L601 - false: 134
+Number of times BBC is called for com.google.javascript.rhino.Node.setSideEffectFlags(I)V: Line 2032: 3014
+Number of times BBC is called for com.google.javascript.rhino.Node.isFor()Z: I5 Branch 243 IF_ICMPNE L2303 - true: 995
+Number of times BBC is called for com.google.javascript.rhino.Node.addChildrenAfter(Lcom/google/javascript/rhino/Node;Lcom/google/javascript/rhino/Node;)V: I3 Branch 80 IFNULL L669 - true: 54
+Number of times BBC is called for com.google.javascript.rhino.Node.isEquivalentTo(Lcom/google/javascript/rhino/Node;ZZZ)Z: I6 Branch 165 IF_ICMPNE L1517 - false: 50
+Number of times BBC is called for com.google.javascript.rhino.Node.addChildToFront(Lcom/google/javascript/rhino/Node;)V: I42 Branch 67 IFNONNULL L601 - true: 664
+Number of times BBC is called for com.google.javascript.rhino.Node.clonePropsFrom(Lcom/google/javascript/rhino/Node;)Lcom/google/javascript/rhino/Node;: Line 781: 1828
+Number of times BBC is called for com.google.javascript.rhino.Node.isInc()Z: I5 Branch 251 IF_ICMPNE L2335 - false: 2003
+Number of times BBC is called for com.google.javascript.rhino.Node.clonePropsFrom(Lcom/google/javascript/rhino/Node;)Lcom/google/javascript/rhino/Node;: Line 778: 1828
+Number of times BBC is called for com.google.javascript.rhino.Node.clonePropsFrom(Lcom/google/javascript/rhino/Node;)Lcom/google/javascript/rhino/Node;: Line 780: 1828
+Number of times BBC is called for com.google.javascript.rhino.Node.propToString(I)Ljava/lang/String;: I3 Branch 14 TABLESWITCH L114 Case 42 - true: 1401
+Number of times BBC is called for com.google.javascript.rhino.Node$AncestorIterable$1.next()Lcom/google/javascript/rhino/Node;: I4 Branch 300 IFNE L1370 - false: 22247
+Number of times BBC is called for com.google.javascript.rhino.Node.setDirectives(Ljava/util/Set;)V: root-Branch: 3653
+Number of times BBC is called for com.google.javascript.rhino.Node.isSwitch()Z: Line 2411: 517
+Number of times BBC is called for com.google.javascript.rhino.Node.<init>(ILcom/google/javascript/rhino/Node;Lcom/google/javascript/rhino/Node;Lcom/google/javascript/rhino/Node;Lcom/google/javascript/rhino/Node;)V: I52 Branch 47 IFNONNULL L423 - true: 179
+Number of times BBC is called for com.google.javascript.rhino.Node.isTypeOf()Z: I5 Branch 275 IF_ICMPNE L2431 - true: 1985
+Number of times BBC is called for com.google.javascript.rhino.Node$ObjectPropListItem.getIntValue()I: root-Branch: 22247
+Number of times BBC is called for com.google.javascript.rhino.Node.hasOneChild()Z: I9 Branch 149 IF_ACMPNE L1393 - false: 562
+Number of times BBC is called for com.google.javascript.rhino.Node.addChildrenToFront(Lcom/google/javascript/rhino/Node;)V: I6 Branch 71 IFNULL L620 - false: 631
+Number of times BBC is called for com.google.javascript.rhino.Node.isTry()Z: Line 2427: 317
+Number of times BBC is called for com.google.javascript.rhino.Node$AncestorIterable$1.next()Lcom/google/javascript/rhino/Node;: I4 Branch 300 IFNE L1370 - true: 22247
+Number of times BBC is called for com.google.javascript.rhino.Node.<init>(ILcom/google/javascript/rhino/Node;Lcom/google/javascript/rhino/Node;Lcom/google/javascript/rhino/Node;Lcom/google/javascript/rhino/Node;)V: I85 Branch 50 IFNONNULL L426 - true: 3333
+Number of times BBC is called for com.google.javascript.rhino.Node.isThrow()Z: Line 2419: 1828
+Number of times BBC is called for com.google.javascript.rhino.Node.hasChild(Lcom/google/javascript/rhino/Node;)Z: Line 1416: 1985
+Number of times BBC is called for com.google.javascript.rhino.Node.isWith()Z: I5 Branch 279 IF_ICMPNE L2447 - false: 9093
+Number of times BBC is called for com.google.javascript.rhino.Node.isUnscopedQualifiedName()Z: I4 Branch 197 LOOKUPSWITCH L1616 Default-Case - false: 5750
+Number of times BBC is called for com.google.javascript.rhino.Node$StringNode.setQuotedString()V: Line 252: 5643
+Number of times BBC is called for com.google.javascript.rhino.Node.isTypeOf()Z: I5 Branch 275 IF_ICMPNE L2431 - false: 4774
+Number of times BBC is called for com.google.javascript.rhino.Node$StringNode.setQuotedString()V: Line 253: 5643
+Number of times BBC is called for com.google.javascript.rhino.Node.hasOneChild()Z: I9 Branch 149 IF_ACMPNE L1393 - true: 1446
+Number of times BBC is called for com.google.javascript.rhino.Node.propToString(I)Ljava/lang/String;: I3 Branch 14 TABLESWITCH L114 Case 42 - false: 871
+Number of times BBC is called for com.google.javascript.rhino.Node.addChildrenToFront(Lcom/google/javascript/rhino/Node;)V: I6 Branch 71 IFNULL L620 - true: 631
+Number of times BBC is called for com.google.javascript.rhino.Node$SiblingNodeIterable.remove()V: Line 1311: 22247
+Number of times BBC is called for com.google.javascript.rhino.Node.getString()Ljava/lang/String;: I5 Branch 115 IF_ICMPNE L912 - true: 224
+Number of times BBC is called for com.google.javascript.rhino.Node.children()Ljava/lang/Iterable;: I4 Branch 144 IFNONNULL L1241 - true: 468
+Number of times BBC is called for com.google.javascript.rhino.Node.isString()Z: I5 Branch 268 IF_ICMPNE L2403 - true: 277
+Number of times BBC is called for com.google.javascript.rhino.Node.propToString(I)Ljava/lang/String;: I3 Branch 7 TABLESWITCH L114 Case 35 - false: 871
+Number of times BBC is called for com.google.javascript.rhino.Node.propToString(I)Ljava/lang/String;: I3 Branch 16 TABLESWITCH L114 Case 44 - true: 1470
+Number of times BBC is called for com.google.javascript.rhino.Node.useSourceInfoIfMissingFromForTree(Lcom/google/javascript/rhino/Node;)Lcom/google/javascript/rhino/Node;: Line 1832: 134
+Number of times BBC is called for com.google.javascript.rhino.Node.children()Ljava/lang/Iterable;: I4 Branch 144 IFNONNULL L1241 - false: 134
+Number of times BBC is called for com.google.javascript.rhino.Node.propToString(I)Ljava/lang/String;: I3 Branch 7 TABLESWITCH L114 Case 35 - true: 1513
+Number of times BBC is called for com.google.javascript.rhino.Node.propToString(I)Ljava/lang/String;: I3 Branch 25 TABLESWITCH L114 Case 53 - false: 871
+Number of times BBC is called for com.google.javascript.rhino.Node.isDefaultCase()Z: Line 2279: 631
+Number of times BBC is called for com.google.javascript.rhino.Node.addChildrenAfter(Lcom/google/javascript/rhino/Node;Lcom/google/javascript/rhino/Node;)V: I52 Branch 84 IFNULL L676 - true: 54
+Number of times BBC is called for com.google.javascript.rhino.Node.addChildrenAfter(Lcom/google/javascript/rhino/Node;Lcom/google/javascript/rhino/Node;)V: I52 Branch 84 IFNULL L676 - false: 60
+Number of times BBC is called for com.google.javascript.rhino.Node.propToString(I)Ljava/lang/String;: I3 Branch 16 TABLESWITCH L114 Case 44 - false: 871
+Number of times BBC is called for com.google.javascript.rhino.Node.isString()Z: I5 Branch 268 IF_ICMPNE L2403 - false: 224
+Number of times BBC is called for com.google.javascript.rhino.Node.propToString(I)Ljava/lang/String;: I3 Branch 25 TABLESWITCH L114 Case 53 - true: 1385
+Number of times BBC is called for com.google.javascript.rhino.Node.addChildrenAfter(Lcom/google/javascript/rhino/Node;Lcom/google/javascript/rhino/Node;)V: Line 670: 34
+Number of times BBC is called for com.google.javascript.rhino.Node.cloneTree()Lcom/google/javascript/rhino/Node;: I27 Branch 207 IFNULL L1724 - false: 752
+Number of times BBC is called for com.google.javascript.rhino.Node.addSuppression(Ljava/lang/String;)V: I4 Branch 216 IFNONNULL L1974 - true: 3595
+Number of times BBC is called for com.google.javascript.rhino.Node.addChildrenAfter(Lcom/google/javascript/rhino/Node;Lcom/google/javascript/rhino/Node;)V: Line 672: 7
+Number of times BBC is called for com.google.javascript.rhino.Node.checkTreeEqualsImpl(Lcom/google/javascript/rhino/Node;)Lcom/google/javascript/rhino/Node$NodeMismatch;: I8 Branch 156 IFNE L1446 - false: 317
+Number of times BBC is called for com.google.javascript.rhino.Node.isAssignAdd()Z: Line 2235: 134
+Number of times BBC is called for com.google.javascript.rhino.Node.toString(Ljava/lang/StringBuilder;ZZZ)V: I43 Branch 120 IFNULL L961 - false: 682
+Number of times BBC is called for com.google.javascript.rhino.Node$SiblingNodeIterable.remove()V: root-Branch: 22247
+Number of times BBC is called for com.google.javascript.rhino.Node.cloneTree()Lcom/google/javascript/rhino/Node;: I27 Branch 207 IFNULL L1724 - true: 752
+Number of times BBC is called for com.google.javascript.rhino.Node.isSetterDef()Z: Line 2399: 317
+Number of times BBC is called for com.google.javascript.rhino.Node.getQualifiedName()Ljava/lang/String;: I37 Branch 188 IFNONNULL L1582 - false: 1484
+Number of times BBC is called for com.google.javascript.rhino.Node.isContinue()Z: I5 Branch 234 IF_ICMPNE L2267 - false: 5061
+Number of times BBC is called for com.google.javascript.rhino.Node.getString()Ljava/lang/String;: I5 Branch 115 IF_ICMPNE L912 - false: 1664
+Number of times BBC is called for com.google.javascript.rhino.Node.isScript()Z: I5 Branch 266 IF_ICMPNE L2395 - false: 2981
+Number of times BBC is called for com.google.javascript.rhino.Node.<init>(I[Lcom/google/javascript/rhino/Node;)V: I18 Branch 51 IFEQ L478 - true: 855
+Number of times BBC is called for com.google.javascript.rhino.Node.getQualifiedName()Ljava/lang/String;: I37 Branch 188 IFNONNULL L1582 - true: 1484
+Number of times BBC is called for com.google.javascript.rhino.Node.mayMutateGlobalStateOrThrow()Z: Line 2166: 134
+Number of times BBC is called for com.google.javascript.rhino.Node$NodeMismatch.hashCode()I: root-Branch: 22247
+Number of times BBC is called for com.google.javascript.rhino.Node.isEquivalentTo(Lcom/google/javascript/rhino/Node;ZZZ)Z: I142 Branch 179 IF_ICMPEQ L1548 - false: 718
+Number of times BBC is called for com.google.javascript.rhino.Node.addChildrenAfter(Lcom/google/javascript/rhino/Node;Lcom/google/javascript/rhino/Node;)V: Line 692: 54
+Number of times BBC is called for com.google.javascript.rhino.Node.isScript()Z: I5 Branch 266 IF_ICMPNE L2395 - true: 517
+Number of times BBC is called for com.google.javascript.rhino.Node$AncestorIterable.iterator()Ljava/util/Iterator;: Line 1362: 4726
+Number of times BBC is called for com.google.javascript.rhino.Node.<init>(ILcom/google/javascript/rhino/Node;Lcom/google/javascript/rhino/Node;Lcom/google/javascript/rhino/Node;Lcom/google/javascript/rhino/Node;)V: I74 Branch 49 IFNONNULL L425 - true: 314
+Number of times BBC is called for com.google.javascript.rhino.Node.isUnscopedQualifiedName()Z: I4 Branch 196 LOOKUPSWITCH L1616 Case 38 - true: 4781
+Number of times BBC is called for com.google.javascript.rhino.Node.useSourceInfoIfMissingFrom(Lcom/google/javascript/rhino/Node;)Lcom/google/javascript/rhino/Node;: I19 Branch 214 IFNONNULL L1813 - false: 134
+Number of times BBC is called for com.google.javascript.rhino.Node.useSourceInfoIfMissingFrom(Lcom/google/javascript/rhino/Node;)Lcom/google/javascript/rhino/Node;: I19 Branch 214 IFNONNULL L1813 - true: 3706
+Number of times BBC is called for com.google.javascript.rhino.Node.getChangeTime()I: Line 1899: 415
+Number of times BBC is called for com.google.javascript.rhino.Node.isLabel()Z: Line 2343: 1119
+Number of times BBC is called for com.google.javascript.rhino.Node.isString()Z: Line 2403: 224
+Number of times BBC is called for com.google.javascript.rhino.Node.getChildBefore(Lcom/google/javascript/rhino/Node;)Lcom/google/javascript/rhino/Node;: I20 Branch 59 IF_ACMPEQ L555 - false: 243
+Number of times BBC is called for com.google.javascript.rhino.Node.isEquivalentTo(Lcom/google/javascript/rhino/Node;ZZZ)Z: I142 Branch 179 IF_ICMPEQ L1548 - true: 718
+Number of times BBC is called for com.google.javascript.rhino.Node.addChildrenAfter(Lcom/google/javascript/rhino/Node;Lcom/google/javascript/rhino/Node;)V: Line 675: 54
+Number of times BBC is called for com.google.javascript.rhino.Node.getIndexOfChild(Lcom/google/javascript/rhino/Node;)I: I12 Branch 62 IFNULL L576 - false: 2951
+Number of times BBC is called for com.google.javascript.rhino.Node.addChildrenAfter(Lcom/google/javascript/rhino/Node;Lcom/google/javascript/rhino/Node;)V: Line 676: 54
+Number of times BBC is called for com.google.javascript.rhino.Node.replaceChild(Lcom/google/javascript/rhino/Node;Lcom/google/javascript/rhino/Node;)V: Line 715: 995
+Number of times BBC is called for com.google.javascript.rhino.Node.getChildBefore(Lcom/google/javascript/rhino/Node;)Lcom/google/javascript/rhino/Node;: I20 Branch 59 IF_ACMPEQ L555 - true: 354
+Number of times BBC is called for com.google.javascript.rhino.Node.replaceChild(Lcom/google/javascript/rhino/Node;Lcom/google/javascript/rhino/Node;)V: Line 717: 995
+Number of times BBC is called for com.google.javascript.rhino.Node.addChildToFront(Lcom/google/javascript/rhino/Node;)V: Line 601: 134
+Number of times BBC is called for com.google.javascript.rhino.Node.addChildToFront(Lcom/google/javascript/rhino/Node;)V: Line 604: 134
+Number of times BBC is called for com.google.javascript.rhino.Node$IntPropListItem.getObjectValue()Ljava/lang/Object;: Line 344: 11352
+Number of times BBC is called for com.google.javascript.rhino.Node.replaceChild(Lcom/google/javascript/rhino/Node;Lcom/google/javascript/rhino/Node;)V: Line 721: 995
+Number of times BBC is called for com.google.javascript.rhino.Node.isName()Z: I5 Branch 255 IF_ICMPNE L2351 - false: 10608
+Number of times BBC is called for com.google.javascript.rhino.Node.getIndexOfChild(Lcom/google/javascript/rhino/Node;)I: I12 Branch 62 IFNULL L576 - true: 2135
+Number of times BBC is called for com.google.javascript.rhino.Node.replaceChild(Lcom/google/javascript/rhino/Node;Lcom/google/javascript/rhino/Node;)V: Line 723: 995
+Number of times BBC is called for com.google.javascript.rhino.Node.isName()Z: I5 Branch 255 IF_ICMPNE L2351 - true: 3316
+Number of times BBC is called for com.google.javascript.rhino.Node.replaceChild(Lcom/google/javascript/rhino/Node;Lcom/google/javascript/rhino/Node;)V: Line 724: 995
+Number of times BBC is called for com.google.javascript.rhino.Node.propToString(I)Ljava/lang/String;: I3 Branch 24 TABLESWITCH L114 Case 52 - false: 871
+Number of times BBC is called for com.google.javascript.rhino.Node.replaceChild(Lcom/google/javascript/rhino/Node;Lcom/google/javascript/rhino/Node;)V: Line 725: 995
+Number of times BBC is called for com.google.javascript.rhino.Node.setWasEmptyNode(Z)V: root-Branch: 1672
+Number of times BBC is called for com.google.javascript.rhino.Node.propToString(I)Ljava/lang/String;: I3 Branch 24 TABLESWITCH L114 Case 52 - true: 1198
+Number of times BBC is called for com.google.javascript.rhino.Node.addChildToFront(Lcom/google/javascript/rhino/Node;)V: Line 596: 134
+Number of times BBC is called for com.google.javascript.rhino.Node.areBitFlagsSet(II)Z: I6 Branch 221 IF_ICMPNE L2174 - false: 975
+Number of times BBC is called for com.google.javascript.rhino.Node.replaceChild(Lcom/google/javascript/rhino/Node;Lcom/google/javascript/rhino/Node;)V: Line 729: 1612
+Number of times BBC is called for com.google.javascript.rhino.Node.addChildToFront(Lcom/google/javascript/rhino/Node;)V: Line 598: 134
+Number of times BBC is called for com.google.javascript.rhino.Node.isUnscopedQualifiedName()Z: I4 Branch 196 LOOKUPSWITCH L1616 Case 38 - false: 134
+Number of times BBC is called for com.google.javascript.rhino.Node.propToString(I)Ljava/lang/String;: I3 Branch 15 TABLESWITCH L114 Case 43 - false: 871
+Number of times BBC is called for com.google.javascript.rhino.Node.replaceChild(Lcom/google/javascript/rhino/Node;Lcom/google/javascript/rhino/Node;)V: Line 731: 2673
+Number of times BBC is called for com.google.javascript.rhino.Node.addChildToFront(Lcom/google/javascript/rhino/Node;)V: Line 597: 134
+Number of times BBC is called for com.google.javascript.rhino.Node.addChildToFront(Lcom/google/javascript/rhino/Node;)V: Line 600: 134
+Number of times BBC is called for com.google.javascript.rhino.Node.addChildToFront(Lcom/google/javascript/rhino/Node;)V: Line 599: 134
+Number of times BBC is called for com.google.javascript.rhino.Node.replaceChild(Lcom/google/javascript/rhino/Node;Lcom/google/javascript/rhino/Node;)V: Line 734: 2673
+Number of times BBC is called for com.google.javascript.rhino.Node$IntPropListItem.chain(Lcom/google/javascript/rhino/Node$PropListItem;)Lcom/google/javascript/rhino/Node$PropListItem;: root-Branch: 22247
+Number of times BBC is called for com.google.javascript.rhino.Node.replaceChild(Lcom/google/javascript/rhino/Node;Lcom/google/javascript/rhino/Node;)V: Line 735: 2673
+Number of times BBC is called for com.google.javascript.rhino.Node.isReturn()Z: I5 Branch 265 IF_ICMPNE L2391 - false: 5667
+Number of times BBC is called for com.google.javascript.rhino.Node.replaceChild(Lcom/google/javascript/rhino/Node;Lcom/google/javascript/rhino/Node;)V: Line 736: 2673
+Number of times BBC is called for com.google.javascript.rhino.Node.isBlock()Z: I5 Branch 227 IF_ICMPNE L2239 - false: 1259
+Number of times BBC is called for com.google.javascript.rhino.Node.propToString(I)Ljava/lang/String;: I3 Branch 6 TABLESWITCH L114 Case 34 - false: 871
+Number of times BBC is called for com.google.javascript.rhino.Node.propToString(I)Ljava/lang/String;: I3 Branch 15 TABLESWITCH L114 Case 43 - true: 1416
+Number of times BBC is called for com.google.javascript.rhino.Node.isNull()Z: I5 Branch 259 IF_ICMPNE L2367 - true: 415
+Number of times BBC is called for com.google.javascript.rhino.Node.toString(Ljava/lang/StringBuilder;ZZZ)V: I32 Branch 119 IF_ICMPNE L956 - false: 682
+Number of times BBC is called for com.google.javascript.rhino.Node.isReturn()Z: I5 Branch 265 IF_ICMPNE L2391 - true: 3653
+Number of times BBC is called for com.google.javascript.rhino.Node.propToString(I)Ljava/lang/String;: I3 Branch 6 TABLESWITCH L114 Case 34 - true: 1513
+Number of times BBC is called for com.google.javascript.rhino.Node.isNull()Z: I5 Branch 259 IF_ICMPNE L2367 - false: 2567
+Number of times BBC is called for com.google.javascript.rhino.Node.<init>(ILcom/google/javascript/rhino/Node;Lcom/google/javascript/rhino/Node;Lcom/google/javascript/rhino/Node;)V: I8 Branch 37 IFNONNULL L399 - true: 8
+Number of times BBC is called for com.google.javascript.rhino.Node.cloneTree()Lcom/google/javascript/rhino/Node;: Line 1732: 871
+Number of times BBC is called for com.google.javascript.rhino.Node.isParamList()Z: Line 2383: 1258
+Number of times BBC is called for com.google.javascript.rhino.Node.isLocalResultCall()Z: Line 2156: 134
+Number of times BBC is called for com.google.javascript.rhino.Node.addChildrenAfter(Lcom/google/javascript/rhino/Node;Lcom/google/javascript/rhino/Node;)V: I86 Branch 86 IFNULL L685 - false: 221
+Number of times BBC is called for com.google.javascript.rhino.Node$NodeMismatch.equals(Ljava/lang/Object;)Z: Line 2202: 2135
+Number of times BBC is called for com.google.javascript.rhino.Node.isLabel()Z: I5 Branch 253 IF_ICMPNE L2343 - false: 6971
+Number of times BBC is called for com.google.javascript.rhino.Node.isQualifiedName()Z: I10 Branch 194 IFLE L1600 - true: 2681
+Number of times BBC is called for com.google.javascript.rhino.Node.isWhile()Z: I5 Branch 278 IF_ICMPNE L2443 - false: 3233
+Number of times BBC is called for com.google.javascript.rhino.Node.cloneTree()Lcom/google/javascript/rhino/Node;: Line 1720: 871
+Number of times BBC is called for com.google.javascript.rhino.Node.isWhile()Z: I5 Branch 278 IF_ICMPNE L2443 - true: 871
+Number of times BBC is called for com.google.javascript.rhino.Node.cloneTree()Lcom/google/javascript/rhino/Node;: Line 1721: 871
+Number of times BBC is called for com.google.javascript.rhino.Node.isUnscopedQualifiedName()Z: Line 1616: 134
+Number of times BBC is called for com.google.javascript.rhino.Node.hasMoreThanOneChild()Z: Line 1403: 415
+Number of times BBC is called for com.google.javascript.rhino.Node.propToString(I)Ljava/lang/String;: I3 Branch 8 TABLESWITCH L114 Case 36 - false: 871
+Number of times BBC is called for com.google.javascript.rhino.Node.isLabel()Z: I5 Branch 253 IF_ICMPNE L2343 - true: 1119
+Number of times BBC is called for com.google.javascript.rhino.Node.srcref(Lcom/google/javascript/rhino/Node;)Lcom/google/javascript/rhino/Node;: Line 1783: 134
+Number of times BBC is called for com.google.javascript.rhino.Node$StringNode.setString(Ljava/lang/String;)V: I4 Branch 286 IF_ACMPNE L223 - true: 47
+Number of times BBC is called for com.google.javascript.rhino.Node.detachFromParent()Lcom/google/javascript/rhino/Node;: I4 Branch 199 IFNULL L1634 - true: 28
+Number of times BBC is called for com.google.javascript.rhino.Node.isQuotedString()Z: Line 2181: 47
+Number of times BBC is called for com.google.javascript.rhino.Node.checkTreeEqualsImpl(Lcom/google/javascript/rhino/Node;)Lcom/google/javascript/rhino/Node$NodeMismatch;: I39 Branch 159 IFNONNULL L1455 - true: 152
+Number of times BBC is called for com.google.javascript.rhino.Node.propToString(I)Ljava/lang/String;: I3 Branch 8 TABLESWITCH L114 Case 36 - true: 1325
+Number of times BBC is called for com.google.javascript.rhino.Node.getQualifiedName()Ljava/lang/String;: I62 Branch 189 IF_ICMPNE L1586 - false: 1041
+Number of times BBC is called for com.google.javascript.rhino.Node.putBooleanProp(IZ)V: I5 Branch 109 IFEQ L852 - true: 19
+Number of times BBC is called for com.google.javascript.rhino.Node$SiblingNodeIterable.next()Lcom/google/javascript/rhino/Node;: Line 1299: 22247
+Number of times BBC is called for com.google.javascript.rhino.Node.isFunction()Z: I5 Branch 244 IF_ICMPNE L2307 - true: 47
+Number of times BBC is called for com.google.javascript.rhino.Node$StringNode.setString(Ljava/lang/String;)V: I4 Branch 286 IF_ACMPNE L223 - false: 171
+Number of times BBC is called for com.google.javascript.rhino.Node.isObjectLit()Z: I5 Branch 261 IF_ICMPNE L2375 - true: 995
+Number of times BBC is called for com.google.javascript.rhino.Node.setCharno(I)V: root-Branch: 415
+Number of times BBC is called for com.google.javascript.rhino.Node$FileLevelJsDocBuilder.append(Ljava/lang/String;)V: I25 Branch 297 IFNONNULL L1867 - true: 7078
+Number of times BBC is called for com.google.javascript.rhino.Node.isObjectLit()Z: I5 Branch 261 IF_ICMPNE L2375 - false: 4492
+Number of times BBC is called for com.google.javascript.rhino.Node.getChildAtIndex(I)Lcom/google/javascript/rhino/Node;: Line 565: 1985
+Number of times BBC is called for com.google.javascript.rhino.Node.getDouble()D: I5 Branch 113 IF_ICMPNE L889 - false: 2377
+Number of times BBC is called for com.google.javascript.rhino.Node.isTry()Z: I5 Branch 274 IF_ICMPNE L2427 - false: 5058
+Number of times BBC is called for com.google.javascript.rhino.Node.getChildAtIndex(I)Lcom/google/javascript/rhino/Node;: Line 570: 3388
+Number of times BBC is called for com.google.javascript.rhino.Node.getSortedPropTypes()[I: I33 Branch 112 IFNULL L878 - false: 152
+Number of times BBC is called for com.google.javascript.rhino.Node.setLineno(I)V: I9 Branch 137 IF_ICMPNE L1165 - true: 504
+Number of times BBC is called for com.google.javascript.rhino.Node.isEquivalentTo(Lcom/google/javascript/rhino/Node;ZZZ)Z: I24 Branch 168 IFEQ L1523 - false: 21
+Number of times BBC is called for com.google.javascript.rhino.Node.propToString(I)Ljava/lang/String;: I3 Branch 1 TABLESWITCH L114 Case 29 - false: 871
+Number of times BBC is called for com.google.javascript.rhino.Node.getQualifiedName()Ljava/lang/String;: Line 1577: 317
+Number of times BBC is called for com.google.javascript.rhino.Node.isTry()Z: I5 Branch 274 IF_ICMPNE L2427 - true: 317
+Number of times BBC is called for com.google.javascript.rhino.Node.addChildrenToBack(Lcom/google/javascript/rhino/Node;)V: Line 633: 871
+Number of times BBC is called for com.google.javascript.rhino.Node$NumberNode.isEquivalentTo(Lcom/google/javascript/rhino/Node;ZZZ)Z: Line 174: 66
+Number of times BBC is called for com.google.javascript.rhino.Node.addChildrenToBack(Lcom/google/javascript/rhino/Node;)V: Line 634: 973
+Number of times BBC is called for com.google.javascript.rhino.Node.setIsSyntheticBlock(Z)V: Line 1944: 317
+Number of times BBC is called for com.google.javascript.rhino.Node.isCast()Z: Line 2255: 517
+Number of times BBC is called for com.google.javascript.rhino.Node.isNE()Z: Line 2355: 2294
+Number of times BBC is called for com.google.javascript.rhino.Node.isOr()Z: I5 Branch 262 IF_ICMPNE L2379 - false: 1326
+Number of times BBC is called for com.google.javascript.rhino.Node.addChildrenAfter(Lcom/google/javascript/rhino/Node;Lcom/google/javascript/rhino/Node;)V: I73 Branch 85 IF_ACMPNE L680 - true: 3549
+Number of times BBC is called for com.google.javascript.rhino.Node.isName()Z: Line 2351: 3316
+Number of times BBC is called for com.google.javascript.rhino.Node.addChildrenAfter(Lcom/google/javascript/rhino/Node;Lcom/google/javascript/rhino/Node;)V: I73 Branch 85 IF_ACMPNE L680 - false: 6
+Number of times BBC is called for com.google.javascript.rhino.Node.setLineno(I)V: I9 Branch 137 IF_ICMPNE L1165 - false: 415
+Number of times BBC is called for com.google.javascript.rhino.Node.propToString(I)Ljava/lang/String;: I3 Branch 30 TABLESWITCH L114 Default-Case - true: 975
+Number of times BBC is called for com.google.javascript.rhino.Node.<init>(ILcom/google/javascript/rhino/Node;Lcom/google/javascript/rhino/Node;Lcom/google/javascript/rhino/Node;)V: I63 Branch 42 IFNONNULL L404 - true: 2959
+Number of times BBC is called for com.google.javascript.rhino.Node.extractCharno(I)I: Line 1221: 134
+Number of times BBC is called for com.google.javascript.rhino.Node$NumberNode.isEquivalentTo(Lcom/google/javascript/rhino/Node;ZZZ)Z: I43 Branch 283 IFNE L179 - true: 2728
+Number of times BBC is called for com.google.javascript.rhino.Node.isLabelName()Z: I5 Branch 254 IF_ICMPNE L2347 - false: 887
+Number of times BBC is called for com.google.javascript.rhino.Node.isRegExp()Z: I5 Branch 264 IF_ICMPNE L2387 - true: 134
+Number of times BBC is called for com.google.javascript.rhino.Node.setSideEffectFlags(I)V: I5 Branch 217 IF_ICMPEQ L2026 - true: 2034
+Number of times BBC is called for com.google.javascript.rhino.Node.checkTreeEquals(Lcom/google/javascript/rhino/Node;)Ljava/lang/String;: I9 Branch 155 IFNULL L1430 - true: 1230
+Number of times BBC is called for com.google.javascript.rhino.Node.isGetProp()Z: Line 2319: 517
+Number of times BBC is called for com.google.javascript.rhino.Node.<init>(ILcom/google/javascript/rhino/Node;Lcom/google/javascript/rhino/Node;Lcom/google/javascript/rhino/Node;)V: I52 Branch 41 IFNONNULL L403 - true: 956
+Number of times BBC is called for com.google.javascript.rhino.Node.getExistingIntProp(I)I: I9 Branch 107 IFNONNULL L838 - true: 5302
+Number of times BBC is called for com.google.javascript.rhino.Node.isLabelName()Z: I5 Branch 254 IF_ICMPNE L2347 - true: 47
+Number of times BBC is called for com.google.javascript.rhino.Node.addChildBefore(Lcom/google/javascript/rhino/Node;Lcom/google/javascript/rhino/Node;)V: I3 Branch 74 IFNULL L640 - false: 317
+Number of times BBC is called for com.google.javascript.rhino.Node.isFunction()Z: I5 Branch 244 IF_ICMPNE L2307 - false: 1699
+Number of times BBC is called for com.google.javascript.rhino.Node.copyInformationFromForTree(Lcom/google/javascript/rhino/Node;)Lcom/google/javascript/rhino/Node;: I14 Branch 211 IFNULL L1764 - true: 995
+Number of times BBC is called for com.google.javascript.rhino.Node$AncestorIterable$1.<init>(Lcom/google/javascript/rhino/Node$AncestorIterable;)V: root-Branch: 4726
+Number of times BBC is called for com.google.javascript.rhino.Node.isEquivalentTo(Lcom/google/javascript/rhino/Node;ZZZ)Z: I150 Branch 180 IFEQ L1553 - false: 74
+Number of times BBC is called for com.google.javascript.rhino.Node$ObjectPropListItem.toString()Ljava/lang/String;: Line 317: 22247
+Number of times BBC is called for com.google.javascript.rhino.Node.addChildBefore(Lcom/google/javascript/rhino/Node;Lcom/google/javascript/rhino/Node;)V: I3 Branch 74 IFNULL L640 - true: 10058
+Number of times BBC is called for com.google.javascript.rhino.Node$StringNode.<init>(ILjava/lang/String;)V: I9 Branch 284 IF_ACMPNE L194 - false: 21
+Number of times BBC is called for com.google.javascript.rhino.Node.removeChildAfter(Lcom/google/javascript/rhino/Node;)Lcom/google/javascript/rhino/Node;: Line 1684: 3535
+Number of times BBC is called for com.google.javascript.rhino.Node$StringNode.setQuotedString()V: root-Branch: 5643
+Number of times BBC is called for com.google.javascript.rhino.Node.<init>(ILcom/google/javascript/rhino/Node;Lcom/google/javascript/rhino/Node;Lcom/google/javascript/rhino/Node;Lcom/google/javascript/rhino/Node;)V: I19 Branch 44 IFNONNULL L420 - true: 3424
+Number of times BBC is called for com.google.javascript.rhino.Node$StringNode.isEquivalentTo(Lcom/google/javascript/rhino/Node;ZZZ)Z: I15 Branch 288 IFLE L232 - false: 87
+Number of times BBC is called for com.google.javascript.rhino.Node.copyInformationFromForTree(Lcom/google/javascript/rhino/Node;)Lcom/google/javascript/rhino/Node;: I14 Branch 211 IFNULL L1764 - false: 1249
+Number of times BBC is called for com.google.javascript.rhino.Node.isEquivalentTo(Lcom/google/javascript/rhino/Node;ZZZ)Z: I100 Branch 176 IF_ICMPEQ L1537 - false: 864
+Number of times BBC is called for com.google.javascript.rhino.Node.isRegExp()Z: I5 Branch 264 IF_ICMPNE L2387 - false: 2133
+Number of times BBC is called for com.google.javascript.rhino.Node$StringNode.isEquivalentTo(Lcom/google/javascript/rhino/Node;ZZZ)Z: I15 Branch 288 IFLE L232 - true: 490
+Number of times BBC is called for com.google.javascript.rhino.Node.isEquivalentTo(Lcom/google/javascript/rhino/Node;ZZZ)Z: I100 Branch 176 IF_ICMPEQ L1537 - true: 864
+Number of times BBC is called for com.google.javascript.rhino.Node.isExprResult()Z: Line 2295: 517
+Number of times BBC is called for com.google.javascript.rhino.Node.isIn()Z: I5 Branch 250 IF_ICMPNE L2331 - false: 928
+Number of times BBC is called for com.google.javascript.rhino.Node$NumberNode.isEquivalentTo(Lcom/google/javascript/rhino/Node;ZZZ)Z: I43 Branch 283 IFNE L179 - false: 2728
+Number of times BBC is called for com.google.javascript.rhino.Node.propToString(I)Ljava/lang/String;: I3 Branch 30 TABLESWITCH L114 Default-Case - false: 871
+Number of times BBC is called for com.google.javascript.rhino.Node.isWhile()Z: Line 2443: 871
+Number of times BBC is called for com.google.javascript.rhino.Node.isIn()Z: I5 Branch 250 IF_ICMPNE L2331 - true: 134
+Number of times BBC is called for com.google.javascript.rhino.Node.removeChildAfter(Lcom/google/javascript/rhino/Node;)Lcom/google/javascript/rhino/Node;: Line 1694: 4364
+Number of times BBC is called for com.google.javascript.rhino.Node.propToString(I)Ljava/lang/String;: I3 Branch 23 TABLESWITCH L114 Case 51 - false: 871
+Number of times BBC is called for com.google.javascript.rhino.Node$NodeMismatch.equals(Ljava/lang/Object;)Z: I4 Branch 293 IFEQ L2202 - true: 2135
+Number of times BBC is called for com.google.javascript.rhino.Node.isQualifiedName()Z: I4 Branch 190 LOOKUPSWITCH L1598 Case 33 - false: 134
+Number of times BBC is called for com.google.javascript.rhino.Node.removeChildAfter(Lcom/google/javascript/rhino/Node;)Lcom/google/javascript/rhino/Node;: Line 1692: 4364
+Number of times BBC is called for com.google.javascript.rhino.Node.removeChildAfter(Lcom/google/javascript/rhino/Node;)Lcom/google/javascript/rhino/Node;: Line 1693: 4364
+Number of times BBC is called for com.google.javascript.rhino.Node.isQualifiedName()Z: I4 Branch 190 LOOKUPSWITCH L1598 Case 33 - true: 2901
+Number of times BBC is called for com.google.javascript.rhino.Node.setIsSyntheticBlock(Z)V: Line 1943: 317
+Number of times BBC is called for com.google.javascript.rhino.Node.propToString(I)Ljava/lang/String;: I3 Branch 23 TABLESWITCH L114 Case 51 - true: 871
+Number of times BBC is called for com.google.javascript.rhino.Node.removeChildAfter(Lcom/google/javascript/rhino/Node;)Lcom/google/javascript/rhino/Node;: Line 1687: 4364
+Number of times BBC is called for com.google.javascript.rhino.Node$NodeMismatch.equals(Ljava/lang/Object;)Z: I4 Branch 293 IFEQ L2202 - false: 8480
+Number of times BBC is called for com.google.javascript.rhino.Node.removeChildAfter(Lcom/google/javascript/rhino/Node;)Lcom/google/javascript/rhino/Node;: Line 1688: 4364
+Number of times BBC is called for com.google.javascript.rhino.Node.removeChildAfter(Lcom/google/javascript/rhino/Node;)Lcom/google/javascript/rhino/Node;: Line 1689: 4364
+Number of times BBC is called for com.google.javascript.rhino.Node.isDo()Z: Line 2287: 134
+Number of times BBC is called for com.google.javascript.rhino.Node.isDec()Z: Line 2275: 752
+Number of times BBC is called for com.google.javascript.rhino.Node.getSortedPropTypes()[I: I11 Branch 111 IFNULL L873 - false: 152
+Number of times BBC is called for com.google.javascript.rhino.Node.isTypeOf()Z: Line 2431: 1985
+Number of times BBC is called for com.google.javascript.rhino.Node.isEquivalentTo(Lcom/google/javascript/rhino/Node;ZZZ)Z: I11 Branch 166 IF_ICMPNE L1517 - true: 55
+Number of times BBC is called for com.google.javascript.rhino.Node.toStringTreeImpl()Ljava/lang/String;: Line 1019: 1942
+Number of times BBC is called for com.google.javascript.rhino.Node.toStringTreeImpl()Ljava/lang/String;: Line 1018: 1942
+Number of times BBC is called for com.google.javascript.rhino.Node.addChildrenAfter(Lcom/google/javascript/rhino/Node;Lcom/google/javascript/rhino/Node;)V: I26 Branch 83 IFNONNULL L671 - false: 7
+Number of times BBC is called for com.google.javascript.rhino.Node.isEquivalentTo(Lcom/google/javascript/rhino/Node;ZZZ)Z: I73 Branch 173 IF_ICMPEQ L1533 - true: 5
+Number of times BBC is called for com.google.javascript.rhino.Node.isAdd()Z: Line 2219: 134
+Number of times BBC is called for com.google.javascript.rhino.Node.useSourceInfoIfMissingFrom(Lcom/google/javascript/rhino/Node;)Lcom/google/javascript/rhino/Node;: I5 Branch 213 IFNONNULL L1809 - true: 4931
+Number of times BBC is called for com.google.javascript.rhino.Node.isEquivalentTo(Lcom/google/javascript/rhino/Node;ZZZ)Z: I11 Branch 166 IF_ICMPNE L1517 - false: 50
+Number of times BBC is called for com.google.javascript.rhino.Node.removeChildAfter(Lcom/google/javascript/rhino/Node;)Lcom/google/javascript/rhino/Node;: I17 Branch 204 IFNULL L1684 - true: 3535
+Number of times BBC is called for com.google.javascript.rhino.Node.useSourceInfoIfMissingFrom(Lcom/google/javascript/rhino/Node;)Lcom/google/javascript/rhino/Node;: I5 Branch 213 IFNONNULL L1809 - false: 134
+Number of times BBC is called for com.google.javascript.rhino.Node.removeChildAfter(Lcom/google/javascript/rhino/Node;)Lcom/google/javascript/rhino/Node;: I17 Branch 204 IFNULL L1684 - false: 4336
+Number of times BBC is called for com.google.javascript.rhino.Node$IntPropListItem.chain(Lcom/google/javascript/rhino/Node$PropListItem;)Lcom/google/javascript/rhino/Node$PropListItem;: Line 354: 22247
+Number of times BBC is called for com.google.javascript.rhino.Node.detachChildren()V: I7 Branch 202 IFNULL L1671 - false: 82
+Number of times BBC is called for com.google.javascript.rhino.Node.propToString(I)Ljava/lang/String;: Line 114: 871
+Number of times BBC is called for com.google.javascript.rhino.Node.setSideEffectFlags(I)V: I9 Branch 218 IF_ICMPNE L2026 - false: 2012
+Number of times BBC is called for com.google.javascript.rhino.Node.propToString(I)Ljava/lang/String;: I3 Branch 9 TABLESWITCH L114 Case 37 - false: 871
+Number of times BBC is called for com.google.javascript.rhino.Node.getPropListHeadForTesting()Lcom/google/javascript/rhino/Node$PropListItem;: Line 1319: 22247
+Number of times BBC is called for com.google.javascript.rhino.Node.removeFirstChild()Lcom/google/javascript/rhino/Node;: Line 1646: 1828
+Number of times BBC is called for com.google.javascript.rhino.Node.isEquivalentTo(Lcom/google/javascript/rhino/Node;ZZZ)Z: I61 Branch 172 IF_ICMPEQ L1530 - true: 402
+Number of times BBC is called for com.google.javascript.rhino.Node.removeFirstChild()Lcom/google/javascript/rhino/Node;: Line 1647: 1828
+Number of times BBC is called for com.google.javascript.rhino.Node.checkTreeEquals(Lcom/google/javascript/rhino/Node;)Ljava/lang/String;: I9 Branch 155 IFNULL L1430 - false: 871
+Number of times BBC is called for com.google.javascript.rhino.Node.isAnd()Z: I5 Branch 223 IF_ICMPNE L2223 - true: 2458
+Number of times BBC is called for com.google.javascript.rhino.Node.getChildAtIndex(I)Lcom/google/javascript/rhino/Node;: I8 Branch 61 IFLE L566 - true: 3354
+Number of times BBC is called for com.google.javascript.rhino.Node.getCharno()I: root-Branch: 134
+Number of times BBC is called for com.google.javascript.rhino.Node.getChildAtIndex(I)Lcom/google/javascript/rhino/Node;: I8 Branch 61 IFLE L566 - false: 1985
+Number of times BBC is called for com.google.javascript.rhino.Node.propToString(I)Ljava/lang/String;: I3 Branch 9 TABLESWITCH L114 Case 37 - true: 952
+Number of times BBC is called for com.google.javascript.rhino.Node.isEquivalentTo(Lcom/google/javascript/rhino/Node;ZZZ)Z: I61 Branch 172 IF_ICMPEQ L1530 - false: 542
+Number of times BBC is called for com.google.javascript.rhino.Node.srcrefTree(Lcom/google/javascript/rhino/Node;)Lcom/google/javascript/rhino/Node;: root-Branch: 134
+Number of times BBC is called for com.google.javascript.rhino.Node.isAnd()Z: I5 Branch 223 IF_ICMPNE L2223 - false: 7380
+Number of times BBC is called for com.google.javascript.rhino.Node.setWasEmptyNode(Z)V: Line 1986: 1672
+Number of times BBC is called for com.google.javascript.rhino.Node.setWasEmptyNode(Z)V: Line 1985: 1672
+Number of times BBC is called for com.google.javascript.rhino.Node.isTrue()Z: Line 2423: 134
+Number of times BBC is called for com.google.javascript.rhino.Node.removeFirstChild()Lcom/google/javascript/rhino/Node;: Line 1650: 1828
+Number of times BBC is called for com.google.javascript.rhino.Node.<init>(ILcom/google/javascript/rhino/Node;Lcom/google/javascript/rhino/Node;Lcom/google/javascript/rhino/Node;Lcom/google/javascript/rhino/Node;)V: I30 Branch 45 IFNONNULL L421 - true: 58
+Number of times BBC is called for com.google.javascript.rhino.Node.isNumber()Z: I5 Branch 260 IF_ICMPNE L2371 - true: 47
+Number of times BBC is called for com.google.javascript.rhino.Node$IntPropListItem.getIntValue()I: root-Branch: 5643
+Number of times BBC is called for com.google.javascript.rhino.Node.isNumber()Z: I5 Branch 260 IF_ICMPNE L2371 - false: 191
+Number of times BBC is called for com.google.javascript.rhino.Node.isNot()Z: I5 Branch 258 IF_ICMPNE L2363 - true: 224
+Number of times BBC is called for com.google.javascript.rhino.Node.hasOneChild()Z: I4 Branch 148 IFNULL L1393 - true: 415
+Number of times BBC is called for com.google.javascript.rhino.Node$NumberNode.isEquivalentTo(Lcom/google/javascript/rhino/Node;ZZZ)Z: I29 Branch 281 IFNE L177 - true: 255
+Number of times BBC is called for com.google.javascript.rhino.Node.getQualifiedName()Ljava/lang/String;: I15 Branch 186 IFLE L1579 - false: 1555
+Number of times BBC is called for com.google.javascript.rhino.Node.hasOneChild()Z: I4 Branch 148 IFNULL L1393 - false: 977
+Number of times BBC is called for com.google.javascript.rhino.Node.addChildToBack(Lcom/google/javascript/rhino/Node;)V: I15 Branch 69 IFNONNULL L608 - true: 3871
+Number of times BBC is called for com.google.javascript.rhino.Node$NumberNode.isEquivalentTo(Lcom/google/javascript/rhino/Node;ZZZ)Z: I29 Branch 281 IFNE L177 - false: 398
+Number of times BBC is called for com.google.javascript.rhino.Node.getQualifiedName()Ljava/lang/String;: I15 Branch 186 IFLE L1579 - true: 1555
+Number of times BBC is called for com.google.javascript.rhino.Node.isCase()Z: I5 Branch 230 IF_ICMPNE L2251 - false: 3514
+Number of times BBC is called for com.google.javascript.rhino.Node.isCase()Z: I5 Branch 230 IF_ICMPNE L2251 - true: 995
+Number of times BBC is called for com.google.javascript.rhino.Node.removeFirstChild()Lcom/google/javascript/rhino/Node;: I8 Branch 200 IFNULL L1647 - false: 2053
+Number of times BBC is called for com.google.javascript.rhino.Node.removeChildAfter(Lcom/google/javascript/rhino/Node;)Lcom/google/javascript/rhino/Node;: I5 Branch 203 IF_ACMPNE L1682 - false: 3476
+Number of times BBC is called for com.google.javascript.rhino.Node.getAncestor(I)Lcom/google/javascript/rhino/Node;: I20 Branch 147 IFLE L1334 - true: 1368
+Number of times BBC is called for com.google.javascript.rhino.Node.isQualifiedName()Z: Line 1598: 134
+Number of times BBC is called for com.google.javascript.rhino.Node$FileLevelJsDocBuilder.append(Ljava/lang/String;)V: I25 Branch 297 IFNONNULL L1867 - false: 6771
+Number of times BBC is called for com.google.javascript.rhino.Node.checkTreeEqualsImpl(Lcom/google/javascript/rhino/Node;)Lcom/google/javascript/rhino/Node$NodeMismatch;: I35 Branch 158 IFNULL L1453 - false: 152
+Number of times BBC is called for com.google.javascript.rhino.Node.removeFirstChild()Lcom/google/javascript/rhino/Node;: I8 Branch 200 IFNULL L1647 - true: 1828
+Number of times BBC is called for com.google.javascript.rhino.Node.toString(Ljava/lang/StringBuilder;ZZZ)V: I70 Branch 122 IF_ICMPNE L966 - true: 8
+Number of times BBC is called for com.google.javascript.rhino.Node.<init>(ILcom/google/javascript/rhino/Node;Lcom/google/javascript/rhino/Node;Lcom/google/javascript/rhino/Node;Lcom/google/javascript/rhino/Node;)V: I41 Branch 46 IFNONNULL L422 - true: 3363
+Number of times BBC is called for com.google.javascript.rhino.Node.isEquivalentTo(Lcom/google/javascript/rhino/Node;ZZZ)Z: I163 Branch 181 IFNULL L1556 - true: 74
+Number of times BBC is called for com.google.javascript.rhino.Node.addChildAfter(Lcom/google/javascript/rhino/Node;Lcom/google/javascript/rhino/Node;)V: I4 Branch 79 IFNONNULL L660 - false: 1258
+Number of times BBC is called for com.google.javascript.rhino.Node.isNot()Z: I5 Branch 258 IF_ICMPNE L2363 - false: 969
+Number of times BBC is called for com.google.javascript.rhino.Node.addChildAfter(Lcom/google/javascript/rhino/Node;Lcom/google/javascript/rhino/Node;)V: I4 Branch 79 IFNONNULL L660 - true: 2031
+Number of times BBC is called for com.google.javascript.rhino.Node.getSourcePosition()I: Line 1160: 134
+Number of times BBC is called for com.google.javascript.rhino.Node.isNumber()Z: Line 2371: 47
+Number of times BBC is called for com.google.javascript.rhino.Node.isEquivalentTo(Lcom/google/javascript/rhino/Node;ZZZ)Z: I163 Branch 181 IFNULL L1556 - false: 289
+Number of times BBC is called for com.google.javascript.rhino.Node.getQualifiedName()Ljava/lang/String;: I27 Branch 187 IF_ICMPNE L1580 - false: 1484
+Number of times BBC is called for com.google.javascript.rhino.Node.removeChild(Lcom/google/javascript/rhino/Node;)V: I9 Branch 87 IFNONNULL L699 - true: 706
+Number of times BBC is called for com.google.javascript.rhino.Node.isThrow()Z: I5 Branch 272 IF_ICMPNE L2419 - false: 9133
+Number of times BBC is called for com.google.javascript.rhino.Node.wasEmptyNode()Z: root-Branch: 134
+Number of times BBC is called for com.google.javascript.rhino.Node.getSourceFileName()Ljava/lang/String;: I8 Branch 133 IFNONNULL L1104 - true: 3970
+Number of times BBC is called for com.google.javascript.rhino.Node.addChildrenToFront(Lcom/google/javascript/rhino/Node;)V: I11 Branch 72 IFNONNULL L621 - true: 107
+Number of times BBC is called for com.google.javascript.rhino.Node.isThrow()Z: I5 Branch 272 IF_ICMPNE L2419 - true: 1828
+Number of times BBC is called for com.google.javascript.rhino.Node.replaceChildAfter(Lcom/google/javascript/rhino/Node;Lcom/google/javascript/rhino/Node;)V: I69 Branch 96 IF_ACMPNE L754 - true: 6924
+Number of times BBC is called for com.google.javascript.rhino.Node.getDirectives()Ljava/util/Set;: Line 1966: 47
+Number of times BBC is called for com.google.javascript.rhino.Node.replaceChildAfter(Lcom/google/javascript/rhino/Node;Lcom/google/javascript/rhino/Node;)V: I69 Branch 96 IF_ACMPNE L754 - false: 6924
+Number of times BBC is called for com.google.javascript.rhino.Node.propToString(I)Ljava/lang/String;: I3 Branch 22 TABLESWITCH L114 Case 50 - true: 1433
+Number of times BBC is called for com.google.javascript.rhino.Node.isEquivalentTo(Lcom/google/javascript/rhino/Node;ZZZ)Z: I121 Branch 177 IF_ICMPEQ L1544 - false: 864
+Number of times BBC is called for com.google.javascript.rhino.Node.isQualifiedName()Z: I10 Branch 194 IFLE L1600 - false: 2926
+Number of times BBC is called for com.google.javascript.rhino.Node.propToString(I)Ljava/lang/String;: I3 Branch 22 TABLESWITCH L114 Case 50 - false: 871
+Number of times BBC is called for com.google.javascript.rhino.Node.getParent()Lcom/google/javascript/rhino/Node;: root-Branch: 752
+Number of times BBC is called for com.google.javascript.rhino.Node.isScript()Z: Line 2395: 517
+Number of times BBC is called for com.google.javascript.rhino.Node.<init>(ILcom/google/javascript/rhino/Node;Lcom/google/javascript/rhino/Node;Lcom/google/javascript/rhino/Node;)V: I41 Branch 40 IFNONNULL L402 - true: 2977
+Number of times BBC is called for com.google.javascript.rhino.Node.srcref(Lcom/google/javascript/rhino/Node;)Lcom/google/javascript/rhino/Node;: root-Branch: 134
+Number of times BBC is called for com.google.javascript.rhino.Node$SideEffectFlags.areAllFlagsSet()Z: Line 2076: 47
+Number of times BBC is called for com.google.javascript.rhino.Node.isEquivalentTo(Lcom/google/javascript/rhino/Node;ZZZ)Z: I40 Branch 170 IF_ICMPEQ L1527 - true: 542
+Number of times BBC is called for com.google.javascript.rhino.Node.setType(I)V: Line 531: 752
+Number of times BBC is called for com.google.javascript.rhino.Node.setType(I)V: Line 530: 752
+Number of times BBC is called for com.google.javascript.rhino.Node.isSwitch()Z: I5 Branch 270 IF_ICMPNE L2411 - true: 517
+Number of times BBC is called for com.google.javascript.rhino.Node.isSwitch()Z: I5 Branch 270 IF_ICMPNE L2411 - false: 4734
+Number of times BBC is called for com.google.javascript.rhino.Node.getSourceOffset()I: I8 Branch 135 IFNONNULL L1149 - true: 6715
+Number of times BBC is called for com.google.javascript.rhino.Node.isQualifiedName()Z: I4 Branch 192 LOOKUPSWITCH L1598 Case 42 - false: 134
+Number of times BBC is called for com.google.javascript.rhino.Node.getQualifiedName()Ljava/lang/String;: I5 Branch 185 IF_ICMPNE L1577 - true: 317
+Number of times BBC is called for com.google.javascript.rhino.Node.isLabelName()Z: Line 2347: 47
+Number of times BBC is called for com.google.javascript.rhino.Node$NumberNode.setDouble(D)V: root-Branch: 6011
+Number of times BBC is called for com.google.javascript.rhino.Node.isQualifiedName()Z: I4 Branch 192 LOOKUPSWITCH L1598 Case 42 - true: 509
+Number of times BBC is called for com.google.javascript.rhino.Node.toStringTreeHelper(Lcom/google/javascript/rhino/Node;ILjava/lang/Appendable;)V: I7 Branch 131 IF_ICMPEQ L1029 - false: 213
+Number of times BBC is called for com.google.javascript.rhino.Node.copyInformationFromForTree(Lcom/google/javascript/rhino/Node;)Lcom/google/javascript/rhino/Node;: Line 1762: 995
+Number of times BBC is called for com.google.javascript.rhino.Node.copyInformationFromForTree(Lcom/google/javascript/rhino/Node;)Lcom/google/javascript/rhino/Node;: Line 1763: 995
+Number of times BBC is called for com.google.javascript.rhino.Node.getBooleanProp(I)Z: I5 Branch 105 IFEQ L821 - false: 1048
+Number of times BBC is called for com.google.javascript.rhino.Node.srcrefTree(Lcom/google/javascript/rhino/Node;)Lcom/google/javascript/rhino/Node;: Line 1801: 134
+Number of times BBC is called for com.google.javascript.rhino.Node.getQualifiedName()Ljava/lang/String;: I5 Branch 185 IF_ICMPNE L1577 - false: 1872
+Number of times BBC is called for com.google.javascript.rhino.Node.copyInformationFromForTree(Lcom/google/javascript/rhino/Node;)Lcom/google/javascript/rhino/Node;: Line 1768: 995
+Number of times BBC is called for com.google.javascript.rhino.Node.isFromExterns()Z: Line 1128: 871
+Number of times BBC is called for com.google.javascript.rhino.Node.isFromExterns()Z: Line 1127: 871
+Number of times BBC is called for com.google.javascript.rhino.Node.<init>(I[Lcom/google/javascript/rhino/Node;)V: I123 Branch 55 IFNONNULL L491 - true: 35
+Number of times BBC is called for com.google.javascript.rhino.Node.propToString(I)Ljava/lang/String;: I3 Branch 28 TABLESWITCH L114 Case 56 - false: 871
+Number of times BBC is called for com.google.javascript.rhino.Node.checkTreeEqualsImpl(Lcom/google/javascript/rhino/Node;)Lcom/google/javascript/rhino/Node$NodeMismatch;: Line 1446: 317
+Number of times BBC is called for com.google.javascript.rhino.Node.getChildBefore(Lcom/google/javascript/rhino/Node;)Lcom/google/javascript/rhino/Node;: I29 Branch 60 IFNONNULL L557 - true: 1444
+Number of times BBC is called for com.google.javascript.rhino.Node.propToString(I)Ljava/lang/String;: I3 Branch 28 TABLESWITCH L114 Case 56 - true: 871
+Number of times BBC is called for com.google.javascript.rhino.Node.isBreak()Z: I5 Branch 228 IF_ICMPNE L2243 - true: 752
+Number of times BBC is called for com.google.javascript.rhino.Node.addChildrenToFront(Lcom/google/javascript/rhino/Node;)V: Line 620: 631
+Number of times BBC is called for com.google.javascript.rhino.Node.isUnscopedQualifiedName()Z: I10 Branch 198 IFLE L1618 - false: 4885
+Number of times BBC is called for com.google.javascript.rhino.Node.propToString(I)Ljava/lang/String;: I3 Branch 10 TABLESWITCH L114 Case 38 - true: 1050
+Number of times BBC is called for com.google.javascript.rhino.Node.setLength(I)V: Line 1137: 3484
+Number of times BBC is called for com.google.javascript.rhino.Node.isEquivalentTo(Lcom/google/javascript/rhino/Node;ZZZ)Z: I173 Branch 183 IFNE L1558 - true: 527
+Number of times BBC is called for com.google.javascript.rhino.Node.setLength(I)V: Line 1136: 3484
+Number of times BBC is called for com.google.javascript.rhino.Node.addChildrenToFront(Lcom/google/javascript/rhino/Node;)V: Line 624: 631
+Number of times BBC is called for com.google.javascript.rhino.Node.children()Ljava/lang/Iterable;: Line 1241: 134
+Number of times BBC is called for com.google.javascript.rhino.Node.addChildrenToFront(Lcom/google/javascript/rhino/Node;)V: Line 625: 631
+Number of times BBC is called for com.google.javascript.rhino.Node.addChildrenToFront(Lcom/google/javascript/rhino/Node;)V: Line 626: 631
+Number of times BBC is called for com.google.javascript.rhino.Node.isUnscopedQualifiedName()Z: I10 Branch 198 IFLE L1618 - true: 4885
+Number of times BBC is called for com.google.javascript.rhino.Node.addChildrenToFront(Lcom/google/javascript/rhino/Node;)V: Line 627: 631
+Number of times BBC is called for com.google.javascript.rhino.Node.propToString(I)Ljava/lang/String;: I3 Branch 2 TABLESWITCH L114 Case 30 - true: 1029
+Number of times BBC is called for com.google.javascript.rhino.Node.getChildBefore(Lcom/google/javascript/rhino/Node;)Lcom/google/javascript/rhino/Node;: I5 Branch 58 IF_ACMPNE L550 - true: 1
+Number of times BBC is called for com.google.javascript.rhino.Node.isEquivalentTo(Lcom/google/javascript/rhino/Node;ZZZ)Z: I173 Branch 183 IFNE L1558 - false: 527
+Number of times BBC is called for com.google.javascript.rhino.Node.addChildrenToFront(Lcom/google/javascript/rhino/Node;)V: Line 630: 631
+Number of times BBC is called for com.google.javascript.rhino.Node.propToString(I)Ljava/lang/String;: I3 Branch 10 TABLESWITCH L114 Case 38 - false: 871
+Number of times BBC is called for com.google.javascript.rhino.Node.replaceChildAfter(Lcom/google/javascript/rhino/Node;Lcom/google/javascript/rhino/Node;)V: Line 757: 6924
+Number of times BBC is called for com.google.javascript.rhino.Node.<init>(ILcom/google/javascript/rhino/Node;Lcom/google/javascript/rhino/Node;)V: I32 Branch 35 IFNONNULL L383 - true: 77
+Number of times BBC is called for com.google.javascript.rhino.Node$IntPropListItem.getIntValue()I: Line 339: 5643
+Number of times BBC is called for com.google.javascript.rhino.Node.propToString(I)Ljava/lang/String;: I3 Branch 21 TABLESWITCH L114 Case 49 - true: 1034
+Number of times BBC is called for com.google.javascript.rhino.Node.replaceChildAfter(Lcom/google/javascript/rhino/Node;Lcom/google/javascript/rhino/Node;)V: Line 754: 6924
+Number of times BBC is called for com.google.javascript.rhino.Node.propToString(I)Ljava/lang/String;: I3 Branch 21 TABLESWITCH L114 Case 49 - false: 871
+Number of times BBC is called for com.google.javascript.rhino.Node.isReturn()Z: Line 2391: 3653
+Number of times BBC is called for com.google.javascript.rhino.Node.replaceChildAfter(Lcom/google/javascript/rhino/Node;Lcom/google/javascript/rhino/Node;)V: Line 759: 6924
+Number of times BBC is called for com.google.javascript.rhino.Node.replaceChildAfter(Lcom/google/javascript/rhino/Node;Lcom/google/javascript/rhino/Node;)V: Line 758: 6924
+Number of times BBC is called for com.google.javascript.rhino.Node.isDefaultCase()Z: I5 Branch 237 IF_ICMPNE L2279 - false: 3018
+Number of times BBC is called for com.google.javascript.rhino.Node.addChildToBack(Lcom/google/javascript/rhino/Node;)V: I4 Branch 68 IFNONNULL L607 - true: 332
+Number of times BBC is called for com.google.javascript.rhino.Node.replaceChildAfter(Lcom/google/javascript/rhino/Node;Lcom/google/javascript/rhino/Node;)V: Line 748: 6131
+Number of times BBC is called for com.google.javascript.rhino.Node.replaceChildAfter(Lcom/google/javascript/rhino/Node;Lcom/google/javascript/rhino/Node;)V: Line 753: 6924
+Number of times BBC is called for com.google.javascript.rhino.Node$FileLevelJsDocBuilder.append(Ljava/lang/String;)V: I9 Branch 296 IFNONNULL L1861 - true: 7078
+Number of times BBC is called for com.google.javascript.rhino.Node.replaceChildAfter(Lcom/google/javascript/rhino/Node;Lcom/google/javascript/rhino/Node;)V: Line 752: 6924
+Number of times BBC is called for com.google.javascript.rhino.Node.isDefaultCase()Z: I5 Branch 237 IF_ICMPNE L2279 - true: 631
+Number of times BBC is called for com.google.javascript.rhino.Node.replaceChildAfter(Lcom/google/javascript/rhino/Node;Lcom/google/javascript/rhino/Node;)V: Line 751: 6131
+Number of times BBC is called for com.google.javascript.rhino.Node.replaceChildAfter(Lcom/google/javascript/rhino/Node;Lcom/google/javascript/rhino/Node;)V: Line 750: 6131
+Number of times BBC is called for com.google.javascript.rhino.Node.propToString(I)Ljava/lang/String;: I3 Branch 3 TABLESWITCH L114 Case 31 - false: 871
+Number of times BBC is called for com.google.javascript.rhino.Node.mayMutateGlobalStateOrThrow()Z: I7 Branch 220 IFNE L2166 - true: 7593
+Number of times BBC is called for com.google.javascript.rhino.Node.replaceChildAfter(Lcom/google/javascript/rhino/Node;Lcom/google/javascript/rhino/Node;)V: Line 739: 134
+Number of times BBC is called for com.google.javascript.rhino.Node$FileLevelJsDocBuilder.append(Ljava/lang/String;)V: I9 Branch 296 IFNONNULL L1861 - false: 6771
+Number of times BBC is called for com.google.javascript.rhino.Node.cloneNode()Lcom/google/javascript/rhino/Node;: Line 1706: 631
+Number of times BBC is called for com.google.javascript.rhino.Node.isDebugger()Z: Line 2271: 1538
+Number of times BBC is called for com.google.javascript.rhino.Node.replaceChildAfter(Lcom/google/javascript/rhino/Node;Lcom/google/javascript/rhino/Node;)V: Line 744: 134
+Number of times BBC is called for com.google.javascript.rhino.Node.cloneNode()Lcom/google/javascript/rhino/Node;: Line 1703: 631
+Number of times BBC is called for com.google.javascript.rhino.Node.replaceChildAfter(Lcom/google/javascript/rhino/Node;Lcom/google/javascript/rhino/Node;)V: Line 742: 134
+Number of times BBC is called for com.google.javascript.rhino.Node.cloneNode()Lcom/google/javascript/rhino/Node;: Line 1710: 3044
+Number of times BBC is called for com.google.javascript.rhino.Node.cloneNode()Lcom/google/javascript/rhino/Node;: Line 1709: 631
+Number of times BBC is called for com.google.javascript.rhino.Node.cloneNode()Lcom/google/javascript/rhino/Node;: Line 1708: 631
+Number of times BBC is called for com.google.javascript.rhino.Node.cloneNode()Lcom/google/javascript/rhino/Node;: Line 1707: 631
+Number of times BBC is called for com.google.javascript.rhino.Node.cloneNode()Lcom/google/javascript/rhino/Node;: Line 1713: 631
+Number of times BBC is called for com.google.javascript.rhino.Node.cloneNode()Lcom/google/javascript/rhino/Node;: Line 1712: 631
+Number of times BBC is called for com.google.javascript.rhino.Node.putIntProp(II)V: I8 Branch 110 IFEQ L857 - true: 18
+Number of times BBC is called for com.google.javascript.rhino.Node.cloneNode()Lcom/google/javascript/rhino/Node;: Line 1711: 3044
+Number of times BBC is called for com.google.javascript.rhino.Node.<init>(ILcom/google/javascript/rhino/Node;Lcom/google/javascript/rhino/Node;)V: I44 Branch 36 IFNONNULL L385 - true: 4590
+Number of times BBC is called for com.google.javascript.rhino.Node$SiblingNodeIterable.hasNext()Z: Line 1294: 22247
+Number of times BBC is called for com.google.javascript.rhino.Node.isOptionalArg()Z: Line 1935: 134
+Number of times BBC is called for com.google.javascript.rhino.Node.<init>(ILcom/google/javascript/rhino/Node;Lcom/google/javascript/rhino/Node;)V: I20 Branch 34 IFNONNULL L381 - true: 4609
+Number of times BBC is called for com.google.javascript.rhino.Node.setQuotedString()V: Line 2188: 2965
+Number of times BBC is called for com.google.javascript.rhino.Node.cloneTree()Lcom/google/javascript/rhino/Node;: I12 Branch 206 IFNULL L1721 - true: 871
+Number of times BBC is called for com.google.javascript.rhino.Node.isSyntheticBlock()Z: root-Branch: 517
+Number of times BBC is called for com.google.javascript.rhino.Node.mayMutateGlobalStateOrThrow()Z: I7 Branch 220 IFNE L2166 - false: 134
+Number of times BBC is called for com.google.javascript.rhino.Node.addChildAfter(Lcom/google/javascript/rhino/Node;Lcom/google/javascript/rhino/Node;)V: Line 660: 1258
+Number of times BBC is called for com.google.javascript.rhino.Node.cloneTree()Lcom/google/javascript/rhino/Node;: I12 Branch 206 IFNULL L1721 - false: 1623
+Number of times BBC is called for com.google.javascript.rhino.Node.addChildAfter(Lcom/google/javascript/rhino/Node;Lcom/google/javascript/rhino/Node;)V: Line 662: 1258
+Number of times BBC is called for com.google.javascript.rhino.Node.getSourceOffset()I: I8 Branch 135 IFNONNULL L1149 - false: 134
+Number of times BBC is called for com.google.javascript.rhino.Node.addChildAfter(Lcom/google/javascript/rhino/Node;Lcom/google/javascript/rhino/Node;)V: Line 663: 14547
+Number of times BBC is called for com.google.javascript.rhino.Node.isIf()Z: I5 Branch 249 IF_ICMPNE L2327 - false: 3521
+Number of times BBC is called for com.google.javascript.rhino.Node.isSyntheticBlock()Z: Line 1951: 517
+Number of times BBC is called for com.google.javascript.rhino.Node.<init>(I[Lcom/google/javascript/rhino/Node;)V: I146 Branch 56 IF_ACMPEQ L494 - false: 4112
+Number of times BBC is called for com.google.javascript.rhino.Node.hasChildren()Z: Line 534: 134
+Number of times BBC is called for com.google.javascript.rhino.Node.isIf()Z: I5 Branch 249 IF_ICMPNE L2327 - true: 1258
+Number of times BBC is called for com.google.javascript.rhino.Node.setIsSyntheticBlock(Z)V: root-Branch: 317
+Number of times BBC is called for com.google.javascript.rhino.Node.toString(Ljava/lang/StringBuilder;ZZZ)V: I210 Branch 130 IFNULL L1000 - true: 3134
+Number of times BBC is called for com.google.javascript.rhino.Node$ObjectPropListItem.chain(Lcom/google/javascript/rhino/Node$PropListItem;)Lcom/google/javascript/rhino/Node$PropListItem;: Line 322: 22247
+Number of times BBC is called for com.google.javascript.rhino.Node.isVoid()Z: I5 Branch 277 IF_ICMPNE L2439 - true: 752
+Number of times BBC is called for com.google.javascript.rhino.Node.toString(Ljava/lang/StringBuilder;ZZZ)V: I210 Branch 130 IFNULL L1000 - false: 3134
+Number of times BBC is called for com.google.javascript.rhino.Node.<init>(ILcom/google/javascript/rhino/Node;)V: I20 Branch 32 IFNONNULL L367 - true: 3493
+Number of times BBC is called for com.google.javascript.rhino.Node.isComma()Z: I5 Branch 233 IF_ICMPNE L2263 - false: 2019
+Number of times BBC is called for com.google.javascript.rhino.Node.isHook()Z: Line 2323: 871
+Number of times BBC is called for com.google.javascript.rhino.Node.isDo()Z: I5 Branch 239 IF_ICMPNE L2287 - false: 4340
+Number of times BBC is called for com.google.javascript.rhino.Node.getAncestor(I)Lcom/google/javascript/rhino/Node;: I3 Branch 145 IFLT L1332 - false: 5453
+Number of times BBC is called for com.google.javascript.rhino.Node.isQualifiedName()Z: I4 Branch 191 LOOKUPSWITCH L1598 Case 38 - true: 2681
+Number of times BBC is called for com.google.javascript.rhino.Node.getIndexOfChild(Lcom/google/javascript/rhino/Node;)I: Line 575: 2135
+Number of times BBC is called for com.google.javascript.rhino.Node.isDo()Z: I5 Branch 239 IF_ICMPNE L2287 - true: 134
+Number of times BBC is called for com.google.javascript.rhino.Node.getIndexOfChild(Lcom/google/javascript/rhino/Node;)I: Line 574: 2135
+Number of times BBC is called for com.google.javascript.rhino.Node.replaceChild(Lcom/google/javascript/rhino/Node;Lcom/google/javascript/rhino/Node;)V: I69 Branch 92 IF_ACMPNE L731 - true: 2673
+Number of times BBC is called for com.google.javascript.rhino.Node.getAncestor(I)Lcom/google/javascript/rhino/Node;: I3 Branch 145 IFLT L1332 - true: 6015
+Number of times BBC is called for com.google.javascript.rhino.Node.isQualifiedName()Z: I4 Branch 191 LOOKUPSWITCH L1598 Case 38 - false: 134
+Number of times BBC is called for com.google.javascript.rhino.Node.isVoid()Z: I5 Branch 277 IF_ICMPNE L2439 - false: 6349
+Number of times BBC is called for com.google.javascript.rhino.Node.isComma()Z: I5 Branch 233 IF_ICMPNE L2263 - true: 134
+Number of times BBC is called for com.google.javascript.rhino.Node.getString()Ljava/lang/String;: Line 912: 224
+Number of times BBC is called for com.google.javascript.rhino.Node.isStringKey()Z: I5 Branch 269 IF_ICMPNE L2407 - true: 2294
+Number of times BBC is called for com.google.javascript.rhino.Node.checkTreeEquals(Lcom/google/javascript/rhino/Node;)Ljava/lang/String;: Line 1430: 871
+Number of times BBC is called for com.google.javascript.rhino.Node.removeProp(Lcom/google/javascript/rhino/Node$PropListItem;I)Lcom/google/javascript/rhino/Node$PropListItem;: I32 Branch 103 IF_ACMPEQ L804 - false: 1171
+Number of times BBC is called for com.google.javascript.rhino.Node.checkTreeEquals(Lcom/google/javascript/rhino/Node;)Ljava/lang/String;: Line 1429: 871
+Number of times BBC is called for com.google.javascript.rhino.Node.isIf()Z: Line 2327: 1258
+Number of times BBC is called for com.google.javascript.rhino.Node$SideEffectFlags.areAllFlagsSet()Z: I4 Branch 298 IFNE L2076 - true: 132
+Number of times BBC is called for com.google.javascript.rhino.Node.isCall()Z: I5 Branch 229 IF_ICMPNE L2247 - false: 150
+Number of times BBC is called for com.google.javascript.rhino.Node$SideEffectFlags.areAllFlagsSet()Z: I4 Branch 298 IFNE L2076 - false: 47
+Number of times BBC is called for com.google.javascript.rhino.Node.isEquivalentTo(Lcom/google/javascript/rhino/Node;ZZZ)Z: I77 Branch 174 IF_ICMPNE L1533 - false: 621
+Number of times BBC is called for com.google.javascript.rhino.Node.isCatch()Z: Line 2259: 1258
+Number of times BBC is called for com.google.javascript.rhino.Node.removeChild(Lcom/google/javascript/rhino/Node;)V: I29 Branch 88 IF_ACMPNE L704 - true: 3
+Number of times BBC is called for com.google.javascript.rhino.Node.<init>(ILcom/google/javascript/rhino/Node;Lcom/google/javascript/rhino/Node;)V: I8 Branch 33 IFNONNULL L379 - true: 8
+Number of times BBC is called for com.google.javascript.rhino.Node.isStringKey()Z: I5 Branch 269 IF_ICMPNE L2407 - false: 7148
+Number of times BBC is called for com.google.javascript.rhino.Node.isEmpty()Z: I5 Branch 240 IF_ICMPNE L2291 - true: 134
+Number of times BBC is called for com.google.javascript.rhino.Node.isInstanceOf()Z: I5 Branch 252 IF_ICMPNE L2339 - false: 3155
+Number of times BBC is called for com.google.javascript.rhino.Node.isEmpty()Z: I5 Branch 240 IF_ICMPNE L2291 - false: 4837
+Number of times BBC is called for com.google.javascript.rhino.Node.isLocalResultCall()Z: root-Branch: 134
+Number of times BBC is called for com.google.javascript.rhino.Node.setType(I)V: root-Branch: 752
+Number of times BBC is called for com.google.javascript.rhino.Node.useSourceInfoIfMissingFromForTree(Lcom/google/javascript/rhino/Node;)Lcom/google/javascript/rhino/Node;: I14 Branch 215 IFNULL L1828 - true: 134
+Number of times BBC is called for com.google.javascript.rhino.Node.getSourceOffset()I: Line 1149: 134
+Number of times BBC is called for com.google.javascript.rhino.Node.getSourceOffset()I: I22 Branch 136 IF_ICMPNE L1153 - false: 6582
+Number of times BBC is called for com.google.javascript.rhino.Node.replaceChild(Lcom/google/javascript/rhino/Node;Lcom/google/javascript/rhino/Node;)V: I69 Branch 92 IF_ACMPNE L731 - false: 2673
+Number of times BBC is called for com.google.javascript.rhino.Node.isFunction()Z: Line 2307: 47
+Number of times BBC is called for com.google.javascript.rhino.Node.getSourceOffset()I: Line 1148: 134
+Number of times BBC is called for com.google.javascript.rhino.Node.isCast()Z: I5 Branch 231 IF_ICMPNE L2255 - false: 3575
+Number of times BBC is called for com.google.javascript.rhino.Node.wasEmptyNode()Z: Line 1993: 134
+Number of times BBC is called for com.google.javascript.rhino.Node.getSourceOffset()I: I22 Branch 136 IF_ICMPNE L1153 - true: 6582
+Number of times BBC is called for com.google.javascript.rhino.Node.setStaticSourceFile(Lcom/google/javascript/rhino/jstype/StaticSourceFile;)V: root-Branch: 415
+Number of times BBC is called for com.google.javascript.rhino.Node.addChildToFront(Lcom/google/javascript/rhino/Node;)V: I15 Branch 66 IFNONNULL L597 - true: 3733
+Number of times BBC is called for com.google.javascript.rhino.Node.isNew()Z: Line 2359: 1258
+Number of times BBC is called for com.google.javascript.rhino.Node.isCast()Z: I5 Branch 231 IF_ICMPNE L2255 - true: 517
+Number of times BBC is called for com.google.javascript.rhino.Node.useSourceInfoIfMissingFromForTree(Lcom/google/javascript/rhino/Node;)Lcom/google/javascript/rhino/Node;: I14 Branch 215 IFNULL L1828 - false: 226
+Number of times BBC is called for com.google.javascript.rhino.Node.toString(Ljava/lang/StringBuilder;ZZZ)V: I200 Branch 129 IFNULL L998 - false: 3134
+Number of times BBC is called for com.google.javascript.rhino.Node.getChildCount()I: Line 1408: 415
+Number of times BBC is called for com.google.javascript.rhino.Node.isTrue()Z: I5 Branch 273 IF_ICMPNE L2423 - false: 3073
+Number of times BBC is called for com.google.javascript.rhino.Node.propToString(I)Ljava/lang/String;: I3 Branch 2 TABLESWITCH L114 Case 30 - false: 871
+Number of times BBC is called for com.google.javascript.rhino.Node.propToString(I)Ljava/lang/String;: I3 Branch 11 TABLESWITCH L114 Case 39 - true: 1401
+Number of times BBC is called for com.google.javascript.rhino.Node.addChildToFront(Lcom/google/javascript/rhino/Node;)V: I15 Branch 66 IFNONNULL L597 - false: 134
+Number of times BBC is called for com.google.javascript.rhino.Node.getChildCount()I: Line 1411: 415
+Number of times BBC is called for com.google.javascript.rhino.Node.addChildToFront(Lcom/google/javascript/rhino/Node;)V: I4 Branch 65 IFNONNULL L596 - false: 134
+Number of times BBC is called for com.google.javascript.rhino.Node.propToString(I)Ljava/lang/String;: I3 Branch 1 TABLESWITCH L114 Case 29 - true: 1014
+Number of times BBC is called for com.google.javascript.rhino.Node$NumberNode.setDouble(D)V: Line 168: 6011
+Number of times BBC is called for com.google.javascript.rhino.Node$NodeMismatch.equals(Ljava/lang/Object;)Z: I17 Branch 294 IFEQ L2204 - false: 6347
+Number of times BBC is called for com.google.javascript.rhino.Node$IntPropListItem.getObjectValue()Ljava/lang/Object;: root-Branch: 11352
+Number of times BBC is called for com.google.javascript.rhino.Node$NumberNode.setDouble(D)V: Line 167: 6011
+Number of times BBC is called for com.google.javascript.rhino.Node.getChildCount()I: Line 1407: 415
+Number of times BBC is called for com.google.javascript.rhino.Node.setLength(I)V: root-Branch: 3484
+Number of times BBC is called for com.google.javascript.rhino.Node.propToString(I)Ljava/lang/String;: I3 Branch 11 TABLESWITCH L114 Case 39 - false: 871
+Number of times BBC is called for com.google.javascript.rhino.Node.addChildToFront(Lcom/google/javascript/rhino/Node;)V: I4 Branch 65 IFNONNULL L596 - true: 251
+Number of times BBC is called for com.google.javascript.rhino.Node.useSourceInfoIfMissingFrom(Lcom/google/javascript/rhino/Node;)Lcom/google/javascript/rhino/Node;: Line 1818: 134
+Number of times BBC is called for com.google.javascript.rhino.Node.useSourceInfoIfMissingFrom(Lcom/google/javascript/rhino/Node;)Lcom/google/javascript/rhino/Node;: Line 1813: 134
+Number of times BBC is called for com.google.javascript.rhino.Node.isBreak()Z: I5 Branch 228 IF_ICMPNE L2243 - false: 3999
+Number of times BBC is called for com.google.javascript.rhino.Node.propToString(I)Ljava/lang/String;: I3 Branch 20 TABLESWITCH L114 Case 48 - true: 1094
+Number of times BBC is called for com.google.javascript.rhino.Node.propToString(I)Ljava/lang/String;: I3 Branch 20 TABLESWITCH L114 Case 48 - false: 871
+Number of times BBC is called for com.google.javascript.rhino.Node.useSourceInfoIfMissingFrom(Lcom/google/javascript/rhino/Node;)Lcom/google/javascript/rhino/Node;: Line 1809: 134
+Number of times BBC is called for com.google.javascript.rhino.Node$AncestorIterable$1.remove()V: root-Branch: 22247
+Number of times BBC is called for com.google.javascript.rhino.Node.propToString(I)Ljava/lang/String;: I3 Branch 29 TABLESWITCH L114 Case 57 - true: 1401
+Number of times BBC is called for com.google.javascript.rhino.Node.propToString(I)Ljava/lang/String;: I3 Branch 29 TABLESWITCH L114 Case 57 - false: 871
+Number of times BBC is called for com.google.javascript.rhino.Node.isTrue()Z: I5 Branch 273 IF_ICMPNE L2423 - true: 134
+Number of times BBC is called for com.google.javascript.rhino.Node$NodeMismatch.equals(Ljava/lang/Object;)Z: I17 Branch 294 IFEQ L2204 - true: 6347
+Number of times BBC is called for com.google.javascript.rhino.Node.<init>(ILcom/google/javascript/rhino/Node;Lcom/google/javascript/rhino/Node;Lcom/google/javascript/rhino/Node;Lcom/google/javascript/rhino/Node;)V: I8 Branch 43 IFNONNULL L419 - true: 24
+Number of times BBC is called for com.google.javascript.rhino.Node.replaceChild(Lcom/google/javascript/rhino/Node;Lcom/google/javascript/rhino/Node;)V: I46 Branch 91 IF_ACMPNE L725 - false: 2607
+Number of times BBC is called for com.google.javascript.rhino.Node$IntPropListItem.toString()Ljava/lang/String;: root-Branch: 22247
+Number of times BBC is called for com.google.javascript.rhino.Node.extractCharno(I)I: I4 Branch 143 IF_ICMPNE L1221 - false: 196
+Number of times BBC is called for com.google.javascript.rhino.Node.checkTreeEqualsImpl(Lcom/google/javascript/rhino/Node;)Lcom/google/javascript/rhino/Node$NodeMismatch;: I39 Branch 159 IFNONNULL L1455 - false: 2202
+Number of times BBC is called for com.google.javascript.rhino.Node.extractCharno(I)I: I4 Branch 143 IF_ICMPNE L1221 - true: 134
+Number of times BBC is called for com.google.javascript.rhino.Node.replaceChild(Lcom/google/javascript/rhino/Node;Lcom/google/javascript/rhino/Node;)V: I46 Branch 91 IF_ACMPNE L725 - true: 995
+Number of times BBC is called for com.google.javascript.rhino.Node.<init>(ILcom/google/javascript/rhino/Node;)V: I8 Branch 31 IFNONNULL L365 - true: 120
+Number of times BBC is called for com.google.javascript.rhino.Node.hasOneChild()Z: Line 1393: 415
+Number of times BBC is called for com.google.javascript.rhino.Node.isThis()Z: Line 2415: 752
+Number of times BBC is called for com.google.javascript.rhino.Node.getDirectives()Ljava/util/Set;: root-Branch: 47
+Number of times BBC is called for com.google.javascript.rhino.Node.setCharno(I)V: Line 1173: 415
+Number of times BBC is called for com.google.javascript.rhino.Node$NodeMismatch.<init>(Lcom/google/javascript/rhino/Node;Lcom/google/javascript/rhino/Node;)V: root-Branch: 317
+Number of times BBC is called for com.google.javascript.rhino.Node.setCharno(I)V: Line 1172: 415
+Number of times BBC is called for com.google.javascript.rhino.Node.hasChildren()Z: I4 Branch 57 IFNULL L534 - true: 265
+Number of times BBC is called for com.google.javascript.rhino.Node.isFalse()Z: Line 2299: 1672
+Number of times BBC is called for com.google.javascript.rhino.Node.getIntProp(I)I: I9 Branch 106 IFNONNULL L830 - true: 2524
+Number of times BBC is called for com.google.javascript.rhino.Node.setString(Ljava/lang/String;)V: I5 Branch 116 IF_ICMPEQ L925 - true: 1344
+Number of times BBC is called for com.google.javascript.rhino.Node.hasChildren()Z: I4 Branch 57 IFNULL L534 - false: 134
+Number of times BBC is called in total: 1994660
+* Search finished after 2939s and 125 generations, 75023 statements, best individual has fitness: 3393.0
+[MASTER] 13:09:29.386 [logback-2] ERROR ClientNodeImpl - Cannot inform master of change of state
+java.rmi.ConnectException: Connection refused to host: 127.0.0.1; nested exception is: 
+	java.net.ConnectException: Connection refused (Connection refused)
+	at sun.rmi.transport.tcp.TCPEndpoint.newSocket(TCPEndpoint.java:623)
+	at sun.rmi.transport.tcp.TCPChannel.createConnection(TCPChannel.java:216)
+	at sun.rmi.transport.tcp.TCPChannel.newConnection(TCPChannel.java:202)
+	at sun.rmi.server.UnicastRef.invoke(UnicastRef.java:132)
+	at java.rmi.server.RemoteObjectInvocationHandler.invokeRemoteMethod(RemoteObjectInvocationHandler.java:235)
+	at java.rmi.server.RemoteObjectInvocationHandler.invoke(RemoteObjectInvocationHandler.java:180)
+	at com.sun.proxy.$Proxy7.evosuite_collectStatistics(Unknown Source)
+	at org.evosuite.rmi.service.ClientNodeImpl.updateStatistics(ClientNodeImpl.java:261)
+	at org.evosuite.statistics.StatisticsSender.sendIndividualToMaster(StatisticsSender.java:68)
+	at org.evosuite.statistics.StatisticsSender.executedAndThenSendIndividualToMaster(StatisticsSender.java:97)
+	at org.evosuite.TestSuiteGenerator.generateTests(TestSuiteGenerator.java:636)
+	at org.evosuite.TestSuiteGenerator.generateTestSuite(TestSuiteGenerator.java:205)
+	at org.evosuite.rmi.service.ClientNodeImpl.lambda$startNewSearch$0(ClientNodeImpl.java:150)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.net.ConnectException: Connection refused (Connection refused)
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:607)
+	at java.net.Socket.connect(Socket.java:556)
+	at java.net.Socket.<init>(Socket.java:452)
+	at java.net.Socket.<init>(Socket.java:229)
+	at sun.rmi.transport.proxy.RMIDirectSocketFactory.createSocket(RMIDirectSocketFactory.java:40)
+	at sun.rmi.transport.proxy.RMIMasterSocketFactory.createSocket(RMIMasterSocketFactory.java:148)
+	at sun.rmi.transport.tcp.TCPEndpoint.newSocket(TCPEndpoint.java:617)
+	... 17 common frames omitted
+[MASTER] 13:09:30.376 [logback-1] WARN  TimeController - Phase SEARCH lasted too long, 2339 seconds more than allowed.
+[MASTER] 13:09:30.377 [logback-2] ERROR ClientNodeImpl - Cannot inform master of change of state
+java.rmi.ConnectException: Connection refused to host: 127.0.0.1; nested exception is: 
+	java.net.ConnectException: Connection refused (Connection refused)
+	at sun.rmi.transport.tcp.TCPEndpoint.newSocket(TCPEndpoint.java:623)
+	at sun.rmi.transport.tcp.TCPChannel.createConnection(TCPChannel.java:216)
+	at sun.rmi.transport.tcp.TCPChannel.newConnection(TCPChannel.java:202)
+	at sun.rmi.server.UnicastRef.invoke(UnicastRef.java:132)
+	at java.rmi.server.RemoteObjectInvocationHandler.invokeRemoteMethod(RemoteObjectInvocationHandler.java:235)
+	at java.rmi.server.RemoteObjectInvocationHandler.invoke(RemoteObjectInvocationHandler.java:180)
+	at com.sun.proxy.$Proxy7.evosuite_informChangeOfStateInClient(Unknown Source)
+	at org.evosuite.rmi.service.ClientNodeImpl.changeState(ClientNodeImpl.java:242)
+	at org.evosuite.rmi.service.ClientNodeImpl.changeState(ClientNodeImpl.java:228)
+	at org.evosuite.TestSuiteGenerator.postProcessTests(TestSuiteGenerator.java:383)
+	at org.evosuite.TestSuiteGenerator.generateTestSuite(TestSuiteGenerator.java:215)
+	at org.evosuite.rmi.service.ClientNodeImpl.lambda$startNewSearch$0(ClientNodeImpl.java:150)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.net.ConnectException: Connection refused (Connection refused)
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:607)
+	at java.net.Socket.connect(Socket.java:556)
+	at java.net.Socket.<init>(Socket.java:452)
+	at java.net.Socket.<init>(Socket.java:229)
+	at sun.rmi.transport.proxy.RMIDirectSocketFactory.createSocket(RMIDirectSocketFactory.java:40)
+	at sun.rmi.transport.proxy.RMIMasterSocketFactory.createSocket(RMIMasterSocketFactory.java:148)
+	at sun.rmi.transport.tcp.TCPEndpoint.newSocket(TCPEndpoint.java:617)
+	... 16 common frames omitted

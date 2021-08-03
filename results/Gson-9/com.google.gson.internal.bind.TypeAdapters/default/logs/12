@@ -1,0 +1,85 @@
+* EvoSuite 1.1.1-SNAPSHOT
+* Configuration: default
+* Going to generate test cases for class: com.google.gson.internal.bind.TypeAdapters
+* Starting Client-0
+* Connecting to master process on port 16382
+* Analyzing classpath: 
+  - subjects/buggy-versions/Gson-9/target/classes
+* Finished analyzing classpath
+* Generating tests for class com.google.gson.internal.bind.TypeAdapters
+* Test criteria:
+  - Line Coverage
+  - Branch Coverage
+  - Exception
+  - Mutation testing (weak)
+  - Method-Output Coverage
+  - Top-Level Method Coverage
+  - No-Exception Top-Level Method Coverage
+  - Context Branch Coverage
+* Total number of test goals for DYNAMOSA: 1481
+* Using seed 4037970337
+* Starting evolution
+* Initial Number of Goals in DynaMOSA = 538 / 1481
+[MASTER] 01:08:28.843 [logback-1] WARN  CoverageArchive - A solution with a timeout/exception result has been added to the archive. The covered goal was com.google.gson.internal.bind.TypeAdapters$29.write(Lcom/google/gson/stream/JsonWriter;Lcom/google/gson/JsonElement;)V: I6 Branch 81 IFEQ L757 - true
+[MASTER] 01:08:28.895 [logback-1] WARN  CoverageArchive - A solution with a timeout/exception result has been added to the archive. The covered goal was com.google.gson.internal.bind.TypeAdapters$29.write(Lcom/google/gson/stream/JsonWriter;Lcom/google/gson/JsonElement;)V: I17 Branch 82 IFEQ L759 - false
+[MASTER] 01:08:37.931 [logback-2] ERROR TestCluster - Failed to check cache for com.google.gson.reflect.TypeToken<T> : Type points to itself
+[MASTER] 01:08:39.505 [logback-2] ERROR TestCluster - Failed to check cache for java.util.function.Function<T, R> : Type points to itself
+Number of times BBC is called in total: 0
+* Search finished after 603s and 282 generations, 141940 statements, best individual has fitness: 571.0
+* Minimizing test suite
+* Going to analyze the coverage criteria
+* Coverage analysis for criterion LINE
+* Coverage of criterion LINE: 68%
+* Total number of goals: 391
+* Number of covered goals: 265
+* Coverage analysis for criterion BRANCH
+* Coverage of criterion BRANCH: 57%
+* Total number of goals: 284
+* Number of covered goals: 161
+* Coverage analysis for criterion EXCEPTION
+* Coverage of criterion EXCEPTION: 100% (no goals)
+* Coverage analysis for criterion WEAKMUTATION
+* Coverage of criterion WEAKMUTATION: 65%
+* Total number of goals: 498
+* Number of covered goals: 323
+* Coverage analysis for criterion OUTPUT
+* Coverage of criterion OUTPUT: 50%
+* Total number of goals: 10
+* Number of covered goals: 5
+* Coverage analysis for criterion METHOD
+* Coverage of criterion METHOD: 71%
+* Total number of goals: 7
+* Number of covered goals: 5
+* Coverage analysis for criterion METHODNOEXCEPTION
+* Coverage of criterion METHODNOEXCEPTION: 71%
+* Total number of goals: 7
+* Number of covered goals: 5
+* Coverage analysis for criterion CBRANCH
+* Coverage of criterion CBRANCH: 57%
+* Total number of goals: 284
+* Number of covered goals: 161
+* Generated 77 tests with total length 279
+* Resulting test suite's coverage: 67% (average coverage for all fitness functions)
+* Generating assertions
+* Resulting test suite's mutation score: 20%
+* Compiling and checking tests
+[MASTER] 01:18:55.905 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class java.lang.ClassCastException: com.google.gson.JsonObject cannot be cast to java.lang.Class
+[MASTER] 01:18:55.906 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ Gson gson0 = new Gson();
+ObjectConstructor<BitSet> objectConstructor0 = (ObjectConstructor<BitSet>) mock(ObjectConstructor.class, new ViolatedAssumptionAnswer());
+HashMap<String, ReflectiveTypeAdapterFactory.BoundField> hashMap0 = new HashMap<String, ReflectiveTypeAdapterFactory.BoundField>();
+ReflectiveTypeAdapterFactory.Adapter<BitSet> reflectiveTypeAdapterFactory_Adapter0 = new ReflectiveTypeAdapterFactory.Adapter<BitSet>(objectConstructor0, hashMap0);
+JsonElement jsonElement0 = gson0.toJsonTree((Object) reflectiveTypeAdapterFactory_Adapter0);
+Class<JsonObject> class0 = JsonObject.class;
+Class<InetAddress> class1 = gson0.fromJson(jsonElement0, (Type) class0);
+assertNotSame(jsonElement0, class1);
+
+
+* Permissions denied during test execution: 
+  - java.lang.RuntimePermission: 
+         writeFileDescriptor: 19
+* Writing tests to file
+* Writing JUnit test case 'TypeAdapters_ESTest' to results/Gson-9/com.google.gson.internal.bind.TypeAdapters/default/tests/12
+* Done!
+
+* Computation finished

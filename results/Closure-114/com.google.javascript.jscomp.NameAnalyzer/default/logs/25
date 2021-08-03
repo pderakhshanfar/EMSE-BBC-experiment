@@ -1,0 +1,124 @@
+* EvoSuite 1.1.1-SNAPSHOT
+* Configuration: default
+* Going to generate test cases for class: com.google.javascript.jscomp.NameAnalyzer
+* Starting Client-0
+* Connecting to master process on port 6922
+* Analyzing classpath: 
+  - subjects/buggy-versions/Closure-114/build/classes
+  - subjects/buggy-versions/Closure-114/lib/args4j.jar
+  - subjects/buggy-versions/Closure-114/lib/guava.jar
+  - subjects/buggy-versions/Closure-114/lib/json.jar
+  - subjects/buggy-versions/Closure-114/lib/jsr305.jar
+  - subjects/buggy-versions/Closure-114/lib/protobuf-java.jar
+  - subjects/buggy-versions/Closure-114/build/lib/rhino.jar
+  - subjects/buggy-versions/Closure-114/lib/ant.jar
+* Finished analyzing classpath
+* Generating tests for class com.google.javascript.jscomp.NameAnalyzer
+* Test criteria:
+  - Line Coverage
+  - Branch Coverage
+  - Exception
+  - Mutation testing (weak)
+  - Method-Output Coverage
+  - Top-Level Method Coverage
+  - No-Exception Top-Level Method Coverage
+  - Context Branch Coverage
+* Total number of test goals for DYNAMOSA: 2352
+* Using seed 3782395541
+* Starting evolution
+* Initial Number of Goals in DynaMOSA = 531 / 2352
+[MASTER] 19:58:53.619 [logback-2] ERROR TestCluster - Failed to check cache for java.util.AbstractMap<K, V>.SimpleEntry<K, V> : Type points to itself
+[MASTER] 19:58:53.621 [logback-2] ERROR TestCluster - Failed to check cache for java.util.AbstractMap<K, V>.SimpleImmutableEntry<K, V> : Type points to itself
+[MASTER] 19:59:24.326 [logback-2] ERROR TestCluster - Failed to check cache for java.util.Enumeration<E> : Type points to itself
+[MASTER] 20:02:14.106 [logback-2] ERROR TestCluster - Failed to check cache for java.util.Iterator<E> : Type points to itself
+[MASTER] 20:07:48.649 [logback-2] ERROR TestCluster - Failed to check cache for java.util.Comparator<T> : Type points to itself
+Number of times BBC is called in total: 0
+* Search finished after 605s and 399 generations, 169052 statements, best individual has fitness: 1589.0
+* Minimizing test suite
+* Going to analyze the coverage criteria
+* Coverage analysis for criterion LINE
+* Coverage of criterion LINE: 36%
+* Total number of goals: 685
+* Number of covered goals: 244
+* Coverage analysis for criterion BRANCH
+* Coverage of criterion BRANCH: 30%
+* Total number of goals: 561
+* Number of covered goals: 167
+* Coverage analysis for criterion EXCEPTION
+* Coverage of criterion EXCEPTION: 100%
+* Total number of goals: 3
+* Number of covered goals: 3
+* Coverage analysis for criterion WEAKMUTATION
+* Coverage of criterion WEAKMUTATION: 36%
+* Total number of goals: 506
+* Number of covered goals: 182
+* Coverage analysis for criterion OUTPUT
+* Coverage of criterion OUTPUT: 33%
+* Total number of goals: 3
+* Number of covered goals: 1
+* Coverage analysis for criterion METHOD
+* Coverage of criterion METHOD: 22%
+* Total number of goals: 18
+* Number of covered goals: 4
+* Coverage analysis for criterion METHODNOEXCEPTION
+* Coverage of criterion METHODNOEXCEPTION: 22%
+* Total number of goals: 18
+* Number of covered goals: 4
+* Coverage analysis for criterion CBRANCH
+* Coverage of criterion CBRANCH: 30%
+* Total number of goals: 561
+* Number of covered goals: 167
+* Generated 20 tests with total length 118
+* Resulting test suite's coverage: 34% (average coverage for all fitness functions)
+* Generating assertions
+* Resulting test suite's mutation score: 16%
+* Compiling and checking tests
+[MASTER] 20:09:19.197 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class java.lang.AssertionError: Expecting exception: IllegalArgumentException
+[MASTER] 20:09:19.197 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ ByteArrayOutputStream byteArrayOutputStream0 = new ByteArrayOutputStream(4);
+MockPrintStream mockPrintStream0 = new MockPrintStream(byteArrayOutputStream0);
+PrintStreamErrorManager printStreamErrorManager0 = new PrintStreamErrorManager(mockPrintStream0);
+Compiler compiler0 = new Compiler(printStreamErrorManager0);
+NameAnalyzer nameAnalyzer0 = new NameAnalyzer(compiler0, false);
+compiler0.parseTestCode("window");
+
+[MASTER] 20:09:22.447 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class java.lang.AssertionError: Expecting exception: IllegalArgumentException
+[MASTER] 20:09:22.447 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ ByteArrayOutputStream byteArrayOutputStream0 = new ByteArrayOutputStream(4);
+MockPrintStream mockPrintStream0 = new MockPrintStream(byteArrayOutputStream0);
+PrintStreamErrorManager printStreamErrorManager0 = new PrintStreamErrorManager(mockPrintStream0);
+Compiler compiler0 = new Compiler(printStreamErrorManager0);
+NameAnalyzer nameAnalyzer0 = new NameAnalyzer(compiler0, false);
+compiler0.parseTestCode("c1=eblaR5ioYt");
+
+[MASTER] 20:09:26.863 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class java.lang.AssertionError: Expecting exception: IllegalArgumentException
+[MASTER] 20:09:26.863 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ Compiler compiler0 = new Compiler();
+NameAnalyzer nameAnalyzer0 = new NameAnalyzer(compiler0, true);
+compiler0.parseSyntheticCode("jQuery.prototype.extend", "ASSIKGN_IXOR");
+
+[MASTER] 20:09:28.690 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class java.lang.AssertionError: Expecting exception: IllegalArgumentException
+[MASTER] 20:09:28.690 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ Compiler compiler0 = new Compiler();
+NameAnalyzer nameAnalyzer0 = new NameAnalyzer(compiler0, true);
+compiler0.parseSyntheticCode("ASSIKGN_IXOR", "ASSIKGN_IXOR");
+
+[MASTER] 20:09:30.033 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class java.lang.AssertionError: Expecting exception: IllegalArgumentException
+[MASTER] 20:09:30.033 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ Compiler compiler0 = new Compiler();
+NameAnalyzer nameAnalyzer0 = new NameAnalyzer(compiler0, true);
+compiler0.parseSyntheticCode("ASSIKGN_IXOR", "ASSIKGN_IXOR");
+
+[MASTER] 20:09:45.839 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class java.lang.AssertionError: Expecting exception: IllegalArgumentException
+[MASTER] 20:09:45.839 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ Compiler compiler0 = new Compiler();
+compiler0.parseSyntheticCode("XMTR", "XMTR");
+
+* Permissions denied during test execution: 
+  - java.lang.RuntimePermission: 
+         writeFileDescriptor: 20
+* Writing tests to file
+* Writing JUnit test case 'NameAnalyzer_ESTest' to results/Closure-114/com.google.javascript.jscomp.NameAnalyzer/default/tests/25
+* Done!
+
+* Computation finished

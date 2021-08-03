@@ -1,0 +1,414 @@
+* EvoSuite 1.1.1-SNAPSHOT
+* Configuration: default
+* Going to generate test cases for class: com.google.javascript.jscomp.TypeInference
+* Starting Client-0
+* Connecting to master process on port 3020
+* Analyzing classpath: 
+  - subjects/buggy-versions/Closure-176/build/classes
+  - subjects/buggy-versions/Closure-176/lib/args4j.jar
+  - subjects/buggy-versions/Closure-176/lib/guava.jar
+  - subjects/buggy-versions/Closure-176/lib/json.jar
+  - subjects/buggy-versions/Closure-176/lib/jsr305.jar
+  - subjects/buggy-versions/Closure-176/lib/protobuf-java.jar
+  - subjects/buggy-versions/Closure-176/build/lib/rhino.jar
+  - subjects/buggy-versions/Closure-176/lib/ant.jar
+* Finished analyzing classpath
+* Generating tests for class com.google.javascript.jscomp.TypeInference
+* Test criteria:
+  - Line Coverage
+  - Branch Coverage
+  - Exception
+  - Mutation testing (weak)
+  - Method-Output Coverage
+  - Top-Level Method Coverage
+  - No-Exception Top-Level Method Coverage
+  - Context Branch Coverage
+* Total number of test goals for DYNAMOSA: 3073
+* Using seed 1615072529
+* Starting evolution
+* Initial Number of Goals in DynaMOSA = 890 / 3073
+[MASTER] 18:15:56.995 [logback-2] ERROR TestCluster - Failed to check cache for java.util.Comparator<T> : Type points to itself
+[MASTER] 18:20:36.873 [logback-2] ERROR TestCluster - Failed to check cache for java.util.Iterator<E> : Type points to itself
+[MASTER] 18:21:31.459 [logback-2] ERROR TestCluster - Failed to check cache for java.util.Enumeration<E> : Type points to itself
+Number of times BBC is called in total: 0
+* Search finished after 601s and 408 generations, 231303 statements, best individual has fitness: 2253.0
+* Minimizing test suite
+* Going to analyze the coverage criteria
+* Coverage analysis for criterion LINE
+* Coverage of criterion LINE: 24%
+* Total number of goals: 619
+* Number of covered goals: 146
+* Coverage analysis for criterion BRANCH
+* Coverage of criterion BRANCH: 37%
+* Total number of goals: 793
+* Number of covered goals: 290
+* Coverage analysis for criterion EXCEPTION
+* Coverage of criterion EXCEPTION: 100%
+* Total number of goals: 7
+* Number of covered goals: 7
+* Coverage analysis for criterion WEAKMUTATION
+* Coverage of criterion WEAKMUTATION: 11%
+* Total number of goals: 836
+* Number of covered goals: 94
+* Coverage analysis for criterion OUTPUT
+* Coverage of criterion OUTPUT: 43%
+* Total number of goals: 14
+* Number of covered goals: 6
+* Coverage analysis for criterion METHOD
+* Coverage of criterion METHOD: 67%
+* Total number of goals: 9
+* Number of covered goals: 6
+* Coverage analysis for criterion METHODNOEXCEPTION
+* Coverage of criterion METHODNOEXCEPTION: 67%
+* Total number of goals: 9
+* Number of covered goals: 6
+* Coverage analysis for criterion CBRANCH
+* Coverage of criterion CBRANCH: 36%
+* Total number of goals: 793
+* Number of covered goals: 287
+* Generated 104 tests with total length 837
+* Resulting test suite's coverage: 42% (average coverage for all fitness functions)
+* Generating assertions
+* Resulting test suite's mutation score: 2%
+* Compiling and checking tests
+[MASTER] 18:26:58.440 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class org.evosuite.runtime.mock.java.lang.MockIllegalArgumentException: Multiple entries with same key: stableIdGenerator=NOT_IMPLEMENTED and stableIdGenerator=STABLEIDGENERATOR
+[MASTER] 18:26:58.441 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ ControlFlowGraph<Node> controlFlowGraph0 = new ControlFlowGraph<Node>((Node) null, true, true);
+Compiler compiler0 = new Compiler();
+Node node0 = compiler0.parseSyntheticCode("invertContextualRenaming", "invertContextualRenaming");
+node0.setType(101);
+Scope scope0 = Scope.createLatticeBottom(node0);
+TypeInference typeInference0 = new TypeInference(compiler0, controlFlowGraph0, (ReverseAbstractInterpreter) null, scope0, (Map<String, CodingConvention.AssertionFunctionSpec>) null);
+LinkedFlowScope linkedFlowScope0 = LinkedFlowScope.createEntryLattice(scope0);
+typeInference0.branchedFlowThrough(node0, linkedFlowScope0);
+
+[MASTER] 18:26:59.781 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class org.evosuite.runtime.mock.java.lang.MockIllegalArgumentException: Multiple entries with same key: stableIdGenerator=NOT_IMPLEMENTED and stableIdGenerator=STABLEIDGENERATOR
+[MASTER] 18:26:59.782 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ ControlFlowGraph<Node> controlFlowGraph0 = new ControlFlowGraph<Node>((Node) null, false, false);
+Compiler compiler0 = new Compiler();
+Node node0 = compiler0.parseSyntheticCode("invertContextualRenaming", "invertContextualRenaming");
+Scope scope0 = Scope.createGlobalScope(node0);
+Node node1 = new Node(30, node0);
+TypeInference typeInference0 = new TypeInference(compiler0, controlFlowGraph0, (ReverseAbstractInterpreter) null, scope0, (Map<String, CodingConvention.AssertionFunctionSpec>) null);
+
+[MASTER] 18:27:01.168 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class org.evosuite.runtime.mock.java.lang.MockIllegalArgumentException: Multiple entries with same key: stableIdGenerator=NOT_IMPLEMENTED and stableIdGenerator=STABLEIDGENERATOR
+[MASTER] 18:27:01.169 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ ControlFlowGraph<Node> controlFlowGraph0 = new ControlFlowGraph<Node>((Node) null, true, true);
+Compiler compiler0 = new Compiler();
+Node node0 = compiler0.parseSyntheticCode("com.google.javascript.jscomp.TypeInference", "com.google.javascript.jscomp.TypeInference");
+Scope scope0 = Scope.createGlobalScope(node0);
+TypeInference typeInference0 = new TypeInference(compiler0, controlFlowGraph0, (ReverseAbstractInterpreter) null, scope0, (Map<String, CodingConvention.AssertionFunctionSpec>) null);
+FlowScope flowScope0 = typeInference0.createInitialEstimateLattice();
+List<FlowScope> list0 = typeInference0.branchedFlowThrough((Node) null, flowScope0);
+assertEquals(0, list0.size());
+
+
+[MASTER] 18:27:02.754 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class org.evosuite.runtime.mock.java.lang.MockIllegalArgumentException: Multiple entries with same key: stableIdGenerator=NOT_IMPLEMENTED and stableIdGenerator=STABLEIDGENERATOR
+[MASTER] 18:27:02.755 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ ControlFlowGraph<Node> controlFlowGraph0 = new ControlFlowGraph<Node>((Node) null, true, true);
+Compiler compiler0 = new Compiler();
+Node node0 = compiler0.parseSyntheticCode("invertContextualRenaming", "invertContextualRenaming");
+Scope scope0 = Scope.createGlobalScope(node0);
+TypeInference typeInference0 = new TypeInference(compiler0, controlFlowGraph0, (ReverseAbstractInterpreter) null, scope0, (Map<String, CodingConvention.AssertionFunctionSpec>) null);
+LinkedFlowScope linkedFlowScope0 = LinkedFlowScope.createEntryLattice(scope0);
+Node[] nodeArray0 = new Node[1];
+nodeArray0[0] = node0;
+Node node1 = new Node(4, nodeArray0);
+typeInference0.branchedFlowThrough(node1, linkedFlowScope0);
+
+[MASTER] 18:27:04.178 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class org.evosuite.runtime.mock.java.lang.MockIllegalArgumentException: Multiple entries with same key: stableIdGenerator=NOT_IMPLEMENTED and stableIdGenerator=STABLEIDGENERATOR
+[MASTER] 18:27:04.179 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ ControlFlowGraph<Node> controlFlowGraph0 = new ControlFlowGraph<Node>((Node) null, false, true);
+Compiler compiler0 = new Compiler();
+Node node0 = compiler0.parseSyntheticCode("invertContextualRenaming", "invertContextualRenaming");
+Scope scope0 = Scope.createGlobalScope(node0);
+TypeInference typeInference0 = new TypeInference(compiler0, controlFlowGraph0, (ReverseAbstractInterpreter) null, scope0, (Map<String, CodingConvention.AssertionFunctionSpec>) null);
+LinkedFlowScope linkedFlowScope0 = LinkedFlowScope.createEntryLattice(scope0);
+Node node1 = Node.newString(5, "invertContextualRenaming");
+typeInference0.branchedFlowThrough(node1, linkedFlowScope0);
+
+[MASTER] 18:27:05.374 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class org.evosuite.runtime.mock.java.lang.MockIllegalArgumentException: Multiple entries with same key: stableIdGenerator=NOT_IMPLEMENTED and stableIdGenerator=STABLEIDGENERATOR
+[MASTER] 18:27:05.374 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ ControlFlowGraph<Node> controlFlowGraph0 = new ControlFlowGraph<Node>((Node) null, false, false);
+Compiler compiler0 = new Compiler();
+Node node0 = compiler0.parseSyntheticCode("invertContextualRenaming", "invertContextualRenaming");
+Scope scope0 = Scope.createGlobalScope(node0);
+TypeInference typeInference0 = new TypeInference(compiler0, controlFlowGraph0, (ReverseAbstractInterpreter) null, scope0, (Map<String, CodingConvention.AssertionFunctionSpec>) null);
+LinkedFlowScope linkedFlowScope0 = LinkedFlowScope.createEntryLattice(scope0);
+Node node1 = Node.newString(8, "invertContextualRenaming");
+typeInference0.branchedFlowThrough(node1, linkedFlowScope0);
+
+[MASTER] 18:27:07.193 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class org.evosuite.runtime.mock.java.lang.MockIllegalArgumentException: Multiple entries with same key: stableIdGenerator=NOT_IMPLEMENTED and stableIdGenerator=STABLEIDGENERATOR
+[MASTER] 18:27:07.194 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ ControlFlowGraph<Node> controlFlowGraph0 = new ControlFlowGraph<Node>((Node) null, true, true);
+Compiler compiler0 = new Compiler();
+Node node0 = compiler0.parseSyntheticCode("invertContextua^Renaming", "invertContextua^Renaming");
+node0.setType(155);
+Scope scope0 = Scope.createLatticeBottom(node0);
+TypeInference typeInference0 = new TypeInference(compiler0, controlFlowGraph0, (ReverseAbstractInterpreter) null, scope0, (Map<String, CodingConvention.AssertionFunctionSpec>) null);
+LinkedFlowScope linkedFlowScope0 = LinkedFlowScope.createEntryLattice(scope0);
+typeInference0.branchedFlowThrough(node0, linkedFlowScope0);
+
+[MASTER] 18:27:08.695 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class org.evosuite.runtime.mock.java.lang.MockIllegalArgumentException: Multiple entries with same key: stableIdGenerator=NOT_IMPLEMENTED and stableIdGenerator=STABLEIDGENERATOR
+[MASTER] 18:27:08.695 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ ControlFlowGraph<Node> controlFlowGraph0 = new ControlFlowGraph<Node>((Node) null, false, false);
+Compiler compiler0 = new Compiler();
+Node node0 = compiler0.parseSyntheticCode("invertContextualRenaming", "com.google.javascript.jscomp.Normalize$ScopeTicklingCallback");
+Scope scope0 = Scope.createGlobalScope(node0);
+TypeInference typeInference0 = new TypeInference(compiler0, controlFlowGraph0, (ReverseAbstractInterpreter) null, scope0, (Map<String, CodingConvention.AssertionFunctionSpec>) null);
+LinkedFlowScope linkedFlowScope0 = LinkedFlowScope.createEntryLattice(scope0);
+Node node1 = Node.newString(12, "invertContextualRenaming");
+typeInference0.branchedFlowThrough(node1, linkedFlowScope0);
+
+[MASTER] 18:27:10.058 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class org.evosuite.runtime.mock.java.lang.MockIllegalArgumentException: Multiple entries with same key: stableIdGenerator=NOT_IMPLEMENTED and stableIdGenerator=STABLEIDGENERATOR
+[MASTER] 18:27:10.059 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ ControlFlowGraph<Node> controlFlowGraph0 = new ControlFlowGraph<Node>((Node) null, false, false);
+Compiler compiler0 = new Compiler();
+Node node0 = compiler0.parseSyntheticCode("invertContextualRenaing", "invertContextualRenaing");
+Scope scope0 = Scope.createGlobalScope(node0);
+ReverseAbstractInterpreter reverseAbstractInterpreter0 = compiler0.getReverseAbstractInterpreter();
+TypeInference typeInference0 = new TypeInference(compiler0, controlFlowGraph0, reverseAbstractInterpreter0, scope0, (Map<String, CodingConvention.AssertionFunctionSpec>) null);
+Node node1 = Node.newString(13, "r");
+LinkedFlowScope linkedFlowScope0 = LinkedFlowScope.createEntryLattice(scope0);
+typeInference0.branchedFlowThrough(node1, linkedFlowScope0);
+
+[MASTER] 18:27:11.439 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class org.evosuite.runtime.mock.java.lang.MockIllegalArgumentException: Multiple entries with same key: stableIdGenerator=NOT_IMPLEMENTED and stableIdGenerator=STABLEIDGENERATOR
+[MASTER] 18:27:11.439 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ ControlFlowGraph<Node> controlFlowGraph0 = new ControlFlowGraph<Node>((Node) null, false, false);
+Compiler compiler0 = new Compiler();
+Node node0 = compiler0.parseSyntheticCode("inver_ConlextualRenaming", "inver_ConlextualRenaming");
+Scope scope0 = Scope.createGlobalScope(node0);
+TypeInference typeInference0 = new TypeInference(compiler0, controlFlowGraph0, (ReverseAbstractInterpreter) null, scope0, (Map<String, CodingConvention.AssertionFunctionSpec>) null);
+LinkedFlowScope linkedFlowScope0 = LinkedFlowScope.createEntryLattice(scope0);
+Node node1 = Node.newString(15, "_n");
+typeInference0.branchedFlowThrough(node1, linkedFlowScope0);
+
+[MASTER] 18:27:12.704 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class org.evosuite.runtime.mock.java.lang.MockIllegalArgumentException: Multiple entries with same key: stableIdGenerator=NOT_IMPLEMENTED and stableIdGenerator=STABLEIDGENERATOR
+[MASTER] 18:27:12.705 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ ControlFlowGraph<Node> controlFlowGraph0 = new ControlFlowGraph<Node>((Node) null, false, false);
+Compiler compiler0 = new Compiler();
+Node node0 = compiler0.parseSyntheticCode("invertContextualRenaming", "invertContextualRenaming");
+Scope scope0 = Scope.createGlobalScope(node0);
+TypeInference typeInference0 = new TypeInference(compiler0, controlFlowGraph0, (ReverseAbstractInterpreter) null, scope0, (Map<String, CodingConvention.AssertionFunctionSpec>) null);
+LinkedFlowScope linkedFlowScope0 = LinkedFlowScope.createEntryLattice(scope0);
+Node node1 = Node.newString(16, "invertContextualRenaming");
+typeInference0.branchedFlowThrough(node1, linkedFlowScope0);
+
+[MASTER] 18:27:14.173 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class org.evosuite.runtime.mock.java.lang.MockIllegalArgumentException: Multiple entries with same key: stableIdGenerator=NOT_IMPLEMENTED and stableIdGenerator=STABLEIDGENERATOR
+[MASTER] 18:27:14.173 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ ControlFlowGraph<Node> controlFlowGraph0 = new ControlFlowGraph<Node>((Node) null, false, false);
+Compiler compiler0 = new Compiler();
+Node node0 = compiler0.parseSyntheticCode("invertContextualRenaming", "invertContextualRenaming");
+Scope scope0 = Scope.createGlobalScope(node0);
+TypeInference typeInference0 = new TypeInference(compiler0, controlFlowGraph0, (ReverseAbstractInterpreter) null, scope0, (Map<String, CodingConvention.AssertionFunctionSpec>) null);
+LinkedFlowScope linkedFlowScope0 = LinkedFlowScope.createEntryLattice(scope0);
+Node node1 = Node.newString(29, "invertContextualRenaming");
+typeInference0.branchedFlowThrough(node1, linkedFlowScope0);
+
+[MASTER] 18:27:15.511 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class org.evosuite.runtime.mock.java.lang.MockIllegalArgumentException: Multiple entries with same key: stableIdGenerator=NOT_IMPLEMENTED and stableIdGenerator=STABLEIDGENERATOR
+[MASTER] 18:27:15.511 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ ControlFlowGraph<Node> controlFlowGraph0 = new ControlFlowGraph<Node>((Node) null, false, false);
+Compiler compiler0 = new Compiler();
+Node node0 = compiler0.parseSyntheticCode("invertContextualRenaming", "invertContextualRenaming");
+Scope scope0 = Scope.createGlobalScope(node0);
+TypeInference typeInference0 = new TypeInference(compiler0, controlFlowGraph0, (ReverseAbstractInterpreter) null, scope0, (Map<String, CodingConvention.AssertionFunctionSpec>) null);
+LinkedFlowScope linkedFlowScope0 = LinkedFlowScope.createEntryLattice(scope0);
+Node node1 = new Node(30, node0, 57, 48);
+typeInference0.branchedFlowThrough(node1, linkedFlowScope0);
+
+[MASTER] 18:27:16.819 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class org.evosuite.runtime.mock.java.lang.MockIllegalArgumentException: Multiple entries with same key: stableIdGenerator=NOT_IMPLEMENTED and stableIdGenerator=STABLEIDGENERATOR
+[MASTER] 18:27:16.819 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ ControlFlowGraph<Node> controlFlowGraph0 = new ControlFlowGraph<Node>((Node) null, false, false);
+Compiler compiler0 = new Compiler();
+Node node0 = compiler0.parseSyntheticCode("com.google.javascript.jscomp.TypeInference", "com.google.javascript.jscomp.TypeInference");
+Scope scope0 = Scope.createLatticeBottom(node0);
+TypeInference typeInference0 = new TypeInference(compiler0, controlFlowGraph0, (ReverseAbstractInterpreter) null, scope0, (Map<String, CodingConvention.AssertionFunctionSpec>) null);
+Node node1 = new Node(32);
+LinkedFlowScope linkedFlowScope0 = LinkedFlowScope.createEntryLattice(scope0);
+typeInference0.branchedFlowThrough(node1, linkedFlowScope0);
+
+[MASTER] 18:27:18.108 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class org.evosuite.runtime.mock.java.lang.MockIllegalArgumentException: Multiple entries with same key: stableIdGenerator=NOT_IMPLEMENTED and stableIdGenerator=STABLEIDGENERATOR
+[MASTER] 18:27:18.108 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ ControlFlowGraph<Node> controlFlowGraph0 = new ControlFlowGraph<Node>((Node) null, false, false);
+Compiler compiler0 = new Compiler();
+Node node0 = compiler0.parseSyntheticCode("invertContextualRenaming", "invertContextualRenaming");
+Scope scope0 = Scope.createGlobalScope(node0);
+TypeInference typeInference0 = new TypeInference(compiler0, controlFlowGraph0, (ReverseAbstractInterpreter) null, scope0, (Map<String, CodingConvention.AssertionFunctionSpec>) null);
+LinkedFlowScope linkedFlowScope0 = LinkedFlowScope.createEntryLattice(scope0);
+Node node1 = Node.newString(36, "invertContextualRenaming", 51, 400000);
+typeInference0.branchedFlowThrough(node1, linkedFlowScope0);
+
+[MASTER] 18:27:19.364 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class org.evosuite.runtime.mock.java.lang.MockIllegalArgumentException: Multiple entries with same key: stableIdGenerator=NOT_IMPLEMENTED and stableIdGenerator=STABLEIDGENERATOR
+[MASTER] 18:27:19.364 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ ControlFlowGraph<Node> controlFlowGraph0 = new ControlFlowGraph<Node>((Node) null, true, true);
+Compiler compiler0 = new Compiler();
+Node node0 = compiler0.parseSyntheticCode("invertContextualRenaming", "invertContextualRenaming");
+Scope scope0 = Scope.createGlobalScope(node0);
+TypeInference typeInference0 = new TypeInference(compiler0, controlFlowGraph0, (ReverseAbstractInterpreter) null, scope0, (Map<String, CodingConvention.AssertionFunctionSpec>) null);
+LinkedFlowScope linkedFlowScope0 = LinkedFlowScope.createEntryLattice(scope0);
+Node node1 = Node.newString(37, ",}Mg");
+typeInference0.branchedFlowThrough(node1, linkedFlowScope0);
+
+[MASTER] 18:27:20.686 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class org.evosuite.runtime.mock.java.lang.MockIllegalArgumentException: Multiple entries with same key: stableIdGenerator=NOT_IMPLEMENTED and stableIdGenerator=STABLEIDGENERATOR
+[MASTER] 18:27:20.686 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ ControlFlowGraph<Node> controlFlowGraph0 = new ControlFlowGraph<Node>((Node) null, false, false);
+Compiler compiler0 = new Compiler();
+Node node0 = compiler0.parseSyntheticCode("invertContextualRenaming", "invertContextualRenaming");
+Scope scope0 = Scope.createGlobalScope(node0);
+TypeInference typeInference0 = new TypeInference(compiler0, controlFlowGraph0, (ReverseAbstractInterpreter) null, scope0, (Map<String, CodingConvention.AssertionFunctionSpec>) null);
+LinkedFlowScope linkedFlowScope0 = LinkedFlowScope.createEntryLattice(scope0);
+Node node1 = new Node(39);
+typeInference0.branchedFlowThrough(node1, linkedFlowScope0);
+
+[MASTER] 18:27:22.233 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class org.evosuite.runtime.mock.java.lang.MockIllegalArgumentException: Multiple entries with same key: stableIdGenerator=NOT_IMPLEMENTED and stableIdGenerator=STABLEIDGENERATOR
+[MASTER] 18:27:22.233 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ ControlFlowGraph<Node> controlFlowGraph0 = new ControlFlowGraph<Node>((Node) null, false, false);
+Compiler compiler0 = new Compiler();
+Node node0 = compiler0.parseSyntheticCode("com.go8gZe.javascript.jscomp.TypeInference", "com.go8gZe.javascript.jscomp.TypeInference");
+Scope scope0 = Scope.createLatticeBottom(node0);
+TypeInference typeInference0 = new TypeInference(compiler0, controlFlowGraph0, (ReverseAbstractInterpreter) null, scope0, (Map<String, CodingConvention.AssertionFunctionSpec>) null);
+Node node1 = Node.newString("com.go8gZe.javascript.jscomp.TypeInference", 36, 48);
+LinkedFlowScope linkedFlowScope0 = LinkedFlowScope.createEntryLattice(scope0);
+typeInference0.branchedFlowThrough(node1, linkedFlowScope0);
+
+[MASTER] 18:27:23.625 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class org.evosuite.runtime.mock.java.lang.MockIllegalArgumentException: Multiple entries with same key: stableIdGenerator=NOT_IMPLEMENTED and stableIdGenerator=STABLEIDGENERATOR
+[MASTER] 18:27:23.625 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ ControlFlowGraph<Node> controlFlowGraph0 = new ControlFlowGraph<Node>((Node) null, false, false);
+Compiler compiler0 = new Compiler();
+Node node0 = compiler0.parseSyntheticCode("invertContextualRenaming", "invertContextualRenaming");
+Scope scope0 = Scope.createGlobalScope(node0);
+TypeInference typeInference0 = new TypeInference(compiler0, controlFlowGraph0, (ReverseAbstractInterpreter) null, scope0, (Map<String, CodingConvention.AssertionFunctionSpec>) null);
+Node node1 = Node.newString(42, "invertContextualRenaming");
+LinkedFlowScope linkedFlowScope0 = LinkedFlowScope.createEntryLattice(scope0);
+typeInference0.branchedFlowThrough(node1, linkedFlowScope0);
+
+[MASTER] 18:27:24.946 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class org.evosuite.runtime.mock.java.lang.MockIllegalArgumentException: Multiple entries with same key: stableIdGenerator=NOT_IMPLEMENTED and stableIdGenerator=STABLEIDGENERATOR
+[MASTER] 18:27:24.946 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ ControlFlowGraph<Node> controlFlowGraph0 = new ControlFlowGraph<Node>((Node) null, false, false);
+Compiler compiler0 = new Compiler();
+Node node0 = compiler0.parseSyntheticCode("invertContextualRenaming", "invertContextualRenaming");
+Scope scope0 = Scope.createGlobalScope(node0);
+TypeInference typeInference0 = new TypeInference(compiler0, controlFlowGraph0, (ReverseAbstractInterpreter) null, scope0, (Map<String, CodingConvention.AssertionFunctionSpec>) null);
+LinkedFlowScope linkedFlowScope0 = LinkedFlowScope.createEntryLattice(scope0);
+Node node1 = new Node(43);
+typeInference0.branchedFlowThrough(node1, linkedFlowScope0);
+
+[MASTER] 18:27:26.390 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class org.evosuite.runtime.mock.java.lang.MockIllegalArgumentException: Multiple entries with same key: stableIdGenerator=NOT_IMPLEMENTED and stableIdGenerator=STABLEIDGENERATOR
+[MASTER] 18:27:26.390 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ ControlFlowGraph<Node> controlFlowGraph0 = new ControlFlowGraph<Node>((Node) null, false, false);
+Compiler compiler0 = new Compiler();
+Node node0 = compiler0.parseSyntheticCode("com.google.javascript.jscomp.TypeInference", "com.google.javascript.jscomp.TypeInference");
+Scope scope0 = Scope.createLatticeBottom(node0);
+TypeInference typeInference0 = new TypeInference(compiler0, controlFlowGraph0, (ReverseAbstractInterpreter) null, scope0, (Map<String, CodingConvention.AssertionFunctionSpec>) null);
+LinkedFlowScope linkedFlowScope0 = LinkedFlowScope.createEntryLattice(scope0);
+Node node1 = Node.newString(46, "N|}xaZ=KgZHHLd$i");
+typeInference0.branchedFlowThrough(node1, linkedFlowScope0);
+
+[MASTER] 18:27:27.661 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class org.evosuite.runtime.mock.java.lang.MockIllegalArgumentException: Multiple entries with same key: stableIdGenerator=NOT_IMPLEMENTED and stableIdGenerator=STABLEIDGENERATOR
+[MASTER] 18:27:27.662 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ ControlFlowGraph<Node> controlFlowGraph0 = new ControlFlowGraph<Node>((Node) null, true, true);
+Compiler compiler0 = new Compiler();
+Node node0 = compiler0.parseSyntheticCode("inver_ConlextualRenaming", "inver_ConlextualRenaming");
+Scope scope0 = Scope.createGlobalScope(node0);
+LinkedFlowScope linkedFlowScope0 = LinkedFlowScope.createEntryLattice(scope0);
+Node node1 = new Node(47, node0, 39, 16);
+TypeInference typeInference0 = new TypeInference(compiler0, controlFlowGraph0, (ReverseAbstractInterpreter) null, scope0, (Map<String, CodingConvention.AssertionFunctionSpec>) null);
+typeInference0.branchedFlowThrough(node1, linkedFlowScope0);
+
+[MASTER] 18:27:28.947 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class org.evosuite.runtime.mock.java.lang.MockIllegalArgumentException: Multiple entries with same key: stableIdGenerator=NOT_IMPLEMENTED and stableIdGenerator=STABLEIDGENERATOR
+[MASTER] 18:27:28.947 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ ControlFlowGraph<Node> controlFlowGraph0 = new ControlFlowGraph<Node>((Node) null, false, false);
+Compiler compiler0 = new Compiler();
+Node node0 = compiler0.parseSyntheticCode("com.google.javascript.jscomp.TypeInference$1", "com.google.javascript.jscomp.TypeInference$1");
+Scope scope0 = Scope.createGlobalScope(node0);
+TypeInference typeInference0 = new TypeInference(compiler0, controlFlowGraph0, (ReverseAbstractInterpreter) null, scope0, (Map<String, CodingConvention.AssertionFunctionSpec>) null);
+Node node1 = Node.newString(48, "com.google.javascript.jscomp.TypeInference$1");
+LinkedFlowScope linkedFlowScope0 = LinkedFlowScope.createEntryLattice(scope0);
+typeInference0.branchedFlowThrough(node1, linkedFlowScope0);
+
+[MASTER] 18:27:30.319 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class org.evosuite.runtime.mock.java.lang.MockIllegalArgumentException: Multiple entries with same key: stableIdGenerator=NOT_IMPLEMENTED and stableIdGenerator=STABLEIDGENERATOR
+[MASTER] 18:27:30.319 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ ControlFlowGraph<Node> controlFlowGraph0 = new ControlFlowGraph<Node>((Node) null, true, true);
+Compiler compiler0 = new Compiler();
+Node node0 = compiler0.parseSyntheticCode("com.google.javascript.jscomp.TypeInference", "com.google.javascript.jscomp.TypeInference");
+Scope scope0 = Scope.createGlobalScope(node0);
+TypeInference typeInference0 = new TypeInference(compiler0, controlFlowGraph0, (ReverseAbstractInterpreter) null, scope0, (Map<String, CodingConvention.AssertionFunctionSpec>) null);
+LinkedFlowScope linkedFlowScope0 = LinkedFlowScope.createEntryLattice(scope0);
+Node node1 = new Node(49);
+typeInference0.branchedFlowThrough(node1, linkedFlowScope0);
+
+[MASTER] 18:27:31.574 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class org.evosuite.runtime.mock.java.lang.MockIllegalArgumentException: Multiple entries with same key: stableIdGenerator=NOT_IMPLEMENTED and stableIdGenerator=STABLEIDGENERATOR
+[MASTER] 18:27:31.575 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ ControlFlowGraph<Node> controlFlowGraph0 = new ControlFlowGraph<Node>((Node) null, false, false);
+Compiler compiler0 = new Compiler();
+Node node0 = compiler0.parseSyntheticCode("invertContextualRenaing", "invertContextualRenaing");
+Scope scope0 = Scope.createGlobalScope(node0);
+ReverseAbstractInterpreter reverseAbstractInterpreter0 = compiler0.getReverseAbstractInterpreter();
+TypeInference typeInference0 = new TypeInference(compiler0, controlFlowGraph0, reverseAbstractInterpreter0, scope0, (Map<String, CodingConvention.AssertionFunctionSpec>) null);
+Node node1 = Node.newString(50, "invertContextualRenaing");
+LinkedFlowScope linkedFlowScope0 = LinkedFlowScope.createEntryLattice(scope0);
+typeInference0.branchedFlowThrough(node1, linkedFlowScope0);
+
+[MASTER] 18:27:32.953 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class org.evosuite.runtime.mock.java.lang.MockIllegalArgumentException: Multiple entries with same key: stableIdGenerator=NOT_IMPLEMENTED and stableIdGenerator=STABLEIDGENERATOR
+[MASTER] 18:27:32.954 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ ControlFlowGraph<Node> controlFlowGraph0 = new ControlFlowGraph<Node>((Node) null, false, false);
+Compiler compiler0 = new Compiler();
+Node node0 = compiler0.parseSyntheticCode("invertContextualRenaming", "invertContextualRenaming");
+Scope scope0 = Scope.createGlobalScope(node0);
+TypeInference typeInference0 = new TypeInference(compiler0, controlFlowGraph0, (ReverseAbstractInterpreter) null, scope0, (Map<String, CodingConvention.AssertionFunctionSpec>) null);
+LinkedFlowScope linkedFlowScope0 = LinkedFlowScope.createEntryLattice(scope0);
+Node node1 = Node.newString(51, "invertContextualRenaming");
+typeInference0.branchedFlowThrough(node1, linkedFlowScope0);
+
+[MASTER] 18:27:34.278 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class org.evosuite.runtime.mock.java.lang.MockIllegalArgumentException: Multiple entries with same key: stableIdGenerator=NOT_IMPLEMENTED and stableIdGenerator=STABLEIDGENERATOR
+[MASTER] 18:27:34.278 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ ControlFlowGraph<Node> controlFlowGraph0 = new ControlFlowGraph<Node>((Node) null, false, false);
+Compiler compiler0 = new Compiler();
+Node node0 = compiler0.parseSyntheticCode("invertContextualRenaming", "invertContextualRenaming");
+Scope scope0 = Scope.createGlobalScope(node0);
+TypeInference typeInference0 = new TypeInference(compiler0, controlFlowGraph0, (ReverseAbstractInterpreter) null, scope0, (Map<String, CodingConvention.AssertionFunctionSpec>) null);
+LinkedFlowScope linkedFlowScope0 = LinkedFlowScope.createEntryLattice(scope0);
+Node node1 = Node.newString(52, "$3");
+typeInference0.branchedFlowThrough(node1, linkedFlowScope0);
+
+[MASTER] 18:27:35.596 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class org.evosuite.runtime.mock.java.lang.MockIllegalArgumentException: Multiple entries with same key: stableIdGenerator=NOT_IMPLEMENTED and stableIdGenerator=STABLEIDGENERATOR
+[MASTER] 18:27:35.596 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ ControlFlowGraph<Node> controlFlowGraph0 = new ControlFlowGraph<Node>((Node) null, true, true);
+Compiler compiler0 = new Compiler();
+Node node0 = compiler0.parseSyntheticCode("com.google.javascript.jscomp.TypeInference", "com.google.javascript.jscomp.TypeInference");
+Scope scope0 = Scope.createGlobalScope(node0);
+TypeInference typeInference0 = new TypeInference(compiler0, controlFlowGraph0, (ReverseAbstractInterpreter) null, scope0, (Map<String, CodingConvention.AssertionFunctionSpec>) null);
+Node node1 = Node.newString(53, ":N1?:c");
+LinkedFlowScope linkedFlowScope0 = LinkedFlowScope.createEntryLattice(scope0);
+typeInference0.branchedFlowThrough(node1, linkedFlowScope0);
+
+[MASTER] 18:27:36.861 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class org.evosuite.runtime.mock.java.lang.MockIllegalArgumentException: Multiple entries with same key: stableIdGenerator=NOT_IMPLEMENTED and stableIdGenerator=STABLEIDGENERATOR
+[MASTER] 18:27:36.862 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ ControlFlowGraph<Node> controlFlowGraph0 = new ControlFlowGraph<Node>((Node) null, false, false);
+Compiler compiler0 = new Compiler();
+Node node0 = compiler0.parseSyntheticCode("invertContextualRenaming", "invertContextualRenaming");
+Scope scope0 = Scope.createGlobalScope(node0);
+Node node1 = Node.newString(55, "invertContextualRenaming");
+LinkedFlowScope linkedFlowScope0 = LinkedFlowScope.createEntryLattice(scope0);
+TypeInference typeInference0 = new TypeInference(compiler0, controlFlowGraph0, (ReverseAbstractInterpreter) null, scope0, (Map<String, CodingConvention.AssertionFunctionSpec>) null);
+typeInference0.branchedFlowThrough(node1, linkedFlowScope0);
+
+[MASTER] 18:27:38.509 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class org.evosuite.runtime.mock.java.lang.MockIllegalArgumentException: Multiple entries with same key: stableIdGenerator=NOT_IMPLEMENTED and stableIdGenerator=STABLEIDGENERATOR
+[MASTER] 18:27:38.510 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ ControlFlowGraph<Node> controlFlowGraph0 = new ControlFlowGraph<Node>((Node) null, false, false);
+Compiler compiler0 = new Compiler();
+Node node0 = compiler0.parseSyntheticCode("invertContextualRenaming", "invertContextualRenaming");
+Scope scope0 = Scope.createGlobalScope(node0);
+TypeInference typeInference0 = new TypeInference(compiler0, controlFlowGraph0, (ReverseAbstractInterpreter) null, scope0, (Map<String, CodingConvention.AssertionFunctionSpec>) null);
+Node node1 = Node.newString(56, "");
+LinkedFlowScope linkedFlowScope0 = LinkedFlowScope.createEntryLattice(scope0);
+typeInference0.branchedFlowThrough(node1, linkedFlowScope0);
+
+* Permissions denied during test execution: 
+  - java.lang.RuntimePermission: 
+         writeFileDescriptor: 14
+* Writing tests to file
+* Writing JUnit test case 'TypeInference_ESTest' to results/Closure-176/com.google.javascript.jscomp.TypeInference/default/tests/20
+* Done!
+
+* Computation finished

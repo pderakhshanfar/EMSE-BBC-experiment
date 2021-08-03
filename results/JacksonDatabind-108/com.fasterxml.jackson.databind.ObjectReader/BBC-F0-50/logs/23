@@ -1,0 +1,441 @@
+* EvoSuite 1.1.1-SNAPSHOT
+* Configuration: BBC-F0-50
+* Going to generate test cases for class: com.fasterxml.jackson.databind.ObjectReader
+* Starting Client-0
+* Connecting to master process on port 6031
+* Analyzing classpath: 
+  - subjects/buggy-versions/JacksonDatabind-108/target/classes
+  - defects4j/framework/projects/JacksonDatabind/lib/com/fasterxml/jackson/core/jackson-annotations/2.10.0-SNAPSHOT/jackson-annotations-2.10.0-20190519.085045-3.jar
+  - defects4j/framework/projects/JacksonDatabind/lib/com/fasterxml/jackson/core/jackson-core/2.10.0-SNAPSHOT/jackson-core-2.10.0-20190518.180547-60.jar
+* Finished analyzing classpath
+* Generating tests for class com.fasterxml.jackson.databind.ObjectReader
+* Test criteria:
+  - Line Coverage
+  - Branch Coverage
+  - Exception
+  - Mutation testing (weak)
+  - Method-Output Coverage
+  - Top-Level Method Coverage
+  - No-Exception Top-Level Method Coverage
+  - Context Branch Coverage
+* Total number of test goals for DYNAMOSA: 2286
+* Using seed 3902340741
+* Starting evolution
+bbc usage percentage is: 50%
+* Initial Number of Goals in DynaMOSA = 1328 / 2286
+[MASTER] 04:13:25.664 [logback-2] ERROR TestCluster - Failed to check cache for com.fasterxml.jackson.databind.ext.DOMDeserializer<T>.DocumentDeserializer : Type points to itself
+[MASTER] 04:13:25.664 [logback-2] ERROR TestCluster - Failed to check cache for com.fasterxml.jackson.databind.ext.DOMDeserializer<T>.NodeDeserializer : Type points to itself
+[MASTER] 04:13:25.835 [logback-2] ERROR TestCluster - Failed to check cache for java.util.concurrent.ConcurrentHashMap<K, V> : Type points to itself
+[MASTER] 04:13:26.027 [logback-2] ERROR TestCluster - Failed to check cache for java.util.LinkedList<E> : Type points to itself
+[MASTER] 04:13:31.111 [logback-2] ERROR TestCluster - Failed to check cache for com.fasterxml.jackson.databind.JsonDeserializer<T> : Type points to itself
+[MASTER] 04:13:33.729 [logback-2] ERROR TestCluster - Failed to check cache for com.fasterxml.jackson.databind.JsonSerializer<T> : Type points to itself
+[MASTER] 04:13:44.568 [logback-2] ERROR TestCluster - Failed to check cache for java.util.Enumeration<E> : Type points to itself
+[MASTER] 04:14:03.576 [logback-1] WARN  TestChromosome - Functional mock problem: org.evosuite.ga.ConstructionFailedException: Failed to add constructor for com.fasterxml.jackson.databind.introspect.POJOPropertyBuilder due to org.evosuite.ga.ConstructionFailedException: Failed to add constructor for com.fasterxml.jackson.databind.DeserializationConfig due to org.evosuite.ga.ConstructionFailedException: Failed to add constructor for com.fasterxml.jackson.databind.DeserializationConfig due to org.evosuite.ga.ConstructionFailedException: Max recursion depth reached
+[MASTER] 04:14:08.035 [logback-2] ERROR TestCluster - Failed to check cache for java.util.Comparator<T> : Type points to itself
+[MASTER] 04:14:58.868 [logback-1] WARN  TestChromosome - Functional mock problem: org.evosuite.ga.ConstructionFailedException: Failed to add constructor for com.fasterxml.jackson.databind.type.ResolvedRecursiveType due to org.evosuite.ga.ConstructionFailedException: Invalid generic instance
+[MASTER] 04:16:18.004 [logback-1] WARN  TestChromosome - Functional mock problem: org.evosuite.ga.ConstructionFailedException: Failed to add constructor for com.fasterxml.jackson.databind.DeserializationConfig due to org.evosuite.ga.ConstructionFailedException: Failed to add constructor for com.fasterxml.jackson.databind.DeserializationConfig due to org.evosuite.ga.ConstructionFailedException: Failed to add constructor for com.fasterxml.jackson.databind.introspect.SimpleMixInResolver due to org.evosuite.ga.ConstructionFailedException: Max recursion depth reached
+[MASTER] 04:16:18.441 [logback-1] WARN  TestChromosome - Functional mock problem: org.evosuite.ga.ConstructionFailedException: Failed to add constructor for com.fasterxml.jackson.databind.deser.CreatorProperty due to org.evosuite.ga.ConstructionFailedException: Max recursion depth reached
+[MASTER] 04:18:49.527 [logback-1] WARN  TestChromosome - Functional mock problem: org.evosuite.ga.ConstructionFailedException: Max recursion depth reached
+[MASTER] 04:19:08.023 [logback-1] WARN  TestChromosome - Functional mock problem: org.evosuite.ga.ConstructionFailedException: Failed to add constructor for com.fasterxml.jackson.databind.deser.BeanDeserializer due to org.evosuite.ga.ConstructionFailedException: Failed to add constructor for com.fasterxml.jackson.databind.deser.BeanDeserializer due to org.evosuite.ga.ConstructionFailedException: Failed to add constructor for com.fasterxml.jackson.databind.deser.BuilderBasedDeserializer due to org.evosuite.ga.ConstructionFailedException: Max recursion depth reached
+[MASTER] 04:19:26.369 [logback-2] ERROR TestCluster - Failed to check cache for com.fasterxml.jackson.annotation.ObjectIdGenerator<T> : Type points to itself
+[MASTER] 04:20:25.331 [logback-1] WARN  TestChromosome - Functional mock problem: org.evosuite.ga.ConstructionFailedException: Failed to add constructor for com.fasterxml.jackson.databind.type.ResolvedRecursiveType due to org.evosuite.ga.ConstructionFailedException: Max recursion depth reached
+[MASTER] 04:20:38.485 [logback-2] ERROR TestCluster - Failed to check cache for java.util.Map<K, V>.Entry<K, V> : Type points to itself
+[MASTER] 04:21:25.982 [logback-2] ERROR TestCluster - Failed to check cache for java.lang.Class<T> : Type points to itself
+Number of times BBC is called for com.fasterxml.jackson.databind.ObjectReader._bindAndCloseAsTree(Lcom/fasterxml/jackson/core/JsonParser;)Lcom/fasterxml/jackson/databind/JsonNode;: I16 Branch 57 IFNULL L1667 - false: 107
+Number of times BBC is called for com.fasterxml.jackson.databind.ObjectReader._findRootDeserializer(Lcom/fasterxml/jackson/databind/DeserializationContext;)Lcom/fasterxml/jackson/databind/JsonDeserializer;: I18 Branch 87 IFNONNULL L1928 - false: 70
+Number of times BBC is called for com.fasterxml.jackson.databind.ObjectReader.with(Lcom/fasterxml/jackson/core/JsonFactory;)Lcom/fasterxml/jackson/databind/ObjectReader;: I21 Branch 7 IFNONNULL L605 - true: 74
+Number of times BBC is called for com.fasterxml.jackson.databind.ObjectReader._considerFilter(Lcom/fasterxml/jackson/core/JsonParser;Z)Lcom/fasterxml/jackson/core/JsonParser;: I8 Branch 74 IFEQ L1769 - true: 879
+Number of times BBC is called for com.fasterxml.jackson.databind.ObjectReader._verifyNoTrailingTokens(Lcom/fasterxml/jackson/core/JsonParser;Lcom/fasterxml/jackson/databind/DeserializationContext;Lcom/fasterxml/jackson/databind/JavaType;)V: Line 1780: 7590
+Number of times BBC is called for com.fasterxml.jackson.databind.ObjectReader.withFormatDetection(Lcom/fasterxml/jackson/databind/deser/DataFormatReaders;)Lcom/fasterxml/jackson/databind/ObjectReader;: Line 846: 32
+Number of times BBC is called for com.fasterxml.jackson.databind.ObjectReader._verifyNoTrailingTokens(Lcom/fasterxml/jackson/core/JsonParser;Lcom/fasterxml/jackson/databind/DeserializationContext;Lcom/fasterxml/jackson/databind/JavaType;)V: Line 1781: 7590
+Number of times BBC is called for com.fasterxml.jackson.databind.ObjectReader._bindAndCloseAsTree(Lcom/fasterxml/jackson/core/JsonParser;)Lcom/fasterxml/jackson/databind/JsonNode;: I16 Branch 57 IFNULL L1667 - true: 1427
+Number of times BBC is called for com.fasterxml.jackson.databind.ObjectReader.readValues(Ljava/io/InputStream;)Lcom/fasterxml/jackson/databind/MappingIterator;: I4 Branch 32 IFNULL L1456 - true: 3255
+Number of times BBC is called for com.fasterxml.jackson.databind.ObjectReader.without(Lcom/fasterxml/jackson/databind/DeserializationFeature;)Lcom/fasterxml/jackson/databind/ObjectReader;: root-Branch: 792
+Number of times BBC is called for com.fasterxml.jackson.databind.ObjectReader._considerFilter(Lcom/fasterxml/jackson/core/JsonParser;Z)Lcom/fasterxml/jackson/core/JsonParser;: I8 Branch 74 IFEQ L1769 - false: 3401
+Number of times BBC is called for com.fasterxml.jackson.databind.ObjectReader.readValue(Ljava/io/File;)Ljava/lang/Object;: I4 Branch 22 IFNULL L1265 - true: 703
+Number of times BBC is called for com.fasterxml.jackson.databind.ObjectReader._bindAndClose(Lcom/fasterxml/jackson/core/JsonParser;)Ljava/lang/Object;: I24 Branch 46 IF_ACMPNE L1636 - true: 171
+Number of times BBC is called for com.fasterxml.jackson.databind.ObjectReader.readValue(Lcom/fasterxml/jackson/databind/JsonNode;)Ljava/lang/Object;: I4 Branch 24 IFNULL L1299 - false: 5463
+Number of times BBC is called for com.fasterxml.jackson.databind.ObjectReader.getAttributes()Lcom/fasterxml/jackson/databind/cfg/ContextAttributes;: root-Branch: 3434
+Number of times BBC is called for com.fasterxml.jackson.databind.ObjectReader._bindAndClose(Lcom/fasterxml/jackson/core/JsonParser;)Ljava/lang/Object;: I24 Branch 46 IF_ACMPNE L1636 - false: 2496
+Number of times BBC is called for com.fasterxml.jackson.databind.ObjectReader.treeToValue(Lcom/fasterxml/jackson/core/TreeNode;Ljava/lang/Class;)Ljava/lang/Object;: Line 1569: 3077
+Number of times BBC is called for com.fasterxml.jackson.databind.ObjectReader.treeToValue(Lcom/fasterxml/jackson/core/TreeNode;Ljava/lang/Class;)Ljava/lang/Object;: Line 1570: 3077
+Number of times BBC is called for com.fasterxml.jackson.databind.ObjectReader.readValue(Lcom/fasterxml/jackson/databind/JsonNode;)Ljava/lang/Object;: I4 Branch 24 IFNULL L1299 - true: 1676
+Number of times BBC is called for com.fasterxml.jackson.databind.ObjectReader._initForMultiRead(Lcom/fasterxml/jackson/databind/DeserializationContext;Lcom/fasterxml/jackson/core/JsonParser;)V: I4 Branch 4 IFNULL L377 - false: 1709
+Number of times BBC is called for com.fasterxml.jackson.databind.ObjectReader.treeToValue(Lcom/fasterxml/jackson/core/TreeNode;Ljava/lang/Class;)Ljava/lang/Object;: Line 1571: 3077
+Number of times BBC is called for com.fasterxml.jackson.databind.ObjectReader.treeToValue(Lcom/fasterxml/jackson/core/TreeNode;Ljava/lang/Class;)Ljava/lang/Object;: Line 1572: 6386
+Number of times BBC is called for com.fasterxml.jackson.databind.ObjectReader.treeToValue(Lcom/fasterxml/jackson/core/TreeNode;Ljava/lang/Class;)Ljava/lang/Object;: Line 1573: 6386
+Number of times BBC is called for com.fasterxml.jackson.databind.ObjectReader.getInjectableValues()Lcom/fasterxml/jackson/databind/InjectableValues;: Line 943: 2300
+Number of times BBC is called for com.fasterxml.jackson.databind.ObjectReader.withFeatures([Lcom/fasterxml/jackson/core/JsonParser$Feature;)Lcom/fasterxml/jackson/databind/ObjectReader;: root-Branch: 1420
+Number of times BBC is called for com.fasterxml.jackson.databind.ObjectReader.with(Lcom/fasterxml/jackson/core/FormatSchema;)Lcom/fasterxml/jackson/databind/ObjectReader;: Line 655: 1506
+Number of times BBC is called for com.fasterxml.jackson.databind.ObjectReader._detectBindAndReadValues(Lcom/fasterxml/jackson/databind/deser/DataFormatReaders$Match;Z)Lcom/fasterxml/jackson/databind/MappingIterator;: Line 1836: 2712
+Number of times BBC is called for com.fasterxml.jackson.databind.ObjectReader._bind(Lcom/fasterxml/jackson/core/JsonParser;Ljava/lang/Object;)Ljava/lang/Object;: I62 Branch 43 IFEQ L1609 - false: 3454
+Number of times BBC is called for com.fasterxml.jackson.databind.ObjectReader._bind(Lcom/fasterxml/jackson/core/JsonParser;Ljava/lang/Object;)Ljava/lang/Object;: I62 Branch 43 IFEQ L1609 - true: 416
+Number of times BBC is called for com.fasterxml.jackson.databind.ObjectReader.withoutAttribute(Ljava/lang/Object;)Lcom/fasterxml/jackson/databind/ObjectReader;: root-Branch: 1852
+Number of times BBC is called for com.fasterxml.jackson.databind.ObjectReader._detectBindAndReadValues(Lcom/fasterxml/jackson/databind/deser/DataFormatReaders$Match;Z)Lcom/fasterxml/jackson/databind/MappingIterator;: Line 1840: 2712
+Number of times BBC is called for com.fasterxml.jackson.databind.ObjectReader._inputStream(Ljava/io/File;)Ljava/io/InputStream;: Line 1900: 1506
+Number of times BBC is called for com.fasterxml.jackson.databind.ObjectReader.with(Lcom/fasterxml/jackson/databind/InjectableValues;)Lcom/fasterxml/jackson/databind/ObjectReader;: I5 Branch 5 IF_ACMPNE L568 - true: 149
+Number of times BBC is called for com.fasterxml.jackson.databind.ObjectReader.withView(Ljava/lang/Class;)Lcom/fasterxml/jackson/databind/ObjectReader;: Line 785: 32
+Number of times BBC is called for com.fasterxml.jackson.databind.ObjectReader.readValue(Ljava/io/File;)Ljava/lang/Object;: I4 Branch 22 IFNULL L1265 - false: 7221
+Number of times BBC is called for com.fasterxml.jackson.databind.ObjectReader._bind(Lcom/fasterxml/jackson/core/JsonParser;Ljava/lang/Object;)Ljava/lang/Object;: I45 Branch 42 IF_ACMPNE L1605 - false: 3479
+Number of times BBC is called for com.fasterxml.jackson.databind.ObjectReader.readValues(Ljava/io/InputStream;)Lcom/fasterxml/jackson/databind/MappingIterator;: I4 Branch 32 IFNULL L1456 - false: 9212
+Number of times BBC is called for com.fasterxml.jackson.databind.ObjectReader.readTree([B)Lcom/fasterxml/jackson/databind/JsonNode;: I4 Branch 29 IFNULL L1378 - false: 3180
+Number of times BBC is called for com.fasterxml.jackson.databind.ObjectReader._unwrapAndDeserialize(Lcom/fasterxml/jackson/core/JsonParser;Lcom/fasterxml/jackson/databind/DeserializationContext;Lcom/fasterxml/jackson/databind/JavaType;Lcom/fasterxml/jackson/databind/JsonDeserializer;)Ljava/lang/Object;: Line 1731: 13713
+Number of times BBC is called for com.fasterxml.jackson.databind.ObjectReader.isEnabled(Lcom/fasterxml/jackson/databind/MapperFeature;)Z: root-Branch: 9429
+Number of times BBC is called for com.fasterxml.jackson.databind.ObjectReader.with(Lcom/fasterxml/jackson/databind/DeserializationFeature;[Lcom/fasterxml/jackson/databind/DeserializationFeature;)Lcom/fasterxml/jackson/databind/ObjectReader;: root-Branch: 617
+Number of times BBC is called for com.fasterxml.jackson.databind.ObjectReader.treeToValue(Lcom/fasterxml/jackson/core/TreeNode;Ljava/lang/Class;)Ljava/lang/Object;: root-Branch: 3077
+Number of times BBC is called for com.fasterxml.jackson.databind.ObjectReader._detectBindAndClose(Lcom/fasterxml/jackson/databind/deser/DataFormatReaders$Match;Z)Ljava/lang/Object;: I20 Branch 80 IFEQ L1819 - false: 3777
+Number of times BBC is called for com.fasterxml.jackson.databind.ObjectReader.with(Lcom/fasterxml/jackson/core/FormatSchema;)Lcom/fasterxml/jackson/databind/ObjectReader;: I5 Branch 8 IF_ACMPNE L655 - true: 6108
+Number of times BBC is called for com.fasterxml.jackson.databind.ObjectReader._reportUnkownFormat(Lcom/fasterxml/jackson/databind/deser/DataFormatReaders;Lcom/fasterxml/jackson/databind/deser/DataFormatReaders$Match;)V: Line 1863: 2300
+Number of times BBC is called for com.fasterxml.jackson.databind.ObjectReader.readValue([B)Ljava/lang/Object;: I4 Branch 20 IFNULL L1238 - true: 187
+Number of times BBC is called for com.fasterxml.jackson.databind.ObjectReader._detectBindAndClose([BII)Ljava/lang/Object;: Line 1802: 3035
+Number of times BBC is called for com.fasterxml.jackson.databind.ObjectReader._unwrapAndDeserialize(Lcom/fasterxml/jackson/core/JsonParser;Lcom/fasterxml/jackson/databind/DeserializationContext;Lcom/fasterxml/jackson/databind/JavaType;Lcom/fasterxml/jackson/databind/JsonDeserializer;)Ljava/lang/Object;: Line 1722: 13328
+Number of times BBC is called for com.fasterxml.jackson.databind.ObjectReader._detectBindAndClose([BII)Ljava/lang/Object;: Line 1801: 32
+Number of times BBC is called for com.fasterxml.jackson.databind.ObjectReader._detectBindAndClose([BII)Ljava/lang/Object;: Line 1806: 3035
+Number of times BBC is called for com.fasterxml.jackson.databind.ObjectReader._unwrapAndDeserialize(Lcom/fasterxml/jackson/core/JsonParser;Lcom/fasterxml/jackson/databind/DeserializationContext;Lcom/fasterxml/jackson/databind/JavaType;Lcom/fasterxml/jackson/databind/JsonDeserializer;)Ljava/lang/Object;: Line 1726: 13328
+Number of times BBC is called for com.fasterxml.jackson.databind.ObjectReader._detectBindAndClose([BII)Ljava/lang/Object;: Line 1805: 3035
+Number of times BBC is called for com.fasterxml.jackson.databind.ObjectReader.readTree(Ljava/lang/String;)Lcom/fasterxml/jackson/databind/JsonNode;: Line 1369: 703
+Number of times BBC is called for com.fasterxml.jackson.databind.ObjectReader.readTree(Ljava/lang/String;)Lcom/fasterxml/jackson/databind/JsonNode;: Line 1366: 703
+Number of times BBC is called for com.fasterxml.jackson.databind.ObjectReader.with(Lcom/fasterxml/jackson/databind/DeserializationConfig;)Lcom/fasterxml/jackson/databind/ObjectReader;: Line 556: 4070
+Number of times BBC is called for com.fasterxml.jackson.databind.ObjectReader._unwrapAndDeserialize(Lcom/fasterxml/jackson/core/JsonParser;Lcom/fasterxml/jackson/databind/DeserializationContext;Lcom/fasterxml/jackson/databind/JavaType;Lcom/fasterxml/jackson/databind/JsonDeserializer;)Ljava/lang/Object;: Line 1724: 13328
+Number of times BBC is called for com.fasterxml.jackson.databind.ObjectReader._bindAndCloseAsTree(Lcom/fasterxml/jackson/core/JsonParser;)Lcom/fasterxml/jackson/databind/JsonNode;: I18 Branch 58 IFNULL L1667 - false: 1320
+Number of times BBC is called for com.fasterxml.jackson.databind.ObjectReader._unwrapAndDeserialize(Lcom/fasterxml/jackson/core/JsonParser;Lcom/fasterxml/jackson/databind/DeserializationContext;Lcom/fasterxml/jackson/databind/JavaType;Lcom/fasterxml/jackson/databind/JsonDeserializer;)Ljava/lang/Object;: Line 1745: 13713
+Number of times BBC is called for com.fasterxml.jackson.databind.ObjectReader._newIterator(Lcom/fasterxml/jackson/core/JsonParser;Lcom/fasterxml/jackson/databind/DeserializationContext;Lcom/fasterxml/jackson/databind/JsonDeserializer;Z)Lcom/fasterxml/jackson/databind/MappingIterator;: root-Branch: 103
+Number of times BBC is called for com.fasterxml.jackson.databind.ObjectReader._bind(Lcom/fasterxml/jackson/core/JsonParser;Ljava/lang/Object;)Ljava/lang/Object;: Line 1626: 1374
+Number of times BBC is called for com.fasterxml.jackson.databind.ObjectReader.readValues(Ljava/io/Reader;)Lcom/fasterxml/jackson/databind/MappingIterator;: I4 Branch 33 IFNULL L1470 - false: 1205
+Number of times BBC is called for com.fasterxml.jackson.databind.ObjectReader.withRootName(Ljava/lang/String;)Lcom/fasterxml/jackson/databind/ObjectReader;: root-Branch: 3614
+Number of times BBC is called for com.fasterxml.jackson.databind.ObjectReader._bindAsTree(Lcom/fasterxml/jackson/core/JsonParser;)Lcom/fasterxml/jackson/databind/JsonNode;: Line 1695: 89
+Number of times BBC is called for com.fasterxml.jackson.databind.ObjectReader._bind(Lcom/fasterxml/jackson/core/JsonParser;Ljava/lang/Object;)Ljava/lang/Object;: Line 1623: 1374
+Number of times BBC is called for com.fasterxml.jackson.databind.ObjectReader._bind(Lcom/fasterxml/jackson/core/JsonParser;Ljava/lang/Object;)Ljava/lang/Object;: Line 1622: 1374
+Number of times BBC is called for com.fasterxml.jackson.databind.ObjectReader._bindAsTree(Lcom/fasterxml/jackson/core/JsonParser;)Lcom/fasterxml/jackson/databind/JsonNode;: Line 1700: 89
+Number of times BBC is called for com.fasterxml.jackson.databind.ObjectReader.with(Lcom/fasterxml/jackson/databind/cfg/ContextAttributes;)Lcom/fasterxml/jackson/databind/ObjectReader;: Line 854: 703
+Number of times BBC is called for com.fasterxml.jackson.databind.ObjectReader._detectBindAndReadValues(Lcom/fasterxml/jackson/databind/deser/DataFormatReaders$Match;Z)Lcom/fasterxml/jackson/databind/MappingIterator;: Line 1830: 269
+Number of times BBC is called for com.fasterxml.jackson.databind.ObjectReader.readValue([B)Ljava/lang/Object;: I4 Branch 20 IFNULL L1238 - false: 7392
+Number of times BBC is called for com.fasterxml.jackson.databind.ObjectReader._unwrapAndDeserialize(Lcom/fasterxml/jackson/core/JsonParser;Lcom/fasterxml/jackson/databind/DeserializationContext;Lcom/fasterxml/jackson/databind/JavaType;Lcom/fasterxml/jackson/databind/JsonDeserializer;)Ljava/lang/Object;: Line 1737: 13713
+Number of times BBC is called for com.fasterxml.jackson.databind.ObjectReader._unwrapAndDeserialize(Lcom/fasterxml/jackson/core/JsonParser;Lcom/fasterxml/jackson/databind/DeserializationContext;Lcom/fasterxml/jackson/databind/JavaType;Lcom/fasterxml/jackson/databind/JsonDeserializer;)Ljava/lang/Object;: Line 1736: 13713
+Number of times BBC is called for com.fasterxml.jackson.databind.ObjectReader.readValue(Lcom/fasterxml/jackson/core/JsonParser;Lcom/fasterxml/jackson/databind/JavaType;)Ljava/lang/Object;: root-Branch: 527
+Number of times BBC is called for com.fasterxml.jackson.databind.ObjectReader._unwrapAndDeserialize(Lcom/fasterxml/jackson/core/JsonParser;Lcom/fasterxml/jackson/databind/DeserializationContext;Lcom/fasterxml/jackson/databind/JavaType;Lcom/fasterxml/jackson/databind/JsonDeserializer;)Ljava/lang/Object;: Line 1743: 13713
+Number of times BBC is called for com.fasterxml.jackson.databind.ObjectReader._detectBindAndClose(Lcom/fasterxml/jackson/databind/deser/DataFormatReaders$Match;Z)Ljava/lang/Object;: I20 Branch 80 IFEQ L1819 - true: 3742
+Number of times BBC is called for com.fasterxml.jackson.databind.ObjectReader._detectBindAndReadValues(Lcom/fasterxml/jackson/databind/deser/DataFormatReaders$Match;Z)Lcom/fasterxml/jackson/databind/MappingIterator;: Line 1833: 2712
+Number of times BBC is called for com.fasterxml.jackson.databind.ObjectReader.with(Lcom/fasterxml/jackson/core/FormatSchema;)Lcom/fasterxml/jackson/databind/ObjectReader;: I5 Branch 8 IF_ACMPNE L655 - false: 1506
+Number of times BBC is called for com.fasterxml.jackson.databind.ObjectReader.withType(Ljava/lang/reflect/Type;)Lcom/fasterxml/jackson/databind/ObjectReader;: root-Branch: 1766
+Number of times BBC is called for com.fasterxml.jackson.databind.ObjectReader._initForReading(Lcom/fasterxml/jackson/databind/DeserializationContext;Lcom/fasterxml/jackson/core/JsonParser;)Lcom/fasterxml/jackson/core/JsonToken;: I34 Branch 3 IFNONNULL L356 - true: 17
+Number of times BBC is called for com.fasterxml.jackson.databind.ObjectReader.with(Lcom/fasterxml/jackson/databind/DeserializationFeature;[Lcom/fasterxml/jackson/databind/DeserializationFeature;)Lcom/fasterxml/jackson/databind/ObjectReader;: Line 404: 617
+Number of times BBC is called for com.fasterxml.jackson.databind.ObjectReader._bind(Lcom/fasterxml/jackson/core/JsonParser;Ljava/lang/Object;)Ljava/lang/Object;: I42 Branch 41 IF_ACMPEQ L1605 - true: 3479
+Number of times BBC is called for com.fasterxml.jackson.databind.ObjectReader.withoutRootName()Lcom/fasterxml/jackson/databind/ObjectReader;: root-Branch: 269
+Number of times BBC is called for com.fasterxml.jackson.databind.ObjectReader._detectBindAndClose(Lcom/fasterxml/jackson/databind/deser/DataFormatReaders$Match;Z)Ljava/lang/Object;: Line 1823: 3742
+Number of times BBC is called for com.fasterxml.jackson.databind.ObjectReader.readValue(Ljava/io/InputStream;)Ljava/lang/Object;: Line 1192: 1591
+Number of times BBC is called for com.fasterxml.jackson.databind.ObjectReader._detectBindAndClose(Lcom/fasterxml/jackson/databind/deser/DataFormatReaders$Match;Z)Ljava/lang/Object;: Line 1819: 3742
+Number of times BBC is called for com.fasterxml.jackson.databind.ObjectReader.with(Lcom/fasterxml/jackson/core/FormatFeature;)Lcom/fasterxml/jackson/databind/ObjectReader;: Line 491: 2115
+Number of times BBC is called for com.fasterxml.jackson.databind.ObjectReader._detectBindAndClose(Lcom/fasterxml/jackson/databind/deser/DataFormatReaders$Match;Z)Ljava/lang/Object;: Line 1816: 3742
+Number of times BBC is called for com.fasterxml.jackson.databind.ObjectReader._detectBindAndClose(Lcom/fasterxml/jackson/databind/deser/DataFormatReaders$Match;Z)Ljava/lang/Object;: Line 1813: 2025
+Number of times BBC is called for com.fasterxml.jackson.databind.ObjectReader.forType(Lcom/fasterxml/jackson/databind/JavaType;)Lcom/fasterxml/jackson/databind/ObjectReader;: I27 Branch 11 IFNULL L680 - false: 3371
+Number of times BBC is called for com.fasterxml.jackson.databind.ObjectReader._verifyNoTrailingTokens(Lcom/fasterxml/jackson/core/JsonParser;Lcom/fasterxml/jackson/databind/DeserializationContext;Lcom/fasterxml/jackson/databind/JavaType;)V: Line 1790: 8509
+Number of times BBC is called for com.fasterxml.jackson.databind.ObjectReader._initForReading(Lcom/fasterxml/jackson/databind/DeserializationContext;Lcom/fasterxml/jackson/core/JsonParser;)Lcom/fasterxml/jackson/core/JsonToken;: I34 Branch 3 IFNONNULL L356 - false: 36
+Number of times BBC is called for com.fasterxml.jackson.databind.ObjectReader.isEnabled(Lcom/fasterxml/jackson/databind/MapperFeature;)Z: Line 906: 9429
+Number of times BBC is called for com.fasterxml.jackson.databind.ObjectReader.readValues(Ljava/net/URL;)Lcom/fasterxml/jackson/databind/MappingIterator;: Line 1541: 32
+Number of times BBC is called for com.fasterxml.jackson.databind.ObjectReader._unwrapAndDeserialize(Lcom/fasterxml/jackson/core/JsonParser;Lcom/fasterxml/jackson/databind/DeserializationContext;Lcom/fasterxml/jackson/databind/JavaType;Lcom/fasterxml/jackson/databind/JsonDeserializer;)Ljava/lang/Object;: I130 Branch 71 IF_ACMPEQ L1752 - true: 13713
+Number of times BBC is called for com.fasterxml.jackson.databind.ObjectReader.with(Lcom/fasterxml/jackson/core/FormatFeature;)Lcom/fasterxml/jackson/databind/ObjectReader;: root-Branch: 2115
+Number of times BBC is called for com.fasterxml.jackson.databind.ObjectReader.withoutFeatures([Lcom/fasterxml/jackson/databind/DeserializationFeature;)Lcom/fasterxml/jackson/databind/ObjectReader;: root-Branch: 792
+Number of times BBC is called for com.fasterxml.jackson.databind.ObjectReader._findRootDeserializer(Lcom/fasterxml/jackson/databind/DeserializationContext;)Lcom/fasterxml/jackson/databind/JsonDeserializer;: I52 Branch 89 IFNONNULL L1939 - false: 523
+Number of times BBC is called for com.fasterxml.jackson.databind.ObjectReader.readTree(Lcom/fasterxml/jackson/core/JsonParser;)Lcom/fasterxml/jackson/core/TreeNode;: Line 1169: 973
+Number of times BBC is called for com.fasterxml.jackson.databind.ObjectReader.withValueToUpdate(Ljava/lang/Object;)Lcom/fasterxml/jackson/databind/ObjectReader;: I5 Branch 12 IF_ACMPNE L755 - true: 29
+Number of times BBC is called for com.fasterxml.jackson.databind.ObjectReader.withValueToUpdate(Ljava/lang/Object;)Lcom/fasterxml/jackson/databind/ObjectReader;: I35 Branch 14 IFNONNULL L768 - false: 390
+Number of times BBC is called for com.fasterxml.jackson.databind.ObjectReader.withValueToUpdate(Ljava/lang/Object;)Lcom/fasterxml/jackson/databind/ObjectReader;: I35 Branch 14 IFNONNULL L768 - true: 1131
+Number of times BBC is called for com.fasterxml.jackson.databind.ObjectReader.withFeatures([Lcom/fasterxml/jackson/core/JsonParser$Feature;)Lcom/fasterxml/jackson/databind/ObjectReader;: Line 459: 1420
+Number of times BBC is called for com.fasterxml.jackson.databind.ObjectReader.readValues(Lcom/fasterxml/jackson/core/JsonParser;Lcom/fasterxml/jackson/databind/JavaType;)Ljava/util/Iterator;: root-Branch: 7491
+Number of times BBC is called for com.fasterxml.jackson.databind.ObjectReader._findTreeDeserializer(Lcom/fasterxml/jackson/databind/DeserializationContext;)Lcom/fasterxml/jackson/databind/JsonDeserializer;: I21 Branch 91 IFNONNULL L1956 - false: 2300
+Number of times BBC is called for com.fasterxml.jackson.databind.ObjectReader._bind(Lcom/fasterxml/jackson/core/JsonParser;Ljava/lang/Object;)Ljava/lang/Object;: I21 Branch 40 IFNONNULL L1600 - true: 3479
+Number of times BBC is called for com.fasterxml.jackson.databind.ObjectReader._reportUndetectableSource(Ljava/lang/Object;)V: root-Branch: 1591
+Number of times BBC is called for com.fasterxml.jackson.databind.ObjectReader._bindAsTree(Lcom/fasterxml/jackson/core/JsonParser;)Lcom/fasterxml/jackson/databind/JsonNode;: I99 Branch 66 IFEQ L1695 - false: 496
+Number of times BBC is called for com.fasterxml.jackson.databind.ObjectReader.withType(Ljava/lang/reflect/Type;)Lcom/fasterxml/jackson/databind/ObjectReader;: Line 734: 1766
+Number of times BBC is called for com.fasterxml.jackson.databind.ObjectReader._bindAsTree(Lcom/fasterxml/jackson/core/JsonParser;)Lcom/fasterxml/jackson/databind/JsonNode;: I99 Branch 66 IFEQ L1695 - true: 89
+Number of times BBC is called for com.fasterxml.jackson.databind.ObjectReader.readValues(Lcom/fasterxml/jackson/core/JsonParser;)Lcom/fasterxml/jackson/databind/MappingIterator;: Line 1428: 269
+Number of times BBC is called for com.fasterxml.jackson.databind.ObjectReader._bind(Lcom/fasterxml/jackson/core/JsonParser;Ljava/lang/Object;)Ljava/lang/Object;: I21 Branch 40 IFNONNULL L1600 - false: 3479
+Number of times BBC is called for com.fasterxml.jackson.databind.ObjectReader.readValues(Lcom/fasterxml/jackson/core/JsonParser;)Lcom/fasterxml/jackson/databind/MappingIterator;: Line 1430: 269
+Number of times BBC is called for com.fasterxml.jackson.databind.ObjectReader._findRootDeserializer(Lcom/fasterxml/jackson/databind/DeserializationContext;)Lcom/fasterxml/jackson/databind/JsonDeserializer;: I52 Branch 89 IFNONNULL L1939 - true: 523
+Number of times BBC is called for com.fasterxml.jackson.databind.ObjectReader.readValue(Ljava/io/Reader;)Ljava/lang/Object;: I4 Branch 18 IFNULL L1207 - false: 3470
+Number of times BBC is called for com.fasterxml.jackson.databind.ObjectReader.readValue(Ljava/io/DataInput;)Ljava/lang/Object;: I4 Branch 25 IFNULL L1311 - false: 8306
+Number of times BBC is called for com.fasterxml.jackson.databind.ObjectReader.withFeatures([Lcom/fasterxml/jackson/core/FormatFeature;)Lcom/fasterxml/jackson/databind/ObjectReader;: root-Branch: 2115
+Number of times BBC is called for com.fasterxml.jackson.databind.ObjectReader.readValues([BII)Lcom/fasterxml/jackson/databind/MappingIterator;: I4 Branch 35 IFNULL L1505 - false: 2512
+Number of times BBC is called for com.fasterxml.jackson.databind.ObjectReader.readValue(Ljava/io/Reader;)Ljava/lang/Object;: I4 Branch 18 IFNULL L1207 - true: 1676
+Number of times BBC is called for com.fasterxml.jackson.databind.ObjectReader.readValue(Ljava/io/DataInput;)Ljava/lang/Object;: I4 Branch 25 IFNULL L1311 - true: 1328
+Number of times BBC is called for com.fasterxml.jackson.databind.ObjectReader.readValue(Lcom/fasterxml/jackson/core/JsonParser;Ljava/lang/Class;)Ljava/lang/Object;: root-Branch: 3077
+Number of times BBC is called for com.fasterxml.jackson.databind.ObjectReader.getFactory()Lcom/fasterxml/jackson/core/JsonFactory;: root-Branch: 973
+Number of times BBC is called for com.fasterxml.jackson.databind.ObjectReader.readTree(Ljava/io/Reader;)Lcom/fasterxml/jackson/databind/JsonNode;: Line 1357: 792
+Number of times BBC is called for com.fasterxml.jackson.databind.ObjectReader.readValue(Lcom/fasterxml/jackson/core/JsonParser;Lcom/fasterxml/jackson/databind/JavaType;)Ljava/lang/Object;: Line 1026: 527
+Number of times BBC is called for com.fasterxml.jackson.databind.ObjectReader.withHandler(Lcom/fasterxml/jackson/databind/deser/DeserializationProblemHandler;)Lcom/fasterxml/jackson/databind/ObjectReader;: root-Branch: 2025
+Number of times BBC is called for com.fasterxml.jackson.databind.ObjectReader.readValue([BII)Ljava/lang/Object;: Line 1254: 527
+Number of times BBC is called for com.fasterxml.jackson.databind.ObjectReader.readTree(Ljava/io/Reader;)Lcom/fasterxml/jackson/databind/JsonNode;: Line 1354: 792
+Number of times BBC is called for com.fasterxml.jackson.databind.ObjectReader.forType(Ljava/lang/Class;)Lcom/fasterxml/jackson/databind/ObjectReader;: root-Branch: 32
+Number of times BBC is called for com.fasterxml.jackson.databind.ObjectReader.withoutFeatures([Lcom/fasterxml/jackson/databind/DeserializationFeature;)Lcom/fasterxml/jackson/databind/ObjectReader;: Line 437: 792
+Number of times BBC is called for com.fasterxml.jackson.databind.ObjectReader.withFeatures([Lcom/fasterxml/jackson/core/FormatFeature;)Lcom/fasterxml/jackson/databind/ObjectReader;: Line 501: 2115
+Number of times BBC is called for com.fasterxml.jackson.databind.ObjectReader._detectBindAndClose([BII)Ljava/lang/Object;: I13 Branch 78 IFNE L1802 - false: 3035
+Number of times BBC is called for com.fasterxml.jackson.databind.ObjectReader._detectBindAndClose([BII)Ljava/lang/Object;: I13 Branch 78 IFNE L1802 - true: 3035
+Number of times BBC is called for com.fasterxml.jackson.databind.ObjectReader._bindAndClose(Lcom/fasterxml/jackson/core/JsonParser;)Ljava/lang/Object;: I119 Branch 52 IFEQ L1657 - true: 2325
+Number of times BBC is called for com.fasterxml.jackson.databind.ObjectReader._verifyNoTrailingTokens(Lcom/fasterxml/jackson/core/JsonParser;Lcom/fasterxml/jackson/databind/DeserializationContext;Lcom/fasterxml/jackson/databind/JavaType;)V: I17 Branch 76 IFNONNULL L1783 - false: 3728
+Number of times BBC is called for com.fasterxml.jackson.databind.ObjectReader._unwrapAndDeserialize(Lcom/fasterxml/jackson/core/JsonParser;Lcom/fasterxml/jackson/databind/DeserializationContext;Lcom/fasterxml/jackson/databind/JavaType;Lcom/fasterxml/jackson/databind/JsonDeserializer;)Ljava/lang/Object;: I101 Branch 70 IFNONNULL L1745 - true: 13713
+Number of times BBC is called for com.fasterxml.jackson.databind.ObjectReader._detectBindAndClose(Lcom/fasterxml/jackson/databind/deser/DataFormatReaders$Match;Z)Ljava/lang/Object;: I4 Branch 79 IFNE L1813 - true: 3645
+Number of times BBC is called for com.fasterxml.jackson.databind.ObjectReader.readTree(Ljava/io/InputStream;)Lcom/fasterxml/jackson/databind/JsonNode;: I4 Branch 26 IFNULL L1342 - true: 11375
+Number of times BBC is called for com.fasterxml.jackson.databind.ObjectReader.at(Lcom/fasterxml/jackson/core/JsonPointer;)Lcom/fasterxml/jackson/databind/ObjectReader;: Line 545: 443
+Number of times BBC is called for com.fasterxml.jackson.databind.ObjectReader.createArrayNode()Lcom/fasterxml/jackson/databind/JsonNode;: root-Branch: 1058
+Number of times BBC is called for com.fasterxml.jackson.databind.ObjectReader.readTree(Ljava/io/InputStream;)Lcom/fasterxml/jackson/databind/JsonNode;: I4 Branch 26 IFNULL L1342 - false: 12780
+Number of times BBC is called for com.fasterxml.jackson.databind.ObjectReader._bindAndClose(Lcom/fasterxml/jackson/core/JsonParser;)Ljava/lang/Object;: I119 Branch 52 IFEQ L1657 - false: 2325
+Number of times BBC is called for com.fasterxml.jackson.databind.ObjectReader._unwrapAndDeserialize(Lcom/fasterxml/jackson/core/JsonParser;Lcom/fasterxml/jackson/databind/DeserializationContext;Lcom/fasterxml/jackson/databind/JavaType;Lcom/fasterxml/jackson/databind/JsonDeserializer;)Ljava/lang/Object;: I101 Branch 70 IFNONNULL L1745 - false: 13713
+Number of times BBC is called for com.fasterxml.jackson.databind.ObjectReader.readValues(Ljava/net/URL;)Lcom/fasterxml/jackson/databind/MappingIterator;: I4 Branch 37 IFNULL L1541 - true: 32
+Number of times BBC is called for com.fasterxml.jackson.databind.ObjectReader._detectBindAndClose(Lcom/fasterxml/jackson/databind/deser/DataFormatReaders$Match;Z)Ljava/lang/Object;: I4 Branch 79 IFNE L1813 - false: 2123
+Number of times BBC is called for com.fasterxml.jackson.databind.ObjectReader.withType(Lcom/fasterxml/jackson/databind/JavaType;)Lcom/fasterxml/jackson/databind/ObjectReader;: root-Branch: 8093
+Number of times BBC is called for com.fasterxml.jackson.databind.ObjectReader.withType(Lcom/fasterxml/jackson/core/type/TypeReference;)Lcom/fasterxml/jackson/databind/ObjectReader;: Line 742: 443
+Number of times BBC is called for com.fasterxml.jackson.databind.ObjectReader.readValue(Ljava/lang/String;)Ljava/lang/Object;: I4 Branch 19 IFNULL L1222 - true: 103
+Number of times BBC is called for com.fasterxml.jackson.databind.ObjectReader.readValues(Ljava/io/Reader;)Lcom/fasterxml/jackson/databind/MappingIterator;: Line 1477: 133
+Number of times BBC is called for com.fasterxml.jackson.databind.ObjectReader.with(Lcom/fasterxml/jackson/core/Base64Variant;)Lcom/fasterxml/jackson/databind/ObjectReader;: root-Branch: 10166
+Number of times BBC is called for com.fasterxml.jackson.databind.ObjectReader.readValues(Ljava/net/URL;)Lcom/fasterxml/jackson/databind/MappingIterator;: I4 Branch 37 IFNULL L1541 - false: 3678
+Number of times BBC is called for com.fasterxml.jackson.databind.ObjectReader.isEnabled(Lcom/fasterxml/jackson/core/JsonParser$Feature;)Z: Line 910: 361
+Number of times BBC is called for com.fasterxml.jackson.databind.ObjectReader.with(Lcom/fasterxml/jackson/core/JsonParser$Feature;)Lcom/fasterxml/jackson/databind/ObjectReader;: root-Branch: 103
+Number of times BBC is called for com.fasterxml.jackson.databind.ObjectReader.readTree([BII)Lcom/fasterxml/jackson/databind/JsonNode;: Line 1393: 2383
+Number of times BBC is called for com.fasterxml.jackson.databind.ObjectReader.with(Ljava/util/TimeZone;)Lcom/fasterxml/jackson/databind/ObjectReader;: root-Branch: 2207
+Number of times BBC is called for com.fasterxml.jackson.databind.ObjectReader.readValues(Lcom/fasterxml/jackson/core/JsonParser;Lcom/fasterxml/jackson/core/type/ResolvedType;)Ljava/util/Iterator;: Line 1098: 9977
+Number of times BBC is called for com.fasterxml.jackson.databind.ObjectReader.readTree([BII)Lcom/fasterxml/jackson/databind/JsonNode;: Line 1390: 2383
+Number of times BBC is called for com.fasterxml.jackson.databind.ObjectReader._prefetchRootDeserializer(Lcom/fasterxml/jackson/databind/JavaType;)Lcom/fasterxml/jackson/databind/JsonDeserializer;: I40 Branch 95 IFNULL L1982 - true: 3888
+Number of times BBC is called for com.fasterxml.jackson.databind.ObjectReader._bindAsTree(Lcom/fasterxml/jackson/core/JsonParser;)Lcom/fasterxml/jackson/databind/JsonNode;: I25 Branch 62 IFNONNULL L1679 - true: 2562
+Number of times BBC is called for com.fasterxml.jackson.databind.ObjectReader.readTree(Ljava/io/InputStream;)Lcom/fasterxml/jackson/databind/JsonNode;: Line 1342: 11375
+Number of times BBC is called for com.fasterxml.jackson.databind.ObjectReader._findRootDeserializer(Lcom/fasterxml/jackson/databind/DeserializationContext;)Lcom/fasterxml/jackson/databind/JsonDeserializer;: I18 Branch 87 IFNONNULL L1928 - true: 1423
+Number of times BBC is called for com.fasterxml.jackson.databind.ObjectReader.readValue(Ljava/lang/String;)Ljava/lang/Object;: I4 Branch 19 IFNULL L1222 - false: 2621
+Number of times BBC is called for com.fasterxml.jackson.databind.ObjectReader.withView(Ljava/lang/Class;)Lcom/fasterxml/jackson/databind/ObjectReader;: root-Branch: 32
+Number of times BBC is called for com.fasterxml.jackson.databind.ObjectReader._findRootDeserializer(Lcom/fasterxml/jackson/databind/DeserializationContext;)Lcom/fasterxml/jackson/databind/JsonDeserializer;: Line 1942: 523
+Number of times BBC is called for com.fasterxml.jackson.databind.ObjectReader._findRootDeserializer(Lcom/fasterxml/jackson/databind/DeserializationContext;)Lcom/fasterxml/jackson/databind/JsonDeserializer;: Line 1943: 523
+Number of times BBC is called for com.fasterxml.jackson.databind.ObjectReader._detectBindAndReadValues(Lcom/fasterxml/jackson/databind/deser/DataFormatReaders$Match;Z)Lcom/fasterxml/jackson/databind/MappingIterator;: I20 Branch 82 IFEQ L1836 - true: 2712
+Number of times BBC is called for com.fasterxml.jackson.databind.ObjectReader._bind(Lcom/fasterxml/jackson/core/JsonParser;Ljava/lang/Object;)Ljava/lang/Object;: I106 Branch 45 IFEQ L1623 - true: 1374
+Number of times BBC is called for com.fasterxml.jackson.databind.ObjectReader._detectBindAndReadValues(Lcom/fasterxml/jackson/databind/deser/DataFormatReaders$Match;Z)Lcom/fasterxml/jackson/databind/MappingIterator;: I20 Branch 82 IFEQ L1836 - false: 2712
+Number of times BBC is called for com.fasterxml.jackson.databind.ObjectReader.with(Lcom/fasterxml/jackson/core/JsonFactory;)Lcom/fasterxml/jackson/databind/ObjectReader;: Line 600: 527
+Number of times BBC is called for com.fasterxml.jackson.databind.ObjectReader.withoutFeatures([Lcom/fasterxml/jackson/core/JsonParser$Feature;)Lcom/fasterxml/jackson/databind/ObjectReader;: Line 475: 269
+Number of times BBC is called for com.fasterxml.jackson.databind.ObjectReader._findRootDeserializer(Lcom/fasterxml/jackson/databind/DeserializationContext;)Lcom/fasterxml/jackson/databind/JsonDeserializer;: Line 1939: 523
+Number of times BBC is called for com.fasterxml.jackson.databind.ObjectReader.readValue(Ljava/io/InputStream;)Ljava/lang/Object;: I4 Branch 17 IFNULL L1192 - false: 8390
+Number of times BBC is called for com.fasterxml.jackson.databind.ObjectReader._verifyNoTrailingTokens(Lcom/fasterxml/jackson/core/JsonParser;Lcom/fasterxml/jackson/databind/DeserializationContext;Lcom/fasterxml/jackson/databind/JavaType;)V: I8 Branch 75 IFNULL L1781 - true: 8476
+Number of times BBC is called for com.fasterxml.jackson.databind.ObjectReader._findRootDeserializer(Lcom/fasterxml/jackson/databind/DeserializationContext;)Lcom/fasterxml/jackson/databind/JsonDeserializer;: Line 1934: 1353
+Number of times BBC is called for com.fasterxml.jackson.databind.ObjectReader._bind(Lcom/fasterxml/jackson/core/JsonParser;Ljava/lang/Object;)Ljava/lang/Object;: I106 Branch 45 IFEQ L1623 - false: 3666
+Number of times BBC is called for com.fasterxml.jackson.databind.ObjectReader.readTree(Lcom/fasterxml/jackson/core/JsonParser;)Lcom/fasterxml/jackson/core/TreeNode;: root-Branch: 973
+Number of times BBC is called for com.fasterxml.jackson.databind.ObjectReader.readValue(Ljava/io/InputStream;)Ljava/lang/Object;: I4 Branch 17 IFNULL L1192 - true: 1591
+Number of times BBC is called for com.fasterxml.jackson.databind.ObjectReader.readValue(Ljava/io/DataInput;)Ljava/lang/Object;: Line 1314: 1328
+Number of times BBC is called for com.fasterxml.jackson.databind.ObjectReader._findRootDeserializer(Lcom/fasterxml/jackson/databind/DeserializationContext;)Lcom/fasterxml/jackson/databind/JsonDeserializer;: Line 1933: 1353
+Number of times BBC is called for com.fasterxml.jackson.databind.ObjectReader.readTree(Ljava/lang/String;)Lcom/fasterxml/jackson/databind/JsonNode;: I4 Branch 28 IFNULL L1366 - false: 2889
+Number of times BBC is called for com.fasterxml.jackson.databind.ObjectReader._reportUndetectableSource(Ljava/lang/Object;)V: Line 1906: 1591
+Number of times BBC is called for com.fasterxml.jackson.databind.ObjectReader.readValue(Ljava/lang/String;)Ljava/lang/Object;: Line 1222: 103
+Number of times BBC is called for com.fasterxml.jackson.databind.ObjectReader.readTree(Ljava/lang/String;)Lcom/fasterxml/jackson/databind/JsonNode;: I4 Branch 28 IFNULL L1366 - true: 703
+Number of times BBC is called for com.fasterxml.jackson.databind.ObjectReader._findRootDeserializer(Lcom/fasterxml/jackson/databind/DeserializationContext;)Lcom/fasterxml/jackson/databind/JsonDeserializer;: Line 1922: 103
+Number of times BBC is called for com.fasterxml.jackson.databind.ObjectReader.withAttributes(Ljava/util/Map;)Lcom/fasterxml/jackson/databind/ObjectReader;: root-Branch: 1328
+Number of times BBC is called for com.fasterxml.jackson.databind.ObjectReader._inputStream(Ljava/net/URL;)Ljava/io/InputStream;: root-Branch: 269
+Number of times BBC is called for com.fasterxml.jackson.databind.ObjectReader.withoutFeatures([Lcom/fasterxml/jackson/core/FormatFeature;)Lcom/fasterxml/jackson/databind/ObjectReader;: Line 521: 361
+Number of times BBC is called for com.fasterxml.jackson.databind.ObjectReader._detectBindAndCloseAsTree(Ljava/io/InputStream;)Lcom/fasterxml/jackson/databind/JsonNode;: I11 Branch 83 IFNE L1847 - false: 8664
+Number of times BBC is called for com.fasterxml.jackson.databind.ObjectReader._unwrapAndDeserialize(Lcom/fasterxml/jackson/core/JsonParser;Lcom/fasterxml/jackson/databind/DeserializationContext;Lcom/fasterxml/jackson/databind/JavaType;Lcom/fasterxml/jackson/databind/JsonDeserializer;)Ljava/lang/Object;: I17 Branch 67 IF_ACMPEQ L1726 - true: 13712
+Number of times BBC is called for com.fasterxml.jackson.databind.ObjectReader.withValueToUpdate(Ljava/lang/Object;)Lcom/fasterxml/jackson/databind/ObjectReader;: I11 Branch 13 IFNONNULL L756 - true: 435
+Number of times BBC is called for com.fasterxml.jackson.databind.ObjectReader._unwrapAndDeserialize(Lcom/fasterxml/jackson/core/JsonParser;Lcom/fasterxml/jackson/databind/DeserializationContext;Lcom/fasterxml/jackson/databind/JavaType;Lcom/fasterxml/jackson/databind/JsonDeserializer;)Ljava/lang/Object;: I17 Branch 67 IF_ACMPEQ L1726 - false: 13328
+Number of times BBC is called for com.fasterxml.jackson.databind.ObjectReader.createObjectNode()Lcom/fasterxml/jackson/databind/JsonNode;: root-Branch: 1328
+Number of times BBC is called for com.fasterxml.jackson.databind.ObjectReader.readValue(Ljava/lang/String;)Ljava/lang/Object;: Line 1226: 103
+Number of times BBC is called for com.fasterxml.jackson.databind.ObjectReader._bindAndClose(Lcom/fasterxml/jackson/core/JsonParser;)Ljava/lang/Object;: Line 1635: 103
+Number of times BBC is called for com.fasterxml.jackson.databind.ObjectReader._bindAndClose(Lcom/fasterxml/jackson/core/JsonParser;)Ljava/lang/Object;: Line 1634: 103
+Number of times BBC is called for com.fasterxml.jackson.databind.ObjectReader.readTree(Ljava/io/DataInput;)Lcom/fasterxml/jackson/databind/JsonNode;: I4 Branch 31 IFNULL L1402 - false: 11366
+Number of times BBC is called for com.fasterxml.jackson.databind.ObjectReader.readTree(Ljava/io/Reader;)Lcom/fasterxml/jackson/databind/JsonNode;: I4 Branch 27 IFNULL L1354 - true: 792
+Number of times BBC is called for com.fasterxml.jackson.databind.ObjectReader._bindAndClose(Lcom/fasterxml/jackson/core/JsonParser;)Ljava/lang/Object;: Line 1636: 171
+Number of times BBC is called for com.fasterxml.jackson.databind.ObjectReader.readValues(Lcom/fasterxml/jackson/core/JsonParser;Lcom/fasterxml/jackson/core/type/ResolvedType;)Ljava/util/Iterator;: root-Branch: 9977
+Number of times BBC is called for com.fasterxml.jackson.databind.ObjectReader.withValueToUpdate(Ljava/lang/Object;)Lcom/fasterxml/jackson/databind/ObjectReader;: I11 Branch 13 IFNONNULL L756 - false: 45
+Number of times BBC is called for com.fasterxml.jackson.databind.ObjectReader._considerFilter(Lcom/fasterxml/jackson/core/JsonParser;Z)Lcom/fasterxml/jackson/core/JsonParser;: I4 Branch 73 IFNULL L1769 - false: 867
+Number of times BBC is called for com.fasterxml.jackson.databind.ObjectReader.readTree(Ljava/io/DataInput;)Lcom/fasterxml/jackson/databind/JsonNode;: I4 Branch 31 IFNULL L1402 - true: 8185
+Number of times BBC is called for com.fasterxml.jackson.databind.ObjectReader.readValue(Ljava/io/File;)Ljava/lang/Object;: Line 1265: 703
+Number of times BBC is called for com.fasterxml.jackson.databind.ObjectReader.getInjectableValues()Lcom/fasterxml/jackson/databind/InjectableValues;: root-Branch: 2300
+Number of times BBC is called for com.fasterxml.jackson.databind.ObjectReader._bindAndClose(Lcom/fasterxml/jackson/core/JsonParser;)Ljava/lang/Object;: Line 1631: 103
+Number of times BBC is called for com.fasterxml.jackson.databind.ObjectReader.withHandler(Lcom/fasterxml/jackson/databind/deser/DeserializationProblemHandler;)Lcom/fasterxml/jackson/databind/ObjectReader;: Line 797: 2025
+Number of times BBC is called for com.fasterxml.jackson.databind.ObjectReader.readValue(Ljava/io/DataInput;)Ljava/lang/Object;: Line 1311: 1328
+Number of times BBC is called for com.fasterxml.jackson.databind.ObjectReader.isEnabled(Lcom/fasterxml/jackson/databind/DeserializationFeature;)Z: Line 902: 1591
+Number of times BBC is called for com.fasterxml.jackson.databind.ObjectReader._bindAsTree(Lcom/fasterxml/jackson/core/JsonParser;)Lcom/fasterxml/jackson/databind/JsonNode;: I72 Branch 65 IFEQ L1691 - false: 540
+Number of times BBC is called for com.fasterxml.jackson.databind.ObjectReader.withAttribute(Ljava/lang/Object;Ljava/lang/Object;)Lcom/fasterxml/jackson/databind/ObjectReader;: Line 868: 2383
+Number of times BBC is called for com.fasterxml.jackson.databind.ObjectReader._bindAndClose(Lcom/fasterxml/jackson/core/JsonParser;)Ljava/lang/Object;: Line 1657: 1998
+Number of times BBC is called for com.fasterxml.jackson.databind.ObjectReader.readTree(Ljava/io/Reader;)Lcom/fasterxml/jackson/databind/JsonNode;: I4 Branch 27 IFNULL L1354 - false: 4957
+Number of times BBC is called for com.fasterxml.jackson.databind.ObjectReader.without(Lcom/fasterxml/jackson/core/JsonParser$Feature;)Lcom/fasterxml/jackson/databind/ObjectReader;: Line 467: 703
+Number of times BBC is called for com.fasterxml.jackson.databind.ObjectReader._bindAndClose(Lcom/fasterxml/jackson/core/JsonParser;)Ljava/lang/Object;: I51 Branch 48 IF_ACMPEQ L1642 - true: 2325
+Number of times BBC is called for com.fasterxml.jackson.databind.ObjectReader._verifyNoTrailingTokens(Lcom/fasterxml/jackson/core/JsonParser;Lcom/fasterxml/jackson/databind/DeserializationContext;Lcom/fasterxml/jackson/databind/JavaType;)V: I8 Branch 75 IFNULL L1781 - false: 7590
+Number of times BBC is called for com.fasterxml.jackson.databind.ObjectReader.readTree([BII)Lcom/fasterxml/jackson/databind/JsonNode;: I4 Branch 30 IFNULL L1390 - false: 5545
+Number of times BBC is called for com.fasterxml.jackson.databind.ObjectReader.withFormatDetection([Lcom/fasterxml/jackson/databind/ObjectReader;)Lcom/fasterxml/jackson/databind/ObjectReader;: Line 827: 1506
+Number of times BBC is called for com.fasterxml.jackson.databind.ObjectReader.readTree([BII)Lcom/fasterxml/jackson/databind/JsonNode;: I4 Branch 30 IFNULL L1390 - true: 2383
+Number of times BBC is called for com.fasterxml.jackson.databind.ObjectReader._bind(Lcom/fasterxml/jackson/core/JsonParser;Ljava/lang/Object;)Ljava/lang/Object;: I78 Branch 44 IFNONNULL L1612 - true: 873
+Number of times BBC is called for com.fasterxml.jackson.databind.ObjectReader.with(Ljava/util/TimeZone;)Lcom/fasterxml/jackson/databind/ObjectReader;: Line 793: 2207
+Number of times BBC is called for com.fasterxml.jackson.databind.ObjectReader._unwrapAndDeserialize(Lcom/fasterxml/jackson/core/JsonParser;Lcom/fasterxml/jackson/databind/DeserializationContext;Lcom/fasterxml/jackson/databind/JavaType;Lcom/fasterxml/jackson/databind/JsonDeserializer;)Ljava/lang/Object;: I41 Branch 68 IF_ACMPEQ L1731 - false: 13713
+Number of times BBC is called for com.fasterxml.jackson.databind.ObjectReader._unwrapAndDeserialize(Lcom/fasterxml/jackson/core/JsonParser;Lcom/fasterxml/jackson/databind/DeserializationContext;Lcom/fasterxml/jackson/databind/JavaType;Lcom/fasterxml/jackson/databind/JsonDeserializer;)Ljava/lang/Object;: I155 Branch 72 IFEQ L1757 - true: 13713
+Number of times BBC is called for com.fasterxml.jackson.databind.ObjectReader.withoutFeatures([Lcom/fasterxml/jackson/core/JsonParser$Feature;)Lcom/fasterxml/jackson/databind/ObjectReader;: root-Branch: 269
+Number of times BBC is called for com.fasterxml.jackson.databind.ObjectReader.isEnabled(Lcom/fasterxml/jackson/databind/DeserializationFeature;)Z: root-Branch: 1591
+Number of times BBC is called for com.fasterxml.jackson.databind.ObjectReader._unwrapAndDeserialize(Lcom/fasterxml/jackson/core/JsonParser;Lcom/fasterxml/jackson/databind/DeserializationContext;Lcom/fasterxml/jackson/databind/JavaType;Lcom/fasterxml/jackson/databind/JsonDeserializer;)Ljava/lang/Object;: I41 Branch 68 IF_ACMPEQ L1731 - true: 13713
+Number of times BBC is called for com.fasterxml.jackson.databind.ObjectReader.withType(Lcom/fasterxml/jackson/core/type/TypeReference;)Lcom/fasterxml/jackson/databind/ObjectReader;: root-Branch: 443
+Number of times BBC is called for com.fasterxml.jackson.databind.ObjectReader.with(Lcom/fasterxml/jackson/core/Base64Variant;)Lcom/fasterxml/jackson/databind/ObjectReader;: Line 801: 10166
+Number of times BBC is called for com.fasterxml.jackson.databind.ObjectReader._unwrapAndDeserialize(Lcom/fasterxml/jackson/core/JsonParser;Lcom/fasterxml/jackson/databind/DeserializationContext;Lcom/fasterxml/jackson/databind/JavaType;Lcom/fasterxml/jackson/databind/JsonDeserializer;)Ljava/lang/Object;: I155 Branch 72 IFEQ L1757 - false: 13713
+Number of times BBC is called for com.fasterxml.jackson.databind.ObjectReader.readValues(Ljava/io/File;)Lcom/fasterxml/jackson/databind/MappingIterator;: Line 1526: 2115
+Number of times BBC is called for com.fasterxml.jackson.databind.ObjectReader._bindAndClose(Lcom/fasterxml/jackson/core/JsonParser;)Ljava/lang/Object;: I29 Branch 47 IFNONNULL L1637 - false: 2325
+Number of times BBC is called for com.fasterxml.jackson.databind.ObjectReader.readValues(Ljava/lang/String;)Lcom/fasterxml/jackson/databind/MappingIterator;: Line 1489: 4807
+Number of times BBC is called for com.fasterxml.jackson.databind.ObjectReader.readValues(Ljava/lang/String;)Lcom/fasterxml/jackson/databind/MappingIterator;: Line 1495: 4807
+Number of times BBC is called for com.fasterxml.jackson.databind.ObjectReader._initForReading(Lcom/fasterxml/jackson/databind/DeserializationContext;Lcom/fasterxml/jackson/core/JsonParser;)Lcom/fasterxml/jackson/core/JsonToken;: I25 Branch 2 IFNONNULL L354 - false: 67
+Number of times BBC is called for com.fasterxml.jackson.databind.ObjectReader._verifyNoTrailingTokens(Lcom/fasterxml/jackson/core/JsonParser;Lcom/fasterxml/jackson/databind/DeserializationContext;Lcom/fasterxml/jackson/databind/JavaType;)V: I22 Branch 77 IFNULL L1784 - false: 4115
+Number of times BBC is called for com.fasterxml.jackson.databind.ObjectReader.without(Lcom/fasterxml/jackson/databind/DeserializationFeature;[Lcom/fasterxml/jackson/databind/DeserializationFeature;)Lcom/fasterxml/jackson/databind/ObjectReader;: Line 429: 703
+Number of times BBC is called for com.fasterxml.jackson.databind.ObjectReader.readValues(Ljava/lang/String;)Lcom/fasterxml/jackson/databind/MappingIterator;: Line 1494: 4807
+Number of times BBC is called for com.fasterxml.jackson.databind.ObjectReader.readValues(Ljava/lang/String;)Lcom/fasterxml/jackson/databind/MappingIterator;: Line 1493: 4807
+Number of times BBC is called for com.fasterxml.jackson.databind.ObjectReader.readValues(Ljava/lang/String;)Lcom/fasterxml/jackson/databind/MappingIterator;: Line 1492: 4807
+Number of times BBC is called for com.fasterxml.jackson.databind.ObjectReader.readTree(Ljava/io/DataInput;)Lcom/fasterxml/jackson/databind/JsonNode;: Line 1405: 8185
+Number of times BBC is called for com.fasterxml.jackson.databind.ObjectReader.readValues(Ljava/lang/String;)Lcom/fasterxml/jackson/databind/MappingIterator;: Line 1496: 4982
+Number of times BBC is called for com.fasterxml.jackson.databind.ObjectReader.readValues(Ljava/io/DataInput;)Lcom/fasterxml/jackson/databind/MappingIterator;: I4 Branch 38 IFNULL L1553 - false: 7299
+Number of times BBC is called for com.fasterxml.jackson.databind.ObjectReader.readValues(Ljava/io/DataInput;)Lcom/fasterxml/jackson/databind/MappingIterator;: Line 1553: 187
+Number of times BBC is called for com.fasterxml.jackson.databind.ObjectReader._detectBindAndCloseAsTree(Ljava/io/InputStream;)Lcom/fasterxml/jackson/databind/JsonNode;: I11 Branch 83 IFNE L1847 - true: 8664
+Number of times BBC is called for com.fasterxml.jackson.databind.ObjectReader._initForReading(Lcom/fasterxml/jackson/databind/DeserializationContext;Lcom/fasterxml/jackson/core/JsonParser;)Lcom/fasterxml/jackson/core/JsonToken;: I25 Branch 2 IFNONNULL L354 - true: 4200
+Number of times BBC is called for com.fasterxml.jackson.databind.ObjectReader._verifyNoTrailingTokens(Lcom/fasterxml/jackson/core/JsonParser;Lcom/fasterxml/jackson/databind/DeserializationContext;Lcom/fasterxml/jackson/databind/JavaType;)V: I22 Branch 77 IFNULL L1784 - true: 3728
+Number of times BBC is called for com.fasterxml.jackson.databind.ObjectReader.readTree(Ljava/io/DataInput;)Lcom/fasterxml/jackson/databind/JsonNode;: Line 1402: 8185
+Number of times BBC is called for com.fasterxml.jackson.databind.ObjectReader.readValues(Ljava/io/DataInput;)Lcom/fasterxml/jackson/databind/MappingIterator;: Line 1556: 187
+Number of times BBC is called for com.fasterxml.jackson.databind.ObjectReader.readValues(Ljava/io/DataInput;)Lcom/fasterxml/jackson/databind/MappingIterator;: I4 Branch 38 IFNULL L1553 - true: 187
+Number of times BBC is called for com.fasterxml.jackson.databind.ObjectReader.with(Lcom/fasterxml/jackson/core/JsonParser$Feature;)Lcom/fasterxml/jackson/databind/ObjectReader;: Line 451: 103
+Number of times BBC is called for com.fasterxml.jackson.databind.ObjectReader.isEnabled(Lcom/fasterxml/jackson/core/JsonParser$Feature;)Z: root-Branch: 361
+Number of times BBC is called for com.fasterxml.jackson.databind.ObjectReader._bindAndClose(Lcom/fasterxml/jackson/core/JsonParser;)Ljava/lang/Object;: I171 Branch 56 IFNULL L1661 - true: 3929
+Number of times BBC is called for com.fasterxml.jackson.databind.ObjectReader.readValues(Lcom/fasterxml/jackson/core/JsonParser;Ljava/lang/Class;)Ljava/util/Iterator;: Line 1050: 443
+Number of times BBC is called for com.fasterxml.jackson.databind.ObjectReader._bindAndClose(Lcom/fasterxml/jackson/core/JsonParser;)Ljava/lang/Object;: I29 Branch 47 IFNONNULL L1637 - true: 2325
+Number of times BBC is called for com.fasterxml.jackson.databind.ObjectReader._prefetchRootDeserializer(Lcom/fasterxml/jackson/databind/JavaType;)Lcom/fasterxml/jackson/databind/JsonDeserializer;: I24 Branch 94 IFNONNULL L1977 - true: 438
+Number of times BBC is called for com.fasterxml.jackson.databind.ObjectReader._unwrapAndDeserialize(Lcom/fasterxml/jackson/core/JsonParser;Lcom/fasterxml/jackson/databind/DeserializationContext;Lcom/fasterxml/jackson/databind/JavaType;Lcom/fasterxml/jackson/databind/JsonDeserializer;)Ljava/lang/Object;: I130 Branch 71 IF_ACMPEQ L1752 - false: 13713
+Number of times BBC is called for com.fasterxml.jackson.databind.ObjectReader._bindAndClose(Lcom/fasterxml/jackson/core/JsonParser;)Ljava/lang/Object;: I54 Branch 49 IF_ACMPNE L1642 - false: 2325
+Number of times BBC is called for com.fasterxml.jackson.databind.ObjectReader.readValue(Ljava/io/Reader;)Ljava/lang/Object;: Line 1207: 1676
+Number of times BBC is called for com.fasterxml.jackson.databind.ObjectReader._newIterator(Lcom/fasterxml/jackson/core/JsonParser;Lcom/fasterxml/jackson/databind/DeserializationContext;Lcom/fasterxml/jackson/databind/JsonDeserializer;Z)Lcom/fasterxml/jackson/databind/MappingIterator;: Line 331: 103
+Number of times BBC is called for com.fasterxml.jackson.databind.ObjectReader.readValue(Ljava/io/Reader;)Ljava/lang/Object;: Line 1210: 1676
+Number of times BBC is called for com.fasterxml.jackson.databind.ObjectReader.version()Lcom/fasterxml/jackson/core/Version;: root-Branch: 3255
+Number of times BBC is called for com.fasterxml.jackson.databind.ObjectReader.readValue(Lcom/fasterxml/jackson/core/JsonParser;Ljava/lang/Class;)Ljava/lang/Object;: Line 982: 3077
+Number of times BBC is called for com.fasterxml.jackson.databind.ObjectReader.createArrayNode()Lcom/fasterxml/jackson/databind/JsonNode;: Line 1132: 1058
+Number of times BBC is called for com.fasterxml.jackson.databind.ObjectReader._reportUnkownFormat(Lcom/fasterxml/jackson/databind/deser/DataFormatReaders;Lcom/fasterxml/jackson/databind/deser/DataFormatReaders$Match;)V: root-Branch: 2300
+Number of times BBC is called for com.fasterxml.jackson.databind.ObjectReader.withAttribute(Ljava/lang/Object;Ljava/lang/Object;)Lcom/fasterxml/jackson/databind/ObjectReader;: root-Branch: 2383
+Number of times BBC is called for com.fasterxml.jackson.databind.ObjectReader._bind(Lcom/fasterxml/jackson/core/JsonParser;Ljava/lang/Object;)Ljava/lang/Object;: I17 Branch 39 IF_ACMPNE L1599 - false: 3612
+Number of times BBC is called for com.fasterxml.jackson.databind.ObjectReader.readValue(Lcom/fasterxml/jackson/core/JsonParser;Lcom/fasterxml/jackson/core/type/TypeReference;)Ljava/lang/Object;: root-Branch: 1058
+Number of times BBC is called for com.fasterxml.jackson.databind.ObjectReader.readValue([BII)Ljava/lang/Object;: I4 Branch 21 IFNULL L1254 - false: 8949
+Number of times BBC is called for com.fasterxml.jackson.databind.ObjectReader.readValues(Ljava/io/File;)Lcom/fasterxml/jackson/databind/MappingIterator;: I4 Branch 36 IFNULL L1526 - true: 2115
+Number of times BBC is called for com.fasterxml.jackson.databind.ObjectReader._bindAndReadValues(Lcom/fasterxml/jackson/core/JsonParser;)Lcom/fasterxml/jackson/databind/MappingIterator;: Line 1716: 41
+Number of times BBC is called for com.fasterxml.jackson.databind.ObjectReader._bindAndCloseAsTree(Lcom/fasterxml/jackson/core/JsonParser;)Lcom/fasterxml/jackson/databind/JsonNode;: I50 Branch 59 IFNULL L1667 - true: 570
+Number of times BBC is called for com.fasterxml.jackson.databind.ObjectReader.without(Lcom/fasterxml/jackson/core/JsonParser$Feature;)Lcom/fasterxml/jackson/databind/ObjectReader;: root-Branch: 703
+Number of times BBC is called for com.fasterxml.jackson.databind.ObjectReader.forType(Ljava/lang/Class;)Lcom/fasterxml/jackson/databind/ObjectReader;: Line 697: 32
+Number of times BBC is called for com.fasterxml.jackson.databind.ObjectReader.getAttributes()Lcom/fasterxml/jackson/databind/cfg/ContextAttributes;: Line 936: 3434
+Number of times BBC is called for com.fasterxml.jackson.databind.ObjectReader.readValue([BII)Ljava/lang/Object;: I4 Branch 21 IFNULL L1254 - true: 527
+Number of times BBC is called for com.fasterxml.jackson.databind.ObjectReader._initForReading(Lcom/fasterxml/jackson/databind/DeserializationContext;Lcom/fasterxml/jackson/core/JsonParser;)Lcom/fasterxml/jackson/core/JsonToken;: Line 356: 17
+Number of times BBC is called for com.fasterxml.jackson.databind.ObjectReader._findTreeDeserializer(Lcom/fasterxml/jackson/databind/DeserializationContext;)Lcom/fasterxml/jackson/databind/JsonDeserializer;: I11 Branch 90 IFNONNULL L1953 - true: 2301
+Number of times BBC is called for com.fasterxml.jackson.databind.ObjectReader._initForReading(Lcom/fasterxml/jackson/databind/DeserializationContext;Lcom/fasterxml/jackson/core/JsonParser;)Lcom/fasterxml/jackson/core/JsonToken;: Line 354: 67
+Number of times BBC is called for com.fasterxml.jackson.databind.ObjectReader._bind(Lcom/fasterxml/jackson/core/JsonParser;Ljava/lang/Object;)Ljava/lang/Object;: I17 Branch 39 IF_ACMPNE L1599 - true: 133
+Number of times BBC is called for com.fasterxml.jackson.databind.ObjectReader._bindAndCloseAsTree(Lcom/fasterxml/jackson/core/JsonParser;)Lcom/fasterxml/jackson/databind/JsonNode;: I52 Branch 60 IFNULL L1667 - true: 1121
+Number of times BBC is called for com.fasterxml.jackson.databind.ObjectReader._bindAsTree(Lcom/fasterxml/jackson/core/JsonParser;)Lcom/fasterxml/jackson/databind/JsonNode;: I10 Branch 61 IFNULL L1674 - false: 2560
+Number of times BBC is called for com.fasterxml.jackson.databind.ObjectReader.with(Lcom/fasterxml/jackson/databind/DeserializationConfig;)Lcom/fasterxml/jackson/databind/ObjectReader;: root-Branch: 4070
+Number of times BBC is called for com.fasterxml.jackson.databind.ObjectReader._initForReading(Lcom/fasterxml/jackson/databind/DeserializationContext;Lcom/fasterxml/jackson/core/JsonParser;)Lcom/fasterxml/jackson/core/JsonToken;: Line 362: 88
+Number of times BBC is called for com.fasterxml.jackson.databind.ObjectReader._bind(Lcom/fasterxml/jackson/core/JsonParser;Ljava/lang/Object;)Ljava/lang/Object;: Line 1609: 416
+Number of times BBC is called for com.fasterxml.jackson.databind.ObjectReader._unwrapAndDeserialize(Lcom/fasterxml/jackson/core/JsonParser;Lcom/fasterxml/jackson/databind/DeserializationContext;Lcom/fasterxml/jackson/databind/JavaType;Lcom/fasterxml/jackson/databind/JsonDeserializer;)Ljava/lang/Object;: Line 1760: 13713
+Number of times BBC is called for com.fasterxml.jackson.databind.ObjectReader._findRootDeserializer(Lcom/fasterxml/jackson/databind/DeserializationContext;)Lcom/fasterxml/jackson/databind/JsonDeserializer;: I4 Branch 86 IFNULL L1922 - true: 173
+Number of times BBC is called for com.fasterxml.jackson.databind.ObjectReader._bindAndClose(Lcom/fasterxml/jackson/core/JsonParser;)Ljava/lang/Object;: I169 Branch 55 IFNULL L1661 - true: 1987
+Number of times BBC is called for com.fasterxml.jackson.databind.ObjectReader._bindAndClose(Lcom/fasterxml/jackson/core/JsonParser;)Ljava/lang/Object;: I72 Branch 50 IFEQ L1646 - false: 1998
+Number of times BBC is called for com.fasterxml.jackson.databind.ObjectReader.withAttributes(Ljava/util/Map;)Lcom/fasterxml/jackson/databind/ObjectReader;: Line 861: 1328
+Number of times BBC is called for com.fasterxml.jackson.databind.ObjectReader.readValues(Lcom/fasterxml/jackson/core/JsonParser;Ljava/lang/Class;)Ljava/util/Iterator;: root-Branch: 443
+Number of times BBC is called for com.fasterxml.jackson.databind.ObjectReader._initForReading(Lcom/fasterxml/jackson/databind/DeserializationContext;Lcom/fasterxml/jackson/core/JsonParser;)Lcom/fasterxml/jackson/core/JsonToken;: I4 Branch 1 IFNULL L344 - false: 4862
+Number of times BBC is called for com.fasterxml.jackson.databind.ObjectReader.withoutRootName()Lcom/fasterxml/jackson/databind/ObjectReader;: Line 642: 269
+Number of times BBC is called for com.fasterxml.jackson.databind.ObjectReader.readValue([B)Ljava/lang/Object;: Line 1238: 187
+Number of times BBC is called for com.fasterxml.jackson.databind.ObjectReader._unwrapAndDeserialize(Lcom/fasterxml/jackson/core/JsonParser;Lcom/fasterxml/jackson/databind/DeserializationContext;Lcom/fasterxml/jackson/databind/JavaType;Lcom/fasterxml/jackson/databind/JsonDeserializer;)Ljava/lang/Object;: Line 1752: 13713
+Number of times BBC is called for com.fasterxml.jackson.databind.ObjectReader._unwrapAndDeserialize(Lcom/fasterxml/jackson/core/JsonParser;Lcom/fasterxml/jackson/databind/DeserializationContext;Lcom/fasterxml/jackson/databind/JavaType;Lcom/fasterxml/jackson/databind/JsonDeserializer;)Ljava/lang/Object;: Line 1757: 13713
+Number of times BBC is called for com.fasterxml.jackson.databind.ObjectReader._bindAndClose(Lcom/fasterxml/jackson/core/JsonParser;)Ljava/lang/Object;: I169 Branch 55 IFNULL L1661 - false: 103
+Number of times BBC is called for com.fasterxml.jackson.databind.ObjectReader._inputStream(Ljava/io/File;)Ljava/io/InputStream;: root-Branch: 1506
+Number of times BBC is called for com.fasterxml.jackson.databind.ObjectReader.readValue(Ljava/net/URL;)Ljava/lang/Object;: Line 1282: 2207
+Number of times BBC is called for com.fasterxml.jackson.databind.ObjectReader.readValues(Ljava/io/File;)Lcom/fasterxml/jackson/databind/MappingIterator;: I4 Branch 36 IFNULL L1526 - false: 11195
+Number of times BBC is called for com.fasterxml.jackson.databind.ObjectReader.withFormatDetection(Lcom/fasterxml/jackson/databind/deser/DataFormatReaders;)Lcom/fasterxml/jackson/databind/ObjectReader;: root-Branch: 32
+Number of times BBC is called for com.fasterxml.jackson.databind.ObjectReader.readValue(Ljava/net/URL;)Ljava/lang/Object;: I4 Branch 23 IFNULL L1282 - true: 2207
+Number of times BBC is called for com.fasterxml.jackson.databind.ObjectReader._verifySchemaType(Lcom/fasterxml/jackson/core/FormatSchema;)V: I3 Branch 84 IFNULL L1878 - true: 4168
+Number of times BBC is called for com.fasterxml.jackson.databind.ObjectReader._bind(Lcom/fasterxml/jackson/core/JsonParser;Ljava/lang/Object;)Ljava/lang/Object;: Line 1599: 133
+Number of times BBC is called for com.fasterxml.jackson.databind.ObjectReader._verifySchemaType(Lcom/fasterxml/jackson/core/FormatSchema;)V: Line 1878: 4168
+Number of times BBC is called for com.fasterxml.jackson.databind.ObjectReader._findRootDeserializer(Lcom/fasterxml/jackson/databind/DeserializationContext;)Lcom/fasterxml/jackson/databind/JsonDeserializer;: I4 Branch 86 IFNULL L1922 - false: 103
+Number of times BBC is called for com.fasterxml.jackson.databind.ObjectReader.withFormatDetection([Lcom/fasterxml/jackson/databind/ObjectReader;)Lcom/fasterxml/jackson/databind/ObjectReader;: root-Branch: 1506
+Number of times BBC is called for com.fasterxml.jackson.databind.ObjectReader.readValue(Ljava/net/URL;)Ljava/lang/Object;: I4 Branch 23 IFNULL L1282 - false: 7423
+Number of times BBC is called for com.fasterxml.jackson.databind.ObjectReader._verifySchemaType(Lcom/fasterxml/jackson/core/FormatSchema;)V: I10 Branch 85 IFNE L1879 - true: 6074
+Number of times BBC is called for com.fasterxml.jackson.databind.ObjectReader.writeValue(Lcom/fasterxml/jackson/core/JsonGenerator;Ljava/lang/Object;)V: root-Branch: 2115
+Number of times BBC is called for com.fasterxml.jackson.databind.ObjectReader._verifySchemaType(Lcom/fasterxml/jackson/core/FormatSchema;)V: I3 Branch 84 IFNULL L1878 - false: 10034
+Number of times BBC is called for com.fasterxml.jackson.databind.ObjectReader._prefetchRootDeserializer(Lcom/fasterxml/jackson/databind/JavaType;)Lcom/fasterxml/jackson/databind/JsonDeserializer;: Line 1986: 641
+Number of times BBC is called for com.fasterxml.jackson.databind.ObjectReader.getFactory()Lcom/fasterxml/jackson/core/JsonFactory;: Line 925: 973
+Number of times BBC is called for com.fasterxml.jackson.databind.ObjectReader.readValues(Ljava/lang/String;)Lcom/fasterxml/jackson/databind/MappingIterator;: I4 Branch 34 IFNULL L1489 - false: 6788
+Number of times BBC is called for com.fasterxml.jackson.databind.ObjectReader.withoutAttribute(Ljava/lang/Object;)Lcom/fasterxml/jackson/databind/ObjectReader;: Line 875: 1852
+Number of times BBC is called for com.fasterxml.jackson.databind.ObjectReader._verifySchemaType(Lcom/fasterxml/jackson/core/FormatSchema;)V: I10 Branch 85 IFNE L1879 - false: 6074
+Number of times BBC is called for com.fasterxml.jackson.databind.ObjectReader._bindAsTree(Lcom/fasterxml/jackson/core/JsonParser;)Lcom/fasterxml/jackson/databind/JsonNode;: I34 Branch 63 IFNONNULL L1681 - false: 105
+Number of times BBC is called for com.fasterxml.jackson.databind.ObjectReader.version()Lcom/fasterxml/jackson/core/Version;: Line 280: 3255
+Number of times BBC is called for com.fasterxml.jackson.databind.ObjectReader.with(Lcom/fasterxml/jackson/databind/cfg/ContextAttributes;)Lcom/fasterxml/jackson/databind/ObjectReader;: root-Branch: 703
+Number of times BBC is called for com.fasterxml.jackson.databind.ObjectReader.without(Lcom/fasterxml/jackson/databind/DeserializationFeature;[Lcom/fasterxml/jackson/databind/DeserializationFeature;)Lcom/fasterxml/jackson/databind/ObjectReader;: root-Branch: 703
+Number of times BBC is called for com.fasterxml.jackson.databind.ObjectReader.readValues(Ljava/lang/String;)Lcom/fasterxml/jackson/databind/MappingIterator;: I4 Branch 34 IFNULL L1489 - true: 4807
+Number of times BBC is called for com.fasterxml.jackson.databind.ObjectReader._with(Lcom/fasterxml/jackson/databind/DeserializationConfig;)Lcom/fasterxml/jackson/databind/ObjectReader;: I21 Branch 16 IFNULL L889 - false: 2155
+Number of times BBC is called for com.fasterxml.jackson.databind.ObjectReader._bindAndClose(Lcom/fasterxml/jackson/core/JsonParser;)Ljava/lang/Object;: I89 Branch 51 IFNONNULL L1649 - true: 1998
+Number of times BBC is called for com.fasterxml.jackson.databind.ObjectReader.readValues(Ljava/io/InputStream;)Lcom/fasterxml/jackson/databind/MappingIterator;: Line 1456: 3255
+Number of times BBC is called for com.fasterxml.jackson.databind.ObjectReader.withoutFeatures([Lcom/fasterxml/jackson/core/FormatFeature;)Lcom/fasterxml/jackson/databind/ObjectReader;: root-Branch: 361
+Number of times BBC is called for com.fasterxml.jackson.databind.ObjectReader._detectBindAndCloseAsTree(Ljava/io/InputStream;)Lcom/fasterxml/jackson/databind/JsonNode;: Line 1846: 2729
+Number of times BBC is called for com.fasterxml.jackson.databind.ObjectReader.createObjectNode()Lcom/fasterxml/jackson/databind/JsonNode;: Line 1137: 1328
+Number of times BBC is called for com.fasterxml.jackson.databind.ObjectReader.with(Lcom/fasterxml/jackson/core/JsonFactory;)Lcom/fasterxml/jackson/databind/ObjectReader;: I5 Branch 6 IF_ACMPNE L600 - false: 591
+Number of times BBC is called for com.fasterxml.jackson.databind.ObjectReader.readValues(Lcom/fasterxml/jackson/core/JsonParser;Lcom/fasterxml/jackson/databind/JavaType;)Ljava/util/Iterator;: Line 1121: 7491
+Number of times BBC is called for com.fasterxml.jackson.databind.ObjectReader.readValues(Lcom/fasterxml/jackson/core/JsonParser;)Lcom/fasterxml/jackson/databind/MappingIterator;: root-Branch: 269
+Number of times BBC is called for com.fasterxml.jackson.databind.ObjectReader.withType(Lcom/fasterxml/jackson/databind/JavaType;)Lcom/fasterxml/jackson/databind/ObjectReader;: Line 718: 8093
+Number of times BBC is called for com.fasterxml.jackson.databind.ObjectReader._detectBindAndCloseAsTree(Ljava/io/InputStream;)Lcom/fasterxml/jackson/databind/JsonNode;: Line 1852: 8664
+Number of times BBC is called for com.fasterxml.jackson.databind.ObjectReader.readValue(Lcom/fasterxml/jackson/databind/JsonNode;)Ljava/lang/Object;: Line 1302: 1676
+Number of times BBC is called for com.fasterxml.jackson.databind.ObjectReader._detectBindAndCloseAsTree(Ljava/io/InputStream;)Lcom/fasterxml/jackson/databind/JsonNode;: Line 1851: 8664
+Number of times BBC is called for com.fasterxml.jackson.databind.ObjectReader._detectBindAndCloseAsTree(Ljava/io/InputStream;)Lcom/fasterxml/jackson/databind/JsonNode;: Line 1850: 8664
+Number of times BBC is called for com.fasterxml.jackson.databind.ObjectReader.with(Lcom/fasterxml/jackson/core/JsonFactory;)Lcom/fasterxml/jackson/databind/ObjectReader;: I5 Branch 6 IF_ACMPNE L600 - true: 527
+Number of times BBC is called for com.fasterxml.jackson.databind.ObjectReader._detectBindAndCloseAsTree(Ljava/io/InputStream;)Lcom/fasterxml/jackson/databind/JsonNode;: Line 1847: 8664
+Number of times BBC is called for com.fasterxml.jackson.databind.ObjectReader._inputStream(Ljava/net/URL;)Ljava/io/InputStream;: Line 1896: 269
+Number of times BBC is called for com.fasterxml.jackson.databind.ObjectReader.writeValue(Lcom/fasterxml/jackson/core/JsonGenerator;Ljava/lang/Object;)V: Line 1579: 2115
+Number of times BBC is called for com.fasterxml.jackson.databind.ObjectReader._findRootDeserializer(Lcom/fasterxml/jackson/databind/DeserializationContext;)Lcom/fasterxml/jackson/databind/JsonDeserializer;: I38 Branch 88 IFNULL L1934 - false: 1876
+Number of times BBC is called for com.fasterxml.jackson.databind.ObjectReader._detectBindAndReadValues(Lcom/fasterxml/jackson/databind/deser/DataFormatReaders$Match;Z)Lcom/fasterxml/jackson/databind/MappingIterator;: I4 Branch 81 IFNE L1830 - false: 790
+Number of times BBC is called for com.fasterxml.jackson.databind.ObjectReader.readValue(Lcom/fasterxml/jackson/databind/JsonNode;)Ljava/lang/Object;: Line 1299: 1676
+Number of times BBC is called for com.fasterxml.jackson.databind.ObjectReader._detectBindAndReadValues(Lcom/fasterxml/jackson/databind/deser/DataFormatReaders$Match;Z)Lcom/fasterxml/jackson/databind/MappingIterator;: I4 Branch 81 IFNE L1830 - true: 2660
+Number of times BBC is called for com.fasterxml.jackson.databind.ObjectReader.readValue(Lcom/fasterxml/jackson/core/JsonParser;Lcom/fasterxml/jackson/core/type/TypeReference;)Ljava/lang/Object;: Line 999: 1058
+Number of times BBC is called for com.fasterxml.jackson.databind.ObjectReader._findRootDeserializer(Lcom/fasterxml/jackson/databind/DeserializationContext;)Lcom/fasterxml/jackson/databind/JsonDeserializer;: I38 Branch 88 IFNULL L1934 - true: 1353
+Number of times BBC is called for com.fasterxml.jackson.databind.ObjectReader._unwrapAndDeserialize(Lcom/fasterxml/jackson/core/JsonParser;Lcom/fasterxml/jackson/databind/DeserializationContext;Lcom/fasterxml/jackson/databind/JavaType;Lcom/fasterxml/jackson/databind/JsonDeserializer;)Ljava/lang/Object;: I70 Branch 69 IFGT L1737 - true: 13713
+Number of times BBC is called for com.fasterxml.jackson.databind.ObjectReader.at(Lcom/fasterxml/jackson/core/JsonPointer;)Lcom/fasterxml/jackson/databind/ObjectReader;: root-Branch: 443
+Number of times BBC is called for com.fasterxml.jackson.databind.ObjectReader.without(Lcom/fasterxml/jackson/databind/DeserializationFeature;)Lcom/fasterxml/jackson/databind/ObjectReader;: Line 420: 792
+Number of times BBC is called for com.fasterxml.jackson.databind.ObjectReader.withRootName(Ljava/lang/String;)Lcom/fasterxml/jackson/databind/ObjectReader;: Line 621: 3614
+Number of times BBC is called for com.fasterxml.jackson.databind.ObjectReader._unwrapAndDeserialize(Lcom/fasterxml/jackson/core/JsonParser;Lcom/fasterxml/jackson/databind/DeserializationContext;Lcom/fasterxml/jackson/databind/JavaType;Lcom/fasterxml/jackson/databind/JsonDeserializer;)Ljava/lang/Object;: I70 Branch 69 IFGT L1737 - false: 13713
+Number of times BBC is called for com.fasterxml.jackson.databind.ObjectReader._bindAsTree(Lcom/fasterxml/jackson/core/JsonParser;)Lcom/fasterxml/jackson/databind/JsonNode;: I46 Branch 64 IF_ACMPNE L1686 - false: 540
+Number of times BBC is called for com.fasterxml.jackson.databind.ObjectReader._prefetchRootDeserializer(Lcom/fasterxml/jackson/databind/JavaType;)Lcom/fasterxml/jackson/databind/JsonDeserializer;: I8 Branch 93 IFNE L1972 - false: 4095
+Number of times BBC is called in total: 1150153
+* Search finished after 606s and 200 generations, 83479 statements, best individual has fitness: 977.0
+* Minimizing test suite
+* Going to analyze the coverage criteria
+* Coverage analysis for criterion LINE
+[MASTER] 04:24:37.267 [logback-1] WARN  TestSuiteMinimizer - Minimization timeout. Roll back to original test suite
+* Coverage of criterion LINE: 79%
+* Total number of goals: 421
+* Number of covered goals: 334
+* Coverage analysis for criterion BRANCH
+* Coverage of criterion BRANCH: 68%
+* Total number of goals: 271
+* Number of covered goals: 185
+* Coverage analysis for criterion EXCEPTION
+* Coverage of criterion EXCEPTION: 100%
+* Total number of goals: 177
+* Number of covered goals: 177
+* Coverage analysis for criterion WEAKMUTATION
+* Coverage of criterion WEAKMUTATION: 67%
+* Total number of goals: 412
+* Number of covered goals: 278
+* Coverage analysis for criterion OUTPUT
+* Coverage of criterion OUTPUT: 39%
+* Total number of goals: 659
+* Number of covered goals: 259
+* Coverage analysis for criterion METHOD
+* Coverage of criterion METHOD: 99%
+* Total number of goals: 126
+* Number of covered goals: 125
+* Coverage analysis for criterion METHODNOEXCEPTION
+* Coverage of criterion METHODNOEXCEPTION: 68%
+* Total number of goals: 126
+* Number of covered goals: 86
+* Coverage analysis for criterion CBRANCH
+* Coverage of criterion CBRANCH: 68%
+* Total number of goals: 271
+* Number of covered goals: 184
+* Generated 296 tests with total length 5405
+* Resulting test suite's coverage: 68% (average coverage for all fitness functions)
+* Generating assertions
+[MASTER] 04:25:29.608 [logback-1] WARN  SimpleMutationAssertionGenerator - Assertion minimization is taking too long (0.68525% of time used, but only 68/296 tests minimized), falling back to using all assertions
+* Resulting test suite's mutation score: 7%
+* Compiling and checking tests
+* Permissions denied during test execution: 
+  - java.lang.RuntimePermission: 
+         writeFileDescriptor: 8
+* Writing tests to file
+* Writing JUnit test case 'ObjectReader_ESTest' to results/JacksonDatabind-108/com.fasterxml.jackson.databind.ObjectReader/BBC-F0-50/tests/23
+* Done!
+
+* Computation finished

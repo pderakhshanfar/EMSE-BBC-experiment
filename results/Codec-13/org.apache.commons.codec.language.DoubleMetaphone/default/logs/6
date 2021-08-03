@@ -1,0 +1,104 @@
+* EvoSuite 1.1.1-SNAPSHOT
+* Configuration: default
+* Going to generate test cases for class: org.apache.commons.codec.language.DoubleMetaphone
+* Starting Client-0
+* Connecting to master process on port 17723
+* Analyzing classpath: 
+  - subjects/buggy-versions/Codec-13/target/classes
+* Finished analyzing classpath
+* Generating tests for class org.apache.commons.codec.language.DoubleMetaphone
+* Test criteria:
+  - Line Coverage
+  - Branch Coverage
+  - Exception
+  - Mutation testing (weak)
+  - Method-Output Coverage
+  - Top-Level Method Coverage
+  - No-Exception Top-Level Method Coverage
+  - Context Branch Coverage
+* Total number of test goals for DYNAMOSA: 2131
+* Using seed 385434370
+* Starting evolution
+* Initial Number of Goals in DynaMOSA = 343 / 2131
+Number of times BBC is called in total: 0
+* Search finished after 602s and 1830 generations, 540044 statements, best individual has fitness: 184.0
+* Minimizing test suite
+[MASTER] 20:51:26.563 [logback-1] WARN  TestSuiteMinimizer - Minimization timeout. Roll back to original test suite
+* Going to analyze the coverage criteria
+* Coverage analysis for criterion LINE
+* Coverage of criterion LINE: 96%
+* Total number of goals: 404
+* Number of covered goals: 388
+* Coverage analysis for criterion BRANCH
+* Coverage of criterion BRANCH: 92%
+* Total number of goals: 498
+* Number of covered goals: 459
+* Coverage analysis for criterion EXCEPTION
+* Coverage of criterion EXCEPTION: 100%
+* Total number of goals: 17
+* Number of covered goals: 17
+* Coverage analysis for criterion WEAKMUTATION
+* Coverage of criterion WEAKMUTATION: 93%
+* Total number of goals: 662
+* Number of covered goals: 615
+* Coverage analysis for criterion OUTPUT
+* Coverage of criterion OUTPUT: 100%
+* Total number of goals: 23
+* Number of covered goals: 23
+* Coverage analysis for criterion METHOD
+* Coverage of criterion METHOD: 100%
+* Total number of goals: 23
+* Number of covered goals: 23
+* Coverage analysis for criterion METHODNOEXCEPTION
+* Coverage of criterion METHODNOEXCEPTION: 100%
+* Total number of goals: 23
+* Number of covered goals: 23
+* Coverage analysis for criterion CBRANCH
+* Coverage of criterion CBRANCH: 92%
+* Total number of goals: 498
+* Number of covered goals: 459
+* Generated 299 tests with total length 2204
+* Resulting test suite's coverage: 78% (average coverage for all fitness functions)
+* Generating assertions
+[MASTER] 20:52:17.457 [logback-1] WARN  SimpleMutationAssertionGenerator - Assertion minimization is taking too long (0.6969% of time used, but only 47/299 tests minimized), falling back to using all assertions
+* Resulting test suite's mutation score: 15%
+* Compiling and checking tests
+[MASTER] 20:53:24.003 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class java.lang.OutOfMemoryError: Java heap space
+[MASTER] 20:53:24.003 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ DoubleMetaphone doubleMetaphone0 = new DoubleMetaphone();
+assertNotNull(doubleMetaphone0);
+assertEquals(4, doubleMetaphone0.getMaxCodeLen());
+
+int int0 = doubleMetaphone0.getMaxCodeLen();
+assertEquals(4, int0);
+assertEquals(4, doubleMetaphone0.getMaxCodeLen());
+
+String string0 = doubleMetaphone0.doubleMetaphone((String) null);
+assertNull(string0);
+assertEquals(4, doubleMetaphone0.getMaxCodeLen());
+
+doubleMetaphone0.setMaxCodeLen(2147483645);
+assertEquals(2147483645, doubleMetaphone0.getMaxCodeLen());
+
+String[] stringArray0 = new String[6];
+stringArray0[0] = "TZW";
+stringArray0[1] = "tn)";
+stringArray0[2] = null;
+stringArray0[3] = "tn)";
+stringArray0[4] = null;
+stringArray0[5] = "TZW";
+boolean boolean0 = DoubleMetaphone.contains("tn)", 4, 0, stringArray0);
+assertFalse(boolean0);
+assertEquals(6, stringArray0.length);
+
+doubleMetaphone0.doubleMetaphone("t:3ph, ,", true);
+
+[MASTER] 20:53:30.165 [logback-2] ERROR JUnitAnalyzer - Ran out of time while checking tests
+* Permissions denied during test execution: 
+  - java.lang.RuntimePermission: 
+         writeFileDescriptor: 4
+* Writing tests to file
+* Writing JUnit test case 'DoubleMetaphone_ESTest' to results/Codec-13/org.apache.commons.codec.language.DoubleMetaphone/default/tests/6
+* Done!
+
+* Computation finished

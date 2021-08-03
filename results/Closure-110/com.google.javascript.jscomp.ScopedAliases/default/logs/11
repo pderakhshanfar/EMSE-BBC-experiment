@@ -1,0 +1,50 @@
+* EvoSuite 1.1.1-SNAPSHOT
+* Configuration: default
+* Going to generate test cases for class: com.google.javascript.jscomp.ScopedAliases
+* Starting Client-0
+* Connecting to master process on port 18643
+* Analyzing classpath: 
+  - subjects/buggy-versions/Closure-110/build/classes
+  - subjects/buggy-versions/Closure-110/lib/args4j.jar
+  - subjects/buggy-versions/Closure-110/lib/guava.jar
+  - subjects/buggy-versions/Closure-110/lib/json.jar
+  - subjects/buggy-versions/Closure-110/lib/jsr305.jar
+  - subjects/buggy-versions/Closure-110/lib/protobuf-java.jar
+  - subjects/buggy-versions/Closure-110/build/lib/rhino.jar
+  - subjects/buggy-versions/Closure-110/lib/ant.jar
+* Finished analyzing classpath
+* Generating tests for class com.google.javascript.jscomp.ScopedAliases
+* Test criteria:
+  - Line Coverage
+  - Branch Coverage
+  - Exception
+  - Mutation testing (weak)
+  - Method-Output Coverage
+  - Top-Level Method Coverage
+  - No-Exception Top-Level Method Coverage
+  - Context Branch Coverage
+* Total number of test goals for DYNAMOSA: 893
+* Using seed 986498300
+* Starting evolution
+* Initial Number of Goals in DynaMOSA = 246 / 893
+[MASTER] 12:19:53.095 [logback-2] ERROR TestCluster - Failed to check cache for java.util.Enumeration<E> : Type points to itself
+[MASTER] 13:09:28.627 [main] ERROR ExternalProcessGroupHandler - Class com.google.javascript.jscomp.ScopedAliases. Clients have not finished yet, although a timeout occurred.
+Client-0: SEARCH
+
+* Computation finished
+[MASTER] 13:09:28.768 [main] ERROR TestGeneration - Cannot write results as RMI master node is not running
+[MASTER] 13:09:28.886 [main] ERROR TestGeneration - failed to write statistics data
+Number of times BBC is called in total: 0
+[MASTER] 13:09:28.873 [logback-2] ERROR ClientNodeImpl - Cannot inform master of change of state
+java.rmi.NoSuchObjectException: no such object in table
+	at sun.rmi.transport.StreamRemoteCall.exceptionReceivedFromServer(StreamRemoteCall.java:303)
+	at sun.rmi.transport.StreamRemoteCall.executeCall(StreamRemoteCall.java:279)
+	at sun.rmi.server.UnicastRef.invoke(UnicastRef.java:164)
+	at java.rmi.server.RemoteObjectInvocationHandler.invokeRemoteMethod(RemoteObjectInvocationHandler.java:235)
+	at java.rmi.server.RemoteObjectInvocationHandler.invoke(RemoteObjectInvocationHandler.java:180)
+	at com.sun.proxy.$Proxy7.evosuite_collectStatistics(Unknown Source)
+	at org.evosuite.rmi.service.ClientNodeImpl.updateStatistics(ClientNodeImpl.java:261)
+	at org.evosuite.statistics.StatisticsSender.sendIndividualToMaster(StatisticsSender.java:68)
+	at org.evosuite.statistics.StatisticsListener.lambda$new$0(StatisticsListener.java:77)
+	at java.lang.Thread.run(Thread.java:748)
+[MASTER] 13:09:29.067 [logback-1] WARN  TimeController - Phase SEARCH lasted too long, 2377 seconds more than allowed.

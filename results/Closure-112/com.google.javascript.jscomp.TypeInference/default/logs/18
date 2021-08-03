@@ -1,0 +1,118 @@
+* EvoSuite 1.1.1-SNAPSHOT
+* Configuration: default
+* Going to generate test cases for class: com.google.javascript.jscomp.TypeInference
+* Starting Client-0
+* Connecting to master process on port 4917
+* Analyzing classpath: 
+  - subjects/buggy-versions/Closure-112/build/classes
+  - subjects/buggy-versions/Closure-112/lib/args4j.jar
+  - subjects/buggy-versions/Closure-112/lib/guava.jar
+  - subjects/buggy-versions/Closure-112/lib/json.jar
+  - subjects/buggy-versions/Closure-112/lib/jsr305.jar
+  - subjects/buggy-versions/Closure-112/lib/protobuf-java.jar
+  - subjects/buggy-versions/Closure-112/build/lib/rhino.jar
+  - subjects/buggy-versions/Closure-112/lib/ant.jar
+* Finished analyzing classpath
+* Generating tests for class com.google.javascript.jscomp.TypeInference
+* Test criteria:
+  - Line Coverage
+  - Branch Coverage
+  - Exception
+  - Mutation testing (weak)
+  - Method-Output Coverage
+  - Top-Level Method Coverage
+  - No-Exception Top-Level Method Coverage
+  - Context Branch Coverage
+* Total number of test goals for DYNAMOSA: 2994
+* Using seed 4138957376
+* Starting evolution
+* Initial Number of Goals in DynaMOSA = 886 / 2994
+[MASTER] 19:38:05.506 [logback-2] ERROR TestCluster - Failed to check cache for java.util.Comparator<T> : Type points to itself
+[MASTER] 19:39:38.746 [logback-2] ERROR TestCluster - Failed to check cache for java.util.Iterator<E> : Type points to itself
+[MASTER] 19:44:52.635 [logback-2] ERROR TestCluster - Failed to check cache for java.util.Enumeration<E> : Type points to itself
+Number of times BBC is called in total: 0
+* Search finished after 605s and 526 generations, 334300 statements, best individual has fitness: 1944.0
+* Minimizing test suite
+* Going to analyze the coverage criteria
+* Coverage analysis for criterion LINE
+* Coverage of criterion LINE: 35%
+* Total number of goals: 603
+* Number of covered goals: 214
+* Coverage analysis for criterion BRANCH
+* Coverage of criterion BRANCH: 44%
+* Total number of goals: 769
+* Number of covered goals: 338
+* Coverage analysis for criterion EXCEPTION
+* Coverage of criterion EXCEPTION: 100%
+* Total number of goals: 8
+* Number of covered goals: 8
+* Coverage analysis for criterion WEAKMUTATION
+* Coverage of criterion WEAKMUTATION: 19%
+* Total number of goals: 821
+* Number of covered goals: 160
+* Coverage analysis for criterion OUTPUT
+* Coverage of criterion OUTPUT: 43%
+* Total number of goals: 14
+* Number of covered goals: 6
+* Coverage analysis for criterion METHOD
+* Coverage of criterion METHOD: 67%
+* Total number of goals: 9
+* Number of covered goals: 6
+* Coverage analysis for criterion METHODNOEXCEPTION
+* Coverage of criterion METHODNOEXCEPTION: 67%
+* Total number of goals: 9
+* Number of covered goals: 6
+* Coverage analysis for criterion CBRANCH
+* Coverage of criterion CBRANCH: 44%
+* Total number of goals: 769
+* Number of covered goals: 337
+* Generated 113 tests with total length 1000
+* Resulting test suite's coverage: 46% (average coverage for all fitness functions)
+* Generating assertions
+* Resulting test suite's mutation score: 7%
+* Compiling and checking tests
+[MASTER] 19:49:58.602 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class org.evosuite.runtime.mock.java.lang.MockIllegalArgumentException: Multiple entries with same key: returns=NOT_IMPLEMENTED and returns=RETURN
+[MASTER] 19:49:58.603 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ ControlFlowGraph<Node> controlFlowGraph0 = new ControlFlowGraph<Node>((Node) null, true, true);
+Compiler compiler0 = new Compiler();
+Node node0 = compiler0.parseSyntheticCode("com.google.javascript.jscomp.TypeInference$BooleanOutcomePair", "com.google.javascript.jscomp.TypeInference$BooleanOutcomePair");
+Scope scope0 = Scope.createLatticeBottom(node0);
+GoogleCodingConvention googleCodingConvention0 = new GoogleCodingConvention();
+SimpleErrorReporter simpleErrorReporter0 = new SimpleErrorReporter();
+JSTypeRegistry jSTypeRegistry0 = new JSTypeRegistry(simpleErrorReporter0);
+ClosureReverseAbstractInterpreter closureReverseAbstractInterpreter0 = new ClosureReverseAbstractInterpreter(googleCodingConvention0, jSTypeRegistry0);
+TypeInference typeInference0 = new TypeInference(compiler0, controlFlowGraph0, closureReverseAbstractInterpreter0, scope0, (Map<String, CodingConvention.AssertionFunctionSpec>) null);
+Node node1 = Node.newString(101, "X0`$I", (-1292), (-704));
+LinkedFlowScope linkedFlowScope0 = LinkedFlowScope.createEntryLattice(scope0);
+node1.addChildToFront(node0);
+FlowScope flowScope0 = typeInference0.flowThrough(node1, linkedFlowScope0);
+assertNotSame(flowScope0, linkedFlowScope0);
+
+
+[MASTER] 19:50:00.197 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class java.lang.AssertionError: Expecting exception: IllegalArgumentException
+[MASTER] 19:50:00.197 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ Compiler compiler0 = new Compiler();
+SourceFile sourceFile0 = SourceFile.fromCode("cok.oogle.javascrip.jscommTypeInferenc", "cok.oogle.javascrip.jscommTypeInferenc");
+compiler0.parse(sourceFile0);
+
+[MASTER] 19:50:01.648 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class org.evosuite.runtime.mock.java.lang.MockIllegalArgumentException: Multiple entries with same key: returns=NOT_IMPLEMENTED and returns=RETURN
+[MASTER] 19:50:01.649 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ ControlFlowGraph<Node> controlFlowGraph0 = new ControlFlowGraph<Node>((Node) null, false, false);
+Compiler compiler0 = new Compiler();
+Node node0 = compiler0.parseSyntheticCode("T", "T");
+Scope scope0 = Scope.createLatticeBottom(node0);
+LinkedFlowScope linkedFlowScope0 = LinkedFlowScope.createEntryLattice(scope0);
+TypeInference typeInference0 = new TypeInference(compiler0, controlFlowGraph0, (ReverseAbstractInterpreter) null, scope0, (Map<String, CodingConvention.AssertionFunctionSpec>) null);
+Node node1 = new Node(94);
+FlowScope flowScope0 = typeInference0.flowThrough(node1, linkedFlowScope0);
+assertNotSame(flowScope0, linkedFlowScope0);
+
+
+* Permissions denied during test execution: 
+  - java.lang.RuntimePermission: 
+         writeFileDescriptor: 30
+* Writing tests to file
+* Writing JUnit test case 'TypeInference_ESTest' to results/Closure-112/com.google.javascript.jscomp.TypeInference/default/tests/18
+* Done!
+
+* Computation finished
