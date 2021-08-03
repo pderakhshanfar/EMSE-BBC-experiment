@@ -53,6 +53,7 @@ timeout -k $TIMEOUT $TIMEOUT /usr/bin/env java -Xmx4G -jar tools/evosuite.jar \
 -Dshow_progress='false' \
 -Dplot='false' \
 -Dtimeline_interval=10000 \
+-Dsandbox=FALSE \
 -Dsearch_budget="${Budget}" \
 -Doutput_variables=TARGET_CLASS,search_budget,Total_Time,Length,Size,LineCoverage,BranchCoverage,OutputCoverage,WeakMutationScore,Implicit_MethodExceptions,CoverageTimeline,LineCoverageTimeline,BranchCoverageTimeline,OutputCoverageTimeline,WeakMutationCoverageTimeline,ExceptionCoverageTimeline \
 "${user_configuration_array[@]}" \
