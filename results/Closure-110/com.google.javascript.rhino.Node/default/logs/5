@@ -2,7 +2,7 @@
 * Configuration: default
 * Going to generate test cases for class: com.google.javascript.rhino.Node
 * Starting Client-0
-* Connecting to master process on port 5826
+* Connecting to master process on port 7560
 * Analyzing classpath: 
   - subjects/buggy-versions/Closure-110/build/classes
   - subjects/buggy-versions/Closure-110/lib/args4j.jar
@@ -24,51 +24,17 @@
   - No-Exception Top-Level Method Coverage
   - Context Branch Coverage
 * Total number of test goals for DYNAMOSA: 7813
-* Using seed 3548449712
+* Using seed 1498973416
 * Starting evolution
 * Initial Number of Goals in DynaMOSA = 5977 / 7813
-[MASTER] 12:20:36.507 [logback-2] ERROR TestCluster - Failed to check cache for java.util.LinkedHashSet<E> : Type points to itself
-[MASTER] 12:20:39.459 [logback-2] ERROR TestCluster - Failed to check cache for java.util.Iterator<E> : Type points to itself
-[MASTER] 12:20:40.076 [logback-1] WARN  CoverageArchive - A solution with a timeout/exception result has been added to the archive. The covered goal was Branch com.google.javascript.rhino.Node.getFirstChild()Lcom/google/javascript/rhino/Node;: root-Branch in context: com.google.javascript.rhino.Node:getFirstChild()Lcom/google/javascript/rhino/Node;
-[MASTER] 12:20:40.147 [logback-1] WARN  CoverageArchive - A solution with a timeout/exception result has been added to the archive. The covered goal was [METHOD] com.google.javascript.rhino.Node.getFirstChild()Lcom/google/javascript/rhino/Node;
-[MASTER] 12:20:40.147 [logback-1] WARN  CoverageArchive - A solution with a timeout/exception result has been added to the archive. The covered goal was [METHODNOEX] com.google.javascript.rhino.Node.getFirstChild()Lcom/google/javascript/rhino/Node;
-[MASTER] 12:20:42.459 [logback-1] WARN  CoverageArchive - A solution with a timeout/exception result has been added to the archive. The covered goal was [METHOD] com.google.javascript.rhino.Node.getNext()Lcom/google/javascript/rhino/Node;
-[MASTER] 12:21:27.447 [logback-2] ERROR TestCluster - Failed to check cache for java.util.Comparator<T> : Type points to itself
-[MASTER] 12:24:28.332 [logback-1] WARN  TestChromosome - Functional mock problem: org.evosuite.ga.ConstructionFailedException: Max recursion depth reached
-[MASTER] 13:09:21.920 [main] ERROR ExternalProcessGroupHandler - Class com.google.javascript.rhino.Node. Clients have not finished yet, although a timeout occurred.
-Client-0: SEARCH
-
-* Computation finished
-[MASTER] 13:09:22.043 [main] ERROR SearchStatistics - No obtained value for output variable: LineCoverage
-[MASTER] 13:09:23.149 [main] ERROR SearchStatistics - Not going to write down statistics data, as some are missing
-[MASTER] 13:09:23.255 [main] ERROR TestGeneration - failed to write statistics data
-[MASTER] 13:09:23.249 [logback-2] ERROR ClientNodeImpl - Cannot inform master of change of state
-java.rmi.MarshalException: error marshalling arguments; nested exception is: 
-	java.net.SocketException: Broken pipe (Write failed)
-	at sun.rmi.server.UnicastRef.invoke(UnicastRef.java:160)
-	at java.rmi.server.RemoteObjectInvocationHandler.invokeRemoteMethod(RemoteObjectInvocationHandler.java:235)
-	at java.rmi.server.RemoteObjectInvocationHandler.invoke(RemoteObjectInvocationHandler.java:180)
-	at com.sun.proxy.$Proxy7.evosuite_collectStatistics(Unknown Source)
-	at org.evosuite.rmi.service.ClientNodeImpl.updateStatistics(ClientNodeImpl.java:261)
-	at org.evosuite.statistics.StatisticsSender.sendIndividualToMaster(StatisticsSender.java:68)
-	at org.evosuite.statistics.StatisticsListener.lambda$new$0(StatisticsListener.java:77)
-	at java.lang.Thread.run(Thread.java:748)
-Caused by: java.net.SocketException: Broken pipe (Write failed)
-	at java.net.SocketOutputStream.socketWrite0(Native Method)
-	at java.net.SocketOutputStream.socketWrite(SocketOutputStream.java:111)
-	at java.net.SocketOutputStream.write(SocketOutputStream.java:155)
-	at java.io.BufferedOutputStream.flushBuffer(BufferedOutputStream.java:82)
-	at java.io.BufferedOutputStream.write(BufferedOutputStream.java:126)
-	at java.io.ObjectOutputStream$BlockDataOutputStream.drain(ObjectOutputStream.java:1877)
-	at java.io.ObjectOutputStream$BlockDataOutputStream.setBlockDataMode(ObjectOutputStream.java:1786)
-	at java.io.ObjectOutputStream.writeNonProxyDesc(ObjectOutputStream.java:1286)
-	at java.io.ObjectOutputStream.writeClassDesc(ObjectOutputStream.java:1231)
-	at java.io.ObjectOutputStream.writeOrdinaryObject(ObjectOutputStream.java:1427)
-	at java.io.ObjectOutputStream.writeObject0(ObjectOutputStream.java:1178)
-	at java.io.ObjectOutputStream.writeFatalException(ObjectOutputStream.java:1577)
-	at java.io.ObjectOutputStream.writeObject(ObjectOutputStream.java:351)
-	at sun.rmi.server.UnicastRef.marshalValue(UnicastRef.java:293)
-	at sun.rmi.server.UnicastRef.invoke(UnicastRef.java:155)
-	... 7 common frames omitted
-Number of times BBC is called in total: 0
-[MASTER] 13:09:24.412 [logback-1] WARN  TimeController - Phase SEARCH lasted too long, 2328 seconds more than allowed.
+[MASTER] 08:21:59.381 [logback-2] ERROR TestCluster - Failed to check cache for java.util.LinkedHashSet<E> : Type points to itself
+[MASTER] 08:22:01.310 [logback-2] ERROR TestCluster - Failed to check cache for java.util.Comparator<T> : Type points to itself
+[MASTER] 08:22:01.909 [logback-2] ERROR TestCluster - Failed to check cache for java.util.Iterator<E> : Type points to itself
+[MASTER] 08:22:03.727 [logback-1] WARN  CoverageArchive - A solution with a timeout/exception result has been added to the archive. The covered goal was [METHOD] com.google.javascript.rhino.Node.isVarArgs()Z
+[MASTER] 10:23:34.489 [main] ERROR EvoSuite - Fatal crash on main EvoSuite process. Class com.google.javascript.rhino.Node using seed 1498973416. Configuration id : default
+java.lang.NullPointerException: null
+	at org.evosuite.utils.ExternalProcessGroupHandler.waitForResult(ExternalProcessGroupHandler.java:709)
+	at org.evosuite.executionmode.TestGeneration.generateTests(TestGeneration.java:515)
+	at org.evosuite.executionmode.TestGeneration.executeTestGeneration(TestGeneration.java:80)
+	at org.evosuite.EvoSuite.parseCommandLine(EvoSuite.java:349)
+	at org.evosuite.EvoSuite.main(EvoSuite.java:115)

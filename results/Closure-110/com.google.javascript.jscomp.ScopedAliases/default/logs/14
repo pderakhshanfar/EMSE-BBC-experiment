@@ -2,7 +2,7 @@
 * Configuration: default
 * Going to generate test cases for class: com.google.javascript.jscomp.ScopedAliases
 * Starting Client-0
-* Connecting to master process on port 4462
+* Connecting to master process on port 21848
 * Analyzing classpath: 
   - subjects/buggy-versions/Closure-110/build/classes
   - subjects/buggy-versions/Closure-110/lib/args4j.jar
@@ -24,41 +24,52 @@
   - No-Exception Top-Level Method Coverage
   - Context Branch Coverage
 * Total number of test goals for DYNAMOSA: 893
-* Using seed 2051673169
+* Using seed 4008513033
 * Starting evolution
 * Initial Number of Goals in DynaMOSA = 246 / 893
-[MASTER] 12:20:14.522 [logback-2] ERROR TestCluster - Failed to check cache for java.util.Enumeration<E> : Type points to itself
-[MASTER] 12:20:20.524 [logback-2] ERROR TestCluster - Failed to check cache for com.google.javascript.jscomp.ControlFlowGraph<N>.Branch : Type points to itself
-[MASTER] 12:20:23.373 [logback-2] ERROR TestCluster - Failed to check cache for java.util.Comparator<T> : Type points to itself
-[MASTER] 12:20:44.102 [logback-2] ERROR TestCluster - Failed to check cache for java.util.Iterator<E> : Type points to itself
-[MASTER] 13:06:44.327 [main] ERROR ExternalProcessGroupHandler - Class com.google.javascript.jscomp.ScopedAliases. Clients have not finished yet, although a timeout occurred.
-Client-0: SEARCH
-
-[MASTER] 13:06:44.369 [Thread-3] ERROR ExternalProcessGroupHandler - Exception while reading output of client process. Stream closed
-* Computation finished
-[MASTER] 13:06:44.520 [main] ERROR SearchStatistics - No obtained value for output variable: LineCoverage
+[MASTER] 16:10:37.161 [logback-2] ERROR TestCluster - Failed to check cache for java.util.Comparator<T> : Type points to itself
+[MASTER] 16:10:44.837 [logback-2] ERROR TestCluster - Failed to check cache for java.util.Enumeration<E> : Type points to itself
 Number of times BBC is called in total: 0
-* Search finished after 2808s and 424 generations, 175038 statements, best individual has fitness: 761.0
-[MASTER] 13:06:45.560 [main] ERROR SearchStatistics - Not going to write down statistics data, as some are missing
-[MASTER] 13:06:45.619 [logback-1] WARN  TimeController - Phase SEARCH lasted too long, 2208 seconds more than allowed.
-[MASTER] 13:06:45.668 [main] ERROR TestGeneration - failed to write statistics data
-[MASTER] 13:06:45.692 [logback-2] ERROR ClientNodeImpl - Cannot inform master of change of state
-java.rmi.NoSuchObjectException: no such object in table
-	at sun.rmi.transport.StreamRemoteCall.exceptionReceivedFromServer(StreamRemoteCall.java:303)
-	at sun.rmi.transport.StreamRemoteCall.executeCall(StreamRemoteCall.java:279)
-	at sun.rmi.server.UnicastRef.invoke(UnicastRef.java:164)
-	at java.rmi.server.RemoteObjectInvocationHandler.invokeRemoteMethod(RemoteObjectInvocationHandler.java:235)
-	at java.rmi.server.RemoteObjectInvocationHandler.invoke(RemoteObjectInvocationHandler.java:180)
-	at com.sun.proxy.$Proxy7.evosuite_informChangeOfStateInClient(Unknown Source)
-	at org.evosuite.rmi.service.ClientNodeImpl.changeState(ClientNodeImpl.java:242)
-	at org.evosuite.rmi.service.ClientNodeImpl.changeState(ClientNodeImpl.java:228)
-	at org.evosuite.TestSuiteGenerator.postProcessTests(TestSuiteGenerator.java:383)
-	at org.evosuite.TestSuiteGenerator.generateTestSuite(TestSuiteGenerator.java:215)
-	at org.evosuite.rmi.service.ClientNodeImpl.lambda$startNewSearch$0(ClientNodeImpl.java:150)
-	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
-	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
-	at java.lang.Thread.run(Thread.java:748)
-[MASTER] 13:06:45.757 [logback-1] WARN  TimeController - Current phase MINIMIZATION could run up to 60s, but only -1794s are left
-* Skipping minimization because not enough time is left
+* Search finished after 985s and 333 generations, 139374 statements, best individual has fitness: 743.0
+[MASTER] 16:25:02.467 [logback-1] WARN  TimeController - Phase SEARCH lasted too long, 385 seconds more than allowed.
+[MASTER] 16:25:02.841 [logback-1] WARN  TimeController - Current phase MINIMIZATION could run up to 60s, but only 29s are left
+* Minimizing test suite
+* Going to analyze the coverage criteria
+* Coverage analysis for criterion LINE
+* Coverage of criterion LINE: 20%
+* Total number of goals: 220
+* Number of covered goals: 44
+* Coverage analysis for criterion BRANCH
+* Coverage of criterion BRANCH: 19%
+* Total number of goals: 161
+* Number of covered goals: 30
+* Coverage analysis for criterion EXCEPTION
+* Coverage of criterion EXCEPTION: 100%
+* Total number of goals: 4
+* Number of covered goals: 4
+* Coverage analysis for criterion WEAKMUTATION
+* Coverage of criterion WEAKMUTATION: 14%
+* Total number of goals: 323
+* Number of covered goals: 44
+* Coverage analysis for criterion OUTPUT
+* Coverage of criterion OUTPUT: 100% (no goals)
+* Coverage analysis for criterion METHOD
+* Coverage of criterion METHOD: 21%
+* Total number of goals: 14
+* Number of covered goals: 3
+* Coverage analysis for criterion METHODNOEXCEPTION
+* Coverage of criterion METHODNOEXCEPTION: 21%
+* Total number of goals: 14
+* Number of covered goals: 3
+* Coverage analysis for criterion CBRANCH
+* Coverage of criterion CBRANCH: 19%
+* Total number of goals: 161
+* Number of covered goals: 30
+* Generated 8 tests with total length 40
+* Resulting test suite's coverage: 33% (average coverage for all fitness functions)
+* Generating assertions
+[MASTER] 16:25:20.480 [logback-1] WARN  TimeController - Current phase ASSERTION_GENERATION could run up to 60s, but only 11s are left
+[MASTER] 16:25:32.064 [main] ERROR ExternalProcessGroupHandler - Class com.google.javascript.jscomp.ScopedAliases. Clients have not finished yet, although a timeout occurred.
+Client-0: ASSERTION_GENERATION
+
+* Computation finished
