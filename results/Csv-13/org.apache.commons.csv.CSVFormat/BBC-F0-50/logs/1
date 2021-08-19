@@ -21,8 +21,44 @@
 * Starting evolution
 bbc usage percentage is: 50%
 * Initial Number of Goals in DynaMOSA = 1105 / 1832
-[MASTER] 23:08:48.950 [RMI TCP Connection(2)-127.0.0.1] ERROR ExecutionTracer - CurrentThread has not been set!
-[MASTER] 23:08:48.953 [RMI TCP Connection(2)-127.0.0.1] ERROR ExecutionTracer - Thread: Thread[pool-3-thread-3,5,main]
+[MASTER] 20:17:29.064 [RMI TCP Connection(3)-127.0.0.1] ERROR ExecutionTracer - CurrentThread has not been set!
+[MASTER] 20:17:29.068 [RMI TCP Connection(3)-127.0.0.1] ERROR ExecutionTracer - Thread: Thread[Signal Dispatcher,9,system]
+
+[MASTER] 20:17:29.070 [RMI TCP Connection(3)-127.0.0.1] ERROR ExecutionTracer - Thread: Thread[RMI Scheduler(0),5,system]
+ -> sun.misc.Unsafe.park(Native Method)
+ -> java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:215)
+ -> java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:2078)
+ -> java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1093)
+ -> java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:809)
+ -> java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1074)
+ -> java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1134)
+ -> java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+ -> java.lang.Thread.run(Thread.java:748)
+
+[MASTER] 20:17:29.070 [RMI TCP Connection(3)-127.0.0.1] ERROR ExecutionTracer - Thread: Thread[process reaper,10,system]
+ -> java.lang.UNIXProcess.waitForProcessExit(Native Method)
+ -> java.lang.UNIXProcess.lambda$initStreams$3(UNIXProcess.java:289)
+ -> java.lang.UNIXProcess$$Lambda$14/764577347.run(Unknown Source)
+ -> java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+ -> java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+ -> java.lang.Thread.run(Thread.java:748)
+
+[MASTER] 20:17:29.070 [RMI TCP Connection(3)-127.0.0.1] ERROR ExecutionTracer - Thread: Thread[logback-3,5,main]
+ -> java.lang.Thread.sleep(Native Method)
+ -> ch.qos.logback.core.net.DefaultSocketConnector.call(DefaultSocketConnector.java:73)
+ -> ch.qos.logback.core.net.AbstractSocketAppender.socketConnectionCouldBeEstablished(AbstractSocketAppender.java:209)
+ -> ch.qos.logback.core.net.AbstractSocketAppender.connectSocketAndDispatchEvents(AbstractSocketAppender.java:189)
+ -> ch.qos.logback.core.net.AbstractSocketAppender.access$000(AbstractSocketAppender.java:44)
+ -> ch.qos.logback.core.net.AbstractSocketAppender$1.run(AbstractSocketAppender.java:150)
+ -> java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+ -> java.util.concurrent.FutureTask.run(FutureTask.java:266)
+ -> java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180)
+ -> java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293)
+ -> java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+ -> java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+ -> java.lang.Thread.run(Thread.java:748)
+
+[MASTER] 20:17:29.070 [RMI TCP Connection(3)-127.0.0.1] ERROR ExecutionTracer - Thread: Thread[pool-3-thread-1,5,main]
  -> java.net.SocketInputStream.socketRead0(Native Method)
  -> java.net.SocketInputStream.socketRead(SocketInputStream.java:116)
  -> java.net.SocketInputStream.read(SocketInputStream.java:171)
@@ -42,16 +78,7 @@ bbc usage percentage is: 50%
  -> java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
  -> java.lang.Thread.run(Thread.java:748)
 
-[MASTER] 23:08:48.953 [RMI TCP Connection(2)-127.0.0.1] ERROR ExecutionTracer - Thread: Thread[RMI TCP Accept-12506,5,system]
- -> java.net.PlainSocketImpl.socketAccept(Native Method)
- -> java.net.AbstractPlainSocketImpl.accept(AbstractPlainSocketImpl.java:409)
- -> java.net.ServerSocket.implAccept(ServerSocket.java:560)
- -> java.net.ServerSocket.accept(ServerSocket.java:528)
- -> sun.rmi.transport.tcp.TCPTransport$AcceptLoop.executeAcceptLoop(TCPTransport.java:405)
- -> sun.rmi.transport.tcp.TCPTransport$AcceptLoop.run(TCPTransport.java:377)
- -> java.lang.Thread.run(Thread.java:748)
-
-[MASTER] 23:08:48.954 [RMI TCP Connection(2)-127.0.0.1] ERROR ExecutionTracer - Thread: Thread[Thread-3,5,main]
+[MASTER] 20:17:29.070 [RMI TCP Connection(3)-127.0.0.1] ERROR ExecutionTracer - Thread: Thread[Thread-3,5,main]
  -> java.io.FileInputStream.readBytes(Native Method)
  -> java.io.FileInputStream.read(FileInputStream.java:255)
  -> java.io.BufferedInputStream.read1(BufferedInputStream.java:284)
@@ -64,13 +91,47 @@ bbc usage percentage is: 50%
  -> java.io.BufferedReader.read(BufferedReader.java:182)
  -> org.evosuite.utils.ExternalProcessGroupHandler$4.run(ExternalProcessGroupHandler.java:523)
 
-[MASTER] 23:08:48.954 [RMI TCP Connection(2)-127.0.0.1] ERROR ExecutionTracer - Thread: Thread[Reference Handler,10,system]
- -> java.lang.Object.wait(Native Method)
- -> java.lang.Object.wait(Object.java:502)
- -> java.lang.ref.Reference.tryHandlePending(Reference.java:191)
- -> java.lang.ref.Reference$ReferenceHandler.run(Reference.java:153)
+[MASTER] 20:17:29.070 [RMI TCP Connection(3)-127.0.0.1] ERROR ExecutionTracer - Thread: Thread[Thread-2,5,main]
+ -> java.io.FileInputStream.readBytes(Native Method)
+ -> java.io.FileInputStream.read(FileInputStream.java:255)
+ -> java.io.BufferedInputStream.read1(BufferedInputStream.java:284)
+ -> java.io.BufferedInputStream.read(BufferedInputStream.java:345)
+ -> sun.nio.cs.StreamDecoder.readBytes(StreamDecoder.java:284)
+ -> sun.nio.cs.StreamDecoder.implRead(StreamDecoder.java:326)
+ -> sun.nio.cs.StreamDecoder.read(StreamDecoder.java:178)
+ -> java.io.InputStreamReader.read(InputStreamReader.java:184)
+ -> java.io.BufferedReader.fill(BufferedReader.java:161)
+ -> java.io.BufferedReader.read(BufferedReader.java:182)
+ -> org.evosuite.utils.ExternalProcessGroupHandler$3.run(ExternalProcessGroupHandler.java:482)
 
-[MASTER] 23:08:48.954 [RMI TCP Connection(2)-127.0.0.1] ERROR ExecutionTracer - Thread: Thread[pool-3-thread-1,5,main]
+[MASTER] 20:17:29.070 [RMI TCP Connection(3)-127.0.0.1] ERROR ExecutionTracer - Thread: Thread[RMI TCP Accept-12506,5,system]
+ -> java.net.PlainSocketImpl.socketAccept(Native Method)
+ -> java.net.AbstractPlainSocketImpl.accept(AbstractPlainSocketImpl.java:409)
+ -> java.net.ServerSocket.implAccept(ServerSocket.java:560)
+ -> java.net.ServerSocket.accept(ServerSocket.java:528)
+ -> sun.rmi.transport.tcp.TCPTransport$AcceptLoop.executeAcceptLoop(TCPTransport.java:405)
+ -> sun.rmi.transport.tcp.TCPTransport$AcceptLoop.run(TCPTransport.java:377)
+ -> java.lang.Thread.run(Thread.java:748)
+
+[MASTER] 20:17:29.070 [RMI TCP Connection(3)-127.0.0.1] ERROR ExecutionTracer - Thread: Thread[RMI TCP Connection(1)-172.17.0.2,5,RMI Runtime]
+ -> java.net.SocketInputStream.socketRead0(Native Method)
+ -> java.net.SocketInputStream.socketRead(SocketInputStream.java:116)
+ -> java.net.SocketInputStream.read(SocketInputStream.java:171)
+ -> java.net.SocketInputStream.read(SocketInputStream.java:141)
+ -> java.io.BufferedInputStream.fill(BufferedInputStream.java:246)
+ -> java.io.BufferedInputStream.read(BufferedInputStream.java:265)
+ -> java.io.FilterInputStream.read(FilterInputStream.java:83)
+ -> sun.rmi.transport.tcp.TCPTransport.handleMessages(TCPTransport.java:555)
+ -> sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run0(TCPTransport.java:834)
+ -> sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.lambda$run$0(TCPTransport.java:688)
+ -> sun.rmi.transport.tcp.TCPTransport$ConnectionHandler$$Lambda$18/1049791583.run(Unknown Source)
+ -> java.security.AccessController.doPrivileged(Native Method)
+ -> sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run(TCPTransport.java:687)
+ -> java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+ -> java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+ -> java.lang.Thread.run(Thread.java:748)
+
+[MASTER] 20:17:29.070 [RMI TCP Connection(3)-127.0.0.1] ERROR ExecutionTracer - Thread: Thread[pool-3-thread-2,5,main]
  -> java.net.SocketInputStream.socketRead0(Native Method)
  -> java.net.SocketInputStream.socketRead(SocketInputStream.java:116)
  -> java.net.SocketInputStream.read(SocketInputStream.java:171)
@@ -90,81 +151,53 @@ bbc usage percentage is: 50%
  -> java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
  -> java.lang.Thread.run(Thread.java:748)
 
-[MASTER] 23:08:48.954 [RMI TCP Connection(2)-127.0.0.1] ERROR ExecutionTracer - Thread: Thread[RMI Reaper,5,system]
+[MASTER] 20:17:29.071 [RMI TCP Connection(3)-127.0.0.1] ERROR ExecutionTracer - Thread: Thread[logback-2,5,main]
+ -> java.lang.Thread.sleep(Native Method)
+ -> ch.qos.logback.core.net.DefaultSocketConnector.call(DefaultSocketConnector.java:73)
+ -> ch.qos.logback.core.net.AbstractSocketAppender.socketConnectionCouldBeEstablished(AbstractSocketAppender.java:209)
+ -> ch.qos.logback.core.net.AbstractSocketAppender.connectSocketAndDispatchEvents(AbstractSocketAppender.java:189)
+ -> ch.qos.logback.core.net.AbstractSocketAppender.access$000(AbstractSocketAppender.java:44)
+ -> ch.qos.logback.core.net.AbstractSocketAppender$1.run(AbstractSocketAppender.java:150)
+ -> java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+ -> java.util.concurrent.FutureTask.run(FutureTask.java:266)
+ -> java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180)
+ -> java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293)
+ -> java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+ -> java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+ -> java.lang.Thread.run(Thread.java:748)
+
+[MASTER] 20:17:29.071 [RMI TCP Connection(3)-127.0.0.1] ERROR ExecutionTracer - Thread: Thread[pool-2-thread-1,5,main]
+ -> java.net.PlainSocketImpl.socketAccept(Native Method)
+ -> java.net.AbstractPlainSocketImpl.accept(AbstractPlainSocketImpl.java:409)
+ -> java.net.ServerSocket.implAccept(ServerSocket.java:560)
+ -> java.net.ServerSocket.accept(ServerSocket.java:528)
+ -> org.evosuite.utils.LoggingUtils$1.call(LoggingUtils.java:141)
+ -> org.evosuite.utils.LoggingUtils$1.call(LoggingUtils.java:137)
+ -> java.util.concurrent.FutureTask.run(FutureTask.java:266)
+ -> java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+ -> java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+ -> java.lang.Thread.run(Thread.java:748)
+
+[MASTER] 20:17:29.071 [RMI TCP Connection(3)-127.0.0.1] ERROR ExecutionTracer - Thread: Thread[RMI RenewClean-[127.0.0.1:3349],5,system]
+ -> java.lang.Object.wait(Native Method)
+ -> java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:144)
+ -> sun.rmi.transport.DGCClient$EndpointEntry$RenewCleanThread.run(DGCClient.java:563)
+ -> java.lang.Thread.run(Thread.java:748)
+
+[MASTER] 20:17:29.071 [RMI TCP Connection(3)-127.0.0.1] ERROR ExecutionTracer - Thread: Thread[RMI Reaper,5,system]
  -> java.lang.Object.wait(Native Method)
  -> java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:144)
  -> java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:165)
  -> sun.rmi.transport.ObjectTable$Reaper.run(ObjectTable.java:351)
  -> java.lang.Thread.run(Thread.java:748)
 
-[MASTER] 23:08:48.954 [RMI TCP Connection(2)-127.0.0.1] ERROR ExecutionTracer - Thread: Thread[logback-2,5,main]
- -> java.lang.Thread.sleep(Native Method)
- -> ch.qos.logback.core.net.DefaultSocketConnector.call(DefaultSocketConnector.java:73)
- -> ch.qos.logback.core.net.AbstractSocketAppender.socketConnectionCouldBeEstablished(AbstractSocketAppender.java:209)
- -> ch.qos.logback.core.net.AbstractSocketAppender.connectSocketAndDispatchEvents(AbstractSocketAppender.java:189)
- -> ch.qos.logback.core.net.AbstractSocketAppender.access$000(AbstractSocketAppender.java:44)
- -> ch.qos.logback.core.net.AbstractSocketAppender$1.run(AbstractSocketAppender.java:150)
- -> java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
- -> java.util.concurrent.FutureTask.run(FutureTask.java:266)
- -> java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180)
- -> java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293)
- -> java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
- -> java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
- -> java.lang.Thread.run(Thread.java:748)
-
-[MASTER] 23:08:48.954 [RMI TCP Connection(2)-127.0.0.1] ERROR ExecutionTracer - Thread: Thread[logback-1,5,main]
- -> java.lang.Thread.sleep(Native Method)
- -> ch.qos.logback.core.net.DefaultSocketConnector.call(DefaultSocketConnector.java:73)
- -> ch.qos.logback.core.net.AbstractSocketAppender.socketConnectionCouldBeEstablished(AbstractSocketAppender.java:209)
- -> ch.qos.logback.core.net.AbstractSocketAppender.connectSocketAndDispatchEvents(AbstractSocketAppender.java:189)
- -> ch.qos.logback.core.net.AbstractSocketAppender.access$000(AbstractSocketAppender.java:44)
- -> ch.qos.logback.core.net.AbstractSocketAppender$1.run(AbstractSocketAppender.java:150)
- -> java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
- -> java.util.concurrent.FutureTask.run(FutureTask.java:266)
- -> java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180)
- -> java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293)
- -> java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
- -> java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
- -> java.lang.Thread.run(Thread.java:748)
-
-[MASTER] 23:08:48.954 [RMI TCP Connection(2)-127.0.0.1] ERROR ExecutionTracer - Thread: Thread[RMI TCP Connection(1)-172.17.0.2,5,RMI Runtime]
- -> java.net.SocketInputStream.socketRead0(Native Method)
- -> java.net.SocketInputStream.socketRead(SocketInputStream.java:116)
- -> java.net.SocketInputStream.read(SocketInputStream.java:171)
- -> java.net.SocketInputStream.read(SocketInputStream.java:141)
- -> java.io.BufferedInputStream.fill(BufferedInputStream.java:246)
- -> java.io.BufferedInputStream.read(BufferedInputStream.java:265)
- -> java.io.FilterInputStream.read(FilterInputStream.java:83)
- -> sun.rmi.transport.tcp.TCPTransport.handleMessages(TCPTransport.java:555)
- -> sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run0(TCPTransport.java:834)
- -> sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.lambda$run$0(TCPTransport.java:688)
- -> sun.rmi.transport.tcp.TCPTransport$ConnectionHandler$$Lambda$18/1335925763.run(Unknown Source)
- -> java.security.AccessController.doPrivileged(Native Method)
- -> sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run(TCPTransport.java:687)
- -> java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
- -> java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
- -> java.lang.Thread.run(Thread.java:748)
-
-[MASTER] 23:08:48.954 [RMI TCP Connection(2)-127.0.0.1] ERROR ExecutionTracer - Thread: Thread[logback-3,5,main]
- -> java.lang.Thread.sleep(Native Method)
- -> ch.qos.logback.core.net.DefaultSocketConnector.call(DefaultSocketConnector.java:73)
- -> ch.qos.logback.core.net.AbstractSocketAppender.socketConnectionCouldBeEstablished(AbstractSocketAppender.java:209)
- -> ch.qos.logback.core.net.AbstractSocketAppender.connectSocketAndDispatchEvents(AbstractSocketAppender.java:189)
- -> ch.qos.logback.core.net.AbstractSocketAppender.access$000(AbstractSocketAppender.java:44)
- -> ch.qos.logback.core.net.AbstractSocketAppender$1.run(AbstractSocketAppender.java:150)
- -> java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
- -> java.util.concurrent.FutureTask.run(FutureTask.java:266)
- -> java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180)
- -> java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293)
- -> java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
- -> java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
- -> java.lang.Thread.run(Thread.java:748)
-
-[MASTER] 23:08:48.954 [RMI TCP Connection(2)-127.0.0.1] ERROR ExecutionTracer - Thread: Thread[GC Daemon,2,system]
+[MASTER] 20:17:29.071 [RMI TCP Connection(3)-127.0.0.1] ERROR ExecutionTracer - Thread: Thread[Reference Handler,10,system]
  -> java.lang.Object.wait(Native Method)
- -> sun.misc.GC$Daemon.run(GC.java:117)
+ -> java.lang.Object.wait(Object.java:502)
+ -> java.lang.ref.Reference.tryHandlePending(Reference.java:191)
+ -> java.lang.ref.Reference$ReferenceHandler.run(Reference.java:153)
 
-[MASTER] 23:08:48.956 [RMI TCP Connection(2)-127.0.0.1] ERROR ExecutionTracer - Thread: Thread[RMI TCP Connection(2)-127.0.0.1,5,RMI Runtime]
+[MASTER] 20:17:29.073 [RMI TCP Connection(3)-127.0.0.1] ERROR ExecutionTracer - Thread: Thread[RMI TCP Connection(3)-127.0.0.1,5,RMI Runtime]
  -> java.lang.Thread.dumpThreads(Native Method)
  -> java.lang.Thread.getAllStackTraces(Thread.java:1610)
  -> org.evosuite.testcase.execution.ExecutionTracer.isThreadNeqCurrentThread(ExecutionTracer.java:214)
@@ -243,89 +276,20 @@ bbc usage percentage is: 50%
  -> sun.rmi.transport.tcp.TCPTransport.handleMessages(TCPTransport.java:573)
  -> sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run0(TCPTransport.java:834)
  -> sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.lambda$run$0(TCPTransport.java:688)
- -> sun.rmi.transport.tcp.TCPTransport$ConnectionHandler$$Lambda$18/1335925763.run(Unknown Source)
+ -> sun.rmi.transport.tcp.TCPTransport$ConnectionHandler$$Lambda$18/1049791583.run(Unknown Source)
  -> java.security.AccessController.doPrivileged(Native Method)
  -> sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run(TCPTransport.java:687)
  -> java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
  -> java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
  -> java.lang.Thread.run(Thread.java:748)
 
-[MASTER] 23:08:48.956 [RMI TCP Connection(2)-127.0.0.1] ERROR ExecutionTracer - Thread: Thread[process reaper,10,system]
- -> java.lang.UNIXProcess.waitForProcessExit(Native Method)
- -> java.lang.UNIXProcess.lambda$initStreams$3(UNIXProcess.java:289)
- -> java.lang.UNIXProcess$$Lambda$14/764577347.run(Unknown Source)
- -> java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
- -> java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
- -> java.lang.Thread.run(Thread.java:748)
-
-[MASTER] 23:08:48.956 [RMI TCP Connection(2)-127.0.0.1] ERROR ExecutionTracer - Thread: Thread[Thread-2,5,main]
- -> java.io.FileInputStream.readBytes(Native Method)
- -> java.io.FileInputStream.read(FileInputStream.java:255)
- -> java.io.BufferedInputStream.read1(BufferedInputStream.java:284)
- -> java.io.BufferedInputStream.read(BufferedInputStream.java:345)
- -> sun.nio.cs.StreamDecoder.readBytes(StreamDecoder.java:284)
- -> sun.nio.cs.StreamDecoder.implRead(StreamDecoder.java:326)
- -> sun.nio.cs.StreamDecoder.read(StreamDecoder.java:178)
- -> java.io.InputStreamReader.read(InputStreamReader.java:184)
- -> java.io.BufferedReader.fill(BufferedReader.java:161)
- -> java.io.BufferedReader.read(BufferedReader.java:182)
- -> org.evosuite.utils.ExternalProcessGroupHandler$3.run(ExternalProcessGroupHandler.java:482)
-
-[MASTER] 23:08:48.956 [RMI TCP Connection(2)-127.0.0.1] ERROR ExecutionTracer - Thread: Thread[Finalizer,8,system]
+[MASTER] 20:17:29.073 [RMI TCP Connection(3)-127.0.0.1] ERROR ExecutionTracer - Thread: Thread[Finalizer,8,system]
  -> java.lang.Object.wait(Native Method)
  -> java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:144)
  -> java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:165)
  -> java.lang.ref.Finalizer$FinalizerThread.run(Finalizer.java:216)
 
-[MASTER] 23:08:48.956 [RMI TCP Connection(2)-127.0.0.1] ERROR ExecutionTracer - Thread: Thread[RMI TCP Connection(3)-127.0.0.1,5,RMI Runtime]
- -> java.net.SocketInputStream.socketRead0(Native Method)
- -> java.net.SocketInputStream.socketRead(SocketInputStream.java:116)
- -> java.net.SocketInputStream.read(SocketInputStream.java:171)
- -> java.net.SocketInputStream.read(SocketInputStream.java:141)
- -> java.io.BufferedInputStream.fill(BufferedInputStream.java:246)
- -> java.io.BufferedInputStream.read(BufferedInputStream.java:265)
- -> java.io.FilterInputStream.read(FilterInputStream.java:83)
- -> sun.rmi.transport.tcp.TCPTransport.handleMessages(TCPTransport.java:555)
- -> sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run0(TCPTransport.java:834)
- -> sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.lambda$run$0(TCPTransport.java:688)
- -> sun.rmi.transport.tcp.TCPTransport$ConnectionHandler$$Lambda$18/1335925763.run(Unknown Source)
- -> java.security.AccessController.doPrivileged(Native Method)
- -> sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run(TCPTransport.java:687)
- -> java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
- -> java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
- -> java.lang.Thread.run(Thread.java:748)
-
-[MASTER] 23:08:48.956 [RMI TCP Connection(2)-127.0.0.1] ERROR ExecutionTracer - Thread: Thread[RMI TCP Accept-3348,5,system]
- -> java.net.PlainSocketImpl.socketAccept(Native Method)
- -> java.net.AbstractPlainSocketImpl.accept(AbstractPlainSocketImpl.java:409)
- -> java.net.ServerSocket.implAccept(ServerSocket.java:560)
- -> java.net.ServerSocket.accept(ServerSocket.java:528)
- -> sun.rmi.transport.tcp.TCPTransport$AcceptLoop.executeAcceptLoop(TCPTransport.java:405)
- -> sun.rmi.transport.tcp.TCPTransport$AcceptLoop.run(TCPTransport.java:377)
- -> java.lang.Thread.run(Thread.java:748)
-
-[MASTER] 23:08:48.956 [RMI TCP Connection(2)-127.0.0.1] ERROR ExecutionTracer - Thread: Thread[main,5,main]
- -> java.net.SocketInputStream.socketRead0(Native Method)
- -> java.net.SocketInputStream.socketRead(SocketInputStream.java:116)
- -> java.net.SocketInputStream.read(SocketInputStream.java:171)
- -> java.net.SocketInputStream.read(SocketInputStream.java:141)
- -> java.io.BufferedInputStream.fill(BufferedInputStream.java:246)
- -> java.io.BufferedInputStream.read(BufferedInputStream.java:265)
- -> java.io.DataInputStream.readByte(DataInputStream.java:265)
- -> sun.rmi.transport.StreamRemoteCall.executeCall(StreamRemoteCall.java:240)
- -> sun.rmi.server.UnicastRef.invoke(UnicastRef.java:164)
- -> java.rmi.server.RemoteObjectInvocationHandler.invokeRemoteMethod(RemoteObjectInvocationHandler.java:235)
- -> java.rmi.server.RemoteObjectInvocationHandler.invoke(RemoteObjectInvocationHandler.java:180)
- -> com.sun.proxy.$Proxy7.waitUntilFinished(Unknown Source)
- -> org.evosuite.utils.ExternalProcessGroupHandler.waitForResult(ExternalProcessGroupHandler.java:694)
- -> org.evosuite.executionmode.TestGeneration.generateTests(TestGeneration.java:515)
- -> org.evosuite.executionmode.TestGeneration.executeTestGeneration(TestGeneration.java:80)
- -> org.evosuite.EvoSuite.parseCommandLine(EvoSuite.java:349)
- -> org.evosuite.EvoSuite.main(EvoSuite.java:115)
-
-[MASTER] 23:08:48.956 [RMI TCP Connection(2)-127.0.0.1] ERROR ExecutionTracer - Thread: Thread[Signal Dispatcher,9,system]
-
-[MASTER] 23:08:48.957 [RMI TCP Connection(2)-127.0.0.1] ERROR ExecutionTracer - Thread: Thread[pool-3-thread-2,5,main]
+[MASTER] 20:17:29.074 [RMI TCP Connection(3)-127.0.0.1] ERROR ExecutionTracer - Thread: Thread[pool-3-thread-3,5,main]
  -> java.net.SocketInputStream.socketRead0(Native Method)
  -> java.net.SocketInputStream.socketRead(SocketInputStream.java:116)
  -> java.net.SocketInputStream.read(SocketInputStream.java:171)
@@ -345,102 +309,82 @@ bbc usage percentage is: 50%
  -> java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
  -> java.lang.Thread.run(Thread.java:748)
 
-[MASTER] 23:08:48.957 [RMI TCP Connection(2)-127.0.0.1] ERROR ExecutionTracer - Thread: Thread[RMI Scheduler(0),5,system]
- -> sun.misc.Unsafe.park(Native Method)
- -> java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:215)
- -> java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:2078)
- -> java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1093)
- -> java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:809)
- -> java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1074)
- -> java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1134)
- -> java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
- -> java.lang.Thread.run(Thread.java:748)
-
-[MASTER] 23:08:48.957 [RMI TCP Connection(2)-127.0.0.1] ERROR ExecutionTracer - Thread: Thread[RMI RenewClean-[127.0.0.1:3349],5,system]
- -> java.lang.Object.wait(Native Method)
- -> java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:144)
- -> sun.rmi.transport.DGCClient$EndpointEntry$RenewCleanThread.run(DGCClient.java:563)
- -> java.lang.Thread.run(Thread.java:748)
-
-[MASTER] 23:08:48.957 [RMI TCP Connection(2)-127.0.0.1] ERROR ExecutionTracer - Thread: Thread[pool-2-thread-1,5,main]
- -> java.net.PlainSocketImpl.socketAccept(Native Method)
- -> java.net.AbstractPlainSocketImpl.accept(AbstractPlainSocketImpl.java:409)
- -> java.net.ServerSocket.implAccept(ServerSocket.java:560)
- -> java.net.ServerSocket.accept(ServerSocket.java:528)
- -> org.evosuite.utils.LoggingUtils$1.call(LoggingUtils.java:141)
- -> org.evosuite.utils.LoggingUtils$1.call(LoggingUtils.java:137)
+[MASTER] 20:17:29.075 [RMI TCP Connection(3)-127.0.0.1] ERROR ExecutionTracer - Thread: Thread[logback-1,5,main]
+ -> java.lang.Thread.sleep(Native Method)
+ -> ch.qos.logback.core.net.DefaultSocketConnector.call(DefaultSocketConnector.java:73)
+ -> ch.qos.logback.core.net.AbstractSocketAppender.socketConnectionCouldBeEstablished(AbstractSocketAppender.java:209)
+ -> ch.qos.logback.core.net.AbstractSocketAppender.connectSocketAndDispatchEvents(AbstractSocketAppender.java:189)
+ -> ch.qos.logback.core.net.AbstractSocketAppender.access$000(AbstractSocketAppender.java:44)
+ -> ch.qos.logback.core.net.AbstractSocketAppender$1.run(AbstractSocketAppender.java:150)
+ -> java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
  -> java.util.concurrent.FutureTask.run(FutureTask.java:266)
+ -> java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180)
+ -> java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293)
  -> java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
  -> java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
  -> java.lang.Thread.run(Thread.java:748)
 
-Number of times BBC is called for org.apache.commons.csv.CSVFormat.withQuote(Ljava/lang/Character;)Lorg/apache/commons/csv/CSVFormat;: I4 Branch 81 IFEQ L1204 - false: 13549
-Number of times BBC is called for org.apache.commons.csv.CSVFormat.equals(Ljava/lang/Object;)Z: I137 Branch 23 IFNONNULL L489 - true: 3459
-Number of times BBC is called for org.apache.commons.csv.CSVFormat.withEscape(Ljava/lang/Character;)Lorg/apache/commons/csv/CSVFormat;: I4 Branch 77 IFEQ L935 - false: 10156
-Number of times BBC is called for org.apache.commons.csv.CSVFormat.isLineBreak(C)Z: I7 Branch 2 IF_ICMPNE L330 - false: 15406
-Number of times BBC is called for org.apache.commons.csv.CSVFormat.format([Ljava/lang/Object;)Ljava/lang/String;: Line 532: 128467
-Number of times BBC is called for org.apache.commons.csv.CSVFormat.format([Ljava/lang/Object;)Ljava/lang/String;: Line 530: 128467
-Number of times BBC is called for org.apache.commons.csv.CSVFormat.equals(Ljava/lang/Object;)Z: I64 Branch 15 IFNULL L469 - false: 685
-Number of times BBC is called for org.apache.commons.csv.CSVFormat.hashCode()I: I24 Branch 35 IFNONNULL L677 - true: 2177
-Number of times BBC is called for org.apache.commons.csv.CSVFormat.toString()Ljava/lang/String;: I65 Branch 51 IFEQ L775 - false: 25
-Number of times BBC is called for org.apache.commons.csv.CSVFormat.equals(Ljava/lang/Object;)Z: I225 Branch 32 IFGT L512 - false: 42
-Number of times BBC is called for org.apache.commons.csv.CSVFormat.withHeader(Ljava/sql/ResultSetMetaData;)Lorg/apache/commons/csv/CSVFormat;: I25 Branch 80 IF_ICMPGE L1030 - false: 30585
-Number of times BBC is called for org.apache.commons.csv.CSVFormat.getHeaderComments()[Ljava/lang/String;: I4 Branch 34 IFNULL L578 - false: 903
-Number of times BBC is called for org.apache.commons.csv.CSVFormat.equals(Ljava/lang/Object;)Z: I111 Branch 20 IFNONNULL L482 - true: 18
-Number of times BBC is called for org.apache.commons.csv.CSVFormat.hashCode()I: I58 Branch 37 IFNONNULL L679 - true: 40
-Number of times BBC is called for org.apache.commons.csv.CSVFormat.validate()V: I36 Branch 61 IF_ICMPNE L818 - false: 6
-Number of times BBC is called for org.apache.commons.csv.CSVFormat$Predefined.<init>(Ljava/lang/String;ILorg/apache/commons/csv/CSVFormat;)V: Line 184: 261106
-Number of times BBC is called for org.apache.commons.csv.CSVFormat.equals(Ljava/lang/Object;)Z: I39 Branch 12 IF_ICMPEQ L462 - true: 12
-Number of times BBC is called for org.apache.commons.csv.CSVFormat.hashCode()I: I92 Branch 39 IFNONNULL L681 - true: 2049
-Number of times BBC is called for org.apache.commons.csv.CSVFormat.validate()V: I239 Branch 71 IF_ACMPNE L843 - false: 209
-Number of times BBC is called for org.apache.commons.csv.CSVFormat.equals(Ljava/lang/Object;)Z: I213 Branch 31 IFNULL L509 - true: 1001
-Number of times BBC is called for org.apache.commons.csv.CSVFormat.equals(Ljava/lang/Object;)Z: I177 Branch 27 IF_ICMPEQ L499 - false: 12
-Number of times BBC is called for org.apache.commons.csv.CSVFormat.equals(Ljava/lang/Object;)Z: I188 Branch 28 IF_ICMPEQ L502 - false: 217
-Number of times BBC is called for org.apache.commons.csv.CSVFormat$Predefined.<init>(Ljava/lang/String;ILorg/apache/commons/csv/CSVFormat;)V: Line 186: 261106
-Number of times BBC is called for org.apache.commons.csv.CSVFormat.validate()V: I5 Branch 59 IFEQ L814 - false: 221600
-Number of times BBC is called for org.apache.commons.csv.CSVFormat$Predefined.<init>(Ljava/lang/String;ILorg/apache/commons/csv/CSVFormat;)V: Line 185: 261106
-Number of times BBC is called for org.apache.commons.csv.CSVFormat.hashCode()I: I169 Branch 44 IFNONNULL L686 - false: 8
-Number of times BBC is called for org.apache.commons.csv.CSVFormat.equals(Ljava/lang/Object;)Z: I90 Branch 18 IFNULL L476 - false: 53
-Number of times BBC is called for org.apache.commons.csv.CSVFormat.toString()Ljava/lang/String;: I173 Branch 57 IFNULL L797 - false: 86
-Number of times BBC is called for org.apache.commons.csv.CSVFormat.isLineBreak(Ljava/lang/Character;)Z: I7 Branch 4 IFEQ L342 - false: 20101
-Number of times BBC is called for org.apache.commons.csv.CSVFormat.equals(Ljava/lang/Object;)Z: I64 Branch 15 IFNULL L469 - true: 461
-Number of times BBC is called for org.apache.commons.csv.CSVFormat.equals(Ljava/lang/Object;)Z: I102 Branch 19 IFNE L479 - false: 35
-Number of times BBC is called for org.apache.commons.csv.CSVFormat.isLineBreak(C)Z: I4 Branch 1 IF_ICMPEQ L330 - true: 16211
-Number of times BBC is called for org.apache.commons.csv.CSVFormat.hashCode()I: I124 Branch 41 IFEQ L683 - false: 103
-Number of times BBC is called for org.apache.commons.csv.CSVFormat.equals(Ljava/lang/Object;)Z: I85 Branch 17 IFNONNULL L475 - true: 35
-Number of times BBC is called for org.apache.commons.csv.CSVFormat.equals(Ljava/lang/Object;)Z: I128 Branch 22 IFNE L486 - false: 18
-Number of times BBC is called for org.apache.commons.csv.CSVFormat.toString()Ljava/lang/String;: I194 Branch 58 IFNULL L801 - false: 58
-Number of times BBC is called for org.apache.commons.csv.CSVFormat.equals(Ljava/lang/Object;)Z: I102 Branch 19 IFNE L479 - true: 435
-Number of times BBC is called for org.apache.commons.csv.CSVFormat.equals(Ljava/lang/Object;)Z: I128 Branch 22 IFNE L486 - true: 97
-Number of times BBC is called for org.apache.commons.csv.CSVFormat.equals(Ljava/lang/Object;)Z: I213 Branch 31 IFNULL L509 - false: 5765
-Number of times BBC is called for org.apache.commons.csv.CSVFormat.equals(Ljava/lang/Object;)Z: I59 Branch 14 IFNONNULL L468 - false: 461
-Number of times BBC is called for org.apache.commons.csv.CSVFormat.withDelimiter(C)Lorg/apache/commons/csv/CSVFormat;: I4 Branch 76 IFEQ L904 - false: 10087
-Number of times BBC is called for org.apache.commons.csv.CSVFormat.withCommentMarker(Ljava/lang/Character;)Lorg/apache/commons/csv/CSVFormat;: I4 Branch 75 IFEQ L886 - false: 12773
-Number of times BBC is called for org.apache.commons.csv.CSVFormat.equals(Ljava/lang/Object;)Z: I76 Branch 16 IFNE L472 - false: 18
-Number of times BBC is called for org.apache.commons.csv.CSVFormat.equals(Ljava/lang/Object;)Z: I50 Branch 13 IF_ACMPEQ L465 - true: 12
-Number of times BBC is called for org.apache.commons.csv.CSVFormat.equals(Ljava/lang/Object;)Z: I4 Branch 9 IF_ACMPNE L451 - false: 168
-Number of times BBC is called for org.apache.commons.csv.CSVFormat.equals(Ljava/lang/Object;)Z: I208 Branch 30 IFNONNULL L508 - false: 1001
-Number of times BBC is called for org.apache.commons.csv.CSVFormat.toString()Ljava/lang/String;: I109 Branch 53 IFNULL L783 - true: 58
-Number of times BBC is called for org.apache.commons.csv.CSVFormat.equals(Ljava/lang/Object;)Z: I154 Branch 25 IFGT L493 - true: 3769
-Number of times BBC is called for org.apache.commons.csv.CSVFormat.equals(Ljava/lang/Object;)Z: I116 Branch 21 IFNULL L483 - false: 175
-Number of times BBC is called for org.apache.commons.csv.CSVFormat.equals(Ljava/lang/Object;)Z: I142 Branch 24 IFNULL L490 - false: 18
-Number of times BBC is called for org.apache.commons.csv.CSVFormat.equals(Ljava/lang/Object;)Z: I154 Branch 25 IFGT L493 - false: 3459
-Number of times BBC is called for org.apache.commons.csv.CSVFormat.isCommentMarkerSet()Z: I4 Branch 45 IFNULL L699 - false: 25
-Number of times BBC is called for org.apache.commons.csv.CSVFormat.equals(Ljava/lang/Object;)Z: I50 Branch 13 IF_ACMPEQ L465 - false: 12
-Number of times BBC is called for org.apache.commons.csv.CSVFormat.equals(Ljava/lang/Object;)Z: I199 Branch 29 IF_ICMPEQ L505 - false: 12
-Number of times BBC is called for org.apache.commons.csv.CSVFormat.equals(Ljava/lang/Object;)Z: I166 Branch 26 IFNE L496 - false: 200
-Number of times BBC is called in total: 1418117
-* Search finished after 601s and 2604 generations, 1073339 statements, best individual has fitness: 83.0
+[MASTER] 20:17:29.075 [RMI TCP Connection(3)-127.0.0.1] ERROR ExecutionTracer - Thread: Thread[RMI TCP Connection(2)-127.0.0.1,5,RMI Runtime]
+ -> java.net.SocketInputStream.socketRead0(Native Method)
+ -> java.net.SocketInputStream.socketRead(SocketInputStream.java:116)
+ -> java.net.SocketInputStream.read(SocketInputStream.java:171)
+ -> java.net.SocketInputStream.read(SocketInputStream.java:141)
+ -> java.io.BufferedInputStream.fill(BufferedInputStream.java:246)
+ -> java.io.BufferedInputStream.read(BufferedInputStream.java:265)
+ -> java.io.FilterInputStream.read(FilterInputStream.java:83)
+ -> sun.rmi.transport.tcp.TCPTransport.handleMessages(TCPTransport.java:555)
+ -> sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run0(TCPTransport.java:834)
+ -> sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.lambda$run$0(TCPTransport.java:688)
+ -> sun.rmi.transport.tcp.TCPTransport$ConnectionHandler$$Lambda$18/1049791583.run(Unknown Source)
+ -> java.security.AccessController.doPrivileged(Native Method)
+ -> sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run(TCPTransport.java:687)
+ -> java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+ -> java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+ -> java.lang.Thread.run(Thread.java:748)
+
+[MASTER] 20:17:29.075 [RMI TCP Connection(3)-127.0.0.1] ERROR ExecutionTracer - Thread: Thread[RMI TCP Accept-3348,5,system]
+ -> java.net.PlainSocketImpl.socketAccept(Native Method)
+ -> java.net.AbstractPlainSocketImpl.accept(AbstractPlainSocketImpl.java:409)
+ -> java.net.ServerSocket.implAccept(ServerSocket.java:560)
+ -> java.net.ServerSocket.accept(ServerSocket.java:528)
+ -> sun.rmi.transport.tcp.TCPTransport$AcceptLoop.executeAcceptLoop(TCPTransport.java:405)
+ -> sun.rmi.transport.tcp.TCPTransport$AcceptLoop.run(TCPTransport.java:377)
+ -> java.lang.Thread.run(Thread.java:748)
+
+[MASTER] 20:17:29.075 [RMI TCP Connection(3)-127.0.0.1] ERROR ExecutionTracer - Thread: Thread[GC Daemon,2,system]
+ -> java.lang.Object.wait(Native Method)
+ -> sun.misc.GC$Daemon.run(GC.java:117)
+
+[MASTER] 20:17:29.075 [RMI TCP Connection(3)-127.0.0.1] ERROR ExecutionTracer - Thread: Thread[main,5,main]
+ -> java.net.SocketInputStream.socketRead0(Native Method)
+ -> java.net.SocketInputStream.socketRead(SocketInputStream.java:116)
+ -> java.net.SocketInputStream.read(SocketInputStream.java:171)
+ -> java.net.SocketInputStream.read(SocketInputStream.java:141)
+ -> java.io.BufferedInputStream.fill(BufferedInputStream.java:246)
+ -> java.io.BufferedInputStream.read(BufferedInputStream.java:265)
+ -> java.io.DataInputStream.readByte(DataInputStream.java:265)
+ -> sun.rmi.transport.StreamRemoteCall.executeCall(StreamRemoteCall.java:240)
+ -> sun.rmi.server.UnicastRef.invoke(UnicastRef.java:164)
+ -> java.rmi.server.RemoteObjectInvocationHandler.invokeRemoteMethod(RemoteObjectInvocationHandler.java:235)
+ -> java.rmi.server.RemoteObjectInvocationHandler.invoke(RemoteObjectInvocationHandler.java:180)
+ -> com.sun.proxy.$Proxy7.waitUntilFinished(Unknown Source)
+ -> org.evosuite.utils.ExternalProcessGroupHandler.waitForResult(ExternalProcessGroupHandler.java:694)
+ -> org.evosuite.executionmode.TestGeneration.generateTests(TestGeneration.java:515)
+ -> org.evosuite.executionmode.TestGeneration.executeTestGeneration(TestGeneration.java:80)
+ -> org.evosuite.EvoSuite.parseCommandLine(EvoSuite.java:349)
+ -> org.evosuite.EvoSuite.main(EvoSuite.java:115)
+
+* Search finished after 602s and 3344 generations, 1294601 statements, best individual has fitness: 97.0
 * Minimizing test suite
 * Going to analyze the coverage criteria
 * Coverage analysis for criterion LINE
-* Coverage of criterion LINE: 98%
+* Coverage of criterion LINE: 96%
 * Total number of goals: 207
-* Number of covered goals: 202
-* Coverage analysis for criterion BRANCH
-* Coverage of criterion BRANCH: 100%
-* Total number of goals: 199
 * Number of covered goals: 199
+* Coverage analysis for criterion BRANCH
+* Coverage of criterion BRANCH: 98%
+* Total number of goals: 199
+* Number of covered goals: 196
 * Coverage analysis for criterion EXCEPTION
 * Coverage of criterion EXCEPTION: 100%
 * Total number of goals: 20
@@ -448,11 +392,11 @@ Number of times BBC is called in total: 1418117
 * Coverage analysis for criterion WEAKMUTATION
 * Coverage of criterion WEAKMUTATION: 99%
 * Total number of goals: 549
-* Number of covered goals: 546
+* Number of covered goals: 543
 * Coverage analysis for criterion OUTPUT
 * Coverage of criterion OUTPUT: 90%
 * Total number of goals: 574
-* Number of covered goals: 519
+* Number of covered goals: 518
 * Coverage analysis for criterion METHOD
 * Coverage of criterion METHOD: 100%
 * Total number of goals: 52
@@ -462,17 +406,257 @@ Number of times BBC is called in total: 1418117
 * Total number of goals: 52
 * Number of covered goals: 52
 * Coverage analysis for criterion CBRANCH
-* Coverage of criterion CBRANCH: 100%
+* Coverage of criterion CBRANCH: 98%
 * Total number of goals: 199
-* Number of covered goals: 199
-* Generated 212 tests with total length 708
-* Resulting test suite's coverage: 92% (average coverage for all fitness functions)
+* Number of covered goals: 196
+* Generated 210 tests with total length 712
+* Resulting test suite's coverage: 91% (average coverage for all fitness functions)
 * Generating assertions
-* Resulting test suite's mutation score: 46%
+* Resulting test suite's mutation score: 44%
 * Compiling and checking tests
+[MASTER] 20:28:12.379 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 20:28:12.669 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 20:28:12.739 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 20:28:12.845 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 20:28:12.921 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 20:28:12.982 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 20:28:13.037 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 20:28:13.118 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 20:28:13.180 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 20:28:13.249 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 20:28:13.344 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 20:28:13.400 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 20:28:13.482 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 20:28:13.572 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 20:28:13.659 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 20:28:13.719 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 20:28:13.780 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 20:28:13.829 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 20:28:13.874 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 20:28:13.922 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 20:28:13.965 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 20:28:14.007 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 20:28:14.055 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 20:28:14.094 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 20:28:14.140 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 20:28:14.187 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 20:28:14.229 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 20:28:14.288 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 20:28:14.898 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 20:28:14.945 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 20:28:14.983 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 20:28:15.036 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 20:28:15.078 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 20:28:15.123 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 20:28:15.172 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 20:28:15.225 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 20:28:15.269 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 20:28:15.307 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 20:28:15.356 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 20:28:15.519 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 20:28:15.621 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 20:28:15.663 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 20:28:15.703 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 20:28:15.744 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 20:28:15.784 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 20:28:15.854 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 20:28:15.901 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 20:28:15.955 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 20:28:15.997 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 20:28:16.034 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 20:28:16.094 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 20:28:16.137 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 20:28:16.176 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 20:28:16.212 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 20:28:16.268 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 20:28:16.332 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 20:28:16.382 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 20:28:16.441 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 20:28:16.500 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 20:28:16.560 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 20:28:16.620 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 20:28:16.660 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 20:28:16.707 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 20:28:16.753 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 20:28:16.789 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 20:28:16.825 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 20:28:16.858 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 20:28:16.898 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 20:28:16.933 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 20:28:16.971 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 20:28:17.062 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 20:28:17.107 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 20:28:17.143 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 20:28:17.181 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 20:28:17.227 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 20:28:17.267 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 20:28:17.307 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 20:28:17.351 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 20:28:17.387 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 20:28:17.475 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 20:28:17.513 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 20:28:17.549 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 20:28:17.601 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 20:28:17.643 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 20:28:17.684 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 20:28:17.736 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 20:28:17.776 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 20:28:17.779 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class java.lang.SecurityException: Security manager blocks ("java.lang.RuntimePermission" "writeFileDescriptor")
+java.lang.Thread.getStackTrace(Thread.java:1559)
+org.evosuite.runtime.sandbox.MSecurityManager.checkPermission(MSecurityManager.java:433)
+java.lang.SecurityManager.checkWrite(SecurityManager.java:954)
+java.io.FileOutputStream.<init>(FileOutputStream.java:245)
+java.io.FileWriter.<init>(FileWriter.java:116)
+org.evosuite.runtime.mock.java.io.MockFileWriter.<init>(MockFileWriter.java:79)
+org.apache.commons.csv.CSVFormat_296_tmp__ESTest.test0(CSVFormat_296_tmp__ESTest.java:29)
+sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+java.lang.reflect.Method.invoke(Method.java:498)
+org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)
+org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56)
+org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+org.junit.internal.runners.statements.FailOnTimeout$CallableStatement.call(FailOnTimeout.java:288)
+org.junit.internal.runners.statements.FailOnTimeout$CallableStatement.call(FailOnTimeout.java:282)
+java.util.concurrent.FutureTask.run(FutureTask.java:266)
+java.lang.Thread.run(Thread.java:748)
+
+[MASTER] 20:28:17.779 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ CSVFormat cSVFormat0 = CSVFormat.EXCEL;
+RowSetMetaDataImpl rowSetMetaDataImpl0 = new RowSetMetaDataImpl();
+CSVFormat cSVFormat1 = cSVFormat0.MYSQL.withHeader((ResultSetMetaData) rowSetMetaDataImpl0);
+FileDescriptor fileDescriptor0 = new FileDescriptor();
+MockFileWriter mockFileWriter0 = new MockFileWriter(fileDescriptor0);
+cSVFormat1.print(mockFileWriter0);
+
+[MASTER] 20:28:20.936 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 20:28:21.039 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 20:28:21.124 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 20:28:21.203 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 20:28:21.242 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 20:28:21.278 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 20:28:21.313 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 20:28:21.354 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 20:28:21.419 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 20:28:21.463 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 20:28:21.550 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 20:28:21.615 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 20:28:21.669 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 20:28:21.726 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 20:28:21.792 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 20:28:21.845 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 20:28:21.890 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 20:28:21.943 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 20:28:22.004 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 20:28:22.048 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 20:28:22.087 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 20:28:22.139 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 20:28:22.181 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 20:28:22.222 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 20:28:22.257 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 20:28:22.299 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 20:28:22.345 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 20:28:22.391 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 20:28:22.426 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 20:28:22.498 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 20:28:22.544 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 20:28:22.592 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 20:28:22.638 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 20:28:22.688 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 20:28:22.722 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 20:28:22.762 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 20:28:22.807 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 20:28:22.846 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 20:28:22.916 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 20:28:23.031 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 20:28:23.110 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 20:28:23.218 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 20:28:23.255 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 20:28:23.300 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 20:28:23.338 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 20:28:23.376 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 20:28:23.421 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 20:28:23.487 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 20:28:23.531 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 20:28:23.572 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 20:28:23.612 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 20:28:23.652 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 20:28:23.705 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 20:28:23.740 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 20:28:23.816 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 20:28:23.860 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 20:28:23.906 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 20:28:23.979 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 20:28:24.077 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 20:28:24.128 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 20:28:24.194 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 20:28:24.235 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 20:28:24.296 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 20:28:24.356 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 20:28:24.407 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 20:28:24.447 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 20:28:24.496 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 20:28:24.554 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 20:28:24.616 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 20:28:24.674 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 20:28:24.729 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 20:28:24.769 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 20:28:24.806 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 20:28:24.842 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 20:28:24.911 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 20:28:24.948 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 20:28:24.985 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 20:28:25.018 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 20:28:25.060 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 20:28:25.098 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 20:28:25.134 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 20:28:25.176 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 20:28:25.212 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 20:28:25.261 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 20:28:25.301 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 20:28:25.359 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 20:28:25.401 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 20:28:25.438 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 20:28:25.494 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 20:28:25.535 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 20:28:25.637 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 20:28:25.677 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 20:28:25.712 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 20:28:25.777 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 20:28:25.812 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 20:28:25.859 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 20:28:25.908 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 20:28:25.950 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 20:28:25.985 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 20:28:26.032 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 20:28:26.067 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 20:28:26.105 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 20:28:26.160 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 20:28:26.208 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 20:28:26.271 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 20:28:26.315 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 20:28:26.355 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 20:28:26.402 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 20:28:26.468 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 20:28:26.506 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 20:28:26.573 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 20:28:26.612 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 20:28:26.695 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 20:28:26.762 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 20:28:26.803 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 20:28:26.858 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 20:28:26.927 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 20:28:26.967 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 20:28:27.020 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 20:28:27.083 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 20:28:27.124 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 20:28:27.178 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 20:28:28.086 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 20:28:28.716 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
 * Permissions denied during test execution: 
   - java.lang.RuntimePermission: 
-         writeFileDescriptor: 98
+         writeFileDescriptor: 1
 * Writing tests to file
 * Writing JUnit test case 'CSVFormat_ESTest' to results/Csv-13/org.apache.commons.csv.CSVFormat/BBC-F0-50/tests/1
 * Done!

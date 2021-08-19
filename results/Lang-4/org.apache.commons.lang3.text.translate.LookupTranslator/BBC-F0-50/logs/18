@@ -21,11 +21,7 @@
 * Starting evolution
 bbc usage percentage is: 50%
 * Initial Number of Goals in DynaMOSA = 54 / 226
-Number of times BBC is called for org.apache.commons.lang3.text.translate.LookupTranslator.translate(Ljava/lang/CharSequence;ILjava/io/Writer;)I: I50 Branch 7 IFNULL L78 - false: 73
-Number of times BBC is called for org.apache.commons.lang3.text.translate.LookupTranslator.translate(Ljava/lang/CharSequence;ILjava/io/Writer;)I: I29 Branch 6 IF_ICMPLT L75 - false: 55
-Number of times BBC is called for org.apache.commons.lang3.text.translate.LookupTranslator.translate(Ljava/lang/CharSequence;ILjava/io/Writer;)I: I50 Branch 7 IFNULL L78 - true: 59
-Number of times BBC is called in total: 187
-* Search finished after 601s and 7491 generations, 3178216 statements, best individual has fitness: 9.0
+* Search finished after 601s and 4810 generations, 2037523 statements, best individual has fitness: 10.0
 * Minimizing test suite
 * Going to analyze the coverage criteria
 * Coverage analysis for criterion LINE
@@ -38,8 +34,8 @@ Number of times BBC is called in total: 187
 * Number of covered goals: 14
 * Coverage analysis for criterion EXCEPTION
 * Coverage of criterion EXCEPTION: 100%
-* Total number of goals: 5
-* Number of covered goals: 5
+* Total number of goals: 6
+* Number of covered goals: 6
 * Coverage analysis for criterion WEAKMUTATION
 * Coverage of criterion WEAKMUTATION: 98%
 * Total number of goals: 166
@@ -60,14 +56,48 @@ Number of times BBC is called in total: 187
 * Coverage of criterion CBRANCH: 100%
 * Total number of goals: 14
 * Number of covered goals: 14
-* Generated 9 tests with total length 89
+* Generated 11 tests with total length 119
 * Resulting test suite's coverage: 89% (average coverage for all fitness functions)
 * Generating assertions
-* Resulting test suite's mutation score: 51%
+* Resulting test suite's mutation score: 56%
 * Compiling and checking tests
-* Permissions denied during test execution: 
-  - java.lang.RuntimePermission: 
-         writeFileDescriptor: 3
+[MASTER] 04:57:46.326 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 04:57:46.398 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 04:57:46.452 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 04:57:46.504 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 04:57:46.563 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 04:57:46.610 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 04:57:46.660 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 04:57:46.703 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 04:57:46.747 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 04:57:46.788 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 04:57:49.353 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 04:57:49.356 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class java.lang.OutOfMemoryError: Java heap space
+[MASTER] 04:57:49.356 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ CharSequence[] charSequenceArray0 = new CharSequence[18];
+char[] charArray0 = new char[5];
+CharBuffer charBuffer0 = CharBuffer.wrap(charArray0);
+charSequenceArray0[0] = (CharSequence) charBuffer0;
+CharBuffer charBuffer1 = CharBuffer.allocate(3127);
+StringWriter stringWriter0 = new StringWriter('v');
+stringWriter0.write((String) null);
+StringBuffer stringBuffer0 = stringWriter0.getBuffer();
+charSequenceArray0[1] = (CharSequence) stringBuffer0;
+CharSequence[][] charSequenceArray1 = new CharSequence[5][5];
+CharSequence[] charSequenceArray2 = new CharSequence[3];
+charBuffer1.read(charBuffer0);
+charSequenceArray2[0] = (CharSequence) stringBuffer0;
+charSequenceArray2[1] = (CharSequence) charBuffer1;
+charSequenceArray1[0] = charSequenceArray2;
+charSequenceArray1[1] = charSequenceArray0;
+charSequenceArray1[2] = charSequenceArray0;
+charSequenceArray1[3] = charSequenceArray0;
+charSequenceArray1[4] = charSequenceArray0;
+LookupTranslator lookupTranslator0 = new LookupTranslator(charSequenceArray1);
+lookupTranslator0.translate(charSequenceArray2[1], (Writer) stringWriter0);
+
+[MASTER] 04:57:49.450 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 04:57:49.534 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
 * Writing tests to file
 * Writing JUnit test case 'LookupTranslator_ESTest' to results/Lang-4/org.apache.commons.lang3.text.translate.LookupTranslator/BBC-F0-50/tests/18
 * Done!

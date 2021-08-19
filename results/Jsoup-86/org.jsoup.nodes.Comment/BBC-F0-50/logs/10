@@ -21,12 +21,7 @@
 * Starting evolution
 bbc usage percentage is: 50%
 * Initial Number of Goals in DynaMOSA = 69 / 133
-Number of times BBC is called for org.jsoup.nodes.Comment.isXmlDeclaration()Z: I15 Branch 3 IFGT L67 - true: 48
-Number of times BBC is called for org.jsoup.nodes.Comment.isXmlDeclaration()Z: I20 Branch 4 IFLE L67 - false: 45
-Number of times BBC is called for org.jsoup.nodes.Comment.outerHtmlHead(Ljava/lang/Appendable;ILorg/jsoup/nodes/Document$OutputSettings;)V: I4 Branch 1 IFEQ L46 - true: 241
-Number of times BBC is called for org.jsoup.nodes.Comment.asXmlDeclaration()Lorg/jsoup/nodes/XmlDeclaration;: I36 Branch 5 IFLE L78 - true: 413
-Number of times BBC is called in total: 747
-* Search finished after 601s and 3685 generations, 1684203 statements, best individual has fitness: 30.0
+* Search finished after 602s and 4843 generations, 2273942 statements, best individual has fitness: 29.0
 * Minimizing test suite
 * Going to analyze the coverage criteria
 * Coverage analysis for criterion LINE
@@ -61,27 +56,83 @@ Number of times BBC is called in total: 747
 * Coverage of criterion CBRANCH: 100%
 * Total number of goals: 16
 * Number of covered goals: 16
-* Generated 33 tests with total length 109
+* Generated 33 tests with total length 112
 * Resulting test suite's coverage: 88% (average coverage for all fitness functions)
 * Generating assertions
-* Resulting test suite's mutation score: 79%
+* Resulting test suite's mutation score: 74%
 * Compiling and checking tests
-[MASTER] 09:06:59.227 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class java.lang.OutOfMemoryError: Java heap space
-[MASTER] 09:06:59.229 [logback-1] WARN  JUnitAnalyzer - Failing test:
- Comment comment0 = new Comment(")");
-MockFileWriter mockFileWriter0 = new MockFileWriter(")", true);
-Document.OutputSettings document_OutputSettings0 = new Document.OutputSettings();
-comment0.outerHtmlHead(mockFileWriter0, 2147483645, document_OutputSettings0);
+[MASTER] 03:26:42.069 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 03:26:42.439 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 03:26:42.750 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 03:26:43.026 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 03:26:43.363 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 03:26:43.675 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 03:26:43.946 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 03:26:44.201 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 03:26:44.515 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 03:26:44.861 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 03:26:45.137 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 03:26:45.394 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 03:26:45.627 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 03:26:45.876 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 03:26:46.214 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 03:26:46.442 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 03:26:46.666 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 03:26:46.899 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 03:26:47.156 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 03:26:47.392 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 03:26:47.916 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class java.lang.SecurityException: Security manager blocks ("java.lang.RuntimePermission" "writeFileDescriptor")
+java.lang.Thread.getStackTrace(Thread.java:1559)
+org.evosuite.runtime.sandbox.MSecurityManager.checkPermission(MSecurityManager.java:433)
+java.lang.SecurityManager.checkWrite(SecurityManager.java:954)
+java.io.FileOutputStream.<init>(FileOutputStream.java:245)
+java.io.FileWriter.<init>(FileWriter.java:116)
+org.evosuite.runtime.mock.java.io.MockFileWriter.<init>(MockFileWriter.java:79)
+org.jsoup.nodes.Comment_54_tmp__ESTest.test0(Comment_54_tmp__ESTest.java:26)
+sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+java.lang.reflect.Method.invoke(Method.java:498)
+org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)
+org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56)
+org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+org.junit.internal.runners.statements.FailOnTimeout$CallableStatement.call(FailOnTimeout.java:288)
+org.junit.internal.runners.statements.FailOnTimeout$CallableStatement.call(FailOnTimeout.java:282)
+java.util.concurrent.FutureTask.run(FutureTask.java:266)
+java.lang.Thread.run(Thread.java:748)
 
-[MASTER] 09:07:03.219 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test13 -> class java.lang.StackOverflowError: null
-[MASTER] 09:07:03.222 [logback-1] WARN  JUnitAnalyzer - Failing test:
- Comment comment0 = new Comment("<-|65R");
-comment0.setParentNode(comment0);
+[MASTER] 03:26:47.916 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ Comment comment0 = new Comment("^<e{E.Ju%FAMiXzI ", "Yhu");
+FileDescriptor fileDescriptor0 = new FileDescriptor();
+MockFileWriter mockFileWriter0 = new MockFileWriter(fileDescriptor0);
+Document.OutputSettings document_OutputSettings0 = new Document.OutputSettings();
+comment0.outerHtmlHead(mockFileWriter0, (-3699), document_OutputSettings0);
+
+[MASTER] 03:26:56.336 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test14 -> class java.lang.StackOverflowError: null
+[MASTER] 03:26:56.339 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ Comment comment0 = new Comment(" dTa.");
+comment0.parentNode = (Node) comment0;
 comment0.asXmlDeclaration();
+
+[MASTER] 03:26:56.339 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test21 -> class java.lang.OutOfMemoryError: Java heap space
+[MASTER] 03:26:56.340 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ Comment comment0 = new Comment("#XM?=V0N7LJ' p");
+char[] charArray0 = new char[6];
+CharBuffer charBuffer0 = CharBuffer.wrap(charArray0, 0, 0);
+Document.OutputSettings document_OutputSettings0 = new Document.OutputSettings();
+comment0.outerHtmlHead(charBuffer0, 0, document_OutputSettings0);
+
+[MASTER] 03:26:58.227 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test09 -> class java.lang.OutOfMemoryError: Java heap space
+[MASTER] 03:26:58.227 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ Comment comment0 = new Comment("&pY4=%f,");
+StringBuilder stringBuilder0 = new StringBuilder((CharSequence) "&pY4=%f,");
+Document.OutputSettings document_OutputSettings0 = new Document.OutputSettings();
+comment0.outerHtmlHead(stringBuilder0, 2147483645, document_OutputSettings0);
 
 * Permissions denied during test execution: 
   - java.lang.RuntimePermission: 
-         writeFileDescriptor: 375
+         writeFileDescriptor: 1
 * Writing tests to file
 * Writing JUnit test case 'Comment_ESTest' to results/Jsoup-86/org.jsoup.nodes.Comment/BBC-F0-50/tests/10
 * Done!

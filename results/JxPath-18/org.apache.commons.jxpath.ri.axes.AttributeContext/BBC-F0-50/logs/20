@@ -31,11 +31,8 @@
 * Starting evolution
 bbc usage percentage is: 50%
 * Initial Number of Goals in DynaMOSA = 50 / 125
-[MASTER] 09:53:30.545 [logback-2] ERROR TestCluster - Failed to check cache for java.util.List<E> : Type points to itself
-Number of times BBC is called for org.apache.commons.jxpath.ri.axes.AttributeContext.setPosition(I)Z: I20 Branch 3 IFNE L64 - true: 7568
-Number of times BBC is called for org.apache.commons.jxpath.ri.axes.AttributeContext.nextNode()Z: I64 Branch 7 IFNE L85 - true: 936
-Number of times BBC is called in total: 8504
-* Search finished after 601s and 8869 generations, 2228594 statements, best individual has fitness: 16.0
+[MASTER] 03:55:44.961 [logback-2] ERROR TestCluster - Failed to check cache for java.util.List<E> : Type points to itself
+* Search finished after 601s and 13876 generations, 3575131 statements, best individual has fitness: 19.0
 * Minimizing test suite
 * Going to analyze the coverage criteria
 * Coverage analysis for criterion LINE
@@ -47,9 +44,9 @@ Number of times BBC is called in total: 8504
 * Total number of goals: 17
 * Number of covered goals: 17
 * Coverage analysis for criterion EXCEPTION
-* Coverage of criterion EXCEPTION: 100%
-* Total number of goals: 12
-* Number of covered goals: 12
+* Coverage of criterion EXCEPTION: 94%
+* Total number of goals: 17
+* Number of covered goals: 16
 * Coverage analysis for criterion WEAKMUTATION
 * Coverage of criterion WEAKMUTATION: 100%
 * Total number of goals: 37
@@ -70,14 +67,65 @@ Number of times BBC is called in total: 8504
 * Coverage of criterion CBRANCH: 100%
 * Total number of goals: 17
 * Number of covered goals: 17
-* Generated 20 tests with total length 140
+* Generated 23 tests with total length 208
 * Resulting test suite's coverage: 90% (average coverage for all fitness functions)
 * Generating assertions
-* Resulting test suite's mutation score: 86%
+* Resulting test suite's mutation score: 84%
 * Compiling and checking tests
-* Permissions denied during test execution: 
-  - java.lang.RuntimePermission: 
-         writeFileDescriptor: 2
+[MASTER] 04:03:56.894 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 04:03:59.910 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class java.lang.StackOverflowError: null
+[MASTER] 04:03:59.912 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ JXPathContext jXPathContext0 = JXPathContext.newContext((Object) null);
+QName qName0 = new QName("W@", "s791v6;oaYysO");
+NodeNameTest nodeNameTest0 = new NodeNameTest(qName0, "Undefined variable: ");
+Integer integer0 = new Integer(3152);
+Locale locale0 = Locale.JAPANESE;
+NodePointer nodePointer0 = NodePointer.newNodePointer(qName0, integer0, locale0);
+JXPathContextReferenceImpl jXPathContextReferenceImpl0 = new JXPathContextReferenceImpl(jXPathContext0, nodeNameTest0, nodePointer0);
+EvalContext evalContext0 = jXPathContextReferenceImpl0.getAbsoluteRootContext();
+Expression[] expressionArray0 = new Expression[4];
+CoreOperationUnion coreOperationUnion0 = new CoreOperationUnion(expressionArray0);
+expressionArray0[0] = (Expression) coreOperationUnion0;
+ExtensionFunction extensionFunction0 = new ExtensionFunction(qName0, expressionArray0);
+CoreOperationLessThanOrEqual coreOperationLessThanOrEqual0 = new CoreOperationLessThanOrEqual(extensionFunction0, coreOperationUnion0);
+PredicateContext predicateContext0 = new PredicateContext(evalContext0, coreOperationLessThanOrEqual0);
+AttributeContext attributeContext0 = new AttributeContext(predicateContext0, nodeNameTest0);
+attributeContext0.nextNode();
+
+[MASTER] 04:04:01.941 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class java.lang.StackOverflowError: null
+[MASTER] 04:04:01.943 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ JXPathContext jXPathContext0 = JXPathContext.newContext((Object) null);
+QName qName0 = new QName("W@", "s791v6;oaYysO");
+NodeNameTest nodeNameTest0 = new NodeNameTest(qName0, "Undefined variable: ");
+Integer integer0 = new Integer(3152);
+Locale locale0 = Locale.JAPANESE;
+NodePointer nodePointer0 = NodePointer.newNodePointer(qName0, integer0, locale0);
+JXPathContextReferenceImpl jXPathContextReferenceImpl0 = new JXPathContextReferenceImpl(jXPathContext0, nodeNameTest0, nodePointer0);
+EvalContext evalContext0 = jXPathContextReferenceImpl0.getAbsoluteRootContext();
+Expression[] expressionArray0 = new Expression[4];
+CoreOperationUnion coreOperationUnion0 = new CoreOperationUnion(expressionArray0);
+expressionArray0[0] = (Expression) coreOperationUnion0;
+ExtensionFunction extensionFunction0 = new ExtensionFunction(qName0, expressionArray0);
+CoreOperationLessThanOrEqual coreOperationLessThanOrEqual0 = new CoreOperationLessThanOrEqual(extensionFunction0, coreOperationUnion0);
+PredicateContext predicateContext0 = new PredicateContext(evalContext0, coreOperationLessThanOrEqual0);
+AttributeContext attributeContext0 = new AttributeContext(predicateContext0, nodeNameTest0);
+attributeContext0.setPosition(3517);
+
+[MASTER] 04:04:03.524 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test13 -> class java.lang.StackOverflowError: null
+[MASTER] 04:04:03.527 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ JXPathContextReferenceImpl jXPathContextReferenceImpl0 = (JXPathContextReferenceImpl)JXPathContext.newContext((Object) "\"\n\"");
+QName qName0 = new QName("\"sum\"", "\"\n\"");
+NodeNameTest nodeNameTest0 = new NodeNameTest(qName0);
+InitialContext initialContext0 = (InitialContext)jXPathContextReferenceImpl0.getAbsoluteRootContext();
+Expression[] expressionArray0 = new Expression[9];
+ExtensionFunction extensionFunction0 = new ExtensionFunction(qName0, expressionArray0);
+expressionArray0[0] = (Expression) extensionFunction0;
+CoreOperationAdd coreOperationAdd0 = new CoreOperationAdd(expressionArray0);
+CoreOperationLessThanOrEqual coreOperationLessThanOrEqual0 = new CoreOperationLessThanOrEqual(coreOperationAdd0, expressionArray0[6]);
+PredicateContext predicateContext0 = new PredicateContext(initialContext0, coreOperationLessThanOrEqual0);
+AttributeContext attributeContext0 = new AttributeContext(predicateContext0, nodeNameTest0);
+attributeContext0.nextNode();
+
 * Writing tests to file
 * Writing JUnit test case 'AttributeContext_ESTest' to results/JxPath-18/org.apache.commons.jxpath.ri.axes.AttributeContext/BBC-F0-50/tests/20
 * Done!

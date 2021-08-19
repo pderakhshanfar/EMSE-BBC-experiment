@@ -21,21 +21,11 @@
 * Starting evolution
 bbc usage percentage is: 50%
 * Initial Number of Goals in DynaMOSA = 98 / 234
-[MASTER] 23:47:47.597 [logback-2] ERROR TestCluster - Failed to check cache for java.util.AbstractMap<K, V>.SimpleEntry<K, V> : Type points to itself
-[MASTER] 23:47:47.597 [logback-2] ERROR TestCluster - Failed to check cache for java.util.AbstractMap<K, V>.SimpleImmutableEntry<K, V> : Type points to itself
-[MASTER] 23:47:47.597 [logback-2] ERROR TestCluster - Failed to check cache for java.util.HashMap<K, V> : Type points to itself
-[MASTER] 23:47:53.074 [logback-2] ERROR TestCluster - Failed to check cache for java.util.function.Function<T, R> : Type points to itself
-Number of times BBC is called for org.apache.commons.csv.CSVRecord.isSet(Ljava/lang/String;)Z: I15 Branch 10 IF_ICMPGE L161 - true: 72
-Number of times BBC is called for org.apache.commons.csv.CSVRecord.isSet(Ljava/lang/String;)Z: I5 Branch 9 IFEQ L161 - false: 46
-Number of times BBC is called for org.apache.commons.csv.CSVRecord.isSet(Ljava/lang/String;)Z: I15 Branch 10 IF_ICMPGE L161 - false: 50
-Number of times BBC is called for org.apache.commons.csv.CSVRecord.get(Ljava/lang/Enum;)Ljava/lang/String;: root-Branch: 435171
-Number of times BBC is called for org.apache.commons.csv.CSVRecord.get(Ljava/lang/Enum;)Ljava/lang/String;: Line 67: 435171
-Number of times BBC is called for org.apache.commons.csv.CSVRecord.isMapped(Ljava/lang/String;)Z: I9 Branch 7 IFLE L150 - false: 9
-Number of times BBC is called for org.apache.commons.csv.CSVRecord.isMapped(Ljava/lang/String;)Z: I15 Branch 8 IFEQ L150 - false: 12
-Number of times BBC is called for org.apache.commons.csv.CSVRecord.isConsistent()Z: I11 Branch 5 IF_ICMPNE L139 - false: 40
-Number of times BBC is called for org.apache.commons.csv.CSVRecord.isMapped(Ljava/lang/String;)Z: I4 Branch 6 IFNULL L150 - true: 356
-Number of times BBC is called in total: 870927
-* Search finished after 601s and 4392 generations, 2491864 statements, best individual has fitness: 27.0
+[MASTER] 20:48:28.438 [logback-2] ERROR TestCluster - Failed to check cache for java.util.AbstractMap<K, V>.SimpleEntry<K, V> : Type points to itself
+[MASTER] 20:48:28.438 [logback-2] ERROR TestCluster - Failed to check cache for java.util.AbstractMap<K, V>.SimpleImmutableEntry<K, V> : Type points to itself
+[MASTER] 20:48:28.438 [logback-2] ERROR TestCluster - Failed to check cache for java.util.HashMap<K, V> : Type points to itself
+[MASTER] 20:48:33.563 [logback-2] ERROR TestCluster - Failed to check cache for java.util.function.Function<T, R> : Type points to itself
+* Search finished after 601s and 6495 generations, 3679943 statements, best individual has fitness: 27.0
 * Minimizing test suite
 * Going to analyze the coverage criteria
 * Coverage analysis for criterion LINE
@@ -48,8 +38,8 @@ Number of times BBC is called in total: 870927
 * Number of covered goals: 33
 * Coverage analysis for criterion EXCEPTION
 * Coverage of criterion EXCEPTION: 100%
-* Total number of goals: 10
-* Number of covered goals: 10
+* Total number of goals: 11
+* Number of covered goals: 11
 * Coverage analysis for criterion WEAKMUTATION
 * Coverage of criterion WEAKMUTATION: 98%
 * Total number of goals: 59
@@ -70,24 +60,168 @@ Number of times BBC is called in total: 870927
 * Coverage of criterion CBRANCH: 97%
 * Total number of goals: 34
 * Number of covered goals: 33
-* Generated 45 tests with total length 205
+* Generated 46 tests with total length 211
 * Resulting test suite's coverage: 88% (average coverage for all fitness functions)
 * Generating assertions
 * Resulting test suite's mutation score: 59%
 * Compiling and checking tests
-[MASTER] 23:57:52.415 [logback-2] ERROR JUnitAnalyzer - Compilation failed on compilation units: [RegularFileObject[/tmp/EvoSuite_23_1627603072381/org/apache/commons/csv/CSVRecord_23_tmp__ESTest.java], RegularFileObject[/tmp/EvoSuite_23_1627603072381/org/apache/commons/csv/CSVRecord_23_tmp__ESTest_scaffolding.java]]
-[MASTER] 23:57:52.415 [logback-2] ERROR JUnitAnalyzer - Classpath: subjects/buggy-versions/Csv-9/target/classes:/experiment/tools/evosuite.jar:/experiment/subjects/buggy-versions/Csv-9/target/classes
-[MASTER] 23:57:52.415 [logback-2] ERROR JUnitAnalyzer - evosuiteCP: /experiment/tools/evosuite.jar:/experiment/subjects/buggy-versions/Csv-9/target/classes
-[MASTER] 23:57:52.419 [logback-2] ERROR JUnitAnalyzer - Diagnostic: method putIn in class org.apache.commons.csv.CSVRecord cannot be applied to given types;
+[MASTER] 20:58:32.474 [logback-2] ERROR JUnitAnalyzer - Compilation failed on compilation units: [RegularFileObject[/tmp/EvoSuite_21_1629233912440/org/apache/commons/csv/CSVRecord_21_tmp__ESTest.java], RegularFileObject[/tmp/EvoSuite_21_1629233912440/org/apache/commons/csv/CSVRecord_21_tmp__ESTest_scaffolding.java]]
+[MASTER] 20:58:32.474 [logback-2] ERROR JUnitAnalyzer - Classpath: subjects/buggy-versions/Csv-9/target/classes:/experiment/tools/evosuite.jar:/experiment/subjects/buggy-versions/Csv-9/target/classes
+[MASTER] 20:58:32.474 [logback-2] ERROR JUnitAnalyzer - evosuiteCP: /experiment/tools/evosuite.jar:/experiment/subjects/buggy-versions/Csv-9/target/classes
+[MASTER] 20:58:32.477 [logback-2] ERROR JUnitAnalyzer - Diagnostic: method putIn in class org.apache.commons.csv.CSVRecord cannot be applied to given types;
   required: M
   found: java.util.Map<java.lang.String,java.lang.Integer>
   reason: inferred type does not conform to upper bound(s)
     inferred: java.util.Map<java.lang.String,java.lang.Integer>
     upper bound(s): java.util.Map<java.lang.String,java.lang.String>: 29
-[MASTER] 23:57:52.419 [logback-2] ERROR JUnitAnalyzer - RegularFileObject[/tmp/EvoSuite_23_1627603072381/org/apache/commons/csv/CSVRecord_23_tmp__ESTest.java]
+[MASTER] 20:58:32.478 [logback-2] ERROR JUnitAnalyzer - RegularFileObject[/tmp/EvoSuite_21_1629233912440/org/apache/commons/csv/CSVRecord_21_tmp__ESTest.java]
 1: /*
 2:  * This file was automatically generated by EvoSuite
-3:  * Thu Jul 29 23:57:52 GMT 2021
+3:  * Tue Aug 17 20:58:32 GMT 2021
+4:  */
+5: 
+6: package org.apache.commons.csv;
+7: 
+8: import org.junit.Test;
+9: import static org.junit.Assert.*;
+10: import static org.evosuite.runtime.EvoAssertions.*;
+11: import java.util.HashMap;
+12: import java.util.Map;
+13: import org.apache.commons.csv.CSVRecord;
+14: import org.evosuite.runtime.EvoRunner;
+15: import org.evosuite.runtime.EvoRunnerParameters;
+16: import org.junit.runner.RunWith;
+17: 
+18: @RunWith(EvoRunner.class) @EvoRunnerParameters(mockJVMNonDeterminism = true, useVFS = true, useVNET = true, resetStaticState = true) 
+19: public class CSVRecord_21_tmp__ESTest extends CSVRecord_21_tmp__ESTest_scaffolding {
+20: 
+21:   @Test(timeout = 4000)
+22:   public void test0()  throws Throwable  {
+23:       HashMap<String, Integer> hashMap0 = new HashMap<String, Integer>();
+24:       String[] stringArray0 = new String[8];
+25:       stringArray0[3] = "No header mapping was specified, the record values can't be accessed by name";
+26:       Integer integer0 = new Integer(3);
+27:       hashMap0.put("No header mapping was specified, the record values can't be accessed by name", integer0);
+28:       CSVRecord cSVRecord0 = new CSVRecord(stringArray0, hashMap0, "Index for header '%s' is %d but CSVRecord only has %d values!", (-4524L));
+29:       cSVRecord0.putIn((Map<String, Integer>) hashMap0);
+30:       // Undeclared exception!
+31:       try { 
+32:         cSVRecord0.get("No header mapping was specified, the record values can't be accessed by name");
+33:         fail("Expecting exception: ClassCastException");
+34:       
+35:       } catch(ClassCastException e) {
+36:          //
+37:          // java.lang.String cannot be cast to java.lang.Integer
+38:          //
+39:          verifyException("org.apache.commons.csv.CSVRecord", e);
+40:       }
+41:   }
+42: }
+RegularFileObject[/tmp/EvoSuite_21_1629233912440/org/apache/commons/csv/CSVRecord_21_tmp__ESTest.java]
+1: /**
+2:  * Scaffolding file used to store all the setups needed to run 
+3:  * tests automatically generated by EvoSuite
+4:  * Tue Aug 17 20:58:32 GMT 2021
+5:  */
+6: 
+7: package org.apache.commons.csv;
+8: 
+9: import org.evosuite.runtime.annotation.EvoSuiteClassExclude;
+10: import org.junit.BeforeClass;
+11: import org.junit.Before;
+12: import org.junit.After;
+13: import org.evosuite.runtime.sandbox.Sandbox;
+14: import org.evosuite.runtime.sandbox.Sandbox.SandboxMode;
+15: 
+16: @EvoSuiteClassExclude
+17: public class CSVRecord_21_tmp__ESTest_scaffolding {
+18: 
+19:   @org.junit.Rule 
+20:   public org.evosuite.runtime.vnet.NonFunctionalRequirementRule nfr = new org.evosuite.runtime.vnet.NonFunctionalRequirementRule();
+21: 
+22:   private org.evosuite.runtime.thread.ThreadStopper threadStopper =  new org.evosuite.runtime.thread.ThreadStopper (org.evosuite.runtime.thread.KillSwitchHandler.getInstance(), 3000);
+23: 
+24: 
+25:   @BeforeClass 
+26:   public static void initEvoSuiteFramework() { 
+27:     org.evosuite.runtime.RuntimeSettings.className = "org.apache.commons.csv.CSVRecord"; 
+28:     org.evosuite.runtime.GuiSupport.initialize(); 
+29:     org.evosuite.runtime.RuntimeSettings.maxNumberOfThreads = 100; 
+30:     org.evosuite.runtime.RuntimeSettings.maxNumberOfIterationsPerLoop = 10000; 
+31:     org.evosuite.runtime.RuntimeSettings.mockSystemIn = true; 
+32:     org.evosuite.runtime.RuntimeSettings.sandboxMode = org.evosuite.runtime.sandbox.Sandbox.SandboxMode.RECOMMENDED; 
+33:     org.evosuite.runtime.sandbox.Sandbox.initializeSecurityManagerForSUT(); 
+34:     org.evosuite.runtime.classhandling.JDKClassResetter.init();
+35:     setSystemProperties();
+36:     initializeClasses();
+37:     org.evosuite.runtime.Runtime.getInstance().resetRuntime(); 
+38:   } 
+39: 
+40:   @Before 
+41:   public void initTestCase(){ 
+42:     threadStopper.storeCurrentThreads();
+43:     threadStopper.startRecordingTime();
+44:     org.evosuite.runtime.jvm.ShutdownHookHandler.getInstance().initHandler(); 
+45:     org.evosuite.runtime.sandbox.Sandbox.goingToExecuteSUTCode(); 
+46:     org.evosuite.runtime.GuiSupport.setHeadless(); 
+47:     org.evosuite.runtime.Runtime.getInstance().resetRuntime(); 
+48:     org.evosuite.runtime.agent.InstrumentingAgent.activate(); 
+49:   } 
+50: 
+51:   @After 
+52:   public void doneWithTestCase(){ 
+53:     threadStopper.killAndJoinClientThreads();
+54:     org.evosuite.runtime.jvm.ShutdownHookHandler.getInstance().safeExecuteAddedHooks(); 
+55:     org.evosuite.runtime.classhandling.JDKClassResetter.reset(); 
+56:     resetClasses(); 
+57:     org.evosuite.runtime.sandbox.Sandbox.doneWithExecutingSUTCode(); 
+58:     org.evosuite.runtime.agent.InstrumentingAgent.deactivate(); 
+59:     org.evosuite.runtime.GuiSupport.restoreHeadlessMode(); 
+60:   } 
+61: 
+62:   public static void setSystemProperties() {
+63:  
+64:     /*No java.lang.System property to set*/
+65:   }
+66: 
+67:   private static void initializeClasses() {
+68:     org.evosuite.runtime.classhandling.ClassStateSupport.initializeClasses(CSVRecord_21_tmp__ESTest_scaffolding.class.getClassLoader() ,
+69:       "org.apache.commons.csv.CSVRecord"
+70:     );
+71:   } 
+72: 
+73:   private static void resetClasses() {
+74:     org.evosuite.runtime.classhandling.ClassResetter.getInstance().setClassLoader(CSVRecord_21_tmp__ESTest_scaffolding.class.getClassLoader()); 
+75: 
+76:     org.evosuite.runtime.classhandling.ClassStateSupport.resetClasses(
+77:       "org.apache.commons.csv.CSVRecord"
+78:     );
+79:   }
+80: }
+
+[MASTER] 20:58:32.478 [logback-2] ERROR JUnitAnalyzer - Failed to compile test case:
+HashMap<String, Integer> hashMap0 = new HashMap<String, Integer>();
+String[] stringArray0 = new String[8];
+stringArray0[3] = "No header mapping was specified, the record values can't be accessed by name";
+Integer integer0 = new Integer(3);
+hashMap0.put("No header mapping was specified, the record values can't be accessed by name", integer0);
+CSVRecord cSVRecord0 = new CSVRecord(stringArray0, hashMap0, "Index for header '%s' is %d but CSVRecord only has %d values!", (-4524L));
+cSVRecord0.putIn((Map<String, Integer>) hashMap0);
+cSVRecord0.get("No header mapping was specified, the record values can't be accessed by name");
+
+[MASTER] 20:58:32.528 [logback-2] ERROR JUnitAnalyzer - Compilation failed on compilation units: [RegularFileObject[/tmp/EvoSuite_23_1629233912502/org/apache/commons/csv/CSVRecord_23_tmp__ESTest.java], RegularFileObject[/tmp/EvoSuite_23_1629233912502/org/apache/commons/csv/CSVRecord_23_tmp__ESTest_scaffolding.java]]
+[MASTER] 20:58:32.528 [logback-2] ERROR JUnitAnalyzer - Classpath: subjects/buggy-versions/Csv-9/target/classes:/experiment/tools/evosuite.jar:/experiment/subjects/buggy-versions/Csv-9/target/classes
+[MASTER] 20:58:32.528 [logback-2] ERROR JUnitAnalyzer - evosuiteCP: /experiment/tools/evosuite.jar:/experiment/subjects/buggy-versions/Csv-9/target/classes
+[MASTER] 20:58:32.528 [logback-2] ERROR JUnitAnalyzer - Diagnostic: method putIn in class org.apache.commons.csv.CSVRecord cannot be applied to given types;
+  required: M
+  found: java.util.Map<java.lang.String,java.lang.Integer>
+  reason: inferred type does not conform to upper bound(s)
+    inferred: java.util.Map<java.lang.String,java.lang.Integer>
+    upper bound(s): java.util.Map<java.lang.String,java.lang.String>: 29
+[MASTER] 20:58:32.529 [logback-2] ERROR JUnitAnalyzer - RegularFileObject[/tmp/EvoSuite_23_1629233912502/org/apache/commons/csv/CSVRecord_23_tmp__ESTest.java]
+1: /*
+2:  * This file was automatically generated by EvoSuite
+3:  * Tue Aug 17 20:58:32 GMT 2021
 4:  */
 5: 
 6: package org.apache.commons.csv;
@@ -128,11 +262,11 @@ Number of times BBC is called in total: 870927
 41:       }
 42:   }
 43: }
-RegularFileObject[/tmp/EvoSuite_23_1627603072381/org/apache/commons/csv/CSVRecord_23_tmp__ESTest.java]
+RegularFileObject[/tmp/EvoSuite_23_1629233912502/org/apache/commons/csv/CSVRecord_23_tmp__ESTest.java]
 1: /**
 2:  * Scaffolding file used to store all the setups needed to run 
 3:  * tests automatically generated by EvoSuite
-4:  * Thu Jul 29 23:57:52 GMT 2021
+4:  * Tue Aug 17 20:58:32 GMT 2021
 5:  */
 6: 
 7: package org.apache.commons.csv;
@@ -141,88 +275,76 @@ RegularFileObject[/tmp/EvoSuite_23_1627603072381/org/apache/commons/csv/CSVRecor
 10: import org.junit.BeforeClass;
 11: import org.junit.Before;
 12: import org.junit.After;
-13: import org.junit.AfterClass;
-14: import org.evosuite.runtime.sandbox.Sandbox;
-15: import org.evosuite.runtime.sandbox.Sandbox.SandboxMode;
-16: 
-17: @EvoSuiteClassExclude
-18: public class CSVRecord_23_tmp__ESTest_scaffolding {
-19: 
-20:   @org.junit.Rule 
-21:   public org.evosuite.runtime.vnet.NonFunctionalRequirementRule nfr = new org.evosuite.runtime.vnet.NonFunctionalRequirementRule();
-22: 
-23:   private static final java.util.Properties defaultProperties = (java.util.Properties) java.lang.System.getProperties().clone(); 
+13: import org.evosuite.runtime.sandbox.Sandbox;
+14: import org.evosuite.runtime.sandbox.Sandbox.SandboxMode;
+15: 
+16: @EvoSuiteClassExclude
+17: public class CSVRecord_23_tmp__ESTest_scaffolding {
+18: 
+19:   @org.junit.Rule 
+20:   public org.evosuite.runtime.vnet.NonFunctionalRequirementRule nfr = new org.evosuite.runtime.vnet.NonFunctionalRequirementRule();
+21: 
+22:   private org.evosuite.runtime.thread.ThreadStopper threadStopper =  new org.evosuite.runtime.thread.ThreadStopper (org.evosuite.runtime.thread.KillSwitchHandler.getInstance(), 3000);
+23: 
 24: 
-25:   private org.evosuite.runtime.thread.ThreadStopper threadStopper =  new org.evosuite.runtime.thread.ThreadStopper (org.evosuite.runtime.thread.KillSwitchHandler.getInstance(), 3000);
-26: 
-27: 
-28:   @BeforeClass 
-29:   public static void initEvoSuiteFramework() { 
-30:     org.evosuite.runtime.RuntimeSettings.className = "org.apache.commons.csv.CSVRecord"; 
-31:     org.evosuite.runtime.GuiSupport.initialize(); 
-32:     org.evosuite.runtime.RuntimeSettings.maxNumberOfThreads = 100; 
-33:     org.evosuite.runtime.RuntimeSettings.maxNumberOfIterationsPerLoop = 10000; 
-34:     org.evosuite.runtime.RuntimeSettings.mockSystemIn = true; 
-35:     org.evosuite.runtime.RuntimeSettings.sandboxMode = org.evosuite.runtime.sandbox.Sandbox.SandboxMode.RECOMMENDED; 
-36:     org.evosuite.runtime.sandbox.Sandbox.initializeSecurityManagerForSUT(); 
-37:     org.evosuite.runtime.classhandling.JDKClassResetter.init();
-38:     setSystemProperties();
-39:     initializeClasses();
-40:     org.evosuite.runtime.Runtime.getInstance().resetRuntime(); 
-41:   } 
-42: 
-43:   @AfterClass 
-44:   public static void clearEvoSuiteFramework(){ 
-45:     Sandbox.resetDefaultSecurityManager(); 
-46:     java.lang.System.setProperties((java.util.Properties) defaultProperties.clone()); 
-47:   } 
-48: 
-49:   @Before 
-50:   public void initTestCase(){ 
-51:     threadStopper.storeCurrentThreads();
-52:     threadStopper.startRecordingTime();
-53:     org.evosuite.runtime.jvm.ShutdownHookHandler.getInstance().initHandler(); 
-54:     org.evosuite.runtime.sandbox.Sandbox.goingToExecuteSUTCode(); 
-55:     setSystemProperties(); 
-56:     org.evosuite.runtime.GuiSupport.setHeadless(); 
-57:     org.evosuite.runtime.Runtime.getInstance().resetRuntime(); 
-58:     org.evosuite.runtime.agent.InstrumentingAgent.activate(); 
-59:   } 
-60: 
-61:   @After 
-62:   public void doneWithTestCase(){ 
-63:     threadStopper.killAndJoinClientThreads();
-64:     org.evosuite.runtime.jvm.ShutdownHookHandler.getInstance().safeExecuteAddedHooks(); 
-65:     org.evosuite.runtime.classhandling.JDKClassResetter.reset(); 
-66:     resetClasses(); 
-67:     org.evosuite.runtime.sandbox.Sandbox.doneWithExecutingSUTCode(); 
-68:     org.evosuite.runtime.agent.InstrumentingAgent.deactivate(); 
-69:     org.evosuite.runtime.GuiSupport.restoreHeadlessMode(); 
-70:   } 
-71: 
-72:   public static void setSystemProperties() {
-73:  
-74:     java.lang.System.setProperties((java.util.Properties) defaultProperties.clone()); 
-75:     java.lang.System.setProperty("user.dir", "/experiment"); 
-76:     java.lang.System.setProperty("java.io.tmpdir", "/tmp"); 
-77:   }
-78: 
-79:   private static void initializeClasses() {
-80:     org.evosuite.runtime.classhandling.ClassStateSupport.initializeClasses(CSVRecord_23_tmp__ESTest_scaffolding.class.getClassLoader() ,
-81:       "org.apache.commons.csv.CSVRecord"
-82:     );
-83:   } 
-84: 
-85:   private static void resetClasses() {
-86:     org.evosuite.runtime.classhandling.ClassResetter.getInstance().setClassLoader(CSVRecord_23_tmp__ESTest_scaffolding.class.getClassLoader()); 
-87: 
-88:     org.evosuite.runtime.classhandling.ClassStateSupport.resetClasses(
-89:       "org.apache.commons.csv.CSVRecord"
-90:     );
-91:   }
-92: }
+25:   @BeforeClass 
+26:   public static void initEvoSuiteFramework() { 
+27:     org.evosuite.runtime.RuntimeSettings.className = "org.apache.commons.csv.CSVRecord"; 
+28:     org.evosuite.runtime.GuiSupport.initialize(); 
+29:     org.evosuite.runtime.RuntimeSettings.maxNumberOfThreads = 100; 
+30:     org.evosuite.runtime.RuntimeSettings.maxNumberOfIterationsPerLoop = 10000; 
+31:     org.evosuite.runtime.RuntimeSettings.mockSystemIn = true; 
+32:     org.evosuite.runtime.RuntimeSettings.sandboxMode = org.evosuite.runtime.sandbox.Sandbox.SandboxMode.RECOMMENDED; 
+33:     org.evosuite.runtime.sandbox.Sandbox.initializeSecurityManagerForSUT(); 
+34:     org.evosuite.runtime.classhandling.JDKClassResetter.init();
+35:     setSystemProperties();
+36:     initializeClasses();
+37:     org.evosuite.runtime.Runtime.getInstance().resetRuntime(); 
+38:   } 
+39: 
+40:   @Before 
+41:   public void initTestCase(){ 
+42:     threadStopper.storeCurrentThreads();
+43:     threadStopper.startRecordingTime();
+44:     org.evosuite.runtime.jvm.ShutdownHookHandler.getInstance().initHandler(); 
+45:     org.evosuite.runtime.sandbox.Sandbox.goingToExecuteSUTCode(); 
+46:     org.evosuite.runtime.GuiSupport.setHeadless(); 
+47:     org.evosuite.runtime.Runtime.getInstance().resetRuntime(); 
+48:     org.evosuite.runtime.agent.InstrumentingAgent.activate(); 
+49:   } 
+50: 
+51:   @After 
+52:   public void doneWithTestCase(){ 
+53:     threadStopper.killAndJoinClientThreads();
+54:     org.evosuite.runtime.jvm.ShutdownHookHandler.getInstance().safeExecuteAddedHooks(); 
+55:     org.evosuite.runtime.classhandling.JDKClassResetter.reset(); 
+56:     resetClasses(); 
+57:     org.evosuite.runtime.sandbox.Sandbox.doneWithExecutingSUTCode(); 
+58:     org.evosuite.runtime.agent.InstrumentingAgent.deactivate(); 
+59:     org.evosuite.runtime.GuiSupport.restoreHeadlessMode(); 
+60:   } 
+61: 
+62:   public static void setSystemProperties() {
+63:  
+64:     /*No java.lang.System property to set*/
+65:   }
+66: 
+67:   private static void initializeClasses() {
+68:     org.evosuite.runtime.classhandling.ClassStateSupport.initializeClasses(CSVRecord_23_tmp__ESTest_scaffolding.class.getClassLoader() ,
+69:       "org.apache.commons.csv.CSVRecord"
+70:     );
+71:   } 
+72: 
+73:   private static void resetClasses() {
+74:     org.evosuite.runtime.classhandling.ClassResetter.getInstance().setClassLoader(CSVRecord_23_tmp__ESTest_scaffolding.class.getClassLoader()); 
+75: 
+76:     org.evosuite.runtime.classhandling.ClassStateSupport.resetClasses(
+77:       "org.apache.commons.csv.CSVRecord"
+78:     );
+79:   }
+80: }
 
-[MASTER] 23:57:52.420 [logback-2] ERROR JUnitAnalyzer - Failed to compile test case:
+[MASTER] 20:58:32.529 [logback-2] ERROR JUnitAnalyzer - Failed to compile test case:
 HashMap<String, Integer> hashMap0 = new HashMap<String, Integer>();
 String[] stringArray0 = new String[8];
 stringArray0[3] = "No header mapping was specified, the record values can't be accessed by name";
@@ -233,19 +355,19 @@ cSVRecord0.putIn((Map<String, Integer>) hashMap0);
 HashMap<String, String> hashMap1 = new HashMap<String, String>();
 cSVRecord0.putIn(hashMap1);
 
-[MASTER] 23:57:52.482 [logback-2] ERROR JUnitAnalyzer - Compilation failed on compilation units: [RegularFileObject[/tmp/EvoSuite_25_1627603072447/org/apache/commons/csv/CSVRecord_25_tmp__ESTest.java], RegularFileObject[/tmp/EvoSuite_25_1627603072447/org/apache/commons/csv/CSVRecord_25_tmp__ESTest_scaffolding.java]]
-[MASTER] 23:57:52.482 [logback-2] ERROR JUnitAnalyzer - Classpath: subjects/buggy-versions/Csv-9/target/classes:/experiment/tools/evosuite.jar:/experiment/subjects/buggy-versions/Csv-9/target/classes
-[MASTER] 23:57:52.482 [logback-2] ERROR JUnitAnalyzer - evosuiteCP: /experiment/tools/evosuite.jar:/experiment/subjects/buggy-versions/Csv-9/target/classes
-[MASTER] 23:57:52.483 [logback-2] ERROR JUnitAnalyzer - Diagnostic: method putIn in class org.apache.commons.csv.CSVRecord cannot be applied to given types;
+[MASTER] 20:58:32.599 [logback-2] ERROR JUnitAnalyzer - Compilation failed on compilation units: [RegularFileObject[/tmp/EvoSuite_26_1629233912576/org/apache/commons/csv/CSVRecord_26_tmp__ESTest.java], RegularFileObject[/tmp/EvoSuite_26_1629233912576/org/apache/commons/csv/CSVRecord_26_tmp__ESTest_scaffolding.java]]
+[MASTER] 20:58:32.599 [logback-2] ERROR JUnitAnalyzer - Classpath: subjects/buggy-versions/Csv-9/target/classes:/experiment/tools/evosuite.jar:/experiment/subjects/buggy-versions/Csv-9/target/classes
+[MASTER] 20:58:32.599 [logback-2] ERROR JUnitAnalyzer - evosuiteCP: /experiment/tools/evosuite.jar:/experiment/subjects/buggy-versions/Csv-9/target/classes
+[MASTER] 20:58:32.599 [logback-2] ERROR JUnitAnalyzer - Diagnostic: method putIn in class org.apache.commons.csv.CSVRecord cannot be applied to given types;
   required: M
   found: java.util.Map<java.lang.String,java.lang.Integer>
   reason: inferred type does not conform to upper bound(s)
     inferred: java.util.Map<java.lang.String,java.lang.Integer>
     upper bound(s): java.util.Map<java.lang.String,java.lang.String>: 29
-[MASTER] 23:57:52.483 [logback-2] ERROR JUnitAnalyzer - RegularFileObject[/tmp/EvoSuite_25_1627603072447/org/apache/commons/csv/CSVRecord_25_tmp__ESTest.java]
+[MASTER] 20:58:32.600 [logback-2] ERROR JUnitAnalyzer - RegularFileObject[/tmp/EvoSuite_26_1629233912576/org/apache/commons/csv/CSVRecord_26_tmp__ESTest.java]
 1: /*
 2:  * This file was automatically generated by EvoSuite
-3:  * Thu Jul 29 23:57:52 GMT 2021
+3:  * Tue Aug 17 20:58:32 GMT 2021
 4:  */
 5: 
 6: package org.apache.commons.csv;
@@ -261,7 +383,7 @@ cSVRecord0.putIn(hashMap1);
 16: import org.junit.runner.RunWith;
 17: 
 18: @RunWith(EvoRunner.class) @EvoRunnerParameters(mockJVMNonDeterminism = true, useVFS = true, useVNET = true, resetStaticState = true) 
-19: public class CSVRecord_25_tmp__ESTest extends CSVRecord_25_tmp__ESTest_scaffolding {
+19: public class CSVRecord_26_tmp__ESTest extends CSVRecord_26_tmp__ESTest_scaffolding {
 20: 
 21:   @Test(timeout = 4000)
 22:   public void test0()  throws Throwable  {
@@ -285,11 +407,11 @@ cSVRecord0.putIn(hashMap1);
 40:       }
 41:   }
 42: }
-RegularFileObject[/tmp/EvoSuite_25_1627603072447/org/apache/commons/csv/CSVRecord_25_tmp__ESTest.java]
+RegularFileObject[/tmp/EvoSuite_26_1629233912576/org/apache/commons/csv/CSVRecord_26_tmp__ESTest.java]
 1: /**
 2:  * Scaffolding file used to store all the setups needed to run 
 3:  * tests automatically generated by EvoSuite
-4:  * Thu Jul 29 23:57:52 GMT 2021
+4:  * Tue Aug 17 20:58:32 GMT 2021
 5:  */
 6: 
 7: package org.apache.commons.csv;
@@ -298,88 +420,76 @@ RegularFileObject[/tmp/EvoSuite_25_1627603072447/org/apache/commons/csv/CSVRecor
 10: import org.junit.BeforeClass;
 11: import org.junit.Before;
 12: import org.junit.After;
-13: import org.junit.AfterClass;
-14: import org.evosuite.runtime.sandbox.Sandbox;
-15: import org.evosuite.runtime.sandbox.Sandbox.SandboxMode;
-16: 
-17: @EvoSuiteClassExclude
-18: public class CSVRecord_25_tmp__ESTest_scaffolding {
-19: 
-20:   @org.junit.Rule 
-21:   public org.evosuite.runtime.vnet.NonFunctionalRequirementRule nfr = new org.evosuite.runtime.vnet.NonFunctionalRequirementRule();
-22: 
-23:   private static final java.util.Properties defaultProperties = (java.util.Properties) java.lang.System.getProperties().clone(); 
+13: import org.evosuite.runtime.sandbox.Sandbox;
+14: import org.evosuite.runtime.sandbox.Sandbox.SandboxMode;
+15: 
+16: @EvoSuiteClassExclude
+17: public class CSVRecord_26_tmp__ESTest_scaffolding {
+18: 
+19:   @org.junit.Rule 
+20:   public org.evosuite.runtime.vnet.NonFunctionalRequirementRule nfr = new org.evosuite.runtime.vnet.NonFunctionalRequirementRule();
+21: 
+22:   private org.evosuite.runtime.thread.ThreadStopper threadStopper =  new org.evosuite.runtime.thread.ThreadStopper (org.evosuite.runtime.thread.KillSwitchHandler.getInstance(), 3000);
+23: 
 24: 
-25:   private org.evosuite.runtime.thread.ThreadStopper threadStopper =  new org.evosuite.runtime.thread.ThreadStopper (org.evosuite.runtime.thread.KillSwitchHandler.getInstance(), 3000);
-26: 
-27: 
-28:   @BeforeClass 
-29:   public static void initEvoSuiteFramework() { 
-30:     org.evosuite.runtime.RuntimeSettings.className = "org.apache.commons.csv.CSVRecord"; 
-31:     org.evosuite.runtime.GuiSupport.initialize(); 
-32:     org.evosuite.runtime.RuntimeSettings.maxNumberOfThreads = 100; 
-33:     org.evosuite.runtime.RuntimeSettings.maxNumberOfIterationsPerLoop = 10000; 
-34:     org.evosuite.runtime.RuntimeSettings.mockSystemIn = true; 
-35:     org.evosuite.runtime.RuntimeSettings.sandboxMode = org.evosuite.runtime.sandbox.Sandbox.SandboxMode.RECOMMENDED; 
-36:     org.evosuite.runtime.sandbox.Sandbox.initializeSecurityManagerForSUT(); 
-37:     org.evosuite.runtime.classhandling.JDKClassResetter.init();
-38:     setSystemProperties();
-39:     initializeClasses();
-40:     org.evosuite.runtime.Runtime.getInstance().resetRuntime(); 
-41:   } 
-42: 
-43:   @AfterClass 
-44:   public static void clearEvoSuiteFramework(){ 
-45:     Sandbox.resetDefaultSecurityManager(); 
-46:     java.lang.System.setProperties((java.util.Properties) defaultProperties.clone()); 
-47:   } 
-48: 
-49:   @Before 
-50:   public void initTestCase(){ 
-51:     threadStopper.storeCurrentThreads();
-52:     threadStopper.startRecordingTime();
-53:     org.evosuite.runtime.jvm.ShutdownHookHandler.getInstance().initHandler(); 
-54:     org.evosuite.runtime.sandbox.Sandbox.goingToExecuteSUTCode(); 
-55:     setSystemProperties(); 
-56:     org.evosuite.runtime.GuiSupport.setHeadless(); 
-57:     org.evosuite.runtime.Runtime.getInstance().resetRuntime(); 
-58:     org.evosuite.runtime.agent.InstrumentingAgent.activate(); 
-59:   } 
-60: 
-61:   @After 
-62:   public void doneWithTestCase(){ 
-63:     threadStopper.killAndJoinClientThreads();
-64:     org.evosuite.runtime.jvm.ShutdownHookHandler.getInstance().safeExecuteAddedHooks(); 
-65:     org.evosuite.runtime.classhandling.JDKClassResetter.reset(); 
-66:     resetClasses(); 
-67:     org.evosuite.runtime.sandbox.Sandbox.doneWithExecutingSUTCode(); 
-68:     org.evosuite.runtime.agent.InstrumentingAgent.deactivate(); 
-69:     org.evosuite.runtime.GuiSupport.restoreHeadlessMode(); 
-70:   } 
-71: 
-72:   public static void setSystemProperties() {
-73:  
-74:     java.lang.System.setProperties((java.util.Properties) defaultProperties.clone()); 
-75:     java.lang.System.setProperty("user.dir", "/experiment"); 
-76:     java.lang.System.setProperty("java.io.tmpdir", "/tmp"); 
-77:   }
-78: 
-79:   private static void initializeClasses() {
-80:     org.evosuite.runtime.classhandling.ClassStateSupport.initializeClasses(CSVRecord_25_tmp__ESTest_scaffolding.class.getClassLoader() ,
-81:       "org.apache.commons.csv.CSVRecord"
-82:     );
-83:   } 
-84: 
-85:   private static void resetClasses() {
-86:     org.evosuite.runtime.classhandling.ClassResetter.getInstance().setClassLoader(CSVRecord_25_tmp__ESTest_scaffolding.class.getClassLoader()); 
-87: 
-88:     org.evosuite.runtime.classhandling.ClassStateSupport.resetClasses(
-89:       "org.apache.commons.csv.CSVRecord"
-90:     );
-91:   }
-92: }
+25:   @BeforeClass 
+26:   public static void initEvoSuiteFramework() { 
+27:     org.evosuite.runtime.RuntimeSettings.className = "org.apache.commons.csv.CSVRecord"; 
+28:     org.evosuite.runtime.GuiSupport.initialize(); 
+29:     org.evosuite.runtime.RuntimeSettings.maxNumberOfThreads = 100; 
+30:     org.evosuite.runtime.RuntimeSettings.maxNumberOfIterationsPerLoop = 10000; 
+31:     org.evosuite.runtime.RuntimeSettings.mockSystemIn = true; 
+32:     org.evosuite.runtime.RuntimeSettings.sandboxMode = org.evosuite.runtime.sandbox.Sandbox.SandboxMode.RECOMMENDED; 
+33:     org.evosuite.runtime.sandbox.Sandbox.initializeSecurityManagerForSUT(); 
+34:     org.evosuite.runtime.classhandling.JDKClassResetter.init();
+35:     setSystemProperties();
+36:     initializeClasses();
+37:     org.evosuite.runtime.Runtime.getInstance().resetRuntime(); 
+38:   } 
+39: 
+40:   @Before 
+41:   public void initTestCase(){ 
+42:     threadStopper.storeCurrentThreads();
+43:     threadStopper.startRecordingTime();
+44:     org.evosuite.runtime.jvm.ShutdownHookHandler.getInstance().initHandler(); 
+45:     org.evosuite.runtime.sandbox.Sandbox.goingToExecuteSUTCode(); 
+46:     org.evosuite.runtime.GuiSupport.setHeadless(); 
+47:     org.evosuite.runtime.Runtime.getInstance().resetRuntime(); 
+48:     org.evosuite.runtime.agent.InstrumentingAgent.activate(); 
+49:   } 
+50: 
+51:   @After 
+52:   public void doneWithTestCase(){ 
+53:     threadStopper.killAndJoinClientThreads();
+54:     org.evosuite.runtime.jvm.ShutdownHookHandler.getInstance().safeExecuteAddedHooks(); 
+55:     org.evosuite.runtime.classhandling.JDKClassResetter.reset(); 
+56:     resetClasses(); 
+57:     org.evosuite.runtime.sandbox.Sandbox.doneWithExecutingSUTCode(); 
+58:     org.evosuite.runtime.agent.InstrumentingAgent.deactivate(); 
+59:     org.evosuite.runtime.GuiSupport.restoreHeadlessMode(); 
+60:   } 
+61: 
+62:   public static void setSystemProperties() {
+63:  
+64:     /*No java.lang.System property to set*/
+65:   }
+66: 
+67:   private static void initializeClasses() {
+68:     org.evosuite.runtime.classhandling.ClassStateSupport.initializeClasses(CSVRecord_26_tmp__ESTest_scaffolding.class.getClassLoader() ,
+69:       "org.apache.commons.csv.CSVRecord"
+70:     );
+71:   } 
+72: 
+73:   private static void resetClasses() {
+74:     org.evosuite.runtime.classhandling.ClassResetter.getInstance().setClassLoader(CSVRecord_26_tmp__ESTest_scaffolding.class.getClassLoader()); 
+75: 
+76:     org.evosuite.runtime.classhandling.ClassStateSupport.resetClasses(
+77:       "org.apache.commons.csv.CSVRecord"
+78:     );
+79:   }
+80: }
 
-[MASTER] 23:57:52.484 [logback-2] ERROR JUnitAnalyzer - Failed to compile test case:
+[MASTER] 20:58:32.600 [logback-2] ERROR JUnitAnalyzer - Failed to compile test case:
 HashMap<String, Integer> hashMap0 = new HashMap<String, Integer>();
 String[] stringArray0 = new String[8];
 stringArray0[3] = "No header mapping was specified, the record values can't be accessed by name";
@@ -389,19 +499,19 @@ CSVRecord cSVRecord0 = new CSVRecord(stringArray0, hashMap0, "Index for header '
 cSVRecord0.putIn((Map<String, Integer>) hashMap0);
 cSVRecord0.toMap();
 
-[MASTER] 23:57:53.060 [logback-2] ERROR JUnitAnalyzer - Compilation failed on compilation units: [RegularFileObject[/tmp/EvoSuite_44_1627603073035/org/apache/commons/csv/CSVRecord_44_tmp__ESTest.java], RegularFileObject[/tmp/EvoSuite_44_1627603073035/org/apache/commons/csv/CSVRecord_44_tmp__ESTest_scaffolding.java]]
-[MASTER] 23:57:53.061 [logback-2] ERROR JUnitAnalyzer - Classpath: subjects/buggy-versions/Csv-9/target/classes:/experiment/tools/evosuite.jar:/experiment/subjects/buggy-versions/Csv-9/target/classes
-[MASTER] 23:57:53.061 [logback-2] ERROR JUnitAnalyzer - evosuiteCP: /experiment/tools/evosuite.jar:/experiment/subjects/buggy-versions/Csv-9/target/classes
-[MASTER] 23:57:53.061 [logback-2] ERROR JUnitAnalyzer - Diagnostic: method putIn in class org.apache.commons.csv.CSVRecord cannot be applied to given types;
+[MASTER] 20:58:33.001 [logback-2] ERROR JUnitAnalyzer - Compilation failed on compilation units: [RegularFileObject[/tmp/EvoSuite_45_1629233912983/org/apache/commons/csv/CSVRecord_45_tmp__ESTest.java], RegularFileObject[/tmp/EvoSuite_45_1629233912983/org/apache/commons/csv/CSVRecord_45_tmp__ESTest_scaffolding.java]]
+[MASTER] 20:58:33.001 [logback-2] ERROR JUnitAnalyzer - Classpath: subjects/buggy-versions/Csv-9/target/classes:/experiment/tools/evosuite.jar:/experiment/subjects/buggy-versions/Csv-9/target/classes
+[MASTER] 20:58:33.001 [logback-2] ERROR JUnitAnalyzer - evosuiteCP: /experiment/tools/evosuite.jar:/experiment/subjects/buggy-versions/Csv-9/target/classes
+[MASTER] 20:58:33.001 [logback-2] ERROR JUnitAnalyzer - Diagnostic: method putIn in class org.apache.commons.csv.CSVRecord cannot be applied to given types;
   required: M
   found: java.util.Map<java.lang.String,java.lang.Integer>
   reason: inferred type does not conform to upper bound(s)
     inferred: java.util.Map<java.lang.String,java.lang.Integer>
     upper bound(s): java.util.Map<java.lang.String,java.lang.String>: 26
-[MASTER] 23:57:53.062 [logback-2] ERROR JUnitAnalyzer - RegularFileObject[/tmp/EvoSuite_44_1627603073035/org/apache/commons/csv/CSVRecord_44_tmp__ESTest.java]
+[MASTER] 20:58:33.002 [logback-2] ERROR JUnitAnalyzer - RegularFileObject[/tmp/EvoSuite_45_1629233912983/org/apache/commons/csv/CSVRecord_45_tmp__ESTest.java]
 1: /*
 2:  * This file was automatically generated by EvoSuite
-3:  * Thu Jul 29 23:57:53 GMT 2021
+3:  * Tue Aug 17 20:58:32 GMT 2021
 4:  */
 5: 
 6: package org.apache.commons.csv;
@@ -416,7 +526,7 @@ cSVRecord0.toMap();
 15: import org.junit.runner.RunWith;
 16: 
 17: @RunWith(EvoRunner.class) @EvoRunnerParameters(mockJVMNonDeterminism = true, useVFS = true, useVNET = true, resetStaticState = true) 
-18: public class CSVRecord_44_tmp__ESTest extends CSVRecord_44_tmp__ESTest_scaffolding {
+18: public class CSVRecord_45_tmp__ESTest extends CSVRecord_45_tmp__ESTest_scaffolding {
 19: 
 20:   @Test(timeout = 4000)
 21:   public void test0()  throws Throwable  {
@@ -425,14 +535,14 @@ cSVRecord0.toMap();
 24:       hashMap0.put("(@\u0001kr;", integer0);
 25:       CSVRecord cSVRecord0 = new CSVRecord((String[]) null, hashMap0, "m.OwU_\u0004Se~*G1w", 0L);
 26:       Map<String, Integer> map0 = cSVRecord0.putIn((Map<String, Integer>) hashMap0);
-27:       assertEquals(1, map0.size());
+27:       assertFalse(map0.isEmpty());
 28:   }
 29: }
-RegularFileObject[/tmp/EvoSuite_44_1627603073035/org/apache/commons/csv/CSVRecord_44_tmp__ESTest.java]
+RegularFileObject[/tmp/EvoSuite_45_1629233912983/org/apache/commons/csv/CSVRecord_45_tmp__ESTest.java]
 1: /**
 2:  * Scaffolding file used to store all the setups needed to run 
 3:  * tests automatically generated by EvoSuite
-4:  * Thu Jul 29 23:57:53 GMT 2021
+4:  * Tue Aug 17 20:58:32 GMT 2021
 5:  */
 6: 
 7: package org.apache.commons.csv;
@@ -441,99 +551,128 @@ RegularFileObject[/tmp/EvoSuite_44_1627603073035/org/apache/commons/csv/CSVRecor
 10: import org.junit.BeforeClass;
 11: import org.junit.Before;
 12: import org.junit.After;
-13: import org.junit.AfterClass;
-14: import org.evosuite.runtime.sandbox.Sandbox;
-15: import org.evosuite.runtime.sandbox.Sandbox.SandboxMode;
-16: 
-17: @EvoSuiteClassExclude
-18: public class CSVRecord_44_tmp__ESTest_scaffolding {
-19: 
-20:   @org.junit.Rule 
-21:   public org.evosuite.runtime.vnet.NonFunctionalRequirementRule nfr = new org.evosuite.runtime.vnet.NonFunctionalRequirementRule();
-22: 
-23:   private static final java.util.Properties defaultProperties = (java.util.Properties) java.lang.System.getProperties().clone(); 
+13: import org.evosuite.runtime.sandbox.Sandbox;
+14: import org.evosuite.runtime.sandbox.Sandbox.SandboxMode;
+15: 
+16: @EvoSuiteClassExclude
+17: public class CSVRecord_45_tmp__ESTest_scaffolding {
+18: 
+19:   @org.junit.Rule 
+20:   public org.evosuite.runtime.vnet.NonFunctionalRequirementRule nfr = new org.evosuite.runtime.vnet.NonFunctionalRequirementRule();
+21: 
+22:   private org.evosuite.runtime.thread.ThreadStopper threadStopper =  new org.evosuite.runtime.thread.ThreadStopper (org.evosuite.runtime.thread.KillSwitchHandler.getInstance(), 3000);
+23: 
 24: 
-25:   private org.evosuite.runtime.thread.ThreadStopper threadStopper =  new org.evosuite.runtime.thread.ThreadStopper (org.evosuite.runtime.thread.KillSwitchHandler.getInstance(), 3000);
-26: 
-27: 
-28:   @BeforeClass 
-29:   public static void initEvoSuiteFramework() { 
-30:     org.evosuite.runtime.RuntimeSettings.className = "org.apache.commons.csv.CSVRecord"; 
-31:     org.evosuite.runtime.GuiSupport.initialize(); 
-32:     org.evosuite.runtime.RuntimeSettings.maxNumberOfThreads = 100; 
-33:     org.evosuite.runtime.RuntimeSettings.maxNumberOfIterationsPerLoop = 10000; 
-34:     org.evosuite.runtime.RuntimeSettings.mockSystemIn = true; 
-35:     org.evosuite.runtime.RuntimeSettings.sandboxMode = org.evosuite.runtime.sandbox.Sandbox.SandboxMode.RECOMMENDED; 
-36:     org.evosuite.runtime.sandbox.Sandbox.initializeSecurityManagerForSUT(); 
-37:     org.evosuite.runtime.classhandling.JDKClassResetter.init();
-38:     setSystemProperties();
-39:     initializeClasses();
-40:     org.evosuite.runtime.Runtime.getInstance().resetRuntime(); 
-41:   } 
-42: 
-43:   @AfterClass 
-44:   public static void clearEvoSuiteFramework(){ 
-45:     Sandbox.resetDefaultSecurityManager(); 
-46:     java.lang.System.setProperties((java.util.Properties) defaultProperties.clone()); 
-47:   } 
-48: 
-49:   @Before 
-50:   public void initTestCase(){ 
-51:     threadStopper.storeCurrentThreads();
-52:     threadStopper.startRecordingTime();
-53:     org.evosuite.runtime.jvm.ShutdownHookHandler.getInstance().initHandler(); 
-54:     org.evosuite.runtime.sandbox.Sandbox.goingToExecuteSUTCode(); 
-55:     setSystemProperties(); 
-56:     org.evosuite.runtime.GuiSupport.setHeadless(); 
-57:     org.evosuite.runtime.Runtime.getInstance().resetRuntime(); 
-58:     org.evosuite.runtime.agent.InstrumentingAgent.activate(); 
-59:   } 
-60: 
-61:   @After 
-62:   public void doneWithTestCase(){ 
-63:     threadStopper.killAndJoinClientThreads();
-64:     org.evosuite.runtime.jvm.ShutdownHookHandler.getInstance().safeExecuteAddedHooks(); 
-65:     org.evosuite.runtime.classhandling.JDKClassResetter.reset(); 
-66:     resetClasses(); 
-67:     org.evosuite.runtime.sandbox.Sandbox.doneWithExecutingSUTCode(); 
-68:     org.evosuite.runtime.agent.InstrumentingAgent.deactivate(); 
-69:     org.evosuite.runtime.GuiSupport.restoreHeadlessMode(); 
-70:   } 
-71: 
-72:   public static void setSystemProperties() {
-73:  
-74:     java.lang.System.setProperties((java.util.Properties) defaultProperties.clone()); 
-75:     java.lang.System.setProperty("user.dir", "/experiment"); 
-76:     java.lang.System.setProperty("java.io.tmpdir", "/tmp"); 
-77:   }
-78: 
-79:   private static void initializeClasses() {
-80:     org.evosuite.runtime.classhandling.ClassStateSupport.initializeClasses(CSVRecord_44_tmp__ESTest_scaffolding.class.getClassLoader() ,
-81:       "org.apache.commons.csv.CSVRecord"
-82:     );
-83:   } 
-84: 
-85:   private static void resetClasses() {
-86:     org.evosuite.runtime.classhandling.ClassResetter.getInstance().setClassLoader(CSVRecord_44_tmp__ESTest_scaffolding.class.getClassLoader()); 
-87: 
-88:     org.evosuite.runtime.classhandling.ClassStateSupport.resetClasses(
-89:       "org.apache.commons.csv.CSVRecord"
-90:     );
-91:   }
-92: }
+25:   @BeforeClass 
+26:   public static void initEvoSuiteFramework() { 
+27:     org.evosuite.runtime.RuntimeSettings.className = "org.apache.commons.csv.CSVRecord"; 
+28:     org.evosuite.runtime.GuiSupport.initialize(); 
+29:     org.evosuite.runtime.RuntimeSettings.maxNumberOfThreads = 100; 
+30:     org.evosuite.runtime.RuntimeSettings.maxNumberOfIterationsPerLoop = 10000; 
+31:     org.evosuite.runtime.RuntimeSettings.mockSystemIn = true; 
+32:     org.evosuite.runtime.RuntimeSettings.sandboxMode = org.evosuite.runtime.sandbox.Sandbox.SandboxMode.RECOMMENDED; 
+33:     org.evosuite.runtime.sandbox.Sandbox.initializeSecurityManagerForSUT(); 
+34:     org.evosuite.runtime.classhandling.JDKClassResetter.init();
+35:     setSystemProperties();
+36:     initializeClasses();
+37:     org.evosuite.runtime.Runtime.getInstance().resetRuntime(); 
+38:   } 
+39: 
+40:   @Before 
+41:   public void initTestCase(){ 
+42:     threadStopper.storeCurrentThreads();
+43:     threadStopper.startRecordingTime();
+44:     org.evosuite.runtime.jvm.ShutdownHookHandler.getInstance().initHandler(); 
+45:     org.evosuite.runtime.sandbox.Sandbox.goingToExecuteSUTCode(); 
+46:     org.evosuite.runtime.GuiSupport.setHeadless(); 
+47:     org.evosuite.runtime.Runtime.getInstance().resetRuntime(); 
+48:     org.evosuite.runtime.agent.InstrumentingAgent.activate(); 
+49:   } 
+50: 
+51:   @After 
+52:   public void doneWithTestCase(){ 
+53:     threadStopper.killAndJoinClientThreads();
+54:     org.evosuite.runtime.jvm.ShutdownHookHandler.getInstance().safeExecuteAddedHooks(); 
+55:     org.evosuite.runtime.classhandling.JDKClassResetter.reset(); 
+56:     resetClasses(); 
+57:     org.evosuite.runtime.sandbox.Sandbox.doneWithExecutingSUTCode(); 
+58:     org.evosuite.runtime.agent.InstrumentingAgent.deactivate(); 
+59:     org.evosuite.runtime.GuiSupport.restoreHeadlessMode(); 
+60:   } 
+61: 
+62:   public static void setSystemProperties() {
+63:  
+64:     /*No java.lang.System property to set*/
+65:   }
+66: 
+67:   private static void initializeClasses() {
+68:     org.evosuite.runtime.classhandling.ClassStateSupport.initializeClasses(CSVRecord_45_tmp__ESTest_scaffolding.class.getClassLoader() ,
+69:       "org.apache.commons.csv.CSVRecord"
+70:     );
+71:   } 
+72: 
+73:   private static void resetClasses() {
+74:     org.evosuite.runtime.classhandling.ClassResetter.getInstance().setClassLoader(CSVRecord_45_tmp__ESTest_scaffolding.class.getClassLoader()); 
+75: 
+76:     org.evosuite.runtime.classhandling.ClassStateSupport.resetClasses(
+77:       "org.apache.commons.csv.CSVRecord"
+78:     );
+79:   }
+80: }
 
-[MASTER] 23:57:53.062 [logback-2] ERROR JUnitAnalyzer - Failed to compile test case:
+[MASTER] 20:58:33.002 [logback-2] ERROR JUnitAnalyzer - Failed to compile test case:
 HashMap<String, Integer> hashMap0 = new HashMap<String, Integer>();
 Integer integer0 = new Integer(0);
 hashMap0.put("(@\u0001kr;", integer0);
 CSVRecord cSVRecord0 = new CSVRecord((String[]) null, hashMap0, "m.OwU_\u0004Se~*G1w", 0L);
 Map<String, Integer> map0 = cSVRecord0.putIn((Map<String, Integer>) hashMap0);
-assertEquals(1, map0.size());
+assertFalse(map0.isEmpty());
 
 
-* Permissions denied during test execution: 
-  - java.lang.RuntimePermission: 
-         writeFileDescriptor: 3
+[MASTER] 20:58:33.203 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 20:58:33.238 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 20:58:33.270 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 20:58:33.299 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 20:58:33.328 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 20:58:33.358 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 20:58:33.384 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 20:58:33.410 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 20:58:33.438 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 20:58:33.470 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 20:58:33.504 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 20:58:33.540 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 20:58:33.574 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 20:58:33.606 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 20:58:33.667 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 20:58:33.700 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 20:58:33.724 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 20:58:33.750 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 20:58:33.777 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 20:58:33.808 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 20:58:33.841 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 20:58:33.876 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 20:58:33.909 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 20:58:33.947 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 20:58:33.976 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 20:58:34.005 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 20:58:34.034 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 20:58:34.061 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 20:58:34.086 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 20:58:34.114 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 20:58:34.141 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 20:58:34.165 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 20:58:34.187 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 20:58:34.210 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 20:58:34.239 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 20:58:34.265 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 20:58:34.292 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 20:58:34.313 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 20:58:34.336 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 20:58:34.360 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 20:58:34.381 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 20:58:34.403 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 20:58:34.525 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 20:58:34.717 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
 * Writing tests to file
 * Writing JUnit test case 'CSVRecord_ESTest' to results/Csv-9/org.apache.commons.csv.CSVRecord/BBC-F0-50/tests/28
 * Done!

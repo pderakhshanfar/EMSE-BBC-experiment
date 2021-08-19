@@ -21,19 +21,8 @@
 * Starting evolution
 bbc usage percentage is: 50%
 * Initial Number of Goals in DynaMOSA = 68 / 152
-[MASTER] 21:30:28.510 [logback-2] ERROR AbstractStatement - Error assigning value of type Object defined at statement Object object0 = multiKey0.getKey(int0), assignment statement: stringArray0[1] = (String) object0; SUT=org.apache.commons.collections4.keyvalue.MultiKey
-Number of times BBC is called for org.apache.commons.collections4.keyvalue.MultiKey.<init>(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)V: Line 115: 151221
-Number of times BBC is called for org.apache.commons.collections4.keyvalue.MultiKey.readResolve()Ljava/lang/Object;: Line 279: 221123
-Number of times BBC is called for org.apache.commons.collections4.keyvalue.MultiKey.readResolve()Ljava/lang/Object;: Line 278: 221123
-Number of times BBC is called for org.apache.commons.collections4.keyvalue.MultiKey.readResolve()Ljava/lang/Object;: root-Branch: 221123
-Number of times BBC is called for org.apache.commons.collections4.keyvalue.MultiKey.equals(Ljava/lang/Object;)Z: I4 Branch 3 IF_ACMPNE L221 - false: 228
-Number of times BBC is called for org.apache.commons.collections4.keyvalue.MultiKey.<init>(Ljava/lang/Object;Ljava/lang/Object;)V: Line 67: 150202
-Number of times BBC is called for org.apache.commons.collections4.keyvalue.MultiKey.<init>(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)V: Line 82: 158356
-Number of times BBC is called for org.apache.commons.collections4.keyvalue.MultiKey.<init>(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)V: Line 98: 155435
-Number of times BBC is called in total: 1278811
-* Search finished after 601s and 2289 generations, 1450176 statements, best individual has fitness: 18.0
+* Search finished after 603s and 2582 generations, 1600815 statements, best individual has fitness: 17.0
 * Minimizing test suite
-[MASTER] 21:39:45.559 [logback-1] WARN  TestSuiteMinimizer - Minimization timeout. Roll back to original test suite
 * Going to analyze the coverage criteria
 * Coverage analysis for criterion LINE
 * Coverage of criterion LINE: 84%
@@ -44,9 +33,9 @@ Number of times BBC is called in total: 1278811
 * Total number of goals: 23
 * Number of covered goals: 22
 * Coverage analysis for criterion EXCEPTION
-* Coverage of criterion EXCEPTION: 100%
+* Coverage of criterion EXCEPTION: 80%
 * Total number of goals: 5
-* Number of covered goals: 5
+* Number of covered goals: 4
 * Coverage analysis for criterion WEAKMUTATION
 * Coverage of criterion WEAKMUTATION: 97%
 * Total number of goals: 32
@@ -67,79 +56,35 @@ Number of times BBC is called in total: 1278811
 * Coverage of criterion CBRANCH: 96%
 * Total number of goals: 23
 * Number of covered goals: 22
-* Generated 16 tests with total length 344
-* Resulting test suite's coverage: 86% (average coverage for all fitness functions)
+* Generated 14 tests with total length 41
+* Resulting test suite's coverage: 87% (average coverage for all fitness functions)
 * Generating assertions
-* Resulting test suite's mutation score: 59%
+* Resulting test suite's mutation score: 34%
 * Compiling and checking tests
-[MASTER] 21:40:51.379 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class java.lang.ClassCastException: java.lang.Integer cannot be cast to org.apache.commons.collections4.keyvalue.MultiKey
-[MASTER] 21:40:51.379 [logback-1] WARN  JUnitAnalyzer - Failing test:
+[MASTER] 19:24:20.800 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 19:24:21.061 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 19:24:21.371 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 19:24:21.500 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 19:24:21.502 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class java.lang.ClassCastException: java.lang.Integer cannot be cast to org.apache.commons.collections4.keyvalue.MultiKey
+[MASTER] 19:24:21.503 [logback-1] WARN  JUnitAnalyzer - Failing test:
  Integer integer0 = new Integer(0);
-Integer integer1 = new Integer(0);
-MultiKey<Integer> multiKey0 = new MultiKey<Integer>(integer0, integer0, integer1);
-MultiKey<String> multiKey1 = new MultiKey<String>((String) null, (String) null, (String) null, (String) null, "60r$\"");
-Integer integer2 = new Integer(0);
-MultiKey<Object> multiKey2 = new MultiKey<Object>(integer2, integer1, multiKey0);
-MultiKey<Object> multiKey3 = new MultiKey<Object>(integer1, multiKey2, multiKey1, integer0);
-String string0 = null;
-String string1 = "3(";
-MultiKey<String> multiKey4 = new MultiKey<String>("60r$\"", (String) null, "3(", "3(", "EO s&tyvxZ;`Za");
-multiKey4.toString();
-int int0 = 0;
-multiKey3.toString();
-MultiKey multiKey5 = (MultiKey)multiKey3.getKey(0);
-String[] stringArray0 = new String[5];
-stringArray0[0] = null;
-stringArray0[1] = null;
-multiKey5.getKey(1);
+MultiKey<Integer> multiKey0 = new MultiKey<Integer>(integer0, integer0, integer0);
+MultiKey<Object> multiKey1 = new MultiKey<Object>(integer0, integer0, multiKey0);
+MultiKey multiKey2 = (MultiKey)multiKey1.getKey(0);
+multiKey2.getKey(1);
 
-[MASTER] 21:40:55.084 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class java.lang.StackOverflowError: null
-[MASTER] 21:40:55.185 [logback-1] WARN  JUnitAnalyzer - Failing test:
- MultiKey<Object>[] multiKeyArray0 = (MultiKey<Object>[]) Array.newInstance(MultiKey.class, 9);
-Integer integer0 = new Integer((-1));
-Integer integer1 = new Integer((-2326));
-MultiKey<Object> multiKey0 = new MultiKey<Object>(integer0, integer0, integer1, integer1);
-multiKeyArray0[0] = multiKey0;
-Object object0 = new Object();
-Object object1 = new Object();
-Integer integer2 = new Integer(325);
-Object object2 = new Object();
-MultiKey<Object> multiKey1 = new MultiKey<Object>(multiKey0, object0, object1, integer2, object2);
-multiKeyArray0[1] = multiKey1;
-Integer integer3 = new Integer((-1));
-Object object3 = new Object();
-MultiKey<Object> multiKey2 = new MultiKey<Object>(integer3, object3, (Object) null);
-multiKeyArray0[2] = multiKey2;
-Object object4 = new Object();
-Object object5 = new Object();
-MultiKey<Object> multiKey3 = new MultiKey<Object>(object4, multiKey0, object5, (Object) null);
-multiKeyArray0[3] = multiKey3;
-MultiKey<Object> multiKey4 = new MultiKey<Object>(multiKey2, multiKey1, multiKey0);
-multiKeyArray0[4] = multiKey4;
-Integer integer4 = new Integer(3326);
-Integer integer5 = new Integer(3326);
-MultiKey<Object> multiKey5 = new MultiKey<Object>(object3, "", multiKey1, multiKey1, integer5);
-Integer integer6 = new Integer(636);
-MultiKey<Object> multiKey6 = new MultiKey<Object>("*@ex@{+Ru`9-f*@v", integer4, (Object) null, multiKey5, integer6);
-multiKeyArray0[5] = multiKey6;
-MultiKey<Object> multiKey7 = new MultiKey<Object>(multiKeyArray0);
-Object object6 = multiKey7.getKey(5);
-Integer integer7 = new Integer(5);
-Integer integer8 = new Integer(3373);
-MultiKey<Integer> multiKey8 = new MultiKey<Integer>(integer7, integer8);
-MultiKey<Object> multiKey9 = new MultiKey<Object>(object6, (Object) null, multiKey6, multiKey8, integer8);
-multiKeyArray0[6] = multiKey9;
-MultiKey<Object> multiKey10 = new MultiKey<Object>((Object[]) multiKeyArray0, false);
-MultiKey<Object> multiKey11 = new MultiKey<Object>(multiKey1, multiKey10, "*@ex@{+Ru`9-f*@v");
-multiKeyArray0[7] = multiKey11;
-MultiKey<Object> multiKey12 = new MultiKey<Object>(integer1, object1);
-multiKeyArray0[8] = multiKey12;
-MultiKey<MultiKey<Object>> multiKey13 = new MultiKey<MultiKey<Object>>(multiKeyArray0, true);
-multiKey13.toString();
-
-* Permissions denied during test execution: 
-  - java.lang.RuntimePermission: 
-         writeFileDescriptor: 5
+[MASTER] 19:24:21.615 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 19:24:21.744 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 19:24:21.866 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 19:24:21.945 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 19:24:22.081 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 19:24:22.199 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 19:24:22.342 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 19:24:22.593 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 19:24:22.757 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 19:24:22.919 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 19:24:23.379 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 19:24:23.999 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
 * Writing tests to file
 * Writing JUnit test case 'MultiKey_ESTest' to results/Collections-26/org.apache.commons.collections4.keyvalue.MultiKey/BBC-F0-50/tests/23
 * Done!

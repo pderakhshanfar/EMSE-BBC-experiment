@@ -31,18 +31,8 @@
 * Starting evolution
 bbc usage percentage is: 50%
 * Initial Number of Goals in DynaMOSA = 50 / 125
-[MASTER] 09:50:36.003 [logback-1] WARN  TestChromosome - Functional mock problem: org.evosuite.ga.ConstructionFailedException: Failed to add constructor for org.apache.commons.jxpath.ri.NamespaceResolver due to org.evosuite.ga.ConstructionFailedException: Failed to add constructor for org.apache.commons.jxpath.ri.JXPathContextReferenceImpl due to org.evosuite.ga.ConstructionFailedException: Failed to add constructor for org.apache.commons.jxpath.ri.axes.AttributeContext due to org.evosuite.ga.ConstructionFailedException: Max recursion depth reached
-[MASTER] 09:50:37.979 [logback-1] WARN  TestChromosome - Functional mock problem: org.evosuite.ga.ConstructionFailedException: Failed to add constructor for org.apache.commons.jxpath.ri.JXPathContextReferenceImpl due to org.evosuite.ga.ConstructionFailedException: Failed to add constructor for org.apache.commons.jxpath.ri.axes.AttributeContext due to org.evosuite.ga.ConstructionFailedException: Failed to add constructor for org.apache.commons.jxpath.ri.axes.UnionContext due to org.evosuite.ga.ConstructionFailedException: Max recursion depth reached
-[MASTER] 09:50:40.067 [logback-1] WARN  TestChromosome - Functional mock problem: org.evosuite.ga.ConstructionFailedException: Failed to add constructor for org.apache.commons.jxpath.ri.JXPathContextReferenceImpl due to org.evosuite.ga.ConstructionFailedException: Failed to add constructor for org.apache.commons.jxpath.ri.axes.AttributeContext due to org.evosuite.ga.ConstructionFailedException: Failed to add constructor for org.apache.commons.jxpath.ri.axes.UnionContext due to org.evosuite.ga.ConstructionFailedException: Failed to add constructor for org.apache.commons.jxpath.ri.axes.NodeSetContext due to org.evosuite.ga.ConstructionFailedException: Max recursion depth reached
-[MASTER] 09:50:41.152 [logback-1] WARN  TestChromosome - Functional mock problem: org.evosuite.ga.ConstructionFailedException: Failed to add constructor for org.apache.commons.jxpath.ri.JXPathContextReferenceImpl due to org.evosuite.ga.ConstructionFailedException: Have no generator for class org.apache.commons.jxpath.ri.axes.AttributeContext canUseFunctionalMocks=false, canBeMocked: false
-[MASTER] 09:50:45.366 [logback-1] WARN  TestChromosome - Functional mock problem: org.evosuite.ga.ConstructionFailedException: Failed to add constructor for org.apache.commons.jxpath.ri.JXPathContextReferenceImpl due to org.evosuite.ga.ConstructionFailedException: Failed to add constructor for org.apache.commons.jxpath.ri.axes.AttributeContext due to org.evosuite.ga.ConstructionFailedException: Failed to add constructor for org.apache.commons.jxpath.ri.axes.DescendantContext due to org.evosuite.ga.ConstructionFailedException: Failed to add constructor for org.apache.commons.jxpath.ri.axes.RootContext due to org.evosuite.ga.ConstructionFailedException: Max recursion depth reached
-[MASTER] 09:52:47.929 [logback-2] ERROR TestCluster - Failed to check cache for java.util.List<E> : Type points to itself
-Number of times BBC is called for org.apache.commons.jxpath.ri.axes.AttributeContext.nextNode()Z: I64 Branch 7 IFNE L85 - false: 1020
-Number of times BBC is called for org.apache.commons.jxpath.ri.axes.AttributeContext.setPosition(I)Z: I20 Branch 3 IFNE L64 - true: 6113
-Number of times BBC is called for org.apache.commons.jxpath.ri.axes.AttributeContext.nextNode()Z: I49 Branch 6 IFNONNULL L82 - true: 1020
-Number of times BBC is called for org.apache.commons.jxpath.ri.axes.AttributeContext.nextNode()Z: I64 Branch 7 IFNE L85 - true: 5624
-Number of times BBC is called in total: 13777
-* Search finished after 601s and 6026 generations, 1569854 statements, best individual has fitness: 15.0
+[MASTER] 03:55:10.660 [logback-2] ERROR TestCluster - Failed to check cache for java.util.List<E> : Type points to itself
+* Search finished after 601s and 13339 generations, 3498680 statements, best individual has fitness: 19.0
 * Minimizing test suite
 * Going to analyze the coverage criteria
 * Coverage analysis for criterion LINE
@@ -54,9 +44,9 @@ Number of times BBC is called in total: 13777
 * Total number of goals: 17
 * Number of covered goals: 17
 * Coverage analysis for criterion EXCEPTION
-* Coverage of criterion EXCEPTION: 100%
-* Total number of goals: 10
-* Number of covered goals: 10
+* Coverage of criterion EXCEPTION: 93%
+* Total number of goals: 15
+* Number of covered goals: 14
 * Coverage analysis for criterion WEAKMUTATION
 * Coverage of criterion WEAKMUTATION: 100%
 * Total number of goals: 37
@@ -77,14 +67,44 @@ Number of times BBC is called in total: 13777
 * Coverage of criterion CBRANCH: 100%
 * Total number of goals: 17
 * Number of covered goals: 17
-* Generated 19 tests with total length 132
-* Resulting test suite's coverage: 89% (average coverage for all fitness functions)
+* Generated 23 tests with total length 218
+* Resulting test suite's coverage: 90% (average coverage for all fitness functions)
 * Generating assertions
-* Resulting test suite's mutation score: 84%
+* Resulting test suite's mutation score: 76%
 * Compiling and checking tests
-* Permissions denied during test execution: 
-  - java.lang.RuntimePermission: 
-         writeFileDescriptor: 5
+[MASTER] 04:03:56.998 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 04:04:00.474 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class java.lang.StackOverflowError: null
+[MASTER] 04:04:00.476 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ JXPathContextReferenceImpl jXPathContextReferenceImpl0 = (JXPathContextReferenceImpl)JXPathContext.newContext((Object) null);
+QName qName0 = new QName("I6k Dio?xHM(E`l");
+VariablePointer variablePointer0 = new VariablePointer(qName0);
+RootContext rootContext0 = new RootContext(jXPathContextReferenceImpl0, variablePointer0);
+InitialContext initialContext0 = (InitialContext)rootContext0.getConstantContext("I6k Dio?xHM(E`l");
+Expression[] expressionArray0 = new Expression[1];
+CoreOperationOr coreOperationOr0 = new CoreOperationOr(expressionArray0);
+expressionArray0[0] = (Expression) coreOperationOr0;
+CoreOperationAdd coreOperationAdd0 = new CoreOperationAdd(expressionArray0);
+PredicateContext predicateContext0 = new PredicateContext(initialContext0, coreOperationAdd0);
+NodeNameTest nodeNameTest0 = new NodeNameTest(qName0, "");
+AttributeContext attributeContext0 = new AttributeContext(predicateContext0, nodeNameTest0);
+attributeContext0.nextNode();
+
+[MASTER] 04:04:02.586 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class java.lang.StackOverflowError: null
+[MASTER] 04:04:02.587 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ JXPathContextReferenceImpl jXPathContextReferenceImpl0 = (JXPathContextReferenceImpl)JXPathContext.newContext((Object) null);
+QName qName0 = new QName("I6k Dio?xHM(E`l");
+VariablePointer variablePointer0 = new VariablePointer(qName0);
+RootContext rootContext0 = new RootContext(jXPathContextReferenceImpl0, variablePointer0);
+InitialContext initialContext0 = (InitialContext)rootContext0.getConstantContext("I6k Dio?xHM(E`l");
+Expression[] expressionArray0 = new Expression[1];
+CoreOperationOr coreOperationOr0 = new CoreOperationOr(expressionArray0);
+expressionArray0[0] = (Expression) coreOperationOr0;
+CoreOperationAdd coreOperationAdd0 = new CoreOperationAdd(expressionArray0);
+PredicateContext predicateContext0 = new PredicateContext(initialContext0, coreOperationAdd0);
+NodeNameTest nodeNameTest0 = new NodeNameTest(qName0, "");
+AttributeContext attributeContext0 = new AttributeContext(predicateContext0, nodeNameTest0);
+attributeContext0.setPosition(89);
+
 * Writing tests to file
 * Writing JUnit test case 'AttributeContext_ESTest' to results/JxPath-18/org.apache.commons.jxpath.ri.axes.AttributeContext/BBC-F0-50/tests/18
 * Done!

@@ -21,13 +21,8 @@
 * Starting evolution
 bbc usage percentage is: 50%
 * Initial Number of Goals in DynaMOSA = 69 / 133
-[MASTER] 08:58:32.808 [logback-2] ERROR TestCluster - Failed to check cache for java.util.Comparator<T> : Type points to itself
-Number of times BBC is called for org.jsoup.nodes.Comment.isXmlDeclaration()Z: I15 Branch 3 IFGT L67 - true: 12
-Number of times BBC is called for org.jsoup.nodes.Comment.isXmlDeclaration()Z: I20 Branch 4 IFLE L67 - false: 10
-Number of times BBC is called for org.jsoup.nodes.Comment.outerHtmlHead(Ljava/lang/Appendable;ILorg/jsoup/nodes/Document$OutputSettings;)V: I4 Branch 1 IFEQ L46 - true: 118
-Number of times BBC is called for org.jsoup.nodes.Comment.asXmlDeclaration()Lorg/jsoup/nodes/XmlDeclaration;: I36 Branch 5 IFLE L78 - true: 651
-Number of times BBC is called in total: 791
-* Search finished after 601s and 4300 generations, 1801636 statements, best individual has fitness: 27.0
+[MASTER] 03:22:42.269 [logback-2] ERROR TestCluster - Failed to check cache for java.util.Comparator<T> : Type points to itself
+* Search finished after 601s and 4925 generations, 2031717 statements, best individual has fitness: 30.0
 * Minimizing test suite
 * Going to analyze the coverage criteria
 * Coverage analysis for criterion LINE
@@ -40,8 +35,8 @@ Number of times BBC is called in total: 791
 * Number of covered goals: 16
 * Coverage analysis for criterion EXCEPTION
 * Coverage of criterion EXCEPTION: 95%
-* Total number of goals: 19
-* Number of covered goals: 18
+* Total number of goals: 21
+* Number of covered goals: 20
 * Coverage analysis for criterion WEAKMUTATION
 * Coverage of criterion WEAKMUTATION: 93%
 * Total number of goals: 43
@@ -62,27 +57,30 @@ Number of times BBC is called in total: 791
 * Coverage of criterion CBRANCH: 100%
 * Total number of goals: 16
 * Number of covered goals: 16
-* Generated 31 tests with total length 101
+* Generated 33 tests with total length 117
 * Resulting test suite's coverage: 88% (average coverage for all fitness functions)
 * Generating assertions
 * Resulting test suite's mutation score: 70%
 * Compiling and checking tests
-[MASTER] 09:05:40.349 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class java.lang.OutOfMemoryError: Java heap space
-[MASTER] 09:05:40.349 [logback-1] WARN  JUnitAnalyzer - Failing test:
- Comment comment0 = new Comment("?/N`IwQFFJz", "1;eZ%/T*n@I_]=&{l");
-StringBuilder stringBuilder0 = new StringBuilder("?/N`IwQFFJz");
+[MASTER] 03:25:17.372 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 03:25:17.731 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 03:25:18.082 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 03:25:24.187 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class java.lang.OutOfMemoryError: Java heap space
+[MASTER] 03:25:24.188 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ Comment comment0 = new Comment("tx-0sU", " |");
+StringBuilder stringBuilder0 = new StringBuilder("tx-0sU");
 Document.OutputSettings document_OutputSettings0 = new Document.OutputSettings();
-comment0.outerHtmlHead(stringBuilder0, 2147483645, document_OutputSettings0);
+document_OutputSettings0.indentAmount(21);
+comment0.outerHtmlHead(stringBuilder0, (-141952309), document_OutputSettings0);
 
-[MASTER] 09:05:43.606 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test14 -> class java.lang.StackOverflowError: null
-[MASTER] 09:05:43.608 [logback-1] WARN  JUnitAnalyzer - Failing test:
- Comment comment0 = new Comment("!?@)6mAiKl=?]!w['|D0|");
-comment0.parentNode = (Node) comment0;
+[MASTER] 03:25:27.816 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test14 -> class java.lang.StackOverflowError: null
+[MASTER] 03:25:27.827 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ Comment comment0 = new Comment("xMon+");
+TextNode textNode0 = new TextNode("nullChar");
+textNode0.reparentChild(comment0);
+comment0.reparentChild(textNode0);
 comment0.asXmlDeclaration();
 
-* Permissions denied during test execution: 
-  - java.lang.RuntimePermission: 
-         writeFileDescriptor: 431
 * Writing tests to file
 * Writing JUnit test case 'Comment_ESTest' to results/Jsoup-86/org.jsoup.nodes.Comment/BBC-F0-50/tests/4
 * Done!

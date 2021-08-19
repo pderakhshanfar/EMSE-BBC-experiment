@@ -31,16 +31,8 @@
 * Starting evolution
 bbc usage percentage is: 50%
 * Initial Number of Goals in DynaMOSA = 50 / 125
-[MASTER] 09:50:06.523 [logback-2] ERROR TestCluster - Failed to check cache for java.util.List<E> : Type points to itself
-Number of times BBC is called for org.apache.commons.jxpath.ri.axes.AttributeContext.nextNode()Z: I64 Branch 7 IFNE L85 - false: 5
-Number of times BBC is called for org.apache.commons.jxpath.ri.axes.AttributeContext.setPosition(I)Z: I20 Branch 3 IFNE L64 - true: 8257
-Number of times BBC is called for org.apache.commons.jxpath.ri.axes.AttributeContext.nextNode()Z: I49 Branch 6 IFNONNULL L82 - true: 10
-Number of times BBC is called for org.apache.commons.jxpath.ri.axes.AttributeContext.nextNode()Z: Line 82: 3
-Number of times BBC is called for org.apache.commons.jxpath.ri.axes.AttributeContext.nextNode()Z: I13 Branch 4 IFNE L73 - true: 8
-Number of times BBC is called for org.apache.commons.jxpath.ri.axes.AttributeContext.nextNode()Z: I49 Branch 6 IFNONNULL L82 - false: 3
-Number of times BBC is called for org.apache.commons.jxpath.ri.axes.AttributeContext.nextNode()Z: I64 Branch 7 IFNE L85 - true: 5773
-Number of times BBC is called in total: 14059
-* Search finished after 601s and 10495 generations, 2697553 statements, best individual has fitness: 14.0
+[MASTER] 03:53:57.481 [logback-2] ERROR TestCluster - Failed to check cache for java.util.List<E> : Type points to itself
+* Search finished after 601s and 12450 generations, 3224956 statements, best individual has fitness: 16.0
 * Minimizing test suite
 * Going to analyze the coverage criteria
 * Coverage analysis for criterion LINE
@@ -53,8 +45,8 @@ Number of times BBC is called in total: 14059
 * Number of covered goals: 17
 * Coverage analysis for criterion EXCEPTION
 * Coverage of criterion EXCEPTION: 100%
-* Total number of goals: 9
-* Number of covered goals: 9
+* Total number of goals: 14
+* Number of covered goals: 14
 * Coverage analysis for criterion WEAKMUTATION
 * Coverage of criterion WEAKMUTATION: 100%
 * Total number of goals: 37
@@ -75,32 +67,12 @@ Number of times BBC is called in total: 14059
 * Coverage of criterion CBRANCH: 100%
 * Total number of goals: 17
 * Number of covered goals: 17
-* Generated 16 tests with total length 126
-* Resulting test suite's coverage: 89% (average coverage for all fitness functions)
+* Generated 23 tests with total length 165
+* Resulting test suite's coverage: 90% (average coverage for all fitness functions)
 * Generating assertions
 * Resulting test suite's mutation score: 84%
 * Compiling and checking tests
-[MASTER] 09:58:45.462 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class java.lang.StackOverflowError: null
-[MASTER] 09:58:45.463 [logback-1] WARN  JUnitAnalyzer - Failing test:
- FileSystemHandling.shouldAllThrowIOExceptions();
-JXPathContext jXPathContext0 = JXPathContext.newContext((Object) null);
-Object object0 = new Object();
-QName qName0 = new QName("\"", "\"");
-Locale locale0 = new Locale("", "\"", "\"");
-NodePointer nodePointer0 = NodePointer.newNodePointer(qName0, object0, locale0);
-JXPathContextReferenceImpl jXPathContextReferenceImpl0 = new JXPathContextReferenceImpl(jXPathContext0, jXPathContext0, nodePointer0);
-EvalContext evalContext0 = jXPathContextReferenceImpl0.getAbsoluteRootContext();
-Expression[] expressionArray0 = new Expression[6];
-CoreOperationAdd coreOperationAdd0 = new CoreOperationAdd(expressionArray0);
-expressionArray0[0] = (Expression) coreOperationAdd0;
-PredicateContext predicateContext0 = new PredicateContext(evalContext0, coreOperationAdd0);
-NodeNameTest nodeNameTest0 = new NodeNameTest(qName0, "LlLlT<W.&AA/N");
-AttributeContext attributeContext0 = new AttributeContext(predicateContext0, nodeNameTest0);
-attributeContext0.nextNode();
-
-* Permissions denied during test execution: 
-  - java.lang.RuntimePermission: 
-         writeFileDescriptor: 5
+[MASTER] 04:03:02.742 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
 * Writing tests to file
 * Writing JUnit test case 'AttributeContext_ESTest' to results/JxPath-18/org.apache.commons.jxpath.ri.axes.AttributeContext/BBC-F0-50/tests/5
 * Done!

@@ -21,12 +21,8 @@
 * Starting evolution
 bbc usage percentage is: 50%
 * Initial Number of Goals in DynaMOSA = 69 / 133
-[MASTER] 09:07:01.837 [logback-2] ERROR TestCluster - Failed to check cache for java.util.Comparator<T> : Type points to itself
-Number of times BBC is called for org.jsoup.nodes.Comment.isXmlDeclaration()Z: I15 Branch 3 IFGT L67 - true: 79
-Number of times BBC is called for org.jsoup.nodes.Comment.isXmlDeclaration()Z: I20 Branch 4 IFLE L67 - false: 56
-Number of times BBC is called for org.jsoup.nodes.Comment.asXmlDeclaration()Lorg/jsoup/nodes/XmlDeclaration;: I36 Branch 5 IFLE L78 - true: 102
-Number of times BBC is called in total: 237
-* Search finished after 601s and 3512 generations, 1446172 statements, best individual has fitness: 28.0
+[MASTER] 03:20:36.288 [logback-2] ERROR TestCluster - Failed to check cache for java.util.Comparator<T> : Type points to itself
+* Search finished after 601s and 5221 generations, 2465514 statements, best individual has fitness: 27.0
 * Minimizing test suite
 * Going to analyze the coverage criteria
 * Coverage analysis for criterion LINE
@@ -38,9 +34,9 @@ Number of times BBC is called in total: 237
 * Total number of goals: 16
 * Number of covered goals: 16
 * Coverage analysis for criterion EXCEPTION
-* Coverage of criterion EXCEPTION: 94%
-* Total number of goals: 18
-* Number of covered goals: 17
+* Coverage of criterion EXCEPTION: 95%
+* Total number of goals: 21
+* Number of covered goals: 20
 * Coverage analysis for criterion WEAKMUTATION
 * Coverage of criterion WEAKMUTATION: 93%
 * Total number of goals: 43
@@ -61,20 +57,29 @@ Number of times BBC is called in total: 237
 * Coverage of criterion CBRANCH: 100%
 * Total number of goals: 16
 * Number of covered goals: 16
-* Generated 30 tests with total length 101
+* Generated 33 tests with total length 113
 * Resulting test suite's coverage: 88% (average coverage for all fitness functions)
 * Generating assertions
-* Resulting test suite's mutation score: 79%
+* Resulting test suite's mutation score: 72%
 * Compiling and checking tests
-[MASTER] 09:10:09.736 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test13 -> class java.lang.StackOverflowError: null
-[MASTER] 09:10:09.739 [logback-1] WARN  JUnitAnalyzer - Failing test:
- Comment comment0 = new Comment("z/>", "z/>");
+[MASTER] 03:30:32.349 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 03:30:32.659 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 03:30:32.918 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 03:30:33.200 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 03:30:38.960 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class java.lang.OutOfMemoryError: Java heap space
+[MASTER] 03:30:38.960 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ Comment comment0 = new Comment(">/DB", ">/DB");
+StringBuilder stringBuilder0 = new StringBuilder((CharSequence) ">/DB");
+Document.OutputSettings document_OutputSettings0 = new Document.OutputSettings();
+Document.OutputSettings document_OutputSettings1 = document_OutputSettings0.indentAmount(2108);
+comment0.outerHtmlHead(stringBuilder0, (-141952309), document_OutputSettings1);
+
+[MASTER] 03:30:42.064 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test01 -> class java.lang.StackOverflowError: null
+[MASTER] 03:30:42.066 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ Comment comment0 = new Comment("@3THo}", "@3THo}");
 comment0.setParentNode(comment0);
 comment0.asXmlDeclaration();
 
-* Permissions denied during test execution: 
-  - java.lang.RuntimePermission: 
-         writeFileDescriptor: 66
 * Writing tests to file
 * Writing JUnit test case 'Comment_ESTest' to results/Jsoup-86/org.jsoup.nodes.Comment/BBC-F0-50/tests/27
 * Done!

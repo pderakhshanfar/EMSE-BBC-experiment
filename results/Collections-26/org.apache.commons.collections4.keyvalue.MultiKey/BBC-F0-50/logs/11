@@ -21,18 +21,9 @@
 * Starting evolution
 bbc usage percentage is: 50%
 * Initial Number of Goals in DynaMOSA = 68 / 152
-Number of times BBC is called for org.apache.commons.collections4.keyvalue.MultiKey.<init>(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)V: Line 115: 236346
-Number of times BBC is called for org.apache.commons.collections4.keyvalue.MultiKey.readResolve()Ljava/lang/Object;: Line 279: 346199
-Number of times BBC is called for org.apache.commons.collections4.keyvalue.MultiKey.readResolve()Ljava/lang/Object;: Line 278: 346199
-Number of times BBC is called for org.apache.commons.collections4.keyvalue.MultiKey.readResolve()Ljava/lang/Object;: root-Branch: 346199
-Number of times BBC is called for org.apache.commons.collections4.keyvalue.MultiKey.equals(Ljava/lang/Object;)Z: I4 Branch 3 IF_ACMPNE L221 - false: 40
-Number of times BBC is called for org.apache.commons.collections4.keyvalue.MultiKey.<init>(Ljava/lang/Object;Ljava/lang/Object;)V: Line 67: 237622
-Number of times BBC is called for org.apache.commons.collections4.keyvalue.MultiKey.<init>(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)V: Line 82: 242465
-Number of times BBC is called for org.apache.commons.collections4.keyvalue.MultiKey.<init>(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)V: Line 98: 239479
-Number of times BBC is called in total: 1994549
-* Search finished after 602s and 3707 generations, 2276686 statements, best individual has fitness: 17.0
+* Search finished after 605s and 3491 generations, 2150561 statements, best individual has fitness: 17.0
 * Minimizing test suite
-[MASTER] 21:37:53.380 [logback-1] WARN  TestSuiteMinimizer - Minimization timeout. Roll back to original test suite
+[MASTER] 19:21:53.611 [logback-1] WARN  TestSuiteMinimizer - Minimization timeout. Roll back to original test suite
 * Going to analyze the coverage criteria
 * Coverage analysis for criterion LINE
 * Coverage of criterion LINE: 84%
@@ -66,50 +57,52 @@ Number of times BBC is called in total: 1994549
 * Coverage of criterion CBRANCH: 96%
 * Total number of goals: 23
 * Number of covered goals: 22
-* Generated 13 tests with total length 194
+* Generated 13 tests with total length 184
 * Resulting test suite's coverage: 86% (average coverage for all fitness functions)
 * Generating assertions
 * Resulting test suite's mutation score: 41%
 * Compiling and checking tests
-[MASTER] 21:38:23.808 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class java.lang.StackOverflowError: null
-[MASTER] 21:38:23.811 [logback-1] WARN  JUnitAnalyzer - Failing test:
- MultiKey<String> multiKey0 = new MultiKey<String>("", "", "{nxfHbVC", "", "");
-Integer integer0 = new Integer(28);
-Integer integer1 = new Integer(28);
-MultiKey<Integer> multiKey1 = new MultiKey<Integer>(integer0, integer1, integer0);
-multiKey1.size();
-MultiKey<Object>[] multiKeyArray0 = (MultiKey<Object>[]) Array.newInstance(MultiKey.class, 7);
-Integer integer2 = new Integer(28);
+[MASTER] 19:22:20.745 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 19:22:20.956 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 19:22:21.092 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 19:22:21.188 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 19:22:21.379 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 19:22:21.470 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 19:22:21.592 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 19:22:21.732 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 19:22:21.861 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 19:22:22.011 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 19:22:22.108 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 19:22:22.183 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 19:22:23.309 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 19:22:23.383 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class java.lang.StackOverflowError: null
+[MASTER] 19:22:23.386 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ MultiKey<MultiKey<String>> multiKey0 = new MultiKey<MultiKey<String>>((MultiKey<String>) null, (MultiKey<String>) null, (MultiKey<String>) null, (MultiKey<String>) null, (MultiKey<String>) null);
+MultiKey<Object>[] multiKeyArray0 = (MultiKey<Object>[]) Array.newInstance(MultiKey.class, 5);
+MultiKey<Object> multiKey1 = new MultiKey<Object>((Object) null, (Object) null, (Object) null, (Object) null, multiKey0);
+multiKeyArray0[0] = multiKey1;
+MultiKey<Object> multiKey2 = new MultiKey<Object>(multiKey1, (Object) null, (Object) null, (Object) null, multiKey1);
+multiKeyArray0[1] = multiKey2;
+Integer integer0 = new Integer(1);
+MultiKey<Object> multiKey3 = new MultiKey<Object>(integer0, (Object) null);
+multiKeyArray0[2] = multiKey3;
+MultiKey<Object> multiKey4 = new MultiKey<Object>((Object[]) multiKeyArray0, true);
+MultiKey<Object> multiKey5 = new MultiKey<Object>((Object) null, multiKey1);
 Object object0 = new Object();
-Integer integer3 = new Integer((-1396));
-MultiKey<Object> multiKey2 = new MultiKey<Object>("", integer2, object0, multiKey0, integer3);
-multiKeyArray0[0] = multiKey2;
-MultiKey<Object> multiKey3 = new MultiKey<Object>("", integer0);
-multiKeyArray0[1] = multiKey3;
 Object object1 = new Object();
-MultiKey<Object> multiKey4 = new MultiKey<Object>("", integer1, object1, integer0, "");
-multiKeyArray0[2] = multiKey4;
-MultiKey<String> multiKey5 = new MultiKey<String>((String) null, "", "", (String) null);
-MultiKey<String> multiKey6 = new MultiKey<String>("", "", "ZB)VIJ@c<D", (String) null);
-MultiKey<String> multiKey7 = new MultiKey<String>("MultiKey", "E^'x]]AQi@#g7", (String) null, "%oJ9^i(");
-MultiKey<Object> multiKey8 = new MultiKey<Object>(multiKey6, multiKey7);
-MultiKey<Object> multiKey9 = new MultiKey<Object>(multiKey5, multiKey8);
-multiKeyArray0[3] = multiKey9;
-MultiKey<Object> multiKey10 = new MultiKey<Object>((Object[]) multiKeyArray0, true);
-multiKeyArray0[4] = multiKey10;
-MultiKey<Object> multiKey11 = new MultiKey<Object>((Object[]) multiKeyArray0, true);
-Object object2 = multiKey11.getKey(3);
-MultiKey<Object> multiKey12 = new MultiKey<Object>(object2, "ZB)VIJ@c<D");
-multiKeyArray0[5] = multiKey12;
-MultiKey<Object> multiKey13 = new MultiKey<Object>((Object[]) multiKeyArray0, false);
-multiKeyArray0[6] = multiKey13;
-MultiKey<MultiKey<Object>> multiKey14 = new MultiKey<MultiKey<Object>>(multiKeyArray0);
-multiKey14.toString();
+MultiKey<Object> multiKey6 = new MultiKey<Object>(multiKey5, object0, object1);
+MultiKey<Object> multiKey7 = new MultiKey<Object>(multiKey1, (Object) null, multiKey6, multiKey1, multiKey3);
+multiKey7.getKey(1);
+MultiKey<Object> multiKey8 = new MultiKey<Object>(multiKey4, multiKey4, (Object) null, multiKey4);
+multiKeyArray0[3] = multiKey8;
+MultiKey<Object> multiKey9 = new MultiKey<Object>((Object[]) multiKeyArray0, false);
+multiKeyArray0[4] = multiKey9;
+MultiKey<MultiKey<Object>> multiKey10 = new MultiKey<MultiKey<Object>>(multiKeyArray0);
+multiKey10.toString();
 
-* Permissions denied during test execution: 
-  - java.lang.RuntimePermission: 
-         writeFileDescriptor: 5
+[MASTER] 19:22:23.671 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
 * Writing tests to file
+[MASTER] 19:22:23.956 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
 * Writing JUnit test case 'MultiKey_ESTest' to results/Collections-26/org.apache.commons.collections4.keyvalue.MultiKey/BBC-F0-50/tests/11
 * Done!
 

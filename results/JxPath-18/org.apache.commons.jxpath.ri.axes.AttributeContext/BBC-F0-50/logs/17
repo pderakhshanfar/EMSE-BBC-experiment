@@ -31,11 +31,8 @@
 * Starting evolution
 bbc usage percentage is: 50%
 * Initial Number of Goals in DynaMOSA = 50 / 125
-[MASTER] 09:51:35.057 [logback-2] ERROR TestCluster - Failed to check cache for java.util.List<E> : Type points to itself
-Number of times BBC is called for org.apache.commons.jxpath.ri.axes.AttributeContext.setPosition(I)Z: I20 Branch 3 IFNE L64 - true: 34697
-Number of times BBC is called for org.apache.commons.jxpath.ri.axes.AttributeContext.nextNode()Z: I64 Branch 7 IFNE L85 - true: 27781
-Number of times BBC is called in total: 62478
-* Search finished after 601s and 9803 generations, 2608230 statements, best individual has fitness: 16.0
+[MASTER] 03:55:37.366 [logback-2] ERROR TestCluster - Failed to check cache for java.util.List<E> : Type points to itself
+* Search finished after 601s and 13704 generations, 3499087 statements, best individual has fitness: 18.0
 * Minimizing test suite
 * Going to analyze the coverage criteria
 * Coverage analysis for criterion LINE
@@ -48,8 +45,8 @@ Number of times BBC is called in total: 62478
 * Number of covered goals: 17
 * Coverage analysis for criterion EXCEPTION
 * Coverage of criterion EXCEPTION: 100%
-* Total number of goals: 13
-* Number of covered goals: 13
+* Total number of goals: 16
+* Number of covered goals: 16
 * Coverage analysis for criterion WEAKMUTATION
 * Coverage of criterion WEAKMUTATION: 100%
 * Total number of goals: 37
@@ -70,34 +67,12 @@ Number of times BBC is called in total: 62478
 * Coverage of criterion CBRANCH: 100%
 * Total number of goals: 17
 * Number of covered goals: 17
-* Generated 22 tests with total length 189
+* Generated 23 tests with total length 186
 * Resulting test suite's coverage: 90% (average coverage for all fitness functions)
 * Generating assertions
-* Resulting test suite's mutation score: 95%
+* Resulting test suite's mutation score: 86%
 * Compiling and checking tests
-[MASTER] 10:00:46.749 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class java.lang.StackOverflowError: null
-[MASTER] 10:00:46.751 [logback-1] WARN  JUnitAnalyzer - Failing test:
- Object object0 = new Object();
-JXPathContextReferenceImpl jXPathContextReferenceImpl0 = (JXPathContextReferenceImpl)JXPathContext.newContext(object0);
-QName qName0 = new QName("8W/wC:", "8W/wC:");
-Locale locale0 = Locale.CANADA;
-BeanPointer beanPointer0 = (BeanPointer)NodePointer.newNodePointer(qName0, object0, locale0);
-RootContext rootContext0 = new RootContext(jXPathContextReferenceImpl0, beanPointer0);
-NodeNameTest nodeNameTest0 = new NodeNameTest(qName0);
-AncestorContext ancestorContext0 = new AncestorContext(rootContext0, true, nodeNameTest0);
-Expression[] expressionArray0 = new Expression[10];
-CoreOperationAnd coreOperationAnd0 = new CoreOperationAnd(expressionArray0);
-Step[] stepArray0 = new Step[1];
-ExpressionPath expressionPath0 = new ExpressionPath(coreOperationAnd0, expressionArray0, stepArray0);
-expressionArray0[0] = (Expression) expressionPath0;
-CoreOperationAdd coreOperationAdd0 = new CoreOperationAdd(expressionArray0);
-PredicateContext predicateContext0 = new PredicateContext(ancestorContext0, coreOperationAdd0);
-AttributeContext attributeContext0 = new AttributeContext(predicateContext0, nodeNameTest0);
-attributeContext0.nextNode();
-
-* Permissions denied during test execution: 
-  - java.lang.RuntimePermission: 
-         writeFileDescriptor: 4
+[MASTER] 04:03:50.502 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
 * Writing tests to file
 * Writing JUnit test case 'AttributeContext_ESTest' to results/JxPath-18/org.apache.commons.jxpath.ri.axes.AttributeContext/BBC-F0-50/tests/17
 * Done!

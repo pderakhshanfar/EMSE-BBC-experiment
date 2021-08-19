@@ -21,8 +21,8 @@
 * Starting evolution
 bbc usage percentage is: 50%
 * Initial Number of Goals in DynaMOSA = 1515 / 2854
-[MASTER] 23:07:20.085 [RMI TCP Connection(2)-127.0.0.1] ERROR ExecutionTracer - CurrentThread has not been set!
-[MASTER] 23:07:20.097 [RMI TCP Connection(2)-127.0.0.1] ERROR ExecutionTracer - Thread: Thread[RMI Scheduler(0),5,system]
+[MASTER] 20:16:55.308 [RMI TCP Connection(3)-127.0.0.1] ERROR ExecutionTracer - CurrentThread has not been set!
+[MASTER] 20:16:55.311 [RMI TCP Connection(3)-127.0.0.1] ERROR ExecutionTracer - Thread: Thread[RMI Scheduler(0),5,system]
  -> sun.misc.Unsafe.park(Native Method)
  -> java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:215)
  -> java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:2078)
@@ -33,29 +33,25 @@ bbc usage percentage is: 50%
  -> java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
  -> java.lang.Thread.run(Thread.java:748)
 
-[MASTER] 23:07:20.097 [RMI TCP Connection(2)-127.0.0.1] ERROR ExecutionTracer - Thread: Thread[RMI RenewClean-[127.0.0.1:20644],5,system]
- -> java.lang.Object.wait(Native Method)
- -> java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:144)
- -> sun.rmi.transport.DGCClient$EndpointEntry$RenewCleanThread.run(DGCClient.java:563)
+[MASTER] 20:16:55.311 [RMI TCP Connection(3)-127.0.0.1] ERROR ExecutionTracer - Thread: Thread[RMI TCP Connection(1)-172.17.0.2,5,RMI Runtime]
+ -> java.net.SocketInputStream.socketRead0(Native Method)
+ -> java.net.SocketInputStream.socketRead(SocketInputStream.java:116)
+ -> java.net.SocketInputStream.read(SocketInputStream.java:171)
+ -> java.net.SocketInputStream.read(SocketInputStream.java:141)
+ -> java.io.BufferedInputStream.fill(BufferedInputStream.java:246)
+ -> java.io.BufferedInputStream.read(BufferedInputStream.java:265)
+ -> java.io.FilterInputStream.read(FilterInputStream.java:83)
+ -> sun.rmi.transport.tcp.TCPTransport.handleMessages(TCPTransport.java:555)
+ -> sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run0(TCPTransport.java:834)
+ -> sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.lambda$run$0(TCPTransport.java:688)
+ -> sun.rmi.transport.tcp.TCPTransport$ConnectionHandler$$Lambda$18/836807161.run(Unknown Source)
+ -> java.security.AccessController.doPrivileged(Native Method)
+ -> sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run(TCPTransport.java:687)
+ -> java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+ -> java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
  -> java.lang.Thread.run(Thread.java:748)
 
-[MASTER] 23:07:20.097 [RMI TCP Connection(2)-127.0.0.1] ERROR ExecutionTracer - Thread: Thread[RMI Reaper,5,system]
- -> java.lang.Object.wait(Native Method)
- -> java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:144)
- -> java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:165)
- -> sun.rmi.transport.ObjectTable$Reaper.run(ObjectTable.java:351)
- -> java.lang.Thread.run(Thread.java:748)
-
-[MASTER] 23:07:20.097 [RMI TCP Connection(2)-127.0.0.1] ERROR ExecutionTracer - Thread: Thread[RMI TCP Accept-16734,5,system]
- -> java.net.PlainSocketImpl.socketAccept(Native Method)
- -> java.net.AbstractPlainSocketImpl.accept(AbstractPlainSocketImpl.java:409)
- -> java.net.ServerSocket.implAccept(ServerSocket.java:560)
- -> java.net.ServerSocket.accept(ServerSocket.java:528)
- -> sun.rmi.transport.tcp.TCPTransport$AcceptLoop.executeAcceptLoop(TCPTransport.java:405)
- -> sun.rmi.transport.tcp.TCPTransport$AcceptLoop.run(TCPTransport.java:377)
- -> java.lang.Thread.run(Thread.java:748)
-
-[MASTER] 23:07:20.097 [RMI TCP Connection(2)-127.0.0.1] ERROR ExecutionTracer - Thread: Thread[Thread-2,5,main]
+[MASTER] 20:16:55.311 [RMI TCP Connection(3)-127.0.0.1] ERROR ExecutionTracer - Thread: Thread[Thread-2,5,main]
  -> java.io.FileInputStream.readBytes(Native Method)
  -> java.io.FileInputStream.read(FileInputStream.java:255)
  -> java.io.BufferedInputStream.read1(BufferedInputStream.java:284)
@@ -68,7 +64,112 @@ bbc usage percentage is: 50%
  -> java.io.BufferedReader.read(BufferedReader.java:182)
  -> org.evosuite.utils.ExternalProcessGroupHandler$3.run(ExternalProcessGroupHandler.java:482)
 
-[MASTER] 23:07:20.098 [RMI TCP Connection(2)-127.0.0.1] ERROR ExecutionTracer - Thread: Thread[RMI TCP Connection(2)-127.0.0.1,5,RMI Runtime]
+[MASTER] 20:16:55.311 [RMI TCP Connection(3)-127.0.0.1] ERROR ExecutionTracer - Thread: Thread[pool-3-thread-1,5,main]
+ -> java.net.SocketInputStream.socketRead0(Native Method)
+ -> java.net.SocketInputStream.socketRead(SocketInputStream.java:116)
+ -> java.net.SocketInputStream.read(SocketInputStream.java:171)
+ -> java.net.SocketInputStream.read(SocketInputStream.java:141)
+ -> java.io.BufferedInputStream.fill(BufferedInputStream.java:246)
+ -> java.io.BufferedInputStream.read(BufferedInputStream.java:265)
+ -> java.io.ObjectInputStream$PeekInputStream.peek(ObjectInputStream.java:2758)
+ -> java.io.ObjectInputStream$BlockDataInputStream.peek(ObjectInputStream.java:3065)
+ -> java.io.ObjectInputStream$BlockDataInputStream.peekByte(ObjectInputStream.java:3075)
+ -> java.io.ObjectInputStream.readObject0(ObjectInputStream.java:1617)
+ -> java.io.ObjectInputStream.readObject(ObjectInputStream.java:502)
+ -> java.io.ObjectInputStream.readObject(ObjectInputStream.java:460)
+ -> org.evosuite.utils.LoggingUtils$1$1.call(LoggingUtils.java:152)
+ -> org.evosuite.utils.LoggingUtils$1$1.call(LoggingUtils.java:143)
+ -> java.util.concurrent.FutureTask.run(FutureTask.java:266)
+ -> java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+ -> java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+ -> java.lang.Thread.run(Thread.java:748)
+
+[MASTER] 20:16:55.312 [RMI TCP Connection(3)-127.0.0.1] ERROR ExecutionTracer - Thread: Thread[main,5,main]
+ -> java.net.SocketInputStream.socketRead0(Native Method)
+ -> java.net.SocketInputStream.socketRead(SocketInputStream.java:116)
+ -> java.net.SocketInputStream.read(SocketInputStream.java:171)
+ -> java.net.SocketInputStream.read(SocketInputStream.java:141)
+ -> java.io.BufferedInputStream.fill(BufferedInputStream.java:246)
+ -> java.io.BufferedInputStream.read(BufferedInputStream.java:265)
+ -> java.io.DataInputStream.readByte(DataInputStream.java:265)
+ -> sun.rmi.transport.StreamRemoteCall.executeCall(StreamRemoteCall.java:240)
+ -> sun.rmi.server.UnicastRef.invoke(UnicastRef.java:164)
+ -> java.rmi.server.RemoteObjectInvocationHandler.invokeRemoteMethod(RemoteObjectInvocationHandler.java:235)
+ -> java.rmi.server.RemoteObjectInvocationHandler.invoke(RemoteObjectInvocationHandler.java:180)
+ -> com.sun.proxy.$Proxy7.waitUntilFinished(Unknown Source)
+ -> org.evosuite.utils.ExternalProcessGroupHandler.waitForResult(ExternalProcessGroupHandler.java:694)
+ -> org.evosuite.executionmode.TestGeneration.generateTests(TestGeneration.java:515)
+ -> org.evosuite.executionmode.TestGeneration.executeTestGeneration(TestGeneration.java:80)
+ -> org.evosuite.EvoSuite.parseCommandLine(EvoSuite.java:349)
+ -> org.evosuite.EvoSuite.main(EvoSuite.java:115)
+
+[MASTER] 20:16:55.312 [RMI TCP Connection(3)-127.0.0.1] ERROR ExecutionTracer - Thread: Thread[Thread-3,5,main]
+ -> java.io.FileInputStream.readBytes(Native Method)
+ -> java.io.FileInputStream.read(FileInputStream.java:255)
+ -> java.io.BufferedInputStream.read1(BufferedInputStream.java:284)
+ -> java.io.BufferedInputStream.read(BufferedInputStream.java:345)
+ -> sun.nio.cs.StreamDecoder.readBytes(StreamDecoder.java:284)
+ -> sun.nio.cs.StreamDecoder.implRead(StreamDecoder.java:326)
+ -> sun.nio.cs.StreamDecoder.read(StreamDecoder.java:178)
+ -> java.io.InputStreamReader.read(InputStreamReader.java:184)
+ -> java.io.BufferedReader.fill(BufferedReader.java:161)
+ -> java.io.BufferedReader.read(BufferedReader.java:182)
+ -> org.evosuite.utils.ExternalProcessGroupHandler$4.run(ExternalProcessGroupHandler.java:523)
+
+[MASTER] 20:16:55.312 [RMI TCP Connection(3)-127.0.0.1] ERROR ExecutionTracer - Thread: Thread[Signal Dispatcher,9,system]
+
+[MASTER] 20:16:55.312 [RMI TCP Connection(3)-127.0.0.1] ERROR ExecutionTracer - Thread: Thread[pool-3-thread-3,5,main]
+ -> java.net.SocketInputStream.socketRead0(Native Method)
+ -> java.net.SocketInputStream.socketRead(SocketInputStream.java:116)
+ -> java.net.SocketInputStream.read(SocketInputStream.java:171)
+ -> java.net.SocketInputStream.read(SocketInputStream.java:141)
+ -> java.io.BufferedInputStream.fill(BufferedInputStream.java:246)
+ -> java.io.BufferedInputStream.read(BufferedInputStream.java:265)
+ -> java.io.ObjectInputStream$PeekInputStream.peek(ObjectInputStream.java:2758)
+ -> java.io.ObjectInputStream$BlockDataInputStream.peek(ObjectInputStream.java:3065)
+ -> java.io.ObjectInputStream$BlockDataInputStream.peekByte(ObjectInputStream.java:3075)
+ -> java.io.ObjectInputStream.readObject0(ObjectInputStream.java:1617)
+ -> java.io.ObjectInputStream.readObject(ObjectInputStream.java:502)
+ -> java.io.ObjectInputStream.readObject(ObjectInputStream.java:460)
+ -> org.evosuite.utils.LoggingUtils$1$1.call(LoggingUtils.java:152)
+ -> org.evosuite.utils.LoggingUtils$1$1.call(LoggingUtils.java:143)
+ -> java.util.concurrent.FutureTask.run(FutureTask.java:266)
+ -> java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+ -> java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+ -> java.lang.Thread.run(Thread.java:748)
+
+[MASTER] 20:16:55.312 [RMI TCP Connection(3)-127.0.0.1] ERROR ExecutionTracer - Thread: Thread[RMI Reaper,5,system]
+ -> java.lang.Object.wait(Native Method)
+ -> java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:144)
+ -> java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:165)
+ -> sun.rmi.transport.ObjectTable$Reaper.run(ObjectTable.java:351)
+ -> java.lang.Thread.run(Thread.java:748)
+
+[MASTER] 20:16:55.312 [RMI TCP Connection(3)-127.0.0.1] ERROR ExecutionTracer - Thread: Thread[logback-2,5,main]
+ -> java.lang.Thread.sleep(Native Method)
+ -> ch.qos.logback.core.net.DefaultSocketConnector.call(DefaultSocketConnector.java:73)
+ -> ch.qos.logback.core.net.AbstractSocketAppender.socketConnectionCouldBeEstablished(AbstractSocketAppender.java:209)
+ -> ch.qos.logback.core.net.AbstractSocketAppender.connectSocketAndDispatchEvents(AbstractSocketAppender.java:189)
+ -> ch.qos.logback.core.net.AbstractSocketAppender.access$000(AbstractSocketAppender.java:44)
+ -> ch.qos.logback.core.net.AbstractSocketAppender$1.run(AbstractSocketAppender.java:150)
+ -> java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+ -> java.util.concurrent.FutureTask.run(FutureTask.java:266)
+ -> java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180)
+ -> java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293)
+ -> java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+ -> java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+ -> java.lang.Thread.run(Thread.java:748)
+
+[MASTER] 20:16:55.312 [RMI TCP Connection(3)-127.0.0.1] ERROR ExecutionTracer - Thread: Thread[RMI TCP Accept-16734,5,system]
+ -> java.net.PlainSocketImpl.socketAccept(Native Method)
+ -> java.net.AbstractPlainSocketImpl.accept(AbstractPlainSocketImpl.java:409)
+ -> java.net.ServerSocket.implAccept(ServerSocket.java:560)
+ -> java.net.ServerSocket.accept(ServerSocket.java:528)
+ -> sun.rmi.transport.tcp.TCPTransport$AcceptLoop.executeAcceptLoop(TCPTransport.java:405)
+ -> sun.rmi.transport.tcp.TCPTransport$AcceptLoop.run(TCPTransport.java:377)
+ -> java.lang.Thread.run(Thread.java:748)
+
+[MASTER] 20:16:55.315 [RMI TCP Connection(3)-127.0.0.1] ERROR ExecutionTracer - Thread: Thread[RMI TCP Connection(3)-127.0.0.1,5,RMI Runtime]
  -> java.lang.Thread.dumpThreads(Native Method)
  -> java.lang.Thread.getAllStackTraces(Thread.java:1610)
  -> org.evosuite.testcase.execution.ExecutionTracer.isThreadNeqCurrentThread(ExecutionTracer.java:214)
@@ -148,53 +249,28 @@ bbc usage percentage is: 50%
  -> sun.rmi.transport.tcp.TCPTransport.handleMessages(TCPTransport.java:573)
  -> sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run0(TCPTransport.java:834)
  -> sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.lambda$run$0(TCPTransport.java:688)
- -> sun.rmi.transport.tcp.TCPTransport$ConnectionHandler$$Lambda$18/1134213438.run(Unknown Source)
+ -> sun.rmi.transport.tcp.TCPTransport$ConnectionHandler$$Lambda$18/836807161.run(Unknown Source)
  -> java.security.AccessController.doPrivileged(Native Method)
  -> sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run(TCPTransport.java:687)
  -> java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
  -> java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
  -> java.lang.Thread.run(Thread.java:748)
 
-[MASTER] 23:07:20.099 [RMI TCP Connection(2)-127.0.0.1] ERROR ExecutionTracer - Thread: Thread[pool-3-thread-1,5,main]
- -> java.net.SocketInputStream.socketRead0(Native Method)
- -> java.net.SocketInputStream.socketRead(SocketInputStream.java:116)
- -> java.net.SocketInputStream.read(SocketInputStream.java:171)
- -> java.net.SocketInputStream.read(SocketInputStream.java:141)
- -> java.io.BufferedInputStream.fill(BufferedInputStream.java:246)
- -> java.io.BufferedInputStream.read(BufferedInputStream.java:265)
- -> java.io.ObjectInputStream$PeekInputStream.peek(ObjectInputStream.java:2758)
- -> java.io.ObjectInputStream$BlockDataInputStream.peek(ObjectInputStream.java:3065)
- -> java.io.ObjectInputStream$BlockDataInputStream.peekByte(ObjectInputStream.java:3075)
- -> java.io.ObjectInputStream.readObject0(ObjectInputStream.java:1617)
- -> java.io.ObjectInputStream.readObject(ObjectInputStream.java:502)
- -> java.io.ObjectInputStream.readObject(ObjectInputStream.java:460)
- -> org.evosuite.utils.LoggingUtils$1$1.call(LoggingUtils.java:152)
- -> org.evosuite.utils.LoggingUtils$1$1.call(LoggingUtils.java:143)
- -> java.util.concurrent.FutureTask.run(FutureTask.java:266)
+[MASTER] 20:16:55.315 [RMI TCP Connection(3)-127.0.0.1] ERROR ExecutionTracer - Thread: Thread[Reference Handler,10,system]
+ -> java.lang.Object.wait(Native Method)
+ -> java.lang.Object.wait(Object.java:502)
+ -> java.lang.ref.Reference.tryHandlePending(Reference.java:191)
+ -> java.lang.ref.Reference$ReferenceHandler.run(Reference.java:153)
+
+[MASTER] 20:16:55.315 [RMI TCP Connection(3)-127.0.0.1] ERROR ExecutionTracer - Thread: Thread[process reaper,10,system]
+ -> java.lang.UNIXProcess.waitForProcessExit(Native Method)
+ -> java.lang.UNIXProcess.lambda$initStreams$3(UNIXProcess.java:289)
+ -> java.lang.UNIXProcess$$Lambda$14/764577347.run(Unknown Source)
  -> java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
  -> java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
  -> java.lang.Thread.run(Thread.java:748)
 
-[MASTER] 23:07:20.099 [RMI TCP Connection(2)-127.0.0.1] ERROR ExecutionTracer - Thread: Thread[Finalizer,8,system]
- -> java.lang.Object.wait(Native Method)
- -> java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:144)
- -> java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:165)
- -> java.lang.ref.Finalizer$FinalizerThread.run(Finalizer.java:216)
-
-[MASTER] 23:07:20.099 [RMI TCP Connection(2)-127.0.0.1] ERROR ExecutionTracer - Thread: Thread[Thread-3,5,main]
- -> java.io.FileInputStream.readBytes(Native Method)
- -> java.io.FileInputStream.read(FileInputStream.java:255)
- -> java.io.BufferedInputStream.read1(BufferedInputStream.java:284)
- -> java.io.BufferedInputStream.read(BufferedInputStream.java:345)
- -> sun.nio.cs.StreamDecoder.readBytes(StreamDecoder.java:284)
- -> sun.nio.cs.StreamDecoder.implRead(StreamDecoder.java:326)
- -> sun.nio.cs.StreamDecoder.read(StreamDecoder.java:178)
- -> java.io.InputStreamReader.read(InputStreamReader.java:184)
- -> java.io.BufferedReader.fill(BufferedReader.java:161)
- -> java.io.BufferedReader.read(BufferedReader.java:182)
- -> org.evosuite.utils.ExternalProcessGroupHandler$4.run(ExternalProcessGroupHandler.java:523)
-
-[MASTER] 23:07:20.099 [RMI TCP Connection(2)-127.0.0.1] ERROR ExecutionTracer - Thread: Thread[logback-2,5,main]
+[MASTER] 20:16:55.315 [RMI TCP Connection(3)-127.0.0.1] ERROR ExecutionTracer - Thread: Thread[logback-3,5,main]
  -> java.lang.Thread.sleep(Native Method)
  -> ch.qos.logback.core.net.DefaultSocketConnector.call(DefaultSocketConnector.java:73)
  -> ch.qos.logback.core.net.AbstractSocketAppender.socketConnectionCouldBeEstablished(AbstractSocketAppender.java:209)
@@ -209,7 +285,16 @@ bbc usage percentage is: 50%
  -> java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
  -> java.lang.Thread.run(Thread.java:748)
 
-[MASTER] 23:07:20.099 [RMI TCP Connection(2)-127.0.0.1] ERROR ExecutionTracer - Thread: Thread[RMI TCP Connection(3)-127.0.0.1,5,RMI Runtime]
+[MASTER] 20:16:55.315 [RMI TCP Connection(3)-127.0.0.1] ERROR ExecutionTracer - Thread: Thread[RMI TCP Accept-20643,5,system]
+ -> java.net.PlainSocketImpl.socketAccept(Native Method)
+ -> java.net.AbstractPlainSocketImpl.accept(AbstractPlainSocketImpl.java:409)
+ -> java.net.ServerSocket.implAccept(ServerSocket.java:560)
+ -> java.net.ServerSocket.accept(ServerSocket.java:528)
+ -> sun.rmi.transport.tcp.TCPTransport$AcceptLoop.executeAcceptLoop(TCPTransport.java:405)
+ -> sun.rmi.transport.tcp.TCPTransport$AcceptLoop.run(TCPTransport.java:377)
+ -> java.lang.Thread.run(Thread.java:748)
+
+[MASTER] 20:16:55.315 [RMI TCP Connection(3)-127.0.0.1] ERROR ExecutionTracer - Thread: Thread[RMI TCP Connection(2)-127.0.0.1,5,RMI Runtime]
  -> java.net.SocketInputStream.socketRead0(Native Method)
  -> java.net.SocketInputStream.socketRead(SocketInputStream.java:116)
  -> java.net.SocketInputStream.read(SocketInputStream.java:171)
@@ -220,14 +305,14 @@ bbc usage percentage is: 50%
  -> sun.rmi.transport.tcp.TCPTransport.handleMessages(TCPTransport.java:555)
  -> sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run0(TCPTransport.java:834)
  -> sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.lambda$run$0(TCPTransport.java:688)
- -> sun.rmi.transport.tcp.TCPTransport$ConnectionHandler$$Lambda$18/1134213438.run(Unknown Source)
+ -> sun.rmi.transport.tcp.TCPTransport$ConnectionHandler$$Lambda$18/836807161.run(Unknown Source)
  -> java.security.AccessController.doPrivileged(Native Method)
  -> sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run(TCPTransport.java:687)
  -> java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
  -> java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
  -> java.lang.Thread.run(Thread.java:748)
 
-[MASTER] 23:07:20.099 [RMI TCP Connection(2)-127.0.0.1] ERROR ExecutionTracer - Thread: Thread[pool-3-thread-2,5,main]
+[MASTER] 20:16:55.316 [RMI TCP Connection(3)-127.0.0.1] ERROR ExecutionTracer - Thread: Thread[pool-3-thread-2,5,main]
  -> java.net.SocketInputStream.socketRead0(Native Method)
  -> java.net.SocketInputStream.socketRead(SocketInputStream.java:116)
  -> java.net.SocketInputStream.read(SocketInputStream.java:171)
@@ -247,11 +332,7 @@ bbc usage percentage is: 50%
  -> java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
  -> java.lang.Thread.run(Thread.java:748)
 
-[MASTER] 23:07:20.099 [RMI TCP Connection(2)-127.0.0.1] ERROR ExecutionTracer - Thread: Thread[GC Daemon,2,system]
- -> java.lang.Object.wait(Native Method)
- -> sun.misc.GC$Daemon.run(GC.java:117)
-
-[MASTER] 23:07:20.099 [RMI TCP Connection(2)-127.0.0.1] ERROR ExecutionTracer - Thread: Thread[pool-2-thread-1,5,main]
+[MASTER] 20:16:55.316 [RMI TCP Connection(3)-127.0.0.1] ERROR ExecutionTracer - Thread: Thread[pool-2-thread-1,5,main]
  -> java.net.PlainSocketImpl.socketAccept(Native Method)
  -> java.net.AbstractPlainSocketImpl.accept(AbstractPlainSocketImpl.java:409)
  -> java.net.ServerSocket.implAccept(ServerSocket.java:560)
@@ -263,289 +344,60 @@ bbc usage percentage is: 50%
  -> java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
  -> java.lang.Thread.run(Thread.java:748)
 
-[MASTER] 23:07:20.099 [RMI TCP Connection(2)-127.0.0.1] ERROR ExecutionTracer - Thread: Thread[process reaper,10,system]
- -> java.lang.UNIXProcess.waitForProcessExit(Native Method)
- -> java.lang.UNIXProcess.lambda$initStreams$3(UNIXProcess.java:289)
- -> java.lang.UNIXProcess$$Lambda$14/764577347.run(Unknown Source)
- -> java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
- -> java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
- -> java.lang.Thread.run(Thread.java:748)
-
-[MASTER] 23:07:20.099 [RMI TCP Connection(2)-127.0.0.1] ERROR ExecutionTracer - Thread: Thread[logback-1,5,main]
- -> java.lang.Thread.sleep(Native Method)
- -> ch.qos.logback.core.net.DefaultSocketConnector.call(DefaultSocketConnector.java:73)
- -> ch.qos.logback.core.net.AbstractSocketAppender.socketConnectionCouldBeEstablished(AbstractSocketAppender.java:209)
- -> ch.qos.logback.core.net.AbstractSocketAppender.connectSocketAndDispatchEvents(AbstractSocketAppender.java:189)
- -> ch.qos.logback.core.net.AbstractSocketAppender.access$000(AbstractSocketAppender.java:44)
- -> ch.qos.logback.core.net.AbstractSocketAppender$1.run(AbstractSocketAppender.java:150)
- -> java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
- -> java.util.concurrent.FutureTask.run(FutureTask.java:266)
- -> java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180)
- -> java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293)
- -> java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
- -> java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
- -> java.lang.Thread.run(Thread.java:748)
-
-[MASTER] 23:07:20.100 [RMI TCP Connection(2)-127.0.0.1] ERROR ExecutionTracer - Thread: Thread[main,5,main]
- -> java.net.SocketInputStream.socketRead0(Native Method)
- -> java.net.SocketInputStream.socketRead(SocketInputStream.java:116)
- -> java.net.SocketInputStream.read(SocketInputStream.java:171)
- -> java.net.SocketInputStream.read(SocketInputStream.java:141)
- -> java.io.BufferedInputStream.fill(BufferedInputStream.java:246)
- -> java.io.BufferedInputStream.read(BufferedInputStream.java:265)
- -> java.io.DataInputStream.readByte(DataInputStream.java:265)
- -> sun.rmi.transport.StreamRemoteCall.executeCall(StreamRemoteCall.java:240)
- -> sun.rmi.server.UnicastRef.invoke(UnicastRef.java:164)
- -> java.rmi.server.RemoteObjectInvocationHandler.invokeRemoteMethod(RemoteObjectInvocationHandler.java:235)
- -> java.rmi.server.RemoteObjectInvocationHandler.invoke(RemoteObjectInvocationHandler.java:180)
- -> com.sun.proxy.$Proxy7.waitUntilFinished(Unknown Source)
- -> org.evosuite.utils.ExternalProcessGroupHandler.waitForResult(ExternalProcessGroupHandler.java:694)
- -> org.evosuite.executionmode.TestGeneration.generateTests(TestGeneration.java:515)
- -> org.evosuite.executionmode.TestGeneration.executeTestGeneration(TestGeneration.java:80)
- -> org.evosuite.EvoSuite.parseCommandLine(EvoSuite.java:349)
- -> org.evosuite.EvoSuite.main(EvoSuite.java:115)
-
-[MASTER] 23:07:20.100 [RMI TCP Connection(2)-127.0.0.1] ERROR ExecutionTracer - Thread: Thread[pool-3-thread-3,5,main]
- -> java.net.SocketInputStream.socketRead0(Native Method)
- -> java.net.SocketInputStream.socketRead(SocketInputStream.java:116)
- -> java.net.SocketInputStream.read(SocketInputStream.java:171)
- -> java.net.SocketInputStream.read(SocketInputStream.java:141)
- -> java.io.BufferedInputStream.fill(BufferedInputStream.java:246)
- -> java.io.BufferedInputStream.read(BufferedInputStream.java:265)
- -> java.io.ObjectInputStream$PeekInputStream.peek(ObjectInputStream.java:2758)
- -> java.io.ObjectInputStream$BlockDataInputStream.peek(ObjectInputStream.java:3065)
- -> java.io.ObjectInputStream$BlockDataInputStream.peekByte(ObjectInputStream.java:3075)
- -> java.io.ObjectInputStream.readObject0(ObjectInputStream.java:1617)
- -> java.io.ObjectInputStream.readObject(ObjectInputStream.java:502)
- -> java.io.ObjectInputStream.readObject(ObjectInputStream.java:460)
- -> org.evosuite.utils.LoggingUtils$1$1.call(LoggingUtils.java:152)
- -> org.evosuite.utils.LoggingUtils$1$1.call(LoggingUtils.java:143)
- -> java.util.concurrent.FutureTask.run(FutureTask.java:266)
- -> java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
- -> java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
- -> java.lang.Thread.run(Thread.java:748)
-
-[MASTER] 23:07:20.100 [RMI TCP Connection(2)-127.0.0.1] ERROR ExecutionTracer - Thread: Thread[RMI TCP Connection(1)-172.17.0.2,5,RMI Runtime]
- -> java.net.SocketInputStream.socketRead0(Native Method)
- -> java.net.SocketInputStream.socketRead(SocketInputStream.java:116)
- -> java.net.SocketInputStream.read(SocketInputStream.java:171)
- -> java.net.SocketInputStream.read(SocketInputStream.java:141)
- -> java.io.BufferedInputStream.fill(BufferedInputStream.java:246)
- -> java.io.BufferedInputStream.read(BufferedInputStream.java:265)
- -> java.io.FilterInputStream.read(FilterInputStream.java:83)
- -> sun.rmi.transport.tcp.TCPTransport.handleMessages(TCPTransport.java:555)
- -> sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run0(TCPTransport.java:834)
- -> sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.lambda$run$0(TCPTransport.java:688)
- -> sun.rmi.transport.tcp.TCPTransport$ConnectionHandler$$Lambda$18/1134213438.run(Unknown Source)
- -> java.security.AccessController.doPrivileged(Native Method)
- -> sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run(TCPTransport.java:687)
- -> java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
- -> java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
- -> java.lang.Thread.run(Thread.java:748)
-
-[MASTER] 23:07:20.100 [RMI TCP Connection(2)-127.0.0.1] ERROR ExecutionTracer - Thread: Thread[RMI TCP Accept-20643,5,system]
- -> java.net.PlainSocketImpl.socketAccept(Native Method)
- -> java.net.AbstractPlainSocketImpl.accept(AbstractPlainSocketImpl.java:409)
- -> java.net.ServerSocket.implAccept(ServerSocket.java:560)
- -> java.net.ServerSocket.accept(ServerSocket.java:528)
- -> sun.rmi.transport.tcp.TCPTransport$AcceptLoop.executeAcceptLoop(TCPTransport.java:405)
- -> sun.rmi.transport.tcp.TCPTransport$AcceptLoop.run(TCPTransport.java:377)
- -> java.lang.Thread.run(Thread.java:748)
-
-[MASTER] 23:07:20.100 [RMI TCP Connection(2)-127.0.0.1] ERROR ExecutionTracer - Thread: Thread[logback-3,5,main]
- -> java.lang.Thread.sleep(Native Method)
- -> ch.qos.logback.core.net.DefaultSocketConnector.call(DefaultSocketConnector.java:73)
- -> ch.qos.logback.core.net.AbstractSocketAppender.socketConnectionCouldBeEstablished(AbstractSocketAppender.java:209)
- -> ch.qos.logback.core.net.AbstractSocketAppender.connectSocketAndDispatchEvents(AbstractSocketAppender.java:189)
- -> ch.qos.logback.core.net.AbstractSocketAppender.access$000(AbstractSocketAppender.java:44)
- -> ch.qos.logback.core.net.AbstractSocketAppender$1.run(AbstractSocketAppender.java:150)
- -> java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
- -> java.util.concurrent.FutureTask.run(FutureTask.java:266)
- -> java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180)
- -> java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293)
- -> java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
- -> java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
- -> java.lang.Thread.run(Thread.java:748)
-
-[MASTER] 23:07:20.100 [RMI TCP Connection(2)-127.0.0.1] ERROR ExecutionTracer - Thread: Thread[Signal Dispatcher,9,system]
-
-[MASTER] 23:07:20.100 [RMI TCP Connection(2)-127.0.0.1] ERROR ExecutionTracer - Thread: Thread[Reference Handler,10,system]
+[MASTER] 20:16:55.316 [RMI TCP Connection(3)-127.0.0.1] ERROR ExecutionTracer - Thread: Thread[GC Daemon,2,system]
  -> java.lang.Object.wait(Native Method)
- -> java.lang.Object.wait(Object.java:502)
- -> java.lang.ref.Reference.tryHandlePending(Reference.java:191)
- -> java.lang.ref.Reference$ReferenceHandler.run(Reference.java:153)
+ -> sun.misc.GC$Daemon.run(GC.java:117)
 
-Number of times BBC is called for org.apache.commons.csv.CSVFormat.getHeader()[Ljava/lang/String;: I4 Branch 34 IFNULL L669 - false: 11
-Number of times BBC is called for org.apache.commons.csv.CSVFormat.getAllowMissingColumnNames()Z: root-Branch: 142
-Number of times BBC is called for org.apache.commons.csv.CSVFormat.toString()Ljava/lang/String;: I173 Branch 107 IFNULL L1184 - false: 697
-Number of times BBC is called for org.apache.commons.csv.CSVFormat.printAndQuote(Ljava/lang/Object;Ljava/lang/CharSequence;IILjava/lang/Appendable;Z)V: I60 Branch 73 IFNE L1020 - true: 414
-Number of times BBC is called for org.apache.commons.csv.CSVFormat.isLineBreak(C)Z: I7 Branch 2 IF_ICMPNE L392 - false: 5830
-Number of times BBC is called for org.apache.commons.csv.CSVFormat.validate()V: I200 Branch 129 IFEQ L1254 - false: 134
-Number of times BBC is called for org.apache.commons.csv.CSVFormat.printAndQuote(Ljava/lang/Object;Ljava/lang/CharSequence;IILjava/lang/Appendable;Z)V: I60 Branch 73 IFNE L1020 - false: 335
-Number of times BBC is called for org.apache.commons.csv.CSVFormat.toString()Ljava/lang/String;: I87 Branch 102 IFEQ L1166 - false: 63
-Number of times BBC is called for org.apache.commons.csv.CSVFormat.getHeaderComments()[Ljava/lang/String;: I4 Branch 35 IFNULL L678 - false: 234
-Number of times BBC is called for org.apache.commons.csv.CSVFormat.withHeader(Ljava/lang/Class;)Lorg/apache/commons/csv/CSVFormat;: I7 Branch 138 IFNULL L1432 - true: 934
-Number of times BBC is called for org.apache.commons.csv.CSVFormat.printAndEscape(Ljava/lang/CharSequence;IILjava/lang/Appendable;)V: I54 Branch 63 IF_ICMPLE L973 - false: 285
-Number of times BBC is called for org.apache.commons.csv.CSVFormat.print(Ljava/lang/Object;Ljava/lang/Appendable;Z)V: I22 Branch 52 IFEQ L934 - false: 26
-Number of times BBC is called for org.apache.commons.csv.CSVFormat.printAndEscape(Ljava/lang/CharSequence;IILjava/lang/Appendable;)V: I40 Branch 59 IF_ICMPEQ L971 - true: 802
-Number of times BBC is called for org.apache.commons.csv.CSVFormat.withEscape(Ljava/lang/Character;)Lorg/apache/commons/csv/CSVFormat;: I4 Branch 137 IFEQ L1376 - false: 16778
-Number of times BBC is called for org.apache.commons.csv.CSVFormat.printAndEscape(Ljava/lang/CharSequence;IILjava/lang/Appendable;)V: I110 Branch 66 IF_ICMPLE L992 - true: 403
-Number of times BBC is called for org.apache.commons.csv.CSVFormat.hashCode()I: I24 Branch 36 IFNONNULL L785 - true: 2596
-Number of times BBC is called for org.apache.commons.csv.CSVFormat.printAndEscape(Ljava/lang/CharSequence;IILjava/lang/Appendable;)V: I110 Branch 66 IF_ICMPLE L992 - false: 241
-Number of times BBC is called for org.apache.commons.csv.CSVFormat.trim(Ljava/lang/CharSequence;)Ljava/lang/CharSequence;: I33 Branch 114 IF_ICMPGT L1215 - false: 129
-Number of times BBC is called for org.apache.commons.csv.CSVFormat.printAndQuote(Ljava/lang/Object;Ljava/lang/CharSequence;IILjava/lang/Appendable;Z)V: I278 Branch 94 IF_ICMPNE L1091 - false: 80
-Number of times BBC is called for org.apache.commons.csv.CSVFormat.getRecordSeparator()Ljava/lang/String;: Line 748: 45
-Number of times BBC is called for org.apache.commons.csv.CSVFormat.equals(Ljava/lang/Object;)Z: I39 Branch 9 IF_ICMPEQ L552 - true: 20
-Number of times BBC is called for org.apache.commons.csv.CSVFormat.printAndQuote(Ljava/lang/Object;Ljava/lang/CharSequence;IILjava/lang/Appendable;Z)V: I48 Branch 72 TABLESWITCH L1015 Default-Case - true: 68920
-Number of times BBC is called for org.apache.commons.csv.CSVFormat.trim(Ljava/lang/CharSequence;)Ljava/lang/CharSequence;: I60 Branch 118 IF_ICMPGE L1221 - false: 1125
-Number of times BBC is called for org.apache.commons.csv.CSVFormat.printAndQuote(Ljava/lang/Object;Ljava/lang/CharSequence;IILjava/lang/Appendable;Z)V: I203 Branch 91 IFNE L1068 - true: 81
-Number of times BBC is called for org.apache.commons.csv.CSVFormat.print(Ljava/io/File;Ljava/nio/charset/Charset;)Lorg/apache/commons/csv/CSVPrinter;: Line 890: 45
-Number of times BBC is called for org.apache.commons.csv.CSVFormat.isEscapeCharacterSet()Z: I4 Branch 47 IFNULL L816 - false: 6
-Number of times BBC is called for org.apache.commons.csv.CSVFormat.print(Ljava/lang/Object;Ljava/lang/CharSequence;IILjava/lang/Appendable;Z)V: I26 Branch 56 IFEQ L947 - true: 54
-Number of times BBC is called for org.apache.commons.csv.CSVFormat.validate()V: I77 Branch 123 IF_ICMPNE L1239 - false: 35
-Number of times BBC is called for org.apache.commons.csv.CSVFormat.equals(Ljava/lang/Object;)Z: I137 Branch 20 IFNONNULL L579 - true: 484
-Number of times BBC is called for org.apache.commons.csv.CSVFormat.printAndEscape(Ljava/lang/CharSequence;IILjava/lang/Appendable;)V: Line 995: 241
-Number of times BBC is called for org.apache.commons.csv.CSVFormat.withCommentMarker(Ljava/lang/Character;)Lorg/apache/commons/csv/CSVFormat;: I4 Branch 135 IFEQ L1327 - false: 4225
-Number of times BBC is called for org.apache.commons.csv.CSVFormat.printAndEscape(Ljava/lang/CharSequence;IILjava/lang/Appendable;)V: I46 Branch 61 IF_ICMPEQ L971 - true: 642
-Number of times BBC is called for org.apache.commons.csv.CSVFormat.isLineBreak(Ljava/lang/Character;)Z: I7 Branch 4 IFEQ L404 - false: 11557
-Number of times BBC is called for org.apache.commons.csv.CSVFormat.printAndEscape(Ljava/lang/CharSequence;IILjava/lang/Appendable;)V: I54 Branch 63 IF_ICMPLE L973 - true: 563
-Number of times BBC is called for org.apache.commons.csv.CSVFormat.printAndEscape(Ljava/lang/CharSequence;IILjava/lang/Appendable;)V: I67 Branch 64 IF_ICMPNE L976 - false: 417
-Number of times BBC is called for org.apache.commons.csv.CSVFormat$Predefined.<init>(Ljava/lang/String;ILorg/apache/commons/csv/CSVFormat;)V: Line 206: 226954
-Number of times BBC is called for org.apache.commons.csv.CSVFormat.trim(Ljava/lang/CharSequence;)Ljava/lang/CharSequence;: I42 Branch 115 IF_ICMPGE L1218 - true: 51
-Number of times BBC is called for org.apache.commons.csv.CSVFormat$Predefined.<init>(Ljava/lang/String;ILorg/apache/commons/csv/CSVFormat;)V: Line 205: 226954
-Number of times BBC is called for org.apache.commons.csv.CSVFormat.toString()Ljava/lang/String;: I43 Branch 100 IFEQ L1158 - true: 63
-Number of times BBC is called for org.apache.commons.csv.CSVFormat.format([Ljava/lang/Object;)Ljava/lang/String;: I31 Branch 30 IFNULL L620 - true: 106282
-Number of times BBC is called for org.apache.commons.csv.CSVFormat$Predefined.<init>(Ljava/lang/String;ILorg/apache/commons/csv/CSVFormat;)V: Line 204: 226954
-Number of times BBC is called for org.apache.commons.csv.CSVFormat.printAndQuote(Ljava/lang/Object;Ljava/lang/CharSequence;IILjava/lang/Appendable;Z)V: I88 Branch 75 IFEQ L1032 - false: 42
-Number of times BBC is called for org.apache.commons.csv.CSVFormat.withHeader(Ljava/sql/ResultSetMetaData;)Lorg/apache/commons/csv/CSVFormat;: I25 Branch 142 IF_ICMPGE L1503 - false: 30665
-Number of times BBC is called for org.apache.commons.csv.CSVFormat.equals(Ljava/lang/Object;)Z: I188 Branch 25 IF_ICMPEQ L592 - false: 289
-Number of times BBC is called for org.apache.commons.csv.CSVFormat.equals(Ljava/lang/Object;)Z: I111 Branch 17 IFNONNULL L572 - false: 284
-Number of times BBC is called for org.apache.commons.csv.CSVFormat.trim(Ljava/lang/CharSequence;)Ljava/lang/CharSequence;: I57 Branch 117 IFGT L1221 - true: 186
-Number of times BBC is called for org.apache.commons.csv.CSVFormat.trim(Ljava/lang/CharSequence;)Ljava/lang/CharSequence;: I28 Branch 113 IF_ICMPGE L1215 - true: 122
-Number of times BBC is called for org.apache.commons.csv.CSVFormat.printAndQuote(Ljava/lang/Object;Ljava/lang/CharSequence;IILjava/lang/Appendable;Z)V: I48 Branch 70 TABLESWITCH L1015 Case 3 - true: 459
-Number of times BBC is called for org.apache.commons.csv.CSVFormat.equals(Ljava/lang/Object;)Z: I225 Branch 29 IFGT L602 - false: 473
-Number of times BBC is called for org.apache.commons.csv.CSVFormat.equals(Ljava/lang/Object;)Z: I4 Branch 6 IF_ACMPNE L541 - false: 21
-Number of times BBC is called for org.apache.commons.csv.CSVFormat.equals(Ljava/lang/Object;)Z: I166 Branch 23 IFNE L586 - false: 6
-Number of times BBC is called for org.apache.commons.csv.CSVFormat.equals(Ljava/lang/Object;)Z: I199 Branch 26 IF_ICMPEQ L595 - false: 414
-Number of times BBC is called for org.apache.commons.csv.CSVFormat.equals(Ljava/lang/Object;)Z: I111 Branch 17 IFNONNULL L572 - true: 290
-Number of times BBC is called for org.apache.commons.csv.CSVFormat.trim(Ljava/lang/CharSequence;)Ljava/lang/CharSequence;: I28 Branch 113 IF_ICMPGE L1215 - false: 74
-Number of times BBC is called for org.apache.commons.csv.CSVFormat.withQuote(Ljava/lang/Character;)Lorg/apache/commons/csv/CSVFormat;: I4 Branch 143 IFEQ L1678 - false: 16276
-Number of times BBC is called for org.apache.commons.csv.CSVFormat.equals(Ljava/lang/Object;)Z: I213 Branch 28 IFNULL L599 - false: 4646
-Number of times BBC is called for org.apache.commons.csv.CSVFormat.printAndQuote(Ljava/lang/Object;Ljava/lang/CharSequence;IILjava/lang/Appendable;Z)V: I163 Branch 88 IF_ICMPNE L1049 - false: 140
-Number of times BBC is called for org.apache.commons.csv.CSVFormat.printAndEscape(Ljava/lang/CharSequence;IILjava/lang/Appendable;)V: I49 Branch 62 IF_ICMPNE L971 - false: 285
-Number of times BBC is called for org.apache.commons.csv.CSVFormat.printAndQuote(Ljava/lang/Object;Ljava/lang/CharSequence;IILjava/lang/Appendable;Z)V: I88 Branch 75 IFEQ L1032 - true: 45
-Number of times BBC is called for org.apache.commons.csv.CSVFormat.print(Ljava/lang/Object;Ljava/lang/CharSequence;IILjava/lang/Appendable;Z)V: I42 Branch 57 IFEQ L950 - true: 54
-Number of times BBC is called for org.apache.commons.csv.CSVFormat.printAndQuote(Ljava/lang/Object;Ljava/lang/CharSequence;IILjava/lang/Appendable;Z)V: I84 Branch 74 IFGT L1027 - false: 42
-Number of times BBC is called for org.apache.commons.csv.CSVFormat.print(Ljava/lang/Object;Ljava/lang/CharSequence;IILjava/lang/Appendable;Z)V: I42 Branch 57 IFEQ L950 - false: 54
-Number of times BBC is called for org.apache.commons.csv.CSVFormat.print(Ljava/nio/file/Path;Ljava/nio/charset/Charset;)Lorg/apache/commons/csv/CSVPrinter;: root-Branch: 45
-Number of times BBC is called for org.apache.commons.csv.CSVFormat.toString()Ljava/lang/String;: I153 Branch 106 IFEQ L1180 - false: 20
-Number of times BBC is called for org.apache.commons.csv.CSVFormat.printAndQuote(Ljava/lang/Object;Ljava/lang/CharSequence;IILjava/lang/Appendable;Z)V: I116 Branch 80 IF_ICMPLE L1039 - true: 36
-Number of times BBC is called for org.apache.commons.csv.CSVFormat.printAndQuote(Ljava/lang/Object;Ljava/lang/CharSequence;IILjava/lang/Appendable;Z)V: I123 Branch 82 IF_ICMPLE L1039 - false: 283
-Number of times BBC is called for org.apache.commons.csv.CSVFormat.equals(Ljava/lang/Object;)Z: I213 Branch 28 IFNULL L599 - true: 1523
-Number of times BBC is called for org.apache.commons.csv.CSVFormat.printAndQuote(Ljava/lang/Object;Ljava/lang/CharSequence;IILjava/lang/Appendable;Z)V: I245 Branch 92 IFNE L1078 - false: 608
-Number of times BBC is called for org.apache.commons.csv.CSVFormat.printAndQuote(Ljava/lang/Object;Ljava/lang/CharSequence;IILjava/lang/Appendable;Z)V: I154 Branch 85 IF_ICMPEQ L1049 - true: 2676
-Number of times BBC is called for org.apache.commons.csv.CSVFormat.printAndQuote(Ljava/lang/Object;Ljava/lang/CharSequence;IILjava/lang/Appendable;Z)V: I245 Branch 92 IFNE L1078 - true: 54
-Number of times BBC is called for org.apache.commons.csv.CSVFormat.format([Ljava/lang/Object;)Ljava/lang/String;: Line 622: 106282
-Number of times BBC is called for org.apache.commons.csv.CSVFormat.withDelimiter(C)Lorg/apache/commons/csv/CSVFormat;: I4 Branch 136 IFEQ L1345 - false: 3936
-Number of times BBC is called for org.apache.commons.csv.CSVFormat.printAndQuote(Ljava/lang/Object;Ljava/lang/CharSequence;IILjava/lang/Appendable;Z)V: I112 Branch 79 IF_ICMPLT L1039 - true: 165
-Number of times BBC is called for org.apache.commons.csv.CSVFormat.hashCode()I: I58 Branch 38 IFNONNULL L787 - true: 5
-Number of times BBC is called for org.apache.commons.csv.CSVFormat.print(Ljava/nio/file/Path;Ljava/nio/charset/Charset;)Lorg/apache/commons/csv/CSVPrinter;: Line 910: 45
-Number of times BBC is called for org.apache.commons.csv.CSVFormat.format([Ljava/lang/Object;)Ljava/lang/String;: I33 Branch 31 IFNULL L620 - false: 106282
-Number of times BBC is called for org.apache.commons.csv.CSVFormat.printAndQuote(Ljava/lang/Object;Ljava/lang/CharSequence;IILjava/lang/Appendable;Z)V: I48 Branch 68 TABLESWITCH L1015 Case 1 - true: 54
-Number of times BBC is called for org.apache.commons.csv.CSVFormat.toString()Ljava/lang/String;: I109 Branch 103 IFNULL L1170 - true: 1706
-Number of times BBC is called for org.apache.commons.csv.CSVFormat.equals(Ljava/lang/Object;)Z: I90 Branch 15 IFNULL L566 - false: 826
-Number of times BBC is called for org.apache.commons.csv.CSVFormat.equals(Ljava/lang/Object;)Z: I102 Branch 16 IFNE L569 - true: 290
-Number of times BBC is called for org.apache.commons.csv.CSVFormat.toString()Ljava/lang/String;: I21 Branch 99 IFEQ L1154 - false: 6
-Number of times BBC is called for org.apache.commons.csv.CSVFormat.println(Ljava/lang/Appendable;)V: I4 Branch 95 IFEQ L1118 - false: 11
-Number of times BBC is called for org.apache.commons.csv.CSVFormat.equals(Ljava/lang/Object;)Z: I90 Branch 15 IFNULL L566 - true: 284
-Number of times BBC is called for org.apache.commons.csv.CSVFormat.printAndEscape(Ljava/lang/CharSequence;IILjava/lang/Appendable;)V: I77 Branch 65 IF_ICMPNE L978 - false: 479
-Number of times BBC is called for org.apache.commons.csv.CSVFormat.println(Ljava/lang/Appendable;)V: I16 Branch 96 IFNULL L1121 - true: 56
-Number of times BBC is called for org.apache.commons.csv.CSVFormat.printAndQuote(Ljava/lang/Object;Ljava/lang/CharSequence;IILjava/lang/Appendable;Z)V: I195 Branch 90 IF_ICMPGT L1061 - false: 240
-Number of times BBC is called for org.apache.commons.csv.CSVFormat.equals(Ljava/lang/Object;)Z: I76 Branch 13 IFNE L562 - false: 744
-Number of times BBC is called for org.apache.commons.csv.CSVFormat.validate()V: I5 Branch 119 IFEQ L1230 - false: 126097
-Number of times BBC is called for org.apache.commons.csv.CSVFormat.equals(Ljava/lang/Object;)Z: I50 Branch 10 IF_ACMPEQ L555 - true: 20
-Number of times BBC is called for org.apache.commons.csv.CSVFormat.printAndQuote(Ljava/lang/Object;Ljava/lang/CharSequence;IILjava/lang/Appendable;Z)V: I133 Branch 83 IF_ICMPGT L1041 - false: 93
-Number of times BBC is called for org.apache.commons.csv.CSVFormat.printAndEscape(Ljava/lang/CharSequence;IILjava/lang/Appendable;)V: I29 Branch 58 IF_ICMPGE L969 - false: 241
-Number of times BBC is called for org.apache.commons.csv.CSVFormat.hashCode()I: I139 Branch 43 IFEQ L792 - false: 5
-Number of times BBC is called for org.apache.commons.csv.CSVFormat.equals(Ljava/lang/Object;)Z: I50 Branch 10 IF_ACMPEQ L555 - false: 1398
-Number of times BBC is called for org.apache.commons.csv.CSVFormat.hashCode()I: I109 Branch 41 IFEQ L790 - false: 18
-Number of times BBC is called for org.apache.commons.csv.CSVFormat.print(Ljava/io/File;Ljava/nio/charset/Charset;)Lorg/apache/commons/csv/CSVPrinter;: root-Branch: 45
-Number of times BBC is called for org.apache.commons.csv.CSVFormat.printAndEscape(Ljava/lang/CharSequence;IILjava/lang/Appendable;)V: I29 Branch 58 IF_ICMPGE L969 - true: 241
-Number of times BBC is called for org.apache.commons.csv.CSVFormat.trim(Ljava/lang/CharSequence;)Ljava/lang/CharSequence;: I4 Branch 112 IFEQ L1208 - true: 74
-Number of times BBC is called for org.apache.commons.csv.CSVFormat.hashCode()I: I154 Branch 44 IFEQ L793 - false: 5
-Number of times BBC is called for org.apache.commons.csv.CSVFormat.equals(Ljava/lang/Object;)Z: I116 Branch 18 IFNULL L573 - false: 640
-Number of times BBC is called for org.apache.commons.csv.CSVFormat.equals(Ljava/lang/Object;)Z: I64 Branch 12 IFNULL L559 - true: 1129
-Number of times BBC is called for org.apache.commons.csv.CSVFormat.printAndQuote(Ljava/lang/Object;Ljava/lang/CharSequence;IILjava/lang/Appendable;Z)V: I119 Branch 81 IF_ICMPLT L1039 - true: 75
-Number of times BBC is called for org.apache.commons.csv.CSVFormat.equals(Ljava/lang/Object;)Z: I64 Branch 12 IFNULL L559 - false: 1069
-Number of times BBC is called for org.apache.commons.csv.CSVFormat.getNullString()Ljava/lang/String;: root-Branch: 343
-Number of times BBC is called for org.apache.commons.csv.CSVFormat.format([Ljava/lang/Object;)Ljava/lang/String;: I67 Branch 33 IFNULL L620 - true: 41731
-Number of times BBC is called for org.apache.commons.csv.CSVFormat.equals(Ljava/lang/Object;)Z: I154 Branch 22 IFGT L583 - false: 1528
-Number of times BBC is called for org.apache.commons.csv.CSVFormat.validate()V: I239 Branch 131 IF_ACMPNE L1259 - false: 35
-Number of times BBC is called for org.apache.commons.csv.CSVFormat.printAndQuote(Ljava/lang/Object;Ljava/lang/CharSequence;IILjava/lang/Appendable;Z)V: I48 Branch 71 TABLESWITCH L1015 Case 4 - false: 54
-Number of times BBC is called for org.apache.commons.csv.CSVFormat.hashCode()I: I124 Branch 42 IFEQ L791 - false: 808
-Number of times BBC is called for org.apache.commons.csv.CSVFormat.getRecordSeparator()Ljava/lang/String;: root-Branch: 45
-Number of times BBC is called for org.apache.commons.csv.CSVFormat.equals(Ljava/lang/Object;)Z: I59 Branch 11 IFNONNULL L558 - false: 1069
-Number of times BBC is called for org.apache.commons.csv.CSVFormat.equals(Ljava/lang/Object;)Z: I154 Branch 22 IFGT L583 - true: 484
-Number of times BBC is called for org.apache.commons.csv.CSVFormat.isLineBreak(C)Z: I4 Branch 1 IF_ICMPEQ L392 - true: 7780
-Number of times BBC is called for org.apache.commons.csv.CSVFormat.equals(Ljava/lang/Object;)Z: I142 Branch 21 IFNULL L580 - false: 5156
-Number of times BBC is called for org.apache.commons.csv.CSVFormat.equals(Ljava/lang/Object;)Z: I208 Branch 27 IFNONNULL L598 - false: 1523
-Number of times BBC is called for org.apache.commons.csv.CSVFormat.printAndQuote(Ljava/lang/Object;Ljava/lang/CharSequence;IILjava/lang/Appendable;Z)V: I157 Branch 86 IF_ICMPEQ L1049 - true: 6309
-Number of times BBC is called for org.apache.commons.csv.CSVFormat.hashCode()I: I169 Branch 45 IFNONNULL L794 - false: 1922
-Number of times BBC is called for org.apache.commons.csv.CSVFormat.printAndEscape(Ljava/lang/CharSequence;IILjava/lang/Appendable;)V: Line 976: 571
-Number of times BBC is called for org.apache.commons.csv.CSVFormat.printAndQuote(Ljava/lang/Object;Ljava/lang/CharSequence;IILjava/lang/Appendable;Z)V: I178 Branch 89 IFNE L1056 - true: 343
-Number of times BBC is called for org.apache.commons.csv.CSVFormat.equals(Ljava/lang/Object;)Z: I177 Branch 24 IF_ICMPEQ L589 - false: 20
-Number of times BBC is called for org.apache.commons.csv.CSVFormat.getNullString()Ljava/lang/String;: Line 721: 343
-Number of times BBC is called for org.apache.commons.csv.CSVFormat.printAndQuote(Ljava/lang/Object;Ljava/lang/CharSequence;IILjava/lang/Appendable;Z)V: I106 Branch 77 IF_ICMPLT L1039 - true: 36
-Number of times BBC is called for org.apache.commons.csv.CSVFormat.toStringArray([Ljava/lang/Object;)[Ljava/lang/String;: I34 Branch 111 IFNONNULL L1202 - false: 10
-Number of times BBC is called for org.apache.commons.csv.CSVFormat.equals(Ljava/lang/Object;)Z: I85 Branch 14 IFNONNULL L565 - false: 284
-Number of times BBC is called for org.apache.commons.csv.CSVFormat.printAndEscape(Ljava/lang/CharSequence;IILjava/lang/Appendable;)V: Line 966: 241
-Number of times BBC is called for org.apache.commons.csv.CSVFormat.printAndEscape(Ljava/lang/CharSequence;IILjava/lang/Appendable;)V: Line 967: 241
-Number of times BBC is called for org.apache.commons.csv.CSVFormat.printAndEscape(Ljava/lang/CharSequence;IILjava/lang/Appendable;)V: Line 964: 241
-Number of times BBC is called for org.apache.commons.csv.CSVFormat.printAndQuote(Ljava/lang/Object;Ljava/lang/CharSequence;IILjava/lang/Appendable;Z)V: I160 Branch 87 IF_ICMPEQ L1049 - true: 55
-Number of times BBC is called for org.apache.commons.csv.CSVFormat.printAndEscape(Ljava/lang/CharSequence;IILjava/lang/Appendable;)V: Line 962: 241
-Number of times BBC is called for org.apache.commons.csv.CSVFormat.printAndEscape(Ljava/lang/CharSequence;IILjava/lang/Appendable;)V: Line 963: 241
-Number of times BBC is called for org.apache.commons.csv.CSVFormat.printAndEscape(Ljava/lang/CharSequence;IILjava/lang/Appendable;)V: Line 992: 241
-Number of times BBC is called for org.apache.commons.csv.CSVFormat.withHeader(Ljava/sql/ResultSet;)Lorg/apache/commons/csv/CSVFormat;: I4 Branch 140 IFNULL L1469 - true: 4
-Number of times BBC is called for org.apache.commons.csv.CSVFormat.printAndQuote(Ljava/lang/Object;Ljava/lang/CharSequence;IILjava/lang/Appendable;Z)V: I109 Branch 78 IF_ICMPLE L1039 - true: 49
-Number of times BBC is called for org.apache.commons.csv.CSVFormat.printAndQuote(Ljava/lang/Object;Ljava/lang/CharSequence;IILjava/lang/Appendable;Z)V: I37 Branch 67 IFNONNULL L1012 - true: 54
-Number of times BBC is called for org.apache.commons.csv.CSVFormat.printAndEscape(Ljava/lang/CharSequence;IILjava/lang/Appendable;)V: Line 985: 571
-Number of times BBC is called for org.apache.commons.csv.CSVFormat.printAndEscape(Ljava/lang/CharSequence;IILjava/lang/Appendable;)V: Line 982: 571
-Number of times BBC is called for org.apache.commons.csv.CSVFormat.printAndEscape(Ljava/lang/CharSequence;IILjava/lang/Appendable;)V: Line 983: 571
-Number of times BBC is called for org.apache.commons.csv.CSVFormat.printAndQuote(Ljava/lang/Object;Ljava/lang/CharSequence;IILjava/lang/Appendable;Z)V: I48 Branch 69 TABLESWITCH L1015 Case 2 - true: 335
-Number of times BBC is called for org.apache.commons.csv.CSVFormat.equals(Ljava/lang/Object;)Z: I128 Branch 19 IFNE L576 - true: 6
-Number of times BBC is called for org.apache.commons.csv.CSVFormat.getAllowMissingColumnNames()Z: Line 633: 142
-Number of times BBC is called for org.apache.commons.csv.CSVFormat.trim(Ljava/lang/CharSequence;)Ljava/lang/CharSequence;: I49 Branch 116 IF_ICMPGT L1218 - false: 930
-Number of times BBC is called for org.apache.commons.csv.CSVFormat.equals(Ljava/lang/Object;)Z: I128 Branch 19 IFNE L576 - false: 240
-Number of times BBC is called for org.apache.commons.csv.CSVFormat.format([Ljava/lang/Object;)Ljava/lang/String;: I65 Branch 32 IFNULL L620 - false: 23
-Number of times BBC is called for org.apache.commons.csv.CSVFormat.print(Ljava/lang/Object;Ljava/lang/Appendable;Z)V: I8 Branch 51 IFNONNULL L932 - true: 44
-Number of times BBC is called for org.apache.commons.csv.CSVFormat.equals(Ljava/lang/Object;)Z: I12 Branch 7 IFNONNULL L544 - false: 618
-Number of times BBC is called for org.apache.commons.csv.CSVFormat.format([Ljava/lang/Object;)Ljava/lang/String;: I65 Branch 32 IFNULL L620 - true: 41739
-Number of times BBC is called for org.apache.commons.csv.CSVFormat.isQuoteCharacterSet()Z: I4 Branch 49 IFNULL L834 - true: 83
-Number of times BBC is called for org.apache.commons.csv.CSVFormat.printAndEscape(Ljava/lang/CharSequence;IILjava/lang/Appendable;)V: I43 Branch 60 IF_ICMPEQ L971 - true: 756
-Number of times BBC is called in total: 1437156
-* Search finished after 602s and 2299 generations, 1023899 statements, best individual has fitness: 144.0
+[MASTER] 20:16:55.316 [RMI TCP Connection(3)-127.0.0.1] ERROR ExecutionTracer - Thread: Thread[logback-1,5,main]
+ -> java.lang.Thread.sleep(Native Method)
+ -> ch.qos.logback.core.net.DefaultSocketConnector.call(DefaultSocketConnector.java:73)
+ -> ch.qos.logback.core.net.AbstractSocketAppender.socketConnectionCouldBeEstablished(AbstractSocketAppender.java:209)
+ -> ch.qos.logback.core.net.AbstractSocketAppender.connectSocketAndDispatchEvents(AbstractSocketAppender.java:189)
+ -> ch.qos.logback.core.net.AbstractSocketAppender.access$000(AbstractSocketAppender.java:44)
+ -> ch.qos.logback.core.net.AbstractSocketAppender$1.run(AbstractSocketAppender.java:150)
+ -> java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+ -> java.util.concurrent.FutureTask.run(FutureTask.java:266)
+ -> java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180)
+ -> java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293)
+ -> java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+ -> java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+ -> java.lang.Thread.run(Thread.java:748)
+
+[MASTER] 20:16:55.316 [RMI TCP Connection(3)-127.0.0.1] ERROR ExecutionTracer - Thread: Thread[RMI RenewClean-[127.0.0.1:20644],5,system]
+ -> java.lang.Object.wait(Native Method)
+ -> java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:144)
+ -> sun.rmi.transport.DGCClient$EndpointEntry$RenewCleanThread.run(DGCClient.java:563)
+ -> java.lang.Thread.run(Thread.java:748)
+
+[MASTER] 20:16:55.316 [RMI TCP Connection(3)-127.0.0.1] ERROR ExecutionTracer - Thread: Thread[Finalizer,8,system]
+ -> java.lang.Object.wait(Native Method)
+ -> java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:144)
+ -> java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:165)
+ -> java.lang.ref.Finalizer$FinalizerThread.run(Finalizer.java:216)
+
+* Search finished after 602s and 1655 generations, 672419 statements, best individual has fitness: 159.0
 * Minimizing test suite
 * Going to analyze the coverage criteria
 * Coverage analysis for criterion LINE
-* Coverage of criterion LINE: 99%
+* Coverage of criterion LINE: 98%
 * Total number of goals: 336
-* Number of covered goals: 331
+* Number of covered goals: 328
 * Coverage analysis for criterion BRANCH
 * Coverage of criterion BRANCH: 98%
 * Total number of goals: 331
-* Number of covered goals: 325
+* Number of covered goals: 323
 * Coverage analysis for criterion EXCEPTION
 * Coverage of criterion EXCEPTION: 100%
-* Total number of goals: 36
-* Number of covered goals: 36
+* Total number of goals: 37
+* Number of covered goals: 37
 * Coverage analysis for criterion WEAKMUTATION
 * Coverage of criterion WEAKMUTATION: 98%
 * Total number of goals: 898
-* Number of covered goals: 883
+* Number of covered goals: 879
 * Coverage analysis for criterion OUTPUT
-* Coverage of criterion OUTPUT: 92%
+* Coverage of criterion OUTPUT: 91%
 * Total number of goals: 828
-* Number of covered goals: 759
+* Number of covered goals: 756
 * Coverage analysis for criterion METHOD
 * Coverage of criterion METHOD: 100%
 * Total number of goals: 65
@@ -557,16 +409,210 @@ Number of times BBC is called in total: 1437156
 * Coverage analysis for criterion CBRANCH
 * Coverage of criterion CBRANCH: 95%
 * Total number of goals: 331
-* Number of covered goals: 316
-* Generated 315 tests with total length 1120
+* Number of covered goals: 314
+* Generated 305 tests with total length 1070
 * Resulting test suite's coverage: 91% (average coverage for all fitness functions)
 * Generating assertions
-* Resulting test suite's mutation score: 41%
-[MASTER] 23:19:03.050 [logback-1] WARN  SimpleMutationAssertionGenerator - Reached maximum time to generate assertions, aborting assertion generation
+[MASTER] 20:28:20.410 [logback-1] WARN  SimpleMutationAssertionGenerator - Assertion minimization is taking too long (0.7945333333333333% of time used, but only 51/305 tests minimized), falling back to using all assertions
+* Resulting test suite's mutation score: 30%
 * Compiling and checking tests
+[MASTER] 20:28:35.845 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 20:28:35.986 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 20:28:36.204 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 20:28:42.989 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class java.lang.SecurityException: Security manager blocks ("java.lang.RuntimePermission" "writeFileDescriptor")
+java.lang.Thread.getStackTrace(Thread.java:1559)
+org.evosuite.runtime.sandbox.MSecurityManager.checkPermission(MSecurityManager.java:433)
+java.lang.SecurityManager.checkWrite(SecurityManager.java:954)
+java.io.FileOutputStream.<init>(FileOutputStream.java:245)
+java.io.FileWriter.<init>(FileWriter.java:116)
+org.evosuite.runtime.mock.java.io.MockFileWriter.<init>(MockFileWriter.java:79)
+org.apache.commons.csv.CSVFormat_405_tmp__ESTest.test0(CSVFormat_405_tmp__ESTest.java:90)
+sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+java.lang.reflect.Method.invoke(Method.java:498)
+org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)
+org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56)
+org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+org.junit.internal.runners.statements.FailOnTimeout$CallableStatement.call(FailOnTimeout.java:288)
+org.junit.internal.runners.statements.FailOnTimeout$CallableStatement.call(FailOnTimeout.java:282)
+java.util.concurrent.FutureTask.run(FutureTask.java:266)
+java.lang.Thread.run(Thread.java:748)
+
+[MASTER] 20:28:42.990 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ CSVFormat cSVFormat0 = CSVFormat.INFORMIX_UNLOAD_CSV;
+assertEquals("\n", cSVFormat0.getRecordSeparator());
+assertFalse(cSVFormat0.getTrailingDelimiter());
+assertFalse(cSVFormat0.isCommentMarkerSet());
+assertFalse(cSVFormat0.getIgnoreHeaderCase());
+assertTrue(cSVFormat0.getIgnoreEmptyLines());
+assertTrue(cSVFormat0.isQuoteCharacterSet());
+assertFalse(cSVFormat0.isEscapeCharacterSet());
+assertFalse(cSVFormat0.getSkipHeaderRecord());
+assertEquals(',', cSVFormat0.getDelimiter());
+assertNull(cSVFormat0.getCommentMarker());
+assertEquals('\"', (char)cSVFormat0.getQuoteCharacter());
+assertFalse(cSVFormat0.getAllowMissingColumnNames());
+assertNull(cSVFormat0.getQuoteMode());
+assertFalse(cSVFormat0.getIgnoreSurroundingSpaces());
+assertFalse(cSVFormat0.getTrim());
+assertNull(cSVFormat0.getEscapeCharacter());
+assertFalse(cSVFormat0.isNullStringSet());
+assertNull(cSVFormat0.getNullString());
+assertNotNull(cSVFormat0);
+
+CSVFormat cSVFormat1 = cSVFormat0.withTrailingDelimiter();
+assertEquals("\n", cSVFormat0.getRecordSeparator());
+assertFalse(cSVFormat0.getTrailingDelimiter());
+assertFalse(cSVFormat0.isCommentMarkerSet());
+assertFalse(cSVFormat0.getIgnoreHeaderCase());
+assertTrue(cSVFormat0.getIgnoreEmptyLines());
+assertTrue(cSVFormat0.isQuoteCharacterSet());
+assertFalse(cSVFormat0.isEscapeCharacterSet());
+assertFalse(cSVFormat0.getSkipHeaderRecord());
+assertEquals(',', cSVFormat0.getDelimiter());
+assertNull(cSVFormat0.getCommentMarker());
+assertEquals('\"', (char)cSVFormat0.getQuoteCharacter());
+assertFalse(cSVFormat0.getAllowMissingColumnNames());
+assertNull(cSVFormat0.getQuoteMode());
+assertFalse(cSVFormat0.getIgnoreSurroundingSpaces());
+assertFalse(cSVFormat0.getTrim());
+assertNull(cSVFormat0.getEscapeCharacter());
+assertFalse(cSVFormat0.isNullStringSet());
+assertNull(cSVFormat0.getNullString());
+assertFalse(cSVFormat1.isCommentMarkerSet());
+assertEquals("\n", cSVFormat1.getRecordSeparator());
+assertFalse(cSVFormat1.getIgnoreHeaderCase());
+assertTrue(cSVFormat1.getIgnoreEmptyLines());
+assertTrue(cSVFormat1.isQuoteCharacterSet());
+assertFalse(cSVFormat1.isEscapeCharacterSet());
+assertFalse(cSVFormat1.getAllowMissingColumnNames());
+assertEquals(',', cSVFormat1.getDelimiter());
+assertFalse(cSVFormat1.getSkipHeaderRecord());
+assertNull(cSVFormat1.getCommentMarker());
+assertEquals('\"', (char)cSVFormat1.getQuoteCharacter());
+assertNull(cSVFormat1.getQuoteMode());
+assertNull(cSVFormat1.getEscapeCharacter());
+assertFalse(cSVFormat1.isNullStringSet());
+assertTrue(cSVFormat1.getTrailingDelimiter());
+assertNull(cSVFormat1.getNullString());
+assertFalse(cSVFormat1.getTrim());
+assertFalse(cSVFormat1.getIgnoreSurroundingSpaces());
+assertNotNull(cSVFormat1);
+assertTrue(cSVFormat1.equals((Object)cSVFormat0));
+assertNotSame(cSVFormat0, cSVFormat1);
+assertNotSame(cSVFormat1, cSVFormat0);
+
+FileDescriptor fileDescriptor0 = new FileDescriptor();
+assertFalse(fileDescriptor0.valid());
+assertNotNull(fileDescriptor0);
+
+MockFileWriter mockFileWriter0 = new MockFileWriter(fileDescriptor0);
+assertNotNull(mockFileWriter0);
+
+cSVFormat1.println(mockFileWriter0);
+
+[MASTER] 20:28:49.701 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class java.lang.SecurityException: Security manager blocks ("java.lang.RuntimePermission" "writeFileDescriptor")
+java.lang.Thread.getStackTrace(Thread.java:1559)
+org.evosuite.runtime.sandbox.MSecurityManager.checkPermission(MSecurityManager.java:433)
+java.lang.SecurityManager.checkWrite(SecurityManager.java:954)
+java.io.FileOutputStream.<init>(FileOutputStream.java:245)
+java.io.FileWriter.<init>(FileWriter.java:116)
+org.evosuite.runtime.mock.java.io.MockFileWriter.<init>(MockFileWriter.java:79)
+org.apache.commons.csv.CSVFormat_414_tmp__ESTest.test0(CSVFormat_414_tmp__ESTest.java:95)
+sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+java.lang.reflect.Method.invoke(Method.java:498)
+org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)
+org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56)
+org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+org.junit.internal.runners.statements.FailOnTimeout$CallableStatement.call(FailOnTimeout.java:288)
+org.junit.internal.runners.statements.FailOnTimeout$CallableStatement.call(FailOnTimeout.java:282)
+java.util.concurrent.FutureTask.run(FutureTask.java:266)
+java.lang.Thread.run(Thread.java:748)
+
+[MASTER] 20:28:49.702 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ CSVFormat cSVFormat0 = CSVFormat.RFC4180;
+assertFalse(cSVFormat0.isEscapeCharacterSet());
+assertNull(cSVFormat0.getCommentMarker());
+assertNull(cSVFormat0.getQuoteMode());
+assertEquals("\r\n", cSVFormat0.getRecordSeparator());
+assertFalse(cSVFormat0.isNullStringSet());
+assertFalse(cSVFormat0.getTrim());
+assertNull(cSVFormat0.getNullString());
+assertFalse(cSVFormat0.getIgnoreSurroundingSpaces());
+assertFalse(cSVFormat0.getAllowMissingColumnNames());
+assertEquals(',', cSVFormat0.getDelimiter());
+assertNull(cSVFormat0.getEscapeCharacter());
+assertFalse(cSVFormat0.getTrailingDelimiter());
+assertFalse(cSVFormat0.isCommentMarkerSet());
+assertFalse(cSVFormat0.getIgnoreHeaderCase());
+assertFalse(cSVFormat0.getIgnoreEmptyLines());
+assertEquals('\"', (char)cSVFormat0.getQuoteCharacter());
+assertFalse(cSVFormat0.getSkipHeaderRecord());
+assertTrue(cSVFormat0.isQuoteCharacterSet());
+assertNotNull(cSVFormat0);
+
+RowSetMetaDataImpl rowSetMetaDataImpl0 = new RowSetMetaDataImpl();
+assertNotNull(rowSetMetaDataImpl0);
+
+CSVFormat cSVFormat1 = cSVFormat0.withHeader((ResultSetMetaData) rowSetMetaDataImpl0);
+assertFalse(cSVFormat0.isEscapeCharacterSet());
+assertNull(cSVFormat0.getCommentMarker());
+assertNull(cSVFormat0.getQuoteMode());
+assertEquals("\r\n", cSVFormat0.getRecordSeparator());
+assertFalse(cSVFormat0.isNullStringSet());
+assertFalse(cSVFormat0.getTrim());
+assertNull(cSVFormat0.getNullString());
+assertFalse(cSVFormat0.getIgnoreSurroundingSpaces());
+assertFalse(cSVFormat0.getAllowMissingColumnNames());
+assertEquals(',', cSVFormat0.getDelimiter());
+assertNull(cSVFormat0.getEscapeCharacter());
+assertFalse(cSVFormat0.getTrailingDelimiter());
+assertFalse(cSVFormat0.isCommentMarkerSet());
+assertFalse(cSVFormat0.getIgnoreHeaderCase());
+assertFalse(cSVFormat0.getIgnoreEmptyLines());
+assertEquals('\"', (char)cSVFormat0.getQuoteCharacter());
+assertFalse(cSVFormat0.getSkipHeaderRecord());
+assertTrue(cSVFormat0.isQuoteCharacterSet());
+assertNull(cSVFormat1.getNullString());
+assertFalse(cSVFormat1.getTrailingDelimiter());
+assertEquals('\"', (char)cSVFormat1.getQuoteCharacter());
+assertFalse(cSVFormat1.getAllowMissingColumnNames());
+assertFalse(cSVFormat1.getIgnoreSurroundingSpaces());
+assertNull(cSVFormat1.getEscapeCharacter());
+assertFalse(cSVFormat1.getIgnoreEmptyLines());
+assertFalse(cSVFormat1.isNullStringSet());
+assertFalse(cSVFormat1.getTrim());
+assertNull(cSVFormat1.getCommentMarker());
+assertNull(cSVFormat1.getQuoteMode());
+assertEquals(',', cSVFormat1.getDelimiter());
+assertFalse(cSVFormat1.getSkipHeaderRecord());
+assertEquals("\r\n", cSVFormat1.getRecordSeparator());
+assertTrue(cSVFormat1.isQuoteCharacterSet());
+assertFalse(cSVFormat1.isCommentMarkerSet());
+assertFalse(cSVFormat1.getIgnoreHeaderCase());
+assertFalse(cSVFormat1.isEscapeCharacterSet());
+assertNotNull(cSVFormat1);
+assertFalse(cSVFormat1.equals((Object)cSVFormat0));
+assertNotSame(cSVFormat0, cSVFormat1);
+assertNotSame(cSVFormat1, cSVFormat0);
+
+FileDescriptor fileDescriptor0 = new FileDescriptor();
+assertFalse(fileDescriptor0.valid());
+assertNotNull(fileDescriptor0);
+
+MockFileWriter mockFileWriter0 = new MockFileWriter(fileDescriptor0);
+assertNotNull(mockFileWriter0);
+
+cSVFormat1.print((Appendable) mockFileWriter0);
+
 * Permissions denied during test execution: 
   - java.lang.RuntimePermission: 
-         writeFileDescriptor: 280
+         writeFileDescriptor: 3
 * Writing tests to file
 * Writing JUnit test case 'CSVFormat_ESTest' to results/Csv-14/org.apache.commons.csv.CSVFormat/BBC-F0-50/tests/25
 * Done!

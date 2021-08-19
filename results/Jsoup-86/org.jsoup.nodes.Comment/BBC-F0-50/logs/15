@@ -21,12 +21,9 @@
 * Starting evolution
 bbc usage percentage is: 50%
 * Initial Number of Goals in DynaMOSA = 69 / 133
-Number of times BBC is called for org.jsoup.nodes.Comment.isXmlDeclaration()Z: I15 Branch 3 IFGT L67 - true: 30
-Number of times BBC is called for org.jsoup.nodes.Comment.isXmlDeclaration()Z: I20 Branch 4 IFLE L67 - false: 152
-Number of times BBC is called for org.jsoup.nodes.Comment.outerHtmlHead(Ljava/lang/Appendable;ILorg/jsoup/nodes/Document$OutputSettings;)V: I4 Branch 1 IFEQ L46 - true: 1023
-Number of times BBC is called for org.jsoup.nodes.Comment.asXmlDeclaration()Lorg/jsoup/nodes/XmlDeclaration;: I36 Branch 5 IFLE L78 - true: 495
-Number of times BBC is called in total: 1700
-* Search finished after 602s and 3795 generations, 1928486 statements, best individual has fitness: 26.0
+[MASTER] 03:18:36.013 [logback-2] ERROR TestCluster - Failed to check cache for java.util.Comparator<T> : Type points to itself
+[MASTER] 03:25:58.891 [logback-2] ERROR TestCluster - Failed to check cache for java.util.List<E> : Type points to itself
+* Search finished after 601s and 4405 generations, 2105215 statements, best individual has fitness: 29.0
 * Minimizing test suite
 * Going to analyze the coverage criteria
 * Coverage analysis for criterion LINE
@@ -39,8 +36,8 @@ Number of times BBC is called in total: 1700
 * Number of covered goals: 16
 * Coverage analysis for criterion EXCEPTION
 * Coverage of criterion EXCEPTION: 95%
-* Total number of goals: 19
-* Number of covered goals: 18
+* Total number of goals: 21
+* Number of covered goals: 20
 * Coverage analysis for criterion WEAKMUTATION
 * Coverage of criterion WEAKMUTATION: 93%
 * Total number of goals: 43
@@ -61,27 +58,108 @@ Number of times BBC is called in total: 1700
 * Coverage of criterion CBRANCH: 100%
 * Total number of goals: 16
 * Number of covered goals: 16
-* Generated 31 tests with total length 99
+* Generated 32 tests with total length 109
 * Resulting test suite's coverage: 88% (average coverage for all fitness functions)
 * Generating assertions
-* Resulting test suite's mutation score: 65%
+* Resulting test suite's mutation score: 74%
 * Compiling and checking tests
-[MASTER] 09:08:31.753 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class java.lang.OutOfMemoryError: Java heap space
-[MASTER] 09:08:31.753 [logback-1] WARN  JUnitAnalyzer - Failing test:
- Comment comment0 = new Comment("!/x!Z");
-StringBuilder stringBuilder0 = new StringBuilder((CharSequence) "!/x!Z");
-Document.OutputSettings document_OutputSettings0 = new Document.OutputSettings();
-comment0.outerHtmlHead(stringBuilder0, 1192721831, document_OutputSettings0);
+[MASTER] 03:26:32.877 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 03:26:33.190 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 03:26:33.495 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 03:26:33.822 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 03:26:34.116 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 03:26:34.345 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 03:26:34.597 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 03:26:34.838 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 03:26:35.073 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 03:26:35.338 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 03:26:35.342 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class java.lang.SecurityException: Security manager blocks ("java.lang.RuntimePermission" "writeFileDescriptor")
+java.lang.Thread.getStackTrace(Thread.java:1559)
+org.evosuite.runtime.sandbox.MSecurityManager.checkPermission(MSecurityManager.java:433)
+java.lang.SecurityManager.checkWrite(SecurityManager.java:954)
+java.io.FileOutputStream.<init>(FileOutputStream.java:245)
+java.io.FileWriter.<init>(FileWriter.java:116)
+org.evosuite.runtime.mock.java.io.MockFileWriter.<init>(MockFileWriter.java:79)
+org.jsoup.nodes.Comment_41_tmp__ESTest.test0(Comment_41_tmp__ESTest.java:25)
+sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+java.lang.reflect.Method.invoke(Method.java:498)
+org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)
+org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56)
+org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+org.junit.internal.runners.statements.FailOnTimeout$CallableStatement.call(FailOnTimeout.java:288)
+org.junit.internal.runners.statements.FailOnTimeout$CallableStatement.call(FailOnTimeout.java:282)
+java.util.concurrent.FutureTask.run(FutureTask.java:266)
+java.lang.Thread.run(Thread.java:748)
 
-[MASTER] 09:08:35.073 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test14 -> class java.lang.StackOverflowError: null
-[MASTER] 09:08:35.076 [logback-1] WARN  JUnitAnalyzer - Failing test:
- Comment comment0 = new Comment("{/h|5");
-comment0.parentNode = (Node) comment0;
+[MASTER] 03:26:35.343 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ Comment comment0 = new Comment("   ", "   ");
+FileDescriptor fileDescriptor0 = new FileDescriptor();
+MockFileWriter mockFileWriter0 = new MockFileWriter(fileDescriptor0);
+comment0.value = (Object) mockFileWriter0;
+comment0.asXmlDeclaration();
+
+[MASTER] 03:26:38.858 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 03:26:39.081 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 03:26:39.307 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 03:26:39.547 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 03:26:39.901 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 03:26:39.902 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class java.lang.SecurityException: Security manager blocks ("java.lang.RuntimePermission" "writeFileDescriptor")
+java.lang.Thread.getStackTrace(Thread.java:1559)
+org.evosuite.runtime.sandbox.MSecurityManager.checkPermission(MSecurityManager.java:433)
+java.lang.SecurityManager.checkWrite(SecurityManager.java:954)
+java.io.FileOutputStream.<init>(FileOutputStream.java:245)
+java.io.FileWriter.<init>(FileWriter.java:116)
+org.evosuite.runtime.mock.java.io.MockFileWriter.<init>(MockFileWriter.java:79)
+org.jsoup.nodes.Comment_47_tmp__ESTest.test0(Comment_47_tmp__ESTest.java:25)
+sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+java.lang.reflect.Method.invoke(Method.java:498)
+org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)
+org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56)
+org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+org.junit.internal.runners.statements.FailOnTimeout$CallableStatement.call(FailOnTimeout.java:288)
+org.junit.internal.runners.statements.FailOnTimeout$CallableStatement.call(FailOnTimeout.java:282)
+java.util.concurrent.FutureTask.run(FutureTask.java:266)
+java.lang.Thread.run(Thread.java:748)
+
+[MASTER] 03:26:39.903 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ Comment comment0 = new Comment("   ", "   ");
+FileDescriptor fileDescriptor0 = new FileDescriptor();
+MockFileWriter mockFileWriter0 = new MockFileWriter(fileDescriptor0);
+comment0.value = (Object) mockFileWriter0;
+comment0.isXmlDeclaration();
+
+[MASTER] 03:26:43.502 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 03:26:43.817 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 03:26:44.046 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 03:26:44.293 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 03:26:46.064 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 03:26:46.064 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class java.lang.OutOfMemoryError: Java heap space
+[MASTER] 03:26:46.065 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ Comment comment0 = new Comment("tMtcvegQn");
+CharArrayWriter charArrayWriter0 = new CharArrayWriter(3803);
+Document.OutputSettings document_OutputSettings0 = new Document.OutputSettings();
+Document.OutputSettings document_OutputSettings1 = document_OutputSettings0.indentAmount(353);
+comment0.outerHtmlHead(charArrayWriter0, (-55675502), document_OutputSettings1);
+
+[MASTER] 03:26:46.354 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 03:26:46.611 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 03:26:46.820 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 03:26:47.166 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 03:26:49.659 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test12 -> class java.lang.StackOverflowError: null
+[MASTER] 03:26:49.661 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ Comment comment0 = new Comment("*/s3X(nGVw$HB36}KB");
+comment0.setParentNode(comment0);
 comment0.asXmlDeclaration();
 
 * Permissions denied during test execution: 
   - java.lang.RuntimePermission: 
-         writeFileDescriptor: 507
+         writeFileDescriptor: 2
 * Writing tests to file
 * Writing JUnit test case 'Comment_ESTest' to results/Jsoup-86/org.jsoup.nodes.Comment/BBC-F0-50/tests/15
 * Done!

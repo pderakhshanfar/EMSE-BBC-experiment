@@ -2,7 +2,7 @@
 * Configuration: BBC-F0-50
 * Going to generate test cases for class: org.apache.commons.jxpath.ri.axes.AttributeContext
 * Starting Client-0
-* Connecting to master process on port 17215
+* Connecting to master process on port 17214
 * Analyzing classpath: 
   - subjects/buggy-versions/JxPath-18/target/classes
   - subjects/buggy-versions/JxPath-18/src/java
@@ -31,13 +31,8 @@
 * Starting evolution
 bbc usage percentage is: 50%
 * Initial Number of Goals in DynaMOSA = 50 / 125
-[MASTER] 09:50:37.673 [logback-2] ERROR TestCluster - Failed to check cache for java.util.List<E> : Type points to itself
-Number of times BBC is called for org.apache.commons.jxpath.ri.axes.AttributeContext.nextNode()Z: I64 Branch 7 IFNE L85 - false: 1394
-Number of times BBC is called for org.apache.commons.jxpath.ri.axes.AttributeContext.setPosition(I)Z: I20 Branch 3 IFNE L64 - true: 19312
-Number of times BBC is called for org.apache.commons.jxpath.ri.axes.AttributeContext.nextNode()Z: I49 Branch 6 IFNONNULL L82 - true: 1394
-Number of times BBC is called for org.apache.commons.jxpath.ri.axes.AttributeContext.nextNode()Z: I64 Branch 7 IFNE L85 - true: 2117
-Number of times BBC is called in total: 24217
-* Search finished after 601s and 9786 generations, 2531976 statements, best individual has fitness: 15.0
+[MASTER] 03:53:26.603 [logback-2] ERROR TestCluster - Failed to check cache for java.util.List<E> : Type points to itself
+* Search finished after 601s and 13241 generations, 3461345 statements, best individual has fitness: 18.0
 * Minimizing test suite
 * Going to analyze the coverage criteria
 * Coverage analysis for criterion LINE
@@ -50,8 +45,8 @@ Number of times BBC is called in total: 24217
 * Number of covered goals: 17
 * Coverage analysis for criterion EXCEPTION
 * Coverage of criterion EXCEPTION: 100%
-* Total number of goals: 12
-* Number of covered goals: 12
+* Total number of goals: 15
+* Number of covered goals: 15
 * Coverage analysis for criterion WEAKMUTATION
 * Coverage of criterion WEAKMUTATION: 100%
 * Total number of goals: 37
@@ -72,14 +67,32 @@ Number of times BBC is called in total: 24217
 * Coverage of criterion CBRANCH: 100%
 * Total number of goals: 17
 * Number of covered goals: 17
-* Generated 21 tests with total length 168
+* Generated 24 tests with total length 183
 * Resulting test suite's coverage: 90% (average coverage for all fitness functions)
 * Generating assertions
-* Resulting test suite's mutation score: 81%
+* Resulting test suite's mutation score: 76%
 * Compiling and checking tests
-* Permissions denied during test execution: 
-  - java.lang.RuntimePermission: 
-         writeFileDescriptor: 6
+[MASTER] 04:02:51.629 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 04:02:54.793 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class java.lang.StackOverflowError: null
+[MASTER] 04:02:54.795 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ JXPathContextReferenceImpl jXPathContextReferenceImpl0 = (JXPathContextReferenceImpl)JXPathContext.newContext((Object) null);
+BasicVariables basicVariables0 = new BasicVariables();
+VariablePointer variablePointer0 = new VariablePointer(basicVariables0, (QName) null);
+RootContext rootContext0 = new RootContext(jXPathContextReferenceImpl0, variablePointer0);
+InitialContext initialContext0 = (InitialContext)rootContext0.getConstantContext(jXPathContextReferenceImpl0);
+Expression[] expressionArray0 = new Expression[9];
+CoreOperationAdd coreOperationAdd0 = new CoreOperationAdd(expressionArray0);
+CoreOperationEqual coreOperationEqual0 = new CoreOperationEqual(coreOperationAdd0, (Expression) null);
+CoreOperationMultiply coreOperationMultiply0 = new CoreOperationMultiply(coreOperationAdd0, coreOperationEqual0);
+expressionArray0[0] = (Expression) coreOperationMultiply0;
+ExtensionFunction extensionFunction0 = new ExtensionFunction((QName) null, expressionArray0);
+CoreOperationNotEqual coreOperationNotEqual0 = new CoreOperationNotEqual(extensionFunction0, expressionArray0[2]);
+CoreOperationNegate coreOperationNegate0 = new CoreOperationNegate(coreOperationNotEqual0);
+PredicateContext predicateContext0 = new PredicateContext(initialContext0, coreOperationNegate0);
+NodeNameTest nodeNameTest0 = new NodeNameTest((QName) null);
+AttributeContext attributeContext0 = new AttributeContext(predicateContext0, nodeNameTest0);
+attributeContext0.nextNode();
+
 * Writing tests to file
 * Writing JUnit test case 'AttributeContext_ESTest' to results/JxPath-18/org.apache.commons.jxpath.ri.axes.AttributeContext/BBC-F0-50/tests/6
 * Done!

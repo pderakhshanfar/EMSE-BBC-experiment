@@ -21,31 +21,11 @@
 * Starting evolution
 bbc usage percentage is: 50%
 * Initial Number of Goals in DynaMOSA = 167 / 392
-[MASTER] 08:26:53.290 [logback-2] ERROR TestCluster - Failed to check cache for java.util.Comparator<T> : Type points to itself
-Number of times BBC is called for org.jsoup.nodes.Attribute.shouldCollapseAttribute(Ljava/lang/String;Ljava/lang/String;Lorg/jsoup/nodes/Document$OutputSettings;)Z: I5 Branch 8 IF_ACMPNE L165 - true: 359
-Number of times BBC is called for org.jsoup.nodes.Attribute.isBooleanAttribute()Z: I6 Branch 13 IFGE L174 - true: 2
-Number of times BBC is called for org.jsoup.nodes.Attribute.equals(Ljava/lang/Object;)Z: I39 Branch 21 IFNULL L189 - false: 176048
-Number of times BBC is called for org.jsoup.nodes.Attribute.equals(Ljava/lang/Object;)Z: I47 Branch 22 IFNULL L190 - true: 2546
-Number of times BBC is called for org.jsoup.nodes.Attribute.equals(Ljava/lang/Object;)Z: I28 Branch 19 IFNULL L189 - true: 176048
-Number of times BBC is called for org.jsoup.nodes.Attribute.equals(Ljava/lang/Object;)Z: I4 Branch 16 IF_ACMPNE L186 - false: 391
-Number of times BBC is called for org.jsoup.nodes.Attribute.equals(Ljava/lang/Object;)Z: I10 Branch 17 IFNULL L187 - true: 9
-Number of times BBC is called for org.jsoup.nodes.Attribute.equals(Ljava/lang/Object;)Z: I57 Branch 23 IFNONNULL L190 - true: 2747
-Number of times BBC is called for org.jsoup.nodes.Attribute.html()Ljava/lang/String;: Line 108: 243000
-Number of times BBC is called for org.jsoup.nodes.Attribute.html()Ljava/lang/String;: Line 107: 243000
-Number of times BBC is called for org.jsoup.nodes.Attribute.clone()Lorg/jsoup/nodes/Attribute;: Line 205: 248508
-Number of times BBC is called for org.jsoup.nodes.Attribute.clone()Lorg/jsoup/nodes/Attribute;: Line 204: 248508
-Number of times BBC is called for org.jsoup.nodes.Attribute.setValue(Ljava/lang/String;)Ljava/lang/String;: I12 Branch 3 IFNULL L89 - true: 186252
-Number of times BBC is called for org.jsoup.nodes.Attribute.isDataAttribute(Ljava/lang/String;)Z: I6 Branch 6 IFLE L151 - false: 61
-Number of times BBC is called for org.jsoup.nodes.Attribute.setKey(Ljava/lang/String;)V: I30 Branch 2 IF_ICMPEQ L69 - false: 5
-Number of times BBC is called for org.jsoup.nodes.Attribute.equals(Ljava/lang/Object;)Z: I57 Branch 23 IFNONNULL L190 - false: 2546
-Number of times BBC is called for org.jsoup.nodes.Attribute.isDataAttribute(Ljava/lang/String;)Z: I11 Branch 7 IF_ICMPLE L151 - true: 80
-Number of times BBC is called for org.jsoup.nodes.Attribute.isBooleanAttribute()Z: I9 Branch 14 IFNONNULL L174 - false: 55
-Number of times BBC is called for org.jsoup.nodes.Attribute.hashCode()I: I20 Branch 25 IFNULL L196 - true: 203
-Number of times BBC is called for org.jsoup.nodes.Attribute.hashCode()I: I4 Branch 24 IFNULL L195 - true: 229270
-Number of times BBC is called for org.jsoup.nodes.Attribute.equals(Ljava/lang/Object;)Z: I39 Branch 21 IFNULL L189 - true: 176048
-Number of times BBC is called for org.jsoup.nodes.Attribute.isDataAttribute(Ljava/lang/String;)Z: I11 Branch 7 IF_ICMPLE L151 - false: 61
-Number of times BBC is called in total: 1935747
-* Search finished after 601s and 5552 generations, 1987213 statements, best individual has fitness: 54.0
+[MASTER] 02:55:41.525 [logback-2] ERROR TestCluster - Failed to check cache for java.util.Comparator<T> : Type points to itself
+[MASTER] 02:58:37.386 [logback-2] ERROR TestCluster - Failed to check cache for java.util.List<E> : Type points to itself
+[MASTER] 02:59:44.182 [logback-2] ERROR TestCluster - Failed to check cache for java.util.function.Function<T, R> : Type points to itself
+[MASTER] 03:05:38.456 [logback-2] ERROR TestCluster - Failed to check cache for java.util.function.Predicate<T> : Type points to itself
+* Search finished after 601s and 7675 generations, 2752765 statements, best individual has fitness: 54.0
 * Minimizing test suite
 * Going to analyze the coverage criteria
 * Coverage analysis for criterion LINE
@@ -80,23 +60,33 @@ Number of times BBC is called in total: 1935747
 * Coverage of criterion CBRANCH: 92%
 * Total number of goals: 61
 * Number of covered goals: 56
-* Generated 56 tests with total length 164
+* Generated 58 tests with total length 164
 * Resulting test suite's coverage: 87% (average coverage for all fitness functions)
 * Generating assertions
-* Resulting test suite's mutation score: 55%
+* Resulting test suite's mutation score: 65%
 * Compiling and checking tests
-[MASTER] 08:37:09.822 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class java.lang.AssertionError: null
-[MASTER] 08:37:09.822 [logback-1] WARN  JUnitAnalyzer - Failing test:
- Attribute attribute0 = new Attribute("default", (String) null);
-Attribute attribute1 = new Attribute("default", "reversed");
-boolean boolean0 = attribute0.equals(attribute1);
-assertTrue(attribute1.equals((Object)attribute0));
+[MASTER] 03:05:50.077 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 03:05:50.337 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 03:05:50.341 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class java.lang.AssertionError: null
+[MASTER] 03:05:50.341 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ Attribute attribute0 = Attribute.createFromEncoded("deta-", "deta-");
+Attribute attribute1 = new Attribute("deta-", (String) null);
+boolean boolean0 = attribute1.equals(attribute0);
+assertTrue(attribute0.equals((Object)attribute1));
 assertFalse(boolean0);
 
 
-* Permissions denied during test execution: 
-  - java.lang.RuntimePermission: 
-         writeFileDescriptor: 779
+[MASTER] 03:05:50.567 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 03:05:50.768 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 03:05:50.945 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 03:05:51.199 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 03:05:51.374 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 03:05:51.553 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 03:05:51.743 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 03:05:51.903 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 03:05:52.068 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 03:05:52.253 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 03:05:52.467 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
 * Writing tests to file
 * Writing JUnit test case 'Attribute_ESTest' to results/Jsoup-88/org.jsoup.nodes.Attribute/BBC-F0-50/tests/28
 * Done!

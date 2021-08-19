@@ -21,32 +21,9 @@
 * Starting evolution
 bbc usage percentage is: 50%
 * Initial Number of Goals in DynaMOSA = 62 / 245
-[MASTER] 13:36:23.466 [logback-2] ERROR TestCluster - Failed to check cache for org.apache.commons.math3.util.Pair<K, V> : Type points to itself
-[MASTER] 13:40:45.002 [logback-2] ERROR TestCluster - Failed to check cache for java.util.function.Function<T, R> : Type points to itself
-Number of times BBC is called for org.apache.commons.math3.distribution.DiscreteDistribution.probability(Ljava/lang/Object;)D: I22 Branch 5 IFNULL L126 - false: 248
-Number of times BBC is called for org.apache.commons.math3.distribution.DiscreteDistribution.probability(Ljava/lang/Object;)D: I13 Branch 3 IF_ICMPGE L125 - true: 329
-Number of times BBC is called for org.apache.commons.math3.distribution.DiscreteDistribution.getSamples()Ljava/util/List;: I18 Branch 8 IF_ICMPGE L144 - true: 135
-Number of times BBC is called for org.apache.commons.math3.distribution.DiscreteDistribution.probability(Ljava/lang/Object;)D: I13 Branch 3 IF_ICMPGE L125 - false: 329
-Number of times BBC is called for org.apache.commons.math3.distribution.DiscreteDistribution.getSamples()Ljava/util/List;: Line 148: 135
-Number of times BBC is called for org.apache.commons.math3.distribution.DiscreteDistribution.probability(Ljava/lang/Object;)D: I25 Branch 6 IFNULL L126 - true: 248
-Number of times BBC is called for org.apache.commons.math3.distribution.DiscreteDistribution.getSamples()Ljava/util/List;: I18 Branch 8 IF_ICMPGE L144 - false: 135
-Number of times BBC is called for org.apache.commons.math3.distribution.DiscreteDistribution.getSamples()Ljava/util/List;: Line 144: 135
-Number of times BBC is called for org.apache.commons.math3.distribution.DiscreteDistribution.<init>(Ljava/util/List;)V: Line 69: 10349
-Number of times BBC is called for org.apache.commons.math3.distribution.DiscreteDistribution.probability(Ljava/lang/Object;)D: Line 132: 329
-Number of times BBC is called for org.apache.commons.math3.distribution.DiscreteDistribution.getSamples()Ljava/util/List;: Line 142: 135
-Number of times BBC is called for org.apache.commons.math3.distribution.DiscreteDistribution.sample(I)[Ljava/lang/Object;: I3 Branch 11 IFGT L182 - false: 207
-Number of times BBC is called for org.apache.commons.math3.distribution.DiscreteDistribution.sample()Ljava/lang/Object;: I34 Branch 10 IFGE L162 - true: 27
-Number of times BBC is called for org.apache.commons.math3.distribution.DiscreteDistribution.sample()Ljava/lang/Object;: I19 Branch 9 IF_ICMPGE L160 - true: 6490
-Number of times BBC is called for org.apache.commons.math3.distribution.DiscreteDistribution.probability(Ljava/lang/Object;)D: I17 Branch 4 IFNONNULL L126 - false: 248
-Number of times BBC is called for org.apache.commons.math3.distribution.DiscreteDistribution.probability(Ljava/lang/Object;)D: Line 125: 329
-Number of times BBC is called for org.apache.commons.math3.distribution.DiscreteDistribution.probability(Ljava/lang/Object;)D: I32 Branch 7 IFEQ L126 - false: 68
-Number of times BBC is called for org.apache.commons.math3.distribution.DiscreteDistribution.probability(Ljava/lang/Object;)D: I22 Branch 5 IFNULL L126 - true: 553
-Number of times BBC is called for org.apache.commons.math3.distribution.DiscreteDistribution.probability(Ljava/lang/Object;)D: Line 123: 329
-Number of times BBC is called for org.apache.commons.math3.distribution.DiscreteDistribution.<init>(Lorg/apache/commons/math3/random/RandomGenerator;Ljava/util/List;)V: I56 Branch 2 IFGE L95 - false: 4
-Number of times BBC is called for org.apache.commons.math3.distribution.DiscreteDistribution.sample(I)[Ljava/lang/Object;: I3 Branch 11 IFGT L182 - true: 135
-Number of times BBC is called for org.apache.commons.math3.distribution.DiscreteDistribution.sample(I)[Ljava/lang/Object;: Line 182: 135
-Number of times BBC is called in total: 21032
-* Search finished after 601s and 112 generations, 58066 statements, best individual has fitness: 34.0
+[MASTER] 06:36:36.591 [logback-2] ERROR TestCluster - Failed to check cache for org.apache.commons.math3.util.Pair<K, V> : Type points to itself
+[MASTER] 06:42:22.711 [logback-2] ERROR TestCluster - Failed to check cache for java.util.function.Function<T, R> : Type points to itself
+* Search finished after 601s and 260 generations, 126803 statements, best individual has fitness: 35.0
 * Minimizing test suite
 * Going to analyze the coverage criteria
 * Coverage analysis for criterion LINE
@@ -81,23 +58,35 @@ Number of times BBC is called in total: 21032
 * Coverage of criterion CBRANCH: 96%
 * Total number of goals: 26
 * Number of covered goals: 25
-* Generated 22 tests with total length 121
+* Generated 22 tests with total length 126
 * Resulting test suite's coverage: 85% (average coverage for all fitness functions)
 * Generating assertions
-* Resulting test suite's mutation score: 59%
+* Resulting test suite's mutation score: 57%
 * Compiling and checking tests
-[MASTER] 13:48:09.974 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class java.lang.OutOfMemoryError: Java heap space
-[MASTER] 13:48:09.976 [logback-1] WARN  JUnitAnalyzer - Failing test:
- LinkedList<Pair<String, Double>> linkedList0 = new LinkedList<Pair<String, Double>>();
-Double double0 = new Double(2553.952);
-Pair<String, Double> pair0 = new Pair<String, Double>("+`Rgl^G n? ", double0);
-linkedList0.add(pair0);
-DiscreteDistribution<String> discreteDistribution0 = new DiscreteDistribution<String>(linkedList0);
-discreteDistribution0.sample(2145560396);
-
-* Permissions denied during test execution: 
-  - java.lang.RuntimePermission: 
-         writeFileDescriptor: 9
+[MASTER] 06:47:08.814 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 06:47:09.834 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 06:47:10.261 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 06:47:10.741 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 06:47:11.631 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 06:47:12.541 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 06:47:13.007 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 06:47:13.233 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 06:47:13.565 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 06:47:13.798 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 06:47:14.419 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 06:47:14.741 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 06:47:15.472 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 06:47:15.709 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 06:47:16.314 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 06:47:16.735 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 06:47:17.778 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 06:47:18.293 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 06:47:18.860 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 06:47:19.164 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 06:47:19.485 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 06:47:19.790 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 06:47:21.469 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 06:47:23.463 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
 * Writing tests to file
 * Writing JUnit test case 'DiscreteDistribution_ESTest' to results/Math-8/org.apache.commons.math3.distribution.DiscreteDistribution/BBC-F0-50/tests/22
 * Done!

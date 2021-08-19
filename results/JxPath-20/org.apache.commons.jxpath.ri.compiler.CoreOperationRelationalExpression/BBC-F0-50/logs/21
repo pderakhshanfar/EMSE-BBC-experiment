@@ -32,28 +32,8 @@
 * Starting evolution
 bbc usage percentage is: 50%
 * Initial Number of Goals in DynaMOSA = 59 / 205
-[MASTER] 09:30:47.802 [logback-2] ERROR TestCluster - Failed to check cache for java.util.LinkedList<E> : Type points to itself
-[MASTER] 09:31:02.960 [logback-1] WARN  TestChromosome - Functional mock problem: org.evosuite.ga.ConstructionFailedException: Failed to add constructor for org.apache.commons.jxpath.ri.JXPathContextReferenceImpl due to org.evosuite.ga.ConstructionFailedException: Failed to add constructor for org.apache.commons.jxpath.ri.axes.ParentContext due to org.evosuite.ga.ConstructionFailedException: Max recursion depth reached
-Number of times BBC is called for org.apache.commons.jxpath.ri.compiler.CoreOperationRelationalExpression.compute(Ljava/lang/Object;Ljava/lang/Object;)Z: I36 Branch 4 IFEQ L81 - false: 34134
-Number of times BBC is called for org.apache.commons.jxpath.ri.compiler.CoreOperationRelationalExpression.findMatch(Ljava/util/Iterator;Ljava/util/Iterator;)Z: I10 Branch 16 IFEQ L147 - false: 39237
-Number of times BBC is called for org.apache.commons.jxpath.ri.compiler.CoreOperationRelationalExpression.compute(Ljava/lang/Object;Ljava/lang/Object;)Z: I26 Branch 3 IFEQ L78 - false: 34134
-Number of times BBC is called for org.apache.commons.jxpath.ri.compiler.CoreOperationRelationalExpression.containsMatch(Ljava/util/Iterator;Ljava/lang/Object;)Z: I4 Branch 14 IFEQ L123 - true: 39237
-Number of times BBC is called for org.apache.commons.jxpath.ri.compiler.CoreOperationRelationalExpression.reduce(Ljava/lang/Object;)Ljava/lang/Object;: I4 Branch 12 IFEQ L107 - false: 34134
-Number of times BBC is called for org.apache.commons.jxpath.ri.compiler.CoreOperationRelationalExpression.compute(Ljava/lang/Object;Ljava/lang/Object;)Z: I116 Branch 11 IFGE L98 - true: 1
-Number of times BBC is called for org.apache.commons.jxpath.ri.compiler.CoreOperationRelationalExpression.findMatch(Ljava/util/Iterator;Ljava/util/Iterator;)Z: I10 Branch 16 IFEQ L147 - true: 39237
-Number of times BBC is called for org.apache.commons.jxpath.ri.compiler.CoreOperationRelationalExpression.containsMatch(Ljava/util/Iterator;Ljava/lang/Object;)Z: I4 Branch 14 IFEQ L123 - false: 39237
-Number of times BBC is called for org.apache.commons.jxpath.ri.compiler.CoreOperationRelationalExpression.compute(Ljava/lang/Object;Ljava/lang/Object;)Z: I66 Branch 7 IFEQ L87 - false: 34136
-Number of times BBC is called for org.apache.commons.jxpath.ri.compiler.CoreOperationRelationalExpression.compute(Ljava/lang/Object;Ljava/lang/Object;)Z: I116 Branch 11 IFGE L98 - false: 1
-Number of times BBC is called for org.apache.commons.jxpath.ri.compiler.CoreOperationRelationalExpression.compute(Ljava/lang/Object;Ljava/lang/Object;)Z: I53 Branch 6 IFEQ L84 - false: 34136
-Number of times BBC is called for org.apache.commons.jxpath.ri.compiler.CoreOperationRelationalExpression.compute(Ljava/lang/Object;Ljava/lang/Object;)Z: I39 Branch 5 IFEQ L81 - true: 34136
-Number of times BBC is called for org.apache.commons.jxpath.ri.compiler.CoreOperationRelationalExpression.reduce(Ljava/lang/Object;)Ljava/lang/Object;: I15 Branch 13 IFEQ L110 - false: 34134
-Number of times BBC is called for org.apache.commons.jxpath.ri.compiler.CoreOperationRelationalExpression.compute(Ljava/lang/Object;Ljava/lang/Object;)Z: I98 Branch 9 IFEQ L95 - false: 6
-Number of times BBC is called for org.apache.commons.jxpath.ri.compiler.CoreOperationRelationalExpression.compute(Ljava/lang/Object;Ljava/lang/Object;)Z: I39 Branch 5 IFEQ L81 - false: 34136
-Number of times BBC is called for org.apache.commons.jxpath.ri.compiler.CoreOperationRelationalExpression.findMatch(Ljava/util/Iterator;Ljava/util/Iterator;)Z: Line 146: 39237
-Number of times BBC is called for org.apache.commons.jxpath.ri.compiler.CoreOperationRelationalExpression.compute(Ljava/lang/Object;Ljava/lang/Object;)Z: I109 Branch 10 IFNE L98 - true: 1
-Number of times BBC is called for org.apache.commons.jxpath.ri.compiler.CoreOperationRelationalExpression.compute(Ljava/lang/Object;Ljava/lang/Object;)Z: I16 Branch 2 IFEQ L75 - false: 34134
-Number of times BBC is called in total: 503408
-* Search finished after 603s and 412 generations, 211783 statements, best individual has fitness: 95.0
+[MASTER] 03:41:59.429 [logback-2] ERROR TestCluster - Failed to check cache for java.util.LinkedList<E> : Type points to itself
+* Search finished after 603s and 440 generations, 236380 statements, best individual has fitness: 95.0
 * Minimizing test suite
 * Going to analyze the coverage criteria
 * Coverage analysis for criterion LINE
@@ -65,9 +45,9 @@ Number of times BBC is called in total: 503408
 * Total number of goals: 39
 * Number of covered goals: 20
 * Coverage analysis for criterion EXCEPTION
-* Coverage of criterion EXCEPTION: 100%
+* Coverage of criterion EXCEPTION: 83%
 * Total number of goals: 6
-* Number of covered goals: 6
+* Number of covered goals: 5
 * Coverage analysis for criterion WEAKMUTATION
 * Coverage of criterion WEAKMUTATION: 64%
 * Total number of goals: 72
@@ -88,14 +68,38 @@ Number of times BBC is called in total: 503408
 * Coverage of criterion CBRANCH: 51%
 * Total number of goals: 39
 * Number of covered goals: 20
-* Generated 12 tests with total length 90
+* Generated 12 tests with total length 76
 * Resulting test suite's coverage: 62% (average coverage for all fitness functions)
 * Generating assertions
-* Resulting test suite's mutation score: 47%
+* Resulting test suite's mutation score: 49%
 * Compiling and checking tests
-* Permissions denied during test execution: 
-  - java.lang.RuntimePermission: 
-         writeFileDescriptor: 10
+[MASTER] 03:52:05.520 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 03:52:05.672 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 03:52:05.814 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 03:52:05.941 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 03:52:06.078 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 03:52:06.174 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 03:52:06.283 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 03:52:06.384 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 03:52:06.478 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 03:52:06.582 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 03:52:06.741 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 03:52:06.761 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class java.lang.StackOverflowError: null
+[MASTER] 03:52:06.763 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ Expression[] expressionArray0 = new Expression[1];
+CoreOperationAdd coreOperationAdd0 = new CoreOperationAdd(expressionArray0);
+expressionArray0[0] = (Expression) coreOperationAdd0;
+CoreOperationUnion coreOperationUnion0 = new CoreOperationUnion(expressionArray0);
+CoreOperationGreaterThanOrEqual coreOperationGreaterThanOrEqual0 = new CoreOperationGreaterThanOrEqual(coreOperationUnion0, coreOperationAdd0);
+NodeSetContext nodeSetContext0 = new NodeSetContext((EvalContext) null, (NodeSet) null);
+NodeTypeTest nodeTypeTest0 = new NodeTypeTest(3812);
+SelfContext selfContext0 = new SelfContext(nodeSetContext0, nodeTypeTest0);
+PredicateContext predicateContext0 = new PredicateContext(selfContext0, coreOperationUnion0);
+coreOperationGreaterThanOrEqual0.computeValue(predicateContext0);
+
+[MASTER] 03:52:06.878 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 03:52:07.099 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 03:52:07.295 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
 * Writing tests to file
 * Writing JUnit test case 'CoreOperationRelationalExpression_ESTest' to results/JxPath-20/org.apache.commons.jxpath.ri.compiler.CoreOperationRelationalExpression/BBC-F0-50/tests/21
 * Done!

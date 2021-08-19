@@ -32,29 +32,12 @@
 * Starting evolution
 bbc usage percentage is: 50%
 * Initial Number of Goals in DynaMOSA = 80 / 210
-[MASTER] 10:41:04.163 [logback-2] ERROR TestCluster - Failed to check cache for java.util.AbstractMap<K, V>.SimpleEntry<K, V> : Type points to itself
-[MASTER] 10:41:04.163 [logback-2] ERROR TestCluster - Failed to check cache for java.util.AbstractMap<K, V>.SimpleImmutableEntry<K, V> : Type points to itself
-[MASTER] 10:41:14.469 [logback-2] ERROR TestCluster - Failed to check cache for java.util.Comparator<T> : Type points to itself
-[MASTER] 10:41:19.976 [logback-2] ERROR TestCluster - Failed to check cache for java.util.function.Function<T, R> : Type points to itself
-[MASTER] 10:41:48.719 [logback-2] ERROR TestCluster - Failed to check cache for java.util.List<E> : Type points to itself
-[MASTER] 10:47:48.284 [logback-2] ERROR TestCluster - Failed to check cache for java.util.function.Predicate<T> : Type points to itself
-Number of times BBC is called for org.apache.commons.jxpath.ri.NamespaceResolver.getPrefix(Ljava/lang/String;)Ljava/lang/String;: I30 Branch 10 IFEQ L143 - false: 468593
-Number of times BBC is called for org.apache.commons.jxpath.ri.NamespaceResolver.getPrefix(Ljava/lang/String;)Ljava/lang/String;: I107 Branch 13 IFNONNULL L159 - true: 51
-Number of times BBC is called for org.apache.commons.jxpath.ri.NamespaceResolver.getPrefix(Ljava/lang/String;)Ljava/lang/String;: I30 Branch 10 IFEQ L143 - true: 468593
-Number of times BBC is called for org.apache.commons.jxpath.ri.NamespaceResolver.getNamespaceContextPointer()Lorg/apache/commons/jxpath/Pointer;: I4 Branch 2 IFNONNULL L91 - true: 6
-Number of times BBC is called for org.apache.commons.jxpath.ri.NamespaceResolver.getPrefix(Ljava/lang/String;)Ljava/lang/String;: I110 Branch 14 IFNULL L159 - false: 18
-Number of times BBC is called for org.apache.commons.jxpath.ri.NamespaceResolver.getPrefix(Ljava/lang/String;)Ljava/lang/String;: I21 Branch 9 IFNULL L142 - true: 5
-Number of times BBC is called for org.apache.commons.jxpath.ri.NamespaceResolver.getPrefix(Ljava/lang/String;)Ljava/lang/String;: I21 Branch 9 IFNULL L142 - false: 468598
-Number of times BBC is called for org.apache.commons.jxpath.ri.NamespaceResolver.getNamespaceURI(Ljava/lang/String;)Ljava/lang/String;: I25 Branch 6 IFNONNULL L120 - true: 16
-Number of times BBC is called for org.apache.commons.jxpath.ri.NamespaceResolver.clone()Ljava/lang/Object;: Line 193: 557805
-Number of times BBC is called for org.apache.commons.jxpath.ri.NamespaceResolver.getPrefix(Ljava/lang/String;)Ljava/lang/String;: Line 142: 5
-Number of times BBC is called for org.apache.commons.jxpath.ri.NamespaceResolver.getNamespaceURI(Ljava/lang/String;)Ljava/lang/String;: I11 Branch 4 IFNONNULL L117 - true: 16
-Number of times BBC is called for org.apache.commons.jxpath.ri.NamespaceResolver.clone()Ljava/lang/Object;: Line 196: 557805
-Number of times BBC is called for org.apache.commons.jxpath.ri.NamespaceResolver.clone()Ljava/lang/Object;: Line 195: 557805
-Number of times BBC is called for org.apache.commons.jxpath.ri.NamespaceResolver.getPrefix(Ljava/lang/String;)Ljava/lang/String;: Line 153: 5
-Number of times BBC is called for org.apache.commons.jxpath.ri.NamespaceResolver.getPrefix(Ljava/lang/String;)Ljava/lang/String;: Line 152: 5
-Number of times BBC is called in total: 3079326
-* Search finished after 601s and 7594 generations, 2500508 statements, best individual has fitness: 44.0
+[MASTER] 04:26:25.901 [logback-2] ERROR TestCluster - Failed to check cache for java.util.AbstractMap<K, V>.SimpleEntry<K, V> : Type points to itself
+[MASTER] 04:26:25.901 [logback-2] ERROR TestCluster - Failed to check cache for java.util.AbstractMap<K, V>.SimpleImmutableEntry<K, V> : Type points to itself
+[MASTER] 04:26:30.533 [logback-2] ERROR TestCluster - Failed to check cache for java.util.Comparator<T> : Type points to itself
+[MASTER] 04:26:44.296 [logback-2] ERROR TestCluster - Failed to check cache for java.util.List<E> : Type points to itself
+[MASTER] 04:30:25.021 [logback-2] ERROR TestCluster - Failed to check cache for java.util.function.Function<T, R> : Type points to itself
+* Search finished after 601s and 11117 generations, 3693360 statements, best individual has fitness: 45.0
 * Minimizing test suite
 * Going to analyze the coverage criteria
 * Coverage analysis for criterion LINE
@@ -67,8 +50,8 @@ Number of times BBC is called in total: 3079326
 * Number of covered goals: 30
 * Coverage analysis for criterion EXCEPTION
 * Coverage of criterion EXCEPTION: 100%
-* Total number of goals: 7
-* Number of covered goals: 7
+* Total number of goals: 8
+* Number of covered goals: 8
 * Coverage analysis for criterion WEAKMUTATION
 * Coverage of criterion WEAKMUTATION: 70%
 * Total number of goals: 56
@@ -89,14 +72,19 @@ Number of times BBC is called in total: 3079326
 * Coverage of criterion CBRANCH: 86%
 * Total number of goals: 35
 * Number of covered goals: 30
-* Generated 21 tests with total length 84
+* Generated 22 tests with total length 90
 * Resulting test suite's coverage: 83% (average coverage for all fitness functions)
 * Generating assertions
 * Resulting test suite's mutation score: 46%
 * Compiling and checking tests
-* Permissions denied during test execution: 
-  - java.lang.RuntimePermission: 
-         writeFileDescriptor: 3
+[MASTER] 04:36:50.363 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 04:36:54.998 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class java.lang.OutOfMemoryError: Java heap space
+[MASTER] 04:36:54.998 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ NamespaceResolver namespaceResolver0 = new NamespaceResolver();
+HashMap<Integer, String> hashMap0 = new HashMap<Integer, String>(1610612736);
+namespaceResolver0.namespaceMap = hashMap0;
+namespaceResolver0.registerNamespace((String) null, "<<unknown namespace>>");
+
 * Writing tests to file
 * Writing JUnit test case 'NamespaceResolver_ESTest' to results/JxPath-13/org.apache.commons.jxpath.ri.NamespaceResolver/BBC-F0-50/tests/29
 * Done!

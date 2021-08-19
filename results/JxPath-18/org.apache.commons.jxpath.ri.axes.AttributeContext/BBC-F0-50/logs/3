@@ -31,18 +31,9 @@
 * Starting evolution
 bbc usage percentage is: 50%
 * Initial Number of Goals in DynaMOSA = 50 / 125
-[MASTER] 09:48:36.892 [logback-1] WARN  TestChromosome - Functional mock problem: org.evosuite.ga.ConstructionFailedException: Failed to add constructor for org.apache.commons.jxpath.ri.compiler.CoreOperationNotEqual due to org.evosuite.ga.ConstructionFailedException: Failed to add constructor for org.apache.commons.jxpath.ri.compiler.CoreFunction due to org.evosuite.ga.ConstructionFailedException: Failed to add constructor for org.apache.commons.jxpath.ri.compiler.ExtensionFunction due to org.evosuite.ga.ConstructionFailedException: Failed to add constructor for org.apache.commons.jxpath.ri.compiler.NameAttributeTest due to org.evosuite.ga.ConstructionFailedException: Have no generator for class org.apache.commons.jxpath.ri.compiler.CoreFunction canUseFunctionalMocks=false, canBeMocked: true
-[MASTER] 09:50:47.619 [logback-2] ERROR TestCluster - Failed to check cache for java.util.List<E> : Type points to itself
-[MASTER] 09:51:00.605 [logback-2] ERROR TestCluster - Failed to check cache for java.util.function.Function<T, R> : Type points to itself
-Number of times BBC is called for org.apache.commons.jxpath.ri.axes.AttributeContext.nextNode()Z: I64 Branch 7 IFNE L85 - false: 1071
-Number of times BBC is called for org.apache.commons.jxpath.ri.axes.AttributeContext.setPosition(I)Z: I20 Branch 3 IFNE L64 - true: 13509
-Number of times BBC is called for org.apache.commons.jxpath.ri.axes.AttributeContext.nextNode()Z: I49 Branch 6 IFNONNULL L82 - true: 1076
-Number of times BBC is called for org.apache.commons.jxpath.ri.axes.AttributeContext.nextNode()Z: Line 82: 5
-Number of times BBC is called for org.apache.commons.jxpath.ri.axes.AttributeContext.nextNode()Z: I13 Branch 4 IFNE L73 - true: 4
-Number of times BBC is called for org.apache.commons.jxpath.ri.axes.AttributeContext.nextNode()Z: I49 Branch 6 IFNONNULL L82 - false: 5
-Number of times BBC is called for org.apache.commons.jxpath.ri.axes.AttributeContext.nextNode()Z: I64 Branch 7 IFNE L85 - true: 12605
-Number of times BBC is called in total: 28275
-* Search finished after 601s and 9146 generations, 2390855 statements, best individual has fitness: 19.0
+[MASTER] 03:52:38.994 [logback-1] WARN  TestChromosome - Functional mock problem: org.evosuite.ga.ConstructionFailedException: Failed to add constructor for org.apache.commons.jxpath.ri.JXPathContextReferenceImpl due to org.evosuite.ga.ConstructionFailedException: Failed to add constructor for org.apache.commons.jxpath.ri.axes.AttributeContext due to org.evosuite.ga.ConstructionFailedException: Failed to add constructor for org.apache.commons.jxpath.ri.axes.InitialContext due to org.evosuite.ga.ConstructionFailedException: Failed to add constructor for org.apache.commons.jxpath.ri.axes.SelfContext due to org.evosuite.ga.ConstructionFailedException: Max recursion depth reached
+[MASTER] 03:53:45.506 [logback-2] ERROR TestCluster - Failed to check cache for java.util.List<E> : Type points to itself
+* Search finished after 601s and 8790 generations, 2294874 statements, best individual has fitness: 16.0
 * Minimizing test suite
 * Going to analyze the coverage criteria
 * Coverage analysis for criterion LINE
@@ -55,8 +46,8 @@ Number of times BBC is called in total: 28275
 * Number of covered goals: 17
 * Coverage analysis for criterion EXCEPTION
 * Coverage of criterion EXCEPTION: 100%
-* Total number of goals: 16
-* Number of covered goals: 16
+* Total number of goals: 12
+* Number of covered goals: 12
 * Coverage analysis for criterion WEAKMUTATION
 * Coverage of criterion WEAKMUTATION: 100%
 * Total number of goals: 37
@@ -77,44 +68,12 @@ Number of times BBC is called in total: 28275
 * Coverage of criterion CBRANCH: 100%
 * Total number of goals: 17
 * Number of covered goals: 17
-* Generated 25 tests with total length 242
+* Generated 21 tests with total length 160
 * Resulting test suite's coverage: 90% (average coverage for all fitness functions)
 * Generating assertions
-* Resulting test suite's mutation score: 78%
+* Resulting test suite's mutation score: 89%
 * Compiling and checking tests
-[MASTER] 09:58:31.492 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class java.lang.StackOverflowError: null
-[MASTER] 09:58:31.495 [logback-1] WARN  JUnitAnalyzer - Failing test:
- JXPathContextReferenceImpl jXPathContextReferenceImpl0 = (JXPathContextReferenceImpl)JXPathContext.newContext((Object) "");
-InitialContext initialContext0 = (InitialContext)jXPathContextReferenceImpl0.getAbsoluteRootContext();
-Expression[] expressionArray0 = new Expression[1];
-CoreOperationOr coreOperationOr0 = new CoreOperationOr(expressionArray0);
-CoreOperationLessThanOrEqual coreOperationLessThanOrEqual0 = new CoreOperationLessThanOrEqual(coreOperationOr0, coreOperationOr0);
-expressionArray0[0] = (Expression) coreOperationLessThanOrEqual0;
-CoreOperationAnd coreOperationAnd0 = new CoreOperationAnd(expressionArray0);
-PredicateContext predicateContext0 = new PredicateContext(initialContext0, coreOperationAnd0);
-QName qName0 = new QName("+X,#>bAYF");
-NodeNameTest nodeNameTest0 = new NodeNameTest(qName0, "");
-AttributeContext attributeContext0 = new AttributeContext(predicateContext0, nodeNameTest0);
-attributeContext0.nextNode();
-
-[MASTER] 09:58:33.637 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class java.lang.StackOverflowError: null
-[MASTER] 09:58:33.640 [logback-1] WARN  JUnitAnalyzer - Failing test:
- JXPathContextReferenceImpl jXPathContextReferenceImpl0 = (JXPathContextReferenceImpl)JXPathContext.newContext((Object) "");
-InitialContext initialContext0 = (InitialContext)jXPathContextReferenceImpl0.getAbsoluteRootContext();
-Expression[] expressionArray0 = new Expression[1];
-CoreOperationOr coreOperationOr0 = new CoreOperationOr(expressionArray0);
-CoreOperationLessThanOrEqual coreOperationLessThanOrEqual0 = new CoreOperationLessThanOrEqual(coreOperationOr0, coreOperationOr0);
-expressionArray0[0] = (Expression) coreOperationLessThanOrEqual0;
-CoreOperationAnd coreOperationAnd0 = new CoreOperationAnd(expressionArray0);
-PredicateContext predicateContext0 = new PredicateContext(initialContext0, coreOperationAnd0);
-QName qName0 = new QName("+X,#>bAYF");
-NodeNameTest nodeNameTest0 = new NodeNameTest(qName0, "");
-AttributeContext attributeContext0 = new AttributeContext(predicateContext0, nodeNameTest0);
-attributeContext0.setPosition(4225);
-
-* Permissions denied during test execution: 
-  - java.lang.RuntimePermission: 
-         writeFileDescriptor: 2
+[MASTER] 04:03:13.927 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
 * Writing tests to file
 * Writing JUnit test case 'AttributeContext_ESTest' to results/JxPath-18/org.apache.commons.jxpath.ri.axes.AttributeContext/BBC-F0-50/tests/3
 * Done!

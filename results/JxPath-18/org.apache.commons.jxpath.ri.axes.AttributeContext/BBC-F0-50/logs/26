@@ -31,13 +31,8 @@
 * Starting evolution
 bbc usage percentage is: 50%
 * Initial Number of Goals in DynaMOSA = 50 / 125
-[MASTER] 09:56:07.617 [logback-2] ERROR TestCluster - Failed to check cache for java.util.List<E> : Type points to itself
-Number of times BBC is called for org.apache.commons.jxpath.ri.axes.AttributeContext.nextNode()Z: I64 Branch 7 IFNE L85 - false: 7
-Number of times BBC is called for org.apache.commons.jxpath.ri.axes.AttributeContext.setPosition(I)Z: I20 Branch 3 IFNE L64 - true: 7870
-Number of times BBC is called for org.apache.commons.jxpath.ri.axes.AttributeContext.nextNode()Z: I49 Branch 6 IFNONNULL L82 - true: 7
-Number of times BBC is called for org.apache.commons.jxpath.ri.axes.AttributeContext.nextNode()Z: I64 Branch 7 IFNE L85 - true: 6467
-Number of times BBC is called in total: 14351
-* Search finished after 601s and 8528 generations, 2234136 statements, best individual has fitness: 20.0
+[MASTER] 03:59:07.818 [logback-2] ERROR TestCluster - Failed to check cache for java.util.List<E> : Type points to itself
+* Search finished after 601s and 12125 generations, 3148572 statements, best individual has fitness: 19.0
 * Minimizing test suite
 * Going to analyze the coverage criteria
 * Coverage analysis for criterion LINE
@@ -49,9 +44,9 @@ Number of times BBC is called in total: 14351
 * Total number of goals: 17
 * Number of covered goals: 17
 * Coverage analysis for criterion EXCEPTION
-* Coverage of criterion EXCEPTION: 100%
-* Total number of goals: 17
-* Number of covered goals: 17
+* Coverage of criterion EXCEPTION: 93%
+* Total number of goals: 15
+* Number of covered goals: 14
 * Coverage analysis for criterion WEAKMUTATION
 * Coverage of criterion WEAKMUTATION: 100%
 * Total number of goals: 37
@@ -72,14 +67,48 @@ Number of times BBC is called in total: 14351
 * Coverage of criterion CBRANCH: 100%
 * Total number of goals: 17
 * Number of covered goals: 17
-* Generated 25 tests with total length 261
+* Generated 22 tests with total length 197
 * Resulting test suite's coverage: 90% (average coverage for all fitness functions)
 * Generating assertions
-* Resulting test suite's mutation score: 81%
+* Resulting test suite's mutation score: 78%
 * Compiling and checking tests
-* Permissions denied during test execution: 
-  - java.lang.RuntimePermission: 
-         writeFileDescriptor: 2
+[MASTER] 04:04:01.877 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 04:04:05.372 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class java.lang.StackOverflowError: null
+[MASTER] 04:04:05.374 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ JXPathContext jXPathContext0 = JXPathContext.newContext((JXPathContext) null, (Object) null);
+JXPathContextReferenceImpl jXPathContextReferenceImpl0 = new JXPathContextReferenceImpl(jXPathContext0, jXPathContext0, (Pointer) null);
+EvalContext evalContext0 = jXPathContextReferenceImpl0.getAbsoluteRootContext();
+Expression[] expressionArray0 = new Expression[6];
+Double double0 = new Double(0.0);
+Constant constant0 = new Constant(double0);
+Step[] stepArray0 = new Step[0];
+ExpressionPath expressionPath0 = new ExpressionPath(constant0, expressionArray0, stepArray0);
+expressionArray0[0] = (Expression) expressionPath0;
+CoreOperationOr coreOperationOr0 = new CoreOperationOr(expressionArray0);
+PredicateContext predicateContext0 = new PredicateContext(evalContext0, coreOperationOr0);
+QName qName0 = new QName("_(LehB#%");
+NodeNameTest nodeNameTest0 = new NodeNameTest(qName0, "_(LehB#%");
+AttributeContext attributeContext0 = new AttributeContext(predicateContext0, nodeNameTest0);
+attributeContext0.nextNode();
+
+[MASTER] 04:04:06.712 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class java.lang.StackOverflowError: null
+[MASTER] 04:04:06.714 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ JXPathContext jXPathContext0 = JXPathContext.newContext((JXPathContext) null, (Object) null);
+JXPathContextReferenceImpl jXPathContextReferenceImpl0 = new JXPathContextReferenceImpl(jXPathContext0, jXPathContext0, (Pointer) null);
+EvalContext evalContext0 = jXPathContextReferenceImpl0.getAbsoluteRootContext();
+Expression[] expressionArray0 = new Expression[6];
+Double double0 = new Double(0.0);
+Constant constant0 = new Constant(double0);
+Step[] stepArray0 = new Step[0];
+ExpressionPath expressionPath0 = new ExpressionPath(constant0, expressionArray0, stepArray0);
+expressionArray0[0] = (Expression) expressionPath0;
+CoreOperationOr coreOperationOr0 = new CoreOperationOr(expressionArray0);
+PredicateContext predicateContext0 = new PredicateContext(evalContext0, coreOperationOr0);
+QName qName0 = new QName("_(LehB#%");
+NodeNameTest nodeNameTest0 = new NodeNameTest(qName0, "_(LehB#%");
+AttributeContext attributeContext0 = new AttributeContext(predicateContext0, nodeNameTest0);
+attributeContext0.setPosition(2016);
+
 * Writing tests to file
 * Writing JUnit test case 'AttributeContext_ESTest' to results/JxPath-18/org.apache.commons.jxpath.ri.axes.AttributeContext/BBC-F0-50/tests/26
 * Done!
