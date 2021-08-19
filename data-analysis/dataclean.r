@@ -26,6 +26,19 @@ getSubjects <- function(){
   return(df)
 }
 
+
+getBBCDF <- function(){
+  csvFile='../data/bbc_triggered.csv'
+  df <- read.csv(csvFile, stringsAsFactors = TRUE)
+  return(df)
+}
+
+getResultsWithInterval <- function(){
+  csvFile='../results/results-with_intervals.csv'
+  df <- read.csv(csvFile, stringsAsFactors = TRUE)
+  return(df)
+}
+
 # Returns the results of the evaluation
 getResults <- function(){
   csvFile='../results/results.csv'
