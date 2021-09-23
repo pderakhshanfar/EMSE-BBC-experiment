@@ -5,7 +5,7 @@
 library(tidyverse)
 
 TOTAL_RUNS = 30
-COLOR_PALETTE = "RdYlBu" # Color blind friendly colors (http://colorbrewer2.org/)
+COLOR_PALETTE = "RdBu" # Color blind friendly colors (http://colorbrewer2.org/)
 SIGNIFICANCE_LEVEL = 0.01
 
 # Normalize data between [0;1]

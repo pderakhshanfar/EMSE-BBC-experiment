@@ -1,8 +1,8 @@
 source('dataclean.r')
 source('friedmantest.r')
 library(ggplot2)
-
 library(effsize)
+
 raw_df <- getResultsWithInterval()
 
 filtered_df <- raw_df %>%
@@ -276,9 +276,6 @@ for (metric in metrics){
     ggsave(pdf_name, width = 4.5, height = 3.5)
   }
 }
-
-
-
 
 
 
