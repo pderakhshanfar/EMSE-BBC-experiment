@@ -6,7 +6,6 @@ library(ggplot2)
 
 raw_df <- getBBCDF()
 
-
 raw_df <- raw_df %>%
   mutate(is_activated = ifelse(activated >0,1,0),
          is_useful = ifelse(useful>0,1,0),
