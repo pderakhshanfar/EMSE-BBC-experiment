@@ -1,0 +1,82 @@
+* EvoSuite 1.1.1-SNAPSHOT
+* Configuration: default
+* Going to generate test cases for class: org.apache.commons.compress.archivers.zip.ZipArchiveInputStream
+* Starting Client-0
+* Connecting to master process on port 13785
+* Analyzing classpath: 
+  - subjects/buggy-versions/Compress-41/target/classes
+  - defects4j/framework/projects/Compress/lib/org/tukaani/xz/1.6/xz-1.6.jar
+* Finished analyzing classpath
+* Generating tests for class org.apache.commons.compress.archivers.zip.ZipArchiveInputStream
+* Test criteria:
+  - Line Coverage
+  - Branch Coverage
+  - Exception
+  - Mutation testing (weak)
+  - Method-Output Coverage
+  - Top-Level Method Coverage
+  - No-Exception Top-Level Method Coverage
+  - Context Branch Coverage
+* Total number of test goals for DYNAMOSA: 1778
+* Using seed 4145075406
+* Starting evolution
+* Initial Number of Goals in DynaMOSA = 421 / 1778
+[MASTER] 22:18:26.496 [logback-2] ERROR TestCluster - Failed to check cache for java.util.Enumeration<E> : Type points to itself
+Number of times BBC is called in total: 0
+* Search finished after 611s and 350 generations, 122179 statements, best individual has fitness: 1495.0
+* Minimizing test suite
+* Going to analyze the coverage criteria
+* Coverage analysis for criterion LINE
+* Coverage of criterion LINE: 21%
+* Total number of goals: 389
+* Number of covered goals: 81
+* Coverage analysis for criterion BRANCH
+* Coverage of criterion BRANCH: 16%
+* Total number of goals: 269
+* Number of covered goals: 44
+* Coverage analysis for criterion EXCEPTION
+* Coverage of criterion EXCEPTION: 100%
+* Total number of goals: 14
+* Number of covered goals: 14
+* Coverage analysis for criterion WEAKMUTATION
+* Coverage of criterion WEAKMUTATION: 13%
+* Total number of goals: 767
+* Number of covered goals: 97
+* Coverage analysis for criterion OUTPUT
+* Coverage of criterion OUTPUT: 13%
+* Total number of goals: 52
+* Number of covered goals: 7
+* Coverage analysis for criterion METHOD
+* Coverage of criterion METHOD: 69%
+* Total number of goals: 16
+* Number of covered goals: 11
+* Coverage analysis for criterion METHODNOEXCEPTION
+* Coverage of criterion METHODNOEXCEPTION: 69%
+* Total number of goals: 16
+* Number of covered goals: 11
+* Coverage analysis for criterion CBRANCH
+* Coverage of criterion CBRANCH: 16%
+* Total number of goals: 269
+* Number of covered goals: 44
+* Generated 30 tests with total length 90
+* Resulting test suite's coverage: 34% (average coverage for all fitness functions)
+* Generating assertions
+* Resulting test suite's mutation score: 5%
+* Compiling and checking tests
+[MASTER] 22:30:47.558 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class java.lang.NullPointerException: null
+[MASTER] 22:30:47.558 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ DataInputStream dataInputStream0 = new DataInputStream((InputStream) null);
+BufferedInputStream bufferedInputStream0 = new BufferedInputStream(dataInputStream0, 1610612736);
+String string0 = null;
+boolean boolean0 = false;
+ZipArchiveInputStream zipArchiveInputStream0 = new ZipArchiveInputStream(bufferedInputStream0, string0, boolean0);
+zipArchiveInputStream0.getNextEntry();
+
+* Permissions denied during test execution: 
+  - java.lang.RuntimePermission: 
+         writeFileDescriptor: 2
+* Writing tests to file
+* Writing JUnit test case 'ZipArchiveInputStream_ESTest' to results/Compress-41/org.apache.commons.compress.archivers.zip.ZipArchiveInputStream/default/tests/4
+* Done!
+
+* Computation finished

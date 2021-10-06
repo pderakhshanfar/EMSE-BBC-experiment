@@ -1,0 +1,387 @@
+* EvoSuite 1.1.1-SNAPSHOT
+* Configuration: default
+* Going to generate test cases for class: org.apache.commons.math3.analysis.differentiation.DSCompiler
+* Starting Client-0
+* Connecting to master process on port 18028
+* Analyzing classpath: 
+  - subjects/buggy-versions/Math-10/target/classes
+* Finished analyzing classpath
+* Generating tests for class org.apache.commons.math3.analysis.differentiation.DSCompiler
+* Test criteria:
+  - Line Coverage
+  - Branch Coverage
+  - Exception
+  - Mutation testing (weak)
+  - Method-Output Coverage
+  - Top-Level Method Coverage
+  - No-Exception Top-Level Method Coverage
+  - Context Branch Coverage
+* Total number of test goals for DYNAMOSA: 1519
+* Using seed 2078685912
+* Starting evolution
+* Initial Number of Goals in DynaMOSA = 366 / 1519
+Number of times BBC is called in total: 0
+* Search finished after 603s and 112 generations, 40144 statements, best individual has fitness: 161.0
+* Minimizing test suite
+[MASTER] 14:04:01.747 [logback-1] WARN  TestSuiteMinimizer - Minimization timeout. Roll back to original test suite
+* Going to analyze the coverage criteria
+* Coverage analysis for criterion LINE
+* Coverage of criterion LINE: 98%
+* Total number of goals: 544
+* Number of covered goals: 535
+* Coverage analysis for criterion BRANCH
+* Coverage of criterion BRANCH: 97%
+* Total number of goals: 295
+* Number of covered goals: 285
+* Coverage analysis for criterion EXCEPTION
+* Coverage of criterion EXCEPTION: 100%
+* Total number of goals: 77
+* Number of covered goals: 77
+* Coverage analysis for criterion WEAKMUTATION
+* Coverage of criterion WEAKMUTATION: 81%
+* Total number of goals: 279
+* Number of covered goals: 225
+* Coverage analysis for criterion OUTPUT
+* Coverage of criterion OUTPUT: 54%
+* Total number of goals: 28
+* Number of covered goals: 15
+* Coverage analysis for criterion METHOD
+* Coverage of criterion METHOD: 100%
+* Total number of goals: 39
+* Number of covered goals: 39
+* Coverage analysis for criterion METHODNOEXCEPTION
+* Coverage of criterion METHODNOEXCEPTION: 100%
+* Total number of goals: 39
+* Number of covered goals: 39
+* Coverage analysis for criterion CBRANCH
+* Coverage of criterion CBRANCH: 95%
+* Total number of goals: 295
+* Number of covered goals: 280
+* Generated 245 tests with total length 2961
+* Resulting test suite's coverage: 85% (average coverage for all fitness functions)
+* Generating assertions
+[MASTER] 14:04:46.139 [logback-1] WARN  SimpleMutationAssertionGenerator - Assertion minimization is taking too long (0.71315% of time used, but only 9/245 tests minimized), falling back to using all assertions
+* Resulting test suite's mutation score: 0%
+* Compiling and checking tests
+[MASTER] 14:05:18.922 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class java.lang.AssertionError: Expecting exception: ArrayIndexOutOfBoundsException
+[MASTER] 14:05:18.922 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ DSCompiler dSCompiler0 = DSCompiler.getCompiler(1, 1);
+assertNotNull(dSCompiler0);
+assertEquals(1, dSCompiler0.getFreeParameters());
+assertEquals(2, dSCompiler0.getSize());
+assertEquals(1, dSCompiler0.getOrder());
+
+double[] doubleArray0 = new double[3];
+doubleArray0[0] = (double) 1;
+doubleArray0[1] = (double) 1;
+dSCompiler0.divide(doubleArray0, 1, doubleArray0, 485, doubleArray0, 0);
+
+[MASTER] 14:05:19.229 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class org.junit.internal.ArrayComparisonFailure: arrays first differed at element [0]; expected:<0.038461538461538464> but was:<1.373400766945016>
+[MASTER] 14:05:19.229 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ int int0 = 0;
+int int1 = 5;
+DSCompiler dSCompiler0 = DSCompiler.getCompiler(0, 5);
+assertNotNull(dSCompiler0);
+assertEquals(5, dSCompiler0.getOrder());
+assertEquals(0, dSCompiler0.getFreeParameters());
+assertEquals(1, dSCompiler0.getSize());
+
+double[] doubleArray0 = new double[5];
+doubleArray0[0] = (double) 5;
+doubleArray0[1] = (double) 5;
+doubleArray0[2] = (double) 0;
+doubleArray0[3] = (double) 5;
+dSCompiler0.atan(doubleArray0, 0, doubleArray0, 0);
+assertArrayEquals(new double[] {0.038461538461538464, 5.0, 0.0, 5.0, 0.0}, doubleArray0, 0.01);
+assertEquals(5, doubleArray0.length);
+assertEquals(5, dSCompiler0.getOrder());
+assertEquals(0, dSCompiler0.getFreeParameters());
+assertEquals(1, dSCompiler0.getSize());
+
+double double0 = 1779.79;
+int int2 = 2328;
+double[] doubleArray1 = new double[5];
+assertFalse(doubleArray1.equals((Object)doubleArray0));
+
+dSCompiler0.divide(doubleArray0, 2328, doubleArray0, 5, doubleArray0, 0);
+
+[MASTER] 14:05:25.559 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class java.lang.AssertionError: Expecting exception: ArrayIndexOutOfBoundsException
+[MASTER] 14:05:25.559 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ DSCompiler dSCompiler0 = DSCompiler.getCompiler(2, 2);
+assertNotNull(dSCompiler0);
+assertEquals(2, dSCompiler0.getOrder());
+assertEquals(2, dSCompiler0.getFreeParameters());
+assertEquals(6, dSCompiler0.getSize());
+
+double[] doubleArray0 = new double[31];
+dSCompiler0.linearCombination((double) 2, doubleArray0, 2, 0.0, doubleArray0, 2, doubleArray0, 2);
+assertEquals(31, doubleArray0.length);
+assertEquals(2, dSCompiler0.getOrder());
+assertEquals(2, dSCompiler0.getFreeParameters());
+assertEquals(6, dSCompiler0.getSize());
+
+dSCompiler0.tan(doubleArray0, 2, doubleArray0, 2);
+
+[MASTER] 14:05:26.615 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class java.lang.AssertionError: Expecting exception: ArrayIndexOutOfBoundsException
+[MASTER] 14:05:26.615 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ double[] doubleArray0 = new double[19];
+DSCompiler dSCompiler0 = DSCompiler.getCompiler(2, 2);
+assertNotNull(dSCompiler0);
+assertEquals(2, dSCompiler0.getOrder());
+assertEquals(6, dSCompiler0.getSize());
+assertEquals(2, dSCompiler0.getFreeParameters());
+
+dSCompiler0.pow(doubleArray0, 2, 2, doubleArray0, 2);
+
+[MASTER] 14:05:26.745 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class java.lang.AssertionError: Expecting exception: ArrayIndexOutOfBoundsException
+[MASTER] 14:05:26.746 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ double[] doubleArray0 = new double[19];
+DSCompiler dSCompiler0 = DSCompiler.getCompiler(2, 2);
+assertNotNull(dSCompiler0);
+assertEquals(2, dSCompiler0.getOrder());
+assertEquals(2, dSCompiler0.getFreeParameters());
+assertEquals(6, dSCompiler0.getSize());
+
+dSCompiler0.log1p(doubleArray0, 2, doubleArray0, 2);
+
+[MASTER] 14:05:38.840 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class org.junit.internal.ArrayComparisonFailure: arrays first differed at element [0]; expected:<Infinity> but was:<-Infinity>
+[MASTER] 14:05:38.840 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ DSCompiler dSCompiler0 = DSCompiler.getCompiler(0, 0);
+assertNotNull(dSCompiler0);
+assertEquals(0, dSCompiler0.getOrder());
+assertEquals(1, dSCompiler0.getSize());
+assertEquals(0, dSCompiler0.getFreeParameters());
+
+double[] doubleArray0 = new double[4];
+doubleArray0[0] = (double) 0;
+doubleArray0[1] = (double) 0;
+doubleArray0[2] = (double) 0;
+int int0 = 3;
+DSCompiler dSCompiler1 = DSCompiler.getCompiler(0, 3);
+assertNotSame(dSCompiler1, dSCompiler0);
+assertFalse(dSCompiler1.equals((Object)dSCompiler0));
+assertNotNull(dSCompiler1);
+assertEquals(0, dSCompiler1.getFreeParameters());
+assertEquals(1, dSCompiler1.getSize());
+assertEquals(3, dSCompiler1.getOrder());
+
+double[] doubleArray1 = new double[4];
+assertFalse(doubleArray1.equals((Object)doubleArray0));
+
+doubleArray1[0] = (double) 0;
+doubleArray1[1] = (double) 0;
+doubleArray1[2] = (double) 3;
+doubleArray1[3] = (double) 0;
+dSCompiler1.log10(doubleArray1, 3, doubleArray1, 0);
+assertNotSame(dSCompiler1, dSCompiler0);
+assertNotSame(doubleArray1, doubleArray0);
+assertArrayEquals(new double[] {Double.POSITIVE_INFINITY, 0.0, 3.0, 0.0}, doubleArray1, 0.01);
+assertFalse(dSCompiler1.equals((Object)dSCompiler0));
+assertFalse(doubleArray1.equals((Object)doubleArray0));
+assertEquals(4, doubleArray1.length);
+assertEquals(0, dSCompiler1.getFreeParameters());
+assertEquals(1, dSCompiler1.getSize());
+assertEquals(3, dSCompiler1.getOrder());
+
+dSCompiler1.rootN(doubleArray0, 3, 3, doubleArray0, 3);
+assertNotSame(doubleArray0, doubleArray1);
+assertNotSame(dSCompiler1, dSCompiler0);
+assertArrayEquals(new double[] {0.0, 0.0, 0.0, Double.POSITIVE_INFINITY}, doubleArray0, 0.01);
+assertFalse(doubleArray0.equals((Object)doubleArray1));
+assertFalse(dSCompiler1.equals((Object)dSCompiler0));
+assertEquals(4, doubleArray0.length);
+assertEquals(0, dSCompiler1.getFreeParameters());
+assertEquals(1, dSCompiler1.getSize());
+assertEquals(3, dSCompiler1.getOrder());
+
+int[] intArray0 = new int[10];
+intArray0[0] = 0;
+dSCompiler0.log(doubleArray0, 0, doubleArray0, 1378);
+
+[MASTER] 14:05:40.527 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class java.lang.AssertionError: Expecting exception: ArrayIndexOutOfBoundsException
+[MASTER] 14:05:40.527 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ double[] doubleArray0 = new double[19];
+DSCompiler dSCompiler0 = DSCompiler.getCompiler(2, 2);
+assertNotNull(dSCompiler0);
+assertEquals(6, dSCompiler0.getSize());
+assertEquals(2, dSCompiler0.getFreeParameters());
+assertEquals(2, dSCompiler0.getOrder());
+
+dSCompiler0.acosh(doubleArray0, 2, doubleArray0, 2);
+
+[MASTER] 14:05:41.271 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class org.junit.internal.ArrayComparisonFailure: arrays first differed at element [3]; expected:<Infinity> but was:<0.0>
+[MASTER] 14:05:41.272 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ DSCompiler dSCompiler0 = DSCompiler.getCompiler(0, 0);
+assertNotNull(dSCompiler0);
+assertEquals(1, dSCompiler0.getSize());
+assertEquals(0, dSCompiler0.getOrder());
+assertEquals(0, dSCompiler0.getFreeParameters());
+
+double[] doubleArray0 = new double[4];
+doubleArray0[0] = (double) 0;
+doubleArray0[1] = (double) 0;
+doubleArray0[2] = (double) 0;
+DSCompiler dSCompiler1 = DSCompiler.getCompiler(0, 3);
+assertNotSame(dSCompiler1, dSCompiler0);
+assertFalse(dSCompiler1.equals((Object)dSCompiler0));
+assertNotNull(dSCompiler1);
+assertEquals(0, dSCompiler1.getFreeParameters());
+assertEquals(3, dSCompiler1.getOrder());
+assertEquals(1, dSCompiler1.getSize());
+
+dSCompiler1.rootN(doubleArray0, 3, 3, doubleArray0, 3);
+assertNotSame(dSCompiler1, dSCompiler0);
+assertArrayEquals(new double[] {0.0, 0.0, 0.0, Double.POSITIVE_INFINITY}, doubleArray0, 0.01);
+assertFalse(dSCompiler1.equals((Object)dSCompiler0));
+assertEquals(4, doubleArray0.length);
+assertEquals(0, dSCompiler1.getFreeParameters());
+assertEquals(3, dSCompiler1.getOrder());
+assertEquals(1, dSCompiler1.getSize());
+
+int[] intArray0 = new int[2];
+intArray0[0] = 0;
+intArray0[1] = 3;
+int int0 = dSCompiler0.getSize();
+assertNotSame(dSCompiler0, dSCompiler1);
+assertEquals(1, int0);
+assertFalse(dSCompiler0.equals((Object)dSCompiler1));
+assertEquals(1, dSCompiler0.getSize());
+assertEquals(0, dSCompiler0.getOrder());
+assertEquals(0, dSCompiler0.getFreeParameters());
+
+dSCompiler0.atanh(doubleArray0, 1488, doubleArray0, 1);
+
+[MASTER] 14:05:43.108 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class org.junit.internal.ArrayComparisonFailure: arrays first differed at element [0]; expected:<0.0> but was:<1.0>
+[MASTER] 14:05:43.109 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ int int0 = 0;
+DSCompiler dSCompiler0 = DSCompiler.getCompiler(0, 3);
+assertNotNull(dSCompiler0);
+assertEquals(1, dSCompiler0.getSize());
+assertEquals(0, dSCompiler0.getFreeParameters());
+assertEquals(3, dSCompiler0.getOrder());
+
+double[] doubleArray0 = new double[5];
+dSCompiler0.cos(doubleArray0, 0, doubleArray0, 0);
+assertArrayEquals(new double[] {0.0, 0.0, 0.0, 0.0, 0.0}, doubleArray0, 0.01);
+assertEquals(5, doubleArray0.length);
+assertEquals(1, dSCompiler0.getSize());
+assertEquals(0, dSCompiler0.getFreeParameters());
+assertEquals(3, dSCompiler0.getOrder());
+
+doubleArray0[2] = (double) 3;
+doubleArray0[1] = (double) 3;
+doubleArray0[2] = (double) 0;
+doubleArray0[3] = (double) 3;
+dSCompiler0.atan(doubleArray0, 0, doubleArray0, 0);
+assertArrayEquals(new double[] {(-2.0), 3.0, 0.0, 3.0, 0.0}, doubleArray0, 0.01);
+assertEquals(5, doubleArray0.length);
+assertEquals(1, dSCompiler0.getSize());
+assertEquals(0, dSCompiler0.getFreeParameters());
+assertEquals(3, dSCompiler0.getOrder());
+
+double[] doubleArray1 = new double[5];
+assertFalse(doubleArray1.equals((Object)doubleArray0));
+
+int int1 = 0;
+dSCompiler0.expm1(doubleArray1, 0, doubleArray1, 0);
+assertNotSame(doubleArray1, doubleArray0);
+assertArrayEquals(new double[] {1.0, 0.0, 0.0, 0.0, 0.0}, doubleArray1, 0.01);
+assertFalse(doubleArray1.equals((Object)doubleArray0));
+assertEquals(5, doubleArray1.length);
+assertEquals(1, dSCompiler0.getSize());
+assertEquals(0, dSCompiler0.getFreeParameters());
+assertEquals(3, dSCompiler0.getOrder());
+
+int int2 = dSCompiler0.getOrder();
+assertEquals(3, int2);
+assertFalse(int2 == int0);
+assertFalse(int2 == int1);
+assertEquals(1, dSCompiler0.getSize());
+assertEquals(0, dSCompiler0.getFreeParameters());
+assertEquals(3, dSCompiler0.getOrder());
+
+dSCompiler0.log(doubleArray0, 91, doubleArray1, 3);
+
+[MASTER] 14:05:44.312 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class java.lang.AssertionError: Expecting exception: ArrayIndexOutOfBoundsException
+[MASTER] 14:05:44.312 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ double[] doubleArray0 = new double[24];
+DSCompiler dSCompiler0 = DSCompiler.getCompiler(2, 2);
+assertNotNull(dSCompiler0);
+assertEquals(6, dSCompiler0.getSize());
+assertEquals(2, dSCompiler0.getOrder());
+assertEquals(2, dSCompiler0.getFreeParameters());
+
+dSCompiler0.pow(doubleArray0, 10, (double) (-11), doubleArray0, 3);
+
+[MASTER] 14:05:46.110 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class java.lang.NullPointerException: null
+[MASTER] 14:05:46.111 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ double[] doubleArray0 = new double[19];
+DSCompiler dSCompiler0 = DSCompiler.getCompiler(0, 2);
+assertNotNull(dSCompiler0);
+assertEquals(1, dSCompiler0.getSize());
+assertEquals(2, dSCompiler0.getOrder());
+assertEquals(0, dSCompiler0.getFreeParameters());
+
+dSCompiler0.sinh(doubleArray0, 2, (double[]) null, (-1439));
+
+[MASTER] 14:05:46.585 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class java.lang.AssertionError: Expecting exception: ArrayIndexOutOfBoundsException
+[MASTER] 14:05:46.586 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ double[] doubleArray0 = new double[25];
+DSCompiler dSCompiler0 = DSCompiler.getCompiler(2, 2);
+assertNotNull(dSCompiler0);
+assertEquals(2, dSCompiler0.getFreeParameters());
+assertEquals(2, dSCompiler0.getOrder());
+assertEquals(6, dSCompiler0.getSize());
+
+dSCompiler0.asinh(doubleArray0, 2, doubleArray0, 2);
+
+[MASTER] 14:05:47.460 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class java.lang.AssertionError: Expecting exception: ArrayIndexOutOfBoundsException
+[MASTER] 14:05:47.460 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ double[] doubleArray0 = new double[19];
+DSCompiler dSCompiler0 = DSCompiler.getCompiler(2, 2);
+assertNotNull(dSCompiler0);
+assertEquals(2, dSCompiler0.getFreeParameters());
+assertEquals(2, dSCompiler0.getOrder());
+assertEquals(6, dSCompiler0.getSize());
+
+dSCompiler0.asin(doubleArray0, 2, doubleArray0, 3);
+
+[MASTER] 14:05:49.442 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class org.junit.internal.ArrayComparisonFailure: arrays first differed at element [3]; expected:<2.0> but was:<0.0>
+[MASTER] 14:05:49.442 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ double[] doubleArray0 = new double[4];
+doubleArray0[0] = (double) 0;
+doubleArray0[1] = (double) 0;
+doubleArray0[2] = (double) 0;
+DSCompiler dSCompiler0 = DSCompiler.getCompiler(0, 3);
+assertNotNull(dSCompiler0);
+assertEquals(1, dSCompiler0.getSize());
+assertEquals(3, dSCompiler0.getOrder());
+assertEquals(0, dSCompiler0.getFreeParameters());
+
+dSCompiler0.log1p(doubleArray0, 3, doubleArray0, 3);
+assertArrayEquals(new double[] {0.0, 0.0, 0.0, 2.0}, doubleArray0, 0.01);
+assertEquals(4, doubleArray0.length);
+assertEquals(1, dSCompiler0.getSize());
+assertEquals(3, dSCompiler0.getOrder());
+assertEquals(0, dSCompiler0.getFreeParameters());
+
+dSCompiler0.rootN(doubleArray0, 3, 3, doubleArray0, 3);
+assertArrayEquals(new double[] {0.0, 0.0, 0.0, 0.05832967823587377}, doubleArray0, 0.01);
+assertEquals(4, doubleArray0.length);
+assertEquals(1, dSCompiler0.getSize());
+assertEquals(3, dSCompiler0.getOrder());
+assertEquals(0, dSCompiler0.getFreeParameters());
+
+int[] intArray0 = new int[10];
+intArray0[0] = 0;
+dSCompiler0.cos(doubleArray0, 481, doubleArray0, 0);
+
+[MASTER] 14:05:51.101 [logback-2] ERROR JUnitAnalyzer - Ran out of time while checking tests
+* Permissions denied during test execution: 
+  - java.lang.RuntimePermission: 
+         writeFileDescriptor: 9
+* Writing tests to file
+* Writing JUnit test case 'DSCompiler_ESTest' to results/Math-10/org.apache.commons.math3.analysis.differentiation.DSCompiler/default/tests/28
+* Done!
+
+* Computation finished

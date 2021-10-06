@@ -1,0 +1,180 @@
+* EvoSuite 1.1.1-SNAPSHOT
+* Configuration: BBC-F0-50
+* Going to generate test cases for class: com.google.javascript.jscomp.NameAnalyzer
+* Starting Client-0
+* Connecting to master process on port 7969
+* Analyzing classpath: 
+  - subjects/buggy-versions/Closure-114/build/classes
+  - subjects/buggy-versions/Closure-114/lib/args4j.jar
+  - subjects/buggy-versions/Closure-114/lib/guava.jar
+  - subjects/buggy-versions/Closure-114/lib/json.jar
+  - subjects/buggy-versions/Closure-114/lib/jsr305.jar
+  - subjects/buggy-versions/Closure-114/lib/protobuf-java.jar
+  - subjects/buggy-versions/Closure-114/build/lib/rhino.jar
+  - subjects/buggy-versions/Closure-114/lib/ant.jar
+* Finished analyzing classpath
+* Generating tests for class com.google.javascript.jscomp.NameAnalyzer
+* Test criteria:
+  - Line Coverage
+  - Branch Coverage
+  - Exception
+  - Mutation testing (weak)
+  - Method-Output Coverage
+  - Top-Level Method Coverage
+  - No-Exception Top-Level Method Coverage
+  - Context Branch Coverage
+* Total number of test goals for DYNAMOSA: 2352
+* Using seed 3535289452
+* Starting evolution
+bbc usage percentage is: 50%
+* Initial Number of Goals in DynaMOSA = 531 / 2352
+[MASTER] 18:03:40.696 [logback-2] ERROR TestCluster - Failed to check cache for java.util.AbstractMap<K, V>.SimpleEntry<K, V> : Type points to itself
+[MASTER] 18:03:40.696 [logback-2] ERROR TestCluster - Failed to check cache for java.util.AbstractMap<K, V>.SimpleImmutableEntry<K, V> : Type points to itself
+[MASTER] 18:05:16.223 [logback-2] ERROR TestCluster - Failed to check cache for java.util.List<E> : Type points to itself
+[MASTER] 18:06:48.345 [logback-2] ERROR TestCluster - Failed to check cache for java.util.Iterator<E> : Type points to itself
+[MASTER] 18:07:01.238 [logback-2] ERROR TestCluster - Failed to check cache for java.util.Enumeration<E> : Type points to itself
+[MASTER] 18:07:40.296 [logback-2] ERROR TestCluster - Failed to check cache for java.lang.Comparable<T> : Type points to itself
+[MASTER] 18:10:58.599 [logback-2] ERROR TestCluster - Failed to check cache for java.util.Comparator<T> : Type points to itself
+* Search finished after 601s and 553 generations, 220670 statements, best individual has fitness: 1110.0
+* Minimizing test suite
+* Going to analyze the coverage criteria
+* Coverage analysis for criterion LINE
+* Coverage of criterion LINE: 56%
+* Total number of goals: 685
+* Number of covered goals: 381
+* Coverage analysis for criterion BRANCH
+* Coverage of criterion BRANCH: 51%
+* Total number of goals: 561
+* Number of covered goals: 288
+* Coverage analysis for criterion EXCEPTION
+* Coverage of criterion EXCEPTION: 100%
+* Total number of goals: 4
+* Number of covered goals: 4
+* Coverage analysis for criterion WEAKMUTATION
+* Coverage of criterion WEAKMUTATION: 58%
+* Total number of goals: 506
+* Number of covered goals: 291
+* Coverage analysis for criterion OUTPUT
+* Coverage of criterion OUTPUT: 33%
+* Total number of goals: 3
+* Number of covered goals: 1
+* Coverage analysis for criterion METHOD
+* Coverage of criterion METHOD: 22%
+* Total number of goals: 18
+* Number of covered goals: 4
+* Coverage analysis for criterion METHODNOEXCEPTION
+* Coverage of criterion METHODNOEXCEPTION: 22%
+* Total number of goals: 18
+* Number of covered goals: 4
+* Coverage analysis for criterion CBRANCH
+* Coverage of criterion CBRANCH: 51%
+* Total number of goals: 561
+* Number of covered goals: 287
+* Generated 20 tests with total length 122
+* Resulting test suite's coverage: 43% (average coverage for all fitness functions)
+* Generating assertions
+* Resulting test suite's mutation score: 13%
+* Compiling and checking tests
+[MASTER] 18:13:53.228 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 18:13:53.232 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class java.lang.AssertionError: Expecting exception: IllegalArgumentException
+[MASTER] 18:13:53.232 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ Compiler compiler0 = new Compiler();
+Node.newString("window");
+NameAnalyzer nameAnalyzer0 = new NameAnalyzer(compiler0, true);
+Normalize.parseAndNormalizeTestCode(compiler0, "s=S");
+
+[MASTER] 18:13:54.662 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class java.lang.AssertionError: Expecting exception: IllegalArgumentException
+[MASTER] 18:13:54.663 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ Compiler compiler0 = new Compiler();
+compiler0.parseTestCode("jI");
+
+[MASTER] 18:13:55.728 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class java.lang.AssertionError: Expecting exception: IllegalArgumentException
+[MASTER] 18:13:55.729 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ Compiler compiler0 = new Compiler();
+compiler0.parseTestCode("I");
+
+[MASTER] 18:13:56.768 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class java.lang.AssertionError: Expecting exception: IllegalArgumentException
+[MASTER] 18:13:56.768 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ Compiler compiler0 = new Compiler();
+compiler0.parseTestCode("");
+
+[MASTER] 18:13:57.747 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class java.lang.AssertionError: Expecting exception: IllegalArgumentException
+[MASTER] 18:13:57.748 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ Compiler compiler0 = new Compiler();
+compiler0.parseTestCode("j");
+
+[MASTER] 18:13:59.890 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class java.lang.AssertionError: Expecting exception: IllegalArgumentException
+[MASTER] 18:13:59.890 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ Compiler compiler0 = new Compiler();
+compiler0.parseSyntheticCode("com.google.javascript.jscomp.LiveVariablesAnalysis$LiveVariableLattice", "com.google.javascript.jscomp.LiveVariablesAnalysis$LiveVariableLattice");
+
+[MASTER] 18:14:02.348 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class java.lang.AssertionError: Expecting exception: IllegalArgumentException
+[MASTER] 18:14:02.348 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ Compiler compiler0 = new Compiler();
+compiler0.parseTestCode("RV");
+
+[MASTER] 18:14:03.448 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class java.lang.AssertionError: Expecting exception: IllegalArgumentException
+[MASTER] 18:14:03.448 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ Compiler compiler0 = new Compiler();
+Node.newString("window");
+NameAnalyzer nameAnalyzer0 = new NameAnalyzer(compiler0, false);
+Normalize.parseAndNormalizeTestCode(compiler0, "window");
+
+[MASTER] 18:14:04.496 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class java.lang.AssertionError: Expecting exception: IllegalArgumentException
+[MASTER] 18:14:04.497 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ Compiler compiler0 = new Compiler();
+compiler0.parseTestCode("compir");
+
+[MASTER] 18:14:05.495 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class java.lang.AssertionError: Expecting exception: IllegalArgumentException
+[MASTER] 18:14:05.495 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ Compiler compiler0 = new Compiler();
+compiler0.parseTestCode("DI");
+
+[MASTER] 18:14:06.529 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class java.lang.AssertionError: Expecting exception: IllegalArgumentException
+[MASTER] 18:14:06.529 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ Compiler compiler0 = new Compiler();
+compiler0.parseTestCode("DI");
+
+[MASTER] 18:14:07.597 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class java.lang.AssertionError: Expecting exception: IllegalArgumentException
+[MASTER] 18:14:07.597 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ Compiler compiler0 = new Compiler();
+compiler0.parseTestCode("jI");
+
+[MASTER] 18:14:08.663 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class java.lang.AssertionError: Expecting exception: IllegalArgumentException
+[MASTER] 18:14:08.663 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ Compiler compiler0 = new Compiler();
+compiler0.parseTestCode("jI");
+
+[MASTER] 18:14:09.705 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class java.lang.AssertionError: Expecting exception: IllegalArgumentException
+[MASTER] 18:14:09.705 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ Compiler compiler0 = new Compiler();
+compiler0.parseTestCode("jI");
+
+[MASTER] 18:14:10.736 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class java.lang.AssertionError: Expecting exception: IllegalArgumentException
+[MASTER] 18:14:10.737 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ Compiler compiler0 = new Compiler();
+compiler0.parseTestCode("com.google.javascript.jscomp.NameAnalyzer$HoistVariableAndFunctionDeclarations");
+
+[MASTER] 18:14:13.120 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class java.lang.AssertionError: Expecting exception: IllegalArgumentException
+[MASTER] 18:14:13.120 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ Compiler compiler0 = new Compiler();
+compiler0.parseTestCode("jI");
+
+[MASTER] 18:14:15.747 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test07 -> class org.evosuite.runtime.mock.java.lang.MockIllegalArgumentException: Multiple entries with same key: ngInject=NOT_IMPLEMENTED and ngInject=NG_INJECT
+[MASTER] 18:14:15.748 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ Compiler compiler0 = new Compiler();
+Logger logger0 = Logger.getGlobal();
+LoggerErrorManager loggerErrorManager0 = new LoggerErrorManager(logger0);
+Compiler compiler1 = new Compiler(loggerErrorManager0);
+NameAnalyzer nameAnalyzer0 = new NameAnalyzer(compiler1, false);
+Node node0 = Normalize.parseAndNormalizeTestCode(compiler1, "function JSCompiler_emptyFn() {  return function() {}}");
+Node node1 = new Node(113, node0, node0, node0, 52, 54);
+nameAnalyzer0.process(node0, node1);
+assertEquals(4095, Node.MAX_COLUMN_NUMBER);
+
+
+* Writing tests to file
+* Writing JUnit test case 'NameAnalyzer_ESTest' to results/Closure-114/com.google.javascript.jscomp.NameAnalyzer/BBC-F0-50/tests/6
+* Done!
+
+* Computation finished

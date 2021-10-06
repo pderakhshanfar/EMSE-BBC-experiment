@@ -1,0 +1,1136 @@
+* EvoSuite 1.1.1-SNAPSHOT
+* Configuration: BBC-F0-50
+* Going to generate test cases for class: com.fasterxml.jackson.core.json.UTF8JsonGenerator
+* Starting Client-0
+* Connecting to master process on port 19201
+* Analyzing classpath: 
+  - subjects/buggy-versions/JacksonCore-17/target/classes
+* Finished analyzing classpath
+* Generating tests for class com.fasterxml.jackson.core.json.UTF8JsonGenerator
+* Test criteria:
+  - Line Coverage
+  - Branch Coverage
+  - Exception
+  - Mutation testing (weak)
+  - Method-Output Coverage
+  - Top-Level Method Coverage
+  - No-Exception Top-Level Method Coverage
+  - Context Branch Coverage
+* Total number of test goals for DYNAMOSA: 2877
+* Using seed 3486699979
+* Starting evolution
+bbc usage percentage is: 50%
+* Initial Number of Goals in DynaMOSA = 783 / 2877
+* Search finished after 604s and 103 generations, 105527 statements, best individual has fitness: 1230.0
+* Minimizing test suite
+* Going to analyze the coverage criteria
+* Coverage analysis for criterion LINE
+[MASTER] 23:11:37.547 [logback-1] WARN  TestSuiteMinimizer - Minimization timeout. Roll back to original test suite
+* Coverage of criterion LINE: 67%
+* Total number of goals: 979
+* Number of covered goals: 660
+* Coverage analysis for criterion BRANCH
+* Coverage of criterion BRANCH: 63%
+* Total number of goals: 539
+* Number of covered goals: 342
+* Coverage analysis for criterion EXCEPTION
+* Coverage of criterion EXCEPTION: 100%
+* Total number of goals: 121
+* Number of covered goals: 121
+* Coverage analysis for criterion WEAKMUTATION
+* Coverage of criterion WEAKMUTATION: 48%
+* Total number of goals: 716
+* Number of covered goals: 342
+* Coverage analysis for criterion OUTPUT
+* Coverage of criterion OUTPUT: 36%
+* Total number of goals: 14
+* Number of covered goals: 5
+* Coverage analysis for criterion METHOD
+* Coverage of criterion METHOD: 98%
+* Total number of goals: 45
+* Number of covered goals: 44
+* Coverage analysis for criterion METHODNOEXCEPTION
+* Coverage of criterion METHODNOEXCEPTION: 82%
+* Total number of goals: 45
+* Number of covered goals: 37
+* Coverage analysis for criterion CBRANCH
+* Coverage of criterion CBRANCH: 63%
+* Total number of goals: 539
+* Number of covered goals: 341
+* Generated 275 tests with total length 5501
+* Resulting test suite's coverage: 63% (average coverage for all fitness functions)
+* Generating assertions
+[MASTER] 23:12:41.472 [logback-1] WARN  SimpleMutationAssertionGenerator - Assertion minimization is taking too long (0.7439333333333333% of time used, but only 14/275 tests minimized), falling back to using all assertions
+* Resulting test suite's mutation score: 1%
+* Compiling and checking tests
+[MASTER] 23:13:17.861 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 23:13:18.089 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 23:13:18.292 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 23:13:18.467 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 23:13:18.612 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 23:13:18.740 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 23:13:19.156 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 23:13:19.286 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 23:13:19.968 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class java.lang.SecurityException: Security manager blocks ("java.lang.RuntimePermission" "writeFileDescriptor")
+java.lang.Thread.getStackTrace(Thread.java:1559)
+org.evosuite.runtime.sandbox.MSecurityManager.checkPermission(MSecurityManager.java:433)
+java.lang.SecurityManager.checkWrite(SecurityManager.java:954)
+java.io.FileOutputStream.<init>(FileOutputStream.java:245)
+org.evosuite.runtime.mock.java.io.MockFileOutputStream.<init>(MockFileOutputStream.java:114)
+com.fasterxml.jackson.core.json.UTF8JsonGenerator_287_tmp__ESTest.test0(UTF8JsonGenerator_287_tmp__ESTest.java:33)
+sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+java.lang.reflect.Method.invoke(Method.java:498)
+org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)
+org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56)
+org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+org.junit.internal.runners.statements.FailOnTimeout$CallableStatement.call(FailOnTimeout.java:288)
+org.junit.internal.runners.statements.FailOnTimeout$CallableStatement.call(FailOnTimeout.java:282)
+java.util.concurrent.FutureTask.run(FutureTask.java:266)
+java.lang.Thread.run(Thread.java:748)
+
+[MASTER] 23:13:19.968 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ BufferRecycler bufferRecycler0 = new BufferRecycler();
+IOContext iOContext0 = new IOContext(bufferRecycler0, "", false);
+FileDescriptor fileDescriptor0 = new FileDescriptor();
+MockFileOutputStream mockFileOutputStream0 = new MockFileOutputStream(fileDescriptor0);
+MockPrintStream mockPrintStream0 = new MockPrintStream(mockFileOutputStream0, true);
+PrintStream printStream0 = mockPrintStream0.append('3');
+mockPrintStream0.print((-308));
+byte[] byteArray0 = new byte[5];
+byteArray0[0] = (byte)81;
+byteArray0[1] = (byte)0;
+byteArray0[2] = (byte)0;
+byteArray0[3] = (byte)81;
+byteArray0[4] = (byte) (-72);
+UTF8JsonGenerator uTF8JsonGenerator0 = new UTF8JsonGenerator(iOContext0, (-1771), (ObjectCodec) null, printStream0, byteArray0, 12, false);
+BigDecimal bigDecimal0 = new BigDecimal(2468);
+uTF8JsonGenerator0.writeNumber(bigDecimal0);
+uTF8JsonGenerator0.writeFieldName((SerializableString) null);
+
+[MASTER] 23:13:25.424 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class java.lang.SecurityException: Security manager blocks ("java.lang.RuntimePermission" "writeFileDescriptor")
+java.lang.Thread.getStackTrace(Thread.java:1559)
+org.evosuite.runtime.sandbox.MSecurityManager.checkPermission(MSecurityManager.java:433)
+java.lang.SecurityManager.checkWrite(SecurityManager.java:954)
+java.io.FileOutputStream.<init>(FileOutputStream.java:245)
+org.evosuite.runtime.mock.java.io.MockFileOutputStream.<init>(MockFileOutputStream.java:114)
+com.fasterxml.jackson.core.json.UTF8JsonGenerator_301_tmp__ESTest.test0(UTF8JsonGenerator_301_tmp__ESTest.java:58)
+sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+java.lang.reflect.Method.invoke(Method.java:498)
+org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)
+org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56)
+org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+org.junit.internal.runners.statements.FailOnTimeout$CallableStatement.call(FailOnTimeout.java:288)
+org.junit.internal.runners.statements.FailOnTimeout$CallableStatement.call(FailOnTimeout.java:282)
+java.util.concurrent.FutureTask.run(FutureTask.java:266)
+java.lang.Thread.run(Thread.java:748)
+
+[MASTER] 23:13:25.425 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ BufferRecycler bufferRecycler0 = new BufferRecycler();
+assertEquals(2, BufferRecycler.CHAR_TEXT_BUFFER);
+assertEquals(1, BufferRecycler.CHAR_CONCAT_BUFFER);
+assertEquals(0, BufferRecycler.BYTE_READ_IO_BUFFER);
+assertEquals(3, BufferRecycler.CHAR_NAME_COPY_BUFFER);
+assertEquals(1, BufferRecycler.BYTE_WRITE_ENCODING_BUFFER);
+assertEquals(2, BufferRecycler.BYTE_WRITE_CONCAT_BUFFER);
+assertEquals(0, BufferRecycler.CHAR_TOKEN_BUFFER);
+assertEquals(3, BufferRecycler.BYTE_BASE64_CODEC_BUFFER);
+assertNotNull(bufferRecycler0);
+
+IOContext iOContext0 = new IOContext(bufferRecycler0, "", false);
+assertEquals(2, BufferRecycler.CHAR_TEXT_BUFFER);
+assertEquals(1, BufferRecycler.CHAR_CONCAT_BUFFER);
+assertEquals(0, BufferRecycler.BYTE_READ_IO_BUFFER);
+assertEquals(3, BufferRecycler.CHAR_NAME_COPY_BUFFER);
+assertEquals(1, BufferRecycler.BYTE_WRITE_ENCODING_BUFFER);
+assertEquals(2, BufferRecycler.BYTE_WRITE_CONCAT_BUFFER);
+assertEquals(0, BufferRecycler.CHAR_TOKEN_BUFFER);
+assertEquals(3, BufferRecycler.BYTE_BASE64_CODEC_BUFFER);
+assertNull(iOContext0.getEncoding());
+assertFalse(iOContext0.isResourceManaged());
+assertNotNull(iOContext0);
+
+FileDescriptor fileDescriptor0 = new FileDescriptor();
+assertFalse(fileDescriptor0.valid());
+assertNotNull(fileDescriptor0);
+
+MockFileOutputStream mockFileOutputStream0 = new MockFileOutputStream(fileDescriptor0);
+assertNotNull(mockFileOutputStream0);
+
+MockPrintStream mockPrintStream0 = new MockPrintStream(mockFileOutputStream0, true);
+assertNotNull(mockPrintStream0);
+
+PrintStream printStream0 = mockPrintStream0.append('3');
+assertFalse(fileDescriptor0.valid());
+assertNotNull(printStream0);
+assertSame(mockPrintStream0, printStream0);
+assertSame(printStream0, mockPrintStream0);
+
+mockPrintStream0.print((-308));
+assertFalse(fileDescriptor0.valid());
+assertSame(mockPrintStream0, printStream0);
+
+byte[] byteArray0 = new byte[5];
+byteArray0[0] = (byte)81;
+byteArray0[1] = (byte)0;
+byteArray0[2] = (byte)0;
+byteArray0[3] = (byte)81;
+byteArray0[4] = (byte) (-72);
+UTF8JsonGenerator uTF8JsonGenerator0 = new UTF8JsonGenerator(iOContext0, (-1771), (ObjectCodec) null, printStream0, byteArray0, (-308), false);
+assertEquals(2, BufferRecycler.CHAR_TEXT_BUFFER);
+assertEquals(1, BufferRecycler.CHAR_CONCAT_BUFFER);
+assertEquals(0, BufferRecycler.BYTE_READ_IO_BUFFER);
+assertEquals(3, BufferRecycler.CHAR_NAME_COPY_BUFFER);
+assertEquals(1, BufferRecycler.BYTE_WRITE_ENCODING_BUFFER);
+assertEquals(2, BufferRecycler.BYTE_WRITE_CONCAT_BUFFER);
+assertEquals(0, BufferRecycler.CHAR_TOKEN_BUFFER);
+assertEquals(3, BufferRecycler.BYTE_BASE64_CODEC_BUFFER);
+assertEquals(55296, GeneratorBase.SURR1_FIRST);
+assertEquals(56319, GeneratorBase.SURR1_LAST);
+assertEquals(57343, GeneratorBase.SURR2_LAST);
+assertEquals(56320, GeneratorBase.SURR2_FIRST);
+assertEquals(5, byteArray0.length);
+assertNull(iOContext0.getEncoding());
+assertFalse(iOContext0.isResourceManaged());
+assertFalse(fileDescriptor0.valid());
+assertFalse(uTF8JsonGenerator0.canWriteBinaryNatively());
+assertTrue(uTF8JsonGenerator0.canOmitFields());
+assertEquals((-1771), uTF8JsonGenerator0.getFeatureMask());
+assertFalse(uTF8JsonGenerator0.isClosed());
+assertEquals(0, uTF8JsonGenerator0.getHighestEscapedChar());
+assertFalse(uTF8JsonGenerator0.canWriteFormattedNumbers());
+assertFalse(uTF8JsonGenerator0.canWriteTypeId());
+assertFalse(uTF8JsonGenerator0.canWriteObjectId());
+assertEquals(0, uTF8JsonGenerator0.getFormatFeatures());
+assertEquals((-308), uTF8JsonGenerator0.getOutputBuffered());
+assertNotNull(uTF8JsonGenerator0);
+assertArrayEquals(new byte[] {(byte)81, (byte)0, (byte)0, (byte)81, (byte) (-72)}, byteArray0);
+
+BigDecimal bigDecimal0 = new BigDecimal(2468);
+assertEquals((short)2468, bigDecimal0.shortValue());
+assertEquals((byte) (-92), bigDecimal0.byteValue());
+assertNotNull(bigDecimal0);
+
+uTF8JsonGenerator0.writeNumber(bigDecimal0);
+
+[MASTER] 23:13:32.934 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class java.lang.SecurityException: Security manager blocks ("java.lang.RuntimePermission" "writeFileDescriptor")
+java.lang.Thread.getStackTrace(Thread.java:1559)
+org.evosuite.runtime.sandbox.MSecurityManager.checkPermission(MSecurityManager.java:433)
+java.lang.SecurityManager.checkWrite(SecurityManager.java:954)
+java.io.FileOutputStream.<init>(FileOutputStream.java:245)
+org.evosuite.runtime.mock.java.io.MockFileOutputStream.<init>(MockFileOutputStream.java:114)
+com.fasterxml.jackson.core.json.UTF8JsonGenerator_322_tmp__ESTest.test0(UTF8JsonGenerator_322_tmp__ESTest.java:60)
+sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+java.lang.reflect.Method.invoke(Method.java:498)
+org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)
+org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56)
+org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+org.junit.internal.runners.statements.FailOnTimeout$CallableStatement.call(FailOnTimeout.java:288)
+org.junit.internal.runners.statements.FailOnTimeout$CallableStatement.call(FailOnTimeout.java:282)
+java.util.concurrent.FutureTask.run(FutureTask.java:266)
+java.lang.Thread.run(Thread.java:748)
+
+[MASTER] 23:13:32.935 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ BufferRecycler bufferRecycler0 = new BufferRecycler();
+assertEquals(1, BufferRecycler.CHAR_CONCAT_BUFFER);
+assertEquals(3, BufferRecycler.CHAR_NAME_COPY_BUFFER);
+assertEquals(1, BufferRecycler.BYTE_WRITE_ENCODING_BUFFER);
+assertEquals(2, BufferRecycler.BYTE_WRITE_CONCAT_BUFFER);
+assertEquals(0, BufferRecycler.BYTE_READ_IO_BUFFER);
+assertEquals(0, BufferRecycler.CHAR_TOKEN_BUFFER);
+assertEquals(3, BufferRecycler.BYTE_BASE64_CODEC_BUFFER);
+assertEquals(2, BufferRecycler.CHAR_TEXT_BUFFER);
+assertNotNull(bufferRecycler0);
+
+IOContext iOContext0 = new IOContext(bufferRecycler0, "", false);
+assertEquals(1, BufferRecycler.CHAR_CONCAT_BUFFER);
+assertEquals(3, BufferRecycler.CHAR_NAME_COPY_BUFFER);
+assertEquals(1, BufferRecycler.BYTE_WRITE_ENCODING_BUFFER);
+assertEquals(2, BufferRecycler.BYTE_WRITE_CONCAT_BUFFER);
+assertEquals(0, BufferRecycler.BYTE_READ_IO_BUFFER);
+assertEquals(0, BufferRecycler.CHAR_TOKEN_BUFFER);
+assertEquals(3, BufferRecycler.BYTE_BASE64_CODEC_BUFFER);
+assertEquals(2, BufferRecycler.CHAR_TEXT_BUFFER);
+assertNull(iOContext0.getEncoding());
+assertFalse(iOContext0.isResourceManaged());
+assertNotNull(iOContext0);
+
+FileDescriptor fileDescriptor0 = new FileDescriptor();
+assertFalse(fileDescriptor0.valid());
+assertNotNull(fileDescriptor0);
+
+MockFileOutputStream mockFileOutputStream0 = new MockFileOutputStream(fileDescriptor0);
+assertNotNull(mockFileOutputStream0);
+
+MockPrintStream mockPrintStream0 = new MockPrintStream(mockFileOutputStream0, true);
+assertNotNull(mockPrintStream0);
+
+PrintStream printStream0 = mockPrintStream0.append('3');
+assertFalse(fileDescriptor0.valid());
+assertNotNull(printStream0);
+assertSame(mockPrintStream0, printStream0);
+assertSame(printStream0, mockPrintStream0);
+
+mockPrintStream0.print((-308));
+assertFalse(fileDescriptor0.valid());
+assertSame(mockPrintStream0, printStream0);
+
+byte[] byteArray0 = new byte[5];
+byteArray0[0] = (byte)81;
+byteArray0[1] = (byte)0;
+byteArray0[2] = (byte)0;
+byteArray0[3] = (byte)81;
+byteArray0[4] = (byte) (-72);
+UTF8JsonGenerator uTF8JsonGenerator0 = new UTF8JsonGenerator(iOContext0, (-1771), (ObjectCodec) null, printStream0, byteArray0, 1, false);
+assertEquals(1, BufferRecycler.CHAR_CONCAT_BUFFER);
+assertEquals(3, BufferRecycler.CHAR_NAME_COPY_BUFFER);
+assertEquals(1, BufferRecycler.BYTE_WRITE_ENCODING_BUFFER);
+assertEquals(2, BufferRecycler.BYTE_WRITE_CONCAT_BUFFER);
+assertEquals(0, BufferRecycler.BYTE_READ_IO_BUFFER);
+assertEquals(0, BufferRecycler.CHAR_TOKEN_BUFFER);
+assertEquals(3, BufferRecycler.BYTE_BASE64_CODEC_BUFFER);
+assertEquals(2, BufferRecycler.CHAR_TEXT_BUFFER);
+assertEquals(56320, GeneratorBase.SURR2_FIRST);
+assertEquals(56319, GeneratorBase.SURR1_LAST);
+assertEquals(55296, GeneratorBase.SURR1_FIRST);
+assertEquals(57343, GeneratorBase.SURR2_LAST);
+assertEquals(5, byteArray0.length);
+assertNull(iOContext0.getEncoding());
+assertFalse(iOContext0.isResourceManaged());
+assertFalse(fileDescriptor0.valid());
+assertFalse(uTF8JsonGenerator0.isClosed());
+assertFalse(uTF8JsonGenerator0.canWriteTypeId());
+assertEquals(1, uTF8JsonGenerator0.getOutputBuffered());
+assertEquals(0, uTF8JsonGenerator0.getFormatFeatures());
+assertTrue(uTF8JsonGenerator0.canOmitFields());
+assertFalse(uTF8JsonGenerator0.canWriteFormattedNumbers());
+assertFalse(uTF8JsonGenerator0.canWriteObjectId());
+assertFalse(uTF8JsonGenerator0.canWriteBinaryNatively());
+assertEquals((-1771), uTF8JsonGenerator0.getFeatureMask());
+assertEquals(0, uTF8JsonGenerator0.getHighestEscapedChar());
+assertNotNull(uTF8JsonGenerator0);
+assertArrayEquals(new byte[] {(byte)81, (byte)0, (byte)0, (byte)81, (byte) (-72)}, byteArray0);
+
+BigDecimal bigDecimal0 = new BigDecimal(2468);
+assertEquals((short)2468, bigDecimal0.shortValue());
+assertEquals((byte) (-92), bigDecimal0.byteValue());
+assertNotNull(bigDecimal0);
+
+uTF8JsonGenerator0.writeRawUTF8String(byteArray0, (byte)81, 1063);
+assertEquals(1, BufferRecycler.CHAR_CONCAT_BUFFER);
+assertEquals(3, BufferRecycler.CHAR_NAME_COPY_BUFFER);
+assertEquals(1, BufferRecycler.BYTE_WRITE_ENCODING_BUFFER);
+assertEquals(2, BufferRecycler.BYTE_WRITE_CONCAT_BUFFER);
+assertEquals(0, BufferRecycler.BYTE_READ_IO_BUFFER);
+assertEquals(0, BufferRecycler.CHAR_TOKEN_BUFFER);
+assertEquals(3, BufferRecycler.BYTE_BASE64_CODEC_BUFFER);
+assertEquals(2, BufferRecycler.CHAR_TEXT_BUFFER);
+assertEquals(56320, GeneratorBase.SURR2_FIRST);
+assertEquals(56319, GeneratorBase.SURR1_LAST);
+assertEquals(55296, GeneratorBase.SURR1_FIRST);
+assertEquals(57343, GeneratorBase.SURR2_LAST);
+assertEquals(5, byteArray0.length);
+assertNull(iOContext0.getEncoding());
+assertFalse(iOContext0.isResourceManaged());
+assertFalse(fileDescriptor0.valid());
+assertFalse(uTF8JsonGenerator0.isClosed());
+assertFalse(uTF8JsonGenerator0.canWriteTypeId());
+assertEquals(1, uTF8JsonGenerator0.getOutputBuffered());
+assertEquals(0, uTF8JsonGenerator0.getFormatFeatures());
+assertTrue(uTF8JsonGenerator0.canOmitFields());
+assertFalse(uTF8JsonGenerator0.canWriteFormattedNumbers());
+assertFalse(uTF8JsonGenerator0.canWriteObjectId());
+assertFalse(uTF8JsonGenerator0.canWriteBinaryNatively());
+assertEquals((-1771), uTF8JsonGenerator0.getFeatureMask());
+assertEquals(0, uTF8JsonGenerator0.getHighestEscapedChar());
+assertArrayEquals(new byte[] {(byte)34, (byte)34, (byte)0, (byte)81, (byte) (-72)}, byteArray0);
+assertSame(mockPrintStream0, printStream0);
+assertSame(printStream0, mockPrintStream0);
+
+SerializedString serializedString0 = new SerializedString("Current context not an object but ");
+assertEquals("Current context not an object but ", serializedString0.toString());
+assertEquals(34, serializedString0.charLength());
+assertEquals("Current context not an object but ", serializedString0.getValue());
+assertNotNull(serializedString0);
+
+uTF8JsonGenerator0.writeFieldName((SerializableString) serializedString0);
+
+[MASTER] 23:13:38.059 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class java.lang.SecurityException: Security manager blocks ("java.lang.RuntimePermission" "writeFileDescriptor")
+java.lang.Thread.getStackTrace(Thread.java:1559)
+org.evosuite.runtime.sandbox.MSecurityManager.checkPermission(MSecurityManager.java:433)
+java.lang.SecurityManager.checkWrite(SecurityManager.java:954)
+java.io.FileOutputStream.<init>(FileOutputStream.java:245)
+org.evosuite.runtime.mock.java.io.MockFileOutputStream.<init>(MockFileOutputStream.java:114)
+com.fasterxml.jackson.core.json.UTF8JsonGenerator_335_tmp__ESTest.test0(UTF8JsonGenerator_335_tmp__ESTest.java:46)
+sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+java.lang.reflect.Method.invoke(Method.java:498)
+org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)
+org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56)
+org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+org.junit.internal.runners.statements.FailOnTimeout$CallableStatement.call(FailOnTimeout.java:288)
+org.junit.internal.runners.statements.FailOnTimeout$CallableStatement.call(FailOnTimeout.java:282)
+java.util.concurrent.FutureTask.run(FutureTask.java:266)
+java.lang.Thread.run(Thread.java:748)
+
+[MASTER] 23:13:38.060 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ BufferRecycler bufferRecycler0 = new BufferRecycler();
+assertEquals(1, BufferRecycler.CHAR_CONCAT_BUFFER);
+assertEquals(3, BufferRecycler.CHAR_NAME_COPY_BUFFER);
+assertEquals(1, BufferRecycler.BYTE_WRITE_ENCODING_BUFFER);
+assertEquals(2, BufferRecycler.BYTE_WRITE_CONCAT_BUFFER);
+assertEquals(0, BufferRecycler.BYTE_READ_IO_BUFFER);
+assertEquals(0, BufferRecycler.CHAR_TOKEN_BUFFER);
+assertEquals(3, BufferRecycler.BYTE_BASE64_CODEC_BUFFER);
+assertEquals(2, BufferRecycler.CHAR_TEXT_BUFFER);
+assertNotNull(bufferRecycler0);
+
+FileDescriptor fileDescriptor0 = new FileDescriptor();
+assertFalse(fileDescriptor0.valid());
+assertNotNull(fileDescriptor0);
+
+MockFileOutputStream mockFileOutputStream0 = new MockFileOutputStream(fileDescriptor0);
+assertNotNull(mockFileOutputStream0);
+
+MockPrintStream mockPrintStream0 = new MockPrintStream(mockFileOutputStream0, false);
+assertNotNull(mockPrintStream0);
+
+PrintStream printStream0 = mockPrintStream0.append('6');
+assertFalse(fileDescriptor0.valid());
+assertNotNull(printStream0);
+assertSame(mockPrintStream0, printStream0);
+assertSame(printStream0, mockPrintStream0);
+
+int int0 = 12000;
+mockPrintStream0.print(12000);
+assertFalse(fileDescriptor0.valid());
+assertSame(mockPrintStream0, printStream0);
+
+IOContext iOContext0 = new IOContext(bufferRecycler0, mockFileOutputStream0, false);
+assertEquals(1, BufferRecycler.CHAR_CONCAT_BUFFER);
+assertEquals(3, BufferRecycler.CHAR_NAME_COPY_BUFFER);
+assertEquals(1, BufferRecycler.BYTE_WRITE_ENCODING_BUFFER);
+assertEquals(2, BufferRecycler.BYTE_WRITE_CONCAT_BUFFER);
+assertEquals(0, BufferRecycler.BYTE_READ_IO_BUFFER);
+assertEquals(0, BufferRecycler.CHAR_TOKEN_BUFFER);
+assertEquals(3, BufferRecycler.BYTE_BASE64_CODEC_BUFFER);
+assertEquals(2, BufferRecycler.CHAR_TEXT_BUFFER);
+assertFalse(fileDescriptor0.valid());
+assertFalse(iOContext0.isResourceManaged());
+assertNull(iOContext0.getEncoding());
+assertNotNull(iOContext0);
+
+byte[] byteArray0 = new byte[4];
+byteArray0[0] = (byte) (-72);
+byteArray0[1] = (byte) (-72);
+byteArray0[2] = (byte)0;
+byteArray0[3] = (byte) (-72);
+UTF8JsonGenerator uTF8JsonGenerator0 = new UTF8JsonGenerator(iOContext0, 12000, (ObjectCodec) null, mockPrintStream0, byteArray0, 33, false);
+assertEquals(1, BufferRecycler.CHAR_CONCAT_BUFFER);
+assertEquals(3, BufferRecycler.CHAR_NAME_COPY_BUFFER);
+assertEquals(1, BufferRecycler.BYTE_WRITE_ENCODING_BUFFER);
+assertEquals(2, BufferRecycler.BYTE_WRITE_CONCAT_BUFFER);
+assertEquals(0, BufferRecycler.BYTE_READ_IO_BUFFER);
+assertEquals(0, BufferRecycler.CHAR_TOKEN_BUFFER);
+assertEquals(3, BufferRecycler.BYTE_BASE64_CODEC_BUFFER);
+assertEquals(2, BufferRecycler.CHAR_TEXT_BUFFER);
+assertEquals(56319, GeneratorBase.SURR1_LAST);
+assertEquals(55296, GeneratorBase.SURR1_FIRST);
+assertEquals(56320, GeneratorBase.SURR2_FIRST);
+assertEquals(57343, GeneratorBase.SURR2_LAST);
+assertEquals(4, byteArray0.length);
+assertFalse(fileDescriptor0.valid());
+assertFalse(iOContext0.isResourceManaged());
+assertNull(iOContext0.getEncoding());
+assertFalse(uTF8JsonGenerator0.canWriteBinaryNatively());
+assertEquals(0, uTF8JsonGenerator0.getFormatFeatures());
+assertEquals(33, uTF8JsonGenerator0.getOutputBuffered());
+assertFalse(uTF8JsonGenerator0.canWriteFormattedNumbers());
+assertFalse(uTF8JsonGenerator0.canWriteTypeId());
+assertEquals(12000, uTF8JsonGenerator0.getFeatureMask());
+assertFalse(uTF8JsonGenerator0.canWriteObjectId());
+assertEquals(127, uTF8JsonGenerator0.getHighestEscapedChar());
+assertTrue(uTF8JsonGenerator0.canOmitFields());
+assertFalse(uTF8JsonGenerator0.isClosed());
+assertNotNull(uTF8JsonGenerator0);
+assertArrayEquals(new byte[] {(byte) (-72), (byte) (-72), (byte)0, (byte) (-72)}, byteArray0);
+
+BigDecimal bigDecimal0 = new BigDecimal(2468);
+assertEquals((byte) (-92), bigDecimal0.byteValue());
+assertEquals((short)2468, bigDecimal0.shortValue());
+assertNotNull(bigDecimal0);
+
+uTF8JsonGenerator0.writeNumber(bigDecimal0);
+assertEquals(1, BufferRecycler.CHAR_CONCAT_BUFFER);
+assertEquals(3, BufferRecycler.CHAR_NAME_COPY_BUFFER);
+assertEquals(1, BufferRecycler.BYTE_WRITE_ENCODING_BUFFER);
+assertEquals(2, BufferRecycler.BYTE_WRITE_CONCAT_BUFFER);
+assertEquals(0, BufferRecycler.BYTE_READ_IO_BUFFER);
+assertEquals(0, BufferRecycler.CHAR_TOKEN_BUFFER);
+assertEquals(3, BufferRecycler.BYTE_BASE64_CODEC_BUFFER);
+assertEquals(2, BufferRecycler.CHAR_TEXT_BUFFER);
+assertEquals(56319, GeneratorBase.SURR1_LAST);
+assertEquals(55296, GeneratorBase.SURR1_FIRST);
+assertEquals(56320, GeneratorBase.SURR2_FIRST);
+assertEquals(57343, GeneratorBase.SURR2_LAST);
+assertEquals(4, byteArray0.length);
+assertFalse(fileDescriptor0.valid());
+assertFalse(iOContext0.isResourceManaged());
+assertNull(iOContext0.getEncoding());
+assertFalse(uTF8JsonGenerator0.canWriteBinaryNatively());
+assertEquals(0, uTF8JsonGenerator0.getFormatFeatures());
+assertEquals(2, uTF8JsonGenerator0.getOutputBuffered());
+assertFalse(uTF8JsonGenerator0.canWriteFormattedNumbers());
+assertFalse(uTF8JsonGenerator0.canWriteTypeId());
+assertEquals(12000, uTF8JsonGenerator0.getFeatureMask());
+assertFalse(uTF8JsonGenerator0.canWriteObjectId());
+assertEquals(127, uTF8JsonGenerator0.getHighestEscapedChar());
+assertTrue(uTF8JsonGenerator0.canOmitFields());
+assertFalse(uTF8JsonGenerator0.isClosed());
+assertEquals((byte) (-92), bigDecimal0.byteValue());
+assertEquals((short)2468, bigDecimal0.shortValue());
+assertArrayEquals(new byte[] {(byte)56, (byte)34, (byte)52, (byte)54}, byteArray0);
+assertSame(mockPrintStream0, printStream0);
+
+uTF8JsonGenerator0.writeFieldName((SerializableString) null);
+
+[MASTER] 23:13:41.635 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class java.lang.SecurityException: Security manager blocks ("java.lang.RuntimePermission" "writeFileDescriptor")
+java.lang.Thread.getStackTrace(Thread.java:1559)
+org.evosuite.runtime.sandbox.MSecurityManager.checkPermission(MSecurityManager.java:433)
+java.lang.SecurityManager.checkWrite(SecurityManager.java:954)
+java.io.FileOutputStream.<init>(FileOutputStream.java:245)
+org.evosuite.runtime.mock.java.io.MockFileOutputStream.<init>(MockFileOutputStream.java:114)
+com.fasterxml.jackson.core.json.UTF8JsonGenerator_339_tmp__ESTest.test0(UTF8JsonGenerator_339_tmp__ESTest.java:61)
+sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+java.lang.reflect.Method.invoke(Method.java:498)
+org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)
+org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56)
+org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+org.junit.internal.runners.statements.FailOnTimeout$CallableStatement.call(FailOnTimeout.java:288)
+org.junit.internal.runners.statements.FailOnTimeout$CallableStatement.call(FailOnTimeout.java:282)
+java.util.concurrent.FutureTask.run(FutureTask.java:266)
+java.lang.Thread.run(Thread.java:748)
+
+[MASTER] 23:13:41.636 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ BufferRecycler bufferRecycler0 = new BufferRecycler();
+assertEquals(0, BufferRecycler.CHAR_TOKEN_BUFFER);
+assertEquals(3, BufferRecycler.BYTE_BASE64_CODEC_BUFFER);
+assertEquals(2, BufferRecycler.CHAR_TEXT_BUFFER);
+assertEquals(1, BufferRecycler.CHAR_CONCAT_BUFFER);
+assertEquals(1, BufferRecycler.BYTE_WRITE_ENCODING_BUFFER);
+assertEquals(3, BufferRecycler.CHAR_NAME_COPY_BUFFER);
+assertEquals(2, BufferRecycler.BYTE_WRITE_CONCAT_BUFFER);
+assertEquals(0, BufferRecycler.BYTE_READ_IO_BUFFER);
+assertNotNull(bufferRecycler0);
+
+IOContext iOContext0 = new IOContext(bufferRecycler0, "", false);
+assertEquals(0, BufferRecycler.CHAR_TOKEN_BUFFER);
+assertEquals(3, BufferRecycler.BYTE_BASE64_CODEC_BUFFER);
+assertEquals(2, BufferRecycler.CHAR_TEXT_BUFFER);
+assertEquals(1, BufferRecycler.CHAR_CONCAT_BUFFER);
+assertEquals(1, BufferRecycler.BYTE_WRITE_ENCODING_BUFFER);
+assertEquals(3, BufferRecycler.CHAR_NAME_COPY_BUFFER);
+assertEquals(2, BufferRecycler.BYTE_WRITE_CONCAT_BUFFER);
+assertEquals(0, BufferRecycler.BYTE_READ_IO_BUFFER);
+assertFalse(iOContext0.isResourceManaged());
+assertNull(iOContext0.getEncoding());
+assertNotNull(iOContext0);
+
+FileDescriptor fileDescriptor0 = new FileDescriptor();
+assertFalse(fileDescriptor0.valid());
+assertNotNull(fileDescriptor0);
+
+MockFileOutputStream mockFileOutputStream0 = new MockFileOutputStream(fileDescriptor0);
+assertNotNull(mockFileOutputStream0);
+
+MockPrintStream mockPrintStream0 = new MockPrintStream(mockFileOutputStream0, true);
+assertNotNull(mockPrintStream0);
+
+PrintStream printStream0 = mockPrintStream0.append('3');
+assertFalse(fileDescriptor0.valid());
+assertNotNull(printStream0);
+assertSame(mockPrintStream0, printStream0);
+assertSame(printStream0, mockPrintStream0);
+
+mockPrintStream0.print((-308));
+assertFalse(fileDescriptor0.valid());
+assertSame(mockPrintStream0, printStream0);
+
+byte[] byteArray0 = new byte[5];
+byteArray0[0] = (byte)81;
+byteArray0[1] = (byte)0;
+byteArray0[2] = (byte)0;
+byteArray0[3] = (byte)81;
+byteArray0[4] = (byte) (-72);
+UTF8JsonGenerator uTF8JsonGenerator0 = new UTF8JsonGenerator(iOContext0, (-1771), (ObjectCodec) null, printStream0, byteArray0, 1, false);
+assertEquals(0, BufferRecycler.CHAR_TOKEN_BUFFER);
+assertEquals(3, BufferRecycler.BYTE_BASE64_CODEC_BUFFER);
+assertEquals(2, BufferRecycler.CHAR_TEXT_BUFFER);
+assertEquals(1, BufferRecycler.CHAR_CONCAT_BUFFER);
+assertEquals(1, BufferRecycler.BYTE_WRITE_ENCODING_BUFFER);
+assertEquals(3, BufferRecycler.CHAR_NAME_COPY_BUFFER);
+assertEquals(2, BufferRecycler.BYTE_WRITE_CONCAT_BUFFER);
+assertEquals(0, BufferRecycler.BYTE_READ_IO_BUFFER);
+assertEquals(57343, GeneratorBase.SURR2_LAST);
+assertEquals(55296, GeneratorBase.SURR1_FIRST);
+assertEquals(56320, GeneratorBase.SURR2_FIRST);
+assertEquals(56319, GeneratorBase.SURR1_LAST);
+assertEquals(5, byteArray0.length);
+assertFalse(iOContext0.isResourceManaged());
+assertNull(iOContext0.getEncoding());
+assertFalse(fileDescriptor0.valid());
+assertFalse(uTF8JsonGenerator0.isClosed());
+assertEquals(0, uTF8JsonGenerator0.getFormatFeatures());
+assertEquals((-1771), uTF8JsonGenerator0.getFeatureMask());
+assertTrue(uTF8JsonGenerator0.canOmitFields());
+assertFalse(uTF8JsonGenerator0.canWriteTypeId());
+assertFalse(uTF8JsonGenerator0.canWriteFormattedNumbers());
+assertEquals(0, uTF8JsonGenerator0.getHighestEscapedChar());
+assertFalse(uTF8JsonGenerator0.canWriteBinaryNatively());
+assertFalse(uTF8JsonGenerator0.canWriteObjectId());
+assertEquals(1, uTF8JsonGenerator0.getOutputBuffered());
+assertNotNull(uTF8JsonGenerator0);
+assertArrayEquals(new byte[] {(byte)81, (byte)0, (byte)0, (byte)81, (byte) (-72)}, byteArray0);
+
+BigDecimal bigDecimal0 = new BigDecimal(2468);
+assertEquals((byte) (-92), bigDecimal0.byteValue());
+assertEquals((short)2468, bigDecimal0.shortValue());
+assertNotNull(bigDecimal0);
+
+uTF8JsonGenerator0.writeRawUTF8String(byteArray0, (byte)81, 1063);
+assertEquals(0, BufferRecycler.CHAR_TOKEN_BUFFER);
+assertEquals(3, BufferRecycler.BYTE_BASE64_CODEC_BUFFER);
+assertEquals(2, BufferRecycler.CHAR_TEXT_BUFFER);
+assertEquals(1, BufferRecycler.CHAR_CONCAT_BUFFER);
+assertEquals(1, BufferRecycler.BYTE_WRITE_ENCODING_BUFFER);
+assertEquals(3, BufferRecycler.CHAR_NAME_COPY_BUFFER);
+assertEquals(2, BufferRecycler.BYTE_WRITE_CONCAT_BUFFER);
+assertEquals(0, BufferRecycler.BYTE_READ_IO_BUFFER);
+assertEquals(57343, GeneratorBase.SURR2_LAST);
+assertEquals(55296, GeneratorBase.SURR1_FIRST);
+assertEquals(56320, GeneratorBase.SURR2_FIRST);
+assertEquals(56319, GeneratorBase.SURR1_LAST);
+assertEquals(5, byteArray0.length);
+assertFalse(iOContext0.isResourceManaged());
+assertNull(iOContext0.getEncoding());
+assertFalse(fileDescriptor0.valid());
+assertFalse(uTF8JsonGenerator0.isClosed());
+assertEquals(0, uTF8JsonGenerator0.getFormatFeatures());
+assertEquals((-1771), uTF8JsonGenerator0.getFeatureMask());
+assertTrue(uTF8JsonGenerator0.canOmitFields());
+assertFalse(uTF8JsonGenerator0.canWriteTypeId());
+assertFalse(uTF8JsonGenerator0.canWriteFormattedNumbers());
+assertEquals(0, uTF8JsonGenerator0.getHighestEscapedChar());
+assertFalse(uTF8JsonGenerator0.canWriteBinaryNatively());
+assertFalse(uTF8JsonGenerator0.canWriteObjectId());
+assertEquals(1, uTF8JsonGenerator0.getOutputBuffered());
+assertArrayEquals(new byte[] {(byte)34, (byte)34, (byte)0, (byte)81, (byte) (-72)}, byteArray0);
+assertSame(mockPrintStream0, printStream0);
+assertSame(printStream0, mockPrintStream0);
+
+SerializedString serializedString0 = (SerializedString)uTF8JsonGenerator0._rootValueSeparator;
+assertEquals(5, byteArray0.length);
+assertEquals(1, serializedString0.charLength());
+assertEquals(" ", serializedString0.getValue());
+assertEquals(" ", serializedString0.toString());
+assertNotNull(serializedString0);
+assertArrayEquals(new byte[] {(byte)34, (byte)34, (byte)0, (byte)81, (byte) (-72)}, byteArray0);
+
+uTF8JsonGenerator0.writeFieldName((SerializableString) serializedString0);
+assertEquals(0, BufferRecycler.CHAR_TOKEN_BUFFER);
+assertEquals(3, BufferRecycler.BYTE_BASE64_CODEC_BUFFER);
+assertEquals(2, BufferRecycler.CHAR_TEXT_BUFFER);
+assertEquals(1, BufferRecycler.CHAR_CONCAT_BUFFER);
+assertEquals(1, BufferRecycler.BYTE_WRITE_ENCODING_BUFFER);
+assertEquals(3, BufferRecycler.CHAR_NAME_COPY_BUFFER);
+assertEquals(2, BufferRecycler.BYTE_WRITE_CONCAT_BUFFER);
+assertEquals(0, BufferRecycler.BYTE_READ_IO_BUFFER);
+assertEquals(57343, GeneratorBase.SURR2_LAST);
+assertEquals(55296, GeneratorBase.SURR1_FIRST);
+assertEquals(56320, GeneratorBase.SURR2_FIRST);
+assertEquals(56319, GeneratorBase.SURR1_LAST);
+assertEquals(5, byteArray0.length);
+assertEquals(1, serializedString0.charLength());
+assertEquals(" ", serializedString0.getValue());
+assertEquals(" ", serializedString0.toString());
+assertFalse(iOContext0.isResourceManaged());
+assertNull(iOContext0.getEncoding());
+assertFalse(fileDescriptor0.valid());
+assertFalse(uTF8JsonGenerator0.isClosed());
+assertEquals(0, uTF8JsonGenerator0.getFormatFeatures());
+assertEquals((-1771), uTF8JsonGenerator0.getFeatureMask());
+assertTrue(uTF8JsonGenerator0.canOmitFields());
+assertFalse(uTF8JsonGenerator0.canWriteTypeId());
+assertFalse(uTF8JsonGenerator0.canWriteFormattedNumbers());
+assertEquals(0, uTF8JsonGenerator0.getHighestEscapedChar());
+assertFalse(uTF8JsonGenerator0.canWriteBinaryNatively());
+assertEquals(3, uTF8JsonGenerator0.getOutputBuffered());
+assertFalse(uTF8JsonGenerator0.canWriteObjectId());
+assertArrayEquals(new byte[] {(byte)34, (byte)44, (byte)32, (byte)81, (byte) (-72)}, byteArray0);
+assertSame(mockPrintStream0, printStream0);
+assertSame(printStream0, mockPrintStream0);
+
+SerializedString serializedString1 = new SerializedString("Current context not an object but ");
+assertEquals("Current context not an object but ", serializedString1.toString());
+assertEquals(34, serializedString1.charLength());
+assertEquals("Current context not an object but ", serializedString1.getValue());
+assertNotNull(serializedString1);
+assertFalse(serializedString1.equals((Object)serializedString0));
+
+uTF8JsonGenerator0.writeFieldName((SerializableString) serializedString1);
+
+[MASTER] 23:13:45.642 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class java.lang.SecurityException: Security manager blocks ("java.lang.RuntimePermission" "writeFileDescriptor")
+java.lang.Thread.getStackTrace(Thread.java:1559)
+org.evosuite.runtime.sandbox.MSecurityManager.checkPermission(MSecurityManager.java:433)
+java.lang.SecurityManager.checkWrite(SecurityManager.java:954)
+java.io.FileOutputStream.<init>(FileOutputStream.java:245)
+org.evosuite.runtime.mock.java.io.MockFileOutputStream.<init>(MockFileOutputStream.java:114)
+com.fasterxml.jackson.core.json.UTF8JsonGenerator_345_tmp__ESTest.test0(UTF8JsonGenerator_345_tmp__ESTest.java:59)
+sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+java.lang.reflect.Method.invoke(Method.java:498)
+org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)
+org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56)
+org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+org.junit.internal.runners.statements.FailOnTimeout$CallableStatement.call(FailOnTimeout.java:288)
+org.junit.internal.runners.statements.FailOnTimeout$CallableStatement.call(FailOnTimeout.java:282)
+java.util.concurrent.FutureTask.run(FutureTask.java:266)
+java.lang.Thread.run(Thread.java:748)
+
+[MASTER] 23:13:45.644 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ BufferRecycler bufferRecycler0 = new BufferRecycler();
+assertEquals(3, BufferRecycler.CHAR_NAME_COPY_BUFFER);
+assertEquals(0, BufferRecycler.BYTE_READ_IO_BUFFER);
+assertEquals(0, BufferRecycler.CHAR_TOKEN_BUFFER);
+assertEquals(3, BufferRecycler.BYTE_BASE64_CODEC_BUFFER);
+assertEquals(1, BufferRecycler.BYTE_WRITE_ENCODING_BUFFER);
+assertEquals(1, BufferRecycler.CHAR_CONCAT_BUFFER);
+assertEquals(2, BufferRecycler.BYTE_WRITE_CONCAT_BUFFER);
+assertEquals(2, BufferRecycler.CHAR_TEXT_BUFFER);
+assertNotNull(bufferRecycler0);
+
+IOContext iOContext0 = new IOContext(bufferRecycler0, "", false);
+assertEquals(3, BufferRecycler.CHAR_NAME_COPY_BUFFER);
+assertEquals(0, BufferRecycler.BYTE_READ_IO_BUFFER);
+assertEquals(0, BufferRecycler.CHAR_TOKEN_BUFFER);
+assertEquals(3, BufferRecycler.BYTE_BASE64_CODEC_BUFFER);
+assertEquals(1, BufferRecycler.BYTE_WRITE_ENCODING_BUFFER);
+assertEquals(1, BufferRecycler.CHAR_CONCAT_BUFFER);
+assertEquals(2, BufferRecycler.BYTE_WRITE_CONCAT_BUFFER);
+assertEquals(2, BufferRecycler.CHAR_TEXT_BUFFER);
+assertFalse(iOContext0.isResourceManaged());
+assertNull(iOContext0.getEncoding());
+assertNotNull(iOContext0);
+
+FileDescriptor fileDescriptor0 = new FileDescriptor();
+assertFalse(fileDescriptor0.valid());
+assertNotNull(fileDescriptor0);
+
+MockFileOutputStream mockFileOutputStream0 = new MockFileOutputStream(fileDescriptor0);
+assertNotNull(mockFileOutputStream0);
+
+MockPrintStream mockPrintStream0 = new MockPrintStream(mockFileOutputStream0, true);
+assertNotNull(mockPrintStream0);
+
+PrintStream printStream0 = mockPrintStream0.append('3');
+assertFalse(fileDescriptor0.valid());
+assertNotNull(printStream0);
+assertSame(mockPrintStream0, printStream0);
+assertSame(printStream0, mockPrintStream0);
+
+mockPrintStream0.print((-308));
+assertFalse(fileDescriptor0.valid());
+assertSame(mockPrintStream0, printStream0);
+
+byte[] byteArray0 = new byte[9];
+byteArray0[1] = (byte)0;
+byteArray0[2] = (byte)0;
+byteArray0[3] = (byte)81;
+byteArray0[4] = (byte) (-72);
+UTF8JsonGenerator uTF8JsonGenerator0 = new UTF8JsonGenerator(iOContext0, (-1771), (ObjectCodec) null, printStream0, byteArray0, 1, false);
+assertEquals(3, BufferRecycler.CHAR_NAME_COPY_BUFFER);
+assertEquals(0, BufferRecycler.BYTE_READ_IO_BUFFER);
+assertEquals(0, BufferRecycler.CHAR_TOKEN_BUFFER);
+assertEquals(3, BufferRecycler.BYTE_BASE64_CODEC_BUFFER);
+assertEquals(1, BufferRecycler.BYTE_WRITE_ENCODING_BUFFER);
+assertEquals(1, BufferRecycler.CHAR_CONCAT_BUFFER);
+assertEquals(2, BufferRecycler.BYTE_WRITE_CONCAT_BUFFER);
+assertEquals(2, BufferRecycler.CHAR_TEXT_BUFFER);
+assertEquals(56319, GeneratorBase.SURR1_LAST);
+assertEquals(55296, GeneratorBase.SURR1_FIRST);
+assertEquals(56320, GeneratorBase.SURR2_FIRST);
+assertEquals(57343, GeneratorBase.SURR2_LAST);
+assertEquals(9, byteArray0.length);
+assertFalse(iOContext0.isResourceManaged());
+assertNull(iOContext0.getEncoding());
+assertFalse(fileDescriptor0.valid());
+assertTrue(uTF8JsonGenerator0.canOmitFields());
+assertFalse(uTF8JsonGenerator0.canWriteFormattedNumbers());
+assertFalse(uTF8JsonGenerator0.canWriteObjectId());
+assertFalse(uTF8JsonGenerator0.canWriteBinaryNatively());
+assertEquals(1, uTF8JsonGenerator0.getOutputBuffered());
+assertEquals(0, uTF8JsonGenerator0.getFormatFeatures());
+assertFalse(uTF8JsonGenerator0.isClosed());
+assertFalse(uTF8JsonGenerator0.canWriteTypeId());
+assertEquals((-1771), uTF8JsonGenerator0.getFeatureMask());
+assertEquals(0, uTF8JsonGenerator0.getHighestEscapedChar());
+assertNotNull(uTF8JsonGenerator0);
+assertArrayEquals(new byte[] {(byte)0, (byte)0, (byte)0, (byte)81, (byte) (-72), (byte)0, (byte)0, (byte)0, (byte)0}, byteArray0);
+
+BigDecimal bigDecimal0 = new BigDecimal(2468);
+assertEquals((byte) (-92), bigDecimal0.byteValue());
+assertEquals((short)2468, bigDecimal0.shortValue());
+assertNotNull(bigDecimal0);
+
+uTF8JsonGenerator0.writeNumber(bigDecimal0);
+assertEquals(3, BufferRecycler.CHAR_NAME_COPY_BUFFER);
+assertEquals(0, BufferRecycler.BYTE_READ_IO_BUFFER);
+assertEquals(0, BufferRecycler.CHAR_TOKEN_BUFFER);
+assertEquals(3, BufferRecycler.BYTE_BASE64_CODEC_BUFFER);
+assertEquals(1, BufferRecycler.BYTE_WRITE_ENCODING_BUFFER);
+assertEquals(1, BufferRecycler.CHAR_CONCAT_BUFFER);
+assertEquals(2, BufferRecycler.BYTE_WRITE_CONCAT_BUFFER);
+assertEquals(2, BufferRecycler.CHAR_TEXT_BUFFER);
+assertEquals(56319, GeneratorBase.SURR1_LAST);
+assertEquals(55296, GeneratorBase.SURR1_FIRST);
+assertEquals(56320, GeneratorBase.SURR2_FIRST);
+assertEquals(57343, GeneratorBase.SURR2_LAST);
+assertEquals(9, byteArray0.length);
+assertFalse(iOContext0.isResourceManaged());
+assertNull(iOContext0.getEncoding());
+assertFalse(fileDescriptor0.valid());
+assertEquals(5, uTF8JsonGenerator0.getOutputBuffered());
+assertTrue(uTF8JsonGenerator0.canOmitFields());
+assertFalse(uTF8JsonGenerator0.canWriteFormattedNumbers());
+assertFalse(uTF8JsonGenerator0.canWriteObjectId());
+assertFalse(uTF8JsonGenerator0.canWriteBinaryNatively());
+assertEquals(0, uTF8JsonGenerator0.getFormatFeatures());
+assertFalse(uTF8JsonGenerator0.isClosed());
+assertFalse(uTF8JsonGenerator0.canWriteTypeId());
+assertEquals((-1771), uTF8JsonGenerator0.getFeatureMask());
+assertEquals(0, uTF8JsonGenerator0.getHighestEscapedChar());
+assertEquals((byte) (-92), bigDecimal0.byteValue());
+assertEquals((short)2468, bigDecimal0.shortValue());
+assertArrayEquals(new byte[] {(byte)0, (byte)50, (byte)52, (byte)54, (byte)56, (byte)0, (byte)0, (byte)0, (byte)0}, byteArray0);
+assertSame(mockPrintStream0, printStream0);
+assertSame(printStream0, mockPrintStream0);
+
+MockFile mockFile0 = new MockFile("G%1X?");
+assertNotNull(mockFile0);
+
+String string0 = mockFile0.getCanonicalPath();
+assertEquals(0L, mockFile0.getFreeSpace());
+assertEquals(0L, mockFile0.length());
+assertEquals("G%1X?", mockFile0.getName());
+assertEquals(0L, mockFile0.getTotalSpace());
+assertNull(mockFile0.getParent());
+assertFalse(mockFile0.canWrite());
+assertFalse(mockFile0.isAbsolute());
+assertFalse(mockFile0.isDirectory());
+assertEquals(0L, mockFile0.lastModified());
+assertFalse(mockFile0.isHidden());
+assertEquals("G%1X?", mockFile0.toString());
+assertEquals(0L, mockFile0.getUsableSpace());
+assertFalse(mockFile0.exists());
+assertFalse(mockFile0.canRead());
+assertFalse(mockFile0.canExecute());
+assertTrue(mockFile0.isFile());
+assertNotNull(string0);
+assertEquals("/experiment/G%1X?", string0);
+
+char[] charArray0 = new char[2];
+charArray0[0] = '=';
+charArray0[1] = '_';
+uTF8JsonGenerator0.writeString(charArray0, 2, (-4605));
+assertEquals(3, BufferRecycler.CHAR_NAME_COPY_BUFFER);
+assertEquals(0, BufferRecycler.BYTE_READ_IO_BUFFER);
+assertEquals(0, BufferRecycler.CHAR_TOKEN_BUFFER);
+assertEquals(3, BufferRecycler.BYTE_BASE64_CODEC_BUFFER);
+assertEquals(1, BufferRecycler.BYTE_WRITE_ENCODING_BUFFER);
+assertEquals(1, BufferRecycler.CHAR_CONCAT_BUFFER);
+assertEquals(2, BufferRecycler.BYTE_WRITE_CONCAT_BUFFER);
+assertEquals(2, BufferRecycler.CHAR_TEXT_BUFFER);
+assertEquals(56319, GeneratorBase.SURR1_LAST);
+assertEquals(55296, GeneratorBase.SURR1_FIRST);
+assertEquals(56320, GeneratorBase.SURR2_FIRST);
+assertEquals(57343, GeneratorBase.SURR2_LAST);
+assertEquals(2, charArray0.length);
+assertEquals(9, byteArray0.length);
+assertFalse(iOContext0.isResourceManaged());
+assertNull(iOContext0.getEncoding());
+assertFalse(fileDescriptor0.valid());
+assertTrue(uTF8JsonGenerator0.canOmitFields());
+assertFalse(uTF8JsonGenerator0.canWriteFormattedNumbers());
+assertFalse(uTF8JsonGenerator0.canWriteObjectId());
+assertFalse(uTF8JsonGenerator0.canWriteBinaryNatively());
+assertEquals(0, uTF8JsonGenerator0.getFormatFeatures());
+assertFalse(uTF8JsonGenerator0.isClosed());
+assertFalse(uTF8JsonGenerator0.canWriteTypeId());
+assertEquals((-1771), uTF8JsonGenerator0.getFeatureMask());
+assertEquals(8, uTF8JsonGenerator0.getOutputBuffered());
+assertEquals(0, uTF8JsonGenerator0.getHighestEscapedChar());
+assertArrayEquals(new char[] {'=', '_'}, charArray0);
+assertArrayEquals(new byte[] {(byte)0, (byte)50, (byte)52, (byte)54, (byte)56, (byte)32, (byte)34, (byte)34, (byte)0}, byteArray0);
+assertSame(mockPrintStream0, printStream0);
+assertSame(printStream0, mockPrintStream0);
+
+uTF8JsonGenerator0._verifyValueWrite("");
+assertEquals(3, BufferRecycler.CHAR_NAME_COPY_BUFFER);
+assertEquals(0, BufferRecycler.BYTE_READ_IO_BUFFER);
+assertEquals(0, BufferRecycler.CHAR_TOKEN_BUFFER);
+assertEquals(3, BufferRecycler.BYTE_BASE64_CODEC_BUFFER);
+assertEquals(1, BufferRecycler.BYTE_WRITE_ENCODING_BUFFER);
+assertEquals(1, BufferRecycler.CHAR_CONCAT_BUFFER);
+assertEquals(2, BufferRecycler.BYTE_WRITE_CONCAT_BUFFER);
+assertEquals(2, BufferRecycler.CHAR_TEXT_BUFFER);
+assertEquals(56319, GeneratorBase.SURR1_LAST);
+assertEquals(55296, GeneratorBase.SURR1_FIRST);
+assertEquals(56320, GeneratorBase.SURR2_FIRST);
+assertEquals(57343, GeneratorBase.SURR2_LAST);
+assertEquals(9, byteArray0.length);
+assertFalse(iOContext0.isResourceManaged());
+assertNull(iOContext0.getEncoding());
+assertFalse(fileDescriptor0.valid());
+assertTrue(uTF8JsonGenerator0.canOmitFields());
+assertFalse(uTF8JsonGenerator0.canWriteFormattedNumbers());
+assertFalse(uTF8JsonGenerator0.canWriteObjectId());
+assertFalse(uTF8JsonGenerator0.canWriteBinaryNatively());
+assertEquals(0, uTF8JsonGenerator0.getFormatFeatures());
+assertFalse(uTF8JsonGenerator0.isClosed());
+assertFalse(uTF8JsonGenerator0.canWriteTypeId());
+assertEquals((-1771), uTF8JsonGenerator0.getFeatureMask());
+assertEquals(9, uTF8JsonGenerator0.getOutputBuffered());
+assertEquals(0, uTF8JsonGenerator0.getHighestEscapedChar());
+assertArrayEquals(new byte[] {(byte)0, (byte)50, (byte)52, (byte)54, (byte)56, (byte)32, (byte)34, (byte)34, (byte)32}, byteArray0);
+assertSame(mockPrintStream0, printStream0);
+assertSame(printStream0, mockPrintStream0);
+
+uTF8JsonGenerator0.writeRawUTF8String(byteArray0, (byte)56, 184);
+
+[MASTER] 23:13:53.397 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class java.lang.SecurityException: Security manager blocks ("java.lang.RuntimePermission" "writeFileDescriptor")
+java.lang.Thread.getStackTrace(Thread.java:1559)
+org.evosuite.runtime.sandbox.MSecurityManager.checkPermission(MSecurityManager.java:433)
+java.lang.SecurityManager.checkWrite(SecurityManager.java:954)
+java.io.FileOutputStream.<init>(FileOutputStream.java:245)
+org.evosuite.runtime.mock.java.io.MockFileOutputStream.<init>(MockFileOutputStream.java:114)
+com.fasterxml.jackson.core.json.UTF8JsonGenerator_356_tmp__ESTest.test0(UTF8JsonGenerator_356_tmp__ESTest.java:46)
+sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+java.lang.reflect.Method.invoke(Method.java:498)
+org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)
+org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56)
+org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+org.junit.internal.runners.statements.FailOnTimeout$CallableStatement.call(FailOnTimeout.java:288)
+org.junit.internal.runners.statements.FailOnTimeout$CallableStatement.call(FailOnTimeout.java:282)
+java.util.concurrent.FutureTask.run(FutureTask.java:266)
+java.lang.Thread.run(Thread.java:748)
+
+[MASTER] 23:13:53.399 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ BufferRecycler bufferRecycler0 = new BufferRecycler();
+assertEquals(3, BufferRecycler.BYTE_BASE64_CODEC_BUFFER);
+assertEquals(2, BufferRecycler.BYTE_WRITE_CONCAT_BUFFER);
+assertEquals(1, BufferRecycler.CHAR_CONCAT_BUFFER);
+assertEquals(2, BufferRecycler.CHAR_TEXT_BUFFER);
+assertEquals(0, BufferRecycler.BYTE_READ_IO_BUFFER);
+assertEquals(0, BufferRecycler.CHAR_TOKEN_BUFFER);
+assertEquals(3, BufferRecycler.CHAR_NAME_COPY_BUFFER);
+assertEquals(1, BufferRecycler.BYTE_WRITE_ENCODING_BUFFER);
+assertNotNull(bufferRecycler0);
+
+FileDescriptor fileDescriptor0 = new FileDescriptor();
+assertFalse(fileDescriptor0.valid());
+assertNotNull(fileDescriptor0);
+
+MockFileOutputStream mockFileOutputStream0 = new MockFileOutputStream(fileDescriptor0);
+assertNotNull(mockFileOutputStream0);
+
+MockPrintStream mockPrintStream0 = new MockPrintStream(mockFileOutputStream0, false);
+assertNotNull(mockPrintStream0);
+
+PrintStream printStream0 = mockPrintStream0.append('6');
+assertFalse(fileDescriptor0.valid());
+assertNotNull(printStream0);
+assertSame(mockPrintStream0, printStream0);
+assertSame(printStream0, mockPrintStream0);
+
+mockPrintStream0.print(12000);
+assertFalse(fileDescriptor0.valid());
+assertSame(mockPrintStream0, printStream0);
+
+IOContext iOContext0 = new IOContext(bufferRecycler0, mockFileOutputStream0, false);
+assertEquals(3, BufferRecycler.BYTE_BASE64_CODEC_BUFFER);
+assertEquals(2, BufferRecycler.BYTE_WRITE_CONCAT_BUFFER);
+assertEquals(1, BufferRecycler.CHAR_CONCAT_BUFFER);
+assertEquals(2, BufferRecycler.CHAR_TEXT_BUFFER);
+assertEquals(0, BufferRecycler.BYTE_READ_IO_BUFFER);
+assertEquals(0, BufferRecycler.CHAR_TOKEN_BUFFER);
+assertEquals(3, BufferRecycler.CHAR_NAME_COPY_BUFFER);
+assertEquals(1, BufferRecycler.BYTE_WRITE_ENCODING_BUFFER);
+assertFalse(fileDescriptor0.valid());
+assertNull(iOContext0.getEncoding());
+assertFalse(iOContext0.isResourceManaged());
+assertNotNull(iOContext0);
+
+byte[] byteArray0 = new byte[4];
+byteArray0[0] = (byte) (-72);
+byteArray0[1] = (byte) (-72);
+byteArray0[2] = (byte)0;
+byteArray0[3] = (byte) (-72);
+UTF8JsonGenerator uTF8JsonGenerator0 = new UTF8JsonGenerator(iOContext0, 12000, (ObjectCodec) null, mockPrintStream0, byteArray0, 33, false);
+assertEquals(3, BufferRecycler.BYTE_BASE64_CODEC_BUFFER);
+assertEquals(2, BufferRecycler.BYTE_WRITE_CONCAT_BUFFER);
+assertEquals(1, BufferRecycler.CHAR_CONCAT_BUFFER);
+assertEquals(2, BufferRecycler.CHAR_TEXT_BUFFER);
+assertEquals(0, BufferRecycler.BYTE_READ_IO_BUFFER);
+assertEquals(0, BufferRecycler.CHAR_TOKEN_BUFFER);
+assertEquals(3, BufferRecycler.CHAR_NAME_COPY_BUFFER);
+assertEquals(1, BufferRecycler.BYTE_WRITE_ENCODING_BUFFER);
+assertEquals(57343, GeneratorBase.SURR2_LAST);
+assertEquals(56319, GeneratorBase.SURR1_LAST);
+assertEquals(55296, GeneratorBase.SURR1_FIRST);
+assertEquals(56320, GeneratorBase.SURR2_FIRST);
+assertEquals(4, byteArray0.length);
+assertFalse(fileDescriptor0.valid());
+assertNull(iOContext0.getEncoding());
+assertFalse(iOContext0.isResourceManaged());
+assertFalse(uTF8JsonGenerator0.canWriteTypeId());
+assertFalse(uTF8JsonGenerator0.canWriteObjectId());
+assertEquals(12000, uTF8JsonGenerator0.getFeatureMask());
+assertEquals(127, uTF8JsonGenerator0.getHighestEscapedChar());
+assertTrue(uTF8JsonGenerator0.canOmitFields());
+assertFalse(uTF8JsonGenerator0.isClosed());
+assertEquals(0, uTF8JsonGenerator0.getFormatFeatures());
+assertFalse(uTF8JsonGenerator0.canWriteBinaryNatively());
+assertEquals(33, uTF8JsonGenerator0.getOutputBuffered());
+assertFalse(uTF8JsonGenerator0.canWriteFormattedNumbers());
+assertNotNull(uTF8JsonGenerator0);
+assertArrayEquals(new byte[] {(byte) (-72), (byte) (-72), (byte)0, (byte) (-72)}, byteArray0);
+
+SerializedString serializedString0 = DefaultPrettyPrinter.DEFAULT_ROOT_VALUE_SEPARATOR;
+assertEquals(" ", serializedString0.toString());
+assertEquals(1, serializedString0.charLength());
+assertEquals(" ", serializedString0.getValue());
+assertNotNull(serializedString0);
+
+uTF8JsonGenerator0.writeRaw((SerializableString) serializedString0);
+assertEquals(3, BufferRecycler.BYTE_BASE64_CODEC_BUFFER);
+assertEquals(2, BufferRecycler.BYTE_WRITE_CONCAT_BUFFER);
+assertEquals(1, BufferRecycler.CHAR_CONCAT_BUFFER);
+assertEquals(2, BufferRecycler.CHAR_TEXT_BUFFER);
+assertEquals(0, BufferRecycler.BYTE_READ_IO_BUFFER);
+assertEquals(0, BufferRecycler.CHAR_TOKEN_BUFFER);
+assertEquals(3, BufferRecycler.CHAR_NAME_COPY_BUFFER);
+assertEquals(1, BufferRecycler.BYTE_WRITE_ENCODING_BUFFER);
+assertEquals(57343, GeneratorBase.SURR2_LAST);
+assertEquals(56319, GeneratorBase.SURR1_LAST);
+assertEquals(55296, GeneratorBase.SURR1_FIRST);
+assertEquals(56320, GeneratorBase.SURR2_FIRST);
+assertEquals(4, byteArray0.length);
+assertFalse(fileDescriptor0.valid());
+assertNull(iOContext0.getEncoding());
+assertFalse(iOContext0.isResourceManaged());
+assertFalse(uTF8JsonGenerator0.canWriteTypeId());
+assertFalse(uTF8JsonGenerator0.canWriteObjectId());
+assertEquals(12000, uTF8JsonGenerator0.getFeatureMask());
+assertEquals(127, uTF8JsonGenerator0.getHighestEscapedChar());
+assertTrue(uTF8JsonGenerator0.canOmitFields());
+assertFalse(uTF8JsonGenerator0.isClosed());
+assertEquals(0, uTF8JsonGenerator0.getFormatFeatures());
+assertFalse(uTF8JsonGenerator0.canWriteBinaryNatively());
+assertEquals(1, uTF8JsonGenerator0.getOutputBuffered());
+assertFalse(uTF8JsonGenerator0.canWriteFormattedNumbers());
+assertEquals(" ", serializedString0.toString());
+assertEquals(1, serializedString0.charLength());
+assertEquals(" ", serializedString0.getValue());
+assertArrayEquals(new byte[] {(byte)32, (byte) (-72), (byte)0, (byte) (-72)}, byteArray0);
+assertSame(mockPrintStream0, printStream0);
+
+uTF8JsonGenerator0.writeRaw("T)Wo\"bE>m9ipk");
+assertEquals(3, BufferRecycler.BYTE_BASE64_CODEC_BUFFER);
+assertEquals(2, BufferRecycler.BYTE_WRITE_CONCAT_BUFFER);
+assertEquals(1, BufferRecycler.CHAR_CONCAT_BUFFER);
+assertEquals(2, BufferRecycler.CHAR_TEXT_BUFFER);
+assertEquals(0, BufferRecycler.BYTE_READ_IO_BUFFER);
+assertEquals(0, BufferRecycler.CHAR_TOKEN_BUFFER);
+assertEquals(3, BufferRecycler.CHAR_NAME_COPY_BUFFER);
+assertEquals(1, BufferRecycler.BYTE_WRITE_ENCODING_BUFFER);
+assertEquals(57343, GeneratorBase.SURR2_LAST);
+assertEquals(56319, GeneratorBase.SURR1_LAST);
+assertEquals(55296, GeneratorBase.SURR1_FIRST);
+assertEquals(56320, GeneratorBase.SURR2_FIRST);
+assertEquals(4, byteArray0.length);
+assertFalse(fileDescriptor0.valid());
+assertNull(iOContext0.getEncoding());
+assertFalse(iOContext0.isResourceManaged());
+assertFalse(uTF8JsonGenerator0.canWriteTypeId());
+assertFalse(uTF8JsonGenerator0.canWriteObjectId());
+assertEquals(12000, uTF8JsonGenerator0.getFeatureMask());
+assertEquals(127, uTF8JsonGenerator0.getHighestEscapedChar());
+assertTrue(uTF8JsonGenerator0.canOmitFields());
+assertFalse(uTF8JsonGenerator0.isClosed());
+assertEquals(0, uTF8JsonGenerator0.getFormatFeatures());
+assertFalse(uTF8JsonGenerator0.canWriteBinaryNatively());
+assertEquals(3, uTF8JsonGenerator0.getOutputBuffered());
+assertFalse(uTF8JsonGenerator0.canWriteFormattedNumbers());
+assertArrayEquals(new byte[] {(byte)127, (byte)112, (byte)107, (byte)105}, byteArray0);
+assertSame(mockPrintStream0, printStream0);
+
+uTF8JsonGenerator0.writeString((SerializableString) serializedString0);
+assertEquals(3, BufferRecycler.BYTE_BASE64_CODEC_BUFFER);
+assertEquals(2, BufferRecycler.BYTE_WRITE_CONCAT_BUFFER);
+assertEquals(1, BufferRecycler.CHAR_CONCAT_BUFFER);
+assertEquals(2, BufferRecycler.CHAR_TEXT_BUFFER);
+assertEquals(0, BufferRecycler.BYTE_READ_IO_BUFFER);
+assertEquals(0, BufferRecycler.CHAR_TOKEN_BUFFER);
+assertEquals(3, BufferRecycler.CHAR_NAME_COPY_BUFFER);
+assertEquals(1, BufferRecycler.BYTE_WRITE_ENCODING_BUFFER);
+assertEquals(57343, GeneratorBase.SURR2_LAST);
+assertEquals(56319, GeneratorBase.SURR1_LAST);
+assertEquals(55296, GeneratorBase.SURR1_FIRST);
+assertEquals(56320, GeneratorBase.SURR2_FIRST);
+assertEquals(4, byteArray0.length);
+assertFalse(fileDescriptor0.valid());
+assertNull(iOContext0.getEncoding());
+assertFalse(iOContext0.isResourceManaged());
+assertFalse(uTF8JsonGenerator0.canWriteTypeId());
+assertFalse(uTF8JsonGenerator0.canWriteObjectId());
+assertEquals(12000, uTF8JsonGenerator0.getFeatureMask());
+assertEquals(127, uTF8JsonGenerator0.getHighestEscapedChar());
+assertTrue(uTF8JsonGenerator0.canOmitFields());
+assertFalse(uTF8JsonGenerator0.isClosed());
+assertEquals(0, uTF8JsonGenerator0.getFormatFeatures());
+assertFalse(uTF8JsonGenerator0.canWriteBinaryNatively());
+assertEquals(2, uTF8JsonGenerator0.getOutputBuffered());
+assertFalse(uTF8JsonGenerator0.canWriteFormattedNumbers());
+assertEquals(" ", serializedString0.toString());
+assertEquals(1, serializedString0.charLength());
+assertEquals(" ", serializedString0.getValue());
+assertArrayEquals(new byte[] {(byte)32, (byte)34, (byte)107, (byte)34}, byteArray0);
+assertSame(mockPrintStream0, printStream0);
+
+
+* Permissions denied during test execution: 
+  - java.lang.RuntimePermission: 
+         writeFileDescriptor: 8
+* Writing tests to file
+* Writing JUnit test case 'UTF8JsonGenerator_ESTest' to results/JacksonCore-17/com.fasterxml.jackson.core.json.UTF8JsonGenerator/BBC-F0-50/tests/17
+* Done!
+
+* Computation finished

@@ -1,0 +1,151 @@
+* EvoSuite 1.1.1-SNAPSHOT
+* Configuration: BBC-F0-50
+* Going to generate test cases for class: com.google.javascript.jscomp.ProcessClosurePrimitives
+* Starting Client-0
+* Connecting to master process on port 5160
+* Analyzing classpath: 
+  - subjects/buggy-versions/Closure-113/build/classes
+  - subjects/buggy-versions/Closure-113/lib/args4j.jar
+  - subjects/buggy-versions/Closure-113/lib/guava.jar
+  - subjects/buggy-versions/Closure-113/lib/json.jar
+  - subjects/buggy-versions/Closure-113/lib/jsr305.jar
+  - subjects/buggy-versions/Closure-113/lib/protobuf-java.jar
+  - subjects/buggy-versions/Closure-113/build/lib/rhino.jar
+  - subjects/buggy-versions/Closure-113/lib/ant.jar
+* Finished analyzing classpath
+* Generating tests for class com.google.javascript.jscomp.ProcessClosurePrimitives
+* Test criteria:
+  - Line Coverage
+  - Branch Coverage
+  - Exception
+  - Mutation testing (weak)
+  - Method-Output Coverage
+  - Top-Level Method Coverage
+  - No-Exception Top-Level Method Coverage
+  - Context Branch Coverage
+* Total number of test goals for DYNAMOSA: 1637
+* Using seed 650799307
+* Starting evolution
+bbc usage percentage is: 50%
+* Initial Number of Goals in DynaMOSA = 361 / 1637
+[MASTER] 18:01:49.404 [logback-2] ERROR TestCluster - Failed to check cache for java.util.AbstractMap<K, V>.SimpleEntry<K, V> : Type points to itself
+[MASTER] 18:01:49.404 [logback-2] ERROR TestCluster - Failed to check cache for java.util.AbstractMap<K, V>.SimpleImmutableEntry<K, V> : Type points to itself
+[MASTER] 18:02:30.287 [logback-2] ERROR TestCluster - Failed to check cache for java.util.Iterator<E> : Type points to itself
+[MASTER] 18:03:03.527 [logback-2] ERROR TestCluster - Failed to check cache for java.util.Enumeration<E> : Type points to itself
+[MASTER] 18:09:17.501 [logback-2] ERROR TestCluster - Failed to check cache for java.util.Comparator<T> : Type points to itself
+* Search finished after 603s and 531 generations, 237572 statements, best individual has fitness: 1425.0
+* Minimizing test suite
+* Going to analyze the coverage criteria
+* Coverage analysis for criterion LINE
+* Coverage of criterion LINE: 15%
+* Total number of goals: 472
+* Number of covered goals: 70
+* Coverage analysis for criterion BRANCH
+* Coverage of criterion BRANCH: 15%
+* Total number of goals: 350
+* Number of covered goals: 53
+* Coverage analysis for criterion EXCEPTION
+* Coverage of criterion EXCEPTION: 100%
+* Total number of goals: 8
+* Number of covered goals: 8
+* Coverage analysis for criterion WEAKMUTATION
+* Coverage of criterion WEAKMUTATION: 8%
+* Total number of goals: 441
+* Number of covered goals: 34
+* Coverage analysis for criterion OUTPUT
+* Coverage of criterion OUTPUT: 33%
+* Total number of goals: 6
+* Number of covered goals: 2
+* Coverage analysis for criterion METHOD
+* Coverage of criterion METHOD: 56%
+* Total number of goals: 9
+* Number of covered goals: 5
+* Coverage analysis for criterion METHODNOEXCEPTION
+* Coverage of criterion METHODNOEXCEPTION: 44%
+* Total number of goals: 9
+* Number of covered goals: 4
+* Coverage analysis for criterion CBRANCH
+* Coverage of criterion CBRANCH: 15%
+* Total number of goals: 350
+* Number of covered goals: 52
+* Generated 16 tests with total length 104
+* Resulting test suite's coverage: 30% (average coverage for all fitness functions)
+* Generating assertions
+* Resulting test suite's mutation score: 1%
+* Compiling and checking tests
+[MASTER] 18:11:58.669 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 18:11:58.673 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class org.evosuite.runtime.mock.java.lang.MockIllegalArgumentException: Multiple entries with same key: returns=NOT_IMPLEMENTED and returns=RETURN
+[MASTER] 18:11:58.673 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ Compiler compiler0 = new Compiler();
+CheckLevel checkLevel0 = CheckLevel.WARNING;
+ProcessClosurePrimitives processClosurePrimitives0 = new ProcessClosurePrimitives(compiler0, (PreprocessorSymbolTable) null, checkLevel0);
+Node node0 = compiler0.parseTestCode("goog.base");
+NodeTraversal.traverse((AbstractCompiler) compiler0, node0, (NodeTraversal.Callback) processClosurePrimitives0);
+assertEquals(1, compiler0.getErrorCount());
+assertEquals(0, compiler0.getWarningCount());
+
+
+[MASTER] 18:11:59.930 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class org.evosuite.runtime.mock.java.lang.MockIllegalArgumentException: Multiple entries with same key: returns=NOT_IMPLEMENTED and returns=RETURN
+[MASTER] 18:11:59.931 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ Compiler compiler0 = new Compiler();
+CheckLevel checkLevel0 = CheckLevel.ERROR;
+ProcessClosurePrimitives processClosurePrimitives0 = new ProcessClosurePrimitives(compiler0, (PreprocessorSymbolTable) null, checkLevel0);
+Node node0 = compiler0.parseTestCode("com.google.javascript.jscomp.DefaultPassConfig$9");
+processClosurePrimitives0.hotSwapScript(node0, node0);
+
+[MASTER] 18:12:06.318 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class org.evosuite.runtime.mock.java.lang.MockIllegalArgumentException: Multiple entries with same key: returns=NOT_IMPLEMENTED and returns=RETURN
+[MASTER] 18:12:06.318 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ Compiler compiler0 = new Compiler();
+CheckLevel checkLevel0 = CheckLevel.WARNING;
+ProcessClosurePrimitives processClosurePrimitives0 = new ProcessClosurePrimitives(compiler0, (PreprocessorSymbolTable) null, checkLevel0);
+Node node0 = compiler0.parseTestCode("mE=Fg.o");
+NodeTraversal nodeTraversal0 = new NodeTraversal(compiler0, processClosurePrimitives0, (ScopeCreator) null);
+Node node1 = new Node(37, node0, node0, node0);
+processClosurePrimitives0.visit(nodeTraversal0, node1, node1);
+assertEquals(0, Node.SIDE_EFFECTS_ALL);
+
+
+[MASTER] 18:12:08.650 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class org.evosuite.runtime.mock.java.lang.MockIllegalArgumentException: Multiple entries with same key: returns=NOT_IMPLEMENTED and returns=RETURN
+[MASTER] 18:12:08.650 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ Compiler compiler0 = new Compiler();
+CheckLevel checkLevel0 = CheckLevel.ERROR;
+ProcessClosurePrimitives processClosurePrimitives0 = new ProcessClosurePrimitives(compiler0, (PreprocessorSymbolTable) null, checkLevel0);
+Node node0 = compiler0.parseTestCode("com.google.javascript.jscomp.DefaultPassConfig$9");
+NodeTraversal.traverse((AbstractCompiler) compiler0, node0, (NodeTraversal.Callback) processClosurePrimitives0);
+assertFalse(compiler0.hasErrors());
+
+
+[MASTER] 18:12:09.859 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class org.evosuite.runtime.mock.java.lang.MockIllegalArgumentException: Multiple entries with same key: returns=NOT_IMPLEMENTED and returns=RETURN
+[MASTER] 18:12:09.860 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ Compiler compiler0 = new Compiler();
+CheckLevel checkLevel0 = CheckLevel.WARNING;
+ProcessClosurePrimitives processClosurePrimitives0 = new ProcessClosurePrimitives(compiler0, (PreprocessorSymbolTable) null, checkLevel0);
+Node node0 = compiler0.parseTestCode("mE=Fg.o");
+processClosurePrimitives0.process(node0, node0);
+assertEquals(57, Node.LAST_PROP);
+
+
+[MASTER] 18:12:14.792 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class org.evosuite.runtime.mock.java.lang.MockIllegalArgumentException: Multiple entries with same key: returns=NOT_IMPLEMENTED and returns=RETURN
+[MASTER] 18:12:14.792 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ Compiler compiler0 = new Compiler();
+CheckLevel checkLevel0 = CheckLevel.WARNING;
+ProcessClosurePrimitives processClosurePrimitives0 = new ProcessClosurePrimitives(compiler0, (PreprocessorSymbolTable) null, checkLevel0);
+Node node0 = compiler0.parseTestCode("mEg.o");
+Node node1 = new Node(37, node0, node0, node0);
+Node node2 = new Node((-165), node1, 55, 47);
+processClosurePrimitives0.process(node0, node1);
+
+[MASTER] 18:12:16.891 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class org.evosuite.runtime.mock.java.lang.MockIllegalArgumentException: Multiple entries with same key: returns=NOT_IMPLEMENTED and returns=RETURN
+[MASTER] 18:12:16.892 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ Compiler compiler0 = new Compiler();
+CheckLevel checkLevel0 = CheckLevel.WARNING;
+ProcessClosurePrimitives processClosurePrimitives0 = new ProcessClosurePrimitives(compiler0, (PreprocessorSymbolTable) null, checkLevel0);
+Node node0 = compiler0.parseTestCode("mE=Fg.o");
+Node node1 = new Node(37, node0, node0, node0);
+processClosurePrimitives0.process(node0, node1);
+
+* Writing tests to file
+* Writing JUnit test case 'ProcessClosurePrimitives_ESTest' to results/Closure-113/com.google.javascript.jscomp.ProcessClosurePrimitives/BBC-F0-50/tests/19
+* Done!
+
+* Computation finished

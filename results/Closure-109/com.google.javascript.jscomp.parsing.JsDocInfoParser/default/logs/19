@@ -1,0 +1,98 @@
+* EvoSuite 1.1.1-SNAPSHOT
+* Configuration: default
+* Going to generate test cases for class: com.google.javascript.jscomp.parsing.JsDocInfoParser
+* Starting Client-0
+* Connecting to master process on port 11589
+* Analyzing classpath: 
+  - subjects/buggy-versions/Closure-109/build/classes
+  - subjects/buggy-versions/Closure-109/lib/args4j.jar
+  - subjects/buggy-versions/Closure-109/lib/guava.jar
+  - subjects/buggy-versions/Closure-109/lib/json.jar
+  - subjects/buggy-versions/Closure-109/lib/jsr305.jar
+  - subjects/buggy-versions/Closure-109/lib/protobuf-java.jar
+  - subjects/buggy-versions/Closure-109/build/lib/rhino.jar
+  - subjects/buggy-versions/Closure-109/lib/ant.jar
+* Finished analyzing classpath
+* Generating tests for class com.google.javascript.jscomp.parsing.JsDocInfoParser
+* Test criteria:
+  - Line Coverage
+  - Branch Coverage
+  - Exception
+  - Mutation testing (weak)
+  - Method-Output Coverage
+  - Top-Level Method Coverage
+  - No-Exception Top-Level Method Coverage
+  - Context Branch Coverage
+* Total number of test goals for DYNAMOSA: 4198
+* Using seed 510448792
+* Starting evolution
+* Initial Number of Goals in DynaMOSA = 1231 / 4198
+[MASTER] 18:22:20.671 [logback-1] WARN  CoverageArchive - A solution with a timeout/exception result has been added to the archive. The covered goal was [METHOD] com.google.javascript.jscomp.parsing.JsDocInfoParser.retrieveAndResetParsedJSDocInfo()Lcom/google/javascript/rhino/JSDocInfo;
+[MASTER] 18:22:20.674 [logback-1] WARN  CoverageArchive - A solution with a timeout/exception result has been added to the archive. The covered goal was [METHODNOEX] com.google.javascript.jscomp.parsing.JsDocInfoParser.retrieveAndResetParsedJSDocInfo()Lcom/google/javascript/rhino/JSDocInfo;
+[MASTER] 18:22:40.111 [logback-2] ERROR TestCluster - Failed to check cache for java.util.Comparator<T> : Type points to itself
+[MASTER] 18:23:47.636 [logback-1] WARN  TestUsageChecker - class com.google.javascript.rhino.head.ContextFactory$1GlobalSetterImpl looks like an anonymous class, ignoring it (although reflection says false) GlobalSetterImpl
+[MASTER] 18:24:18.298 [logback-2] ERROR TestCluster - Failed to check cache for java.util.Iterator<E> : Type points to itself
+Number of times BBC is called in total: 0
+* Search finished after 601s and 1328 generations, 777227 statements, best individual has fitness: 2681.0
+* Minimizing test suite
+* Going to analyze the coverage criteria
+* Coverage analysis for criterion LINE
+* Coverage of criterion LINE: 33%
+* Total number of goals: 1023
+* Number of covered goals: 341
+* Coverage analysis for criterion BRANCH
+* Coverage of criterion BRANCH: 30%
+* Total number of goals: 861
+* Number of covered goals: 254
+* Coverage analysis for criterion EXCEPTION
+* Coverage of criterion EXCEPTION: 100%
+* Total number of goals: 11
+* Number of covered goals: 11
+* Coverage analysis for criterion WEAKMUTATION
+* Coverage of criterion WEAKMUTATION: 48%
+* Total number of goals: 793
+* Number of covered goals: 379
+* Coverage analysis for criterion OUTPUT
+* Coverage of criterion OUTPUT: 44%
+* Total number of goals: 630
+* Number of covered goals: 280
+* Coverage analysis for criterion METHOD
+* Coverage of criterion METHOD: 73%
+* Total number of goals: 15
+* Number of covered goals: 11
+* Coverage analysis for criterion METHODNOEXCEPTION
+* Coverage of criterion METHODNOEXCEPTION: 73%
+* Total number of goals: 15
+* Number of covered goals: 11
+* Coverage analysis for criterion CBRANCH
+* Coverage of criterion CBRANCH: 29%
+* Total number of goals: 861
+* Number of covered goals: 253
+* Generated 73 tests with total length 477
+* Resulting test suite's coverage: 48% (average coverage for all fitness functions)
+* Generating assertions
+* Resulting test suite's mutation score: 23%
+* Compiling and checking tests
+[MASTER] 18:33:40.124 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class java.lang.NullPointerException: null
+[MASTER] 18:33:40.124 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ JsDocTokenStream jsDocTokenStream0 = new JsDocTokenStream("nocompjle");
+Locale locale0 = Locale.JAPANESE;
+Set<String> set0 = locale0.getUnicodeLocaleKeys();
+Config.LanguageMode config_LanguageMode0 = Config.LanguageMode.ECMASCRIPT5_STRICT;
+Config config0 = new Config(set0, set0, true, config_LanguageMode0, true);
+Context context0 = Context.getCurrentContext();
+ErrorReporter errorReporter0 = context0.getErrorReporter();
+JsDocInfoParser jsDocInfoParser0 = new JsDocInfoParser(jsDocTokenStream0, (Comment) null, (Node) null, config0, errorReporter0);
+JsDocToken jsDocToken0 = JsDocToken.RP;
+jsDocInfoParser0.parseAndRecordTypeNode(jsDocToken0);
+JsDocToken jsDocToken1 = JsDocToken.QMARK;
+jsDocInfoParser0.parseAndRecordTypeNode(jsDocToken1);
+
+* Permissions denied during test execution: 
+  - java.lang.RuntimePermission: 
+         writeFileDescriptor: 47
+* Writing tests to file
+* Writing JUnit test case 'JsDocInfoParser_ESTest' to results/Closure-109/com.google.javascript.jscomp.parsing.JsDocInfoParser/default/tests/19
+* Done!
+
+* Computation finished

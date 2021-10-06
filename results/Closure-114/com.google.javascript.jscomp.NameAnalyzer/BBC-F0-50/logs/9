@@ -1,0 +1,119 @@
+* EvoSuite 1.1.1-SNAPSHOT
+* Configuration: BBC-F0-50
+* Going to generate test cases for class: com.google.javascript.jscomp.NameAnalyzer
+* Starting Client-0
+* Connecting to master process on port 12940
+* Analyzing classpath: 
+  - subjects/buggy-versions/Closure-114/build/classes
+  - subjects/buggy-versions/Closure-114/lib/args4j.jar
+  - subjects/buggy-versions/Closure-114/lib/guava.jar
+  - subjects/buggy-versions/Closure-114/lib/json.jar
+  - subjects/buggy-versions/Closure-114/lib/jsr305.jar
+  - subjects/buggy-versions/Closure-114/lib/protobuf-java.jar
+  - subjects/buggy-versions/Closure-114/build/lib/rhino.jar
+  - subjects/buggy-versions/Closure-114/lib/ant.jar
+* Finished analyzing classpath
+* Generating tests for class com.google.javascript.jscomp.NameAnalyzer
+* Test criteria:
+  - Line Coverage
+  - Branch Coverage
+  - Exception
+  - Mutation testing (weak)
+  - Method-Output Coverage
+  - Top-Level Method Coverage
+  - No-Exception Top-Level Method Coverage
+  - Context Branch Coverage
+* Total number of test goals for DYNAMOSA: 2352
+* Using seed 4155381178
+* Starting evolution
+bbc usage percentage is: 50%
+* Initial Number of Goals in DynaMOSA = 531 / 2352
+[MASTER] 18:04:04.200 [logback-2] ERROR TestCluster - Failed to check cache for java.util.AbstractMap<K, V>.SimpleEntry<K, V> : Type points to itself
+[MASTER] 18:04:04.201 [logback-2] ERROR TestCluster - Failed to check cache for java.util.AbstractMap<K, V>.SimpleImmutableEntry<K, V> : Type points to itself
+[MASTER] 18:04:13.161 [logback-2] ERROR TestCluster - Failed to check cache for java.util.Enumeration<E> : Type points to itself
+[MASTER] 18:04:13.511 [logback-2] ERROR TestCluster - Failed to check cache for java.util.Comparator<T> : Type points to itself
+[MASTER] 18:05:19.293 [logback-2] ERROR TestCluster - Failed to check cache for java.util.Iterator<E> : Type points to itself
+[MASTER] 18:12:48.317 [logback-2] ERROR TestCluster - Failed to check cache for java.lang.Comparable<T> : Type points to itself
+* Search finished after 603s and 605 generations, 290807 statements, best individual has fitness: 1531.0
+* Minimizing test suite
+* Going to analyze the coverage criteria
+* Coverage analysis for criterion LINE
+* Coverage of criterion LINE: 38%
+* Total number of goals: 685
+* Number of covered goals: 261
+* Coverage analysis for criterion BRANCH
+* Coverage of criterion BRANCH: 33%
+* Total number of goals: 561
+* Number of covered goals: 183
+* Coverage analysis for criterion EXCEPTION
+* Coverage of criterion EXCEPTION: 100%
+* Total number of goals: 3
+* Number of covered goals: 3
+* Coverage analysis for criterion WEAKMUTATION
+* Coverage of criterion WEAKMUTATION: 38%
+* Total number of goals: 506
+* Number of covered goals: 190
+* Coverage analysis for criterion OUTPUT
+* Coverage of criterion OUTPUT: 33%
+* Total number of goals: 3
+* Number of covered goals: 1
+* Coverage analysis for criterion METHOD
+* Coverage of criterion METHOD: 22%
+* Total number of goals: 18
+* Number of covered goals: 4
+* Coverage analysis for criterion METHODNOEXCEPTION
+* Coverage of criterion METHODNOEXCEPTION: 22%
+* Total number of goals: 18
+* Number of covered goals: 4
+* Coverage analysis for criterion CBRANCH
+* Coverage of criterion CBRANCH: 33%
+* Total number of goals: 561
+* Number of covered goals: 183
+* Generated 24 tests with total length 138
+* Resulting test suite's coverage: 35% (average coverage for all fitness functions)
+* Generating assertions
+* Resulting test suite's mutation score: 12%
+* Compiling and checking tests
+[MASTER] 18:14:20.584 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 18:14:28.931 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class org.evosuite.runtime.mock.java.lang.MockIllegalArgumentException: Multiple entries with same key: returns=NOT_IMPLEMENTED and returns=RETURN
+[MASTER] 18:14:28.931 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ Compiler compiler0 = new Compiler();
+Node node0 = Node.newString(108, "e$7%.:I_'R,mC");
+Node node1 = new Node(37, node0, node0, 15, 32);
+Node node2 = compiler0.parseSyntheticCode("gzReduction", "gzReduction");
+NameAnalyzer nameAnalyzer0 = new NameAnalyzer(compiler0, true);
+nameAnalyzer0.process(node2, node1);
+assertEquals("gzReduction", node2.getSourceFileName());
+
+
+[MASTER] 18:14:29.972 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class java.lang.AssertionError: Expecting exception: IllegalArgumentException
+[MASTER] 18:14:29.972 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ Compiler compiler0 = new Compiler();
+ReorderConstantExpression reorderConstantExpression0 = new ReorderConstantExpression();
+PeepholeSubstituteAlternateSyntax peepholeSubstituteAlternateSyntax0 = new PeepholeSubstituteAlternateSyntax(false);
+PeepholeFoldConstants peepholeFoldConstants0 = new PeepholeFoldConstants(false);
+NameAnalyzer nameAnalyzer0 = new NameAnalyzer(compiler0, false);
+SourceFile sourceFile0 = SourceFile.fromCode("<a href=\"#", (String) null, "com");
+JsAst jsAst0 = new JsAst(sourceFile0);
+jsAst0.getAstRoot(compiler0);
+
+[MASTER] 18:14:40.277 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class java.lang.AssertionError: Expecting exception: IllegalArgumentException
+[MASTER] 18:14:40.277 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ Compiler compiler0 = new Compiler();
+NameAnalyzer nameAnalyzer0 = new NameAnalyzer(compiler0, true);
+compiler0.parseSyntheticCode("com.google.common.io.Files$InternalByteArrayOutputStream", "X+fE[RRztEL]");
+
+[MASTER] 18:14:44.258 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class org.evosuite.runtime.mock.java.lang.MockIllegalArgumentException: Multiple entries with same key: returns=NOT_IMPLEMENTED and returns=RETURN
+[MASTER] 18:14:44.258 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ Compiler compiler0 = new Compiler();
+Node node0 = Node.newString(105, "Function");
+Node node1 = compiler0.parseTestCode("");
+Node node2 = new Node(8, node1, node0, 100, (-3));
+NameAnalyzer nameAnalyzer0 = new NameAnalyzer(compiler0, false);
+nameAnalyzer0.process(node2, node2);
+
+* Writing tests to file
+* Writing JUnit test case 'NameAnalyzer_ESTest' to results/Closure-114/com.google.javascript.jscomp.NameAnalyzer/BBC-F0-50/tests/9
+* Done!
+
+* Computation finished

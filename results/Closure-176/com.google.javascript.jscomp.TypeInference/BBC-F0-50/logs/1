@@ -1,0 +1,730 @@
+* EvoSuite 1.1.1-SNAPSHOT
+* Configuration: BBC-F0-50
+* Going to generate test cases for class: com.google.javascript.jscomp.TypeInference
+* Starting Client-0
+* Connecting to master process on port 15569
+* Analyzing classpath: 
+  - subjects/buggy-versions/Closure-176/build/classes
+  - subjects/buggy-versions/Closure-176/lib/args4j.jar
+  - subjects/buggy-versions/Closure-176/lib/guava.jar
+  - subjects/buggy-versions/Closure-176/lib/json.jar
+  - subjects/buggy-versions/Closure-176/lib/jsr305.jar
+  - subjects/buggy-versions/Closure-176/lib/protobuf-java.jar
+  - subjects/buggy-versions/Closure-176/build/lib/rhino.jar
+  - subjects/buggy-versions/Closure-176/lib/ant.jar
+* Finished analyzing classpath
+* Generating tests for class com.google.javascript.jscomp.TypeInference
+* Test criteria:
+  - Line Coverage
+  - Branch Coverage
+  - Exception
+  - Mutation testing (weak)
+  - Method-Output Coverage
+  - Top-Level Method Coverage
+  - No-Exception Top-Level Method Coverage
+  - Context Branch Coverage
+* Total number of test goals for DYNAMOSA: 3073
+* Using seed 2096510221
+* Starting evolution
+bbc usage percentage is: 50%
+* Initial Number of Goals in DynaMOSA = 890 / 3073
+[MASTER] 17:25:45.400 [logback-2] ERROR TestCluster - Failed to check cache for java.util.Comparator<T> : Type points to itself
+[MASTER] 17:25:56.663 [logback-2] ERROR TestCluster - Failed to check cache for java.util.Iterator<E> : Type points to itself
+[MASTER] 17:30:17.957 [logback-2] ERROR TestCluster - Failed to check cache for java.util.Enumeration<E> : Type points to itself
+* Search finished after 602s and 719 generations, 592521 statements, best individual has fitness: 1889.0
+* Minimizing test suite
+* Going to analyze the coverage criteria
+* Coverage analysis for criterion LINE
+* Coverage of criterion LINE: 39%
+* Total number of goals: 619
+* Number of covered goals: 240
+* Coverage analysis for criterion BRANCH
+* Coverage of criterion BRANCH: 47%
+* Total number of goals: 793
+* Number of covered goals: 371
+* Coverage analysis for criterion EXCEPTION
+* Coverage of criterion EXCEPTION: 100%
+* Total number of goals: 10
+* Number of covered goals: 10
+* Coverage analysis for criterion WEAKMUTATION
+* Coverage of criterion WEAKMUTATION: 25%
+* Total number of goals: 836
+* Number of covered goals: 207
+* Coverage analysis for criterion OUTPUT
+* Coverage of criterion OUTPUT: 43%
+* Total number of goals: 14
+* Number of covered goals: 6
+* Coverage analysis for criterion METHOD
+* Coverage of criterion METHOD: 67%
+* Total number of goals: 9
+* Number of covered goals: 6
+* Coverage analysis for criterion METHODNOEXCEPTION
+* Coverage of criterion METHODNOEXCEPTION: 67%
+* Total number of goals: 9
+* Number of covered goals: 6
+* Coverage analysis for criterion CBRANCH
+* Coverage of criterion CBRANCH: 46%
+* Total number of goals: 793
+* Number of covered goals: 367
+* Generated 134 tests with total length 1736
+* Resulting test suite's coverage: 48% (average coverage for all fitness functions)
+* Generating assertions
+* Resulting test suite's mutation score: 4%
+* Compiling and checking tests
+[MASTER] 17:37:11.566 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 17:37:11.571 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class org.evosuite.runtime.mock.java.lang.MockIllegalArgumentException: Multiple entries with same key: stableIdGenerator=NOT_IMPLEMENTED and stableIdGenerator=STABLEIDGENERATOR
+[MASTER] 17:37:11.572 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ Node node0 = Node.newString("o>kb", 33, 33);
+Node node1 = new Node(33, node0, node0, node0, node0);
+Scope scope0 = Scope.createLatticeBottom(node1);
+Compiler compiler0 = new Compiler();
+compiler0.parseTestCode("com.google.javascript.jscomp.TypeInference");
+ControlFlowGraph<Node> controlFlowGraph0 = new ControlFlowGraph<Node>(node0, true, true);
+LinkedFlowScope linkedFlowScope0 = LinkedFlowScope.createEntryLattice(scope0);
+TypeInference typeInference0 = new TypeInference(compiler0, controlFlowGraph0, (ReverseAbstractInterpreter) null, scope0, (Map<String, CodingConvention.AssertionFunctionSpec>) null);
+typeInference0.branchedFlowThrough(node1, linkedFlowScope0);
+
+[MASTER] 17:37:12.902 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class org.evosuite.runtime.mock.java.lang.MockIllegalArgumentException: Multiple entries with same key: stableIdGenerator=NOT_IMPLEMENTED and stableIdGenerator=STABLEIDGENERATOR
+[MASTER] 17:37:12.903 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ Node node0 = new Node(130);
+Node node1 = new Node(50, node0, node0, node0, node0);
+Scope scope0 = Scope.createLatticeBottom(node1);
+Compiler compiler0 = new Compiler();
+Node node2 = compiler0.parseTestCode("com.google.javascript.jscomp.graph.Graph");
+ControlFlowGraph<Node> controlFlowGraph0 = new ControlFlowGraph<Node>(node1, false, true);
+GoogleCodingConvention googleCodingConvention0 = new GoogleCodingConvention();
+SemanticReverseAbstractInterpreter semanticReverseAbstractInterpreter0 = new SemanticReverseAbstractInterpreter(googleCodingConvention0, (JSTypeRegistry) null);
+JSTypeNative jSTypeNative0 = JSTypeNative.DATE_TYPE;
+CodingConvention.AssertionFunctionSpec codingConvention_AssertionFunctionSpec0 = new CodingConvention.AssertionFunctionSpec("I92kHZ3@z$HN", jSTypeNative0);
+ImmutableSortedMap<String, CodingConvention.AssertionFunctionSpec> immutableSortedMap0 = ImmutableSortedMap.of("~DW^tk.2S<p$", codingConvention_AssertionFunctionSpec0);
+TypeInference typeInference0 = new TypeInference(compiler0, controlFlowGraph0, semanticReverseAbstractInterpreter0, scope0, immutableSortedMap0);
+LinkedFlowScope linkedFlowScope0 = LinkedFlowScope.createEntryLattice(scope0);
+Node node3 = new Node(51, node2, node1, 0, 0);
+typeInference0.branchedFlowThrough(node3, linkedFlowScope0);
+
+[MASTER] 17:37:14.098 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class org.evosuite.runtime.mock.java.lang.MockIllegalArgumentException: Multiple entries with same key: stableIdGenerator=NOT_IMPLEMENTED and stableIdGenerator=STABLEIDGENERATOR
+[MASTER] 17:37:14.098 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ Node node0 = Node.newString(126, "?cUG-x6", 126, 126);
+Node node1 = new Node(103, node0, node0);
+Scope scope0 = Scope.createGlobalScope(node1);
+Compiler compiler0 = new Compiler();
+Node node2 = compiler0.parseTestCode("?cUG-x6");
+ControlFlowGraph<Node> controlFlowGraph0 = new ControlFlowGraph<Node>(node1, false, false);
+Node node3 = new Node(101, node2, node1, 2, 32);
+node3.removeFirstChild();
+JqueryCodingConvention jqueryCodingConvention0 = new JqueryCodingConvention();
+JSTypeRegistry jSTypeRegistry0 = compiler0.getTypeRegistry();
+ClosureReverseAbstractInterpreter closureReverseAbstractInterpreter0 = new ClosureReverseAbstractInterpreter(jqueryCodingConvention0, jSTypeRegistry0);
+TypeInference typeInference0 = new TypeInference(compiler0, controlFlowGraph0, closureReverseAbstractInterpreter0, scope0, (Map<String, CodingConvention.AssertionFunctionSpec>) null);
+LinkedFlowScope linkedFlowScope0 = LinkedFlowScope.createEntryLattice(scope0);
+typeInference0.branchedFlowThrough(node3, linkedFlowScope0);
+
+[MASTER] 17:37:15.627 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class org.evosuite.runtime.mock.java.lang.MockIllegalArgumentException: Multiple entries with same key: stableIdGenerator=NOT_IMPLEMENTED and stableIdGenerator=STABLEIDGENERATOR
+[MASTER] 17:37:15.628 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ Node node0 = Node.newString("4u", 2, 2);
+Node node1 = new Node(100, node0, 12, 8);
+Scope scope0 = Scope.createLatticeBottom(node1);
+Compiler compiler0 = new Compiler();
+compiler0.parseTestCode("4u");
+ControlFlowGraph<Node> controlFlowGraph0 = new ControlFlowGraph<Node>((Node) null, false, true);
+JqueryCodingConvention jqueryCodingConvention0 = new JqueryCodingConvention();
+JSTypeRegistry jSTypeRegistry0 = compiler0.getTypeRegistry();
+ClosureReverseAbstractInterpreter closureReverseAbstractInterpreter0 = new ClosureReverseAbstractInterpreter(jqueryCodingConvention0, jSTypeRegistry0);
+LinkedFlowScope linkedFlowScope0 = LinkedFlowScope.createEntryLattice(scope0);
+TypeInference typeInference0 = new TypeInference(compiler0, controlFlowGraph0, closureReverseAbstractInterpreter0, scope0, (Map<String, CodingConvention.AssertionFunctionSpec>) null);
+typeInference0.branchedFlowThrough(node1, linkedFlowScope0);
+
+[MASTER] 17:37:17.805 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class org.evosuite.runtime.mock.java.lang.MockIllegalArgumentException: Multiple entries with same key: stableIdGenerator=NOT_IMPLEMENTED and stableIdGenerator=STABLEIDGENERATOR
+[MASTER] 17:37:17.805 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ Node node0 = Node.newString(136, "Fe {wnBlX])%T`");
+Node node1 = new Node(4, node0, node0, node0, node0);
+CodingConvention.AssertionFunctionSpec codingConvention_AssertionFunctionSpec0 = new CodingConvention.AssertionFunctionSpec("It is illegal to call PureFunctionIdentifier.process twice the same instance.  Please use a new PureFunctionIdentifier instance each time.");
+Node node2 = codingConvention_AssertionFunctionSpec0.getAssertedParam(node1);
+Scope scope0 = Scope.createLatticeBottom(node2);
+Compiler compiler0 = new Compiler();
+Node node3 = compiler0.parseTestCode(">3vn`NYzXo[%PZ");
+ControlFlowGraph<Node> controlFlowGraph0 = new ControlFlowGraph<Node>(node3, true, true);
+JqueryCodingConvention jqueryCodingConvention0 = new JqueryCodingConvention();
+JSTypeRegistry jSTypeRegistry0 = compiler0.getTypeRegistry();
+ClosureReverseAbstractInterpreter closureReverseAbstractInterpreter0 = new ClosureReverseAbstractInterpreter(jqueryCodingConvention0, jSTypeRegistry0);
+TypeInference typeInference0 = new TypeInference(compiler0, controlFlowGraph0, closureReverseAbstractInterpreter0, scope0, (Map<String, CodingConvention.AssertionFunctionSpec>) null);
+FlowScope flowScope0 = typeInference0.createInitialEstimateLattice();
+List<FlowScope> list0 = typeInference0.branchedFlowThrough(node3, flowScope0);
+assertNotNull(list0);
+
+
+[MASTER] 17:37:18.942 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class org.evosuite.runtime.mock.java.lang.MockIllegalArgumentException: Multiple entries with same key: stableIdGenerator=NOT_IMPLEMENTED and stableIdGenerator=STABLEIDGENERATOR
+[MASTER] 17:37:18.942 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ Node node0 = new Node(141, 141, 141);
+Node node1 = new Node(141, node0, node0, node0, node0);
+Scope scope0 = Scope.createGlobalScope(node1);
+Compiler compiler0 = new Compiler();
+compiler0.parseTestCode("f");
+ControlFlowGraph<Node> controlFlowGraph0 = new ControlFlowGraph<Node>(node1, false, false);
+JqueryCodingConvention jqueryCodingConvention0 = new JqueryCodingConvention();
+JSTypeRegistry jSTypeRegistry0 = compiler0.getTypeRegistry();
+ControlFlowGraph.Branch controlFlowGraph_Branch0 = ControlFlowGraph.Branch.ON_FALSE;
+controlFlowGraph0.connectIfNotFound(node1, controlFlowGraph_Branch0, node1);
+ClosureReverseAbstractInterpreter closureReverseAbstractInterpreter0 = new ClosureReverseAbstractInterpreter(jqueryCodingConvention0, jSTypeRegistry0);
+TypeInference typeInference0 = new TypeInference(compiler0, controlFlowGraph0, closureReverseAbstractInterpreter0, scope0, (Map<String, CodingConvention.AssertionFunctionSpec>) null);
+LinkedFlowScope linkedFlowScope0 = LinkedFlowScope.createEntryLattice(scope0);
+typeInference0.branchedFlowThrough(node1, linkedFlowScope0);
+
+[MASTER] 17:37:20.078 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class org.evosuite.runtime.mock.java.lang.MockIllegalArgumentException: Multiple entries with same key: stableIdGenerator=NOT_IMPLEMENTED and stableIdGenerator=STABLEIDGENERATOR
+[MASTER] 17:37:20.079 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ Node node0 = Node.newString(110, "msg.catch.unreachable");
+Node node1 = new Node(47, node0, 1, 2);
+Scope scope0 = Scope.createLatticeBottom(node1);
+Compiler compiler0 = new Compiler();
+Node node2 = compiler0.parseTestCode(")SS8eE</bXp6fz");
+ControlFlowGraph<Node> controlFlowGraph0 = new ControlFlowGraph<Node>(node2, false, false);
+JqueryCodingConvention jqueryCodingConvention0 = new JqueryCodingConvention();
+JSTypeRegistry jSTypeRegistry0 = compiler0.getTypeRegistry();
+ClosureReverseAbstractInterpreter closureReverseAbstractInterpreter0 = new ClosureReverseAbstractInterpreter(jqueryCodingConvention0, jSTypeRegistry0);
+TypeInference typeInference0 = new TypeInference(compiler0, controlFlowGraph0, closureReverseAbstractInterpreter0, scope0, (Map<String, CodingConvention.AssertionFunctionSpec>) null);
+TypeInference typeInference1 = new TypeInference(compiler0, controlFlowGraph0, closureReverseAbstractInterpreter0, scope0, (Map<String, CodingConvention.AssertionFunctionSpec>) null);
+Node node3 = new Node(5, node1, node1, 29, 52);
+FlowScope flowScope0 = typeInference0.createInitialEstimateLattice();
+typeInference1.branchedFlowThrough(node3, flowScope0);
+
+[MASTER] 17:37:21.228 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class org.evosuite.runtime.mock.java.lang.MockIllegalArgumentException: Multiple entries with same key: stableIdGenerator=NOT_IMPLEMENTED and stableIdGenerator=STABLEIDGENERATOR
+[MASTER] 17:37:21.229 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ Node node0 = Node.newString(159, "com.google.javascript.jscomp.InstrumentFunctions");
+Node node1 = new Node(2, node0, node0, 4, 42);
+Scope scope0 = Scope.createLatticeBottom(node1);
+Compiler compiler0 = new Compiler();
+Node node2 = compiler0.parseTestCode("com.google.javascript.jscomp.InstrumentFunctions");
+ControlFlowGraph<Node> controlFlowGraph0 = new ControlFlowGraph<Node>(node2, true, true);
+JqueryCodingConvention jqueryCodingConvention0 = new JqueryCodingConvention();
+JSTypeRegistry jSTypeRegistry0 = compiler0.getTypeRegistry();
+ClosureReverseAbstractInterpreter closureReverseAbstractInterpreter0 = new ClosureReverseAbstractInterpreter(jqueryCodingConvention0, jSTypeRegistry0);
+TypeInference typeInference0 = new TypeInference(compiler0, controlFlowGraph0, closureReverseAbstractInterpreter0, scope0, (Map<String, CodingConvention.AssertionFunctionSpec>) null);
+Node node3 = new Node(6, node1, node1, 29, 52);
+LinkedFlowScope linkedFlowScope0 = LinkedFlowScope.createEntryLattice(scope0);
+typeInference0.branchedFlowThrough(node3, linkedFlowScope0);
+
+[MASTER] 17:37:26.087 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class org.evosuite.runtime.mock.java.lang.MockIllegalArgumentException: Multiple entries with same key: stableIdGenerator=NOT_IMPLEMENTED and stableIdGenerator=STABLEIDGENERATOR
+[MASTER] 17:37:26.087 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ Node node0 = Node.newString("no message resource found for message property ");
+Node node1 = new Node(12, node0, node0, node0, node0);
+CodingConvention.AssertionFunctionSpec codingConvention_AssertionFunctionSpec0 = new CodingConvention.AssertionFunctionSpec("com.google.javascript.jscomp.ConcreteType$ConcreteUnionType");
+Node node2 = codingConvention_AssertionFunctionSpec0.getAssertedParam(node1);
+Scope scope0 = Scope.createLatticeBottom(node2);
+Compiler compiler0 = new Compiler();
+compiler0.parseTestCode("no message resource found for message property ");
+ControlFlowGraph<Node> controlFlowGraph0 = new ControlFlowGraph<Node>(node2, false, false);
+JqueryCodingConvention jqueryCodingConvention0 = new JqueryCodingConvention();
+JSTypeRegistry jSTypeRegistry0 = compiler0.getTypeRegistry();
+ClosureReverseAbstractInterpreter closureReverseAbstractInterpreter0 = new ClosureReverseAbstractInterpreter(jqueryCodingConvention0, jSTypeRegistry0);
+TypeInference typeInference0 = new TypeInference(compiler0, controlFlowGraph0, closureReverseAbstractInterpreter0, scope0, (Map<String, CodingConvention.AssertionFunctionSpec>) null);
+node2.setType(20);
+LinkedFlowScope linkedFlowScope0 = LinkedFlowScope.createEntryLattice(scope0);
+FlowScope flowScope0 = typeInference0.flowThrough(node1, linkedFlowScope0);
+assertNotSame(flowScope0, linkedFlowScope0);
+
+
+[MASTER] 17:37:27.164 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class org.evosuite.runtime.mock.java.lang.MockIllegalArgumentException: Multiple entries with same key: stableIdGenerator=NOT_IMPLEMENTED and stableIdGenerator=STABLEIDGENERATOR
+[MASTER] 17:37:27.164 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ Node node0 = new Node(115, 115, 115);
+Node node1 = new Node(8, node0, 43, 56);
+Node node2 = new Node(21, node1, node1, node1, node1);
+Scope scope0 = Scope.createLatticeBottom(node1);
+Compiler compiler0 = new Compiler();
+compiler0.parseTestCode("Vvt4");
+ControlFlowGraph<Node> controlFlowGraph0 = new ControlFlowGraph<Node>(node1, false, true);
+LinkedFlowScope linkedFlowScope0 = LinkedFlowScope.createEntryLattice(scope0);
+CodingConvention.AssertionFunctionSpec codingConvention_AssertionFunctionSpec0 = new CodingConvention.AssertionFunctionSpec("Vvt4");
+ImmutableSortedMap<String, CodingConvention.AssertionFunctionSpec> immutableSortedMap0 = ImmutableSortedMap.of("o>b", codingConvention_AssertionFunctionSpec0, "KEY", codingConvention_AssertionFunctionSpec0);
+ReverseAbstractInterpreter reverseAbstractInterpreter0 = compiler0.getReverseAbstractInterpreter();
+TypeInference typeInference0 = new TypeInference(compiler0, controlFlowGraph0, reverseAbstractInterpreter0, scope0, immutableSortedMap0);
+typeInference0.flowThrough(node2, linkedFlowScope0);
+
+[MASTER] 17:37:28.320 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class org.evosuite.runtime.mock.java.lang.MockIllegalArgumentException: Multiple entries with same key: stableIdGenerator=NOT_IMPLEMENTED and stableIdGenerator=STABLEIDGENERATOR
+[MASTER] 17:37:28.320 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ Node node0 = Node.newString(150, "Fe {wOnBlX])%T`");
+Node node1 = new Node(24, node0, node0, node0, node0);
+Scope scope0 = Scope.createGlobalScope(node1);
+Compiler compiler0 = new Compiler();
+compiler0.parseTestCode("Fe {wOnBlX])%T`");
+ControlFlowGraph<Node> controlFlowGraph0 = new ControlFlowGraph<Node>(node0, true, true);
+JqueryCodingConvention jqueryCodingConvention0 = new JqueryCodingConvention();
+JSTypeRegistry jSTypeRegistry0 = compiler0.getTypeRegistry();
+ClosureReverseAbstractInterpreter closureReverseAbstractInterpreter0 = new ClosureReverseAbstractInterpreter(jqueryCodingConvention0, jSTypeRegistry0);
+TypeInference typeInference0 = new TypeInference(compiler0, controlFlowGraph0, closureReverseAbstractInterpreter0, scope0, (Map<String, CodingConvention.AssertionFunctionSpec>) null);
+FlowScope flowScope0 = typeInference0.createEntryLattice();
+FlowScope flowScope1 = typeInference0.flowThrough(node1, flowScope0);
+assertNotSame(flowScope1, flowScope0);
+
+
+[MASTER] 17:37:29.418 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class org.evosuite.runtime.mock.java.lang.MockIllegalArgumentException: Multiple entries with same key: stableIdGenerator=NOT_IMPLEMENTED and stableIdGenerator=STABLEIDGENERATOR
+[MASTER] 17:37:29.418 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ Node node0 = Node.newString(150, "Fe {wOnBlX])%T`");
+Node node1 = new Node(25, node0, node0, node0, node0);
+Scope scope0 = Scope.createLatticeBottom(node1);
+Compiler compiler0 = new Compiler();
+compiler0.parseTestCode("Fe {wOnBlX])%T`");
+ControlFlowGraph<Node> controlFlowGraph0 = new ControlFlowGraph<Node>(node1, true, true);
+JqueryCodingConvention jqueryCodingConvention0 = new JqueryCodingConvention();
+JSTypeRegistry jSTypeRegistry0 = compiler0.getTypeRegistry();
+ClosureReverseAbstractInterpreter closureReverseAbstractInterpreter0 = new ClosureReverseAbstractInterpreter(jqueryCodingConvention0, jSTypeRegistry0);
+TypeInference typeInference0 = new TypeInference(compiler0, controlFlowGraph0, closureReverseAbstractInterpreter0, scope0, (Map<String, CodingConvention.AssertionFunctionSpec>) null);
+LinkedFlowScope linkedFlowScope0 = LinkedFlowScope.createEntryLattice(scope0);
+List<FlowScope> list0 = typeInference0.branchedFlowThrough(node1, linkedFlowScope0);
+assertEquals(0, list0.size());
+
+
+[MASTER] 17:37:30.489 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class org.evosuite.runtime.mock.java.lang.MockIllegalArgumentException: Multiple entries with same key: stableIdGenerator=NOT_IMPLEMENTED and stableIdGenerator=STABLEIDGENERATOR
+[MASTER] 17:37:30.489 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ Node node0 = Node.newString(121, "o>b");
+Node node1 = new Node(121, node0, node0, node0, node0);
+JSTypeNative jSTypeNative0 = JSTypeNative.OBJECT_NUMBER_STRING_BOOLEAN;
+CodingConvention.AssertionFunctionSpec codingConvention_AssertionFunctionSpec0 = new CodingConvention.AssertionFunctionSpec("o><b", jSTypeNative0);
+Scope scope0 = Scope.createGlobalScope(node1);
+Compiler compiler0 = new Compiler();
+Node node2 = compiler0.parseTestCode("o><b");
+ControlFlowGraph<Node> controlFlowGraph0 = new ControlFlowGraph<Node>(node1, true, true);
+JqueryCodingConvention jqueryCodingConvention0 = new JqueryCodingConvention();
+JSTypeRegistry jSTypeRegistry0 = compiler0.getTypeRegistry();
+ClosureReverseAbstractInterpreter closureReverseAbstractInterpreter0 = new ClosureReverseAbstractInterpreter(jqueryCodingConvention0, jSTypeRegistry0);
+LinkedFlowScope linkedFlowScope0 = LinkedFlowScope.createEntryLattice(scope0);
+ImmutableSortedMap<String, CodingConvention.AssertionFunctionSpec> immutableSortedMap0 = ImmutableSortedMap.of("Object#Key", codingConvention_AssertionFunctionSpec0, "Object#Element", codingConvention_AssertionFunctionSpec0);
+TypeInference typeInference0 = new TypeInference(compiler0, controlFlowGraph0, closureReverseAbstractInterpreter0, scope0, immutableSortedMap0);
+Node node3 = new Node(29, node2, node2, 2, 47);
+FlowScope flowScope0 = typeInference0.flowThrough(node3, linkedFlowScope0);
+assertNotSame(flowScope0, linkedFlowScope0);
+
+
+[MASTER] 17:37:31.580 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class org.evosuite.runtime.mock.java.lang.MockIllegalArgumentException: Multiple entries with same key: stableIdGenerator=NOT_IMPLEMENTED and stableIdGenerator=STABLEIDGENERATOR
+[MASTER] 17:37:31.580 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ Node node0 = Node.newString(115, "o>b");
+Node node1 = new Node(8, node0, 43, 56);
+Scope scope0 = Scope.createLatticeBottom(node1);
+Compiler compiler0 = new Compiler();
+compiler0.parseTestCode("Function literal argument refers to undefined this argument");
+ControlFlowGraph<Node> controlFlowGraph0 = new ControlFlowGraph<Node>(node0, false, false);
+JqueryCodingConvention jqueryCodingConvention0 = new JqueryCodingConvention();
+JSTypeRegistry jSTypeRegistry0 = compiler0.getTypeRegistry();
+ClosureReverseAbstractInterpreter closureReverseAbstractInterpreter0 = new ClosureReverseAbstractInterpreter(jqueryCodingConvention0, jSTypeRegistry0);
+TypeInference typeInference0 = new TypeInference(compiler0, controlFlowGraph0, closureReverseAbstractInterpreter0, scope0, (Map<String, CodingConvention.AssertionFunctionSpec>) null);
+node0.setType(30);
+LinkedFlowScope linkedFlowScope0 = LinkedFlowScope.createEntryLattice(scope0);
+typeInference0.branchedFlowThrough(node0, linkedFlowScope0);
+
+[MASTER] 17:37:32.788 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class org.evosuite.runtime.mock.java.lang.MockIllegalArgumentException: Multiple entries with same key: stableIdGenerator=NOT_IMPLEMENTED and stableIdGenerator=STABLEIDGENERATOR
+[MASTER] 17:37:32.788 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ Node node0 = Node.newString(110, "msg.catch.unreachable");
+Node node1 = new Node(47, node0, 1, 2);
+Scope scope0 = Scope.createLatticeBottom(node1);
+Compiler compiler0 = new Compiler();
+Node node2 = compiler0.parseTestCode(")SS8eE</bXp6fz");
+ControlFlowGraph<Node> controlFlowGraph0 = new ControlFlowGraph<Node>(node2, false, false);
+JqueryCodingConvention jqueryCodingConvention0 = new JqueryCodingConvention();
+JSTypeRegistry jSTypeRegistry0 = compiler0.getTypeRegistry();
+ClosureReverseAbstractInterpreter closureReverseAbstractInterpreter0 = new ClosureReverseAbstractInterpreter(jqueryCodingConvention0, jSTypeRegistry0);
+TypeInference typeInference0 = new TypeInference(compiler0, controlFlowGraph0, closureReverseAbstractInterpreter0, scope0, (Map<String, CodingConvention.AssertionFunctionSpec>) null);
+TypeInference typeInference1 = new TypeInference(compiler0, controlFlowGraph0, closureReverseAbstractInterpreter0, scope0, (Map<String, CodingConvention.AssertionFunctionSpec>) null);
+Node node3 = new Node(31, 57, 8);
+FlowScope flowScope0 = typeInference0.createInitialEstimateLattice();
+typeInference1.branchedFlowThrough(node3, flowScope0);
+
+[MASTER] 17:37:33.846 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class org.evosuite.runtime.mock.java.lang.MockIllegalArgumentException: Multiple entries with same key: stableIdGenerator=NOT_IMPLEMENTED and stableIdGenerator=STABLEIDGENERATOR
+[MASTER] 17:37:33.846 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ Node node0 = Node.newString(126, "msg.catch.unreachable");
+Node node1 = new Node(137, node0, node0);
+Scope scope0 = Scope.createLatticeBottom(node1);
+Compiler compiler0 = new Compiler();
+compiler0.parseTestCode("msg.catch.unreachable");
+ControlFlowGraph<Node> controlFlowGraph0 = new ControlFlowGraph<Node>(node1, false, false);
+Node node2 = new Node(32, node1, node1, 71, 2321);
+JqueryCodingConvention jqueryCodingConvention0 = new JqueryCodingConvention();
+JSTypeRegistry jSTypeRegistry0 = compiler0.getTypeRegistry();
+ClosureReverseAbstractInterpreter closureReverseAbstractInterpreter0 = new ClosureReverseAbstractInterpreter(jqueryCodingConvention0, jSTypeRegistry0);
+TypeInference typeInference0 = new TypeInference(compiler0, controlFlowGraph0, closureReverseAbstractInterpreter0, scope0, (Map<String, CodingConvention.AssertionFunctionSpec>) null);
+LinkedFlowScope linkedFlowScope0 = LinkedFlowScope.createEntryLattice(scope0);
+FlowScope flowScope0 = typeInference0.flowThrough(node2, linkedFlowScope0);
+assertNotSame(flowScope0, linkedFlowScope0);
+
+
+[MASTER] 17:37:34.916 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class org.evosuite.runtime.mock.java.lang.MockIllegalArgumentException: Multiple entries with same key: stableIdGenerator=NOT_IMPLEMENTED and stableIdGenerator=STABLEIDGENERATOR
+[MASTER] 17:37:34.916 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ Node node0 = Node.newString(115, "o>b");
+Node node1 = new Node(8, node0, 43, 56);
+Node node2 = new Node(35, node1, node1, node1, node1);
+Scope scope0 = Scope.createLatticeBottom(node1);
+Compiler compiler0 = new Compiler();
+compiler0.parseTestCode("Vvt4");
+ControlFlowGraph<Node> controlFlowGraph0 = new ControlFlowGraph<Node>(node1, false, true);
+LinkedFlowScope linkedFlowScope0 = LinkedFlowScope.createEntryLattice(scope0);
+CodingConvention.AssertionFunctionSpec codingConvention_AssertionFunctionSpec0 = new CodingConvention.AssertionFunctionSpec("Vvt4");
+ImmutableSortedMap<String, CodingConvention.AssertionFunctionSpec> immutableSortedMap0 = ImmutableSortedMap.of("o>b", codingConvention_AssertionFunctionSpec0, "KEY", codingConvention_AssertionFunctionSpec0);
+ReverseAbstractInterpreter reverseAbstractInterpreter0 = compiler0.getReverseAbstractInterpreter();
+TypeInference typeInference0 = new TypeInference(compiler0, controlFlowGraph0, reverseAbstractInterpreter0, scope0, immutableSortedMap0);
+FlowScope flowScope0 = typeInference0.flowThrough(node2, linkedFlowScope0);
+assertNotSame(flowScope0, linkedFlowScope0);
+
+
+[MASTER] 17:37:36.159 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class org.evosuite.runtime.mock.java.lang.MockIllegalArgumentException: Multiple entries with same key: stableIdGenerator=NOT_IMPLEMENTED and stableIdGenerator=STABLEIDGENERATOR
+[MASTER] 17:37:36.160 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ Node node0 = new Node(115, 115, 115);
+Node node1 = new Node(42, node0);
+Scope scope0 = Scope.createLatticeBottom(node1);
+Compiler compiler0 = new Compiler();
+Node node2 = compiler0.parseTestCode(">3vn`NYzXo[%PZ");
+ControlFlowGraph<Node> controlFlowGraph0 = new ControlFlowGraph<Node>(node0, false, true);
+JSTypeRegistry jSTypeRegistry0 = compiler0.getTypeRegistry();
+GoogleCodingConvention googleCodingConvention0 = new GoogleCodingConvention();
+SemanticReverseAbstractInterpreter semanticReverseAbstractInterpreter0 = new SemanticReverseAbstractInterpreter(googleCodingConvention0, jSTypeRegistry0);
+TypeInference typeInference0 = new TypeInference(compiler0, controlFlowGraph0, semanticReverseAbstractInterpreter0, scope0, (Map<String, CodingConvention.AssertionFunctionSpec>) null);
+LinkedFlowScope linkedFlowScope0 = LinkedFlowScope.createEntryLattice(scope0);
+Node node3 = new Node(36, node2, node2, 4, 53);
+typeInference0.branchedFlowThrough(node3, linkedFlowScope0);
+
+[MASTER] 17:37:37.610 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class org.evosuite.runtime.mock.java.lang.MockIllegalArgumentException: Multiple entries with same key: stableIdGenerator=NOT_IMPLEMENTED and stableIdGenerator=STABLEIDGENERATOR
+[MASTER] 17:37:37.611 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ Node node0 = Node.newString(136, "Fe {wnBlX])%T`");
+Node node1 = new Node(4, node0, node0, node0, node0);
+Scope scope0 = Scope.createLatticeBottom(node1);
+Compiler compiler0 = new Compiler();
+compiler0.parseTestCode(">3vn`NYzXo[%PZ");
+ControlFlowGraph<Node> controlFlowGraph0 = new ControlFlowGraph<Node>(node1, true, false);
+JqueryCodingConvention jqueryCodingConvention0 = new JqueryCodingConvention();
+JSTypeRegistry jSTypeRegistry0 = compiler0.getTypeRegistry();
+ClosureReverseAbstractInterpreter closureReverseAbstractInterpreter0 = new ClosureReverseAbstractInterpreter(jqueryCodingConvention0, jSTypeRegistry0);
+TypeInference typeInference0 = new TypeInference(compiler0, controlFlowGraph0, closureReverseAbstractInterpreter0, scope0, (Map<String, CodingConvention.AssertionFunctionSpec>) null);
+node0.setType(39);
+LinkedFlowScope linkedFlowScope0 = LinkedFlowScope.createEntryLattice(scope0);
+List<FlowScope> list0 = typeInference0.branchedFlowThrough(node1, linkedFlowScope0);
+assertEquals(0, list0.size());
+
+
+[MASTER] 17:37:38.841 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class org.evosuite.runtime.mock.java.lang.MockIllegalArgumentException: Multiple entries with same key: stableIdGenerator=NOT_IMPLEMENTED and stableIdGenerator=STABLEIDGENERATOR
+[MASTER] 17:37:38.841 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ Node node0 = Node.newString("|", 129, 129);
+Node node1 = new Node(66, node0, node0, node0, node0);
+Scope scope0 = Scope.createLatticeBottom(node1);
+Compiler compiler0 = new Compiler();
+compiler0.parseTestCode("|");
+ControlFlowGraph<Node> controlFlowGraph0 = new ControlFlowGraph<Node>(node1, false, false);
+node1.setType(41);
+LinkedFlowScope linkedFlowScope0 = LinkedFlowScope.createEntryLattice(scope0);
+ReverseAbstractInterpreter reverseAbstractInterpreter0 = compiler0.getReverseAbstractInterpreter();
+ImmutableSortedMap<String, CodingConvention.AssertionFunctionSpec> immutableSortedMap0 = ImmutableSortedMap.of();
+TypeInference typeInference0 = new TypeInference(compiler0, controlFlowGraph0, reverseAbstractInterpreter0, scope0, immutableSortedMap0);
+FlowScope flowScope0 = typeInference0.flowThrough(node1, linkedFlowScope0);
+assertNotSame(flowScope0, linkedFlowScope0);
+
+
+[MASTER] 17:37:39.984 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class org.evosuite.runtime.mock.java.lang.MockIllegalArgumentException: Multiple entries with same key: stableIdGenerator=NOT_IMPLEMENTED and stableIdGenerator=STABLEIDGENERATOR
+[MASTER] 17:37:39.984 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ Node node0 = Node.newString(136, "Fe {wnBlX])%T`");
+Node node1 = new Node(4, node0, node0, node0, node0);
+Scope scope0 = Scope.createLatticeBottom(node1);
+Compiler compiler0 = new Compiler();
+compiler0.parseTestCode(">3vn`NYzXo[%PZ");
+ControlFlowGraph<Node> controlFlowGraph0 = new ControlFlowGraph<Node>(node1, true, false);
+JqueryCodingConvention jqueryCodingConvention0 = new JqueryCodingConvention();
+JSTypeRegistry jSTypeRegistry0 = compiler0.getTypeRegistry();
+ClosureReverseAbstractInterpreter closureReverseAbstractInterpreter0 = new ClosureReverseAbstractInterpreter(jqueryCodingConvention0, jSTypeRegistry0);
+TypeInference typeInference0 = new TypeInference(compiler0, controlFlowGraph0, closureReverseAbstractInterpreter0, scope0, (Map<String, CodingConvention.AssertionFunctionSpec>) null);
+node0.setType(42);
+LinkedFlowScope linkedFlowScope0 = LinkedFlowScope.createEntryLattice(scope0);
+List<FlowScope> list0 = typeInference0.branchedFlowThrough(node1, linkedFlowScope0);
+assertEquals(0, list0.size());
+
+
+[MASTER] 17:37:41.072 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class org.evosuite.runtime.mock.java.lang.MockIllegalArgumentException: Multiple entries with same key: stableIdGenerator=NOT_IMPLEMENTED and stableIdGenerator=STABLEIDGENERATOR
+[MASTER] 17:37:41.073 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ Node node0 = Node.newString(152, "UCt?P8KrL#=i2=|Ya");
+Node node1 = new Node(43, 8, 153);
+Scope scope0 = Scope.createGlobalScope(node1);
+Compiler compiler0 = new Compiler();
+Node node2 = compiler0.parseTestCode("UCt?P8KrL#=i2=|Ya");
+ControlFlowGraph<Node> controlFlowGraph0 = new ControlFlowGraph<Node>(node0, false, false);
+node1.addChildToBack(node2);
+JqueryCodingConvention jqueryCodingConvention0 = new JqueryCodingConvention();
+JSTypeRegistry jSTypeRegistry0 = compiler0.getTypeRegistry();
+ClosureReverseAbstractInterpreter closureReverseAbstractInterpreter0 = new ClosureReverseAbstractInterpreter(jqueryCodingConvention0, jSTypeRegistry0);
+TypeInference typeInference0 = new TypeInference(compiler0, controlFlowGraph0, closureReverseAbstractInterpreter0, scope0, (Map<String, CodingConvention.AssertionFunctionSpec>) null);
+LinkedFlowScope linkedFlowScope0 = LinkedFlowScope.createEntryLattice(scope0);
+typeInference0.branchedFlowThrough(node1, linkedFlowScope0);
+
+[MASTER] 17:37:42.174 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class org.evosuite.runtime.mock.java.lang.MockIllegalArgumentException: Multiple entries with same key: stableIdGenerator=NOT_IMPLEMENTED and stableIdGenerator=STABLEIDGENERATOR
+[MASTER] 17:37:42.175 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ Node node0 = Node.newString(150, "Fe {wOnBlX])%T`");
+Node node1 = new Node(4, node0, node0, node0, node0);
+CodingConvention.AssertionFunctionSpec codingConvention_AssertionFunctionSpec0 = new CodingConvention.AssertionFunctionSpec("com.google.javascript.jscomp.ConcreteType$ConcreteUnionType");
+Node node2 = codingConvention_AssertionFunctionSpec0.getAssertedParam(node1);
+Scope scope0 = Scope.createLatticeBottom(node2);
+Compiler compiler0 = new Compiler();
+compiler0.parseTestCode("Fe {wOnBlX])%T`");
+ControlFlowGraph<Node> controlFlowGraph0 = new ControlFlowGraph<Node>(node2, true, true);
+JqueryCodingConvention jqueryCodingConvention0 = new JqueryCodingConvention();
+JSTypeRegistry jSTypeRegistry0 = compiler0.getTypeRegistry();
+ClosureReverseAbstractInterpreter closureReverseAbstractInterpreter0 = new ClosureReverseAbstractInterpreter(jqueryCodingConvention0, jSTypeRegistry0);
+TypeInference typeInference0 = new TypeInference(compiler0, controlFlowGraph0, closureReverseAbstractInterpreter0, scope0, (Map<String, CodingConvention.AssertionFunctionSpec>) null);
+node0.setType(44);
+LinkedFlowScope linkedFlowScope0 = LinkedFlowScope.createEntryLattice(scope0);
+List<FlowScope> list0 = typeInference0.branchedFlowThrough(node2, linkedFlowScope0);
+assertNotNull(list0);
+
+
+[MASTER] 17:37:43.274 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class org.evosuite.runtime.mock.java.lang.MockIllegalArgumentException: Multiple entries with same key: stableIdGenerator=NOT_IMPLEMENTED and stableIdGenerator=STABLEIDGENERATOR
+[MASTER] 17:37:43.275 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ CodingConvention.AssertionFunctionSpec codingConvention_AssertionFunctionSpec0 = new CodingConvention.AssertionFunctionSpec("");
+Node node0 = Node.newString(101, "");
+Node node1 = new Node(101, node0, node0, node0, node0);
+Node node2 = codingConvention_AssertionFunctionSpec0.getAssertedParam(node1);
+Scope scope0 = Scope.createLatticeBottom(node2);
+Compiler compiler0 = new Compiler();
+compiler0.parseTestCode(">3vn`NYzXo[%PZ");
+ControlFlowGraph<Node> controlFlowGraph0 = new ControlFlowGraph<Node>(node1, false, false);
+JqueryCodingConvention jqueryCodingConvention0 = new JqueryCodingConvention();
+JSTypeRegistry jSTypeRegistry0 = compiler0.getTypeRegistry();
+ClosureReverseAbstractInterpreter closureReverseAbstractInterpreter0 = new ClosureReverseAbstractInterpreter(jqueryCodingConvention0, jSTypeRegistry0);
+TypeInference typeInference0 = new TypeInference(compiler0, controlFlowGraph0, closureReverseAbstractInterpreter0, scope0, (Map<String, CodingConvention.AssertionFunctionSpec>) null);
+LinkedFlowScope linkedFlowScope0 = LinkedFlowScope.createEntryLattice(scope0);
+Node node3 = Node.newString(47, "Object#Element", 144, 301);
+typeInference0.branchedFlowThrough(node3, linkedFlowScope0);
+
+[MASTER] 17:37:44.434 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class org.evosuite.runtime.mock.java.lang.MockIllegalArgumentException: Multiple entries with same key: stableIdGenerator=NOT_IMPLEMENTED and stableIdGenerator=STABLEIDGENERATOR
+[MASTER] 17:37:44.434 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ Node node0 = Node.newString(126, "");
+Node node1 = new Node(103, node0, node0);
+Scope scope0 = Scope.createLatticeBottom(node1);
+Compiler compiler0 = new Compiler();
+compiler0.parseTestCode("");
+ControlFlowGraph<Node> controlFlowGraph0 = new ControlFlowGraph<Node>(node0, false, false);
+JqueryCodingConvention jqueryCodingConvention0 = new JqueryCodingConvention();
+JSTypeRegistry jSTypeRegistry0 = compiler0.getTypeRegistry();
+ClosureReverseAbstractInterpreter closureReverseAbstractInterpreter0 = new ClosureReverseAbstractInterpreter(jqueryCodingConvention0, jSTypeRegistry0);
+TypeInference typeInference0 = new TypeInference(compiler0, controlFlowGraph0, closureReverseAbstractInterpreter0, scope0, (Map<String, CodingConvention.AssertionFunctionSpec>) null);
+node1.setType(48);
+LinkedFlowScope linkedFlowScope0 = LinkedFlowScope.createEntryLattice(scope0);
+typeInference0.branchedFlowThrough(node1, linkedFlowScope0);
+
+[MASTER] 17:37:45.627 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class org.evosuite.runtime.mock.java.lang.MockIllegalArgumentException: Multiple entries with same key: stableIdGenerator=NOT_IMPLEMENTED and stableIdGenerator=STABLEIDGENERATOR
+[MASTER] 17:37:45.628 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ Node node0 = Node.newString(126, "msg.catch.unreachable");
+Node node1 = new Node(52, node0, node0);
+Scope scope0 = Scope.createLatticeBottom(node1);
+Compiler compiler0 = new Compiler();
+compiler0.parseTestCode("msg.catch.unreachable");
+ControlFlowGraph<Node> controlFlowGraph0 = new ControlFlowGraph<Node>(node0, false, false);
+JqueryCodingConvention jqueryCodingConvention0 = new JqueryCodingConvention();
+JSTypeRegistry jSTypeRegistry0 = compiler0.getTypeRegistry();
+ClosureReverseAbstractInterpreter closureReverseAbstractInterpreter0 = new ClosureReverseAbstractInterpreter(jqueryCodingConvention0, jSTypeRegistry0);
+TypeInference typeInference0 = new TypeInference(compiler0, controlFlowGraph0, closureReverseAbstractInterpreter0, scope0, (Map<String, CodingConvention.AssertionFunctionSpec>) null);
+Node node2 = Node.newString(49, "Object#Key", 47, 12);
+LinkedFlowScope linkedFlowScope0 = LinkedFlowScope.createEntryLattice(scope0);
+typeInference0.branchedFlowThrough(node2, linkedFlowScope0);
+
+[MASTER] 17:37:46.734 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class org.evosuite.runtime.mock.java.lang.MockIllegalArgumentException: Multiple entries with same key: stableIdGenerator=NOT_IMPLEMENTED and stableIdGenerator=STABLEIDGENERATOR
+[MASTER] 17:37:46.735 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ Node node0 = Node.newString(82, "msg.catch.unreachable");
+Node node1 = new Node(52, node0, node0);
+Scope scope0 = Scope.createLatticeBottom(node1);
+Compiler compiler0 = new Compiler();
+compiler0.parseTestCode("msg.catch.unreachable");
+ControlFlowGraph<Node> controlFlowGraph0 = new ControlFlowGraph<Node>(node0, true, true);
+JqueryCodingConvention jqueryCodingConvention0 = new JqueryCodingConvention();
+JSTypeRegistry jSTypeRegistry0 = compiler0.getTypeRegistry();
+ClosureReverseAbstractInterpreter closureReverseAbstractInterpreter0 = new ClosureReverseAbstractInterpreter(jqueryCodingConvention0, jSTypeRegistry0);
+TypeInference typeInference0 = new TypeInference(compiler0, controlFlowGraph0, closureReverseAbstractInterpreter0, scope0, (Map<String, CodingConvention.AssertionFunctionSpec>) null);
+LinkedFlowScope linkedFlowScope0 = LinkedFlowScope.createEntryLattice(scope0);
+typeInference0.branchedFlowThrough(node1, linkedFlowScope0);
+
+[MASTER] 17:37:47.837 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class org.evosuite.runtime.mock.java.lang.MockIllegalArgumentException: Multiple entries with same key: stableIdGenerator=NOT_IMPLEMENTED and stableIdGenerator=STABLEIDGENERATOR
+[MASTER] 17:37:47.837 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ Node node0 = Node.newString(115, "o>b");
+Node node1 = new Node(53, node0, node0, node0, node0, 16, 52);
+PeepholeRemoveDeadCode peepholeRemoveDeadCode0 = new PeepholeRemoveDeadCode();
+Node node2 = peepholeRemoveDeadCode0.optimizeSubtree(node1);
+Scope scope0 = Scope.createLatticeBottom(node1);
+Compiler compiler0 = new Compiler();
+compiler0.parseTestCode("Vvt4");
+ControlFlowGraph<Node> controlFlowGraph0 = new ControlFlowGraph<Node>(node0, true, true);
+JqueryCodingConvention jqueryCodingConvention0 = new JqueryCodingConvention();
+JSTypeRegistry jSTypeRegistry0 = compiler0.getTypeRegistry();
+ClosureReverseAbstractInterpreter closureReverseAbstractInterpreter0 = new ClosureReverseAbstractInterpreter(jqueryCodingConvention0, jSTypeRegistry0);
+LinkedFlowScope linkedFlowScope0 = LinkedFlowScope.createEntryLattice(scope0);
+TypeInference typeInference0 = new TypeInference(compiler0, controlFlowGraph0, closureReverseAbstractInterpreter0, scope0, (Map<String, CodingConvention.AssertionFunctionSpec>) null);
+typeInference0.branchedFlowThrough(node2, linkedFlowScope0);
+
+[MASTER] 17:37:48.932 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class org.evosuite.runtime.mock.java.lang.MockIllegalArgumentException: Multiple entries with same key: stableIdGenerator=NOT_IMPLEMENTED and stableIdGenerator=STABLEIDGENERATOR
+[MASTER] 17:37:48.932 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ Node node0 = Node.newString(115, "o>b");
+Node node1 = new Node(8, node0, 43, 56);
+JSTypeNative jSTypeNative0 = JSTypeNative.NUMBER_VALUE_OR_OBJECT_TYPE;
+CodingConvention.AssertionFunctionSpec codingConvention_AssertionFunctionSpec0 = new CodingConvention.AssertionFunctionSpec("", jSTypeNative0);
+Scope scope0 = Scope.createGlobalScope(node1);
+Compiler compiler0 = new Compiler();
+Node node2 = compiler0.parseTestCode("o>b");
+ControlFlowGraph<Node> controlFlowGraph0 = new ControlFlowGraph<Node>(node1, true, true);
+JqueryCodingConvention jqueryCodingConvention0 = new JqueryCodingConvention();
+JSTypeRegistry jSTypeRegistry0 = compiler0.getTypeRegistry();
+ClosureReverseAbstractInterpreter closureReverseAbstractInterpreter0 = new ClosureReverseAbstractInterpreter(jqueryCodingConvention0, jSTypeRegistry0);
+ImmutableSortedMap<String, CodingConvention.AssertionFunctionSpec> immutableSortedMap0 = ImmutableSortedMap.of("o>b", codingConvention_AssertionFunctionSpec0, "Object#Key", codingConvention_AssertionFunctionSpec0);
+Node node3 = new Node(54, node1, node2, 1023, 47);
+TypeInference typeInference0 = new TypeInference(compiler0, controlFlowGraph0, closureReverseAbstractInterpreter0, scope0, immutableSortedMap0);
+FlowScope flowScope0 = typeInference0.createInitialEstimateLattice();
+TypeInference typeInference1 = new TypeInference(compiler0, controlFlowGraph0, closureReverseAbstractInterpreter0, scope0, immutableSortedMap0);
+typeInference1.branchedFlowThrough(node3, flowScope0);
+
+[MASTER] 17:37:50.248 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class org.evosuite.runtime.mock.java.lang.MockIllegalArgumentException: Multiple entries with same key: stableIdGenerator=NOT_IMPLEMENTED and stableIdGenerator=STABLEIDGENERATOR
+[MASTER] 17:37:50.249 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ Node node0 = Node.newString(136, "");
+Node node1 = new Node(94, node0, node0, node0, node0);
+Scope scope0 = Scope.createLatticeBottom(node1);
+Compiler compiler0 = new Compiler();
+compiler0.parseTestCode(">3vn`NYzXo[%PZ");
+ControlFlowGraph<Node> controlFlowGraph0 = new ControlFlowGraph<Node>(node1, false, false);
+JqueryCodingConvention jqueryCodingConvention0 = new JqueryCodingConvention();
+ClosureReverseAbstractInterpreter closureReverseAbstractInterpreter0 = new ClosureReverseAbstractInterpreter(jqueryCodingConvention0, (JSTypeRegistry) null);
+TypeInference typeInference0 = new TypeInference(compiler0, controlFlowGraph0, closureReverseAbstractInterpreter0, scope0, (Map<String, CodingConvention.AssertionFunctionSpec>) null);
+node1.setType(55);
+LinkedFlowScope linkedFlowScope0 = LinkedFlowScope.createEntryLattice(scope0);
+List<FlowScope> list0 = typeInference0.branchedFlowThrough(node1, linkedFlowScope0);
+assertEquals(0, list0.size());
+
+
+[MASTER] 17:37:51.331 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class org.evosuite.runtime.mock.java.lang.MockIllegalArgumentException: Multiple entries with same key: stableIdGenerator=NOT_IMPLEMENTED and stableIdGenerator=STABLEIDGENERATOR
+[MASTER] 17:37:51.331 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ Node node0 = Node.newString(130, ">{<");
+Node node1 = new Node(56, node0, node0, node0, 32, 36);
+Scope scope0 = Scope.createLatticeBottom(node1);
+Compiler compiler0 = new Compiler();
+compiler0.parseTestCode(">{<");
+ControlFlowGraph<Node> controlFlowGraph0 = new ControlFlowGraph<Node>(node0, true, true);
+node0.addChildToBack(node1);
+JqueryCodingConvention jqueryCodingConvention0 = new JqueryCodingConvention();
+JSTypeRegistry jSTypeRegistry0 = compiler0.getTypeRegistry();
+ClosureReverseAbstractInterpreter closureReverseAbstractInterpreter0 = new ClosureReverseAbstractInterpreter(jqueryCodingConvention0, jSTypeRegistry0);
+TypeInference typeInference0 = new TypeInference(compiler0, controlFlowGraph0, closureReverseAbstractInterpreter0, scope0, (Map<String, CodingConvention.AssertionFunctionSpec>) null);
+LinkedFlowScope linkedFlowScope0 = LinkedFlowScope.createEntryLattice(scope0);
+List<FlowScope> list0 = typeInference0.branchedFlowThrough(node0, linkedFlowScope0);
+assertEquals(0, list0.size());
+
+
+[MASTER] 17:37:52.550 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class org.evosuite.runtime.mock.java.lang.MockIllegalArgumentException: Multiple entries with same key: stableIdGenerator=NOT_IMPLEMENTED and stableIdGenerator=STABLEIDGENERATOR
+[MASTER] 17:37:52.551 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ Node node0 = Node.newString(130, "o?><b");
+Node node1 = new Node(605, node0, node0, node0, node0);
+Scope scope0 = Scope.createLatticeBottom(node1);
+Compiler compiler0 = new Compiler();
+compiler0.parseTestCode(">3v`NYzXo[%PZ");
+ControlFlowGraph<Node> controlFlowGraph0 = new ControlFlowGraph<Node>(node0, true, true);
+JqueryCodingConvention jqueryCodingConvention0 = new JqueryCodingConvention();
+JSTypeRegistry jSTypeRegistry0 = compiler0.getTypeRegistry();
+ClosureReverseAbstractInterpreter closureReverseAbstractInterpreter0 = new ClosureReverseAbstractInterpreter(jqueryCodingConvention0, jSTypeRegistry0);
+TypeInference typeInference0 = new TypeInference(compiler0, controlFlowGraph0, closureReverseAbstractInterpreter0, scope0, (Map<String, CodingConvention.AssertionFunctionSpec>) null);
+LinkedFlowScope linkedFlowScope0 = LinkedFlowScope.createEntryLattice(scope0);
+Node node2 = Node.newString(57, " ILj&qr$T0");
+typeInference0.branchedFlowThrough(node2, linkedFlowScope0);
+
+[MASTER] 17:37:53.753 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class org.evosuite.runtime.mock.java.lang.MockIllegalArgumentException: Multiple entries with same key: stableIdGenerator=NOT_IMPLEMENTED and stableIdGenerator=STABLEIDGENERATOR
+[MASTER] 17:37:53.754 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ Node node0 = Node.newString(159, "msg.catch.unreachable");
+Node node1 = new Node(47, node0, 1, 2);
+Scope scope0 = Scope.createGlobalScope(node1);
+Compiler compiler0 = new Compiler();
+Node node2 = compiler0.parseTestCode("msg.catch.unreachable");
+ControlFlowGraph<Node> controlFlowGraph0 = new ControlFlowGraph<Node>(node2, false, false);
+JqueryCodingConvention jqueryCodingConvention0 = new JqueryCodingConvention();
+JSTypeRegistry jSTypeRegistry0 = compiler0.getTypeRegistry();
+ClosureReverseAbstractInterpreter closureReverseAbstractInterpreter0 = new ClosureReverseAbstractInterpreter(jqueryCodingConvention0, jSTypeRegistry0);
+TypeInference typeInference0 = new TypeInference(compiler0, controlFlowGraph0, closureReverseAbstractInterpreter0, scope0, (Map<String, CodingConvention.AssertionFunctionSpec>) null);
+LinkedFlowScope linkedFlowScope0 = LinkedFlowScope.createEntryLattice(scope0);
+Node node3 = new Node(59, node2, node2, 42, 55);
+typeInference0.branchedFlowThrough(node3, linkedFlowScope0);
+
+[MASTER] 17:37:54.877 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class org.evosuite.runtime.mock.java.lang.MockIllegalArgumentException: Multiple entries with same key: stableIdGenerator=NOT_IMPLEMENTED and stableIdGenerator=STABLEIDGENERATOR
+[MASTER] 17:37:54.878 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ Node node0 = Node.newString("|", 127, 127);
+Node node1 = new Node(61, node0, node0, node0, node0);
+CodingConvention.AssertionFunctionSpec codingConvention_AssertionFunctionSpec0 = new CodingConvention.AssertionFunctionSpec("|");
+Node node2 = codingConvention_AssertionFunctionSpec0.getAssertedParam(node1);
+Scope scope0 = Scope.createLatticeBottom(node2);
+Compiler compiler0 = new Compiler();
+compiler0.parseTestCode("|");
+ControlFlowGraph<Node> controlFlowGraph0 = new ControlFlowGraph<Node>(node1, false, false);
+LinkedFlowScope linkedFlowScope0 = LinkedFlowScope.createEntryLattice(scope0);
+TypeInference typeInference0 = new TypeInference(compiler0, controlFlowGraph0, (ReverseAbstractInterpreter) null, scope0, (Map<String, CodingConvention.AssertionFunctionSpec>) null);
+List<FlowScope> list0 = typeInference0.branchedFlowThrough(node1, linkedFlowScope0);
+assertTrue(list0.isEmpty());
+
+
+[MASTER] 17:37:56.050 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class org.evosuite.runtime.mock.java.lang.MockIllegalArgumentException: Multiple entries with same key: stableIdGenerator=NOT_IMPLEMENTED and stableIdGenerator=STABLEIDGENERATOR
+[MASTER] 17:37:56.050 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ Node node0 = Node.newString(136, "^");
+Node node1 = new Node(66, node0, node0, node0, node0);
+Scope scope0 = Scope.createLatticeBottom(node1);
+Compiler compiler0 = new Compiler();
+compiler0.parseTestCode(">f3vn`NYzXo[%Z");
+ControlFlowGraph<Node> controlFlowGraph0 = new ControlFlowGraph<Node>(node0, false, false);
+JqueryCodingConvention jqueryCodingConvention0 = new JqueryCodingConvention();
+ClosureReverseAbstractInterpreter closureReverseAbstractInterpreter0 = new ClosureReverseAbstractInterpreter(jqueryCodingConvention0, (JSTypeRegistry) null);
+TypeInference typeInference0 = new TypeInference(compiler0, controlFlowGraph0, closureReverseAbstractInterpreter0, scope0, (Map<String, CodingConvention.AssertionFunctionSpec>) null);
+LinkedFlowScope linkedFlowScope0 = LinkedFlowScope.createEntryLattice(scope0);
+FlowScope flowScope0 = typeInference0.flowThrough(node1, linkedFlowScope0);
+assertNotSame(flowScope0, linkedFlowScope0);
+
+
+[MASTER] 17:37:57.228 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class org.evosuite.runtime.mock.java.lang.MockIllegalArgumentException: Multiple entries with same key: stableIdGenerator=NOT_IMPLEMENTED and stableIdGenerator=STABLEIDGENERATOR
+[MASTER] 17:37:57.228 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ Node node0 = Node.newString(136, "Fe {wnlX])%T`");
+Node node1 = new Node(18, node0, node0, node0, node0);
+Scope scope0 = Scope.createLatticeBottom(node1);
+Compiler compiler0 = new Compiler();
+compiler0.parseTestCode("Fe {wnlX])%T`");
+ControlFlowGraph<Node> controlFlowGraph0 = new ControlFlowGraph<Node>(node0, false, false);
+JqueryCodingConvention jqueryCodingConvention0 = new JqueryCodingConvention();
+JSTypeRegistry jSTypeRegistry0 = compiler0.getTypeRegistry();
+ClosureReverseAbstractInterpreter closureReverseAbstractInterpreter0 = new ClosureReverseAbstractInterpreter(jqueryCodingConvention0, jSTypeRegistry0);
+TypeInference typeInference0 = new TypeInference(compiler0, controlFlowGraph0, closureReverseAbstractInterpreter0, scope0, (Map<String, CodingConvention.AssertionFunctionSpec>) null);
+node0.setType(67);
+LinkedFlowScope linkedFlowScope0 = LinkedFlowScope.createEntryLattice(scope0);
+FlowScope flowScope0 = typeInference0.flowThrough(node1, linkedFlowScope0);
+assertNotSame(flowScope0, linkedFlowScope0);
+
+
+[MASTER] 17:37:58.551 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class org.evosuite.runtime.mock.java.lang.MockIllegalArgumentException: Multiple entries with same key: stableIdGenerator=NOT_IMPLEMENTED and stableIdGenerator=STABLEIDGENERATOR
+[MASTER] 17:37:58.552 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ Node node0 = Node.newString(159, "com.google.javascript.jscomp.TypeInference");
+Node node1 = new Node(68, node0, node0, node0, node0);
+CodingConvention.AssertionFunctionSpec codingConvention_AssertionFunctionSpec0 = new CodingConvention.AssertionFunctionSpec("It is illegal to call PureFunctionIdentifier.process twice the same instance.  Please use a new PureFunctionIdentifier instance each time.");
+Node node2 = codingConvention_AssertionFunctionSpec0.getAssertedParam(node1);
+Scope scope0 = Scope.createLatticeBottom(node2);
+Compiler compiler0 = new Compiler();
+compiler0.parseTestCode(">3vn`NYzXo[%Z");
+ControlFlowGraph<Node> controlFlowGraph0 = new ControlFlowGraph<Node>(node2, false, false);
+JqueryCodingConvention jqueryCodingConvention0 = new JqueryCodingConvention();
+ClosureReverseAbstractInterpreter closureReverseAbstractInterpreter0 = new ClosureReverseAbstractInterpreter(jqueryCodingConvention0, (JSTypeRegistry) null);
+TypeInference typeInference0 = new TypeInference(compiler0, controlFlowGraph0, closureReverseAbstractInterpreter0, scope0, (Map<String, CodingConvention.AssertionFunctionSpec>) null);
+LinkedFlowScope linkedFlowScope0 = LinkedFlowScope.createEntryLattice(scope0);
+List<FlowScope> list0 = typeInference0.branchedFlowThrough(node2, linkedFlowScope0);
+assertTrue(list0.isEmpty());
+
+
+[MASTER] 17:37:59.772 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class org.evosuite.runtime.mock.java.lang.MockIllegalArgumentException: Multiple entries with same key: stableIdGenerator=NOT_IMPLEMENTED and stableIdGenerator=STABLEIDGENERATOR
+[MASTER] 17:37:59.772 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ Node node0 = Node.newString("o>b", 115, 115);
+Node node1 = new Node(53, node0, node0, node0, node0, 16, 52);
+Scope scope0 = Scope.createGlobalScope(node1);
+Compiler compiler0 = new Compiler();
+Node node2 = compiler0.parseTestCode("Vvt4");
+Node node3 = new Node(69, node2, node1, node2, node1);
+ControlFlowGraph<Node> controlFlowGraph0 = new ControlFlowGraph<Node>(node3, true, true);
+JqueryCodingConvention jqueryCodingConvention0 = new JqueryCodingConvention();
+JSTypeRegistry jSTypeRegistry0 = compiler0.getTypeRegistry();
+ClosureReverseAbstractInterpreter closureReverseAbstractInterpreter0 = new ClosureReverseAbstractInterpreter(jqueryCodingConvention0, jSTypeRegistry0);
+LinkedFlowScope linkedFlowScope0 = LinkedFlowScope.createEntryLattice(scope0);
+TypeInference typeInference0 = new TypeInference(compiler0, controlFlowGraph0, closureReverseAbstractInterpreter0, scope0, (Map<String, CodingConvention.AssertionFunctionSpec>) null);
+List<FlowScope> list0 = typeInference0.branchedFlowThrough(node3, linkedFlowScope0);
+assertNotNull(list0);
+
+
+* Writing tests to file
+* Writing JUnit test case 'TypeInference_ESTest' to results/Closure-176/com.google.javascript.jscomp.TypeInference/BBC-F0-50/tests/1
+* Done!
+
+* Computation finished

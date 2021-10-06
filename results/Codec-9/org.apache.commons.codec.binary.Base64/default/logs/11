@@ -1,0 +1,2108 @@
+* EvoSuite 1.1.1-SNAPSHOT
+* Configuration: default
+* Going to generate test cases for class: org.apache.commons.codec.binary.Base64
+* Starting Client-0
+* Connecting to master process on port 18376
+* Analyzing classpath: 
+  - subjects/buggy-versions/Codec-9/target/classes
+* Finished analyzing classpath
+* Generating tests for class org.apache.commons.codec.binary.Base64
+* Test criteria:
+  - Line Coverage
+  - Branch Coverage
+  - Exception
+  - Mutation testing (weak)
+  - Method-Output Coverage
+  - Top-Level Method Coverage
+  - No-Exception Top-Level Method Coverage
+  - Context Branch Coverage
+* Total number of test goals for DYNAMOSA: 1539
+* Using seed 2575247488
+* Starting evolution
+* Initial Number of Goals in DynaMOSA = 419 / 1539
+Number of times BBC is called in total: 0
+* Search finished after 601s and 462 generations, 224340 statements, best individual has fitness: 70.0
+* Minimizing test suite
+[MASTER] 21:15:32.194 [logback-1] WARN  TestSuiteMinimizer - Minimization timeout. Roll back to original test suite
+* Going to analyze the coverage criteria
+* Coverage analysis for criterion LINE
+* Coverage of criterion LINE: 100%
+* Total number of goals: 216
+* Number of covered goals: 216
+* Coverage analysis for criterion BRANCH
+* Coverage of criterion BRANCH: 97%
+* Total number of goals: 193
+* Number of covered goals: 187
+* Coverage analysis for criterion EXCEPTION
+* Coverage of criterion EXCEPTION: 100%
+* Total number of goals: 28
+* Number of covered goals: 28
+* Coverage analysis for criterion WEAKMUTATION
+* Coverage of criterion WEAKMUTATION: 97%
+* Total number of goals: 787
+* Number of covered goals: 760
+* Coverage analysis for criterion OUTPUT
+* Coverage of criterion OUTPUT: 91%
+* Total number of goals: 80
+* Number of covered goals: 73
+* Coverage analysis for criterion METHOD
+* Coverage of criterion METHOD: 100%
+* Total number of goals: 35
+* Number of covered goals: 35
+* Coverage analysis for criterion METHODNOEXCEPTION
+* Coverage of criterion METHODNOEXCEPTION: 100%
+* Total number of goals: 35
+* Number of covered goals: 35
+* Coverage analysis for criterion CBRANCH
+* Coverage of criterion CBRANCH: 96%
+* Total number of goals: 193
+* Number of covered goals: 185
+* Generated 178 tests with total length 1655
+* Resulting test suite's coverage: 92% (average coverage for all fitness functions)
+* Generating assertions
+[MASTER] 21:16:14.248 [logback-1] WARN  SimpleMutationAssertionGenerator - Assertion minimization is taking too long (0.66885% of time used, but only 67/178 tests minimized), falling back to using all assertions
+* Resulting test suite's mutation score: 49%
+* Compiling and checking tests
+[MASTER] 21:17:13.516 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class java.lang.AssertionError: null
+[MASTER] 21:17:13.517 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ Base64 base64_0 = new Base64((-596));
+byte[] byteArray0 = new byte[5];
+base64_0.decode((Object) "org.apache.commons.codec.DecoderException");
+byte[] byteArray1 = Base64.encodeBase64(byteArray0);
+byteArray0[1] = (byte)0;
+byte[] byteArray2 = Base64.encodeBase64(byteArray1, true, false, 269);
+byte[] byteArray3 = base64_0.decode(byteArray2);
+byte[] byteArray4 = Base64.encodeBase64(byteArray3, true, false);
+boolean boolean0 = Base64.isArrayByteBase64(byteArray4);
+assertArrayEquals(new byte[] {(byte)65, (byte)65, (byte)65, (byte)65, (byte)65, (byte)65, (byte)65, (byte)61}, byteArray3);
+assertEquals(14, byteArray4.length);
+assertFalse(boolean0);
+
+
+[MASTER] 21:17:16.067 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class org.junit.internal.ArrayComparisonFailure: arrays first differed at element [0]; expected:<65> but was:<68>
+[MASTER] 21:17:16.067 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ byte[] byteArray0 = Base64.CHUNK_SEPARATOR;
+byte[] byteArray1 = Base64.encodeBase64URLSafe(byteArray0);
+assertArrayEquals(new byte[] {(byte)65, (byte)65, (byte)65}, byteArray1);
+
+
+[MASTER] 21:17:16.243 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class org.junit.ComparisonFailure: expected:<[AAA]> but was:<[DQo]>
+[MASTER] 21:17:16.243 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ byte[] byteArray0 = Base64.CHUNK_SEPARATOR;
+String string0 = Base64.encodeBase64URLSafeString(byteArray0);
+assertEquals("AAA", string0);
+
+
+[MASTER] 21:17:17.774 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class org.junit.internal.ArrayComparisonFailure: arrays first differed at element [0]; expected:<65> but was:<68>
+[MASTER] 21:17:17.774 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ byte[] byteArray0 = Base64.CHUNK_SEPARATOR;
+Base64 base64_0 = new Base64();
+byte[] byteArray1 = base64_0.encode(byteArray0);
+assertEquals(4, byteArray1.length);
+assertArrayEquals(new byte[] {(byte)65, (byte)65, (byte)65, (byte)61}, byteArray1);
+
+
+[MASTER] 21:17:18.451 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class org.junit.internal.ArrayComparisonFailure: arrays first differed at element [4]; expected:<0> but was:<13>
+[MASTER] 21:17:18.451 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ Base64 base64_0 = new Base64(1036);
+byte[] byteArray0 = new byte[0];
+Base64.encodeBase64URLSafe(byteArray0);
+Base64.isBase64("");
+base64_0.decode("\"agfS[~)`Ds");
+byte[] byteArray1 = new byte[1];
+byteArray1[0] = (byte) (-106);
+byte[] byteArray2 = new byte[2];
+byteArray2[0] = (byte) (-106);
+byteArray2[1] = (byte) (-106);
+base64_0.encode(byteArray2);
+byte[] byteArray3 = Base64.encodeBase64(byteArray1, true, false);
+Base64.encodeBase64(byteArray3, true);
+assertArrayEquals(new byte[] {(byte)108, (byte)103, (byte)61, (byte)61, (byte)0, (byte)0}, byteArray3);
+
+byte[] byteArray4 = base64_0.decode("\"agfS[~)`Ds");
+boolean boolean0 = base64_0.hasData();
+assertFalse(boolean0);
+
+String string0 = base64_0.encodeToString(byteArray1);
+assertEquals("lg==\u0000\u0000", string0);
+
+byte[] byteArray5 = Base64.decodeBase64("\"agfS[~)`Ds");
+base64_0.decode("sBf'");
+Base64.decodeBase64("sBf'");
+BigInteger bigInteger0 = BigInteger.TEN;
+BigInteger bigInteger1 = new BigInteger(byteArray4);
+bigInteger0.subtract(bigInteger1);
+byte[] byteArray6 = Base64.toIntegerBytes(bigInteger0);
+assertEquals(1, byteArray6.length);
+
+base64_0.decode(byteArray0, (-143), (-143));
+Base64.decodeInteger(byteArray5);
+assertEquals(4, byteArray5.length);
+assertArrayEquals(new byte[] {(byte)106, (byte)7, (byte) (-46), (byte)14}, byteArray5);
+
+
+[MASTER] 21:17:19.042 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class java.lang.AssertionError: null
+[MASTER] 21:17:19.042 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ byte[] byteArray0 = Base64.CHUNK_SEPARATOR;
+boolean boolean0 = Base64.isArrayByteBase64(byteArray0);
+assertFalse(boolean0);
+
+
+[MASTER] 21:17:19.499 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class org.junit.ComparisonFailure: expected:<[AAA]=> but was:<[DQo]=>
+[MASTER] 21:17:19.499 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ byte[] byteArray0 = Base64.CHUNK_SEPARATOR;
+Base64 base64_0 = new Base64();
+String string0 = base64_0.encodeToString(byteArray0);
+assertEquals("AAA=", string0);
+
+byte[] byteArray1 = Base64.discardWhitespace(byteArray0);
+assertNotSame(byteArray1, byteArray0);
+assertEquals(2, byteArray1.length);
+
+
+[MASTER] 21:17:21.141 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class org.junit.internal.ArrayComparisonFailure: arrays first differed at element [4]; expected:<0> but was:<13>
+[MASTER] 21:17:21.143 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ byte[] byteArray0 = new byte[3];
+byte byte0 = (byte)38;
+byteArray0[0] = (byte)38;
+byteArray0[1] = (byte) (-62);
+byteArray0[2] = (byte)123;
+byte[] byteArray1 = Base64.encodeBase64(byteArray0, true, true);
+assertFalse(byteArray1.equals((Object)byteArray0));
+assertNotSame(byteArray0, byteArray1);
+assertNotSame(byteArray1, byteArray0);
+assertEquals(3, byteArray0.length);
+assertEquals(6, byteArray1.length);
+assertArrayEquals(new byte[] {(byte)38, (byte) (-62), (byte)123}, byteArray0);
+assertArrayEquals(new byte[] {(byte)74, (byte)115, (byte)74, (byte)55, (byte)0, (byte)0}, byteArray1);
+assertNotNull(byteArray1);
+
+byte[] byteArray2 = Base64.discardWhitespace(byteArray0);
+assertFalse(byteArray0.equals((Object)byteArray1));
+assertFalse(byteArray2.equals((Object)byteArray0));
+assertFalse(byteArray2.equals((Object)byteArray1));
+assertNotSame(byteArray0, byteArray2);
+assertNotSame(byteArray0, byteArray1);
+assertNotSame(byteArray2, byteArray0);
+assertNotSame(byteArray2, byteArray1);
+assertEquals(3, byteArray0.length);
+assertEquals(3, byteArray2.length);
+assertArrayEquals(new byte[] {(byte)38, (byte) (-62), (byte)123}, byteArray0);
+assertArrayEquals(new byte[] {(byte)38, (byte) (-62), (byte)123}, byteArray2);
+assertNotNull(byteArray2);
+
+byte[] byteArray3 = Base64.encodeBase64Chunked(byteArray2);
+assertFalse(byteArray0.equals((Object)byteArray2));
+assertFalse(byteArray0.equals((Object)byteArray1));
+assertFalse(byteArray2.equals((Object)byteArray0));
+assertFalse(byteArray2.equals((Object)byteArray1));
+assertFalse(byteArray3.equals((Object)byteArray2));
+assertFalse(byteArray3.equals((Object)byteArray0));
+assertFalse(byteArray3.equals((Object)byteArray1));
+assertNotSame(byteArray0, byteArray2);
+assertNotSame(byteArray0, byteArray1);
+assertNotSame(byteArray0, byteArray3);
+assertNotSame(byteArray2, byteArray3);
+assertNotSame(byteArray2, byteArray0);
+assertNotSame(byteArray2, byteArray1);
+assertNotSame(byteArray3, byteArray2);
+assertNotSame(byteArray3, byteArray0);
+assertNotSame(byteArray3, byteArray1);
+assertEquals(3, byteArray0.length);
+assertEquals(3, byteArray2.length);
+assertEquals(6, byteArray3.length);
+assertArrayEquals(new byte[] {(byte)38, (byte) (-62), (byte)123}, byteArray0);
+assertArrayEquals(new byte[] {(byte)38, (byte) (-62), (byte)123}, byteArray2);
+assertArrayEquals(new byte[] {(byte)74, (byte)115, (byte)74, (byte)55, (byte)0, (byte)0}, byteArray3);
+assertNotNull(byteArray3);
+
+Base64 base64_0 = new Base64(3413, byteArray2);
+assertFalse(byteArray0.equals((Object)byteArray2));
+assertFalse(byteArray0.equals((Object)byteArray1));
+assertFalse(byteArray0.equals((Object)byteArray3));
+assertFalse(byteArray2.equals((Object)byteArray3));
+assertFalse(byteArray2.equals((Object)byteArray0));
+assertFalse(byteArray2.equals((Object)byteArray1));
+assertEquals(3, byteArray0.length);
+assertEquals(3, byteArray2.length);
+assertEquals(64, Base64.PEM_CHUNK_SIZE);
+assertEquals(76, Base64.MIME_CHUNK_SIZE);
+assertArrayEquals(new byte[] {(byte)38, (byte) (-62), (byte)123}, byteArray0);
+assertArrayEquals(new byte[] {(byte)38, (byte) (-62), (byte)123}, byteArray2);
+assertFalse(base64_0.isUrlSafe());
+assertNotNull(base64_0);
+
+int int0 = 1;
+byte[] byteArray4 = new byte[9];
+assertFalse(byteArray4.equals((Object)byteArray1));
+assertFalse(byteArray4.equals((Object)byteArray0));
+assertFalse(byteArray4.equals((Object)byteArray3));
+assertFalse(byteArray4.equals((Object)byteArray2));
+
+byteArray4[0] = (byte)123;
+byteArray4[1] = (byte)123;
+byteArray4[2] = (byte)53;
+byteArray4[3] = (byte) (-62);
+byteArray4[4] = (byte) (-62);
+byteArray4[5] = (byte)123;
+byteArray4[6] = (byte)0;
+byteArray4[7] = (byte)38;
+byteArray4[8] = (byte)38;
+byte[] byteArray5 = base64_0.decode(byteArray4);
+assertFalse(byteArray0.equals((Object)byteArray4));
+assertFalse(byteArray0.equals((Object)byteArray2));
+assertFalse(byteArray0.equals((Object)byteArray1));
+assertFalse(byteArray0.equals((Object)byteArray3));
+assertFalse(byteArray5.equals((Object)byteArray0));
+assertFalse(byteArray5.equals((Object)byteArray1));
+assertFalse(byteArray5.equals((Object)byteArray4));
+assertFalse(byteArray5.equals((Object)byteArray2));
+assertFalse(byteArray5.equals((Object)byteArray3));
+assertFalse(byteArray2.equals((Object)byteArray3));
+assertFalse(byteArray2.equals((Object)byteArray4));
+assertFalse(byteArray2.equals((Object)byteArray0));
+assertFalse(byteArray2.equals((Object)byteArray1));
+assertFalse(byteArray4.equals((Object)byteArray1));
+assertFalse(byteArray4.equals((Object)byteArray0));
+assertFalse(byteArray4.equals((Object)byteArray3));
+assertFalse(byteArray4.equals((Object)byteArray2));
+assertNotSame(byteArray0, byteArray5);
+assertNotSame(byteArray0, byteArray4);
+assertNotSame(byteArray0, byteArray2);
+assertNotSame(byteArray0, byteArray1);
+assertNotSame(byteArray0, byteArray3);
+assertNotSame(byteArray5, byteArray0);
+assertNotSame(byteArray5, byteArray1);
+assertNotSame(byteArray5, byteArray4);
+assertNotSame(byteArray5, byteArray2);
+assertNotSame(byteArray5, byteArray3);
+assertNotSame(byteArray2, byteArray3);
+assertNotSame(byteArray2, byteArray5);
+assertNotSame(byteArray2, byteArray4);
+assertNotSame(byteArray2, byteArray0);
+assertNotSame(byteArray2, byteArray1);
+assertNotSame(byteArray4, byteArray1);
+assertNotSame(byteArray4, byteArray0);
+assertNotSame(byteArray4, byteArray5);
+assertNotSame(byteArray4, byteArray3);
+assertNotSame(byteArray4, byteArray2);
+assertEquals(3, byteArray0.length);
+assertEquals(0, byteArray5.length);
+assertEquals(3, byteArray2.length);
+assertEquals(9, byteArray4.length);
+assertEquals(64, Base64.PEM_CHUNK_SIZE);
+assertEquals(76, Base64.MIME_CHUNK_SIZE);
+assertArrayEquals(new byte[] {(byte)38, (byte) (-62), (byte)123}, byteArray0);
+assertArrayEquals(new byte[] {}, byteArray5);
+assertArrayEquals(new byte[] {(byte)38, (byte) (-62), (byte)123}, byteArray2);
+assertArrayEquals(new byte[] {(byte)123, (byte)123, (byte)53, (byte) (-62), (byte) (-62), (byte)123, (byte)0, (byte)38, (byte)38}, byteArray4);
+assertFalse(base64_0.isUrlSafe());
+assertNotNull(byteArray5);
+
+MockRandom mockRandom0 = new MockRandom((-843L));
+assertNotNull(mockRandom0);
+
+BigInteger.probablePrime(1, mockRandom0);
+
+[MASTER] 21:17:22.186 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class org.junit.internal.ArrayComparisonFailure: arrays first differed at element [7]; expected:<0> but was:<13>
+[MASTER] 21:17:22.189 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ Base64 base64_0 = new Base64((-596));
+assertEquals(76, Base64.MIME_CHUNK_SIZE);
+assertEquals(64, Base64.PEM_CHUNK_SIZE);
+assertFalse(base64_0.isUrlSafe());
+assertNotNull(base64_0);
+
+byte[] byteArray0 = new byte[5];
+Object object0 = base64_0.decode((Object) "org.apache.commons.codec.DecoderException");
+assertEquals(76, Base64.MIME_CHUNK_SIZE);
+assertEquals(64, Base64.PEM_CHUNK_SIZE);
+assertFalse(base64_0.isUrlSafe());
+assertNotNull(object0);
+
+byte[] byteArray1 = Base64.encodeBase64(byteArray0);
+assertFalse(byteArray0.equals((Object)object0));
+assertFalse(byteArray1.equals((Object)byteArray0));
+assertFalse(byteArray1.equals((Object)object0));
+assertNotSame(byteArray0, object0);
+assertNotSame(byteArray0, byteArray1);
+assertNotSame(byteArray1, byteArray0);
+assertNotSame(byteArray1, object0);
+assertEquals(5, byteArray0.length);
+assertEquals(8, byteArray1.length);
+assertArrayEquals(new byte[] {(byte)0, (byte)0, (byte)0, (byte)0, (byte)0}, byteArray0);
+assertArrayEquals(new byte[] {(byte)65, (byte)65, (byte)65, (byte)65, (byte)65, (byte)65, (byte)65, (byte)61}, byteArray1);
+assertNotNull(byteArray1);
+
+byteArray0[0] = (byte) (-71);
+int int0 = base64_0.readResults(byteArray1, (byte) (-71), 269);
+assertFalse(byteArray0.equals((Object)object0));
+assertFalse(byteArray0.equals((Object)byteArray1));
+assertFalse(byteArray1.equals((Object)byteArray0));
+assertFalse(byteArray1.equals((Object)object0));
+assertNotSame(byteArray0, object0);
+assertNotSame(byteArray0, byteArray1);
+assertNotSame(byteArray1, byteArray0);
+assertNotSame(byteArray1, object0);
+assertEquals(5, byteArray0.length);
+assertEquals(8, byteArray1.length);
+assertEquals(76, Base64.MIME_CHUNK_SIZE);
+assertEquals(64, Base64.PEM_CHUNK_SIZE);
+assertArrayEquals(new byte[] {(byte) (-71), (byte)0, (byte)0, (byte)0, (byte)0}, byteArray0);
+assertArrayEquals(new byte[] {(byte)65, (byte)65, (byte)65, (byte)65, (byte)65, (byte)65, (byte)65, (byte)61}, byteArray1);
+assertFalse(base64_0.isUrlSafe());
+assertEquals((-1), int0);
+
+byteArray0[1] = (byte)0;
+byte[] byteArray2 = Base64.encodeBase64(byteArray0, true, true, 66);
+assertFalse(byteArray0.equals((Object)object0));
+assertFalse(byteArray0.equals((Object)byteArray1));
+assertFalse(byteArray2.equals((Object)object0));
+assertFalse(byteArray2.equals((Object)byteArray1));
+assertFalse(byteArray2.equals((Object)byteArray0));
+assertNotSame(byteArray0, object0);
+assertNotSame(byteArray0, byteArray2);
+assertNotSame(byteArray0, byteArray1);
+assertNotSame(byteArray2, object0);
+assertNotSame(byteArray2, byteArray1);
+assertNotSame(byteArray2, byteArray0);
+assertEquals(5, byteArray0.length);
+assertEquals(9, byteArray2.length);
+assertArrayEquals(new byte[] {(byte) (-71), (byte)0, (byte)0, (byte)0, (byte)0}, byteArray0);
+assertArrayEquals(new byte[] {(byte)117, (byte)81, (byte)65, (byte)65, (byte)65, (byte)65, (byte)65, (byte)0, (byte)0}, byteArray2);
+assertNotNull(byteArray2);
+
+byteArray0[2] = (byte) (-24);
+byte[] byteArray3 = base64_0.decode(byteArray1);
+assertFalse(byteArray0.equals((Object)object0));
+assertFalse(byteArray0.equals((Object)byteArray2));
+assertFalse(byteArray0.equals((Object)byteArray1));
+assertFalse(byteArray1.equals((Object)byteArray0));
+assertFalse(byteArray1.equals((Object)object0));
+assertFalse(byteArray1.equals((Object)byteArray2));
+assertFalse(byteArray3.equals((Object)byteArray2));
+assertFalse(byteArray3.equals((Object)byteArray0));
+assertFalse(byteArray3.equals((Object)object0));
+assertFalse(byteArray3.equals((Object)byteArray1));
+assertNotSame(byteArray0, object0);
+assertNotSame(byteArray0, byteArray3);
+assertNotSame(byteArray0, byteArray2);
+assertNotSame(byteArray0, byteArray1);
+assertNotSame(byteArray1, byteArray0);
+assertNotSame(byteArray1, object0);
+assertNotSame(byteArray1, byteArray3);
+assertNotSame(byteArray1, byteArray2);
+assertNotSame(byteArray3, byteArray2);
+assertNotSame(byteArray3, byteArray0);
+assertNotSame(byteArray3, object0);
+assertNotSame(byteArray3, byteArray1);
+assertEquals(5, byteArray0.length);
+assertEquals(8, byteArray1.length);
+assertEquals(5, byteArray3.length);
+assertEquals(76, Base64.MIME_CHUNK_SIZE);
+assertEquals(64, Base64.PEM_CHUNK_SIZE);
+assertArrayEquals(new byte[] {(byte) (-71), (byte)0, (byte) (-24), (byte)0, (byte)0}, byteArray0);
+assertArrayEquals(new byte[] {(byte)65, (byte)65, (byte)65, (byte)65, (byte)65, (byte)65, (byte)65, (byte)61}, byteArray1);
+assertArrayEquals(new byte[] {(byte)0, (byte)0, (byte)0, (byte)0, (byte)0}, byteArray3);
+assertFalse(base64_0.isUrlSafe());
+assertNotNull(byteArray3);
+
+byteArray0[3] = (byte)114;
+byteArray0[4] = (byte)125;
+byte[] byteArray4 = base64_0.decode(byteArray0);
+assertFalse(byteArray0.equals((Object)object0));
+assertFalse(byteArray0.equals((Object)byteArray3));
+assertFalse(byteArray0.equals((Object)byteArray2));
+assertFalse(byteArray0.equals((Object)byteArray1));
+assertFalse(byteArray4.equals((Object)byteArray0));
+assertFalse(byteArray4.equals((Object)byteArray1));
+assertFalse(byteArray4.equals((Object)object0));
+assertFalse(byteArray4.equals((Object)byteArray3));
+assertFalse(byteArray4.equals((Object)byteArray2));
+assertNotSame(byteArray0, object0);
+assertNotSame(byteArray0, byteArray3);
+assertNotSame(byteArray0, byteArray4);
+assertNotSame(byteArray0, byteArray2);
+assertNotSame(byteArray0, byteArray1);
+assertNotSame(byteArray4, byteArray0);
+assertNotSame(byteArray4, byteArray1);
+assertNotSame(byteArray4, object0);
+assertNotSame(byteArray4, byteArray3);
+assertNotSame(byteArray4, byteArray2);
+assertEquals(5, byteArray0.length);
+assertEquals(0, byteArray4.length);
+assertEquals(76, Base64.MIME_CHUNK_SIZE);
+assertEquals(64, Base64.PEM_CHUNK_SIZE);
+assertArrayEquals(new byte[] {(byte) (-71), (byte)0, (byte) (-24), (byte)114, (byte)125}, byteArray0);
+assertArrayEquals(new byte[] {}, byteArray4);
+assertFalse(base64_0.isUrlSafe());
+assertNotNull(byteArray4);
+
+byte[] byteArray5 = new byte[5];
+assertFalse(byteArray5.equals((Object)byteArray0));
+assertFalse(byteArray5.equals((Object)byteArray1));
+assertFalse(byteArray5.equals((Object)byteArray3));
+assertFalse(byteArray5.equals((Object)object0));
+assertFalse(byteArray5.equals((Object)byteArray2));
+assertFalse(byteArray5.equals((Object)byteArray4));
+
+byteArray5[0] = (byte)114;
+byteArray5[1] = (byte)125;
+byteArray5[2] = (byte) (-24);
+byteArray5[3] = (byte)114;
+byteArray5[4] = (byte) (-71);
+byte[] byteArray6 = Base64.encodeBase64Chunked(byteArray5);
+assertFalse(byteArray6.equals((Object)object0));
+assertFalse(byteArray6.equals((Object)byteArray3));
+assertFalse(byteArray6.equals((Object)byteArray2));
+assertFalse(byteArray6.equals((Object)byteArray0));
+assertFalse(byteArray6.equals((Object)byteArray4));
+assertFalse(byteArray6.equals((Object)byteArray1));
+assertFalse(byteArray6.equals((Object)byteArray5));
+assertFalse(byteArray5.equals((Object)byteArray0));
+assertFalse(byteArray5.equals((Object)byteArray1));
+assertFalse(byteArray5.equals((Object)byteArray3));
+assertFalse(byteArray5.equals((Object)object0));
+assertFalse(byteArray5.equals((Object)byteArray2));
+assertFalse(byteArray5.equals((Object)byteArray4));
+assertNotSame(byteArray6, object0);
+assertNotSame(byteArray6, byteArray3);
+assertNotSame(byteArray6, byteArray2);
+assertNotSame(byteArray6, byteArray0);
+assertNotSame(byteArray6, byteArray4);
+assertNotSame(byteArray6, byteArray1);
+assertNotSame(byteArray6, byteArray5);
+assertNotSame(byteArray5, byteArray0);
+assertNotSame(byteArray5, byteArray1);
+assertNotSame(byteArray5, byteArray6);
+assertNotSame(byteArray5, byteArray3);
+assertNotSame(byteArray5, object0);
+assertNotSame(byteArray5, byteArray2);
+assertNotSame(byteArray5, byteArray4);
+assertEquals(10, byteArray6.length);
+assertEquals(5, byteArray5.length);
+assertArrayEquals(new byte[] {(byte)99, (byte)110, (byte)51, (byte)111, (byte)99, (byte)114, (byte)107, (byte)61, (byte)0, (byte)0}, byteArray6);
+assertArrayEquals(new byte[] {(byte)114, (byte)125, (byte) (-24), (byte)114, (byte) (-71)}, byteArray5);
+assertNotNull(byteArray6);
+
+BigInteger bigInteger0 = new BigInteger(byteArray0);
+assertFalse(byteArray0.equals((Object)object0));
+assertFalse(byteArray0.equals((Object)byteArray3));
+assertFalse(byteArray0.equals((Object)byteArray4));
+assertFalse(byteArray0.equals((Object)byteArray2));
+assertFalse(byteArray0.equals((Object)byteArray5));
+assertFalse(byteArray0.equals((Object)byteArray1));
+assertFalse(byteArray0.equals((Object)byteArray6));
+assertEquals(5, byteArray0.length);
+assertArrayEquals(new byte[] {(byte) (-71), (byte)0, (byte) (-24), (byte)114, (byte)125}, byteArray0);
+assertEquals((byte)125, bigInteger0.byteValue());
+assertEquals((short)29309, bigInteger0.shortValue());
+assertNotNull(bigInteger0);
+
+BigInteger bigInteger1 = bigInteger0.abs();
+assertFalse(byteArray0.equals((Object)object0));
+assertFalse(byteArray0.equals((Object)byteArray3));
+assertFalse(byteArray0.equals((Object)byteArray4));
+assertFalse(byteArray0.equals((Object)byteArray2));
+assertFalse(byteArray0.equals((Object)byteArray5));
+assertFalse(byteArray0.equals((Object)byteArray1));
+assertFalse(byteArray0.equals((Object)byteArray6));
+assertFalse(bigInteger1.equals((Object)bigInteger0));
+assertNotSame(byteArray0, object0);
+assertNotSame(byteArray0, byteArray3);
+assertNotSame(byteArray0, byteArray4);
+assertNotSame(byteArray0, byteArray2);
+assertNotSame(byteArray0, byteArray5);
+assertNotSame(byteArray0, byteArray1);
+assertNotSame(byteArray0, byteArray6);
+assertNotSame(bigInteger0, bigInteger1);
+assertNotSame(bigInteger1, bigInteger0);
+assertEquals(5, byteArray0.length);
+assertArrayEquals(new byte[] {(byte) (-71), (byte)0, (byte) (-24), (byte)114, (byte)125}, byteArray0);
+assertEquals((byte)125, bigInteger0.byteValue());
+assertEquals((short)29309, bigInteger0.shortValue());
+assertEquals((byte) (-125), bigInteger1.byteValue());
+assertEquals((short) (-29309), bigInteger1.shortValue());
+assertNotNull(bigInteger1);
+
+byte[] byteArray7 = Base64.encodeInteger(bigInteger0);
+assertFalse(byteArray0.equals((Object)object0));
+assertFalse(byteArray0.equals((Object)byteArray3));
+assertFalse(byteArray0.equals((Object)byteArray4));
+assertFalse(byteArray0.equals((Object)byteArray2));
+assertFalse(byteArray0.equals((Object)byteArray5));
+assertFalse(byteArray0.equals((Object)byteArray1));
+assertFalse(byteArray0.equals((Object)byteArray6));
+assertFalse(bigInteger0.equals((Object)bigInteger1));
+assertFalse(byteArray7.equals((Object)byteArray5));
+assertFalse(byteArray7.equals((Object)byteArray0));
+assertFalse(byteArray7.equals((Object)byteArray1));
+assertFalse(byteArray7.equals((Object)byteArray6));
+assertFalse(byteArray7.equals((Object)object0));
+assertFalse(byteArray7.equals((Object)byteArray3));
+assertFalse(byteArray7.equals((Object)byteArray4));
+assertFalse(byteArray7.equals((Object)byteArray2));
+assertNotSame(byteArray0, object0);
+assertNotSame(byteArray0, byteArray3);
+assertNotSame(byteArray0, byteArray4);
+assertNotSame(byteArray0, byteArray2);
+assertNotSame(byteArray0, byteArray7);
+assertNotSame(byteArray0, byteArray5);
+assertNotSame(byteArray0, byteArray1);
+assertNotSame(byteArray0, byteArray6);
+assertNotSame(bigInteger0, bigInteger1);
+assertNotSame(byteArray7, byteArray5);
+assertNotSame(byteArray7, byteArray0);
+assertNotSame(byteArray7, byteArray1);
+assertNotSame(byteArray7, byteArray6);
+assertNotSame(byteArray7, object0);
+assertNotSame(byteArray7, byteArray3);
+assertNotSame(byteArray7, byteArray4);
+assertNotSame(byteArray7, byteArray2);
+assertEquals(5, byteArray0.length);
+assertEquals(8, byteArray7.length);
+assertArrayEquals(new byte[] {(byte) (-71), (byte)0, (byte) (-24), (byte)114, (byte)125}, byteArray0);
+assertArrayEquals(new byte[] {(byte)117, (byte)81, (byte)68, (byte)111, (byte)99, (byte)110, (byte)48, (byte)61}, byteArray7);
+assertEquals((byte)125, bigInteger0.byteValue());
+assertEquals((short)29309, bigInteger0.shortValue());
+assertNotNull(byteArray7);
+
+boolean boolean0 = Base64.isBase64("org.apache.commons.codec.DecoderException");
+assertFalse(boolean0);
+
+
+[MASTER] 21:17:23.811 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class org.junit.internal.ArrayComparisonFailure: arrays first differed at element [0]; expected:<0> but was:<13>
+[MASTER] 21:17:23.813 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ byte[] byteArray0 = new byte[9];
+byteArray0[0] = (byte)0;
+byteArray0[1] = (byte)0;
+byteArray0[2] = (byte) (-108);
+byte[] byteArray1 = Base64.encodeBase64(byteArray0, true, false, 58);
+assertFalse(byteArray1.equals((Object)byteArray0));
+assertNotSame(byteArray0, byteArray1);
+assertNotSame(byteArray1, byteArray0);
+assertEquals(9, byteArray0.length);
+assertEquals(14, byteArray1.length);
+assertArrayEquals(new byte[] {(byte)0, (byte)0, (byte) (-108), (byte)0, (byte)0, (byte)0, (byte)0, (byte)0, (byte)0}, byteArray0);
+assertNotNull(byteArray1);
+
+Base64 base64_0 = new Base64();
+assertEquals(76, Base64.MIME_CHUNK_SIZE);
+assertEquals(64, Base64.PEM_CHUNK_SIZE);
+assertFalse(base64_0.isUrlSafe());
+assertNotNull(base64_0);
+
+byte[] byteArray2 = base64_0.decode(byteArray0);
+assertFalse(byteArray0.equals((Object)byteArray1));
+assertFalse(byteArray2.equals((Object)byteArray0));
+assertFalse(byteArray2.equals((Object)byteArray1));
+assertNotSame(byteArray0, byteArray2);
+assertNotSame(byteArray0, byteArray1);
+assertNotSame(byteArray2, byteArray0);
+assertNotSame(byteArray2, byteArray1);
+assertEquals(9, byteArray0.length);
+assertEquals(0, byteArray2.length);
+assertEquals(76, Base64.MIME_CHUNK_SIZE);
+assertEquals(64, Base64.PEM_CHUNK_SIZE);
+assertArrayEquals(new byte[] {(byte)0, (byte)0, (byte) (-108), (byte)0, (byte)0, (byte)0, (byte)0, (byte)0, (byte)0}, byteArray0);
+assertArrayEquals(new byte[] {}, byteArray2);
+assertFalse(base64_0.isUrlSafe());
+assertNotNull(byteArray2);
+
+byte[] byteArray3 = Base64.CHUNK_SEPARATOR;
+assertFalse(byteArray3.equals((Object)byteArray1));
+assertFalse(byteArray3.equals((Object)byteArray0));
+assertFalse(byteArray3.equals((Object)byteArray2));
+assertNotSame(byteArray3, byteArray1);
+assertNotSame(byteArray3, byteArray0);
+assertNotSame(byteArray3, byteArray2);
+assertEquals(2, byteArray3.length);
+assertArrayEquals(new byte[] {(byte)0, (byte)0}, byteArray3);
+assertNotNull(byteArray3);
+
+byte[] byteArray4 = new byte[5];
+assertFalse(byteArray4.equals((Object)byteArray1));
+assertFalse(byteArray4.equals((Object)byteArray3));
+assertFalse(byteArray4.equals((Object)byteArray0));
+assertFalse(byteArray4.equals((Object)byteArray2));
+
+byteArray4[0] = (byte)0;
+byteArray4[1] = (byte) (-108);
+byteArray4[2] = (byte)0;
+byteArray4[3] = (byte)0;
+byteArray4[4] = (byte)0;
+byte[] byteArray5 = Base64.encodeBase64Chunked(byteArray4);
+assertFalse(byteArray4.equals((Object)byteArray1));
+assertFalse(byteArray4.equals((Object)byteArray3));
+assertFalse(byteArray4.equals((Object)byteArray0));
+assertFalse(byteArray4.equals((Object)byteArray2));
+assertFalse(byteArray5.equals((Object)byteArray2));
+assertFalse(byteArray5.equals((Object)byteArray4));
+assertFalse(byteArray5.equals((Object)byteArray3));
+assertFalse(byteArray5.equals((Object)byteArray0));
+assertFalse(byteArray5.equals((Object)byteArray1));
+assertNotSame(byteArray4, byteArray1);
+assertNotSame(byteArray4, byteArray3);
+assertNotSame(byteArray4, byteArray0);
+assertNotSame(byteArray4, byteArray5);
+assertNotSame(byteArray4, byteArray2);
+assertNotSame(byteArray5, byteArray2);
+assertNotSame(byteArray5, byteArray4);
+assertNotSame(byteArray5, byteArray3);
+assertNotSame(byteArray5, byteArray0);
+assertNotSame(byteArray5, byteArray1);
+assertEquals(5, byteArray4.length);
+assertEquals(10, byteArray5.length);
+assertArrayEquals(new byte[] {(byte)0, (byte) (-108), (byte)0, (byte)0, (byte)0}, byteArray4);
+assertArrayEquals(new byte[] {(byte)65, (byte)74, (byte)81, (byte)65, (byte)65, (byte)65, (byte)65, (byte)61, (byte)0, (byte)0}, byteArray5);
+assertNotNull(byteArray5);
+
+BigInteger bigInteger0 = new BigInteger(byteArray0);
+assertFalse(byteArray0.equals((Object)byteArray2));
+assertFalse(byteArray0.equals((Object)byteArray5));
+assertFalse(byteArray0.equals((Object)byteArray1));
+assertFalse(byteArray0.equals((Object)byteArray4));
+assertFalse(byteArray0.equals((Object)byteArray3));
+assertEquals(9, byteArray0.length);
+assertArrayEquals(new byte[] {(byte)0, (byte)0, (byte) (-108), (byte)0, (byte)0, (byte)0, (byte)0, (byte)0, (byte)0}, byteArray0);
+assertEquals((byte)0, bigInteger0.byteValue());
+assertEquals((short)0, bigInteger0.shortValue());
+assertNotNull(bigInteger0);
+
+BigInteger bigInteger1 = bigInteger0.abs();
+assertFalse(byteArray0.equals((Object)byteArray2));
+assertFalse(byteArray0.equals((Object)byteArray5));
+assertFalse(byteArray0.equals((Object)byteArray1));
+assertFalse(byteArray0.equals((Object)byteArray4));
+assertFalse(byteArray0.equals((Object)byteArray3));
+assertSame(bigInteger1, bigInteger0);
+assertNotSame(byteArray0, byteArray2);
+assertNotSame(byteArray0, byteArray5);
+assertNotSame(byteArray0, byteArray1);
+assertNotSame(byteArray0, byteArray4);
+assertNotSame(byteArray0, byteArray3);
+assertSame(bigInteger0, bigInteger1);
+assertEquals(9, byteArray0.length);
+assertArrayEquals(new byte[] {(byte)0, (byte)0, (byte) (-108), (byte)0, (byte)0, (byte)0, (byte)0, (byte)0, (byte)0}, byteArray0);
+assertEquals((short)0, bigInteger1.shortValue());
+assertEquals((byte)0, bigInteger1.byteValue());
+assertEquals((byte)0, bigInteger0.byteValue());
+assertEquals((short)0, bigInteger0.shortValue());
+assertNotNull(bigInteger1);
+
+byte[] byteArray6 = Base64.encodeInteger(bigInteger1);
+assertFalse(byteArray0.equals((Object)byteArray2));
+assertFalse(byteArray0.equals((Object)byteArray5));
+assertFalse(byteArray0.equals((Object)byteArray1));
+assertFalse(byteArray0.equals((Object)byteArray4));
+assertFalse(byteArray0.equals((Object)byteArray3));
+assertFalse(byteArray6.equals((Object)byteArray3));
+assertFalse(byteArray6.equals((Object)byteArray0));
+assertFalse(byteArray6.equals((Object)byteArray1));
+assertFalse(byteArray6.equals((Object)byteArray5));
+assertFalse(byteArray6.equals((Object)byteArray2));
+assertFalse(byteArray6.equals((Object)byteArray4));
+assertSame(bigInteger1, bigInteger0);
+assertNotSame(byteArray0, byteArray6);
+assertNotSame(byteArray0, byteArray2);
+assertNotSame(byteArray0, byteArray5);
+assertNotSame(byteArray0, byteArray1);
+assertNotSame(byteArray0, byteArray4);
+assertNotSame(byteArray0, byteArray3);
+assertNotSame(byteArray6, byteArray3);
+assertNotSame(byteArray6, byteArray0);
+assertNotSame(byteArray6, byteArray1);
+assertNotSame(byteArray6, byteArray5);
+assertNotSame(byteArray6, byteArray2);
+assertNotSame(byteArray6, byteArray4);
+assertSame(bigInteger0, bigInteger1);
+assertEquals(9, byteArray0.length);
+assertEquals(12, byteArray6.length);
+assertArrayEquals(new byte[] {(byte)0, (byte)0, (byte) (-108), (byte)0, (byte)0, (byte)0, (byte)0, (byte)0, (byte)0}, byteArray0);
+assertEquals((short)0, bigInteger1.shortValue());
+assertEquals((byte)0, bigInteger1.byteValue());
+assertEquals((byte)0, bigInteger0.byteValue());
+assertEquals((short)0, bigInteger0.shortValue());
+assertNotNull(byteArray6);
+
+boolean boolean0 = Base64.isBase64("");
+assertTrue(boolean0);
+
+byte[] byteArray7 = new byte[8];
+assertFalse(byteArray7.equals((Object)byteArray1));
+assertFalse(byteArray7.equals((Object)byteArray0));
+assertFalse(byteArray7.equals((Object)byteArray4));
+assertFalse(byteArray7.equals((Object)byteArray2));
+assertFalse(byteArray7.equals((Object)byteArray6));
+assertFalse(byteArray7.equals((Object)byteArray5));
+assertFalse(byteArray7.equals((Object)byteArray3));
+
+byteArray7[0] = (byte)0;
+byteArray7[1] = (byte) (-108);
+byteArray7[2] = (byte)0;
+byteArray7[3] = (byte)0;
+byteArray7[4] = (byte) (-108);
+byteArray7[5] = (byte)0;
+byteArray7[6] = (byte)0;
+byteArray7[7] = (byte)0;
+byte[] byteArray8 = base64_0.decode(byteArray7);
+assertFalse(byteArray7.equals((Object)byteArray1));
+assertFalse(byteArray7.equals((Object)byteArray0));
+assertFalse(byteArray7.equals((Object)byteArray4));
+assertFalse(byteArray7.equals((Object)byteArray2));
+assertFalse(byteArray7.equals((Object)byteArray6));
+assertFalse(byteArray7.equals((Object)byteArray5));
+assertFalse(byteArray7.equals((Object)byteArray3));
+assertFalse(byteArray8.equals((Object)byteArray1));
+assertFalse(byteArray8.equals((Object)byteArray6));
+assertFalse(byteArray8.equals((Object)byteArray2));
+assertFalse(byteArray8.equals((Object)byteArray4));
+assertFalse(byteArray8.equals((Object)byteArray5));
+assertFalse(byteArray8.equals((Object)byteArray0));
+assertFalse(byteArray8.equals((Object)byteArray3));
+assertFalse(byteArray8.equals((Object)byteArray7));
+assertNotSame(byteArray7, byteArray1);
+assertNotSame(byteArray7, byteArray0);
+assertNotSame(byteArray7, byteArray4);
+assertNotSame(byteArray7, byteArray2);
+assertNotSame(byteArray7, byteArray6);
+assertNotSame(byteArray7, byteArray5);
+assertNotSame(byteArray7, byteArray8);
+assertNotSame(byteArray7, byteArray3);
+assertNotSame(byteArray8, byteArray1);
+assertNotSame(byteArray8, byteArray6);
+assertNotSame(byteArray8, byteArray2);
+assertNotSame(byteArray8, byteArray4);
+assertNotSame(byteArray8, byteArray5);
+assertNotSame(byteArray8, byteArray0);
+assertNotSame(byteArray8, byteArray3);
+assertNotSame(byteArray8, byteArray7);
+assertEquals(8, byteArray7.length);
+assertEquals(0, byteArray8.length);
+assertEquals(76, Base64.MIME_CHUNK_SIZE);
+assertEquals(64, Base64.PEM_CHUNK_SIZE);
+assertArrayEquals(new byte[] {(byte)0, (byte) (-108), (byte)0, (byte)0, (byte) (-108), (byte)0, (byte)0, (byte)0}, byteArray7);
+assertArrayEquals(new byte[] {}, byteArray8);
+assertFalse(base64_0.isUrlSafe());
+assertNotNull(byteArray8);
+
+
+[MASTER] 21:17:24.106 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class org.junit.internal.ArrayComparisonFailure: arrays first differed at element [4]; expected:<0> but was:<13>
+[MASTER] 21:17:24.119 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ boolean boolean0 = Base64.isBase64((byte)0);
+assertFalse(boolean0);
+
+byte[] byteArray0 = new byte[1];
+byteArray0[0] = (byte)0;
+byte[] byteArray1 = Base64.discardWhitespace(byteArray0);
+assertFalse(byteArray1.equals((Object)byteArray0));
+assertNotSame(byteArray0, byteArray1);
+assertNotSame(byteArray1, byteArray0);
+assertEquals(1, byteArray0.length);
+assertEquals(1, byteArray1.length);
+assertArrayEquals(new byte[] {(byte)0}, byteArray0);
+assertArrayEquals(new byte[] {(byte)0}, byteArray1);
+assertNotNull(byteArray1);
+
+boolean boolean1 = Base64.isBase64(byteArray1);
+assertFalse(byteArray0.equals((Object)byteArray1));
+assertFalse(byteArray1.equals((Object)byteArray0));
+assertTrue(boolean1 == boolean0);
+assertNotSame(byteArray0, byteArray1);
+assertNotSame(byteArray1, byteArray0);
+assertEquals(1, byteArray0.length);
+assertEquals(1, byteArray1.length);
+assertArrayEquals(new byte[] {(byte)0}, byteArray0);
+assertArrayEquals(new byte[] {(byte)0}, byteArray1);
+assertFalse(boolean1);
+
+byte[] byteArray2 = Base64.decodeBase64(byteArray1);
+assertFalse(byteArray0.equals((Object)byteArray1));
+assertFalse(byteArray1.equals((Object)byteArray0));
+assertFalse(byteArray2.equals((Object)byteArray0));
+assertFalse(byteArray2.equals((Object)byteArray1));
+assertNotSame(byteArray0, byteArray1);
+assertNotSame(byteArray0, byteArray2);
+assertNotSame(byteArray1, byteArray2);
+assertNotSame(byteArray1, byteArray0);
+assertNotSame(byteArray2, byteArray0);
+assertNotSame(byteArray2, byteArray1);
+assertEquals(1, byteArray0.length);
+assertEquals(1, byteArray1.length);
+assertEquals(0, byteArray2.length);
+assertArrayEquals(new byte[] {(byte)0}, byteArray0);
+assertArrayEquals(new byte[] {(byte)0}, byteArray1);
+assertArrayEquals(new byte[] {}, byteArray2);
+assertNotNull(byteArray2);
+
+byte[] byteArray3 = Base64.encodeBase64URLSafe(byteArray1);
+assertFalse(byteArray0.equals((Object)byteArray1));
+assertFalse(byteArray0.equals((Object)byteArray2));
+assertFalse(byteArray1.equals((Object)byteArray2));
+assertFalse(byteArray1.equals((Object)byteArray0));
+assertFalse(byteArray3.equals((Object)byteArray1));
+assertFalse(byteArray3.equals((Object)byteArray0));
+assertFalse(byteArray3.equals((Object)byteArray2));
+assertNotSame(byteArray0, byteArray3);
+assertNotSame(byteArray0, byteArray1);
+assertNotSame(byteArray0, byteArray2);
+assertNotSame(byteArray1, byteArray2);
+assertNotSame(byteArray1, byteArray0);
+assertNotSame(byteArray1, byteArray3);
+assertNotSame(byteArray3, byteArray1);
+assertNotSame(byteArray3, byteArray0);
+assertNotSame(byteArray3, byteArray2);
+assertEquals(1, byteArray0.length);
+assertEquals(1, byteArray1.length);
+assertEquals(2, byteArray3.length);
+assertArrayEquals(new byte[] {(byte)0}, byteArray0);
+assertArrayEquals(new byte[] {(byte)0}, byteArray1);
+assertArrayEquals(new byte[] {(byte)65, (byte)65}, byteArray3);
+assertNotNull(byteArray3);
+
+byte[] byteArray4 = Base64.decodeBase64(byteArray3);
+assertFalse(byteArray0.equals((Object)byteArray3));
+assertFalse(byteArray0.equals((Object)byteArray1));
+assertFalse(byteArray0.equals((Object)byteArray2));
+assertFalse(byteArray1.equals((Object)byteArray2));
+assertFalse(byteArray1.equals((Object)byteArray0));
+assertFalse(byteArray1.equals((Object)byteArray3));
+assertFalse(byteArray3.equals((Object)byteArray1));
+assertFalse(byteArray3.equals((Object)byteArray0));
+assertFalse(byteArray3.equals((Object)byteArray2));
+assertFalse(byteArray4.equals((Object)byteArray2));
+assertFalse(byteArray4.equals((Object)byteArray1));
+assertFalse(byteArray4.equals((Object)byteArray3));
+assertFalse(byteArray4.equals((Object)byteArray0));
+assertNotSame(byteArray0, byteArray3);
+assertNotSame(byteArray0, byteArray1);
+assertNotSame(byteArray0, byteArray2);
+assertNotSame(byteArray0, byteArray4);
+assertNotSame(byteArray1, byteArray4);
+assertNotSame(byteArray1, byteArray2);
+assertNotSame(byteArray1, byteArray0);
+assertNotSame(byteArray1, byteArray3);
+assertNotSame(byteArray3, byteArray1);
+assertNotSame(byteArray3, byteArray0);
+assertNotSame(byteArray3, byteArray2);
+assertNotSame(byteArray3, byteArray4);
+assertNotSame(byteArray4, byteArray2);
+assertNotSame(byteArray4, byteArray1);
+assertNotSame(byteArray4, byteArray3);
+assertNotSame(byteArray4, byteArray0);
+assertEquals(1, byteArray0.length);
+assertEquals(1, byteArray1.length);
+assertEquals(2, byteArray3.length);
+assertEquals(1, byteArray4.length);
+assertArrayEquals(new byte[] {(byte)0}, byteArray0);
+assertArrayEquals(new byte[] {(byte)0}, byteArray1);
+assertArrayEquals(new byte[] {(byte)65, (byte)65}, byteArray3);
+assertArrayEquals(new byte[] {(byte)0}, byteArray4);
+assertNotNull(byteArray4);
+
+byte[] byteArray5 = Base64.encodeBase64(byteArray4, true);
+assertFalse(byteArray0.equals((Object)byteArray3));
+assertFalse(byteArray0.equals((Object)byteArray1));
+assertFalse(byteArray0.equals((Object)byteArray2));
+assertFalse(byteArray0.equals((Object)byteArray4));
+assertFalse(byteArray1.equals((Object)byteArray4));
+assertFalse(byteArray1.equals((Object)byteArray2));
+assertFalse(byteArray1.equals((Object)byteArray0));
+assertFalse(byteArray1.equals((Object)byteArray3));
+assertFalse(byteArray3.equals((Object)byteArray1));
+assertFalse(byteArray3.equals((Object)byteArray0));
+assertFalse(byteArray3.equals((Object)byteArray2));
+assertFalse(byteArray3.equals((Object)byteArray4));
+assertFalse(byteArray4.equals((Object)byteArray2));
+assertFalse(byteArray4.equals((Object)byteArray1));
+assertFalse(byteArray4.equals((Object)byteArray3));
+assertFalse(byteArray4.equals((Object)byteArray0));
+assertFalse(byteArray5.equals((Object)byteArray4));
+assertFalse(byteArray5.equals((Object)byteArray2));
+assertFalse(byteArray5.equals((Object)byteArray0));
+assertFalse(byteArray5.equals((Object)byteArray1));
+assertFalse(byteArray5.equals((Object)byteArray3));
+assertNotSame(byteArray0, byteArray3);
+assertNotSame(byteArray0, byteArray1);
+assertNotSame(byteArray0, byteArray2);
+assertNotSame(byteArray0, byteArray4);
+assertNotSame(byteArray0, byteArray5);
+assertNotSame(byteArray1, byteArray5);
+assertNotSame(byteArray1, byteArray4);
+assertNotSame(byteArray1, byteArray2);
+assertNotSame(byteArray1, byteArray0);
+assertNotSame(byteArray1, byteArray3);
+assertNotSame(byteArray3, byteArray1);
+assertNotSame(byteArray3, byteArray0);
+assertNotSame(byteArray3, byteArray2);
+assertNotSame(byteArray3, byteArray4);
+assertNotSame(byteArray3, byteArray5);
+assertNotSame(byteArray4, byteArray2);
+assertNotSame(byteArray4, byteArray1);
+assertNotSame(byteArray4, byteArray3);
+assertNotSame(byteArray4, byteArray5);
+assertNotSame(byteArray4, byteArray0);
+assertNotSame(byteArray5, byteArray4);
+assertNotSame(byteArray5, byteArray2);
+assertNotSame(byteArray5, byteArray0);
+assertNotSame(byteArray5, byteArray1);
+assertNotSame(byteArray5, byteArray3);
+assertEquals(1, byteArray0.length);
+assertEquals(1, byteArray1.length);
+assertEquals(2, byteArray3.length);
+assertEquals(1, byteArray4.length);
+assertEquals(6, byteArray5.length);
+assertArrayEquals(new byte[] {(byte)0}, byteArray0);
+assertArrayEquals(new byte[] {(byte)0}, byteArray1);
+assertArrayEquals(new byte[] {(byte)65, (byte)65}, byteArray3);
+assertArrayEquals(new byte[] {(byte)0}, byteArray4);
+assertArrayEquals(new byte[] {(byte)65, (byte)65, (byte)61, (byte)61, (byte)0, (byte)0}, byteArray5);
+assertNotNull(byteArray5);
+
+Base64 base64_0 = new Base64();
+assertEquals(64, Base64.PEM_CHUNK_SIZE);
+assertEquals(76, Base64.MIME_CHUNK_SIZE);
+assertFalse(base64_0.isUrlSafe());
+assertNotNull(base64_0);
+
+boolean boolean2 = base64_0.isUrlSafe();
+assertTrue(boolean2 == boolean0);
+assertTrue(boolean2 == boolean1);
+assertEquals(64, Base64.PEM_CHUNK_SIZE);
+assertEquals(76, Base64.MIME_CHUNK_SIZE);
+assertFalse(base64_0.isUrlSafe());
+assertFalse(boolean2);
+
+byte[] byteArray6 = Base64.encodeBase64URLSafe(byteArray0);
+assertFalse(byteArray0.equals((Object)byteArray3));
+assertFalse(byteArray0.equals((Object)byteArray1));
+assertFalse(byteArray0.equals((Object)byteArray2));
+assertFalse(byteArray0.equals((Object)byteArray4));
+assertFalse(byteArray0.equals((Object)byteArray5));
+assertFalse(byteArray6.equals((Object)byteArray1));
+assertFalse(byteArray6.equals((Object)byteArray3));
+assertFalse(byteArray6.equals((Object)byteArray5));
+assertFalse(byteArray6.equals((Object)byteArray4));
+assertFalse(byteArray6.equals((Object)byteArray0));
+assertFalse(byteArray6.equals((Object)byteArray2));
+assertNotSame(byteArray0, byteArray3);
+assertNotSame(byteArray0, byteArray1);
+assertNotSame(byteArray0, byteArray2);
+assertNotSame(byteArray0, byteArray6);
+assertNotSame(byteArray0, byteArray4);
+assertNotSame(byteArray0, byteArray5);
+assertNotSame(byteArray6, byteArray1);
+assertNotSame(byteArray6, byteArray3);
+assertNotSame(byteArray6, byteArray5);
+assertNotSame(byteArray6, byteArray4);
+assertNotSame(byteArray6, byteArray0);
+assertNotSame(byteArray6, byteArray2);
+assertEquals(1, byteArray0.length);
+assertEquals(2, byteArray6.length);
+assertArrayEquals(new byte[] {(byte)0}, byteArray0);
+assertArrayEquals(new byte[] {(byte)65, (byte)65}, byteArray6);
+assertNotNull(byteArray6);
+
+BigInteger bigInteger0 = Base64.decodeInteger(byteArray1);
+assertFalse(byteArray0.equals((Object)byteArray3));
+assertFalse(byteArray0.equals((Object)byteArray1));
+assertFalse(byteArray0.equals((Object)byteArray2));
+assertFalse(byteArray0.equals((Object)byteArray6));
+assertFalse(byteArray0.equals((Object)byteArray4));
+assertFalse(byteArray0.equals((Object)byteArray5));
+assertFalse(byteArray1.equals((Object)byteArray5));
+assertFalse(byteArray1.equals((Object)byteArray4));
+assertFalse(byteArray1.equals((Object)byteArray6));
+assertFalse(byteArray1.equals((Object)byteArray2));
+assertFalse(byteArray1.equals((Object)byteArray0));
+assertFalse(byteArray1.equals((Object)byteArray3));
+assertNotSame(byteArray0, byteArray3);
+assertNotSame(byteArray0, byteArray1);
+assertNotSame(byteArray0, byteArray2);
+assertNotSame(byteArray0, byteArray6);
+assertNotSame(byteArray0, byteArray4);
+assertNotSame(byteArray0, byteArray5);
+assertNotSame(byteArray1, byteArray5);
+assertNotSame(byteArray1, byteArray4);
+assertNotSame(byteArray1, byteArray6);
+assertNotSame(byteArray1, byteArray2);
+assertNotSame(byteArray1, byteArray0);
+assertNotSame(byteArray1, byteArray3);
+assertEquals(1, byteArray0.length);
+assertEquals(1, byteArray1.length);
+assertArrayEquals(new byte[] {(byte)0}, byteArray0);
+assertArrayEquals(new byte[] {(byte)0}, byteArray1);
+assertEquals((byte)0, bigInteger0.byteValue());
+assertEquals((short)0, bigInteger0.shortValue());
+assertNotNull(bigInteger0);
+
+boolean boolean3 = Base64.isBase64((byte)0);
+assertTrue(boolean3 == boolean2);
+assertTrue(boolean3 == boolean0);
+assertTrue(boolean3 == boolean1);
+assertFalse(boolean3);
+
+String string0 = Base64.encodeBase64URLSafeString(byteArray4);
+assertFalse(byteArray0.equals((Object)byteArray3));
+assertFalse(byteArray0.equals((Object)byteArray1));
+assertFalse(byteArray0.equals((Object)byteArray2));
+assertFalse(byteArray0.equals((Object)byteArray6));
+assertFalse(byteArray0.equals((Object)byteArray4));
+assertFalse(byteArray0.equals((Object)byteArray5));
+assertFalse(byteArray1.equals((Object)byteArray5));
+assertFalse(byteArray1.equals((Object)byteArray4));
+assertFalse(byteArray1.equals((Object)byteArray6));
+assertFalse(byteArray1.equals((Object)byteArray2));
+assertFalse(byteArray1.equals((Object)byteArray0));
+assertFalse(byteArray1.equals((Object)byteArray3));
+assertFalse(byteArray3.equals((Object)byteArray1));
+assertFalse(byteArray3.equals((Object)byteArray0));
+assertFalse(byteArray3.equals((Object)byteArray2));
+assertFalse(byteArray3.equals((Object)byteArray6));
+assertFalse(byteArray3.equals((Object)byteArray4));
+assertFalse(byteArray3.equals((Object)byteArray5));
+assertFalse(byteArray4.equals((Object)byteArray6));
+assertFalse(byteArray4.equals((Object)byteArray2));
+assertFalse(byteArray4.equals((Object)byteArray1));
+assertFalse(byteArray4.equals((Object)byteArray3));
+assertFalse(byteArray4.equals((Object)byteArray5));
+assertFalse(byteArray4.equals((Object)byteArray0));
+assertNotSame(byteArray0, byteArray3);
+assertNotSame(byteArray0, byteArray1);
+assertNotSame(byteArray0, byteArray2);
+assertNotSame(byteArray0, byteArray6);
+assertNotSame(byteArray0, byteArray4);
+assertNotSame(byteArray0, byteArray5);
+assertNotSame(byteArray1, byteArray5);
+assertNotSame(byteArray1, byteArray4);
+assertNotSame(byteArray1, byteArray6);
+assertNotSame(byteArray1, byteArray2);
+assertNotSame(byteArray1, byteArray0);
+assertNotSame(byteArray1, byteArray3);
+assertNotSame(byteArray3, byteArray1);
+assertNotSame(byteArray3, byteArray0);
+assertNotSame(byteArray3, byteArray2);
+assertNotSame(byteArray3, byteArray6);
+assertNotSame(byteArray3, byteArray4);
+assertNotSame(byteArray3, byteArray5);
+assertNotSame(byteArray4, byteArray6);
+assertNotSame(byteArray4, byteArray2);
+assertNotSame(byteArray4, byteArray1);
+assertNotSame(byteArray4, byteArray3);
+assertNotSame(byteArray4, byteArray5);
+assertNotSame(byteArray4, byteArray0);
+assertEquals(1, byteArray0.length);
+assertEquals(1, byteArray1.length);
+assertEquals(2, byteArray3.length);
+assertEquals(1, byteArray4.length);
+assertArrayEquals(new byte[] {(byte)0}, byteArray0);
+assertArrayEquals(new byte[] {(byte)0}, byteArray1);
+assertArrayEquals(new byte[] {(byte)65, (byte)65}, byteArray3);
+assertArrayEquals(new byte[] {(byte)0}, byteArray4);
+assertNotNull(string0);
+assertEquals("AA", string0);
+
+byte[] byteArray7 = Base64.encodeBase64(byteArray2, true, false);
+assertFalse(byteArray0.equals((Object)byteArray3));
+assertFalse(byteArray0.equals((Object)byteArray1));
+assertFalse(byteArray0.equals((Object)byteArray2));
+assertFalse(byteArray0.equals((Object)byteArray6));
+assertFalse(byteArray0.equals((Object)byteArray4));
+assertFalse(byteArray0.equals((Object)byteArray5));
+assertFalse(byteArray1.equals((Object)byteArray5));
+assertFalse(byteArray1.equals((Object)byteArray4));
+assertFalse(byteArray1.equals((Object)byteArray6));
+assertFalse(byteArray1.equals((Object)byteArray2));
+assertFalse(byteArray1.equals((Object)byteArray0));
+assertFalse(byteArray1.equals((Object)byteArray3));
+assertFalse(byteArray2.equals((Object)byteArray0));
+assertFalse(byteArray2.equals((Object)byteArray1));
+assertFalse(byteArray2.equals((Object)byteArray3));
+assertFalse(byteArray2.equals((Object)byteArray5));
+assertFalse(byteArray2.equals((Object)byteArray4));
+assertFalse(byteArray2.equals((Object)byteArray6));
+assertFalse(byteArray7.equals((Object)byteArray5));
+assertFalse(byteArray7.equals((Object)byteArray4));
+assertFalse(byteArray7.equals((Object)byteArray0));
+assertFalse(byteArray7.equals((Object)byteArray1));
+assertFalse(byteArray7.equals((Object)byteArray3));
+assertFalse(byteArray7.equals((Object)byteArray6));
+assertNotSame(byteArray0, byteArray3);
+assertNotSame(byteArray0, byteArray1);
+assertNotSame(byteArray0, byteArray2);
+assertNotSame(byteArray0, byteArray6);
+assertNotSame(byteArray0, byteArray7);
+assertNotSame(byteArray0, byteArray4);
+assertNotSame(byteArray0, byteArray5);
+assertNotSame(byteArray1, byteArray7);
+assertNotSame(byteArray1, byteArray5);
+assertNotSame(byteArray1, byteArray4);
+assertNotSame(byteArray1, byteArray6);
+assertNotSame(byteArray1, byteArray2);
+assertNotSame(byteArray1, byteArray0);
+assertNotSame(byteArray1, byteArray3);
+assertSame(byteArray2, byteArray7);
+assertNotSame(byteArray2, byteArray0);
+assertNotSame(byteArray2, byteArray1);
+assertNotSame(byteArray2, byteArray3);
+assertNotSame(byteArray2, byteArray5);
+assertNotSame(byteArray2, byteArray4);
+assertNotSame(byteArray2, byteArray6);
+assertNotSame(byteArray7, byteArray5);
+assertNotSame(byteArray7, byteArray4);
+assertSame(byteArray7, byteArray2);
+assertNotSame(byteArray7, byteArray0);
+assertNotSame(byteArray7, byteArray1);
+assertNotSame(byteArray7, byteArray3);
+assertNotSame(byteArray7, byteArray6);
+assertEquals(1, byteArray0.length);
+assertEquals(1, byteArray1.length);
+assertEquals(0, byteArray2.length);
+assertEquals(0, byteArray7.length);
+assertArrayEquals(new byte[] {(byte)0}, byteArray0);
+assertArrayEquals(new byte[] {(byte)0}, byteArray1);
+assertArrayEquals(new byte[] {}, byteArray2);
+assertArrayEquals(new byte[] {}, byteArray7);
+assertNotNull(byteArray7);
+
+
+[MASTER] 21:17:24.851 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class org.junit.internal.ArrayComparisonFailure: arrays first differed at element [8]; expected:<0> but was:<13>
+[MASTER] 21:17:24.852 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ Base64 base64_0 = new Base64((-596));
+assertEquals(64, Base64.PEM_CHUNK_SIZE);
+assertEquals(76, Base64.MIME_CHUNK_SIZE);
+assertFalse(base64_0.isUrlSafe());
+assertNotNull(base64_0);
+
+byte[] byteArray0 = new byte[5];
+Object object0 = base64_0.decode((Object) "org.apache.commons.codec.DecoderException");
+assertEquals(64, Base64.PEM_CHUNK_SIZE);
+assertEquals(76, Base64.MIME_CHUNK_SIZE);
+assertFalse(base64_0.isUrlSafe());
+assertNotNull(object0);
+
+byte[] byteArray1 = Base64.encodeBase64(byteArray0);
+assertFalse(byteArray0.equals((Object)object0));
+assertFalse(byteArray1.equals((Object)object0));
+assertFalse(byteArray1.equals((Object)byteArray0));
+assertNotSame(byteArray0, object0);
+assertNotSame(byteArray0, byteArray1);
+assertNotSame(byteArray1, object0);
+assertNotSame(byteArray1, byteArray0);
+assertEquals(5, byteArray0.length);
+assertEquals(8, byteArray1.length);
+assertArrayEquals(new byte[] {(byte)0, (byte)0, (byte)0, (byte)0, (byte)0}, byteArray0);
+assertArrayEquals(new byte[] {(byte)65, (byte)65, (byte)65, (byte)65, (byte)65, (byte)65, (byte)65, (byte)61}, byteArray1);
+assertNotNull(byteArray1);
+
+byteArray0[1] = (byte)0;
+byte[] byteArray2 = Base64.encodeBase64URLSafe(byteArray0);
+assertFalse(byteArray0.equals((Object)object0));
+assertFalse(byteArray0.equals((Object)byteArray1));
+assertFalse(byteArray2.equals((Object)byteArray1));
+assertFalse(byteArray2.equals((Object)object0));
+assertFalse(byteArray2.equals((Object)byteArray0));
+assertNotSame(byteArray0, byteArray2);
+assertNotSame(byteArray0, object0);
+assertNotSame(byteArray0, byteArray1);
+assertNotSame(byteArray2, byteArray1);
+assertNotSame(byteArray2, object0);
+assertNotSame(byteArray2, byteArray0);
+assertEquals(5, byteArray0.length);
+assertEquals(7, byteArray2.length);
+assertArrayEquals(new byte[] {(byte)0, (byte)0, (byte)0, (byte)0, (byte)0}, byteArray0);
+assertArrayEquals(new byte[] {(byte)65, (byte)65, (byte)65, (byte)65, (byte)65, (byte)65, (byte)65}, byteArray2);
+assertNotNull(byteArray2);
+
+BigInteger bigInteger0 = Base64.decodeInteger(byteArray1);
+assertFalse(byteArray0.equals((Object)byteArray2));
+assertFalse(byteArray0.equals((Object)object0));
+assertFalse(byteArray0.equals((Object)byteArray1));
+assertFalse(byteArray1.equals((Object)object0));
+assertFalse(byteArray1.equals((Object)byteArray2));
+assertFalse(byteArray1.equals((Object)byteArray0));
+assertNotSame(byteArray0, byteArray2);
+assertNotSame(byteArray0, object0);
+assertNotSame(byteArray0, byteArray1);
+assertNotSame(byteArray1, object0);
+assertNotSame(byteArray1, byteArray2);
+assertNotSame(byteArray1, byteArray0);
+assertEquals(5, byteArray0.length);
+assertEquals(8, byteArray1.length);
+assertArrayEquals(new byte[] {(byte)0, (byte)0, (byte)0, (byte)0, (byte)0}, byteArray0);
+assertArrayEquals(new byte[] {(byte)65, (byte)65, (byte)65, (byte)65, (byte)65, (byte)65, (byte)65, (byte)61}, byteArray1);
+assertEquals((short)0, bigInteger0.shortValue());
+assertEquals((byte)0, bigInteger0.byteValue());
+assertNotNull(bigInteger0);
+
+boolean boolean0 = Base64.isBase64((byte) (-71));
+assertFalse(boolean0);
+
+String string0 = Base64.encodeBase64URLSafeString(byteArray2);
+assertFalse(byteArray0.equals((Object)byteArray2));
+assertFalse(byteArray0.equals((Object)object0));
+assertFalse(byteArray0.equals((Object)byteArray1));
+assertFalse(byteArray2.equals((Object)byteArray1));
+assertFalse(byteArray2.equals((Object)object0));
+assertFalse(byteArray2.equals((Object)byteArray0));
+assertNotSame(byteArray0, byteArray2);
+assertNotSame(byteArray0, object0);
+assertNotSame(byteArray0, byteArray1);
+assertNotSame(byteArray2, byteArray1);
+assertNotSame(byteArray2, object0);
+assertNotSame(byteArray2, byteArray0);
+assertEquals(5, byteArray0.length);
+assertEquals(7, byteArray2.length);
+assertArrayEquals(new byte[] {(byte)0, (byte)0, (byte)0, (byte)0, (byte)0}, byteArray0);
+assertArrayEquals(new byte[] {(byte)65, (byte)65, (byte)65, (byte)65, (byte)65, (byte)65, (byte)65}, byteArray2);
+assertNotNull(string0);
+assertEquals("QUFBQUFBQQ", string0);
+
+byte[] byteArray3 = Base64.encodeBase64(byteArray0, true, false);
+assertFalse(byteArray0.equals((Object)byteArray2));
+assertFalse(byteArray0.equals((Object)object0));
+assertFalse(byteArray0.equals((Object)byteArray1));
+assertFalse(byteArray3.equals((Object)byteArray2));
+assertFalse(byteArray3.equals((Object)byteArray1));
+assertFalse(byteArray3.equals((Object)object0));
+assertFalse(byteArray3.equals((Object)byteArray0));
+assertNotSame(byteArray0, byteArray3);
+assertNotSame(byteArray0, byteArray2);
+assertNotSame(byteArray0, object0);
+assertNotSame(byteArray0, byteArray1);
+assertNotSame(byteArray3, byteArray2);
+assertNotSame(byteArray3, byteArray1);
+assertNotSame(byteArray3, object0);
+assertNotSame(byteArray3, byteArray0);
+assertEquals(5, byteArray0.length);
+assertEquals(10, byteArray3.length);
+assertArrayEquals(new byte[] {(byte)0, (byte)0, (byte)0, (byte)0, (byte)0}, byteArray0);
+assertArrayEquals(new byte[] {(byte)65, (byte)65, (byte)65, (byte)65, (byte)65, (byte)65, (byte)65, (byte)61, (byte)0, (byte)0}, byteArray3);
+assertNotNull(byteArray3);
+
+
+[MASTER] 21:17:24.941 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class org.junit.internal.ArrayComparisonFailure: arrays first differed at element [0]; expected:<0> but was:<13>
+[MASTER] 21:17:24.942 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ byte[] byteArray0 = Base64.CHUNK_SEPARATOR;
+assertEquals(2, byteArray0.length);
+assertArrayEquals(new byte[] {(byte)0, (byte)0}, byteArray0);
+assertNotNull(byteArray0);
+
+Base64 base64_0 = new Base64((-173), byteArray0);
+assertEquals(2, byteArray0.length);
+assertEquals(64, Base64.PEM_CHUNK_SIZE);
+assertEquals(76, Base64.MIME_CHUNK_SIZE);
+assertArrayEquals(new byte[] {(byte)0, (byte)0}, byteArray0);
+assertFalse(base64_0.isUrlSafe());
+assertNotNull(base64_0);
+
+String string0 = base64_0.encodeToString(byteArray0);
+assertEquals(2, byteArray0.length);
+assertEquals(64, Base64.PEM_CHUNK_SIZE);
+assertEquals(76, Base64.MIME_CHUNK_SIZE);
+assertArrayEquals(new byte[] {(byte)0, (byte)0}, byteArray0);
+assertFalse(base64_0.isUrlSafe());
+assertNotNull(string0);
+assertEquals("AAA=", string0);
+
+base64_0.encode(byteArray0, (-173), (-173));
+assertEquals(2, byteArray0.length);
+assertEquals(64, Base64.PEM_CHUNK_SIZE);
+assertEquals(76, Base64.MIME_CHUNK_SIZE);
+assertArrayEquals(new byte[] {(byte)0, (byte)0}, byteArray0);
+assertFalse(base64_0.isUrlSafe());
+
+boolean boolean0 = Base64.isArrayByteBase64(byteArray0);
+assertEquals(2, byteArray0.length);
+assertArrayEquals(new byte[] {(byte)0, (byte)0}, byteArray0);
+assertFalse(boolean0);
+
+
+[MASTER] 21:17:26.718 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class org.junit.internal.ArrayComparisonFailure: arrays first differed at element [2]; expected:<0> but was:<13>
+[MASTER] 21:17:26.722 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ byte[] byteArray0 = new byte[1];
+byteArray0[0] = (byte)0;
+String string0 = Base64.encodeBase64URLSafeString(byteArray0);
+assertEquals(1, byteArray0.length);
+assertArrayEquals(new byte[] {(byte)0}, byteArray0);
+assertNotNull(string0);
+assertEquals("AA", string0);
+
+byte[] byteArray1 = Base64.encodeBase64(byteArray0, true, true);
+assertFalse(byteArray1.equals((Object)byteArray0));
+assertNotSame(byteArray0, byteArray1);
+assertNotSame(byteArray1, byteArray0);
+assertEquals(1, byteArray0.length);
+assertEquals(4, byteArray1.length);
+assertArrayEquals(new byte[] {(byte)0}, byteArray0);
+assertArrayEquals(new byte[] {(byte)65, (byte)65, (byte)0, (byte)0}, byteArray1);
+assertNotNull(byteArray1);
+
+Base64 base64_0 = new Base64((byte)0);
+assertEquals(64, Base64.PEM_CHUNK_SIZE);
+assertEquals(76, Base64.MIME_CHUNK_SIZE);
+assertFalse(base64_0.isUrlSafe());
+assertNotNull(base64_0);
+
+byte[] byteArray2 = base64_0.decode("AA");
+assertFalse(byteArray2.equals((Object)byteArray1));
+assertFalse(byteArray2.equals((Object)byteArray0));
+assertNotSame(byteArray2, byteArray1);
+assertNotSame(byteArray2, byteArray0);
+assertEquals(1, byteArray2.length);
+assertEquals(64, Base64.PEM_CHUNK_SIZE);
+assertEquals(76, Base64.MIME_CHUNK_SIZE);
+assertArrayEquals(new byte[] {(byte)0}, byteArray2);
+assertFalse(base64_0.isUrlSafe());
+assertNotNull(byteArray2);
+
+String string1 = Base64.encodeBase64String(byteArray2);
+assertFalse(byteArray2.equals((Object)byteArray1));
+assertFalse(byteArray2.equals((Object)byteArray0));
+assertFalse(string1.equals((Object)string0));
+assertNotSame(byteArray2, byteArray1);
+assertNotSame(byteArray2, byteArray0);
+assertEquals(1, byteArray2.length);
+assertEquals(64, Base64.PEM_CHUNK_SIZE);
+assertEquals(76, Base64.MIME_CHUNK_SIZE);
+assertArrayEquals(new byte[] {(byte)0}, byteArray2);
+assertFalse(base64_0.isUrlSafe());
+assertNotNull(string1);
+assertEquals("AA==", string1);
+
+base64_0.decode(byteArray0, (int) (byte)0, (-4));
+assertFalse(byteArray0.equals((Object)byteArray2));
+assertFalse(byteArray0.equals((Object)byteArray1));
+assertNotSame(byteArray0, byteArray2);
+assertNotSame(byteArray0, byteArray1);
+assertEquals(1, byteArray0.length);
+assertEquals(64, Base64.PEM_CHUNK_SIZE);
+assertEquals(76, Base64.MIME_CHUNK_SIZE);
+assertArrayEquals(new byte[] {(byte)0}, byteArray0);
+assertFalse(base64_0.isUrlSafe());
+
+byte[] byteArray3 = Base64.decodeBase64("})o'3Z4`");
+assertFalse(byteArray3.equals((Object)byteArray2));
+assertFalse(byteArray3.equals((Object)byteArray0));
+assertFalse(byteArray3.equals((Object)byteArray1));
+assertNotSame(byteArray3, byteArray2);
+assertNotSame(byteArray3, byteArray0);
+assertNotSame(byteArray3, byteArray1);
+assertEquals(3, byteArray3.length);
+assertArrayEquals(new byte[] {(byte) (-93), (byte)118, (byte)120}, byteArray3);
+assertNotNull(byteArray3);
+
+int int0 = base64_0.readResults(byteArray1, (byte)0, (byte)0);
+assertFalse(byteArray0.equals((Object)byteArray3));
+assertFalse(byteArray0.equals((Object)byteArray2));
+assertFalse(byteArray0.equals((Object)byteArray1));
+assertFalse(byteArray1.equals((Object)byteArray0));
+assertFalse(byteArray1.equals((Object)byteArray3));
+assertFalse(byteArray1.equals((Object)byteArray2));
+assertNotSame(byteArray0, byteArray3);
+assertNotSame(byteArray0, byteArray2);
+assertNotSame(byteArray0, byteArray1);
+assertNotSame(byteArray1, byteArray0);
+assertNotSame(byteArray1, byteArray3);
+assertNotSame(byteArray1, byteArray2);
+assertEquals(1, byteArray0.length);
+assertEquals(4, byteArray1.length);
+assertEquals(64, Base64.PEM_CHUNK_SIZE);
+assertEquals(76, Base64.MIME_CHUNK_SIZE);
+assertArrayEquals(new byte[] {(byte)0}, byteArray0);
+assertArrayEquals(new byte[] {(byte)65, (byte)65, (byte)0, (byte)0}, byteArray1);
+assertFalse(base64_0.isUrlSafe());
+assertEquals((-1), int0);
+
+boolean boolean0 = Base64.isArrayByteBase64(byteArray1);
+assertFalse(byteArray0.equals((Object)byteArray3));
+assertFalse(byteArray0.equals((Object)byteArray2));
+assertFalse(byteArray0.equals((Object)byteArray1));
+assertFalse(byteArray1.equals((Object)byteArray0));
+assertFalse(byteArray1.equals((Object)byteArray3));
+assertFalse(byteArray1.equals((Object)byteArray2));
+assertNotSame(byteArray0, byteArray3);
+assertNotSame(byteArray0, byteArray2);
+assertNotSame(byteArray0, byteArray1);
+assertNotSame(byteArray1, byteArray0);
+assertNotSame(byteArray1, byteArray3);
+assertNotSame(byteArray1, byteArray2);
+assertEquals(1, byteArray0.length);
+assertEquals(4, byteArray1.length);
+assertArrayEquals(new byte[] {(byte)0}, byteArray0);
+assertArrayEquals(new byte[] {(byte)65, (byte)65, (byte)0, (byte)0}, byteArray1);
+assertFalse(boolean0);
+
+boolean boolean1 = Base64.isBase64("})o'3Z4`");
+assertTrue(boolean1 == boolean0);
+assertFalse(boolean1);
+
+boolean boolean2 = base64_0.hasData();
+assertTrue(boolean2 == boolean1);
+assertTrue(boolean2 == boolean0);
+assertEquals(64, Base64.PEM_CHUNK_SIZE);
+assertEquals(76, Base64.MIME_CHUNK_SIZE);
+assertFalse(base64_0.isUrlSafe());
+assertFalse(boolean2);
+
+byte[] byteArray4 = Base64.encodeBase64URLSafe(byteArray2);
+assertFalse(byteArray2.equals((Object)byteArray1));
+assertFalse(byteArray2.equals((Object)byteArray3));
+assertFalse(byteArray2.equals((Object)byteArray0));
+assertFalse(byteArray4.equals((Object)byteArray1));
+assertFalse(byteArray4.equals((Object)byteArray3));
+assertFalse(byteArray4.equals((Object)byteArray2));
+assertFalse(byteArray4.equals((Object)byteArray0));
+assertNotSame(byteArray2, byteArray4);
+assertNotSame(byteArray2, byteArray1);
+assertNotSame(byteArray2, byteArray3);
+assertNotSame(byteArray2, byteArray0);
+assertNotSame(byteArray4, byteArray1);
+assertNotSame(byteArray4, byteArray3);
+assertNotSame(byteArray4, byteArray2);
+assertNotSame(byteArray4, byteArray0);
+assertEquals(1, byteArray2.length);
+assertEquals(2, byteArray4.length);
+assertEquals(64, Base64.PEM_CHUNK_SIZE);
+assertEquals(76, Base64.MIME_CHUNK_SIZE);
+assertArrayEquals(new byte[] {(byte)0}, byteArray2);
+assertArrayEquals(new byte[] {(byte)65, (byte)65}, byteArray4);
+assertFalse(base64_0.isUrlSafe());
+assertNotNull(byteArray4);
+
+String string2 = Base64.encodeBase64URLSafeString(byteArray2);
+assertFalse(byteArray2.equals((Object)byteArray4));
+assertFalse(byteArray2.equals((Object)byteArray1));
+assertFalse(byteArray2.equals((Object)byteArray3));
+assertFalse(byteArray2.equals((Object)byteArray0));
+assertFalse(string2.equals((Object)string1));
+assertTrue(string2.equals((Object)string0));
+assertNotSame(byteArray2, byteArray4);
+assertNotSame(byteArray2, byteArray1);
+assertNotSame(byteArray2, byteArray3);
+assertNotSame(byteArray2, byteArray0);
+assertEquals(1, byteArray2.length);
+assertEquals(64, Base64.PEM_CHUNK_SIZE);
+assertEquals(76, Base64.MIME_CHUNK_SIZE);
+assertArrayEquals(new byte[] {(byte)0}, byteArray2);
+assertFalse(base64_0.isUrlSafe());
+assertNotNull(string2);
+assertEquals("AA", string2);
+
+byte[] byteArray5 = base64_0.decode("})o'3Z4`");
+assertFalse(byteArray5.equals((Object)byteArray1));
+assertFalse(byteArray5.equals((Object)byteArray0));
+assertFalse(byteArray5.equals((Object)byteArray4));
+assertFalse(byteArray5.equals((Object)byteArray3));
+assertFalse(byteArray5.equals((Object)byteArray2));
+assertNotSame(byteArray5, byteArray1);
+assertNotSame(byteArray5, byteArray0);
+assertNotSame(byteArray5, byteArray4);
+assertNotSame(byteArray5, byteArray3);
+assertNotSame(byteArray5, byteArray2);
+assertEquals(3, byteArray5.length);
+assertEquals(64, Base64.PEM_CHUNK_SIZE);
+assertEquals(76, Base64.MIME_CHUNK_SIZE);
+assertArrayEquals(new byte[] {(byte) (-93), (byte)118, (byte)120}, byteArray5);
+assertFalse(base64_0.isUrlSafe());
+assertNotNull(byteArray5);
+
+byte[] byteArray6 = Base64.encodeBase64Chunked(byteArray5);
+assertFalse(byteArray6.equals((Object)byteArray3));
+assertFalse(byteArray6.equals((Object)byteArray2));
+assertFalse(byteArray6.equals((Object)byteArray5));
+assertFalse(byteArray6.equals((Object)byteArray0));
+assertFalse(byteArray6.equals((Object)byteArray4));
+assertFalse(byteArray6.equals((Object)byteArray1));
+assertFalse(byteArray5.equals((Object)byteArray1));
+assertFalse(byteArray5.equals((Object)byteArray0));
+assertFalse(byteArray5.equals((Object)byteArray4));
+assertFalse(byteArray5.equals((Object)byteArray3));
+assertFalse(byteArray5.equals((Object)byteArray2));
+assertNotSame(byteArray6, byteArray3);
+assertNotSame(byteArray6, byteArray2);
+assertNotSame(byteArray6, byteArray5);
+assertNotSame(byteArray6, byteArray0);
+assertNotSame(byteArray6, byteArray4);
+assertNotSame(byteArray6, byteArray1);
+assertNotSame(byteArray5, byteArray1);
+assertNotSame(byteArray5, byteArray0);
+assertNotSame(byteArray5, byteArray4);
+assertNotSame(byteArray5, byteArray3);
+assertNotSame(byteArray5, byteArray6);
+assertNotSame(byteArray5, byteArray2);
+assertEquals(6, byteArray6.length);
+assertEquals(3, byteArray5.length);
+assertEquals(64, Base64.PEM_CHUNK_SIZE);
+assertEquals(76, Base64.MIME_CHUNK_SIZE);
+assertArrayEquals(new byte[] {(byte)111, (byte)51, (byte)90, (byte)52, (byte)0, (byte)0}, byteArray6);
+assertArrayEquals(new byte[] {(byte) (-93), (byte)118, (byte)120}, byteArray5);
+assertFalse(base64_0.isUrlSafe());
+assertNotNull(byteArray6);
+
+byte[] byteArray7 = base64_0.encode((byte[]) null);
+assertEquals(64, Base64.PEM_CHUNK_SIZE);
+assertEquals(76, Base64.MIME_CHUNK_SIZE);
+assertFalse(base64_0.isUrlSafe());
+assertNull(byteArray7);
+
+base64_0.encode((byte[]) null, (-41), (-1));
+assertEquals(64, Base64.PEM_CHUNK_SIZE);
+assertEquals(76, Base64.MIME_CHUNK_SIZE);
+assertFalse(base64_0.isUrlSafe());
+
+String string3 = Base64.encodeBase64URLSafeString(byteArray0);
+assertFalse(byteArray0.equals((Object)byteArray3));
+assertFalse(byteArray0.equals((Object)byteArray2));
+assertFalse(byteArray0.equals((Object)byteArray1));
+assertFalse(byteArray0.equals((Object)byteArray5));
+assertFalse(byteArray0.equals((Object)byteArray4));
+assertFalse(byteArray0.equals((Object)byteArray6));
+assertTrue(string3.equals((Object)string2));
+assertFalse(string3.equals((Object)string1));
+assertTrue(string3.equals((Object)string0));
+assertNotSame(byteArray0, byteArray3);
+assertNotSame(byteArray0, byteArray2);
+assertNotSame(byteArray0, byteArray1);
+assertNotSame(byteArray0, byteArray5);
+assertNotSame(byteArray0, byteArray4);
+assertNotSame(byteArray0, byteArray6);
+assertEquals(1, byteArray0.length);
+assertArrayEquals(new byte[] {(byte)0}, byteArray0);
+assertNotNull(string3);
+assertEquals("AA", string3);
+
+
+[MASTER] 21:17:27.078 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class org.junit.internal.ArrayComparisonFailure: arrays first differed at element [2]; expected:<0> but was:<13>
+[MASTER] 21:17:27.081 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ byte[] byteArray0 = new byte[1];
+String string0 = Base64.encodeBase64URLSafeString(byteArray0);
+assertEquals(1, byteArray0.length);
+assertArrayEquals(new byte[] {(byte)0}, byteArray0);
+assertNotNull(string0);
+assertEquals("AA", string0);
+
+byte[] byteArray1 = Base64.encodeBase64(byteArray0, true, true);
+assertFalse(byteArray1.equals((Object)byteArray0));
+assertNotSame(byteArray0, byteArray1);
+assertNotSame(byteArray1, byteArray0);
+assertEquals(1, byteArray0.length);
+assertEquals(4, byteArray1.length);
+assertArrayEquals(new byte[] {(byte)0}, byteArray0);
+assertArrayEquals(new byte[] {(byte)65, (byte)65, (byte)0, (byte)0}, byteArray1);
+assertNotNull(byteArray1);
+
+Base64 base64_0 = new Base64(27);
+assertEquals(64, Base64.PEM_CHUNK_SIZE);
+assertEquals(76, Base64.MIME_CHUNK_SIZE);
+assertFalse(base64_0.isUrlSafe());
+assertNotNull(base64_0);
+
+byte[] byteArray2 = base64_0.decode("org.apache.commons.codec.binary.StringUtils");
+assertFalse(byteArray2.equals((Object)byteArray0));
+assertFalse(byteArray2.equals((Object)byteArray1));
+assertNotSame(byteArray2, byteArray0);
+assertNotSame(byteArray2, byteArray1);
+assertEquals(28, byteArray2.length);
+assertEquals(64, Base64.PEM_CHUNK_SIZE);
+assertEquals(76, Base64.MIME_CHUNK_SIZE);
+assertFalse(base64_0.isUrlSafe());
+assertNotNull(byteArray2);
+
+String string1 = Base64.encodeBase64String(byteArray1);
+assertFalse(byteArray0.equals((Object)byteArray1));
+assertFalse(byteArray0.equals((Object)byteArray2));
+assertFalse(byteArray1.equals((Object)byteArray0));
+assertFalse(byteArray1.equals((Object)byteArray2));
+assertFalse(string1.equals((Object)string0));
+assertNotSame(byteArray0, byteArray1);
+assertNotSame(byteArray0, byteArray2);
+assertNotSame(byteArray1, byteArray0);
+assertNotSame(byteArray1, byteArray2);
+assertEquals(1, byteArray0.length);
+assertEquals(4, byteArray1.length);
+assertArrayEquals(new byte[] {(byte)0}, byteArray0);
+assertArrayEquals(new byte[] {(byte)65, (byte)65, (byte)0, (byte)0}, byteArray1);
+assertNotNull(string1);
+assertEquals("QUEAAA==", string1);
+
+base64_0.decode(byteArray2, 869, 1);
+assertFalse(byteArray2.equals((Object)byteArray0));
+assertFalse(byteArray2.equals((Object)byteArray1));
+assertNotSame(byteArray2, byteArray0);
+assertNotSame(byteArray2, byteArray1);
+assertEquals(28, byteArray2.length);
+assertEquals(64, Base64.PEM_CHUNK_SIZE);
+assertEquals(76, Base64.MIME_CHUNK_SIZE);
+assertFalse(base64_0.isUrlSafe());
+
+byte[] byteArray3 = Base64.decodeBase64("T`X>k*<,\"2j.5>|M::");
+assertFalse(byteArray3.equals((Object)byteArray2));
+assertFalse(byteArray3.equals((Object)byteArray1));
+assertFalse(byteArray3.equals((Object)byteArray0));
+assertNotSame(byteArray3, byteArray2);
+assertNotSame(byteArray3, byteArray1);
+assertNotSame(byteArray3, byteArray0);
+assertEquals(5, byteArray3.length);
+assertArrayEquals(new byte[] {(byte)77, (byte)121, (byte)54, (byte) (-113), (byte) (-109)}, byteArray3);
+assertNotNull(byteArray3);
+
+int int0 = base64_0.readResults(byteArray0, 641, 1);
+assertFalse(byteArray0.equals((Object)byteArray3));
+assertFalse(byteArray0.equals((Object)byteArray1));
+assertFalse(byteArray0.equals((Object)byteArray2));
+assertNotSame(byteArray0, byteArray3);
+assertNotSame(byteArray0, byteArray1);
+assertNotSame(byteArray0, byteArray2);
+assertEquals(1, byteArray0.length);
+assertEquals(64, Base64.PEM_CHUNK_SIZE);
+assertEquals(76, Base64.MIME_CHUNK_SIZE);
+assertArrayEquals(new byte[] {(byte)0}, byteArray0);
+assertFalse(base64_0.isUrlSafe());
+assertEquals((-1), int0);
+
+boolean boolean0 = Base64.isArrayByteBase64(byteArray1);
+assertFalse(byteArray0.equals((Object)byteArray3));
+assertFalse(byteArray0.equals((Object)byteArray1));
+assertFalse(byteArray0.equals((Object)byteArray2));
+assertFalse(byteArray1.equals((Object)byteArray0));
+assertFalse(byteArray1.equals((Object)byteArray2));
+assertFalse(byteArray1.equals((Object)byteArray3));
+assertNotSame(byteArray0, byteArray3);
+assertNotSame(byteArray0, byteArray1);
+assertNotSame(byteArray0, byteArray2);
+assertNotSame(byteArray1, byteArray0);
+assertNotSame(byteArray1, byteArray2);
+assertNotSame(byteArray1, byteArray3);
+assertEquals(1, byteArray0.length);
+assertEquals(4, byteArray1.length);
+assertArrayEquals(new byte[] {(byte)0}, byteArray0);
+assertArrayEquals(new byte[] {(byte)65, (byte)65, (byte)0, (byte)0}, byteArray1);
+assertFalse(boolean0);
+
+boolean boolean1 = Base64.isBase64("");
+assertFalse(boolean1 == boolean0);
+assertTrue(boolean1);
+
+boolean boolean2 = base64_0.hasData();
+assertTrue(boolean2 == boolean0);
+assertFalse(boolean2 == boolean1);
+assertEquals(64, Base64.PEM_CHUNK_SIZE);
+assertEquals(76, Base64.MIME_CHUNK_SIZE);
+assertFalse(base64_0.isUrlSafe());
+assertFalse(boolean2);
+
+byte[] byteArray4 = Base64.encodeBase64URLSafe(byteArray3);
+assertFalse(byteArray3.equals((Object)byteArray2));
+assertFalse(byteArray3.equals((Object)byteArray1));
+assertFalse(byteArray3.equals((Object)byteArray0));
+assertFalse(byteArray4.equals((Object)byteArray1));
+assertFalse(byteArray4.equals((Object)byteArray2));
+assertFalse(byteArray4.equals((Object)byteArray3));
+assertFalse(byteArray4.equals((Object)byteArray0));
+assertNotSame(byteArray3, byteArray2);
+assertNotSame(byteArray3, byteArray1);
+assertNotSame(byteArray3, byteArray4);
+assertNotSame(byteArray3, byteArray0);
+assertNotSame(byteArray4, byteArray1);
+assertNotSame(byteArray4, byteArray2);
+assertNotSame(byteArray4, byteArray3);
+assertNotSame(byteArray4, byteArray0);
+assertEquals(5, byteArray3.length);
+assertEquals(7, byteArray4.length);
+assertArrayEquals(new byte[] {(byte)77, (byte)121, (byte)54, (byte) (-113), (byte) (-109)}, byteArray3);
+assertArrayEquals(new byte[] {(byte)84, (byte)88, (byte)107, (byte)50, (byte)106, (byte)53, (byte)77}, byteArray4);
+assertNotNull(byteArray4);
+
+String string2 = Base64.encodeBase64URLSafeString(byteArray2);
+assertFalse(byteArray2.equals((Object)byteArray3));
+assertFalse(byteArray2.equals((Object)byteArray0));
+assertFalse(byteArray2.equals((Object)byteArray4));
+assertFalse(byteArray2.equals((Object)byteArray1));
+assertFalse(string2.equals((Object)string1));
+assertFalse(string2.equals((Object)string0));
+assertNotSame(byteArray2, byteArray3);
+assertNotSame(byteArray2, byteArray0);
+assertNotSame(byteArray2, byteArray4);
+assertNotSame(byteArray2, byteArray1);
+assertEquals(28, byteArray2.length);
+assertEquals(64, Base64.PEM_CHUNK_SIZE);
+assertEquals(76, Base64.MIME_CHUNK_SIZE);
+assertFalse(base64_0.isUrlSafe());
+assertNotNull(string2);
+assertEquals("orgapachecommonscodecbinaryStringUtilg", string2);
+
+byte[] byteArray5 = base64_0.decode("orgapachecommonscodecbinaryStringUtilg");
+assertFalse(byteArray5.equals((Object)byteArray2));
+assertFalse(byteArray5.equals((Object)byteArray0));
+assertFalse(byteArray5.equals((Object)byteArray3));
+assertFalse(byteArray5.equals((Object)byteArray4));
+assertFalse(byteArray5.equals((Object)byteArray1));
+assertNotSame(byteArray5, byteArray2);
+assertNotSame(byteArray5, byteArray0);
+assertNotSame(byteArray5, byteArray3);
+assertNotSame(byteArray5, byteArray4);
+assertNotSame(byteArray5, byteArray1);
+assertEquals(28, byteArray5.length);
+assertEquals(64, Base64.PEM_CHUNK_SIZE);
+assertEquals(76, Base64.MIME_CHUNK_SIZE);
+assertFalse(base64_0.isUrlSafe());
+assertNotNull(byteArray5);
+
+byte[] byteArray6 = Base64.encodeBase64Chunked(byteArray0);
+assertFalse(byteArray0.equals((Object)byteArray3));
+assertFalse(byteArray0.equals((Object)byteArray4));
+assertFalse(byteArray0.equals((Object)byteArray1));
+assertFalse(byteArray0.equals((Object)byteArray2));
+assertFalse(byteArray0.equals((Object)byteArray5));
+assertFalse(byteArray6.equals((Object)byteArray2));
+assertFalse(byteArray6.equals((Object)byteArray0));
+assertFalse(byteArray6.equals((Object)byteArray3));
+assertFalse(byteArray6.equals((Object)byteArray4));
+assertFalse(byteArray6.equals((Object)byteArray5));
+assertFalse(byteArray6.equals((Object)byteArray1));
+assertNotSame(byteArray0, byteArray3);
+assertNotSame(byteArray0, byteArray4);
+assertNotSame(byteArray0, byteArray1);
+assertNotSame(byteArray0, byteArray6);
+assertNotSame(byteArray0, byteArray2);
+assertNotSame(byteArray0, byteArray5);
+assertNotSame(byteArray6, byteArray2);
+assertNotSame(byteArray6, byteArray0);
+assertNotSame(byteArray6, byteArray3);
+assertNotSame(byteArray6, byteArray4);
+assertNotSame(byteArray6, byteArray5);
+assertNotSame(byteArray6, byteArray1);
+assertEquals(1, byteArray0.length);
+assertEquals(6, byteArray6.length);
+assertArrayEquals(new byte[] {(byte)0}, byteArray0);
+assertArrayEquals(new byte[] {(byte)65, (byte)65, (byte)61, (byte)61, (byte)0, (byte)0}, byteArray6);
+assertNotNull(byteArray6);
+
+BigInteger bigInteger0 = Base64.decodeInteger(byteArray3);
+assertFalse(byteArray3.equals((Object)byteArray5));
+assertFalse(byteArray3.equals((Object)byteArray2));
+assertFalse(byteArray3.equals((Object)byteArray1));
+assertFalse(byteArray3.equals((Object)byteArray6));
+assertFalse(byteArray3.equals((Object)byteArray4));
+assertFalse(byteArray3.equals((Object)byteArray0));
+assertNotSame(byteArray3, byteArray5);
+assertNotSame(byteArray3, byteArray2);
+assertNotSame(byteArray3, byteArray1);
+assertNotSame(byteArray3, byteArray6);
+assertNotSame(byteArray3, byteArray4);
+assertNotSame(byteArray3, byteArray0);
+assertEquals(5, byteArray3.length);
+assertArrayEquals(new byte[] {(byte)77, (byte)121, (byte)54, (byte) (-113), (byte) (-109)}, byteArray3);
+assertEquals((short)13102, bigInteger0.shortValue());
+assertEquals((byte)46, bigInteger0.byteValue());
+assertNotNull(bigInteger0);
+
+int int1 = base64_0.readResults(byteArray2, 609, (-1109));
+assertTrue(int1 == int0);
+assertFalse(byteArray2.equals((Object)byteArray6));
+assertFalse(byteArray2.equals((Object)byteArray5));
+assertFalse(byteArray2.equals((Object)byteArray3));
+assertFalse(byteArray2.equals((Object)byteArray0));
+assertFalse(byteArray2.equals((Object)byteArray4));
+assertFalse(byteArray2.equals((Object)byteArray1));
+assertNotSame(byteArray2, byteArray6);
+assertNotSame(byteArray2, byteArray5);
+assertNotSame(byteArray2, byteArray3);
+assertNotSame(byteArray2, byteArray0);
+assertNotSame(byteArray2, byteArray4);
+assertNotSame(byteArray2, byteArray1);
+assertEquals(28, byteArray2.length);
+assertEquals(64, Base64.PEM_CHUNK_SIZE);
+assertEquals(76, Base64.MIME_CHUNK_SIZE);
+assertFalse(base64_0.isUrlSafe());
+assertEquals((-1), int1);
+
+
+[MASTER] 21:17:27.256 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class org.junit.internal.ArrayComparisonFailure: arrays first differed at element [8]; expected:<0> but was:<13>
+[MASTER] 21:17:27.259 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ boolean boolean0 = Base64.isBase64((byte)0);
+assertFalse(boolean0);
+
+byte[] byteArray0 = new byte[9];
+byteArray0[0] = (byte)0;
+byteArray0[1] = (byte)0;
+byteArray0[2] = (byte)0;
+byteArray0[3] = (byte)121;
+byteArray0[4] = (byte)63;
+byteArray0[5] = (byte)0;
+byteArray0[6] = (byte)0;
+byteArray0[7] = (byte)0;
+byteArray0[8] = (byte)95;
+byte[] byteArray1 = Base64.discardWhitespace(byteArray0);
+assertFalse(byteArray1.equals((Object)byteArray0));
+assertNotSame(byteArray0, byteArray1);
+assertNotSame(byteArray1, byteArray0);
+assertEquals(9, byteArray0.length);
+assertEquals(9, byteArray1.length);
+assertArrayEquals(new byte[] {(byte)0, (byte)0, (byte)0, (byte)121, (byte)63, (byte)0, (byte)0, (byte)0, (byte)95}, byteArray0);
+assertArrayEquals(new byte[] {(byte)0, (byte)0, (byte)0, (byte)121, (byte)63, (byte)0, (byte)0, (byte)0, (byte)95}, byteArray1);
+assertNotNull(byteArray1);
+
+boolean boolean1 = Base64.isBase64(byteArray0);
+assertFalse(byteArray0.equals((Object)byteArray1));
+assertTrue(boolean1 == boolean0);
+assertNotSame(byteArray0, byteArray1);
+assertEquals(9, byteArray0.length);
+assertArrayEquals(new byte[] {(byte)0, (byte)0, (byte)0, (byte)121, (byte)63, (byte)0, (byte)0, (byte)0, (byte)95}, byteArray0);
+assertFalse(boolean1);
+
+byte[] byteArray2 = Base64.decodeBase64(byteArray1);
+assertFalse(byteArray0.equals((Object)byteArray1));
+assertFalse(byteArray1.equals((Object)byteArray0));
+assertFalse(byteArray2.equals((Object)byteArray1));
+assertFalse(byteArray2.equals((Object)byteArray0));
+assertNotSame(byteArray0, byteArray2);
+assertNotSame(byteArray0, byteArray1);
+assertNotSame(byteArray1, byteArray2);
+assertNotSame(byteArray1, byteArray0);
+assertNotSame(byteArray2, byteArray1);
+assertNotSame(byteArray2, byteArray0);
+assertEquals(9, byteArray0.length);
+assertEquals(9, byteArray1.length);
+assertEquals(1, byteArray2.length);
+assertArrayEquals(new byte[] {(byte)0, (byte)0, (byte)0, (byte)121, (byte)63, (byte)0, (byte)0, (byte)0, (byte)95}, byteArray0);
+assertArrayEquals(new byte[] {(byte)0, (byte)0, (byte)0, (byte)121, (byte)63, (byte)0, (byte)0, (byte)0, (byte)95}, byteArray1);
+assertArrayEquals(new byte[] {(byte) (-53)}, byteArray2);
+assertNotNull(byteArray2);
+
+byte[] byteArray3 = Base64.encodeBase64URLSafe(byteArray1);
+assertFalse(byteArray0.equals((Object)byteArray2));
+assertFalse(byteArray0.equals((Object)byteArray1));
+assertFalse(byteArray1.equals((Object)byteArray2));
+assertFalse(byteArray1.equals((Object)byteArray0));
+assertFalse(byteArray3.equals((Object)byteArray1));
+assertFalse(byteArray3.equals((Object)byteArray0));
+assertFalse(byteArray3.equals((Object)byteArray2));
+assertNotSame(byteArray0, byteArray2);
+assertNotSame(byteArray0, byteArray1);
+assertNotSame(byteArray0, byteArray3);
+assertNotSame(byteArray1, byteArray2);
+assertNotSame(byteArray1, byteArray0);
+assertNotSame(byteArray1, byteArray3);
+assertNotSame(byteArray3, byteArray1);
+assertNotSame(byteArray3, byteArray0);
+assertNotSame(byteArray3, byteArray2);
+assertEquals(9, byteArray0.length);
+assertEquals(9, byteArray1.length);
+assertEquals(12, byteArray3.length);
+assertArrayEquals(new byte[] {(byte)0, (byte)0, (byte)0, (byte)121, (byte)63, (byte)0, (byte)0, (byte)0, (byte)95}, byteArray0);
+assertArrayEquals(new byte[] {(byte)0, (byte)0, (byte)0, (byte)121, (byte)63, (byte)0, (byte)0, (byte)0, (byte)95}, byteArray1);
+assertNotNull(byteArray3);
+
+byte[] byteArray4 = Base64.decodeBase64((byte[]) null);
+assertNull(byteArray4);
+
+byte[] byteArray5 = new byte[4];
+assertFalse(byteArray5.equals((Object)byteArray0));
+assertFalse(byteArray5.equals((Object)byteArray3));
+assertFalse(byteArray5.equals((Object)byteArray1));
+assertFalse(byteArray5.equals((Object)byteArray2));
+
+byteArray5[0] = (byte)17;
+byteArray5[1] = (byte)0;
+byteArray5[2] = (byte)95;
+byteArray5[3] = (byte)121;
+byte[] byteArray6 = Base64.encodeBase64(byteArray5, true);
+assertFalse(byteArray5.equals((Object)byteArray0));
+assertFalse(byteArray5.equals((Object)byteArray3));
+assertFalse(byteArray5.equals((Object)byteArray1));
+assertFalse(byteArray5.equals((Object)byteArray2));
+assertFalse(byteArray6.equals((Object)byteArray5));
+assertFalse(byteArray6.equals((Object)byteArray0));
+assertFalse(byteArray6.equals((Object)byteArray3));
+assertFalse(byteArray6.equals((Object)byteArray1));
+assertFalse(byteArray6.equals((Object)byteArray2));
+assertNotSame(byteArray5, byteArray0);
+assertNotSame(byteArray5, byteArray3);
+assertNotSame(byteArray5, byteArray1);
+assertNotSame(byteArray5, byteArray6);
+assertNotSame(byteArray5, byteArray2);
+assertNotSame(byteArray6, byteArray5);
+assertNotSame(byteArray6, byteArray0);
+assertNotSame(byteArray6, byteArray3);
+assertNotSame(byteArray6, byteArray1);
+assertNotSame(byteArray6, byteArray2);
+assertEquals(4, byteArray5.length);
+assertEquals(10, byteArray6.length);
+assertArrayEquals(new byte[] {(byte)17, (byte)0, (byte)95, (byte)121}, byteArray5);
+assertArrayEquals(new byte[] {(byte)69, (byte)81, (byte)66, (byte)102, (byte)101, (byte)81, (byte)61, (byte)61, (byte)0, (byte)0}, byteArray6);
+assertNotNull(byteArray6);
+
+Base64 base64_0 = new Base64();
+assertEquals(76, Base64.MIME_CHUNK_SIZE);
+assertEquals(64, Base64.PEM_CHUNK_SIZE);
+assertFalse(base64_0.isUrlSafe());
+assertNotNull(base64_0);
+
+byte[] byteArray7 = new byte[2];
+assertFalse(byteArray7.equals((Object)byteArray3));
+assertFalse(byteArray7.equals((Object)byteArray0));
+assertFalse(byteArray7.equals((Object)byteArray6));
+assertFalse(byteArray7.equals((Object)byteArray5));
+assertFalse(byteArray7.equals((Object)byteArray1));
+assertFalse(byteArray7.equals((Object)byteArray2));
+
+byteArray7[0] = (byte) (-71);
+byteArray7[1] = (byte)95;
+byte[] byteArray8 = Base64.encodeBase64URLSafe(byteArray7);
+assertFalse(byteArray7.equals((Object)byteArray3));
+assertFalse(byteArray7.equals((Object)byteArray0));
+assertFalse(byteArray7.equals((Object)byteArray6));
+assertFalse(byteArray7.equals((Object)byteArray5));
+assertFalse(byteArray7.equals((Object)byteArray1));
+assertFalse(byteArray7.equals((Object)byteArray2));
+assertFalse(byteArray8.equals((Object)byteArray6));
+assertFalse(byteArray8.equals((Object)byteArray3));
+assertFalse(byteArray8.equals((Object)byteArray0));
+assertFalse(byteArray8.equals((Object)byteArray7));
+assertFalse(byteArray8.equals((Object)byteArray2));
+assertFalse(byteArray8.equals((Object)byteArray5));
+assertFalse(byteArray8.equals((Object)byteArray1));
+assertNotSame(byteArray7, byteArray3);
+assertNotSame(byteArray7, byteArray0);
+assertNotSame(byteArray7, byteArray6);
+assertNotSame(byteArray7, byteArray5);
+assertNotSame(byteArray7, byteArray1);
+assertNotSame(byteArray7, byteArray2);
+assertNotSame(byteArray7, byteArray8);
+assertNotSame(byteArray8, byteArray6);
+assertNotSame(byteArray8, byteArray3);
+assertNotSame(byteArray8, byteArray0);
+assertNotSame(byteArray8, byteArray7);
+assertNotSame(byteArray8, byteArray2);
+assertNotSame(byteArray8, byteArray5);
+assertNotSame(byteArray8, byteArray1);
+assertEquals(2, byteArray7.length);
+assertEquals(3, byteArray8.length);
+assertArrayEquals(new byte[] {(byte) (-71), (byte)95}, byteArray7);
+assertArrayEquals(new byte[] {(byte)117, (byte)86, (byte)56}, byteArray8);
+assertNotNull(byteArray8);
+
+BigInteger bigInteger0 = Base64.decodeInteger(byteArray3);
+assertFalse(byteArray0.equals((Object)byteArray8));
+assertFalse(byteArray0.equals((Object)byteArray7));
+assertFalse(byteArray0.equals((Object)byteArray2));
+assertFalse(byteArray0.equals((Object)byteArray1));
+assertFalse(byteArray0.equals((Object)byteArray6));
+assertFalse(byteArray0.equals((Object)byteArray3));
+assertFalse(byteArray0.equals((Object)byteArray5));
+assertFalse(byteArray1.equals((Object)byteArray7));
+assertFalse(byteArray1.equals((Object)byteArray6));
+assertFalse(byteArray1.equals((Object)byteArray2));
+assertFalse(byteArray1.equals((Object)byteArray5));
+assertFalse(byteArray1.equals((Object)byteArray0));
+assertFalse(byteArray1.equals((Object)byteArray3));
+assertFalse(byteArray1.equals((Object)byteArray8));
+assertFalse(byteArray3.equals((Object)byteArray6));
+assertFalse(byteArray3.equals((Object)byteArray1));
+assertFalse(byteArray3.equals((Object)byteArray0));
+assertFalse(byteArray3.equals((Object)byteArray8));
+assertFalse(byteArray3.equals((Object)byteArray5));
+assertFalse(byteArray3.equals((Object)byteArray7));
+assertFalse(byteArray3.equals((Object)byteArray2));
+assertNotSame(byteArray0, byteArray8);
+assertNotSame(byteArray0, byteArray7);
+assertNotSame(byteArray0, byteArray2);
+assertNotSame(byteArray0, byteArray1);
+assertNotSame(byteArray0, byteArray6);
+assertNotSame(byteArray0, byteArray3);
+assertNotSame(byteArray0, byteArray5);
+assertNotSame(byteArray1, byteArray7);
+assertNotSame(byteArray1, byteArray6);
+assertNotSame(byteArray1, byteArray2);
+assertNotSame(byteArray1, byteArray5);
+assertNotSame(byteArray1, byteArray0);
+assertNotSame(byteArray1, byteArray3);
+assertNotSame(byteArray1, byteArray8);
+assertNotSame(byteArray3, byteArray6);
+assertNotSame(byteArray3, byteArray1);
+assertNotSame(byteArray3, byteArray0);
+assertNotSame(byteArray3, byteArray8);
+assertNotSame(byteArray3, byteArray5);
+assertNotSame(byteArray3, byteArray7);
+assertNotSame(byteArray3, byteArray2);
+assertEquals(9, byteArray0.length);
+assertEquals(9, byteArray1.length);
+assertEquals(12, byteArray3.length);
+assertArrayEquals(new byte[] {(byte)0, (byte)0, (byte)0, (byte)121, (byte)63, (byte)0, (byte)0, (byte)0, (byte)95}, byteArray0);
+assertArrayEquals(new byte[] {(byte)0, (byte)0, (byte)0, (byte)121, (byte)63, (byte)0, (byte)0, (byte)0, (byte)95}, byteArray1);
+assertEquals((short)95, bigInteger0.shortValue());
+assertEquals((byte)95, bigInteger0.byteValue());
+assertNotNull(bigInteger0);
+
+boolean boolean2 = Base64.isBase64((byte)0);
+assertTrue(boolean2 == boolean1);
+assertTrue(boolean2 == boolean0);
+assertFalse(boolean2);
+
+String string0 = Base64.encodeBase64URLSafeString((byte[]) null);
+assertNull(string0);
+
+byte[] byteArray9 = Base64.encodeBase64(byteArray1, true, false);
+assertFalse(byteArray0.equals((Object)byteArray8));
+assertFalse(byteArray0.equals((Object)byteArray7));
+assertFalse(byteArray0.equals((Object)byteArray2));
+assertFalse(byteArray0.equals((Object)byteArray1));
+assertFalse(byteArray0.equals((Object)byteArray6));
+assertFalse(byteArray0.equals((Object)byteArray3));
+assertFalse(byteArray0.equals((Object)byteArray5));
+assertFalse(byteArray1.equals((Object)byteArray7));
+assertFalse(byteArray1.equals((Object)byteArray6));
+assertFalse(byteArray1.equals((Object)byteArray2));
+assertFalse(byteArray1.equals((Object)byteArray5));
+assertFalse(byteArray1.equals((Object)byteArray0));
+assertFalse(byteArray1.equals((Object)byteArray3));
+assertFalse(byteArray1.equals((Object)byteArray8));
+assertFalse(byteArray9.equals((Object)byteArray2));
+assertFalse(byteArray9.equals((Object)byteArray8));
+assertFalse(byteArray9.equals((Object)byteArray7));
+assertFalse(byteArray9.equals((Object)byteArray1));
+assertFalse(byteArray9.equals((Object)byteArray3));
+assertFalse(byteArray9.equals((Object)byteArray6));
+assertFalse(byteArray9.equals((Object)byteArray5));
+assertFalse(byteArray9.equals((Object)byteArray0));
+assertNotSame(byteArray0, byteArray8);
+assertNotSame(byteArray0, byteArray7);
+assertNotSame(byteArray0, byteArray9);
+assertNotSame(byteArray0, byteArray2);
+assertNotSame(byteArray0, byteArray1);
+assertNotSame(byteArray0, byteArray6);
+assertNotSame(byteArray0, byteArray3);
+assertNotSame(byteArray0, byteArray5);
+assertNotSame(byteArray1, byteArray7);
+assertNotSame(byteArray1, byteArray9);
+assertNotSame(byteArray1, byteArray6);
+assertNotSame(byteArray1, byteArray2);
+assertNotSame(byteArray1, byteArray5);
+assertNotSame(byteArray1, byteArray0);
+assertNotSame(byteArray1, byteArray3);
+assertNotSame(byteArray1, byteArray8);
+assertNotSame(byteArray9, byteArray2);
+assertNotSame(byteArray9, byteArray8);
+assertNotSame(byteArray9, byteArray7);
+assertNotSame(byteArray9, byteArray1);
+assertNotSame(byteArray9, byteArray3);
+assertNotSame(byteArray9, byteArray6);
+assertNotSame(byteArray9, byteArray5);
+assertNotSame(byteArray9, byteArray0);
+assertEquals(9, byteArray0.length);
+assertEquals(9, byteArray1.length);
+assertEquals(14, byteArray9.length);
+assertArrayEquals(new byte[] {(byte)0, (byte)0, (byte)0, (byte)121, (byte)63, (byte)0, (byte)0, (byte)0, (byte)95}, byteArray0);
+assertArrayEquals(new byte[] {(byte)0, (byte)0, (byte)0, (byte)121, (byte)63, (byte)0, (byte)0, (byte)0, (byte)95}, byteArray1);
+assertNotNull(byteArray9);
+
+
+* Permissions denied during test execution: 
+  - java.lang.RuntimePermission: 
+         writeFileDescriptor: 9
+* Writing tests to file
+* Writing JUnit test case 'Base64_ESTest' to results/Codec-9/org.apache.commons.codec.binary.Base64/default/tests/11
+* Done!
+
+* Computation finished

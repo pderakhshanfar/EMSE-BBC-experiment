@@ -1,0 +1,760 @@
+* EvoSuite 1.1.1-SNAPSHOT
+* Configuration: BBC-F0-50
+* Going to generate test cases for class: com.google.javascript.jscomp.TypeInference
+* Starting Client-0
+* Connecting to master process on port 9321
+* Analyzing classpath: 
+  - subjects/buggy-versions/Closure-176/build/classes
+  - subjects/buggy-versions/Closure-176/lib/args4j.jar
+  - subjects/buggy-versions/Closure-176/lib/guava.jar
+  - subjects/buggy-versions/Closure-176/lib/json.jar
+  - subjects/buggy-versions/Closure-176/lib/jsr305.jar
+  - subjects/buggy-versions/Closure-176/lib/protobuf-java.jar
+  - subjects/buggy-versions/Closure-176/build/lib/rhino.jar
+  - subjects/buggy-versions/Closure-176/lib/ant.jar
+* Finished analyzing classpath
+* Generating tests for class com.google.javascript.jscomp.TypeInference
+* Test criteria:
+  - Line Coverage
+  - Branch Coverage
+  - Exception
+  - Mutation testing (weak)
+  - Method-Output Coverage
+  - Top-Level Method Coverage
+  - No-Exception Top-Level Method Coverage
+  - Context Branch Coverage
+* Total number of test goals for DYNAMOSA: 3073
+* Using seed 2988059853
+* Starting evolution
+bbc usage percentage is: 50%
+* Initial Number of Goals in DynaMOSA = 890 / 3073
+[MASTER] 17:26:04.354 [logback-2] ERROR TestCluster - Failed to check cache for java.util.Comparator<T> : Type points to itself
+[MASTER] 17:26:05.150 [logback-2] ERROR TestCluster - Failed to check cache for java.util.Iterator<E> : Type points to itself
+[MASTER] 17:27:02.649 [logback-2] ERROR TestCluster - Failed to check cache for java.util.Enumeration<E> : Type points to itself
+* Search finished after 601s and 1015 generations, 768654 statements, best individual has fitness: 1882.0
+* Minimizing test suite
+* Going to analyze the coverage criteria
+* Coverage analysis for criterion LINE
+* Coverage of criterion LINE: 38%
+* Total number of goals: 619
+* Number of covered goals: 235
+* Coverage analysis for criterion BRANCH
+* Coverage of criterion BRANCH: 47%
+* Total number of goals: 793
+* Number of covered goals: 376
+* Coverage analysis for criterion EXCEPTION
+* Coverage of criterion EXCEPTION: 92%
+* Total number of goals: 12
+* Number of covered goals: 11
+* Coverage analysis for criterion WEAKMUTATION
+* Coverage of criterion WEAKMUTATION: 24%
+* Total number of goals: 836
+* Number of covered goals: 199
+* Coverage analysis for criterion OUTPUT
+* Coverage of criterion OUTPUT: 57%
+* Total number of goals: 14
+* Number of covered goals: 8
+* Coverage analysis for criterion METHOD
+* Coverage of criterion METHOD: 67%
+* Total number of goals: 9
+* Number of covered goals: 6
+* Coverage analysis for criterion METHODNOEXCEPTION
+* Coverage of criterion METHODNOEXCEPTION: 67%
+* Total number of goals: 9
+* Number of covered goals: 6
+* Coverage analysis for criterion CBRANCH
+* Coverage of criterion CBRANCH: 47%
+* Total number of goals: 793
+* Number of covered goals: 373
+* Generated 145 tests with total length 1991
+* Resulting test suite's coverage: 50% (average coverage for all fitness functions)
+* Generating assertions
+* Resulting test suite's mutation score: 4%
+* Compiling and checking tests
+[MASTER] 17:37:07.241 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 17:37:07.245 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class org.evosuite.runtime.mock.java.lang.MockIllegalArgumentException: Multiple entries with same key: stableIdGenerator=NOT_IMPLEMENTED and stableIdGenerator=STABLEIDGENERATOR
+[MASTER] 17:37:07.246 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ ClosureCodingConvention closureCodingConvention0 = new ClosureCodingConvention();
+SimpleErrorReporter simpleErrorReporter0 = new SimpleErrorReporter();
+JSTypeRegistry jSTypeRegistry0 = new JSTypeRegistry(simpleErrorReporter0);
+ClosureReverseAbstractInterpreter closureReverseAbstractInterpreter0 = new ClosureReverseAbstractInterpreter(closureCodingConvention0, jSTypeRegistry0);
+Compiler compiler0 = new Compiler();
+TreeMap<String, CodingConvention.AssertionFunctionSpec> treeMap0 = new TreeMap<String, CodingConvention.AssertionFunctionSpec>();
+Node node0 = compiler0.parseTestCode("Object#Element");
+ControlFlowGraph<Node> controlFlowGraph0 = new ControlFlowGraph<Node>(node0, true, true);
+Node node1 = compiler0.parseSyntheticCode("Object#Key", "com.googe.javascript.somp.NodeUtil$BooleanResultPredicate");
+Scope scope0 = Scope.createGlobalScope(node1);
+TypeInference typeInference0 = new TypeInference(compiler0, controlFlowGraph0, closureReverseAbstractInterpreter0, scope0, treeMap0);
+FlowScope flowScope0 = typeInference0.createEntryLattice();
+Node node2 = new Node(100, node0, node1);
+typeInference0.branchedFlowThrough(node2, flowScope0);
+
+[MASTER] 17:37:08.386 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class org.evosuite.runtime.mock.java.lang.MockIllegalArgumentException: Multiple entries with same key: stableIdGenerator=NOT_IMPLEMENTED and stableIdGenerator=STABLEIDGENERATOR
+[MASTER] 17:37:08.386 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ ClosureCodingConvention closureCodingConvention0 = new ClosureCodingConvention();
+SimpleErrorReporter simpleErrorReporter0 = new SimpleErrorReporter();
+JSTypeRegistry jSTypeRegistry0 = new JSTypeRegistry(simpleErrorReporter0);
+ClosureReverseAbstractInterpreter closureReverseAbstractInterpreter0 = new ClosureReverseAbstractInterpreter(closureCodingConvention0, jSTypeRegistry0);
+Compiler compiler0 = new Compiler();
+TreeMap<String, CodingConvention.AssertionFunctionSpec> treeMap0 = new TreeMap<String, CodingConvention.AssertionFunctionSpec>();
+Node node0 = new Node((-30), (-30), (-30));
+ControlFlowGraph<Node> controlFlowGraph0 = new ControlFlowGraph<Node>(node0, false, false);
+Node node1 = compiler0.parseSyntheticCode("Object#Element", "com.google.javascript.jscomp.TypeInference$1");
+Scope scope0 = Scope.createGlobalScope(node1);
+TypeInference typeInference0 = new TypeInference(compiler0, controlFlowGraph0, closureReverseAbstractInterpreter0, scope0, treeMap0);
+FlowScope flowScope0 = typeInference0.createEntryLattice();
+Node node2 = Node.newString(33, "", 14, 46);
+typeInference0.branchedFlowThrough(node2, flowScope0);
+
+[MASTER] 17:37:09.790 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class org.evosuite.runtime.mock.java.lang.MockIllegalArgumentException: Multiple entries with same key: stableIdGenerator=NOT_IMPLEMENTED and stableIdGenerator=STABLEIDGENERATOR
+[MASTER] 17:37:09.790 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ ClosureCodingConvention closureCodingConvention0 = new ClosureCodingConvention();
+SimpleErrorReporter simpleErrorReporter0 = new SimpleErrorReporter();
+JSTypeRegistry jSTypeRegistry0 = new JSTypeRegistry(simpleErrorReporter0);
+ClosureReverseAbstractInterpreter closureReverseAbstractInterpreter0 = new ClosureReverseAbstractInterpreter(closureCodingConvention0, jSTypeRegistry0);
+Compiler compiler0 = new Compiler();
+TreeMap<String, CodingConvention.AssertionFunctionSpec> treeMap0 = new TreeMap<String, CodingConvention.AssertionFunctionSpec>();
+Node node0 = new Node((-37));
+ControlFlowGraph<Node> controlFlowGraph0 = new ControlFlowGraph<Node>(node0, true, true);
+Node node1 = compiler0.parseSyntheticCode("LtclWa#o.k~W=4|", "com.google.javascript.jscomp.NodeUtil$BooleanResultPDedicate");
+Scope scope0 = Scope.createGlobalScope(node1);
+TypeInference typeInference0 = new TypeInference(compiler0, controlFlowGraph0, closureReverseAbstractInterpreter0, scope0, treeMap0);
+FlowScope flowScope0 = typeInference0.createEntryLattice();
+Node node2 = Node.newString(63, "Object#Element", 12, 50);
+FlowScope flowScope1 = typeInference0.flowThrough(node2, flowScope0);
+assertNotSame(flowScope1, flowScope0);
+
+
+[MASTER] 17:37:10.956 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class org.evosuite.runtime.mock.java.lang.MockIllegalArgumentException: Multiple entries with same key: stableIdGenerator=NOT_IMPLEMENTED and stableIdGenerator=STABLEIDGENERATOR
+[MASTER] 17:37:10.956 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ ClosureCodingConvention closureCodingConvention0 = new ClosureCodingConvention();
+SimpleErrorReporter simpleErrorReporter0 = new SimpleErrorReporter();
+JSTypeRegistry jSTypeRegistry0 = new JSTypeRegistry(simpleErrorReporter0);
+ClosureReverseAbstractInterpreter closureReverseAbstractInterpreter0 = new ClosureReverseAbstractInterpreter(closureCodingConvention0, jSTypeRegistry0);
+Compiler compiler0 = new Compiler();
+TreeMap<String, CodingConvention.AssertionFunctionSpec> treeMap0 = new TreeMap<String, CodingConvention.AssertionFunctionSpec>();
+Node node0 = new Node(97, 1237, (-1072));
+ControlFlowGraph<Node> controlFlowGraph0 = new ControlFlowGraph<Node>(node0, true, false);
+Node node1 = compiler0.parseSyntheticCode("Object#Element", "com.google.javascript.jscomp.NodeUtil$BooleanResultPredicate");
+Scope scope0 = Scope.createGlobalScope(node1);
+TypeInference typeInference0 = new TypeInference(compiler0, controlFlowGraph0, closureReverseAbstractInterpreter0, scope0, treeMap0);
+FlowScope flowScope0 = typeInference0.createEntryLattice();
+Node node2 = new Node(101, node0, node0);
+typeInference0.branchedFlowThrough(node2, flowScope0);
+
+[MASTER] 17:37:12.091 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class org.evosuite.runtime.mock.java.lang.MockIllegalArgumentException: Multiple entries with same key: stableIdGenerator=NOT_IMPLEMENTED and stableIdGenerator=STABLEIDGENERATOR
+[MASTER] 17:37:12.091 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ ClosureCodingConvention closureCodingConvention0 = new ClosureCodingConvention();
+SimpleErrorReporter simpleErrorReporter0 = new SimpleErrorReporter();
+JSTypeRegistry jSTypeRegistry0 = new JSTypeRegistry(simpleErrorReporter0);
+ClosureReverseAbstractInterpreter closureReverseAbstractInterpreter0 = new ClosureReverseAbstractInterpreter(closureCodingConvention0, jSTypeRegistry0);
+Compiler compiler0 = new Compiler();
+TreeMap<String, CodingConvention.AssertionFunctionSpec> treeMap0 = new TreeMap<String, CodingConvention.AssertionFunctionSpec>();
+Node node0 = new Node((-32), 258, (-1261));
+ControlFlowGraph<Node> controlFlowGraph0 = new ControlFlowGraph<Node>(node0, false, false);
+Node node1 = compiler0.parseSyntheticCode("LtCa#o.6-q=p|", "com.google.javascript.jscomp.NodeUtil$BooleanResultPredicate");
+Scope scope0 = Scope.createGlobalScope(node1);
+TypeInference typeInference0 = new TypeInference(compiler0, controlFlowGraph0, closureReverseAbstractInterpreter0, scope0, treeMap0);
+FlowScope flowScope0 = typeInference0.createInitialEstimateLattice();
+FlowScope flowScope1 = typeInference0.flowThrough(node1, flowScope0);
+assertSame(flowScope1, flowScope0);
+
+
+[MASTER] 17:37:13.326 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class org.evosuite.runtime.mock.java.lang.MockIllegalArgumentException: Multiple entries with same key: stableIdGenerator=NOT_IMPLEMENTED and stableIdGenerator=STABLEIDGENERATOR
+[MASTER] 17:37:13.327 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ ClosureCodingConvention closureCodingConvention0 = new ClosureCodingConvention();
+SimpleErrorReporter simpleErrorReporter0 = new SimpleErrorReporter();
+JSTypeRegistry jSTypeRegistry0 = new JSTypeRegistry(simpleErrorReporter0);
+ClosureReverseAbstractInterpreter closureReverseAbstractInterpreter0 = new ClosureReverseAbstractInterpreter(closureCodingConvention0, jSTypeRegistry0);
+Compiler compiler0 = new Compiler();
+TreeMap<String, CodingConvention.AssertionFunctionSpec> treeMap0 = new TreeMap<String, CodingConvention.AssertionFunctionSpec>();
+Node node0 = new Node((-15), (-15), (-15));
+ControlFlowGraph<Node> controlFlowGraph0 = new ControlFlowGraph<Node>(node0, false, false);
+Node node1 = compiler0.parseSyntheticCode("LtMa#o.6qsp|", "com.google.javascript.scomp.NodeUtil$BooleanResultPredicate");
+Scope scope0 = Scope.createGlobalScope(node1);
+TypeInference typeInference0 = new TypeInference(compiler0, controlFlowGraph0, closureReverseAbstractInterpreter0, scope0, treeMap0);
+LinkedFlowScope linkedFlowScope0 = LinkedFlowScope.createEntryLattice(scope0);
+Node node2 = new Node(86, node0, node0);
+typeInference0.branchedFlowThrough(node2, linkedFlowScope0);
+
+[MASTER] 17:37:14.394 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class org.evosuite.runtime.mock.java.lang.MockIllegalArgumentException: Multiple entries with same key: stableIdGenerator=NOT_IMPLEMENTED and stableIdGenerator=STABLEIDGENERATOR
+[MASTER] 17:37:14.395 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ Compiler compiler0 = new Compiler();
+TreeMap<String, CodingConvention.AssertionFunctionSpec> treeMap0 = new TreeMap<String, CodingConvention.AssertionFunctionSpec>();
+Node node0 = new Node((-18), (-18), (-18));
+ControlFlowGraph<Node> controlFlowGraph0 = new ControlFlowGraph<Node>(node0, true, true);
+Node node1 = compiler0.parseSyntheticCode("Object#Key", "zO2");
+Scope scope0 = Scope.createGlobalScope(node1);
+Node node2 = new Node(37, node1, node1);
+TypeInference typeInference0 = new TypeInference(compiler0, controlFlowGraph0, (ReverseAbstractInterpreter) null, scope0, treeMap0);
+
+[MASTER] 17:37:15.579 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class org.evosuite.runtime.mock.java.lang.MockIllegalArgumentException: Multiple entries with same key: stableIdGenerator=NOT_IMPLEMENTED and stableIdGenerator=STABLEIDGENERATOR
+[MASTER] 17:37:15.579 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ ClosureCodingConvention closureCodingConvention0 = new ClosureCodingConvention();
+SimpleErrorReporter simpleErrorReporter0 = new SimpleErrorReporter();
+JSTypeRegistry jSTypeRegistry0 = new JSTypeRegistry(simpleErrorReporter0);
+ClosureReverseAbstractInterpreter closureReverseAbstractInterpreter0 = new ClosureReverseAbstractInterpreter(closureCodingConvention0, jSTypeRegistry0);
+Compiler compiler0 = new Compiler();
+TreeMap<String, CodingConvention.AssertionFunctionSpec> treeMap0 = new TreeMap<String, CodingConvention.AssertionFunctionSpec>();
+Node node0 = new Node((-37), (-37), 1444);
+ControlFlowGraph<Node> controlFlowGraph0 = new ControlFlowGraph<Node>(node0, true, true);
+Node node1 = compiler0.parseSyntheticCode("Object#Element", "com.google.javascript.jscomp.NodeUtil$BooleanResultPredicate");
+Scope scope0 = Scope.createGlobalScope(node1);
+TypeInference typeInference0 = new TypeInference(compiler0, controlFlowGraph0, closureReverseAbstractInterpreter0, scope0, treeMap0);
+ControlFlowGraph.Branch controlFlowGraph_Branch0 = ControlFlowGraph.Branch.ON_EX;
+controlFlowGraph0.connectToImplicitReturn(node0, controlFlowGraph_Branch0);
+FlowScope flowScope0 = typeInference0.createEntryLattice();
+List<FlowScope> list0 = typeInference0.branchedFlowThrough(node0, flowScope0);
+assertEquals(1, list0.size());
+
+
+[MASTER] 17:37:16.716 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class org.evosuite.runtime.mock.java.lang.MockIllegalArgumentException: Multiple entries with same key: stableIdGenerator=NOT_IMPLEMENTED and stableIdGenerator=STABLEIDGENERATOR
+[MASTER] 17:37:16.717 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ ClosureCodingConvention closureCodingConvention0 = new ClosureCodingConvention();
+SimpleErrorReporter simpleErrorReporter0 = new SimpleErrorReporter();
+JSTypeRegistry jSTypeRegistry0 = new JSTypeRegistry(simpleErrorReporter0);
+ClosureReverseAbstractInterpreter closureReverseAbstractInterpreter0 = new ClosureReverseAbstractInterpreter(closureCodingConvention0, jSTypeRegistry0);
+Compiler compiler0 = new Compiler();
+TreeMap<String, CodingConvention.AssertionFunctionSpec> treeMap0 = new TreeMap<String, CodingConvention.AssertionFunctionSpec>();
+Node node0 = new Node(148, 148, 148);
+ControlFlowGraph<Node> controlFlowGraph0 = new ControlFlowGraph<Node>(node0, false, false);
+Node node1 = compiler0.parseSyntheticCode("Object#Key", "com.google.javascript.jscomp.NodeUtil$BooleanResultPredicate");
+Scope scope0 = Scope.createGlobalScope(node1);
+TypeInference typeInference0 = new TypeInference(compiler0, controlFlowGraph0, closureReverseAbstractInterpreter0, scope0, treeMap0);
+ControlFlowGraph.Branch controlFlowGraph_Branch0 = ControlFlowGraph.Branch.ON_TRUE;
+controlFlowGraph0.connectToImplicitReturn(node0, controlFlowGraph_Branch0);
+LinkedFlowScope linkedFlowScope0 = LinkedFlowScope.createEntryLattice(scope0);
+typeInference0.branchedFlowThrough(node0, linkedFlowScope0);
+
+[MASTER] 17:37:17.757 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class org.evosuite.runtime.mock.java.lang.MockIllegalArgumentException: Multiple entries with same key: stableIdGenerator=NOT_IMPLEMENTED and stableIdGenerator=STABLEIDGENERATOR
+[MASTER] 17:37:17.757 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ ClosureCodingConvention closureCodingConvention0 = new ClosureCodingConvention();
+SimpleErrorReporter simpleErrorReporter0 = new SimpleErrorReporter();
+JSTypeRegistry jSTypeRegistry0 = new JSTypeRegistry(simpleErrorReporter0);
+ClosureReverseAbstractInterpreter closureReverseAbstractInterpreter0 = new ClosureReverseAbstractInterpreter(closureCodingConvention0, jSTypeRegistry0);
+Compiler compiler0 = new Compiler();
+TreeMap<String, CodingConvention.AssertionFunctionSpec> treeMap0 = new TreeMap<String, CodingConvention.AssertionFunctionSpec>();
+Node node0 = new Node((-1466), (-1466), (-1466));
+ControlFlowGraph<Node> controlFlowGraph0 = new ControlFlowGraph<Node>(node0, false, false);
+Node node1 = compiler0.parseSyntheticCode("~X,dlY_", "~X,dlY_");
+Scope scope0 = Scope.createGlobalScope(node1);
+TypeInference typeInference0 = new TypeInference(compiler0, controlFlowGraph0, closureReverseAbstractInterpreter0, scope0, treeMap0);
+LinkedFlowScope linkedFlowScope0 = LinkedFlowScope.createEntryLattice(scope0);
+Node node2 = new Node(4, node0, node0);
+Node node3 = new Node(118, node2, node1);
+FlowScope flowScope0 = typeInference0.flowThrough(node3, linkedFlowScope0);
+assertNotSame(flowScope0, linkedFlowScope0);
+
+
+[MASTER] 17:37:19.187 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class org.evosuite.runtime.mock.java.lang.MockIllegalArgumentException: Multiple entries with same key: stableIdGenerator=NOT_IMPLEMENTED and stableIdGenerator=STABLEIDGENERATOR
+[MASTER] 17:37:19.188 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ ClosureCodingConvention closureCodingConvention0 = new ClosureCodingConvention();
+SimpleErrorReporter simpleErrorReporter0 = new SimpleErrorReporter();
+JSTypeRegistry jSTypeRegistry0 = new JSTypeRegistry(simpleErrorReporter0);
+ClosureReverseAbstractInterpreter closureReverseAbstractInterpreter0 = new ClosureReverseAbstractInterpreter(closureCodingConvention0, jSTypeRegistry0);
+Compiler compiler0 = new Compiler();
+TreeMap<String, CodingConvention.AssertionFunctionSpec> treeMap0 = new TreeMap<String, CodingConvention.AssertionFunctionSpec>();
+Node node0 = compiler0.parseTestCode("Object#Element");
+ControlFlowGraph<Node> controlFlowGraph0 = new ControlFlowGraph<Node>(node0, true, true);
+Node node1 = compiler0.parseSyntheticCode("LtCao6-=p|", "com.google.javascript.jscomp.TypeInference$TemplateTypeReplacer");
+Scope scope0 = Scope.createGlobalScope(node1);
+TypeInference typeInference0 = new TypeInference(compiler0, controlFlowGraph0, closureReverseAbstractInterpreter0, scope0, treeMap0);
+LinkedFlowScope linkedFlowScope0 = LinkedFlowScope.createEntryLattice(scope0);
+Node node2 = new Node(5, node0, node0);
+typeInference0.branchedFlowThrough(node2, linkedFlowScope0);
+
+[MASTER] 17:37:20.245 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class org.evosuite.runtime.mock.java.lang.MockIllegalArgumentException: Multiple entries with same key: stableIdGenerator=NOT_IMPLEMENTED and stableIdGenerator=STABLEIDGENERATOR
+[MASTER] 17:37:20.245 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ ClosureCodingConvention closureCodingConvention0 = new ClosureCodingConvention();
+SimpleErrorReporter simpleErrorReporter0 = new SimpleErrorReporter();
+JSTypeRegistry jSTypeRegistry0 = new JSTypeRegistry(simpleErrorReporter0);
+ClosureReverseAbstractInterpreter closureReverseAbstractInterpreter0 = new ClosureReverseAbstractInterpreter(closureCodingConvention0, jSTypeRegistry0);
+Compiler compiler0 = new Compiler();
+TreeMap<String, CodingConvention.AssertionFunctionSpec> treeMap0 = new TreeMap<String, CodingConvention.AssertionFunctionSpec>();
+Node node0 = compiler0.parseTestCode("Object#Key");
+ControlFlowGraph<Node> controlFlowGraph0 = new ControlFlowGraph<Node>(node0, true, true);
+Node node1 = compiler0.parseSyntheticCode("Object#Element", "cPm.google.javascript.scomp.NodeUtil$BooleanResultPredicate");
+Scope scope0 = Scope.createGlobalScope(node1);
+TypeInference typeInference0 = new TypeInference(compiler0, controlFlowGraph0, closureReverseAbstractInterpreter0, scope0, treeMap0);
+LinkedFlowScope linkedFlowScope0 = LinkedFlowScope.createEntryLattice(scope0);
+Node node2 = new Node(6, node0, (-34), 51);
+typeInference0.branchedFlowThrough(node2, linkedFlowScope0);
+
+[MASTER] 17:37:21.279 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class org.evosuite.runtime.mock.java.lang.MockIllegalArgumentException: Multiple entries with same key: stableIdGenerator=NOT_IMPLEMENTED and stableIdGenerator=STABLEIDGENERATOR
+[MASTER] 17:37:21.279 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ ClosureCodingConvention closureCodingConvention0 = new ClosureCodingConvention();
+SimpleErrorReporter simpleErrorReporter0 = new SimpleErrorReporter();
+JSTypeRegistry jSTypeRegistry0 = new JSTypeRegistry(simpleErrorReporter0);
+ClosureReverseAbstractInterpreter closureReverseAbstractInterpreter0 = new ClosureReverseAbstractInterpreter(closureCodingConvention0, jSTypeRegistry0);
+Compiler compiler0 = new Compiler();
+TreeMap<String, CodingConvention.AssertionFunctionSpec> treeMap0 = new TreeMap<String, CodingConvention.AssertionFunctionSpec>();
+Node node0 = compiler0.parseTestCode("Object#Key");
+ControlFlowGraph<Node> controlFlowGraph0 = new ControlFlowGraph<Node>(node0, false, false);
+Node node1 = compiler0.parseSyntheticCode("Object#Element", "cPm.google.javascript.scomp.NodeUtil$BooleanResultPredicate");
+Scope scope0 = Scope.createGlobalScope(node1);
+TypeInference typeInference0 = new TypeInference(compiler0, controlFlowGraph0, closureReverseAbstractInterpreter0, scope0, treeMap0);
+LinkedFlowScope linkedFlowScope0 = LinkedFlowScope.createEntryLattice(scope0);
+Node node2 = new Node(7, node0, (-34), 51);
+typeInference0.branchedFlowThrough(node2, linkedFlowScope0);
+
+[MASTER] 17:37:22.354 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class org.evosuite.runtime.mock.java.lang.MockIllegalArgumentException: Multiple entries with same key: stableIdGenerator=NOT_IMPLEMENTED and stableIdGenerator=STABLEIDGENERATOR
+[MASTER] 17:37:22.355 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ ClosureCodingConvention closureCodingConvention0 = new ClosureCodingConvention();
+SimpleErrorReporter simpleErrorReporter0 = new SimpleErrorReporter();
+JSTypeRegistry jSTypeRegistry0 = new JSTypeRegistry(simpleErrorReporter0);
+ClosureReverseAbstractInterpreter closureReverseAbstractInterpreter0 = new ClosureReverseAbstractInterpreter(closureCodingConvention0, jSTypeRegistry0);
+Compiler compiler0 = new Compiler();
+TreeMap<String, CodingConvention.AssertionFunctionSpec> treeMap0 = new TreeMap<String, CodingConvention.AssertionFunctionSpec>();
+Node node0 = new Node((-37), (-37), (-1261));
+ControlFlowGraph<Node> controlFlowGraph0 = new ControlFlowGraph<Node>(node0, true, true);
+Node node1 = compiler0.parseSyntheticCode("LtCa#o.6-q=p|", "com.google.javascript.jscomp.NodeUtil$BooleanResultPredicate");
+Scope scope0 = Scope.createGlobalScope(node1);
+TypeInference typeInference0 = new TypeInference(compiler0, controlFlowGraph0, closureReverseAbstractInterpreter0, scope0, treeMap0);
+FlowScope flowScope0 = typeInference0.createEntryLattice();
+Node node2 = new Node(8, node1, node1);
+typeInference0.branchedFlowThrough(node2, flowScope0);
+
+[MASTER] 17:37:23.406 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class org.evosuite.runtime.mock.java.lang.MockIllegalArgumentException: Multiple entries with same key: stableIdGenerator=NOT_IMPLEMENTED and stableIdGenerator=STABLEIDGENERATOR
+[MASTER] 17:37:23.406 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ ClosureCodingConvention closureCodingConvention0 = new ClosureCodingConvention();
+SimpleErrorReporter simpleErrorReporter0 = new SimpleErrorReporter();
+JSTypeRegistry jSTypeRegistry0 = new JSTypeRegistry(simpleErrorReporter0);
+ClosureReverseAbstractInterpreter closureReverseAbstractInterpreter0 = new ClosureReverseAbstractInterpreter(closureCodingConvention0, jSTypeRegistry0);
+Compiler compiler0 = new Compiler();
+TreeMap<String, CodingConvention.AssertionFunctionSpec> treeMap0 = new TreeMap<String, CodingConvention.AssertionFunctionSpec>();
+ControlFlowGraph<Node> controlFlowGraph0 = new ControlFlowGraph<Node>((Node) null, true, true);
+Node node0 = compiler0.parseSyntheticCode("Object#Key", "com.google.javascrip.scomp.NodeUtil$oleanResultPredicte");
+Scope scope0 = Scope.createGlobalScope(node0);
+TypeInference typeInference0 = new TypeInference(compiler0, controlFlowGraph0, closureReverseAbstractInterpreter0, scope0, treeMap0);
+LinkedFlowScope linkedFlowScope0 = LinkedFlowScope.createEntryLattice(scope0);
+Node node1 = new Node(10, node0, 38, 56);
+typeInference0.branchedFlowThrough(node1, linkedFlowScope0);
+
+[MASTER] 17:37:24.503 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class org.evosuite.runtime.mock.java.lang.MockIllegalArgumentException: Multiple entries with same key: stableIdGenerator=NOT_IMPLEMENTED and stableIdGenerator=STABLEIDGENERATOR
+[MASTER] 17:37:24.503 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ ClosureCodingConvention closureCodingConvention0 = new ClosureCodingConvention();
+SimpleErrorReporter simpleErrorReporter0 = new SimpleErrorReporter();
+JSTypeRegistry jSTypeRegistry0 = new JSTypeRegistry(simpleErrorReporter0);
+ClosureReverseAbstractInterpreter closureReverseAbstractInterpreter0 = new ClosureReverseAbstractInterpreter(closureCodingConvention0, jSTypeRegistry0);
+Compiler compiler0 = new Compiler();
+TreeMap<String, CodingConvention.AssertionFunctionSpec> treeMap0 = new TreeMap<String, CodingConvention.AssertionFunctionSpec>();
+Node node0 = new Node((-17), (-17), (-17));
+ControlFlowGraph<Node> controlFlowGraph0 = new ControlFlowGraph<Node>(node0, false, false);
+Node node1 = compiler0.parseSyntheticCode("Object#Element", "JSC_FUNCTION_LITERAL_UNDEFINED_tHIS");
+Scope scope0 = Scope.createGlobalScope(node1);
+TypeInference typeInference0 = new TypeInference(compiler0, controlFlowGraph0, closureReverseAbstractInterpreter0, scope0, treeMap0);
+FlowScope flowScope0 = typeInference0.createEntryLattice();
+Node node2 = Node.newString(11, "Object#Key", 139, 16);
+typeInference0.branchedFlowThrough(node2, flowScope0);
+
+[MASTER] 17:37:25.698 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class org.evosuite.runtime.mock.java.lang.MockIllegalArgumentException: Multiple entries with same key: stableIdGenerator=NOT_IMPLEMENTED and stableIdGenerator=STABLEIDGENERATOR
+[MASTER] 17:37:25.698 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ ClosureCodingConvention closureCodingConvention0 = new ClosureCodingConvention();
+SimpleErrorReporter simpleErrorReporter0 = new SimpleErrorReporter();
+JSTypeRegistry jSTypeRegistry0 = new JSTypeRegistry(simpleErrorReporter0);
+ClosureReverseAbstractInterpreter closureReverseAbstractInterpreter0 = new ClosureReverseAbstractInterpreter(closureCodingConvention0, jSTypeRegistry0);
+Compiler compiler0 = new Compiler();
+TreeMap<String, CodingConvention.AssertionFunctionSpec> treeMap0 = new TreeMap<String, CodingConvention.AssertionFunctionSpec>();
+Node node0 = new Node((-32), (-32), (-1261));
+ControlFlowGraph<Node> controlFlowGraph0 = new ControlFlowGraph<Node>(node0, true, true);
+Node node1 = compiler0.parseSyntheticCode("LtCa#o.6-q=p|", "com.google.javascript.jscomp.NodeUtil$BooleanResultPredica^e");
+Scope scope0 = Scope.createGlobalScope(node1);
+TypeInference typeInference0 = new TypeInference(compiler0, controlFlowGraph0, closureReverseAbstractInterpreter0, scope0, treeMap0);
+FlowScope flowScope0 = typeInference0.createEntryLattice();
+Node node2 = Node.newString(12, "u-5K0OA~=", 1156, 3474);
+FlowScope flowScope1 = typeInference0.flowThrough(node2, flowScope0);
+assertNotSame(flowScope1, flowScope0);
+
+
+[MASTER] 17:37:26.816 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class org.evosuite.runtime.mock.java.lang.MockIllegalArgumentException: Multiple entries with same key: stableIdGenerator=NOT_IMPLEMENTED and stableIdGenerator=STABLEIDGENERATOR
+[MASTER] 17:37:26.816 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ ClosureCodingConvention closureCodingConvention0 = new ClosureCodingConvention();
+SimpleErrorReporter simpleErrorReporter0 = new SimpleErrorReporter();
+JSTypeRegistry jSTypeRegistry0 = new JSTypeRegistry(simpleErrorReporter0);
+ClosureReverseAbstractInterpreter closureReverseAbstractInterpreter0 = new ClosureReverseAbstractInterpreter(closureCodingConvention0, jSTypeRegistry0);
+Compiler compiler0 = new Compiler();
+TreeMap<String, CodingConvention.AssertionFunctionSpec> treeMap0 = new TreeMap<String, CodingConvention.AssertionFunctionSpec>();
+Node node0 = compiler0.parseTestCode("Object#Key");
+ControlFlowGraph<Node> controlFlowGraph0 = new ControlFlowGraph<Node>(node0, false, false);
+Node node1 = compiler0.parseSyntheticCode("Object#Element", "cPm.google.javascript.scomp.NodeUtil$BooleanResultPredicate");
+Scope scope0 = Scope.createGlobalScope(node1);
+TypeInference typeInference0 = new TypeInference(compiler0, controlFlowGraph0, closureReverseAbstractInterpreter0, scope0, treeMap0);
+LinkedFlowScope linkedFlowScope0 = LinkedFlowScope.createEntryLattice(scope0);
+Node node2 = Node.newString(14, "cPm.google.javascript.scomp.NodeUtil$BooleanResultPredicate", (-1099), 42);
+typeInference0.branchedFlowThrough(node2, linkedFlowScope0);
+
+[MASTER] 17:37:28.081 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class org.evosuite.runtime.mock.java.lang.MockIllegalArgumentException: Multiple entries with same key: stableIdGenerator=NOT_IMPLEMENTED and stableIdGenerator=STABLEIDGENERATOR
+[MASTER] 17:37:28.081 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ ClosureCodingConvention closureCodingConvention0 = new ClosureCodingConvention();
+SimpleErrorReporter simpleErrorReporter0 = new SimpleErrorReporter();
+JSTypeRegistry jSTypeRegistry0 = new JSTypeRegistry(simpleErrorReporter0);
+ClosureReverseAbstractInterpreter closureReverseAbstractInterpreter0 = new ClosureReverseAbstractInterpreter(closureCodingConvention0, jSTypeRegistry0);
+Compiler compiler0 = new Compiler();
+TreeMap<String, CodingConvention.AssertionFunctionSpec> treeMap0 = new TreeMap<String, CodingConvention.AssertionFunctionSpec>();
+Node node0 = compiler0.parseTestCode("Object#Element");
+ControlFlowGraph<Node> controlFlowGraph0 = new ControlFlowGraph<Node>(node0, true, true);
+Node node1 = compiler0.parseSyntheticCode("Ltfa#o./-q=p|", "com.google.javascript.scomp.NodeUtil$BooleanResultPredicate");
+Scope scope0 = Scope.createGlobalScope(node1);
+TypeInference typeInference0 = new TypeInference(compiler0, controlFlowGraph0, closureReverseAbstractInterpreter0, scope0, treeMap0);
+Node node2 = Node.newString(15, "com.google.javascript.scomp.NodeUtil$BooleanResultPredicate", 72, 15);
+LinkedFlowScope linkedFlowScope0 = LinkedFlowScope.createEntryLattice(scope0);
+FlowScope flowScope0 = typeInference0.flowThrough(node2, linkedFlowScope0);
+assertNotSame(flowScope0, linkedFlowScope0);
+
+
+[MASTER] 17:37:29.107 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class org.evosuite.runtime.mock.java.lang.MockIllegalArgumentException: Multiple entries with same key: stableIdGenerator=NOT_IMPLEMENTED and stableIdGenerator=STABLEIDGENERATOR
+[MASTER] 17:37:29.107 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ ClosureCodingConvention closureCodingConvention0 = new ClosureCodingConvention();
+SimpleErrorReporter simpleErrorReporter0 = new SimpleErrorReporter();
+JSTypeRegistry jSTypeRegistry0 = new JSTypeRegistry(simpleErrorReporter0);
+ClosureReverseAbstractInterpreter closureReverseAbstractInterpreter0 = new ClosureReverseAbstractInterpreter(closureCodingConvention0, jSTypeRegistry0);
+Compiler compiler0 = new Compiler();
+TreeMap<String, CodingConvention.AssertionFunctionSpec> treeMap0 = new TreeMap<String, CodingConvention.AssertionFunctionSpec>();
+Node node0 = new Node((-37), (-37), (-1261));
+ControlFlowGraph<Node> controlFlowGraph0 = new ControlFlowGraph<Node>(node0, true, true);
+Node node1 = compiler0.parseSyntheticCode("LtCa#o.6-q=p|", "com.google.javascript.scomp.NodeUtil$BooleanResultPredicate");
+Scope scope0 = Scope.createGlobalScope(node1);
+TypeInference typeInference0 = new TypeInference(compiler0, controlFlowGraph0, closureReverseAbstractInterpreter0, scope0, treeMap0);
+FlowScope flowScope0 = typeInference0.createEntryLattice();
+Node node2 = Node.newString(16, "", 37, 8);
+typeInference0.branchedFlowThrough(node2, flowScope0);
+
+[MASTER] 17:37:30.279 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class org.evosuite.runtime.mock.java.lang.MockIllegalArgumentException: Multiple entries with same key: stableIdGenerator=NOT_IMPLEMENTED and stableIdGenerator=STABLEIDGENERATOR
+[MASTER] 17:37:30.280 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ ClosureCodingConvention closureCodingConvention0 = new ClosureCodingConvention();
+SimpleErrorReporter simpleErrorReporter0 = new SimpleErrorReporter();
+JSTypeRegistry jSTypeRegistry0 = new JSTypeRegistry(simpleErrorReporter0);
+ClosureReverseAbstractInterpreter closureReverseAbstractInterpreter0 = new ClosureReverseAbstractInterpreter(closureCodingConvention0, jSTypeRegistry0);
+Compiler compiler0 = new Compiler();
+TreeMap<String, CodingConvention.AssertionFunctionSpec> treeMap0 = new TreeMap<String, CodingConvention.AssertionFunctionSpec>();
+Node node0 = compiler0.parseTestCode("Object#Key");
+ControlFlowGraph<Node> controlFlowGraph0 = new ControlFlowGraph<Node>(node0, true, true);
+Node node1 = compiler0.parseSyntheticCode("Object#Element", "com.google.javascript.scomp.NodeUtil$BooleanResultPredicate");
+Scope scope0 = Scope.createGlobalScope(node1);
+TypeInference typeInference0 = new TypeInference(compiler0, controlFlowGraph0, closureReverseAbstractInterpreter0, scope0, treeMap0);
+LinkedFlowScope linkedFlowScope0 = LinkedFlowScope.createEntryLattice(scope0);
+Node node2 = new Node(19, node0, (-59), 51);
+FlowScope flowScope0 = typeInference0.flowThrough(node2, linkedFlowScope0);
+assertNotSame(flowScope0, linkedFlowScope0);
+
+
+[MASTER] 17:37:31.482 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class org.evosuite.runtime.mock.java.lang.MockIllegalArgumentException: Multiple entries with same key: stableIdGenerator=NOT_IMPLEMENTED and stableIdGenerator=STABLEIDGENERATOR
+[MASTER] 17:37:31.482 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ ClosureCodingConvention closureCodingConvention0 = new ClosureCodingConvention();
+SimpleErrorReporter simpleErrorReporter0 = new SimpleErrorReporter();
+JSTypeRegistry jSTypeRegistry0 = new JSTypeRegistry(simpleErrorReporter0);
+ClosureReverseAbstractInterpreter closureReverseAbstractInterpreter0 = new ClosureReverseAbstractInterpreter(closureCodingConvention0, jSTypeRegistry0);
+Compiler compiler0 = new Compiler();
+TreeMap<String, CodingConvention.AssertionFunctionSpec> treeMap0 = new TreeMap<String, CodingConvention.AssertionFunctionSpec>();
+Node node0 = new Node((-30), (-30), (-30));
+ControlFlowGraph<Node> controlFlowGraph0 = new ControlFlowGraph<Node>(node0, false, false);
+Node node1 = compiler0.parseSyntheticCode("Object#Element", "JSC_FUNCTION_LITERAL_UNDEFINED_tHIS");
+Scope scope0 = Scope.createGlobalScope(node1);
+TypeInference typeInference0 = new TypeInference(compiler0, controlFlowGraph0, closureReverseAbstractInterpreter0, scope0, treeMap0);
+FlowScope flowScope0 = typeInference0.createEntryLattice();
+Node node2 = Node.newString(22, "Object#Key", 139, 16);
+typeInference0.branchedFlowThrough(node2, flowScope0);
+
+[MASTER] 17:37:32.989 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class org.evosuite.runtime.mock.java.lang.MockIllegalArgumentException: Multiple entries with same key: stableIdGenerator=NOT_IMPLEMENTED and stableIdGenerator=STABLEIDGENERATOR
+[MASTER] 17:37:32.990 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ ClosureCodingConvention closureCodingConvention0 = new ClosureCodingConvention();
+SimpleErrorReporter simpleErrorReporter0 = new SimpleErrorReporter();
+JSTypeRegistry jSTypeRegistry0 = new JSTypeRegistry(simpleErrorReporter0);
+ClosureReverseAbstractInterpreter closureReverseAbstractInterpreter0 = new ClosureReverseAbstractInterpreter(closureCodingConvention0, jSTypeRegistry0);
+Compiler compiler0 = new Compiler();
+TreeMap<String, CodingConvention.AssertionFunctionSpec> treeMap0 = new TreeMap<String, CodingConvention.AssertionFunctionSpec>();
+Node node0 = new Node(23, (-281), (-1261));
+ControlFlowGraph<Node> controlFlowGraph0 = new ControlFlowGraph<Node>(node0, true, false);
+Node node1 = compiler0.parseSyntheticCode("Object#Key", "com.google.javascript.scomp.NodeUtil$BooleanResultPredicate");
+Scope scope0 = Scope.createGlobalScope(node1);
+TypeInference typeInference0 = new TypeInference(compiler0, controlFlowGraph0, closureReverseAbstractInterpreter0, scope0, treeMap0);
+FlowScope flowScope0 = typeInference0.createEntryLattice();
+List<FlowScope> list0 = typeInference0.branchedFlowThrough(node0, flowScope0);
+assertEquals(0, list0.size());
+
+
+[MASTER] 17:37:34.125 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class org.evosuite.runtime.mock.java.lang.MockIllegalArgumentException: Multiple entries with same key: stableIdGenerator=NOT_IMPLEMENTED and stableIdGenerator=STABLEIDGENERATOR
+[MASTER] 17:37:34.125 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ ClosureCodingConvention closureCodingConvention0 = new ClosureCodingConvention();
+SimpleErrorReporter simpleErrorReporter0 = new SimpleErrorReporter();
+JSTypeRegistry jSTypeRegistry0 = new JSTypeRegistry(simpleErrorReporter0);
+ClosureReverseAbstractInterpreter closureReverseAbstractInterpreter0 = new ClosureReverseAbstractInterpreter(closureCodingConvention0, jSTypeRegistry0);
+Compiler compiler0 = new Compiler();
+TreeMap<String, CodingConvention.AssertionFunctionSpec> treeMap0 = new TreeMap<String, CodingConvention.AssertionFunctionSpec>();
+Node node0 = new Node((-30), (-30), (-30));
+ControlFlowGraph<Node> controlFlowGraph0 = new ControlFlowGraph<Node>(node0, false, false);
+Node node1 = compiler0.parseSyntheticCode("Object#Element", "JSC_FUNCTION_LITERAL_UNDEFINED_tHIS");
+Scope scope0 = Scope.createGlobalScope(node1);
+TypeInference typeInference0 = new TypeInference(compiler0, controlFlowGraph0, closureReverseAbstractInterpreter0, scope0, treeMap0);
+FlowScope flowScope0 = typeInference0.createEntryLattice();
+Node node2 = Node.newString(24, "Object#Key", 139, 16);
+typeInference0.branchedFlowThrough(node2, flowScope0);
+
+[MASTER] 17:37:35.215 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class org.evosuite.runtime.mock.java.lang.MockIllegalArgumentException: Multiple entries with same key: stableIdGenerator=NOT_IMPLEMENTED and stableIdGenerator=STABLEIDGENERATOR
+[MASTER] 17:37:35.216 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ ClosureCodingConvention closureCodingConvention0 = new ClosureCodingConvention();
+SimpleErrorReporter simpleErrorReporter0 = new SimpleErrorReporter();
+JSTypeRegistry jSTypeRegistry0 = new JSTypeRegistry(simpleErrorReporter0);
+ClosureReverseAbstractInterpreter closureReverseAbstractInterpreter0 = new ClosureReverseAbstractInterpreter(closureCodingConvention0, jSTypeRegistry0);
+Compiler compiler0 = new Compiler();
+TreeMap<String, CodingConvention.AssertionFunctionSpec> treeMap0 = new TreeMap<String, CodingConvention.AssertionFunctionSpec>();
+Node node0 = Node.newString("Object#Element");
+ControlFlowGraph<Node> controlFlowGraph0 = new ControlFlowGraph<Node>(node0, false, false);
+Node node1 = compiler0.parseSyntheticCode("Object#Element", "com.google.javascript.jscomp.TypeInference$TemplateTypeReplacer");
+Scope scope0 = Scope.createGlobalScope(node1);
+TypeInference typeInference0 = new TypeInference(compiler0, controlFlowGraph0, closureReverseAbstractInterpreter0, scope0, treeMap0);
+LinkedFlowScope linkedFlowScope0 = LinkedFlowScope.createEntryLattice(scope0);
+Node node2 = new Node(28, node0, node1);
+typeInference0.branchedFlowThrough(node2, linkedFlowScope0);
+
+[MASTER] 17:37:36.486 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class org.evosuite.runtime.mock.java.lang.MockIllegalArgumentException: Multiple entries with same key: stableIdGenerator=NOT_IMPLEMENTED and stableIdGenerator=STABLEIDGENERATOR
+[MASTER] 17:37:36.486 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ ClosureCodingConvention closureCodingConvention0 = new ClosureCodingConvention();
+SimpleErrorReporter simpleErrorReporter0 = new SimpleErrorReporter();
+JSTypeRegistry jSTypeRegistry0 = new JSTypeRegistry(simpleErrorReporter0);
+ClosureReverseAbstractInterpreter closureReverseAbstractInterpreter0 = new ClosureReverseAbstractInterpreter(closureCodingConvention0, jSTypeRegistry0);
+Compiler compiler0 = new Compiler();
+TreeMap<String, CodingConvention.AssertionFunctionSpec> treeMap0 = new TreeMap<String, CodingConvention.AssertionFunctionSpec>();
+Node node0 = new Node(148, 148, (-1261));
+ControlFlowGraph<Node> controlFlowGraph0 = new ControlFlowGraph<Node>(node0, false, false);
+Node node1 = compiler0.parseSyntheticCode("LtCa#o.6-q=p|", "com.google.javascript.jscomp.NodeUtil$BooleanResultPredicate");
+Scope scope0 = Scope.createGlobalScope(node1);
+TypeInference typeInference0 = new TypeInference(compiler0, controlFlowGraph0, closureReverseAbstractInterpreter0, scope0, treeMap0);
+FlowScope flowScope0 = typeInference0.createEntryLattice();
+Node node2 = new Node(29, node0, node0);
+typeInference0.branchedFlowThrough(node2, flowScope0);
+
+[MASTER] 17:37:37.724 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class org.evosuite.runtime.mock.java.lang.MockIllegalArgumentException: Multiple entries with same key: stableIdGenerator=NOT_IMPLEMENTED and stableIdGenerator=STABLEIDGENERATOR
+[MASTER] 17:37:37.724 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ ClosureCodingConvention closureCodingConvention0 = new ClosureCodingConvention();
+SimpleErrorReporter simpleErrorReporter0 = new SimpleErrorReporter();
+JSTypeRegistry jSTypeRegistry0 = new JSTypeRegistry(simpleErrorReporter0);
+ClosureReverseAbstractInterpreter closureReverseAbstractInterpreter0 = new ClosureReverseAbstractInterpreter(closureCodingConvention0, jSTypeRegistry0);
+Compiler compiler0 = new Compiler();
+TreeMap<String, CodingConvention.AssertionFunctionSpec> treeMap0 = new TreeMap<String, CodingConvention.AssertionFunctionSpec>();
+Node node0 = new Node((-37), (-37), (-1261));
+ControlFlowGraph<Node> controlFlowGraph0 = new ControlFlowGraph<Node>(node0, true, true);
+Node node1 = compiler0.parseSyntheticCode("LtCa#o.6-q=p|", "com.google.javascript.scomp.NodeUtil$BooleanResultPredicate");
+Scope scope0 = Scope.createGlobalScope(node1);
+TypeInference typeInference0 = new TypeInference(compiler0, controlFlowGraph0, closureReverseAbstractInterpreter0, scope0, treeMap0);
+FlowScope flowScope0 = typeInference0.createEntryLattice();
+Node node2 = Node.newString(30, "", 445, (-1946));
+typeInference0.branchedFlowThrough(node2, flowScope0);
+
+[MASTER] 17:37:38.986 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class org.evosuite.runtime.mock.java.lang.MockIllegalArgumentException: Multiple entries with same key: stableIdGenerator=NOT_IMPLEMENTED and stableIdGenerator=STABLEIDGENERATOR
+[MASTER] 17:37:38.987 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ ClosureCodingConvention closureCodingConvention0 = new ClosureCodingConvention();
+SimpleErrorReporter simpleErrorReporter0 = new SimpleErrorReporter();
+JSTypeRegistry jSTypeRegistry0 = new JSTypeRegistry(simpleErrorReporter0);
+ClosureReverseAbstractInterpreter closureReverseAbstractInterpreter0 = new ClosureReverseAbstractInterpreter(closureCodingConvention0, jSTypeRegistry0);
+Compiler compiler0 = new Compiler();
+TreeMap<String, CodingConvention.AssertionFunctionSpec> treeMap0 = new TreeMap<String, CodingConvention.AssertionFunctionSpec>();
+Node node0 = new Node((-37), (-37), (-1244));
+ControlFlowGraph<Node> controlFlowGraph0 = new ControlFlowGraph<Node>(node0, true, true);
+Node node1 = compiler0.parseSyntheticCode("LtCa#o.6-q=p|", "com.google.javascript.jscomp.NodeUtil$BooleanResultPredicate");
+Scope scope0 = Scope.createGlobalScope(node1);
+TypeInference typeInference0 = new TypeInference(compiler0, controlFlowGraph0, closureReverseAbstractInterpreter0, scope0, treeMap0);
+FlowScope flowScope0 = typeInference0.createEntryLattice();
+Node node2 = Node.newString(31, "LtCa#o.6-q=p|", 8, (-1));
+FlowScope flowScope1 = typeInference0.flowThrough(node2, flowScope0);
+assertNotSame(flowScope1, flowScope0);
+
+
+[MASTER] 17:37:40.177 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class org.evosuite.runtime.mock.java.lang.MockIllegalArgumentException: Multiple entries with same key: stableIdGenerator=NOT_IMPLEMENTED and stableIdGenerator=STABLEIDGENERATOR
+[MASTER] 17:37:40.177 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ ClosureCodingConvention closureCodingConvention0 = new ClosureCodingConvention();
+SimpleErrorReporter simpleErrorReporter0 = new SimpleErrorReporter();
+JSTypeRegistry jSTypeRegistry0 = new JSTypeRegistry(simpleErrorReporter0);
+ClosureReverseAbstractInterpreter closureReverseAbstractInterpreter0 = new ClosureReverseAbstractInterpreter(closureCodingConvention0, jSTypeRegistry0);
+Compiler compiler0 = new Compiler();
+TreeMap<String, CodingConvention.AssertionFunctionSpec> treeMap0 = new TreeMap<String, CodingConvention.AssertionFunctionSpec>();
+Node node0 = new Node((-32), (-32), (-1261));
+ControlFlowGraph<Node> controlFlowGraph0 = new ControlFlowGraph<Node>(node0, true, true);
+Node node1 = compiler0.parseSyntheticCode("LtCa#o.6-q=p|", "com.google.javascript.jscomp.NodeUtil$BooleanResultPredica^e");
+Scope scope0 = Scope.createGlobalScope(node1);
+TypeInference typeInference0 = new TypeInference(compiler0, controlFlowGraph0, closureReverseAbstractInterpreter0, scope0, treeMap0);
+FlowScope flowScope0 = typeInference0.createEntryLattice();
+Node node2 = Node.newString(32, "bS8Z!N", 2, 43);
+FlowScope flowScope1 = typeInference0.flowThrough(node2, flowScope0);
+assertNotSame(flowScope1, flowScope0);
+
+
+[MASTER] 17:37:41.374 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class org.evosuite.runtime.mock.java.lang.MockIllegalArgumentException: Multiple entries with same key: stableIdGenerator=NOT_IMPLEMENTED and stableIdGenerator=STABLEIDGENERATOR
+[MASTER] 17:37:41.374 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ ClosureCodingConvention closureCodingConvention0 = new ClosureCodingConvention();
+SimpleErrorReporter simpleErrorReporter0 = new SimpleErrorReporter();
+JSTypeRegistry jSTypeRegistry0 = new JSTypeRegistry(simpleErrorReporter0);
+ClosureReverseAbstractInterpreter closureReverseAbstractInterpreter0 = new ClosureReverseAbstractInterpreter(closureCodingConvention0, jSTypeRegistry0);
+Compiler compiler0 = new Compiler();
+TreeMap<String, CodingConvention.AssertionFunctionSpec> treeMap0 = new TreeMap<String, CodingConvention.AssertionFunctionSpec>();
+Node node0 = new Node(34, (-281), (-1261));
+ControlFlowGraph<Node> controlFlowGraph0 = new ControlFlowGraph<Node>(node0, true, true);
+Node node1 = compiler0.parseSyntheticCode("Object#Key", "com.google.javascript.scomp.NodeUtil$BooleanResultPredicate");
+Scope scope0 = Scope.createGlobalScope(node1);
+TypeInference typeInference0 = new TypeInference(compiler0, controlFlowGraph0, closureReverseAbstractInterpreter0, scope0, treeMap0);
+FlowScope flowScope0 = typeInference0.createEntryLattice();
+List<FlowScope> list0 = typeInference0.branchedFlowThrough(node0, flowScope0);
+assertTrue(list0.isEmpty());
+
+
+[MASTER] 17:37:42.542 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class org.evosuite.runtime.mock.java.lang.MockIllegalArgumentException: Multiple entries with same key: stableIdGenerator=NOT_IMPLEMENTED and stableIdGenerator=STABLEIDGENERATOR
+[MASTER] 17:37:42.542 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ ClosureCodingConvention closureCodingConvention0 = new ClosureCodingConvention();
+SimpleErrorReporter simpleErrorReporter0 = new SimpleErrorReporter();
+JSTypeRegistry jSTypeRegistry0 = new JSTypeRegistry(simpleErrorReporter0);
+ClosureReverseAbstractInterpreter closureReverseAbstractInterpreter0 = new ClosureReverseAbstractInterpreter(closureCodingConvention0, jSTypeRegistry0);
+Compiler compiler0 = new Compiler();
+TreeMap<String, CodingConvention.AssertionFunctionSpec> treeMap0 = new TreeMap<String, CodingConvention.AssertionFunctionSpec>();
+Node node0 = new Node(35, (-281), (-1261));
+ControlFlowGraph<Node> controlFlowGraph0 = new ControlFlowGraph<Node>(node0, true, false);
+Node node1 = compiler0.parseSyntheticCode("Object#Key", "com.google.javascript.scomp.NodeUtil$BooleanResultPredicate");
+Scope scope0 = Scope.createGlobalScope(node1);
+TypeInference typeInference0 = new TypeInference(compiler0, controlFlowGraph0, closureReverseAbstractInterpreter0, scope0, treeMap0);
+FlowScope flowScope0 = typeInference0.createEntryLattice();
+typeInference0.branchedFlowThrough(node0, flowScope0);
+
+[MASTER] 17:37:43.719 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class org.evosuite.runtime.mock.java.lang.MockIllegalArgumentException: Multiple entries with same key: stableIdGenerator=NOT_IMPLEMENTED and stableIdGenerator=STABLEIDGENERATOR
+[MASTER] 17:37:43.719 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ ClosureCodingConvention closureCodingConvention0 = new ClosureCodingConvention();
+SimpleErrorReporter simpleErrorReporter0 = new SimpleErrorReporter();
+JSTypeRegistry jSTypeRegistry0 = new JSTypeRegistry(simpleErrorReporter0);
+ClosureReverseAbstractInterpreter closureReverseAbstractInterpreter0 = new ClosureReverseAbstractInterpreter(closureCodingConvention0, jSTypeRegistry0);
+Compiler compiler0 = new Compiler();
+TreeMap<String, CodingConvention.AssertionFunctionSpec> treeMap0 = new TreeMap<String, CodingConvention.AssertionFunctionSpec>();
+Node node0 = new Node((-37), (-37), (-1261));
+ControlFlowGraph<Node> controlFlowGraph0 = new ControlFlowGraph<Node>(node0, true, true);
+Node node1 = compiler0.parseSyntheticCode("LtCa#o.6-q=p|", "com.google.javascript.jscomp.NodeUtil$BooleanResultPredicate");
+Scope scope0 = Scope.createGlobalScope(node1);
+TypeInference typeInference0 = new TypeInference(compiler0, controlFlowGraph0, closureReverseAbstractInterpreter0, scope0, treeMap0);
+FlowScope flowScope0 = typeInference0.createEntryLattice();
+Node node2 = new Node(36, node0, 32, 4095);
+FlowScope flowScope1 = typeInference0.flowThrough(node2, flowScope0);
+assertNotSame(flowScope1, flowScope0);
+
+
+[MASTER] 17:37:44.810 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class org.evosuite.runtime.mock.java.lang.MockIllegalArgumentException: Multiple entries with same key: stableIdGenerator=NOT_IMPLEMENTED and stableIdGenerator=STABLEIDGENERATOR
+[MASTER] 17:37:44.811 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ ClosureCodingConvention closureCodingConvention0 = new ClosureCodingConvention();
+SimpleErrorReporter simpleErrorReporter0 = new SimpleErrorReporter();
+JSTypeRegistry jSTypeRegistry0 = new JSTypeRegistry(simpleErrorReporter0);
+ClosureReverseAbstractInterpreter closureReverseAbstractInterpreter0 = new ClosureReverseAbstractInterpreter(closureCodingConvention0, jSTypeRegistry0);
+Compiler compiler0 = new Compiler();
+TreeMap<String, CodingConvention.AssertionFunctionSpec> treeMap0 = new TreeMap<String, CodingConvention.AssertionFunctionSpec>();
+Node node0 = new Node((-37), (-37), (-1244));
+ControlFlowGraph<Node> controlFlowGraph0 = new ControlFlowGraph<Node>(node0, true, true);
+Node node1 = compiler0.parseSyntheticCode("LtCa#o.6-q=p|", "com.google.javascript.jscomp.NodeUtil$BooleanResultPredicate");
+Scope scope0 = Scope.createGlobalScope(node1);
+TypeInference typeInference0 = new TypeInference(compiler0, controlFlowGraph0, closureReverseAbstractInterpreter0, scope0, treeMap0);
+FlowScope flowScope0 = typeInference0.createEntryLattice();
+Node node2 = new Node(37, node0, node0);
+typeInference0.branchedFlowThrough(node2, flowScope0);
+
+[MASTER] 17:37:45.963 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class org.evosuite.runtime.mock.java.lang.MockIllegalArgumentException: Multiple entries with same key: stableIdGenerator=NOT_IMPLEMENTED and stableIdGenerator=STABLEIDGENERATOR
+[MASTER] 17:37:45.963 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ ClosureCodingConvention closureCodingConvention0 = new ClosureCodingConvention();
+SimpleErrorReporter simpleErrorReporter0 = new SimpleErrorReporter();
+JSTypeRegistry jSTypeRegistry0 = new JSTypeRegistry(simpleErrorReporter0);
+ClosureReverseAbstractInterpreter closureReverseAbstractInterpreter0 = new ClosureReverseAbstractInterpreter(closureCodingConvention0, jSTypeRegistry0);
+Compiler compiler0 = new Compiler();
+TreeMap<String, CodingConvention.AssertionFunctionSpec> treeMap0 = new TreeMap<String, CodingConvention.AssertionFunctionSpec>();
+Node node0 = new Node((-37), (-37), (-1261));
+ControlFlowGraph<Node> controlFlowGraph0 = new ControlFlowGraph<Node>(node0, false, false);
+Node node1 = compiler0.parseSyntheticCode("Object#Key", "com.google.javascript.jscomp.NodeUtil$BooleanResultPredicate");
+Scope scope0 = Scope.createGlobalScope(node1);
+TypeInference typeInference0 = new TypeInference(compiler0, controlFlowGraph0, closureReverseAbstractInterpreter0, scope0, treeMap0);
+LinkedFlowScope linkedFlowScope0 = LinkedFlowScope.createEntryLattice(scope0);
+Node node2 = Node.newNumber((double) 37, 136, (-33));
+typeInference0.branchedFlowThrough(node2, linkedFlowScope0);
+
+[MASTER] 17:37:49.611 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class org.evosuite.runtime.mock.java.lang.MockIllegalArgumentException: Multiple entries with same key: stableIdGenerator=NOT_IMPLEMENTED and stableIdGenerator=STABLEIDGENERATOR
+[MASTER] 17:37:49.611 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ ClosureCodingConvention closureCodingConvention0 = new ClosureCodingConvention();
+SimpleErrorReporter simpleErrorReporter0 = new SimpleErrorReporter();
+JSTypeRegistry jSTypeRegistry0 = new JSTypeRegistry(simpleErrorReporter0);
+ClosureReverseAbstractInterpreter closureReverseAbstractInterpreter0 = new ClosureReverseAbstractInterpreter(closureCodingConvention0, jSTypeRegistry0);
+Compiler compiler0 = new Compiler();
+TreeMap<String, CodingConvention.AssertionFunctionSpec> treeMap0 = new TreeMap<String, CodingConvention.AssertionFunctionSpec>();
+Node node0 = compiler0.parseTestCode("Object#Element");
+ControlFlowGraph<Node> controlFlowGraph0 = new ControlFlowGraph<Node>(node0, true, true);
+Node node1 = compiler0.parseSyntheticCode("com.googe.javascript.somp.NodeUtil$BooleanResultPredicate", "com.googe.javascript.somp.NodeUtil$BooleanResultPredicate");
+Scope scope0 = Scope.createGlobalScope(node1);
+TypeInference typeInference0 = new TypeInference(compiler0, controlFlowGraph0, closureReverseAbstractInterpreter0, scope0, treeMap0);
+LinkedFlowScope linkedFlowScope0 = LinkedFlowScope.createEntryLattice(scope0);
+Node node2 = new Node(44, node0, node0);
+typeInference0.branchedFlowThrough(node2, linkedFlowScope0);
+
+[MASTER] 17:37:51.927 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class org.evosuite.runtime.mock.java.lang.MockIllegalArgumentException: Multiple entries with same key: stableIdGenerator=NOT_IMPLEMENTED and stableIdGenerator=STABLEIDGENERATOR
+[MASTER] 17:37:51.928 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ ClosureCodingConvention closureCodingConvention0 = new ClosureCodingConvention();
+SimpleErrorReporter simpleErrorReporter0 = new SimpleErrorReporter();
+JSTypeRegistry jSTypeRegistry0 = new JSTypeRegistry(simpleErrorReporter0);
+ClosureReverseAbstractInterpreter closureReverseAbstractInterpreter0 = new ClosureReverseAbstractInterpreter(closureCodingConvention0, jSTypeRegistry0);
+Compiler compiler0 = new Compiler();
+TreeMap<String, CodingConvention.AssertionFunctionSpec> treeMap0 = new TreeMap<String, CodingConvention.AssertionFunctionSpec>();
+Node node0 = new Node((-37), (-37), (-1256));
+ControlFlowGraph<Node> controlFlowGraph0 = new ControlFlowGraph<Node>(node0, true, true);
+Node node1 = compiler0.parseSyntheticCode("LtCa#o.6-q=p|", "com.google.javascript.jscomp.NodeUtil$BooleanResultPredicate");
+Scope scope0 = Scope.createGlobalScope(node1);
+TypeInference typeInference0 = new TypeInference(compiler0, controlFlowGraph0, closureReverseAbstractInterpreter0, scope0, treeMap0);
+FlowScope flowScope0 = typeInference0.createEntryLattice();
+Node node2 = new Node(47, node0);
+typeInference0.branchedFlowThrough(node2, flowScope0);
+
+[MASTER] 17:37:52.949 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class org.evosuite.runtime.mock.java.lang.MockIllegalArgumentException: Multiple entries with same key: stableIdGenerator=NOT_IMPLEMENTED and stableIdGenerator=STABLEIDGENERATOR
+[MASTER] 17:37:52.949 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ ClosureCodingConvention closureCodingConvention0 = new ClosureCodingConvention();
+SimpleErrorReporter simpleErrorReporter0 = new SimpleErrorReporter();
+JSTypeRegistry jSTypeRegistry0 = new JSTypeRegistry(simpleErrorReporter0);
+ClosureReverseAbstractInterpreter closureReverseAbstractInterpreter0 = new ClosureReverseAbstractInterpreter(closureCodingConvention0, jSTypeRegistry0);
+Compiler compiler0 = new Compiler();
+TreeMap<String, CodingConvention.AssertionFunctionSpec> treeMap0 = new TreeMap<String, CodingConvention.AssertionFunctionSpec>();
+Node node0 = new Node((-37), (-37), (-1261));
+ControlFlowGraph<Node> controlFlowGraph0 = new ControlFlowGraph<Node>(node0, true, true);
+Node node1 = compiler0.parseSyntheticCode("LtCa#o.6-q=p|", "com.google.javascript.scomp.NodeUtil$BooleanResultPredicate");
+Scope scope0 = Scope.createGlobalScope(node1);
+TypeInference typeInference0 = new TypeInference(compiler0, controlFlowGraph0, closureReverseAbstractInterpreter0, scope0, treeMap0);
+FlowScope flowScope0 = typeInference0.createEntryLattice();
+Node node2 = new Node(48, node1, 2, 153);
+FlowScope flowScope1 = typeInference0.flowThrough(node2, flowScope0);
+assertNotSame(flowScope1, flowScope0);
+
+
+[MASTER] 17:37:54.118 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class org.evosuite.runtime.mock.java.lang.MockIllegalArgumentException: Multiple entries with same key: stableIdGenerator=NOT_IMPLEMENTED and stableIdGenerator=STABLEIDGENERATOR
+[MASTER] 17:37:54.119 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ ClosureCodingConvention closureCodingConvention0 = new ClosureCodingConvention();
+SimpleErrorReporter simpleErrorReporter0 = new SimpleErrorReporter();
+JSTypeRegistry jSTypeRegistry0 = new JSTypeRegistry(simpleErrorReporter0);
+ClosureReverseAbstractInterpreter closureReverseAbstractInterpreter0 = new ClosureReverseAbstractInterpreter(closureCodingConvention0, jSTypeRegistry0);
+Compiler compiler0 = new Compiler();
+TreeMap<String, CodingConvention.AssertionFunctionSpec> treeMap0 = new TreeMap<String, CodingConvention.AssertionFunctionSpec>();
+Node node0 = new Node((-37), (-37), (-1261));
+ControlFlowGraph<Node> controlFlowGraph0 = new ControlFlowGraph<Node>(node0, true, true);
+Node node1 = compiler0.parseSyntheticCode("LtCa#o.6-q=p|", "com.google.javascript.jscomp.NodeUtil$BooleanResultPredicate");
+Scope scope0 = Scope.createGlobalScope(node1);
+TypeInference typeInference0 = new TypeInference(compiler0, controlFlowGraph0, closureReverseAbstractInterpreter0, scope0, treeMap0);
+FlowScope flowScope0 = typeInference0.createEntryLattice();
+Node node2 = new Node(50, node0, node1);
+typeInference0.branchedFlowThrough(node2, flowScope0);
+
+[MASTER] 17:37:55.417 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class org.evosuite.runtime.mock.java.lang.MockIllegalArgumentException: Multiple entries with same key: stableIdGenerator=NOT_IMPLEMENTED and stableIdGenerator=STABLEIDGENERATOR
+[MASTER] 17:37:55.417 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ ClosureCodingConvention closureCodingConvention0 = new ClosureCodingConvention();
+SimpleErrorReporter simpleErrorReporter0 = new SimpleErrorReporter();
+JSTypeRegistry jSTypeRegistry0 = new JSTypeRegistry(simpleErrorReporter0);
+ClosureReverseAbstractInterpreter closureReverseAbstractInterpreter0 = new ClosureReverseAbstractInterpreter(closureCodingConvention0, jSTypeRegistry0);
+Compiler compiler0 = new Compiler();
+TreeMap<String, CodingConvention.AssertionFunctionSpec> treeMap0 = new TreeMap<String, CodingConvention.AssertionFunctionSpec>();
+Node node0 = new Node((-37), (-37), (-1261));
+ControlFlowGraph<Node> controlFlowGraph0 = new ControlFlowGraph<Node>(node0, true, true);
+Node node1 = compiler0.parseSyntheticCode("LtCa#o.6-q=p|", "com.google.javascript.scomp.NodeUtil$BooleanResultPredicate");
+Scope scope0 = Scope.createGlobalScope(node1);
+TypeInference typeInference0 = new TypeInference(compiler0, controlFlowGraph0, closureReverseAbstractInterpreter0, scope0, treeMap0);
+FlowScope flowScope0 = typeInference0.createEntryLattice();
+Node node2 = Node.newString(51, "com.google.javascript.jscomp.TypeInference", 141, 42);
+typeInference0.branchedFlowThrough(node2, flowScope0);
+
+* Writing tests to file
+* Writing JUnit test case 'TypeInference_ESTest' to results/Closure-176/com.google.javascript.jscomp.TypeInference/BBC-F0-50/tests/5
+* Done!
+
+* Computation finished

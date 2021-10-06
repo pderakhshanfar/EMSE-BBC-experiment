@@ -1,0 +1,82 @@
+* EvoSuite 1.1.1-SNAPSHOT
+* Configuration: default
+* Going to generate test cases for class: org.apache.commons.cli.HelpFormatter
+* Starting Client-0
+* Connecting to master process on port 18546
+* Analyzing classpath: 
+  - subjects/buggy-versions/Cli-32/target/classes
+* Finished analyzing classpath
+* Generating tests for class org.apache.commons.cli.HelpFormatter
+* Test criteria:
+  - Line Coverage
+  - Branch Coverage
+  - Exception
+  - Mutation testing (weak)
+  - Method-Output Coverage
+  - Top-Level Method Coverage
+  - No-Exception Top-Level Method Coverage
+  - Context Branch Coverage
+* Total number of test goals for DYNAMOSA: 1151
+* Using seed 843272279
+* Starting evolution
+* Initial Number of Goals in DynaMOSA = 400 / 1151
+[MASTER] 17:31:13.985 [logback-2] ERROR TestCluster - Failed to check cache for java.util.Comparator<T> : Type points to itself
+[MASTER] 17:38:01.458 [logback-2] ERROR TestCluster - Failed to check cache for java.util.List<E> : Type points to itself
+Number of times BBC is called in total: 0
+* Search finished after 602s and 277 generations, 112886 statements, best individual has fitness: 115.0
+* Minimizing test suite
+[MASTER] 17:42:38.680 [logback-1] WARN  TestSuiteMinimizer - Minimization timeout. Roll back to original test suite
+* Going to analyze the coverage criteria
+* Coverage analysis for criterion LINE
+* Coverage of criterion LINE: 100%
+* Total number of goals: 203
+* Number of covered goals: 202
+* Coverage analysis for criterion BRANCH
+* Coverage of criterion BRANCH: 93%
+* Total number of goals: 157
+* Number of covered goals: 146
+* Coverage analysis for criterion EXCEPTION
+* Coverage of criterion EXCEPTION: 100%
+* Total number of goals: 56
+* Number of covered goals: 56
+* Coverage analysis for criterion WEAKMUTATION
+* Coverage of criterion WEAKMUTATION: 93%
+* Total number of goals: 508
+* Number of covered goals: 473
+* Coverage analysis for criterion OUTPUT
+* Coverage of criterion OUTPUT: 74%
+* Total number of goals: 46
+* Number of covered goals: 34
+* Coverage analysis for criterion METHOD
+* Coverage of criterion METHOD: 98%
+* Total number of goals: 40
+* Number of covered goals: 39
+* Coverage analysis for criterion METHODNOEXCEPTION
+* Coverage of criterion METHODNOEXCEPTION: 98%
+* Total number of goals: 40
+* Number of covered goals: 39
+* Coverage analysis for criterion CBRANCH
+* Coverage of criterion CBRANCH: 93%
+* Total number of goals: 157
+* Number of covered goals: 146
+* Generated 201 tests with total length 2114
+* Resulting test suite's coverage: 88% (average coverage for all fitness functions)
+* Generating assertions
+[MASTER] 17:43:44.550 [logback-1] WARN  SimpleMutationAssertionGenerator - Reached maximum time to generate assertions, aborting assertion generation
+* Resulting test suite's mutation score: 7%
+* Compiling and checking tests
+[MASTER] 17:44:42.650 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class java.util.concurrent.ExecutionException: org.evosuite.runtime.TooManyResourcesException: Loop has been executed more times than the allowed 10000
+[MASTER] 17:44:42.650 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ HelpFormatter helpFormatter0 = new HelpFormatter();
+StringBuffer stringBuffer0 = new StringBuffer((CharSequence) "--");
+StringBuffer stringBuffer1 = new StringBuffer();
+helpFormatter0.renderWrappedText(stringBuffer1, 0, 0, "&R9B >MZdZ");
+
+* Permissions denied during test execution: 
+  - java.lang.RuntimePermission: 
+         writeFileDescriptor: 37
+* Writing tests to file
+* Writing JUnit test case 'HelpFormatter_ESTest' to results/Cli-32/org.apache.commons.cli.HelpFormatter/default/tests/9
+* Done!
+
+* Computation finished

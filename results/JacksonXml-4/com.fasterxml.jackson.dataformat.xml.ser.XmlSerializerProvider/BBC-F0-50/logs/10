@@ -1,0 +1,122 @@
+* EvoSuite 1.1.1-SNAPSHOT
+* Configuration: BBC-F0-50
+* Going to generate test cases for class: com.fasterxml.jackson.dataformat.xml.ser.XmlSerializerProvider
+* Starting Client-0
+* Connecting to master process on port 2352
+* Analyzing classpath: 
+  - subjects/buggy-versions/JacksonXml-4/target/classes
+  - defects4j/framework/projects/JacksonXml/lib/com/fasterxml/jackson/core/jackson-core/2.8.5/jackson-core-2.8.5.jar
+  - defects4j/framework/projects/JacksonXml/lib/com/fasterxml/jackson/core/jackson-annotations/2.8.0/jackson-annotations-2.8.0.jar
+  - defects4j/framework/projects/JacksonXml/lib/com/fasterxml/jackson/core/jackson-databind/2.8.5/jackson-databind-2.8.5.jar
+  - defects4j/framework/projects/JacksonXml/lib/com/fasterxml/jackson/module/jackson-module-jaxb-annotations/2.8.5/jackson-module-jaxb-annotations-2.8.5.jar
+  - defects4j/framework/projects/JacksonXml/lib/org/codehaus/woodstox/stax2-api/3.1.4/stax2-api-3.1.4.jar
+  - defects4j/framework/projects/JacksonXml/lib/com/fasterxml/woodstox/woodstox-core/5.0.3/woodstox-core-5.0.3.jar
+* Finished analyzing classpath
+* Generating tests for class com.fasterxml.jackson.dataformat.xml.ser.XmlSerializerProvider
+* Test criteria:
+  - Line Coverage
+  - Branch Coverage
+  - Exception
+  - Mutation testing (weak)
+  - Method-Output Coverage
+  - Top-Level Method Coverage
+  - No-Exception Top-Level Method Coverage
+  - Context Branch Coverage
+* Total number of test goals for DYNAMOSA: 364
+* Using seed 1871763126
+* Starting evolution
+bbc usage percentage is: 50%
+* Initial Number of Goals in DynaMOSA = 95 / 364
+[MASTER] 01:53:45.044 [logback-2] ERROR TestCluster - Failed to check cache for java.util.LinkedList<E> : Type points to itself
+[MASTER] 01:53:46.308 [logback-2] ERROR TestCluster - Failed to check cache for java.util.HashMap<K, V> : Type points to itself
+[MASTER] 01:53:50.876 [logback-2] ERROR TestCluster - Failed to check cache for java.util.Enumeration<E> : Type points to itself
+[MASTER] 01:53:58.407 [logback-2] ERROR TestCluster - Failed to check cache for com.fasterxml.jackson.annotation.ObjectIdGenerator<T> : Type points to itself
+[MASTER] 01:54:09.359 [logback-2] ERROR TestCluster - Failed to check cache for com.fasterxml.jackson.databind.JsonSerializer<T> : Type points to itself
+[MASTER] 01:54:09.470 [logback-2] ERROR TestCluster - Failed to check cache for com.fasterxml.jackson.databind.JsonDeserializer<T> : Type points to itself
+[MASTER] 01:54:12.762 [logback-2] ERROR TestCluster - Failed to check cache for java.util.function.BiFunction<T, U, R> : Type points to itself
+[MASTER] 01:54:12.943 [logback-2] ERROR TestCluster - Failed to check cache for java.util.Comparator<T> : Type points to itself
+[MASTER] 01:54:36.301 [logback-2] ERROR TestCluster - Failed to check cache for java.lang.Class<T> : Type points to itself
+[MASTER] 01:55:48.782 [logback-1] WARN  TestChromosome - Functional mock problem: org.evosuite.ga.ConstructionFailedException: Invalid generic instance
+[MASTER] 01:55:49.155 [logback-1] WARN  TestChromosome - Functional mock problem: org.evosuite.ga.ConstructionFailedException: Failed to add constructor for com.fasterxml.jackson.databind.introspect.POJOPropertyBuilder due to org.evosuite.ga.ConstructionFailedException: Max recursion depth reached
+* Search finished after 605s and 4376 generations, 1276433 statements, best individual has fitness: 138.0
+* Minimizing test suite
+* Going to analyze the coverage criteria
+* Coverage analysis for criterion LINE
+* Coverage of criterion LINE: 69%
+* Total number of goals: 117
+* Number of covered goals: 81
+* Coverage analysis for criterion BRANCH
+* Coverage of criterion BRANCH: 71%
+* Total number of goals: 62
+* Number of covered goals: 44
+* Coverage analysis for criterion EXCEPTION
+* Coverage of criterion EXCEPTION: 100%
+* Total number of goals: 26
+* Number of covered goals: 26
+* Coverage analysis for criterion WEAKMUTATION
+* Coverage of criterion WEAKMUTATION: 68%
+* Total number of goals: 69
+* Number of covered goals: 47
+* Coverage analysis for criterion OUTPUT
+* Coverage of criterion OUTPUT: 66%
+* Total number of goals: 32
+* Number of covered goals: 21
+* Coverage analysis for criterion METHOD
+* Coverage of criterion METHOD: 100%
+* Total number of goals: 11
+* Number of covered goals: 11
+* Coverage analysis for criterion METHODNOEXCEPTION
+* Coverage of criterion METHODNOEXCEPTION: 100%
+* Total number of goals: 11
+* Number of covered goals: 11
+* Coverage analysis for criterion CBRANCH
+* Coverage of criterion CBRANCH: 71%
+* Total number of goals: 62
+* Number of covered goals: 44
+* Generated 45 tests with total length 440
+* Resulting test suite's coverage: 73% (average coverage for all fitness functions)
+* Generating assertions
+* Resulting test suite's mutation score: 22%
+* Compiling and checking tests
+[MASTER] 02:03:56.384 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 02:04:27.479 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class java.lang.SecurityException: Security manager blocks ("java.lang.RuntimePermission" "writeFileDescriptor")
+java.lang.Thread.getStackTrace(Thread.java:1559)
+org.evosuite.runtime.sandbox.MSecurityManager.checkPermission(MSecurityManager.java:433)
+java.lang.SecurityManager.checkWrite(SecurityManager.java:954)
+java.io.FileOutputStream.<init>(FileOutputStream.java:245)
+org.evosuite.runtime.mock.java.io.MockFileOutputStream.<init>(MockFileOutputStream.java:114)
+com.fasterxml.jackson.dataformat.xml.ser.XmlSerializerProvider_78_tmp__ESTest.test0(XmlSerializerProvider_78_tmp__ESTest.java:39)
+sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+java.lang.reflect.Method.invoke(Method.java:498)
+org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)
+org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56)
+org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+org.junit.internal.runners.statements.FailOnTimeout$CallableStatement.call(FailOnTimeout.java:288)
+org.junit.internal.runners.statements.FailOnTimeout$CallableStatement.call(FailOnTimeout.java:282)
+java.util.concurrent.FutureTask.run(FutureTask.java:266)
+java.lang.Thread.run(Thread.java:748)
+
+[MASTER] 02:04:27.480 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ XmlRootNameLookup xmlRootNameLookup0 = new XmlRootNameLookup();
+XmlSerializerProvider xmlSerializerProvider0 = new XmlSerializerProvider(xmlRootNameLookup0);
+BufferRecycler bufferRecycler0 = new BufferRecycler();
+IOContext iOContext0 = new IOContext(bufferRecycler0, xmlSerializerProvider0, true);
+ObjectMapper objectMapper0 = new ObjectMapper();
+DefaultPrettyPrinter defaultPrettyPrinter0 = new DefaultPrettyPrinter();
+FileDescriptor fileDescriptor0 = new FileDescriptor();
+MockFileOutputStream mockFileOutputStream0 = new MockFileOutputStream(fileDescriptor0);
+DataOutputStream dataOutputStream0 = new DataOutputStream(mockFileOutputStream0);
+UTF8JsonGenerator uTF8JsonGenerator0 = new UTF8JsonGenerator(iOContext0, 3, objectMapper0, dataOutputStream0);
+xmlSerializerProvider0.serializeValue((JsonGenerator) uTF8JsonGenerator0, (Object) defaultPrettyPrinter0);
+
+* Permissions denied during test execution: 
+  - java.lang.RuntimePermission: 
+         writeFileDescriptor: 1
+* Writing tests to file
+* Writing JUnit test case 'XmlSerializerProvider_ESTest' to results/JacksonXml-4/com.fasterxml.jackson.dataformat.xml.ser.XmlSerializerProvider/BBC-F0-50/tests/10
+* Done!
+
+* Computation finished

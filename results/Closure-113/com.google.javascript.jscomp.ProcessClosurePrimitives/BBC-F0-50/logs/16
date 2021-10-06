@@ -1,0 +1,109 @@
+* EvoSuite 1.1.1-SNAPSHOT
+* Configuration: BBC-F0-50
+* Going to generate test cases for class: com.google.javascript.jscomp.ProcessClosurePrimitives
+* Starting Client-0
+* Connecting to master process on port 19712
+* Analyzing classpath: 
+  - subjects/buggy-versions/Closure-113/build/classes
+  - subjects/buggy-versions/Closure-113/lib/args4j.jar
+  - subjects/buggy-versions/Closure-113/lib/guava.jar
+  - subjects/buggy-versions/Closure-113/lib/json.jar
+  - subjects/buggy-versions/Closure-113/lib/jsr305.jar
+  - subjects/buggy-versions/Closure-113/lib/protobuf-java.jar
+  - subjects/buggy-versions/Closure-113/build/lib/rhino.jar
+  - subjects/buggy-versions/Closure-113/lib/ant.jar
+* Finished analyzing classpath
+* Generating tests for class com.google.javascript.jscomp.ProcessClosurePrimitives
+* Test criteria:
+  - Line Coverage
+  - Branch Coverage
+  - Exception
+  - Mutation testing (weak)
+  - Method-Output Coverage
+  - Top-Level Method Coverage
+  - No-Exception Top-Level Method Coverage
+  - Context Branch Coverage
+* Total number of test goals for DYNAMOSA: 1637
+* Using seed 3473243575
+* Starting evolution
+bbc usage percentage is: 50%
+* Initial Number of Goals in DynaMOSA = 361 / 1637
+[MASTER] 18:01:56.870 [logback-2] ERROR TestCluster - Failed to check cache for java.util.AbstractMap<K, V>.SimpleEntry<K, V> : Type points to itself
+[MASTER] 18:01:56.871 [logback-2] ERROR TestCluster - Failed to check cache for java.util.AbstractMap<K, V>.SimpleImmutableEntry<K, V> : Type points to itself
+[MASTER] 18:04:21.421 [logback-2] ERROR TestCluster - Failed to check cache for java.util.Iterator<E> : Type points to itself
+[MASTER] 18:04:32.620 [logback-2] ERROR TestCluster - Failed to check cache for com.google.javascript.jscomp.ControlFlowGraph<N> : Type points to itself
+[MASTER] 18:05:08.574 [logback-2] ERROR TestCluster - Failed to check cache for java.util.Comparator<T> : Type points to itself
+[MASTER] 18:05:29.671 [logback-2] ERROR TestCluster - Failed to check cache for java.util.Enumeration<E> : Type points to itself
+* Search finished after 602s and 690 generations, 293916 statements, best individual has fitness: 1433.0
+* Minimizing test suite
+* Going to analyze the coverage criteria
+* Coverage analysis for criterion LINE
+* Coverage of criterion LINE: 15%
+* Total number of goals: 472
+* Number of covered goals: 69
+* Coverage analysis for criterion BRANCH
+* Coverage of criterion BRANCH: 15%
+* Total number of goals: 350
+* Number of covered goals: 51
+* Coverage analysis for criterion EXCEPTION
+* Coverage of criterion EXCEPTION: 100%
+* Total number of goals: 6
+* Number of covered goals: 6
+* Coverage analysis for criterion WEAKMUTATION
+* Coverage of criterion WEAKMUTATION: 8%
+* Total number of goals: 441
+* Number of covered goals: 34
+* Coverage analysis for criterion OUTPUT
+* Coverage of criterion OUTPUT: 33%
+* Total number of goals: 6
+* Number of covered goals: 2
+* Coverage analysis for criterion METHOD
+* Coverage of criterion METHOD: 56%
+* Total number of goals: 9
+* Number of covered goals: 5
+* Coverage analysis for criterion METHODNOEXCEPTION
+* Coverage of criterion METHODNOEXCEPTION: 44%
+* Total number of goals: 9
+* Number of covered goals: 4
+* Coverage analysis for criterion CBRANCH
+* Coverage of criterion CBRANCH: 13%
+* Total number of goals: 350
+* Number of covered goals: 46
+* Generated 17 tests with total length 103
+* Resulting test suite's coverage: 29% (average coverage for all fitness functions)
+* Generating assertions
+* Resulting test suite's mutation score: 4%
+* Compiling and checking tests
+[MASTER] 18:11:52.930 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 18:11:52.934 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class java.lang.AssertionError: Expecting exception: IllegalArgumentException
+[MASTER] 18:11:52.935 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ Compiler compiler0 = new Compiler();
+PreprocessorSymbolTable preprocessorSymbolTable0 = new PreprocessorSymbolTable((Node) null);
+CheckLevel checkLevel0 = CheckLevel.OFF;
+ProcessClosurePrimitives processClosurePrimitives0 = new ProcessClosurePrimitives(compiler0, preprocessorSymbolTable0, checkLevel0);
+compiler0.parseSyntheticCode("goog.base", "goog.base");
+
+[MASTER] 18:12:03.309 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class java.lang.AssertionError: Expecting exception: IllegalArgumentException
+[MASTER] 18:12:03.310 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ Compiler compiler0 = new Compiler();
+Compiler compiler1 = new Compiler();
+CheckLevel checkLevel0 = CheckLevel.OFF;
+ProcessClosurePrimitives processClosurePrimitives0 = new ProcessClosurePrimitives(compiler1, (PreprocessorSymbolTable) null, checkLevel0);
+compiler1.parseTestCode("qnj=LmFnLC");
+
+[MASTER] 18:12:14.136 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test07 -> class org.evosuite.runtime.mock.java.lang.MockIllegalArgumentException: Multiple entries with same key: constructor=NOT_IMPLEMENTED and constructor=CONSTRUCTOR
+[MASTER] 18:12:14.137 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ Compiler compiler0 = new Compiler();
+PreprocessorSymbolTable preprocessorSymbolTable0 = new PreprocessorSymbolTable((Node) null);
+CheckLevel checkLevel0 = CheckLevel.ERROR;
+ProcessClosurePrimitives processClosurePrimitives0 = new ProcessClosurePrimitives(compiler0, preprocessorSymbolTable0, checkLevel0);
+Node node0 = compiler0.parseTestCode("com.google.javascript.rhino.head.ast.XmlExpression");
+processClosurePrimitives0.process((Node) null, node0);
+assertFalse(node0.isCast());
+
+
+* Writing tests to file
+* Writing JUnit test case 'ProcessClosurePrimitives_ESTest' to results/Closure-113/com.google.javascript.jscomp.ProcessClosurePrimitives/BBC-F0-50/tests/16
+* Done!
+
+* Computation finished

@@ -1,0 +1,104 @@
+* EvoSuite 1.1.1-SNAPSHOT
+* Configuration: default
+* Going to generate test cases for class: com.google.javascript.jscomp.ProcessClosurePrimitives
+* Starting Client-0
+* Connecting to master process on port 12977
+* Analyzing classpath: 
+  - subjects/buggy-versions/Closure-113/build/classes
+  - subjects/buggy-versions/Closure-113/lib/args4j.jar
+  - subjects/buggy-versions/Closure-113/lib/guava.jar
+  - subjects/buggy-versions/Closure-113/lib/json.jar
+  - subjects/buggy-versions/Closure-113/lib/jsr305.jar
+  - subjects/buggy-versions/Closure-113/lib/protobuf-java.jar
+  - subjects/buggy-versions/Closure-113/build/lib/rhino.jar
+  - subjects/buggy-versions/Closure-113/lib/ant.jar
+* Finished analyzing classpath
+* Generating tests for class com.google.javascript.jscomp.ProcessClosurePrimitives
+* Test criteria:
+  - Line Coverage
+  - Branch Coverage
+  - Exception
+  - Mutation testing (weak)
+  - Method-Output Coverage
+  - Top-Level Method Coverage
+  - No-Exception Top-Level Method Coverage
+  - Context Branch Coverage
+* Total number of test goals for DYNAMOSA: 1637
+* Using seed 3598064632
+* Starting evolution
+* Initial Number of Goals in DynaMOSA = 361 / 1637
+[MASTER] 19:50:03.317 [logback-2] ERROR TestCluster - Failed to check cache for java.util.AbstractMap<K, V>.SimpleEntry<K, V> : Type points to itself
+[MASTER] 19:50:03.317 [logback-2] ERROR TestCluster - Failed to check cache for java.util.AbstractMap<K, V>.SimpleImmutableEntry<K, V> : Type points to itself
+[MASTER] 19:51:11.421 [logback-2] ERROR TestCluster - Failed to check cache for java.util.Iterator<E> : Type points to itself
+[MASTER] 19:51:22.872 [logback-2] ERROR TestCluster - Failed to check cache for java.util.Enumeration<E> : Type points to itself
+[MASTER] 19:52:19.695 [logback-2] ERROR TestCluster - Failed to check cache for com.google.javascript.jscomp.ControlFlowGraph<N> : Type points to itself
+Number of times BBC is called in total: 0
+* Search finished after 602s and 592 generations, 257819 statements, best individual has fitness: 1429.0
+* Minimizing test suite
+* Going to analyze the coverage criteria
+* Coverage analysis for criterion LINE
+* Coverage of criterion LINE: 15%
+* Total number of goals: 472
+* Number of covered goals: 69
+* Coverage analysis for criterion BRANCH
+* Coverage of criterion BRANCH: 15%
+* Total number of goals: 350
+* Number of covered goals: 51
+* Coverage analysis for criterion EXCEPTION
+* Coverage of criterion EXCEPTION: 88%
+* Total number of goals: 8
+* Number of covered goals: 7
+* Coverage analysis for criterion WEAKMUTATION
+* Coverage of criterion WEAKMUTATION: 8%
+* Total number of goals: 441
+* Number of covered goals: 34
+* Coverage analysis for criterion OUTPUT
+* Coverage of criterion OUTPUT: 33%
+* Total number of goals: 6
+* Number of covered goals: 2
+* Coverage analysis for criterion METHOD
+* Coverage of criterion METHOD: 56%
+* Total number of goals: 9
+* Number of covered goals: 5
+* Coverage analysis for criterion METHODNOEXCEPTION
+* Coverage of criterion METHODNOEXCEPTION: 44%
+* Total number of goals: 9
+* Number of covered goals: 4
+* Coverage analysis for criterion CBRANCH
+* Coverage of criterion CBRANCH: 15%
+* Total number of goals: 350
+* Number of covered goals: 51
+* Generated 15 tests with total length 88
+* Resulting test suite's coverage: 30% (average coverage for all fitness functions)
+* Generating assertions
+* Resulting test suite's mutation score: 1%
+* Compiling and checking tests
+[MASTER] 20:00:09.965 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class java.lang.StackOverflowError: null
+[MASTER] 20:00:09.966 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ Compiler compiler0 = new Compiler();
+compiler0.ensureDefaultPassConfig();
+CheckLevel checkLevel0 = CheckLevel.WARNING;
+ProcessClosurePrimitives processClosurePrimitives0 = new ProcessClosurePrimitives(compiler0, (PreprocessorSymbolTable) null, checkLevel0);
+Node node0 = compiler0.parseSyntheticCode("JSC_INVALID_ARGUMENT_ERROR", "JSC_INVALID_ARGUMENT_ERROR");
+Node node1 = new Node(1663, node0, node0, 2284, (-2837));
+node0.addChildrenToFront(node1);
+processClosurePrimitives0.process(node0, node0);
+
+[MASTER] 20:00:14.206 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test12 -> class org.evosuite.runtime.mock.java.lang.MockIllegalArgumentException: Multiple entries with same key: author=NOT_IMPLEMENTED and author=AUTHOR
+[MASTER] 20:00:14.207 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ Compiler compiler0 = new Compiler();
+Node node0 = compiler0.parseSyntheticCode("goog.base", "goog.base");
+CheckLevel checkLevel0 = CheckLevel.WARNING;
+Compiler compiler1 = new Compiler();
+PreprocessorSymbolTable preprocessorSymbolTable0 = new PreprocessorSymbolTable(node0);
+ProcessClosurePrimitives processClosurePrimitives0 = new ProcessClosurePrimitives(compiler1, preprocessorSymbolTable0, checkLevel0);
+processClosurePrimitives0.process(node0, node0);
+
+* Permissions denied during test execution: 
+  - java.lang.RuntimePermission: 
+         writeFileDescriptor: 43
+* Writing tests to file
+* Writing JUnit test case 'ProcessClosurePrimitives_ESTest' to results/Closure-113/com.google.javascript.jscomp.ProcessClosurePrimitives/default/tests/27
+* Done!
+
+* Computation finished

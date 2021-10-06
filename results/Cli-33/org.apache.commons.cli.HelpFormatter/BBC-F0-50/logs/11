@@ -1,0 +1,319 @@
+* EvoSuite 1.1.1-SNAPSHOT
+* Configuration: BBC-F0-50
+* Going to generate test cases for class: org.apache.commons.cli.HelpFormatter
+* Starting Client-0
+* Connecting to master process on port 19508
+* Analyzing classpath: 
+  - subjects/buggy-versions/Cli-33/target/classes
+* Finished analyzing classpath
+* Generating tests for class org.apache.commons.cli.HelpFormatter
+* Test criteria:
+  - Line Coverage
+  - Branch Coverage
+  - Exception
+  - Mutation testing (weak)
+  - Method-Output Coverage
+  - Top-Level Method Coverage
+  - No-Exception Top-Level Method Coverage
+  - Context Branch Coverage
+* Total number of test goals for DYNAMOSA: 1103
+* Using seed 4011961141
+* Starting evolution
+bbc usage percentage is: 50%
+* Initial Number of Goals in DynaMOSA = 400 / 1103
+[MASTER] 16:51:07.248 [logback-2] ERROR TestCluster - Failed to check cache for java.util.Comparator<T> : Type points to itself
+* Search finished after 601s and 103 generations, 44330 statements, best individual has fitness: 125.0
+* Minimizing test suite
+[MASTER] 17:02:20.146 [logback-1] WARN  TestSuiteMinimizer - Minimization timeout. Roll back to original test suite
+* Going to analyze the coverage criteria
+* Coverage analysis for criterion LINE
+* Coverage of criterion LINE: 99%
+* Total number of goals: 201
+* Number of covered goals: 199
+* Coverage analysis for criterion BRANCH
+* Coverage of criterion BRANCH: 92%
+* Total number of goals: 149
+* Number of covered goals: 137
+* Coverage analysis for criterion EXCEPTION
+* Coverage of criterion EXCEPTION: 100%
+* Total number of goals: 50
+* Number of covered goals: 50
+* Coverage analysis for criterion WEAKMUTATION
+* Coverage of criterion WEAKMUTATION: 92%
+* Total number of goals: 478
+* Number of covered goals: 441
+* Coverage analysis for criterion OUTPUT
+* Coverage of criterion OUTPUT: 65%
+* Total number of goals: 46
+* Number of covered goals: 30
+* Coverage analysis for criterion METHOD
+* Coverage of criterion METHOD: 98%
+* Total number of goals: 40
+* Number of covered goals: 39
+* Coverage analysis for criterion METHODNOEXCEPTION
+* Coverage of criterion METHODNOEXCEPTION: 98%
+* Total number of goals: 40
+* Number of covered goals: 39
+* Coverage analysis for criterion CBRANCH
+* Coverage of criterion CBRANCH: 92%
+* Total number of goals: 149
+* Number of covered goals: 137
+* Generated 114 tests with total length 1496
+* Resulting test suite's coverage: 86% (average coverage for all fitness functions)
+* Generating assertions
+[MASTER] 17:03:02.202 [logback-1] WARN  SimpleMutationAssertionGenerator - Assertion minimization is taking too long (0.67495% of time used, but only 33/114 tests minimized), falling back to using all assertions
+* Resulting test suite's mutation score: 15%
+* Compiling and checking tests
+[MASTER] 17:03:28.920 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 17:03:28.982 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 17:03:29.066 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 17:03:29.102 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 17:03:38.598 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class java.lang.SecurityException: Security manager blocks ("java.lang.RuntimePermission" "writeFileDescriptor")
+java.lang.Thread.getStackTrace(Thread.java:1559)
+org.evosuite.runtime.sandbox.MSecurityManager.checkPermission(MSecurityManager.java:433)
+java.lang.SecurityManager.checkWrite(SecurityManager.java:954)
+java.io.FileOutputStream.<init>(FileOutputStream.java:245)
+org.evosuite.runtime.mock.java.io.MockFileOutputStream.<init>(MockFileOutputStream.java:114)
+org.apache.commons.cli.HelpFormatter_190_tmp__ESTest.test0(HelpFormatter_190_tmp__ESTest.java:99)
+sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+java.lang.reflect.Method.invoke(Method.java:498)
+org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)
+org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56)
+org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+org.junit.internal.runners.statements.FailOnTimeout$CallableStatement.call(FailOnTimeout.java:288)
+org.junit.internal.runners.statements.FailOnTimeout$CallableStatement.call(FailOnTimeout.java:282)
+java.util.concurrent.FutureTask.run(FutureTask.java:266)
+java.lang.Thread.run(Thread.java:748)
+
+[MASTER] 17:03:38.601 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ HelpFormatter helpFormatter0 = new HelpFormatter();
+assertEquals(3, HelpFormatter.DEFAULT_DESC_PAD);
+assertEquals(3, helpFormatter0.defaultDescPad);
+assertEquals(74, helpFormatter0.defaultWidth);
+assertEquals(1, HelpFormatter.DEFAULT_LEFT_PAD);
+assertEquals(74, HelpFormatter.DEFAULT_WIDTH);
+assertEquals(1, helpFormatter0.defaultLeftPad);
+assertNotNull(helpFormatter0);
+assertEquals("-", helpFormatter0.getOptPrefix());
+assertEquals(3, helpFormatter0.getDescPadding());
+assertEquals(" ", helpFormatter0.getLongOptSeparator());
+assertEquals("\n", helpFormatter0.getNewLine());
+assertEquals("usage: ", helpFormatter0.getSyntaxPrefix());
+assertEquals(1, helpFormatter0.getLeftPadding());
+assertEquals("arg", helpFormatter0.getArgName());
+assertEquals(74, helpFormatter0.getWidth());
+assertEquals("--", helpFormatter0.getLongOptPrefix());
+
+Options options0 = new Options();
+assertNotNull(options0);
+
+boolean boolean0 = options0.hasLongOption("-");
+assertFalse(boolean0);
+
+HelpFormatter helpFormatter1 = new HelpFormatter();
+assertEquals(74, helpFormatter1.defaultWidth);
+assertEquals(1, HelpFormatter.DEFAULT_LEFT_PAD);
+assertEquals(3, helpFormatter1.defaultDescPad);
+assertEquals(74, HelpFormatter.DEFAULT_WIDTH);
+assertEquals(1, helpFormatter1.defaultLeftPad);
+assertEquals(3, HelpFormatter.DEFAULT_DESC_PAD);
+assertNotNull(helpFormatter1);
+assertFalse(helpFormatter1.equals((Object)helpFormatter0));
+assertEquals(" ", helpFormatter1.getLongOptSeparator());
+assertEquals("usage: ", helpFormatter1.getSyntaxPrefix());
+assertEquals(3, helpFormatter1.getDescPadding());
+assertEquals("--", helpFormatter1.getLongOptPrefix());
+assertEquals("-", helpFormatter1.getOptPrefix());
+assertEquals("\n", helpFormatter1.getNewLine());
+assertEquals(74, helpFormatter1.getWidth());
+assertEquals(1, helpFormatter1.getLeftPadding());
+assertEquals("arg", helpFormatter1.getArgName());
+
+boolean boolean1 = options0.hasOption(" ");
+assertFalse(boolean1);
+assertTrue(boolean1 == boolean0);
+
+StringWriter stringWriter0 = new StringWriter(63);
+assertNotNull(stringWriter0);
+assertEquals("", stringWriter0.toString());
+
+helpFormatter0.printHelp(4, "jLjM.", " ", options0, "usage: ");
+assertEquals(3, HelpFormatter.DEFAULT_DESC_PAD);
+assertEquals(3, helpFormatter0.defaultDescPad);
+assertEquals(74, helpFormatter0.defaultWidth);
+assertEquals(1, HelpFormatter.DEFAULT_LEFT_PAD);
+assertEquals(74, HelpFormatter.DEFAULT_WIDTH);
+assertEquals(1, helpFormatter0.defaultLeftPad);
+assertFalse(helpFormatter0.equals((Object)helpFormatter1));
+assertEquals("-", helpFormatter0.getOptPrefix());
+assertEquals(3, helpFormatter0.getDescPadding());
+assertEquals(" ", helpFormatter0.getLongOptSeparator());
+assertEquals("\n", helpFormatter0.getNewLine());
+assertEquals("usage: ", helpFormatter0.getSyntaxPrefix());
+assertEquals(1, helpFormatter0.getLeftPadding());
+assertEquals("arg", helpFormatter0.getArgName());
+assertEquals(74, helpFormatter0.getWidth());
+assertEquals("--", helpFormatter0.getLongOptPrefix());
+assertNotSame(helpFormatter0, helpFormatter1);
+
+FileDescriptor fileDescriptor0 = new FileDescriptor();
+assertNotNull(fileDescriptor0);
+assertFalse(fileDescriptor0.valid());
+
+MockFileOutputStream mockFileOutputStream0 = new MockFileOutputStream(fileDescriptor0);
+assertNotNull(mockFileOutputStream0);
+
+MockPrintWriter mockPrintWriter0 = new MockPrintWriter(mockFileOutputStream0);
+assertNotNull(mockPrintWriter0);
+
+helpFormatter0.printOptions(mockPrintWriter0, 3, options0, 32, 63);
+assertEquals(3, HelpFormatter.DEFAULT_DESC_PAD);
+assertEquals(3, helpFormatter0.defaultDescPad);
+assertEquals(74, helpFormatter0.defaultWidth);
+assertEquals(1, HelpFormatter.DEFAULT_LEFT_PAD);
+assertEquals(74, HelpFormatter.DEFAULT_WIDTH);
+assertEquals(1, helpFormatter0.defaultLeftPad);
+assertFalse(helpFormatter0.equals((Object)helpFormatter1));
+assertEquals("-", helpFormatter0.getOptPrefix());
+assertEquals(3, helpFormatter0.getDescPadding());
+assertEquals(" ", helpFormatter0.getLongOptSeparator());
+assertEquals("\n", helpFormatter0.getNewLine());
+assertEquals("usage: ", helpFormatter0.getSyntaxPrefix());
+assertEquals(1, helpFormatter0.getLeftPadding());
+assertEquals("arg", helpFormatter0.getArgName());
+assertEquals(74, helpFormatter0.getWidth());
+assertEquals("--", helpFormatter0.getLongOptPrefix());
+assertFalse(fileDescriptor0.valid());
+assertNotSame(helpFormatter0, helpFormatter1);
+
+
+[MASTER] 17:03:41.854 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class java.lang.SecurityException: Security manager blocks ("java.lang.RuntimePermission" "writeFileDescriptor")
+java.lang.Thread.getStackTrace(Thread.java:1559)
+org.evosuite.runtime.sandbox.MSecurityManager.checkPermission(MSecurityManager.java:433)
+java.lang.SecurityManager.checkWrite(SecurityManager.java:954)
+java.io.FileOutputStream.<init>(FileOutputStream.java:245)
+org.evosuite.runtime.mock.java.io.MockFileOutputStream.<init>(MockFileOutputStream.java:114)
+org.apache.commons.cli.HelpFormatter_195_tmp__ESTest.test0(HelpFormatter_195_tmp__ESTest.java:70)
+sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+java.lang.reflect.Method.invoke(Method.java:498)
+org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)
+org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56)
+org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+org.junit.internal.runners.statements.FailOnTimeout$CallableStatement.call(FailOnTimeout.java:288)
+org.junit.internal.runners.statements.FailOnTimeout$CallableStatement.call(FailOnTimeout.java:282)
+java.util.concurrent.FutureTask.run(FutureTask.java:266)
+java.lang.Thread.run(Thread.java:748)
+
+[MASTER] 17:03:41.855 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ HelpFormatter helpFormatter0 = new HelpFormatter();
+assertEquals(3, HelpFormatter.DEFAULT_DESC_PAD);
+assertEquals(1, helpFormatter0.defaultLeftPad);
+assertEquals(3, helpFormatter0.defaultDescPad);
+assertEquals(1, HelpFormatter.DEFAULT_LEFT_PAD);
+assertEquals(74, HelpFormatter.DEFAULT_WIDTH);
+assertEquals(74, helpFormatter0.defaultWidth);
+assertNotNull(helpFormatter0);
+assertEquals("--", helpFormatter0.getLongOptPrefix());
+assertEquals(74, helpFormatter0.getWidth());
+assertEquals("arg", helpFormatter0.getArgName());
+assertEquals(3, helpFormatter0.getDescPadding());
+assertEquals("-", helpFormatter0.getOptPrefix());
+assertEquals("\n", helpFormatter0.getNewLine());
+assertEquals("usage: ", helpFormatter0.getSyntaxPrefix());
+assertEquals(" ", helpFormatter0.getLongOptSeparator());
+assertEquals(1, helpFormatter0.getLeftPadding());
+
+Options options0 = new Options();
+assertNotNull(options0);
+
+String string0 = helpFormatter0.getLongOptSeparator();
+assertEquals(" ", string0);
+assertEquals(3, HelpFormatter.DEFAULT_DESC_PAD);
+assertEquals(1, helpFormatter0.defaultLeftPad);
+assertEquals(3, helpFormatter0.defaultDescPad);
+assertEquals(1, HelpFormatter.DEFAULT_LEFT_PAD);
+assertEquals(74, HelpFormatter.DEFAULT_WIDTH);
+assertEquals(74, helpFormatter0.defaultWidth);
+assertNotNull(string0);
+assertEquals("--", helpFormatter0.getLongOptPrefix());
+assertEquals(74, helpFormatter0.getWidth());
+assertEquals("arg", helpFormatter0.getArgName());
+assertEquals(3, helpFormatter0.getDescPadding());
+assertEquals("-", helpFormatter0.getOptPrefix());
+assertEquals("\n", helpFormatter0.getNewLine());
+assertEquals("usage: ", helpFormatter0.getSyntaxPrefix());
+assertEquals(" ", helpFormatter0.getLongOptSeparator());
+assertEquals(1, helpFormatter0.getLeftPadding());
+
+FileDescriptor fileDescriptor0 = new FileDescriptor();
+assertNotNull(fileDescriptor0);
+assertFalse(fileDescriptor0.valid());
+
+MockFileOutputStream mockFileOutputStream0 = new MockFileOutputStream(fileDescriptor0);
+assertNotNull(mockFileOutputStream0);
+
+MockPrintWriter mockPrintWriter0 = new MockPrintWriter(mockFileOutputStream0);
+assertNotNull(mockPrintWriter0);
+
+PrintWriter printWriter0 = mockPrintWriter0.append((CharSequence) "arg", 1, 1);
+assertNotNull(printWriter0);
+assertFalse(fileDescriptor0.valid());
+assertSame(mockPrintWriter0, printWriter0);
+assertSame(printWriter0, mockPrintWriter0);
+
+helpFormatter0.printUsage(printWriter0, 109, "The addValue method is not intended for client use. Subclasses should use the addValueForProcessing method instead. ");
+assertEquals(3, HelpFormatter.DEFAULT_DESC_PAD);
+assertEquals(1, helpFormatter0.defaultLeftPad);
+assertEquals(3, helpFormatter0.defaultDescPad);
+assertEquals(1, HelpFormatter.DEFAULT_LEFT_PAD);
+assertEquals(74, HelpFormatter.DEFAULT_WIDTH);
+assertEquals(74, helpFormatter0.defaultWidth);
+assertEquals("--", helpFormatter0.getLongOptPrefix());
+assertEquals(74, helpFormatter0.getWidth());
+assertEquals("arg", helpFormatter0.getArgName());
+assertEquals(3, helpFormatter0.getDescPadding());
+assertEquals("-", helpFormatter0.getOptPrefix());
+assertEquals("\n", helpFormatter0.getNewLine());
+assertEquals("usage: ", helpFormatter0.getSyntaxPrefix());
+assertEquals(" ", helpFormatter0.getLongOptSeparator());
+assertEquals(1, helpFormatter0.getLeftPadding());
+assertFalse(fileDescriptor0.valid());
+assertSame(mockPrintWriter0, printWriter0);
+assertSame(printWriter0, mockPrintWriter0);
+
+String string1 = helpFormatter0.getSyntaxPrefix();
+assertEquals("usage: ", string1);
+assertEquals(3, HelpFormatter.DEFAULT_DESC_PAD);
+assertEquals(1, helpFormatter0.defaultLeftPad);
+assertEquals(3, helpFormatter0.defaultDescPad);
+assertEquals(1, HelpFormatter.DEFAULT_LEFT_PAD);
+assertEquals(74, HelpFormatter.DEFAULT_WIDTH);
+assertEquals(74, helpFormatter0.defaultWidth);
+assertNotNull(string1);
+assertFalse(string1.equals((Object)string0));
+assertEquals("--", helpFormatter0.getLongOptPrefix());
+assertEquals(74, helpFormatter0.getWidth());
+assertEquals("arg", helpFormatter0.getArgName());
+assertEquals(3, helpFormatter0.getDescPadding());
+assertEquals("-", helpFormatter0.getOptPrefix());
+assertEquals("\n", helpFormatter0.getNewLine());
+assertEquals("usage: ", helpFormatter0.getSyntaxPrefix());
+assertEquals(" ", helpFormatter0.getLongOptSeparator());
+assertEquals(1, helpFormatter0.getLeftPadding());
+
+helpFormatter0.findWrapPos("usage: ", 80, (-2528));
+
+* Permissions denied during test execution: 
+  - java.lang.RuntimePermission: 
+         writeFileDescriptor: 2
+* Writing tests to file
+* Writing JUnit test case 'HelpFormatter_ESTest' to results/Cli-33/org.apache.commons.cli.HelpFormatter/BBC-F0-50/tests/11
+* Done!
+
+* Computation finished

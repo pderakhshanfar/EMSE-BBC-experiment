@@ -7,7 +7,7 @@ library(effsize)
 
 results <- getResults()
 
-# Pairwise comparison between differenf cases and configuration
+# Pairwise comparison between different cases and configuration
 pairwise <- results %>%
   filter(configuration != 'DynaMOSA') %>%
   inner_join(
@@ -425,7 +425,7 @@ apply_friedman_test(meanWeakMutationScore$mean_weak_mutation_score,
                     meanWeakMutationScore$configuration, 
                     meanWeakMutationScore$case)
 
-pdf("output/weak-mutation-friedman-nemenyi.pdf", width=7, height=4) 
+pdf("output/weak-mutation-friedman-nemenyi.pdf", width=7, height=4)
 meanWeakMutationScore %>%
   select(case, configuration, mean_weak_mutation_score) %>%
   mutate(mean_weak_mutation_score = 1 - mean_weak_mutation_score) %>% #The lowest is the best in our case
@@ -494,6 +494,98 @@ for(row in seq(from=1, to=nrow(pairwise_faults), by=1)){
 cat("\\end{tabular}")
 sink()
 
+# ######################################################
+# Branch Coverage evolution over time 
+# ######################################################
+
+results_evolution <- getResultsWithInterval() %>%
+  mutate(case = paste0(project,'-', bug_id, '-', TARGET_CLASS ),
+         configuration = recode_factor(configuration,
+                                       `BBC-F0-10`= 'bbc-0.1', `BBC-F0-20`= 'bbc-0.2', `BBC-F0-30`= 'bbc-0.3',  
+                                       `BBC-F0-40`= 'bbc-0.4', `BBC-F0-50`= 'bbc-0.5', `BBC-F0-60`= 'bbc-0.6',  
+                                       `BBC-F0-70`= 'bbc-0.7', `BBC-F0-80`= 'bbc-0.8', `BBC-F0-90`= 'bbc-0.9',
+                                       `BBC-F0-100`= 'bbc-1.0', `default`= 'DynaMOSA'))
+
+branch_coverage_evolution <- results_evolution %>%
+  select(case, execution_idx, configuration, BranchCoverageTimeline_T1:BranchCoverageTimeline_T60) %>%
+  pivot_longer(BranchCoverageTimeline_T1:BranchCoverageTimeline_T60, names_to = "elapsed_time", values_to = "branch_coverage") %>%
+  mutate(elapsed_time = (str_remove(elapsed_time, 'BranchCoverageTimeline_T') %>% as.numeric())* 10)
+
+# Plotting regression for branch coverages
+pdf("output/branch-coverage-evolution.pdf", width = 4.5, height = 3)
+branch_coverage_evolution %>%
+  ggplot(aes(x=elapsed_time, y=branch_coverage, color=configuration)) +
+  geom_smooth(level = 1.0 - SIGNIFICANCE_LEVEL) +
+  xlab("Elapsed budget (sec.)") +
+  ylab("Branch coverage") 
+dev.off()
+
+# Pairwise comparison for the different elapsed times
+pairwise_branch_coverage_evolution <- branch_coverage_evolution %>%
+  filter(configuration != 'DynaMOSA') %>%
+  inner_join(
+    branch_coverage_evolution %>%
+      filter(configuration == 'DynaMOSA'),
+    by = c('case', 'elapsed_time'),
+    suffix = c('.config', '.base')) %>%
+  group_by(case, elapsed_time, configuration.config)  %>%
+  summarise(branch_coverage.VD.magnitude = VD.A(branch_coverage.config, branch_coverage.base)$magnitude,
+            branch_coverage.VD.estimate = VD.A(branch_coverage.config, branch_coverage.base)$estimate,
+            branch_coverage.wilcox.test.pvalue = wilcox.test(branch_coverage.config, branch_coverage.base)$p.value) %>%
+  mutate(branch_coverage.VD.estimate.category = case_when(
+    branch_coverage.VD.estimate < 0.5 ~ '< 0.5',
+    branch_coverage.VD.estimate > 0.5 ~ '> 0.5',
+    TRUE ~ '= 0.5'),
+    branch_coverage.VD.magnitude = recode_factor(branch_coverage.VD.magnitude,
+                  `negligible`= 'negligible', `small`= 'small', `medium`= 'medium', `large`= 'large'))
+ 
+branch_coverage_magnitude_evolution <- pairwise_branch_coverage_evolution %>%
+  filter(branch_coverage.wilcox.test.pvalue < SIGNIFICANCE_LEVEL) %>%
+  filter(branch_coverage.VD.magnitude != "negligible") %>%
+  rename(magnitude = branch_coverage.VD.magnitude,
+         category = branch_coverage.VD.estimate.category) %>%
+  group_by(elapsed_time, magnitude, category) %>%
+  summarise(count = n())
+
+#Graph with the evoluation of the effect sizes per magnitude and category
+pdf("output/branch-coverage-effsize-evolution.pdf", width = 4.5, height = 3)
+branch_coverage_magnitude_evolution %>%
+  ggplot(aes(x=elapsed_time, fill=magnitude)) +
+  geom_bar(data = filter(branch_coverage_magnitude_evolution, category == '> 0.5'), 
+           aes(y = count, fill = magnitude), stat = "identity") +
+  geom_bar(data = filter(branch_coverage_magnitude_evolution, category == '< 0.5'), 
+           aes(y = -count, fill = magnitude), stat = "identity") +
+  geom_line(aes(y = 0), color = 'black', linetype = 'dashed') +
+  xlab("Elapsed time (sec.)") + 
+  ylab("Count") +
+  scale_fill_brewer(palette = COLOR_PALETTE)
+dev.off()
+  
+# Boxplot with the evolution of the VD values 
+pairwise_branch_coverage_evolution %>%
+  filter(branch_coverage.wilcox.test.pvalue < SIGNIFICANCE_LEVEL) %>%
+  rename(magnitude = branch_coverage.VD.magnitude,
+         estimate = branch_coverage.VD.estimate,
+         category = branch_coverage.VD.estimate.category) %>%
+  ggplot(aes(x=as.factor(elapsed_time), y=estimate)) + 
+  geom_boxplot() +
+  xlab("Elapsed time (sec.)") +
+  ylab("VD")
+
+df <- count_signif_pairwise_branch_coverage_evolution <- pairwise_branch_coverage_evolution %>%
+  filter(branch_coverage.wilcox.test.pvalue < SIGNIFICANCE_LEVEL) %>%
+  group_by(elapsed_time) %>%
+  count()
+print(df)
+
+df2 <- pairwise_branch_coverage_evolution %>%
+  filter(branch_coverage.wilcox.test.pvalue < SIGNIFICANCE_LEVEL) %>%
+  rename(magnitude = branch_coverage.VD.magnitude,
+         category = branch_coverage.VD.estimate.category) %>%
+  group_by(elapsed_time, magnitude, category) %>%
+  summarise(count = n()) %>%
+  pivot_wider(names_from = magnitude, values_from = count)
+print(df2)
 
 # ########################################################################
 # Analysis of org.apache.commons.cli.HelpFormatter in Cli-31 and Cli-32
