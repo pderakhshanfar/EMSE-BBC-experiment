@@ -1,0 +1,115 @@
+* EvoSuite 1.1.1-SNAPSHOT
+* Configuration: default
+* Going to generate test cases for class: com.fasterxml.jackson.databind.util.StdDateFormat
+* Starting Client-0
+* Connecting to master process on port 7874
+* Analyzing classpath: 
+  - subjects/buggy-versions/JacksonDatabind-104/target/classes
+  - defects4j/framework/projects/JacksonDatabind/lib/com/fasterxml/jackson/core/jackson-annotations/2.9.0/jackson-annotations-2.9.0.jar
+  - defects4j/framework/projects/JacksonDatabind/lib/com/fasterxml/jackson/core/jackson-core/2.9.8/jackson-core-2.9.8.jar
+* Finished analyzing classpath
+* Generating tests for class com.fasterxml.jackson.databind.util.StdDateFormat
+* Test criteria:
+  - Line Coverage
+  - Branch Coverage
+  - Exception
+  - Mutation testing (weak)
+  - Method-Output Coverage
+  - Top-Level Method Coverage
+  - No-Exception Top-Level Method Coverage
+  - Context Branch Coverage
+* Total number of test goals for DYNAMOSA: 1396
+* Using seed 2401104205
+* Starting evolution
+* Initial Number of Goals in DynaMOSA = 666 / 1396
+[MASTER] 04:44:51.019 [logback-2] ERROR TestCluster - Failed to check cache for java.util.function.Function<T, R> : Type points to itself
+[MASTER] 04:46:48.522 [logback-2] ERROR TestCluster - Failed to check cache for java.time.temporal.TemporalQuery<R> : Type points to itself
+[MASTER] 04:48:35.944 [logback-2] ERROR TestCluster - Failed to check cache for java.util.Comparator<T> : Type points to itself
+[MASTER] 04:50:34.517 [logback-2] ERROR TestCluster - Failed to check cache for java.util.List<E> : Type points to itself
+Number of times BBC is called in total: 0
+* Search finished after 602s and 4129 generations, 980039 statements, best individual has fitness: 185.0
+* Minimizing test suite
+* Going to analyze the coverage criteria
+* Coverage analysis for criterion LINE
+* Coverage of criterion LINE: 84%
+* Total number of goals: 234
+* Number of covered goals: 196
+* Coverage analysis for criterion BRANCH
+* Coverage of criterion BRANCH: 83%
+* Total number of goals: 146
+* Number of covered goals: 121
+* Coverage analysis for criterion EXCEPTION
+* Coverage of criterion EXCEPTION: 93%
+* Total number of goals: 29
+* Number of covered goals: 27
+* Coverage analysis for criterion WEAKMUTATION
+* Coverage of criterion WEAKMUTATION: 96%
+* Total number of goals: 714
+* Number of covered goals: 683
+* Coverage analysis for criterion OUTPUT
+* Coverage of criterion OUTPUT: 59%
+* Total number of goals: 90
+* Number of covered goals: 53
+* Coverage analysis for criterion METHOD
+* Coverage of criterion METHOD: 100%
+* Total number of goals: 33
+* Number of covered goals: 33
+* Coverage analysis for criterion METHODNOEXCEPTION
+* Coverage of criterion METHODNOEXCEPTION: 100%
+* Total number of goals: 33
+* Number of covered goals: 33
+* Coverage analysis for criterion CBRANCH
+* Coverage of criterion CBRANCH: 83%
+* Total number of goals: 146
+* Number of covered goals: 121
+* Generated 87 tests with total length 299
+* Resulting test suite's coverage: 82% (average coverage for all fitness functions)
+* Generating assertions
+* Resulting test suite's mutation score: 31%
+* Compiling and checking tests
+[MASTER] 04:54:49.278 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class java.lang.AssertionError: Expecting exception: IllegalStateException
+[MASTER] 04:54:49.278 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ StdDateFormat stdDateFormat0 = StdDateFormat.instance;
+stdDateFormat0.parse("0000-00-00T00:00", (ParsePosition) null);
+
+[MASTER] 04:54:50.504 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class org.junit.ComparisonFailure: expected:<...gorianCalendar[time=[?,areFieldsSet=false,areAllFieldsSet=false,lenient=true,zone=java.util.SimpleTimeZone[id=00'00-00-00T00:00,offset=2586,dstSavings=3600000,useDaylight=false,startYear=0,startMode=0,startMonth=0,startDay=0,startDayOfWeek=0,startTime=0,startTimeMode=0,endMode=0,endMonth=0,endDay=0,endDayOfWeek=0,endTime=0,endTimeMode=0],firstDayOfWeek=1,minimalDaysInFirstWeek=1,ERA=?,YEAR=?,MONTH=?,WEEK_OF_YEAR=?,WEEK_OF_MONTH=?,DAY_OF_MONTH=?,DAY_OF_YEAR=?,DAY_OF_WEEK=?,DAY_OF_WEEK_IN_MONTH=?,AM_PM=?,HOUR=?,HOUR_OF_DAY=?,MINUTE=?,SECOND=?,MILLISECOND=?,ZONE_OFFSET=?,DST_OFFSET=?]]> but was:<...gorianCalendar[time=[1392409281320,areFieldsSet=false,areAllFieldsSet=false,lenient=true,zone=java.util.SimpleTimeZone[id=00'00-00-00T00:00,offset=2586,dstSavings=3600000,useDaylight=false,startYear=0,startMode=0,startMonth=0,startDay=0,startDayOfWeek=0,startTime=0,startTimeMode=0,endMode=0,endMonth=0,endDay=0,endDayOfWeek=0,endTime=0,endTimeMode=0],firstDayOfWeek=1,minimalDaysInFirstWeek=1,ERA=1,YEAR=2014,MONTH=1,WEEK_OF_YEAR=7,WEEK_OF_MONTH=3,DAY_OF_MONTH=14,DAY_OF_YEAR=45,DAY_OF_WEEK=6,DAY_OF_WEEK_IN_MONTH=2,AM_PM=1,HOUR=8,HOUR_OF_DAY=20,MINUTE=21,SECOND=21,MILLISECOND=320,ZONE_OFFSET=0,DST_OFFSET=0]]>
+[MASTER] 04:54:50.505 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ StdDateFormat stdDateFormat0 = StdDateFormat.instance;
+SimpleTimeZone simpleTimeZone0 = new SimpleTimeZone(2586, "00'00-00-00T00:00");
+StdDateFormat stdDateFormat1 = stdDateFormat0.withTimeZone(simpleTimeZone0);
+MockGregorianCalendar mockGregorianCalendar0 = (MockGregorianCalendar)stdDateFormat0._getCalendar(simpleTimeZone0);
+StdDateFormat stdDateFormat2 = stdDateFormat1.withColonInTimeZone(true);
+Date date0 = mockGregorianCalendar0.getGregorianChange();
+String string0 = stdDateFormat2.format(date0);
+assertEquals("org.evosuite.runtime.mock.java.util.MockGregorianCalendar[time=?,areFieldsSet=false,areAllFieldsSet=false,lenient=true,zone=java.util.SimpleTimeZone[id=00'00-00-00T00:00,offset=2586,dstSavings=3600000,useDaylight=false,startYear=0,startMode=0,startMonth=0,startDay=0,startDayOfWeek=0,startTime=0,startTimeMode=0,endMode=0,endMonth=0,endDay=0,endDayOfWeek=0,endTime=0,endTimeMode=0],firstDayOfWeek=1,minimalDaysInFirstWeek=1,ERA=?,YEAR=?,MONTH=?,WEEK_OF_YEAR=?,WEEK_OF_MONTH=?,DAY_OF_MONTH=?,DAY_OF_YEAR=?,DAY_OF_WEEK=?,DAY_OF_WEEK_IN_MONTH=?,AM_PM=?,HOUR=?,HOUR_OF_DAY=?,MINUTE=?,SECOND=?,MILLISECOND=?,ZONE_OFFSET=?,DST_OFFSET=?]", mockGregorianCalendar0.toString());
+assertEquals("1582-10-15T00:00:02.586+00:00", string0);
+
+
+[MASTER] 04:54:52.210 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class java.lang.AssertionError: Expecting exception: IllegalStateException
+[MASTER] 04:54:52.211 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ StdDateFormat stdDateFormat0 = StdDateFormat.instance;
+stdDateFormat0._parseAsISO8601("0000-00-00T00:00", (ParsePosition) null);
+
+[MASTER] 04:54:52.485 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class java.lang.AssertionError: Expecting exception: IllegalStateException
+[MASTER] 04:54:52.485 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ StdDateFormat stdDateFormat0 = StdDateFormat.instance;
+stdDateFormat0._parseDate("0000-00-00T00:00", (ParsePosition) null);
+
+[MASTER] 04:54:52.792 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class java.lang.AssertionError: Expecting exception: IllegalStateException
+[MASTER] 04:54:52.792 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ StdDateFormat stdDateFormat0 = StdDateFormat.instance;
+stdDateFormat0.parse("0000-00-00T00:00");
+
+[MASTER] 04:54:53.222 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class java.lang.AssertionError: Expecting exception: IllegalStateException
+[MASTER] 04:54:53.222 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ StdDateFormat stdDateFormat0 = new StdDateFormat();
+stdDateFormat0.parseAsISO8601("0000-00-00T00:00", (ParsePosition) null);
+
+* Permissions denied during test execution: 
+  - java.lang.RuntimePermission: 
+         writeFileDescriptor: 2
+* Writing tests to file
+* Writing JUnit test case 'StdDateFormat_ESTest' to results/JacksonDatabind-104/com.fasterxml.jackson.databind.util.StdDateFormat/default/tests/30
+* Done!
+
+* Computation finished

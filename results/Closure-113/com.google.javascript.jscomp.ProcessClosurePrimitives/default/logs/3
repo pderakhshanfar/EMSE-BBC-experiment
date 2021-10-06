@@ -1,0 +1,116 @@
+* EvoSuite 1.1.1-SNAPSHOT
+* Configuration: default
+* Going to generate test cases for class: com.google.javascript.jscomp.ProcessClosurePrimitives
+* Starting Client-0
+* Connecting to master process on port 2606
+* Analyzing classpath: 
+  - subjects/buggy-versions/Closure-113/build/classes
+  - subjects/buggy-versions/Closure-113/lib/args4j.jar
+  - subjects/buggy-versions/Closure-113/lib/guava.jar
+  - subjects/buggy-versions/Closure-113/lib/json.jar
+  - subjects/buggy-versions/Closure-113/lib/jsr305.jar
+  - subjects/buggy-versions/Closure-113/lib/protobuf-java.jar
+  - subjects/buggy-versions/Closure-113/build/lib/rhino.jar
+  - subjects/buggy-versions/Closure-113/lib/ant.jar
+* Finished analyzing classpath
+* Generating tests for class com.google.javascript.jscomp.ProcessClosurePrimitives
+* Test criteria:
+  - Line Coverage
+  - Branch Coverage
+  - Exception
+  - Mutation testing (weak)
+  - Method-Output Coverage
+  - Top-Level Method Coverage
+  - No-Exception Top-Level Method Coverage
+  - Context Branch Coverage
+* Total number of test goals for DYNAMOSA: 1637
+* Using seed 1524675559
+* Starting evolution
+* Initial Number of Goals in DynaMOSA = 361 / 1637
+[MASTER] 19:47:55.117 [logback-2] ERROR TestCluster - Failed to check cache for java.util.AbstractMap<K, V>.SimpleEntry<K, V> : Type points to itself
+[MASTER] 19:47:55.117 [logback-2] ERROR TestCluster - Failed to check cache for java.util.AbstractMap<K, V>.SimpleImmutableEntry<K, V> : Type points to itself
+[MASTER] 19:49:28.320 [logback-2] ERROR TestCluster - Failed to check cache for java.util.Comparator<T> : Type points to itself
+Number of times BBC is called in total: 0
+* Search finished after 602s and 101 generations, 39133 statements, best individual has fitness: 1465.0
+* Minimizing test suite
+[MASTER] 19:58:24.758 [logback-1] WARN  TestSuiteMinimizer - Minimization timeout. Roll back to original test suite
+* Going to analyze the coverage criteria
+* Coverage analysis for criterion LINE
+* Coverage of criterion LINE: 14%
+* Total number of goals: 472
+* Number of covered goals: 64
+* Coverage analysis for criterion BRANCH
+* Coverage of criterion BRANCH: 11%
+* Total number of goals: 350
+* Number of covered goals: 39
+* Coverage analysis for criterion EXCEPTION
+* Coverage of criterion EXCEPTION: 100%
+* Total number of goals: 5
+* Number of covered goals: 5
+* Coverage analysis for criterion WEAKMUTATION
+* Coverage of criterion WEAKMUTATION: 6%
+* Total number of goals: 441
+* Number of covered goals: 25
+* Coverage analysis for criterion OUTPUT
+* Coverage of criterion OUTPUT: 33%
+* Total number of goals: 6
+* Number of covered goals: 2
+* Coverage analysis for criterion METHOD
+* Coverage of criterion METHOD: 56%
+* Total number of goals: 9
+* Number of covered goals: 5
+* Coverage analysis for criterion METHODNOEXCEPTION
+* Coverage of criterion METHODNOEXCEPTION: 56%
+* Total number of goals: 9
+* Number of covered goals: 5
+* Coverage analysis for criterion CBRANCH
+* Coverage of criterion CBRANCH: 11%
+* Total number of goals: 350
+* Number of covered goals: 38
+* Generated 27 tests with total length 246
+* Resulting test suite's coverage: 29% (average coverage for all fitness functions)
+* Generating assertions
+* Resulting test suite's mutation score: 1%
+* Compiling and checking tests
+[MASTER] 19:59:15.194 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class org.junit.runners.model.TestTimedOutException: test timed out after 4000 milliseconds
+[MASTER] 19:59:15.196 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ Compiler compiler0 = new Compiler();
+Node node0 = new Node(73);
+node0.setChangeTime(5209);
+Node node1 = ControlFlowAnalysis.computeFallThrough(node0);
+PreprocessorSymbolTable preprocessorSymbolTable0 = new PreprocessorSymbolTable(node1);
+CheckLevel checkLevel0 = CheckLevel.ERROR;
+DiagnosticType diagnosticType0 = DefaultPassConfig.CANNOT_USE_PROTOTYPE_AND_VAR;
+String[] stringArray0 = new String[3];
+stringArray0[0] = "";
+stringArray0[1] = "";
+stringArray0[2] = "JSC_CANNOT_USE_PROTOTYPE_AND_VAR";
+JSError jSError0 = JSError.make("", node1, compiler0.OPTIMIZE_LOOP_ERROR, stringArray0);
+Logger logger0 = Logger.getGlobal();
+Logger logger1 = logger0.getParent();
+LoggerErrorManager loggerErrorManager0 = new LoggerErrorManager(logger1);
+loggerErrorManager0.println(checkLevel0, jSError0);
+CheckLevel checkLevel1 = CheckLevel.OFF;
+ProcessClosurePrimitives processClosurePrimitives0 = new ProcessClosurePrimitives(compiler0, preprocessorSymbolTable0, checkLevel1);
+processClosurePrimitives0.process(node0, node0);
+int int0 = (-2498);
+Node node2 = new Node(int0);
+processClosurePrimitives0.hotSwapScript(node1, node2);
+
+[MASTER] 19:59:30.184 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class java.lang.AssertionError: Expecting exception: IllegalArgumentException
+[MASTER] 19:59:30.185 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ Compiler compiler0 = new Compiler();
+DefaultPassConfig defaultPassConfig0 = compiler0.ensureDefaultPassConfig();
+defaultPassConfig0.getPreprocessorSymbolTable();
+CheckLevel checkLevel0 = CheckLevel.ERROR;
+ProcessClosurePrimitives processClosurePrimitives0 = new ProcessClosurePrimitives(compiler0, (PreprocessorSymbolTable) null, checkLevel0);
+Normalize.parseAndNormalizeTestCode(compiler0, "REGISTER_STRING");
+
+* Permissions denied during test execution: 
+  - java.lang.RuntimePermission: 
+         writeFileDescriptor: 9
+* Writing tests to file
+* Writing JUnit test case 'ProcessClosurePrimitives_ESTest' to results/Closure-113/com.google.javascript.jscomp.ProcessClosurePrimitives/default/tests/3
+* Done!
+
+* Computation finished

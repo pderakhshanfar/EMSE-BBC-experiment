@@ -1,0 +1,202 @@
+* EvoSuite 1.1.1-SNAPSHOT
+* Configuration: default
+* Going to generate test cases for class: com.fasterxml.jackson.core.json.WriterBasedJsonGenerator
+* Starting Client-0
+* Connecting to master process on port 16720
+* Analyzing classpath: 
+  - subjects/buggy-versions/JacksonCore-18/target/classes
+* Finished analyzing classpath
+* Generating tests for class com.fasterxml.jackson.core.json.WriterBasedJsonGenerator
+* Test criteria:
+  - Line Coverage
+  - Branch Coverage
+  - Exception
+  - Mutation testing (weak)
+  - Method-Output Coverage
+  - Top-Level Method Coverage
+  - No-Exception Top-Level Method Coverage
+  - Context Branch Coverage
+* Total number of test goals for DYNAMOSA: 2629
+* Using seed 1863169801
+* Starting evolution
+* Initial Number of Goals in DynaMOSA = 589 / 2629
+Number of times BBC is called in total: 0
+* Search finished after 602s and 215 generations, 203432 statements, best individual has fitness: 1300.0
+* Minimizing test suite
+[MASTER] 02:51:08.659 [logback-1] WARN  TestSuiteMinimizer - Minimization timeout. Roll back to original test suite
+* Going to analyze the coverage criteria
+* Coverage analysis for criterion LINE
+* Coverage of criterion LINE: 58%
+* Total number of goals: 967
+* Number of covered goals: 564
+* Coverage analysis for criterion BRANCH
+* Coverage of criterion BRANCH: 54%
+* Total number of goals: 508
+* Number of covered goals: 272
+* Coverage analysis for criterion EXCEPTION
+* Coverage of criterion EXCEPTION: 100%
+* Total number of goals: 64
+* Number of covered goals: 64
+* Coverage analysis for criterion WEAKMUTATION
+* Coverage of criterion WEAKMUTATION: 39%
+* Total number of goals: 544
+* Number of covered goals: 211
+* Coverage analysis for criterion OUTPUT
+* Coverage of criterion OUTPUT: 29%
+* Total number of goals: 14
+* Number of covered goals: 4
+* Coverage analysis for criterion METHOD
+* Coverage of criterion METHOD: 100%
+* Total number of goals: 44
+* Number of covered goals: 44
+* Coverage analysis for criterion METHODNOEXCEPTION
+* Coverage of criterion METHODNOEXCEPTION: 84%
+* Total number of goals: 44
+* Number of covered goals: 37
+* Coverage analysis for criterion CBRANCH
+* Coverage of criterion CBRANCH: 54%
+* Total number of goals: 508
+* Number of covered goals: 272
+* Generated 278 tests with total length 4047
+* Resulting test suite's coverage: 59% (average coverage for all fitness functions)
+* Generating assertions
+[MASTER] 02:51:59.870 [logback-1] WARN  SimpleMutationAssertionGenerator - Assertion minimization is taking too long (0.7176333333333333% of time used, but only 19/278 tests minimized), falling back to using all assertions
+* Resulting test suite's mutation score: 5%
+* Compiling and checking tests
+[MASTER] 02:52:54.839 [logback-1] WARN  JUnitAnalyzer - Failed to create tmp dir
+[MASTER] 02:52:54.839 [logback-2] ERROR JUnitAnalyzer - Cannot create tmp dir: /tmp/EvoSuite_220_1627613574839
+[MASTER] 02:53:09.652 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class org.junit.ComparisonFailure: expected:<"\u00[ff\u00ff]"> but was:<"\u00[00\u0000]">
+[MASTER] 02:53:09.653 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ BufferRecycler bufferRecycler0 = new BufferRecycler();
+assertNotNull(bufferRecycler0);
+assertEquals(0, BufferRecycler.BYTE_READ_IO_BUFFER);
+assertEquals(3, BufferRecycler.BYTE_BASE64_CODEC_BUFFER);
+assertEquals(0, BufferRecycler.CHAR_TOKEN_BUFFER);
+assertEquals(3, BufferRecycler.CHAR_NAME_COPY_BUFFER);
+assertEquals(1, BufferRecycler.BYTE_WRITE_ENCODING_BUFFER);
+assertEquals(2, BufferRecycler.BYTE_WRITE_CONCAT_BUFFER);
+assertEquals(2, BufferRecycler.CHAR_TEXT_BUFFER);
+assertEquals(1, BufferRecycler.CHAR_CONCAT_BUFFER);
+
+boolean boolean0 = true;
+IOContext iOContext0 = new IOContext(bufferRecycler0, bufferRecycler0, true);
+assertTrue(iOContext0.isResourceManaged());
+assertNull(iOContext0.getEncoding());
+assertNotNull(iOContext0);
+assertEquals(0, BufferRecycler.BYTE_READ_IO_BUFFER);
+assertEquals(3, BufferRecycler.BYTE_BASE64_CODEC_BUFFER);
+assertEquals(0, BufferRecycler.CHAR_TOKEN_BUFFER);
+assertEquals(3, BufferRecycler.CHAR_NAME_COPY_BUFFER);
+assertEquals(1, BufferRecycler.BYTE_WRITE_ENCODING_BUFFER);
+assertEquals(2, BufferRecycler.BYTE_WRITE_CONCAT_BUFFER);
+assertEquals(2, BufferRecycler.CHAR_TEXT_BUFFER);
+assertEquals(1, BufferRecycler.CHAR_CONCAT_BUFFER);
+
+StringWriter stringWriter0 = new StringWriter();
+assertEquals("", stringWriter0.toString());
+assertNotNull(stringWriter0);
+
+StringBuilder stringBuilder0 = new StringBuilder(3);
+assertEquals("", stringBuilder0.toString());
+assertNotNull(stringBuilder0);
+
+WriterBasedJsonGenerator writerBasedJsonGenerator0 = new WriterBasedJsonGenerator(iOContext0, 3, (ObjectCodec) null, stringWriter0);
+assertTrue(iOContext0.isResourceManaged());
+assertNull(iOContext0.getEncoding());
+assertEquals("", stringWriter0.toString());
+assertFalse(writerBasedJsonGenerator0.canWriteFormattedNumbers());
+assertEquals(3, writerBasedJsonGenerator0.getFeatureMask());
+assertEquals(0, writerBasedJsonGenerator0.getHighestEscapedChar());
+assertFalse(writerBasedJsonGenerator0.canWriteBinaryNatively());
+assertFalse(writerBasedJsonGenerator0.canWriteObjectId());
+assertEquals(0, writerBasedJsonGenerator0.getOutputBuffered());
+assertFalse(writerBasedJsonGenerator0.isClosed());
+assertEquals(0, writerBasedJsonGenerator0.getFormatFeatures());
+assertTrue(writerBasedJsonGenerator0.canOmitFields());
+assertFalse(writerBasedJsonGenerator0.canWriteTypeId());
+assertNotNull(writerBasedJsonGenerator0);
+assertEquals(0, BufferRecycler.BYTE_READ_IO_BUFFER);
+assertEquals(3, BufferRecycler.BYTE_BASE64_CODEC_BUFFER);
+assertEquals(0, BufferRecycler.CHAR_TOKEN_BUFFER);
+assertEquals(3, BufferRecycler.CHAR_NAME_COPY_BUFFER);
+assertEquals(1, BufferRecycler.BYTE_WRITE_ENCODING_BUFFER);
+assertEquals(2, BufferRecycler.BYTE_WRITE_CONCAT_BUFFER);
+assertEquals(2, BufferRecycler.CHAR_TEXT_BUFFER);
+assertEquals(1, BufferRecycler.CHAR_CONCAT_BUFFER);
+assertEquals(56320, GeneratorBase.SURR2_FIRST);
+assertEquals(56319, GeneratorBase.SURR1_LAST);
+assertEquals(55296, GeneratorBase.SURR1_FIRST);
+assertEquals(57343, GeneratorBase.SURR2_LAST);
+
+char[] charArray0 = new char[2];
+writerBasedJsonGenerator0.writeString(charArray0, 0, 2);
+assertArrayEquals(new char[] {'\u0000', '\u0000'}, charArray0);
+assertEquals(2, charArray0.length);
+assertTrue(iOContext0.isResourceManaged());
+assertNull(iOContext0.getEncoding());
+assertEquals("", stringWriter0.toString());
+assertFalse(writerBasedJsonGenerator0.canWriteFormattedNumbers());
+assertEquals(3, writerBasedJsonGenerator0.getFeatureMask());
+assertEquals(0, writerBasedJsonGenerator0.getHighestEscapedChar());
+assertFalse(writerBasedJsonGenerator0.canWriteBinaryNatively());
+assertFalse(writerBasedJsonGenerator0.canWriteObjectId());
+assertEquals(14, writerBasedJsonGenerator0.getOutputBuffered());
+assertFalse(writerBasedJsonGenerator0.isClosed());
+assertEquals(0, writerBasedJsonGenerator0.getFormatFeatures());
+assertTrue(writerBasedJsonGenerator0.canOmitFields());
+assertFalse(writerBasedJsonGenerator0.canWriteTypeId());
+assertEquals(0, BufferRecycler.BYTE_READ_IO_BUFFER);
+assertEquals(3, BufferRecycler.BYTE_BASE64_CODEC_BUFFER);
+assertEquals(0, BufferRecycler.CHAR_TOKEN_BUFFER);
+assertEquals(3, BufferRecycler.CHAR_NAME_COPY_BUFFER);
+assertEquals(1, BufferRecycler.BYTE_WRITE_ENCODING_BUFFER);
+assertEquals(2, BufferRecycler.BYTE_WRITE_CONCAT_BUFFER);
+assertEquals(2, BufferRecycler.CHAR_TEXT_BUFFER);
+assertEquals(1, BufferRecycler.CHAR_CONCAT_BUFFER);
+assertEquals(56320, GeneratorBase.SURR2_FIRST);
+assertEquals(56319, GeneratorBase.SURR1_LAST);
+assertEquals(55296, GeneratorBase.SURR1_FIRST);
+assertEquals(57343, GeneratorBase.SURR2_LAST);
+
+writerBasedJsonGenerator0.close();
+assertTrue(iOContext0.isResourceManaged());
+assertNull(iOContext0.getEncoding());
+assertEquals("\"\\u00ff\\u00ff\"", stringWriter0.toString());
+assertFalse(writerBasedJsonGenerator0.canWriteFormattedNumbers());
+assertEquals(3, writerBasedJsonGenerator0.getFeatureMask());
+assertEquals(0, writerBasedJsonGenerator0.getHighestEscapedChar());
+assertFalse(writerBasedJsonGenerator0.canWriteBinaryNatively());
+assertFalse(writerBasedJsonGenerator0.canWriteObjectId());
+assertTrue(writerBasedJsonGenerator0.isClosed());
+assertEquals(0, writerBasedJsonGenerator0.getOutputBuffered());
+assertEquals(0, writerBasedJsonGenerator0.getFormatFeatures());
+assertTrue(writerBasedJsonGenerator0.canOmitFields());
+assertFalse(writerBasedJsonGenerator0.canWriteTypeId());
+assertEquals(0, BufferRecycler.BYTE_READ_IO_BUFFER);
+assertEquals(3, BufferRecycler.BYTE_BASE64_CODEC_BUFFER);
+assertEquals(0, BufferRecycler.CHAR_TOKEN_BUFFER);
+assertEquals(3, BufferRecycler.CHAR_NAME_COPY_BUFFER);
+assertEquals(1, BufferRecycler.BYTE_WRITE_ENCODING_BUFFER);
+assertEquals(2, BufferRecycler.BYTE_WRITE_CONCAT_BUFFER);
+assertEquals(2, BufferRecycler.CHAR_TEXT_BUFFER);
+assertEquals(1, BufferRecycler.CHAR_CONCAT_BUFFER);
+assertEquals(56320, GeneratorBase.SURR2_FIRST);
+assertEquals(56319, GeneratorBase.SURR1_LAST);
+assertEquals(55296, GeneratorBase.SURR1_FIRST);
+assertEquals(57343, GeneratorBase.SURR2_LAST);
+
+BigInteger bigInteger0 = BigInteger.ONE;
+assertEquals((byte)1, bigInteger0.byteValue());
+assertEquals((short)1, bigInteger0.shortValue());
+assertNotNull(bigInteger0);
+
+writerBasedJsonGenerator0.writeNumber(bigInteger0);
+
+* Permissions denied during test execution: 
+  - java.lang.RuntimePermission: 
+         writeFileDescriptor: 12
+* Writing tests to file
+* Writing JUnit test case 'WriterBasedJsonGenerator_ESTest' to results/JacksonCore-18/com.fasterxml.jackson.core.json.WriterBasedJsonGenerator/default/tests/12
+* Done!
+
+* Computation finished

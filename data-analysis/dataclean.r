@@ -5,7 +5,7 @@
 library(tidyverse)
 
 TOTAL_RUNS = 30
-COLOR_PALETTE = "RdYlBu" # Color blind friendly colors (http://colorbrewer2.org/)
+COLOR_PALETTE = "RdBu" # Color blind friendly colors (http://colorbrewer2.org/)
 SIGNIFICANCE_LEVEL = 0.01
 
 # Normalize data between [0;1]
@@ -22,6 +22,23 @@ normalize <- function(x) {
 # Returns the list of classes under test used for the evaluation
 getSubjects <- function(){
   csvFile='../data/subjects.csv'
+  df <- read.csv(csvFile, stringsAsFactors = TRUE)
+  return(df)
+}
+
+
+getBBCDF <- function(){
+  files <- c("../data/bbc_triggered-part1.csv", "../data/bbc_triggered-part2.csv", 
+             "../data/bbc_triggered-part3.csv", "../data/bbc_triggered-part4.csv")
+  tables <- lapply(files, function(x){read.csv(file = x, stringsAsFactors = TRUE, na.strings = c("null"))})
+  df <- do.call(rbind, tables) %>%
+    mutate(X = NULL) %>%
+    filter(! is.na(ff_eval))
+  return(df)
+}
+
+getResultsWithInterval <- function(){
+  csvFile='../results/results-with_intervals.csv'
   df <- read.csv(csvFile, stringsAsFactors = TRUE)
   return(df)
 }

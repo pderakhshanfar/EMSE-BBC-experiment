@@ -1,0 +1,86 @@
+* EvoSuite 1.1.1-SNAPSHOT
+* Configuration: default
+* Going to generate test cases for class: org.apache.commons.codec.binary.Base64
+* Starting Client-0
+* Connecting to master process on port 18547
+* Analyzing classpath: 
+  - subjects/buggy-versions/Codec-9/target/classes
+* Finished analyzing classpath
+* Generating tests for class org.apache.commons.codec.binary.Base64
+* Test criteria:
+  - Line Coverage
+  - Branch Coverage
+  - Exception
+  - Mutation testing (weak)
+  - Method-Output Coverage
+  - Top-Level Method Coverage
+  - No-Exception Top-Level Method Coverage
+  - Context Branch Coverage
+* Total number of test goals for DYNAMOSA: 1539
+* Using seed 3677639337
+* Starting evolution
+* Initial Number of Goals in DynaMOSA = 419 / 1539
+Number of times BBC is called in total: 0
+* Search finished after 605s and 204 generations, 110006 statements, best individual has fitness: 96.0
+* Minimizing test suite
+* Going to analyze the coverage criteria
+* Coverage analysis for criterion LINE
+* Coverage of criterion LINE: 98%
+* Total number of goals: 216
+* Number of covered goals: 212
+* Coverage analysis for criterion BRANCH
+* Coverage of criterion BRANCH: 95%
+* Total number of goals: 193
+* Number of covered goals: 184
+* Coverage analysis for criterion EXCEPTION
+* Coverage of criterion EXCEPTION: 100%
+* Total number of goals: 21
+* Number of covered goals: 21
+* Coverage analysis for criterion WEAKMUTATION
+* Coverage of criterion WEAKMUTATION: 95%
+* Total number of goals: 787
+* Number of covered goals: 750
+* Coverage analysis for criterion OUTPUT
+* Coverage of criterion OUTPUT: 91%
+* Total number of goals: 80
+* Number of covered goals: 73
+* Coverage analysis for criterion METHOD
+* Coverage of criterion METHOD: 100%
+* Total number of goals: 35
+* Number of covered goals: 35
+* Coverage analysis for criterion METHODNOEXCEPTION
+* Coverage of criterion METHODNOEXCEPTION: 100%
+* Total number of goals: 35
+* Number of covered goals: 35
+* Coverage analysis for criterion CBRANCH
+* Coverage of criterion CBRANCH: 89%
+* Total number of goals: 193
+* Number of covered goals: 171
+* Generated 99 tests with total length 262
+* Resulting test suite's coverage: 90% (average coverage for all fitness functions)
+* Generating assertions
+* Resulting test suite's mutation score: 26%
+[MASTER] 21:16:35.132 [logback-1] WARN  SimpleMutationAssertionGenerator - Reached maximum time to generate assertions, aborting assertion generation
+* Compiling and checking tests
+[MASTER] 21:17:00.506 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class java.lang.ArrayIndexOutOfBoundsException: -1
+[MASTER] 21:17:00.506 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ byte[] byteArray0 = Base64.CHUNK_SEPARATOR;
+byte[] byteArray1 = Base64.discardWhitespace(byteArray0);
+Base64 base64_0 = new Base64(2257, byteArray1);
+base64_0.encodeToString(byteArray0);
+
+[MASTER] 21:17:00.998 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class java.lang.AssertionError: null
+[MASTER] 21:17:00.998 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ byte[] byteArray0 = Base64.CHUNK_SEPARATOR;
+boolean boolean0 = Base64.isBase64(byteArray0);
+assertFalse(boolean0);
+
+
+* Permissions denied during test execution: 
+  - java.lang.RuntimePermission: 
+         writeFileDescriptor: 10
+* Writing tests to file
+* Writing JUnit test case 'Base64_ESTest' to results/Codec-9/org.apache.commons.codec.binary.Base64/default/tests/21
+* Done!
+
+* Computation finished

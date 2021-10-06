@@ -1,0 +1,110 @@
+* EvoSuite 1.1.1-SNAPSHOT
+* Configuration: BBC-F0-50
+* Going to generate test cases for class: org.joda.time.format.DateTimeFormatter
+* Starting Client-0
+* Connecting to master process on port 14400
+* Analyzing classpath: 
+  - subjects/buggy-versions/Time-7/target/classes
+  - defects4j/framework/projects/Time/lib/org/joda/joda-convert/1.2/joda-convert-1.2.jar
+* Finished analyzing classpath
+* Generating tests for class org.joda.time.format.DateTimeFormatter
+* Test criteria:
+  - Line Coverage
+  - Branch Coverage
+  - Exception
+  - Mutation testing (weak)
+  - Method-Output Coverage
+  - Top-Level Method Coverage
+  - No-Exception Top-Level Method Coverage
+  - Context Branch Coverage
+* Total number of test goals for DYNAMOSA: 984
+* Using seed 50030139
+* Starting evolution
+bbc usage percentage is: 50%
+* Initial Number of Goals in DynaMOSA = 473 / 984
+* Search finished after 602s and 1079 generations, 429084 statements, best individual has fitness: 145.0
+* Minimizing test suite
+[MASTER] 08:41:32.145 [logback-1] WARN  TestSuiteMinimizer - Minimization timeout. Roll back to original test suite
+* Going to analyze the coverage criteria
+* Coverage analysis for criterion LINE
+* Coverage of criterion LINE: 95%
+* Total number of goals: 208
+* Number of covered goals: 198
+* Coverage analysis for criterion BRANCH
+* Coverage of criterion BRANCH: 92%
+* Total number of goals: 113
+* Number of covered goals: 104
+* Coverage analysis for criterion EXCEPTION
+* Coverage of criterion EXCEPTION: 100%
+* Total number of goals: 80
+* Number of covered goals: 80
+* Coverage analysis for criterion WEAKMUTATION
+* Coverage of criterion WEAKMUTATION: 94%
+* Total number of goals: 325
+* Number of covered goals: 305
+* Coverage analysis for criterion OUTPUT
+* Coverage of criterion OUTPUT: 82%
+* Total number of goals: 147
+* Number of covered goals: 121
+* Coverage analysis for criterion METHOD
+* Coverage of criterion METHOD: 100%
+* Total number of goals: 39
+* Number of covered goals: 39
+* Coverage analysis for criterion METHODNOEXCEPTION
+* Coverage of criterion METHODNOEXCEPTION: 100%
+* Total number of goals: 39
+* Number of covered goals: 39
+* Coverage analysis for criterion CBRANCH
+* Coverage of criterion CBRANCH: 87%
+* Total number of goals: 113
+* Number of covered goals: 98
+* Generated 184 tests with total length 2692
+* Resulting test suite's coverage: 88% (average coverage for all fitness functions)
+* Generating assertions
+[MASTER] 08:42:26.596 [logback-1] WARN  SimpleMutationAssertionGenerator - Assertion minimization is taking too long (0.8938333333333334% of time used, but only 81/184 tests minimized), falling back to using all assertions
+* Resulting test suite's mutation score: 35%
+* Compiling and checking tests
+[MASTER] 08:42:55.957 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 08:43:28.138 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class java.lang.SecurityException: Security manager blocks ("java.lang.RuntimePermission" "writeFileDescriptor")
+java.lang.Thread.getStackTrace(Thread.java:1559)
+org.evosuite.runtime.sandbox.MSecurityManager.checkPermission(MSecurityManager.java:433)
+java.lang.SecurityManager.checkWrite(SecurityManager.java:954)
+java.io.FileOutputStream.<init>(FileOutputStream.java:245)
+java.io.FileWriter.<init>(FileWriter.java:116)
+org.evosuite.runtime.mock.java.io.MockFileWriter.<init>(MockFileWriter.java:79)
+org.joda.time.format.DateTimeFormatter_237_tmp__ESTest.test0(DateTimeFormatter_237_tmp__ESTest.java:42)
+sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+java.lang.reflect.Method.invoke(Method.java:498)
+org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)
+org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56)
+org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+org.junit.internal.runners.statements.FailOnTimeout$CallableStatement.call(FailOnTimeout.java:288)
+org.junit.internal.runners.statements.FailOnTimeout$CallableStatement.call(FailOnTimeout.java:282)
+java.util.concurrent.FutureTask.run(FutureTask.java:266)
+java.lang.Thread.run(Thread.java:748)
+
+[MASTER] 08:43:28.139 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ DateTimeFormatterBuilder.TimeZoneId dateTimeFormatterBuilder_TimeZoneId0 = DateTimeFormatterBuilder.TimeZoneId.INSTANCE;
+DateTimeFieldType dateTimeFieldType0 = DateTimeFieldType.year();
+DateTimeFormatterBuilder.TextField dateTimeFormatterBuilder_TextField0 = new DateTimeFormatterBuilder.TextField(dateTimeFieldType0, true);
+DateTimeFormatter dateTimeFormatter0 = new DateTimeFormatter(dateTimeFormatterBuilder_TimeZoneId0, dateTimeFormatterBuilder_TextField0);
+Locale locale0 = Locale.JAPAN;
+File file0 = MockFile.createTempFile("Printing not supported", "Printing not supported");
+MockFileWriter mockFileWriter0 = new MockFileWriter(file0, true);
+LocalDate localDate0 = new LocalDate(641L);
+DateTime dateTime0 = localDate0.toDateTimeAtStartOfDay();
+FileDescriptor fileDescriptor0 = new FileDescriptor();
+MockFileWriter mockFileWriter1 = new MockFileWriter(fileDescriptor0);
+dateTimeFormatter0.printTo((Writer) mockFileWriter1, (ReadableInstant) dateTime0);
+
+* Permissions denied during test execution: 
+  - java.lang.RuntimePermission: 
+         writeFileDescriptor: 1
+* Writing tests to file
+* Writing JUnit test case 'DateTimeFormatter_ESTest' to results/Time-7/org.joda.time.format.DateTimeFormatter/BBC-F0-50/tests/17
+* Done!
+
+* Computation finished

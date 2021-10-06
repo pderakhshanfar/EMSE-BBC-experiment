@@ -1,0 +1,170 @@
+* EvoSuite 1.1.1-SNAPSHOT
+* Configuration: BBC-F0-50
+* Going to generate test cases for class: com.fasterxml.jackson.dataformat.xml.ser.ToXmlGenerator
+* Starting Client-0
+* Connecting to master process on port 12697
+* Analyzing classpath: 
+  - subjects/buggy-versions/JacksonXml-6/target/classes
+  - defects4j/framework/projects/JacksonXml/lib/com/fasterxml/jackson/core/jackson-core/2.9.8/jackson-core-2.9.8.jar
+  - defects4j/framework/projects/JacksonXml/lib/com/fasterxml/jackson/core/jackson-annotations/2.9.0/jackson-annotations-2.9.0.jar
+  - defects4j/framework/projects/JacksonXml/lib/com/fasterxml/jackson/core/jackson-databind/2.9.8/jackson-databind-2.9.8.jar
+  - defects4j/framework/projects/JacksonXml/lib/com/fasterxml/jackson/module/jackson-module-jaxb-annotations/2.9.8/jackson-module-jaxb-annotations-2.9.8.jar
+  - defects4j/framework/projects/JacksonXml/lib/org/codehaus/woodstox/stax2-api/3.1.4/stax2-api-3.1.4.jar
+  - defects4j/framework/projects/JacksonXml/lib/com/fasterxml/woodstox/woodstox-core/5.0.3/woodstox-core-5.0.3.jar
+* Finished analyzing classpath
+* Generating tests for class com.fasterxml.jackson.dataformat.xml.ser.ToXmlGenerator
+* Test criteria:
+  - Line Coverage
+  - Branch Coverage
+  - Exception
+  - Mutation testing (weak)
+  - Method-Output Coverage
+  - Top-Level Method Coverage
+  - No-Exception Top-Level Method Coverage
+  - Context Branch Coverage
+* Total number of test goals for DYNAMOSA: 1747
+* Using seed 1574712037
+* Starting evolution
+bbc usage percentage is: 50%
+* Initial Number of Goals in DynaMOSA = 703 / 1747
+[MASTER] 01:42:12.926 [logback-2] ERROR FunctionalMockStatement - Cannot use Mockito on interface com.fasterxml.jackson.annotation.JsonAutoDetect due to IAE: 
+Mockito cannot mock this class: interface com.fasterxml.jackson.annotation.JsonAutoDetect.
+
+Mockito can only mock non-private & non-final classes.
+If you're not sure why you're getting this error, please report to the mailing list.
+
+
+Java               : 1.8
+JVM vendor name    : Red Hat, Inc.
+JVM vendor version : 25.272-b10
+JVM name           : OpenJDK 64-Bit Server VM
+JVM version        : 1.8.0_272-b10
+JVM info           : mixed mode
+OS name            : Linux
+OS version         : 5.4.0-66-generic
+
+
+Underlying exception : java.lang.IllegalArgumentException: Could not create type
+[MASTER] 01:42:24.279 [logback-2] ERROR TestCluster - Failed to check cache for java.util.Enumeration<E> : Type points to itself
+[MASTER] 01:42:33.781 [logback-2] ERROR TestCluster - Failed to check cache for java.util.Comparator<T> : Type points to itself
+[MASTER] 01:42:41.319 [logback-2] ERROR TestCluster - Failed to check cache for java.util.HashMap<K, V> : Type points to itself
+[MASTER] 01:42:47.201 [logback-2] ERROR TestCluster - Failed to check cache for com.fasterxml.jackson.annotation.ObjectIdGenerator<T> : Type points to itself
+[MASTER] 01:42:47.201 [logback-2] ERROR TestCluster - Failed to check cache for com.fasterxml.jackson.databind.JsonSerializer<T> : Type points to itself
+[MASTER] 01:44:24.307 [logback-2] ERROR TestCluster - Failed to check cache for com.fasterxml.jackson.databind.JsonDeserializer<T> : Type points to itself
+[MASTER] 01:44:28.565 [logback-2] ERROR TestCluster - Failed to check cache for java.util.PriorityQueue<E> : Type points to itself
+[MASTER] 01:46:41.381 [logback-2] ERROR TestCluster - Failed to check cache for java.lang.Class<T> : Type points to itself
+* Search finished after 602s and 883 generations, 629612 statements, best individual has fitness: 448.0
+* Minimizing test suite
+* Going to analyze the coverage criteria
+* Coverage analysis for criterion LINE
+* Coverage of criterion LINE: 88%
+* Total number of goals: 465
+* Number of covered goals: 407
+* Coverage analysis for criterion BRANCH
+* Coverage of criterion BRANCH: 79%
+* Total number of goals: 248
+* Number of covered goals: 196
+* Coverage analysis for criterion EXCEPTION
+* Coverage of criterion EXCEPTION: 100%
+* Total number of goals: 95
+* Number of covered goals: 95
+* Coverage analysis for criterion WEAKMUTATION
+* Coverage of criterion WEAKMUTATION: 76%
+* Total number of goals: 511
+* Number of covered goals: 387
+* Coverage analysis for criterion OUTPUT
+* Coverage of criterion OUTPUT: 59%
+* Total number of goals: 143
+* Number of covered goals: 85
+* Coverage analysis for criterion METHOD
+* Coverage of criterion METHOD: 98%
+* Total number of goals: 66
+* Number of covered goals: 65
+* Coverage analysis for criterion METHODNOEXCEPTION
+* Coverage of criterion METHODNOEXCEPTION: 88%
+* Total number of goals: 66
+* Number of covered goals: 58
+* Coverage analysis for criterion CBRANCH
+* Coverage of criterion CBRANCH: 78%
+* Total number of goals: 248
+* Number of covered goals: 194
+* Generated 185 tests with total length 1913
+* Resulting test suite's coverage: 76% (average coverage for all fitness functions)
+* Generating assertions
+* Resulting test suite's mutation score: 29%
+* Compiling and checking tests
+[MASTER] 01:53:44.725 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 01:53:52.542 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class java.lang.SecurityException: Security manager blocks ("java.lang.RuntimePermission" "writeFileDescriptor")
+java.lang.Thread.getStackTrace(Thread.java:1559)
+org.evosuite.runtime.sandbox.MSecurityManager.checkPermission(MSecurityManager.java:433)
+java.lang.SecurityManager.checkWrite(SecurityManager.java:954)
+java.io.FileOutputStream.<init>(FileOutputStream.java:245)
+org.evosuite.runtime.mock.java.io.MockFileOutputStream.<init>(MockFileOutputStream.java:114)
+com.fasterxml.jackson.dataformat.xml.ser.ToXmlGenerator_188_tmp__ESTest.test0(ToXmlGenerator_188_tmp__ESTest.java:35)
+sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+java.lang.reflect.Method.invoke(Method.java:498)
+org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)
+org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56)
+org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+org.junit.internal.runners.statements.FailOnTimeout$CallableStatement.call(FailOnTimeout.java:288)
+org.junit.internal.runners.statements.FailOnTimeout$CallableStatement.call(FailOnTimeout.java:282)
+java.util.concurrent.FutureTask.run(FutureTask.java:266)
+java.lang.Thread.run(Thread.java:748)
+
+[MASTER] 01:53:52.639 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ BufferRecycler bufferRecycler0 = new BufferRecycler();
+IOContext iOContext0 = new IOContext(bufferRecycler0, bufferRecycler0, false);
+ObjectMapper objectMapper0 = new ObjectMapper();
+WriterConfig writerConfig0 = WriterConfig.createJ2MEDefaults();
+FileDescriptor fileDescriptor0 = new FileDescriptor();
+MockFileOutputStream mockFileOutputStream0 = new MockFileOutputStream(fileDescriptor0);
+ISOLatin1XmlWriter iSOLatin1XmlWriter0 = new ISOLatin1XmlWriter(mockFileOutputStream0, writerConfig0, false);
+SimpleNsStreamWriter simpleNsStreamWriter0 = new SimpleNsStreamWriter(iSOLatin1XmlWriter0, "JW >9=kcg?-(-", writerConfig0);
+ToXmlGenerator toXmlGenerator0 = new ToXmlGenerator(iOContext0, 0, 3, objectMapper0, simpleNsStreamWriter0);
+toXmlGenerator0.writeFieldName((SerializableString) null);
+
+[MASTER] 01:54:11.904 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class java.lang.SecurityException: Security manager blocks ("java.lang.RuntimePermission" "writeFileDescriptor")
+java.lang.Thread.getStackTrace(Thread.java:1559)
+org.evosuite.runtime.sandbox.MSecurityManager.checkPermission(MSecurityManager.java:433)
+java.lang.SecurityManager.checkWrite(SecurityManager.java:954)
+java.io.FileOutputStream.<init>(FileOutputStream.java:245)
+org.evosuite.runtime.mock.java.io.MockFileOutputStream.<init>(MockFileOutputStream.java:114)
+com.fasterxml.jackson.dataformat.xml.ser.ToXmlGenerator_198_tmp__ESTest.test0(ToXmlGenerator_198_tmp__ESTest.java:33)
+sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+java.lang.reflect.Method.invoke(Method.java:498)
+org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)
+org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56)
+org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+org.junit.internal.runners.statements.FailOnTimeout$CallableStatement.call(FailOnTimeout.java:288)
+org.junit.internal.runners.statements.FailOnTimeout$CallableStatement.call(FailOnTimeout.java:282)
+java.util.concurrent.FutureTask.run(FutureTask.java:266)
+java.lang.Thread.run(Thread.java:748)
+
+[MASTER] 01:54:11.911 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ BufferRecycler bufferRecycler0 = new BufferRecycler();
+IOContext iOContext0 = new IOContext(bufferRecycler0, bufferRecycler0, false);
+ObjectMapper objectMapper0 = new ObjectMapper();
+WriterConfig writerConfig0 = WriterConfig.createJ2MEDefaults();
+FileDescriptor fileDescriptor0 = new FileDescriptor();
+MockFileOutputStream mockFileOutputStream0 = new MockFileOutputStream(fileDescriptor0);
+ISOLatin1XmlWriter iSOLatin1XmlWriter0 = new ISOLatin1XmlWriter(mockFileOutputStream0, writerConfig0, false);
+SimpleNsStreamWriter simpleNsStreamWriter0 = new SimpleNsStreamWriter(iSOLatin1XmlWriter0, "JW >9=kcg?-(-", writerConfig0);
+ToXmlGenerator toXmlGenerator0 = new ToXmlGenerator(iOContext0, 0, 3, objectMapper0, simpleNsStreamWriter0);
+toXmlGenerator0._constructDefaultPrettyPrinter();
+assertEquals(3, toXmlGenerator0.getFormatFeatures());
+
+
+* Permissions denied during test execution: 
+  - java.lang.RuntimePermission: 
+         writeFileDescriptor: 3
+* Writing tests to file
+* Writing JUnit test case 'ToXmlGenerator_ESTest' to results/JacksonXml-6/com.fasterxml.jackson.dataformat.xml.ser.ToXmlGenerator/BBC-F0-50/tests/29
+* Done!
+
+* Computation finished

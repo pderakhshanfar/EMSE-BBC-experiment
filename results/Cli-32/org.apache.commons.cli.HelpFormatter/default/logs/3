@@ -1,0 +1,130 @@
+* EvoSuite 1.1.1-SNAPSHOT
+* Configuration: default
+* Going to generate test cases for class: org.apache.commons.cli.HelpFormatter
+* Starting Client-0
+* Connecting to master process on port 2401
+* Analyzing classpath: 
+  - subjects/buggy-versions/Cli-32/target/classes
+* Finished analyzing classpath
+* Generating tests for class org.apache.commons.cli.HelpFormatter
+* Test criteria:
+  - Line Coverage
+  - Branch Coverage
+  - Exception
+  - Mutation testing (weak)
+  - Method-Output Coverage
+  - Top-Level Method Coverage
+  - No-Exception Top-Level Method Coverage
+  - Context Branch Coverage
+* Total number of test goals for DYNAMOSA: 1151
+* Using seed 4151034850
+* Starting evolution
+* Initial Number of Goals in DynaMOSA = 400 / 1151
+[MASTER] 17:30:46.959 [logback-2] ERROR TestCluster - Failed to check cache for java.util.Comparator<T> : Type points to itself
+[MASTER] 17:39:46.078 [logback-2] ERROR TestCluster - Failed to check cache for java.util.List<E> : Type points to itself
+Number of times BBC is called in total: 0
+* Search finished after 601s and 420 generations, 157128 statements, best individual has fitness: 105.0
+* Minimizing test suite
+[MASTER] 17:42:12.144 [logback-1] WARN  TestSuiteMinimizer - Minimization timeout. Roll back to original test suite
+* Going to analyze the coverage criteria
+* Coverage analysis for criterion LINE
+* Coverage of criterion LINE: 100%
+* Total number of goals: 203
+* Number of covered goals: 203
+* Coverage analysis for criterion BRANCH
+* Coverage of criterion BRANCH: 95%
+* Total number of goals: 157
+* Number of covered goals: 149
+* Coverage analysis for criterion EXCEPTION
+* Coverage of criterion EXCEPTION: 100%
+* Total number of goals: 54
+* Number of covered goals: 54
+* Coverage analysis for criterion WEAKMUTATION
+* Coverage of criterion WEAKMUTATION: 94%
+* Total number of goals: 508
+* Number of covered goals: 479
+* Coverage analysis for criterion OUTPUT
+* Coverage of criterion OUTPUT: 76%
+* Total number of goals: 46
+* Number of covered goals: 35
+* Coverage analysis for criterion METHOD
+* Coverage of criterion METHOD: 98%
+* Total number of goals: 40
+* Number of covered goals: 39
+* Coverage analysis for criterion METHODNOEXCEPTION
+* Coverage of criterion METHODNOEXCEPTION: 98%
+* Total number of goals: 40
+* Number of covered goals: 39
+* Coverage analysis for criterion CBRANCH
+* Coverage of criterion CBRANCH: 94%
+* Total number of goals: 157
+* Number of covered goals: 147
+* Generated 194 tests with total length 1967
+* Resulting test suite's coverage: 89% (average coverage for all fitness functions)
+* Generating assertions
+[MASTER] 17:42:56.952 [logback-1] WARN  SimpleMutationAssertionGenerator - Assertion minimization is taking too long (0.6769833333333334% of time used, but only 23/194 tests minimized), falling back to using all assertions
+[MASTER] 17:43:16.797 [logback-1] WARN  SimpleMutationAssertionGenerator - Reached maximum time to generate assertions, aborting assertion generation
+* Resulting test suite's mutation score: 10%
+* Compiling and checking tests
+[MASTER] 17:44:14.576 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class java.util.concurrent.ExecutionException: org.evosuite.runtime.TooManyResourcesException: Loop has been executed more times than the allowed 10000
+[MASTER] 17:44:14.577 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ HelpFormatter helpFormatter0 = new HelpFormatter();
+assertEquals(1, HelpFormatter.DEFAULT_LEFT_PAD);
+assertEquals(74, HelpFormatter.DEFAULT_WIDTH);
+assertEquals(1, helpFormatter0.defaultLeftPad);
+assertEquals(3, HelpFormatter.DEFAULT_DESC_PAD);
+assertEquals(3, helpFormatter0.defaultDescPad);
+assertEquals(74, helpFormatter0.defaultWidth);
+assertEquals(1, helpFormatter0.getLeftPadding());
+assertEquals("-", helpFormatter0.getOptPrefix());
+assertEquals("usage: ", helpFormatter0.getSyntaxPrefix());
+assertEquals("--", helpFormatter0.getLongOptPrefix());
+assertEquals(74, helpFormatter0.getWidth());
+assertEquals("arg", helpFormatter0.getArgName());
+assertEquals(3, helpFormatter0.getDescPadding());
+assertEquals("\n", helpFormatter0.getNewLine());
+assertEquals(" ", helpFormatter0.getLongOptSeparator());
+assertNotNull(helpFormatter0);
+
+StringBuffer stringBuffer0 = new StringBuffer();
+assertEquals(0, stringBuffer0.length());
+assertEquals("", stringBuffer0.toString());
+assertNotNull(stringBuffer0);
+
+Options options0 = new Options();
+assertNotNull(options0);
+
+OptionGroup optionGroup0 = new OptionGroup();
+assertFalse(optionGroup0.isRequired());
+assertNull(optionGroup0.getSelected());
+assertNotNull(optionGroup0);
+
+HelpFormatter helpFormatter1 = new HelpFormatter();
+assertEquals(74, helpFormatter1.defaultWidth);
+assertEquals(3, helpFormatter1.defaultDescPad);
+assertEquals(1, HelpFormatter.DEFAULT_LEFT_PAD);
+assertEquals(74, HelpFormatter.DEFAULT_WIDTH);
+assertEquals(1, helpFormatter1.defaultLeftPad);
+assertEquals(3, HelpFormatter.DEFAULT_DESC_PAD);
+assertFalse(helpFormatter1.equals((Object)helpFormatter0));
+assertEquals(1, helpFormatter1.getLeftPadding());
+assertEquals("usage: ", helpFormatter1.getSyntaxPrefix());
+assertEquals(" ", helpFormatter1.getLongOptSeparator());
+assertEquals(3, helpFormatter1.getDescPadding());
+assertEquals(74, helpFormatter1.getWidth());
+assertEquals("arg", helpFormatter1.getArgName());
+assertEquals("-", helpFormatter1.getOptPrefix());
+assertEquals("\n", helpFormatter1.getNewLine());
+assertEquals("--", helpFormatter1.getLongOptPrefix());
+assertNotNull(helpFormatter1);
+
+helpFormatter1.printHelp(0, " ", "-", options0, " ", false);
+
+* Permissions denied during test execution: 
+  - java.lang.RuntimePermission: 
+         writeFileDescriptor: 56
+* Writing tests to file
+* Writing JUnit test case 'HelpFormatter_ESTest' to results/Cli-32/org.apache.commons.cli.HelpFormatter/default/tests/3
+* Done!
+
+* Computation finished

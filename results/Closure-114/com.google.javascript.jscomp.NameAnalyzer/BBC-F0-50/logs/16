@@ -1,0 +1,172 @@
+* EvoSuite 1.1.1-SNAPSHOT
+* Configuration: BBC-F0-50
+* Going to generate test cases for class: com.google.javascript.jscomp.NameAnalyzer
+* Starting Client-0
+* Connecting to master process on port 7187
+* Analyzing classpath: 
+  - subjects/buggy-versions/Closure-114/build/classes
+  - subjects/buggy-versions/Closure-114/lib/args4j.jar
+  - subjects/buggy-versions/Closure-114/lib/guava.jar
+  - subjects/buggy-versions/Closure-114/lib/json.jar
+  - subjects/buggy-versions/Closure-114/lib/jsr305.jar
+  - subjects/buggy-versions/Closure-114/lib/protobuf-java.jar
+  - subjects/buggy-versions/Closure-114/build/lib/rhino.jar
+  - subjects/buggy-versions/Closure-114/lib/ant.jar
+* Finished analyzing classpath
+* Generating tests for class com.google.javascript.jscomp.NameAnalyzer
+* Test criteria:
+  - Line Coverage
+  - Branch Coverage
+  - Exception
+  - Mutation testing (weak)
+  - Method-Output Coverage
+  - Top-Level Method Coverage
+  - No-Exception Top-Level Method Coverage
+  - Context Branch Coverage
+* Total number of test goals for DYNAMOSA: 2352
+* Using seed 2187759634
+* Starting evolution
+bbc usage percentage is: 50%
+* Initial Number of Goals in DynaMOSA = 531 / 2352
+[MASTER] 18:04:35.780 [logback-2] ERROR TestCluster - Failed to check cache for java.util.AbstractMap<K, V>.SimpleEntry<K, V> : Type points to itself
+[MASTER] 18:04:35.780 [logback-2] ERROR TestCluster - Failed to check cache for java.util.AbstractMap<K, V>.SimpleImmutableEntry<K, V> : Type points to itself
+[MASTER] 18:05:06.361 [logback-2] ERROR TestCluster - Failed to check cache for java.util.Comparator<T> : Type points to itself
+[MASTER] 18:05:13.940 [logback-2] ERROR TestCluster - Failed to check cache for java.util.Enumeration<E> : Type points to itself
+* Search finished after 601s and 351 generations, 143331 statements, best individual has fitness: 826.0
+* Minimizing test suite
+* Going to analyze the coverage criteria
+* Coverage analysis for criterion LINE
+* Coverage of criterion LINE: 66%
+* Total number of goals: 685
+* Number of covered goals: 455
+* Coverage analysis for criterion BRANCH
+* Coverage of criterion BRANCH: 64%
+* Total number of goals: 561
+* Number of covered goals: 360
+* Coverage analysis for criterion EXCEPTION
+* Coverage of criterion EXCEPTION: 100%
+* Total number of goals: 4
+* Number of covered goals: 4
+* Coverage analysis for criterion WEAKMUTATION
+* Coverage of criterion WEAKMUTATION: 72%
+* Total number of goals: 506
+* Number of covered goals: 363
+* Coverage analysis for criterion OUTPUT
+* Coverage of criterion OUTPUT: 33%
+* Total number of goals: 3
+* Number of covered goals: 1
+* Coverage analysis for criterion METHOD
+* Coverage of criterion METHOD: 22%
+* Total number of goals: 18
+* Number of covered goals: 4
+* Coverage analysis for criterion METHODNOEXCEPTION
+* Coverage of criterion METHODNOEXCEPTION: 22%
+* Total number of goals: 18
+* Number of covered goals: 4
+* Coverage analysis for criterion CBRANCH
+* Coverage of criterion CBRANCH: 63%
+* Total number of goals: 561
+* Number of covered goals: 354
+* Generated 17 tests with total length 88
+* Resulting test suite's coverage: 49% (average coverage for all fitness functions)
+* Generating assertions
+* Resulting test suite's mutation score: 21%
+* Compiling and checking tests
+[MASTER] 18:14:54.939 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 18:14:54.942 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class java.lang.AssertionError: Expecting exception: IllegalArgumentException
+[MASTER] 18:14:54.943 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ Compiler compiler0 = new Compiler();
+Normalize.parseAndNormalizeTestCode(compiler0, "var __allocStats; \nvar __alloc = function(obj, sourcePosition, id, typeName) { \n  if (!__allocStats) { \n    __allocStats = { \n      reset: function() { \n        this.counts = [{ type:typeName, line:'total', count:0}]; \n      }, \n      report: function(opt_n) { \n        this.counts.filter(function(x) { \n          return x; \n        }).sort(function(a, b) { \n          return b.count - a.count; \n        }).splice(0, opt_n || 50).reverse().forEach(function (x) { \n          if (window.console) { \n            window.console.log(x.count + ' (' + x.type + ') : ' + x.line); \n          } \n        }); \n      } \n    }; \n    __allocStats.reset(); \n    if (window.parent) { \n      window.parent['__allocStats'] = __allocStats; \n    } \n  } \n  if (!__allocStats.counts[id]) { \n    __allocStats.counts[id] = { type:typeName, line:sourcePosition, count:0 }; \n  } \n  __allocStats.counts[0].count++; \n  __allocStats.counts[id].count++; \n  return obj;\n}; \n");
+
+[MASTER] 18:15:06.291 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class java.lang.AssertionError: Expecting exception: IllegalArgumentException
+[MASTER] 18:15:06.291 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ Compiler compiler0 = new Compiler();
+Normalize.parseAndNormalizeTestCode(compiler0, "var __allocStats; \nvar __alloc = function(obj, sourcePosition, id, typeName) { \n  if (!__allocStats) { \n    __allocStats = { \n      reset: function() { \n        this.counts = [{ type:typeName, line:'total', count:0}]; \n      }, \n      report: function(opt_n) { \n        this.counts.filter(function(x) { \n          return x; \n        }).sort(function(a, b) { \n          return b.count - a.count; \n        }).splice(0, opt_n || 50).reverse().forEach(function (x) { \n          if (window.console) { \n            window.console.log(x.count + ' (' + x.type + ') : ' + x.line); \n          } \n        }); \n      } \n    }; \n    __allocStats.reset(); \n    if (window.parent) { \n      window.parent['__allocStats'] = __allocStats; \n    } \n  } \n  if (!__allocStats.counts[id]) { \n    __allocStats.counts[id] = { type:typeName, line:sourcePosition, count:0 }; \n  } \n  __allocStats.counts[0].count++; \n  __allocStats.counts[id].count++; \n  return obj;\n}; \n");
+
+[MASTER] 18:15:10.804 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class java.lang.AssertionError: Expecting exception: IllegalArgumentException
+[MASTER] 18:15:10.805 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ Compiler compiler0 = new Compiler();
+Normalize.parseAndNormalizeTestCode(compiler0, "target");
+
+[MASTER] 18:15:11.876 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class java.lang.AssertionError: Expecting exception: IllegalArgumentException
+[MASTER] 18:15:11.876 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ Compiler compiler0 = new Compiler();
+Normalize.parseAndNormalizeTestCode(compiler0, "var __allocStats; \nvar __alloc = function(obj, sourcePosition, id, typeName) { \n  if (!__allocStats) { \n    __allocStats = { \n      reset: function() { \n        this.counts = [{ type:typeName, line:'total', count:0}]; \n      }, \n      report: function(opt_n) { \n        this.counts.filter(function(x) { \n          return x; \n        }).sort(function(a, b) { \n          return b.count - a.count; \n        }).splice(0, opt_n || 50).reverse().forEach(function (x) { \n          if (window.console) { \n            window.console.log(x.count + ' (' + x.type + ') : ' + x.line); \n          } \n        }); \n      } \n    }; \n    __allocStats.reset(); \n    if (window.parent) { \n      window.parent['__allocStats'] = __allocStats; \n    } \n  } \n  if (!__allocStats.counts[id]) { \n    __allocStats.counts[id] = { type:typeName, line:sourcePosition, count:0 }; \n  } \n  __allocStats.counts[0].count++; \n  __allocStats.counts[id].count++; \n  return obj;\n}; \n");
+
+[MASTER] 18:15:14.460 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test07 -> class org.evosuite.runtime.mock.java.lang.MockIllegalArgumentException: Multiple entries with same key: author=NOT_IMPLEMENTED and author=AUTHOR
+[MASTER] 18:15:14.461 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ Compiler compiler0 = new Compiler();
+NameAnalyzer nameAnalyzer0 = new NameAnalyzer(compiler0, false);
+SyntheticAst syntheticAst0 = new SyntheticAst("JSC_MSG_TEE_MLFORMED");
+Node node0 = Normalize.parseAndNormalizeTestCode(compiler0, "var __allocStats; \nvar __alloc = function(obj, sourcePosition, id, typeName) { \n  if (!__allocStats) { \n    __allocStats = { \n      reset: function() { \n        this.counts = [{ type:typeName, line:'total', count:0 }]; \n      }, \n      report: function(opt_n) { \n        this.counts.filter(function(x) { \n          return x; \n        }).sort(function(a, b) { \n          return b.count - a.count; \n        }).splice(0, opt_n || 50).reverse().forEach(function (x) { \n          if (window.console) { \n            window.console.log(x.count + ' (' + x.type + ') : ' + x.line); \n          } \n        }); \n      } \n    }; \n    __allocStats.reset(); \n    if (window.parent) { \n      window.parent['__allocStats'] = __allocStats; \n    } \n  } \n  if (!__allocStats.counts[id]) { \n    __allocStats.counts[id] = { type:typeName, line:sourcePosition, count:0 }; \n  } \n  __allocStats.counts[0].count++; \n  __allocStats.counts[id].count++; \n  return obj;\n}; \n");
+nameAnalyzer0.process(node0, node0);
+nameAnalyzer0.process(node0, node0);
+assertEquals(57, Node.LAST_PROP);
+
+
+[MASTER] 18:15:14.461 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test05 -> class org.evosuite.runtime.mock.java.lang.MockIllegalArgumentException: Multiple entries with same key: author=NOT_IMPLEMENTED and author=AUTHOR
+[MASTER] 18:15:14.461 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ Compiler compiler0 = new Compiler();
+NameAnalyzer nameAnalyzer0 = new NameAnalyzer(compiler0, true);
+SyntheticAst syntheticAst0 = new SyntheticAst("JSC_MSG_TEJ_MLFORM3D");
+Node node0 = Normalize.parseAndNormalizeTestCode(compiler0, "CharStreams.nullWriter()");
+nameAnalyzer0.process(node0, node0);
+assertFalse(node0.isHook());
+
+
+[MASTER] 18:15:14.461 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test04 -> class org.evosuite.runtime.mock.java.lang.MockIllegalArgumentException: Multiple entries with same key: author=NOT_IMPLEMENTED and author=AUTHOR
+[MASTER] 18:15:14.462 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ Compiler compiler0 = new Compiler();
+NameAnalyzer nameAnalyzer0 = new NameAnalyzer(compiler0, false);
+SyntheticAst syntheticAst0 = new SyntheticAst("consistentIdGenerator");
+Node node0 = Normalize.parseAndNormalizeTestCode(compiler0, "consistent=dGenerator");
+nameAnalyzer0.process(node0, node0);
+assertFalse(node0.isArrayLit());
+
+
+[MASTER] 18:15:14.462 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test03 -> class org.evosuite.runtime.mock.java.lang.MockIllegalArgumentException: Multiple entries with same key: author=NOT_IMPLEMENTED and author=AUTHOR
+[MASTER] 18:15:14.462 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ Compiler compiler0 = new Compiler();
+NameAnalyzer nameAnalyzer0 = new NameAnalyzer(compiler0, true);
+SyntheticAst syntheticAst0 = new SyntheticAst("JSC_MSG_TEE_MLFORMED");
+Node node0 = Normalize.parseAndNormalizeTestCode(compiler0, "var __allocStats; \nvar __alloc = function(obj, sourcePosition, id, typeName) { \n  if (!__allocStats) { \n    __allocStats = { \n      reset: function() { \n        this.counts = [{ type:typeName, line:'total', count:0 }]; \n      }, \n      report: function(opt_n) { \n        this.counts.filter(function(x) { \n          return x; \n        }).sort(function(a, b) { \n          return b.count - a.count; \n        }).splice(0, opt_n || 50).reverse().forEach(function (x) { \n          if (window.console) { \n            window.console.log(x.count + ' (' + x.type + ') : ' + x.line); \n          } \n        }); \n      } \n    }; \n    __allocStats.reset(); \n    if (window.parent) { \n      window.parent['__allocStats'] = __allocStats; \n    } \n  } \n  if (!__allocStats.counts[id]) { \n    __allocStats.counts[id] = { type:typeName, line:sourcePosition, count:0 }; \n  } \n  __allocStats.counts[0].count++; \n  __allocStats.counts[id].count++; \n  return obj;\n}; \n");
+Node node1 = syntheticAst0.getAstRoot(compiler0);
+nameAnalyzer0.process(node1, node0);
+assertFalse(node0.hasChildren());
+assertEquals(0, node0.getChildCount());
+
+
+[MASTER] 18:15:14.462 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test02 -> class org.evosuite.runtime.mock.java.lang.MockIllegalArgumentException: Multiple entries with same key: author=NOT_IMPLEMENTED and author=AUTHOR
+[MASTER] 18:15:14.462 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ Compiler compiler0 = new Compiler();
+NameAnalyzer nameAnalyzer0 = new NameAnalyzer(compiler0, true);
+SyntheticAst syntheticAst0 = new SyntheticAst("JSC_MSG_TEE_MLFORMED");
+Node node0 = Normalize.parseAndNormalizeTestCode(compiler0, "var __allocStats; \nvar __alloc = function(obj, sourcePosition, id, typeName) { \n  if (!__allocStats) { \n    __allocStats = { \n      reset: function() { \n        this.counts = [{ type:typeName, line:'total', count:0 }]; \n      }, \n      report: function(opt_n) { \n        this.counts.filter(function(x) { \n          return x; \n        }).sort(function(a, b) { \n          return b.count - a.count; \n        }).splice(0, opt_n || 50).reverse().forEach(function (x) { \n          if (window.console) { \n            window.console.log(x.count + ' (' + x.type + ') : ' + x.line); \n          } \n        }); \n      } \n    }; \n    __allocStats.reset(); \n    if (window.parent) { \n      window.parent['__allocStats'] = __allocStats; \n    } \n  } \n  if (!__allocStats.counts[id]) { \n    __allocStats.counts[id] = { type:typeName, line:sourcePosition, count:0 }; \n  } \n  __allocStats.counts[0].count++; \n  __allocStats.counts[id].count++; \n  return obj;\n}; \n");
+nameAnalyzer0.process(node0, node0);
+nameAnalyzer0.process(node0, node0);
+
+[MASTER] 18:15:14.463 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test13 -> class org.evosuite.runtime.mock.java.lang.MockIllegalArgumentException: Multiple entries with same key: author=NOT_IMPLEMENTED and author=AUTHOR
+[MASTER] 18:15:14.463 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test12 -> class org.evosuite.runtime.mock.java.lang.MockIllegalArgumentException: Multiple entries with same key: author=NOT_IMPLEMENTED and author=AUTHOR
+[MASTER] 18:15:14.463 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test11 -> class org.evosuite.runtime.mock.java.lang.MockIllegalArgumentException: Multiple entries with same key: author=NOT_IMPLEMENTED and author=AUTHOR
+[MASTER] 18:15:14.463 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ Compiler compiler0 = new Compiler();
+NameAnalyzer nameAnalyzer0 = new NameAnalyzer(compiler0, true);
+nameAnalyzer0.removeUnreferenced();
+
+[MASTER] 18:15:15.811 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test03 -> class org.evosuite.runtime.mock.java.lang.MockIllegalArgumentException: Multiple entries with same key: author=NOT_IMPLEMENTED and author=AUTHOR
+[MASTER] 18:15:15.812 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ Compiler compiler0 = new Compiler();
+NameAnalyzer nameAnalyzer0 = new NameAnalyzer(compiler0, true);
+SyntheticAst syntheticAst0 = new SyntheticAst("__allocStats.reset");
+Node node0 = Normalize.parseAndNormalizeTestCode(compiler0, "window.console.log");
+nameAnalyzer0.process(node0, node0);
+assertFalse(node0.isWith());
+
+
+[MASTER] 18:15:15.812 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test02 -> class org.evosuite.runtime.mock.java.lang.MockIllegalArgumentException: Multiple entries with same key: author=NOT_IMPLEMENTED and author=AUTHOR
+[MASTER] 18:15:15.812 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test04 -> class org.evosuite.runtime.mock.java.lang.MockIllegalArgumentException: Multiple entries with same key: author=NOT_IMPLEMENTED and author=AUTHOR
+* Writing tests to file
+* Writing JUnit test case 'NameAnalyzer_ESTest' to results/Closure-114/com.google.javascript.jscomp.NameAnalyzer/BBC-F0-50/tests/16
+* Done!
+
+* Computation finished

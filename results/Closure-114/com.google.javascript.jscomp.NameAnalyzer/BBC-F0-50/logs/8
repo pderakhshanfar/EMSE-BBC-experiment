@@ -1,0 +1,134 @@
+* EvoSuite 1.1.1-SNAPSHOT
+* Configuration: BBC-F0-50
+* Going to generate test cases for class: com.google.javascript.jscomp.NameAnalyzer
+* Starting Client-0
+* Connecting to master process on port 8651
+* Analyzing classpath: 
+  - subjects/buggy-versions/Closure-114/build/classes
+  - subjects/buggy-versions/Closure-114/lib/args4j.jar
+  - subjects/buggy-versions/Closure-114/lib/guava.jar
+  - subjects/buggy-versions/Closure-114/lib/json.jar
+  - subjects/buggy-versions/Closure-114/lib/jsr305.jar
+  - subjects/buggy-versions/Closure-114/lib/protobuf-java.jar
+  - subjects/buggy-versions/Closure-114/build/lib/rhino.jar
+  - subjects/buggy-versions/Closure-114/lib/ant.jar
+* Finished analyzing classpath
+* Generating tests for class com.google.javascript.jscomp.NameAnalyzer
+* Test criteria:
+  - Line Coverage
+  - Branch Coverage
+  - Exception
+  - Mutation testing (weak)
+  - Method-Output Coverage
+  - Top-Level Method Coverage
+  - No-Exception Top-Level Method Coverage
+  - Context Branch Coverage
+* Total number of test goals for DYNAMOSA: 2352
+* Using seed 2426115713
+* Starting evolution
+bbc usage percentage is: 50%
+* Initial Number of Goals in DynaMOSA = 531 / 2352
+[MASTER] 18:03:45.465 [logback-2] ERROR TestCluster - Failed to check cache for java.util.AbstractMap<K, V>.SimpleEntry<K, V> : Type points to itself
+[MASTER] 18:03:45.465 [logback-2] ERROR TestCluster - Failed to check cache for java.util.AbstractMap<K, V>.SimpleImmutableEntry<K, V> : Type points to itself
+[MASTER] 18:05:26.562 [logback-2] ERROR TestCluster - Failed to check cache for java.util.Enumeration<E> : Type points to itself
+[MASTER] 18:09:28.496 [logback-2] ERROR TestCluster - Failed to check cache for java.util.Iterator<E> : Type points to itself
+[MASTER] 18:10:49.805 [logback-2] ERROR TestCluster - Failed to check cache for java.util.Comparator<T> : Type points to itself
+[MASTER] 18:12:42.464 [logback-2] ERROR TestCluster - Failed to check cache for java.lang.Comparable<T> : Type points to itself
+* Search finished after 601s and 427 generations, 164838 statements, best individual has fitness: 1571.0
+* Minimizing test suite
+* Going to analyze the coverage criteria
+* Coverage analysis for criterion LINE
+* Coverage of criterion LINE: 37%
+* Total number of goals: 685
+* Number of covered goals: 251
+* Coverage analysis for criterion BRANCH
+* Coverage of criterion BRANCH: 31%
+* Total number of goals: 561
+* Number of covered goals: 172
+* Coverage analysis for criterion EXCEPTION
+* Coverage of criterion EXCEPTION: 100%
+* Total number of goals: 3
+* Number of covered goals: 3
+* Coverage analysis for criterion WEAKMUTATION
+* Coverage of criterion WEAKMUTATION: 36%
+* Total number of goals: 506
+* Number of covered goals: 184
+* Coverage analysis for criterion OUTPUT
+* Coverage of criterion OUTPUT: 33%
+* Total number of goals: 3
+* Number of covered goals: 1
+* Coverage analysis for criterion METHOD
+* Coverage of criterion METHOD: 22%
+* Total number of goals: 18
+* Number of covered goals: 4
+* Coverage analysis for criterion METHODNOEXCEPTION
+* Coverage of criterion METHODNOEXCEPTION: 22%
+* Total number of goals: 18
+* Number of covered goals: 4
+* Coverage analysis for criterion CBRANCH
+* Coverage of criterion CBRANCH: 31%
+* Total number of goals: 561
+* Number of covered goals: 172
+* Generated 19 tests with total length 93
+* Resulting test suite's coverage: 33% (average coverage for all fitness functions)
+* Generating assertions
+* Resulting test suite's mutation score: 9%
+* Compiling and checking tests
+[MASTER] 18:14:01.659 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 18:14:02.783 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class java.lang.AssertionError: Expecting exception: IllegalArgumentException
+[MASTER] 18:14:02.784 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ Compiler compiler0 = new Compiler();
+NameAnalyzer nameAnalyzer0 = new NameAnalyzer(compiler0, true);
+compiler0.parseTestCode("FALSE");
+
+[MASTER] 18:14:04.986 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class java.lang.AssertionError: Exception was not thrown in com.google.common.base.Preconditions but in com.google.javascript.jscomp.GatherSideEffectSubexpressionsCallback.shouldTraverse(GatherSideEffectSubexpressionsCallback.java:232): org.evosuite.runtime.mock.java.lang.MockThrowable: INTERNAL COMPILER ERROR.
+Please report this problem.
+INTERNAL COMPILER ERROR.
+Please report this problem.
+EXPR_RESULT nodes are not supported.
+  Node(EXPR_RESULT): [testcode]:1:0
+winjow
+  Parent(SCRIPT): [testcode]:1:0
+winjow
+
+  Node(SCRIPT): [testcode]:1:0
+winjow
+  Parent(VAR): [source unknown]
+
+[MASTER] 18:14:04.986 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ Compiler compiler0 = new Compiler();
+Node node0 = compiler0.parseTestCode("winjow");
+NameAnalyzer nameAnalyzer0 = new NameAnalyzer(compiler0, false);
+Node node1 = new Node(118, node0, node0, 57, 42);
+nameAnalyzer0.process(node1, node1);
+
+[MASTER] 18:14:08.642 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class java.lang.AssertionError: Expecting exception: IllegalArgumentException
+[MASTER] 18:14:08.643 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ ByteArrayOutputStream byteArrayOutputStream0 = new ByteArrayOutputStream();
+MockPrintStream mockPrintStream0 = new MockPrintStream(byteArrayOutputStream0);
+Compiler compiler0 = new Compiler(mockPrintStream0);
+NameAnalyzer nameAnalyzer0 = new NameAnalyzer(compiler0, false);
+compiler0.parseTestCode("</ul></li>");
+
+[MASTER] 18:14:15.801 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class java.lang.AssertionError: Expecting exception: IllegalArgumentException
+[MASTER] 18:14:15.801 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ Logger logger0 = Logger.getGlobal();
+LoggerErrorManager loggerErrorManager0 = new LoggerErrorManager(logger0);
+Compiler compiler0 = new Compiler(loggerErrorManager0);
+NameAnalyzer nameAnalyzer0 = new NameAnalyzer(compiler0, true);
+compiler0.parseTestCode("com.google.javascript.jscomp.NameAnalyzer$TriState");
+
+[MASTER] 18:14:20.334 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class java.lang.StackOverflowError: null
+[MASTER] 18:14:20.335 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ Compiler compiler0 = new Compiler();
+Node node0 = compiler0.parseTestCode("winvow");
+Node node1 = new Node((-473), node0, node0, node0, node0);
+node0.addChildrenToFront(node1);
+NameAnalyzer nameAnalyzer0 = new NameAnalyzer(compiler0, false);
+nameAnalyzer0.process(node0, node0);
+
+* Writing tests to file
+* Writing JUnit test case 'NameAnalyzer_ESTest' to results/Closure-114/com.google.javascript.jscomp.NameAnalyzer/BBC-F0-50/tests/8
+* Done!
+
+* Computation finished

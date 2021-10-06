@@ -1,0 +1,384 @@
+* EvoSuite 1.1.1-SNAPSHOT
+* Configuration: BBC-F0-50
+* Going to generate test cases for class: org.apache.commons.csv.CSVPrinter
+* Starting Client-0
+* Connecting to master process on port 18862
+* Analyzing classpath: 
+  - subjects/buggy-versions/Csv-13/target/classes
+* Finished analyzing classpath
+* Generating tests for class org.apache.commons.csv.CSVPrinter
+* Test criteria:
+  - Line Coverage
+  - Branch Coverage
+  - Exception
+  - Mutation testing (weak)
+  - Method-Output Coverage
+  - Top-Level Method Coverage
+  - No-Exception Top-Level Method Coverage
+  - Context Branch Coverage
+* Total number of test goals for DYNAMOSA: 971
+* Using seed 1628159476
+* Starting evolution
+bbc usage percentage is: 50%
+* Initial Number of Goals in DynaMOSA = 190 / 971
+[MASTER] 20:26:43.842 [logback-2] ERROR TestCluster - Failed to check cache for java.util.ArrayDeque<E> : Type points to itself
+[MASTER] 20:26:43.843 [logback-2] ERROR TestCluster - Failed to check cache for java.util.ArrayList<E> : Type points to itself
+[MASTER] 20:26:43.843 [logback-2] ERROR TestCluster - Failed to check cache for java.util.EnumSet<E> : Type points to itself
+[MASTER] 20:26:43.843 [logback-2] ERROR TestCluster - Failed to check cache for java.util.HashSet<E> : Type points to itself
+[MASTER] 20:26:43.843 [logback-2] ERROR TestCluster - Failed to check cache for java.util.LinkedHashSet<E> : Type points to itself
+[MASTER] 20:26:43.843 [logback-2] ERROR TestCluster - Failed to check cache for java.util.LinkedList<E> : Type points to itself
+[MASTER] 20:26:43.843 [logback-2] ERROR TestCluster - Failed to check cache for java.util.PriorityQueue<E> : Type points to itself
+[MASTER] 20:26:43.843 [logback-2] ERROR TestCluster - Failed to check cache for java.util.ServiceLoader<S> : Type points to itself
+[MASTER] 20:26:43.843 [logback-2] ERROR TestCluster - Failed to check cache for java.util.Stack<E> : Type points to itself
+[MASTER] 20:26:43.843 [logback-2] ERROR TestCluster - Failed to check cache for java.util.TreeSet<E> : Type points to itself
+[MASTER] 20:26:43.843 [logback-2] ERROR TestCluster - Failed to check cache for java.util.Vector<E> : Type points to itself
+[MASTER] 20:26:45.055 [logback-2] ERROR TestCluster - Failed to check cache for java.util.Comparator<T> : Type points to itself
+[MASTER] 20:26:45.550 [logback-2] ERROR TestCluster - Failed to check cache for java.util.Enumeration<E> : Type points to itself
+* Search finished after 601s and 1480 generations, 798707 statements, best individual has fitness: 163.0
+* Minimizing test suite
+* Going to analyze the coverage criteria
+* Coverage analysis for criterion LINE
+* Coverage of criterion LINE: 93%
+* Total number of goals: 164
+* Number of covered goals: 153
+* Coverage analysis for criterion BRANCH
+* Coverage of criterion BRANCH: 88%
+* Total number of goals: 137
+* Number of covered goals: 121
+* Coverage analysis for criterion EXCEPTION
+* Coverage of criterion EXCEPTION: 100%
+* Total number of goals: 41
+* Number of covered goals: 41
+* Coverage analysis for criterion WEAKMUTATION
+* Coverage of criterion WEAKMUTATION: 85%
+* Total number of goals: 507
+* Number of covered goals: 430
+* Coverage analysis for criterion OUTPUT
+* Coverage of criterion OUTPUT: 50%
+* Total number of goals: 2
+* Number of covered goals: 1
+* Coverage analysis for criterion METHOD
+* Coverage of criterion METHOD: 100%
+* Total number of goals: 12
+* Number of covered goals: 12
+* Coverage analysis for criterion METHODNOEXCEPTION
+* Coverage of criterion METHODNOEXCEPTION: 100%
+* Total number of goals: 12
+* Number of covered goals: 12
+* Coverage analysis for criterion CBRANCH
+* Coverage of criterion CBRANCH: 84%
+* Total number of goals: 137
+* Number of covered goals: 115
+* Generated 68 tests with total length 427
+* Resulting test suite's coverage: 82% (average coverage for all fitness functions)
+* Generating assertions
+[MASTER] 20:37:50.900 [logback-1] WARN  SimpleMutationAssertionGenerator - Assertion minimization is taking too long (0.6935333333333333% of time used, but only 15/68 tests minimized), falling back to using all assertions
+* Resulting test suite's mutation score: 15%
+* Compiling and checking tests
+[MASTER] 20:37:59.990 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 20:38:00.131 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 20:38:02.400 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class java.lang.SecurityException: Security manager blocks ("java.lang.RuntimePermission" "writeFileDescriptor")
+java.lang.Thread.getStackTrace(Thread.java:1559)
+org.evosuite.runtime.sandbox.MSecurityManager.checkPermission(MSecurityManager.java:433)
+java.lang.SecurityManager.checkWrite(SecurityManager.java:954)
+java.io.FileOutputStream.<init>(FileOutputStream.java:245)
+java.io.FileWriter.<init>(FileWriter.java:116)
+org.evosuite.runtime.mock.java.io.MockFileWriter.<init>(MockFileWriter.java:79)
+org.apache.commons.csv.CSVPrinter_88_tmp__ESTest.test0(CSVPrinter_88_tmp__ESTest.java:86)
+sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+java.lang.reflect.Method.invoke(Method.java:498)
+org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)
+org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56)
+org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+org.junit.internal.runners.statements.FailOnTimeout$CallableStatement.call(FailOnTimeout.java:288)
+org.junit.internal.runners.statements.FailOnTimeout$CallableStatement.call(FailOnTimeout.java:282)
+java.util.concurrent.FutureTask.run(FutureTask.java:266)
+java.lang.Thread.run(Thread.java:748)
+
+[MASTER] 20:38:02.400 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ CSVFormat cSVFormat0 = CSVFormat.TDF;
+assertEquals('\"', (char)cSVFormat0.getQuoteCharacter());
+assertFalse(cSVFormat0.isNullStringSet());
+assertNull(cSVFormat0.getNullString());
+assertFalse(cSVFormat0.getAllowMissingColumnNames());
+assertFalse(cSVFormat0.isCommentMarkerSet());
+assertFalse(cSVFormat0.isEscapeCharacterSet());
+assertEquals("\r\n", cSVFormat0.getRecordSeparator());
+assertNull(cSVFormat0.getCommentMarker());
+assertFalse(cSVFormat0.getIgnoreHeaderCase());
+assertTrue(cSVFormat0.getIgnoreSurroundingSpaces());
+assertTrue(cSVFormat0.isQuoteCharacterSet());
+assertFalse(cSVFormat0.getSkipHeaderRecord());
+assertNull(cSVFormat0.getEscapeCharacter());
+assertTrue(cSVFormat0.getIgnoreEmptyLines());
+assertEquals('\t', cSVFormat0.getDelimiter());
+assertNull(cSVFormat0.getQuoteMode());
+assertNotNull(cSVFormat0);
+
+CSVFormat cSVFormat1 = cSVFormat0.withDelimiter('0');
+assertFalse(cSVFormat1.equals((Object)cSVFormat0));
+assertEquals('\"', (char)cSVFormat0.getQuoteCharacter());
+assertFalse(cSVFormat0.isNullStringSet());
+assertNull(cSVFormat0.getNullString());
+assertFalse(cSVFormat0.getAllowMissingColumnNames());
+assertFalse(cSVFormat0.isCommentMarkerSet());
+assertFalse(cSVFormat0.isEscapeCharacterSet());
+assertEquals("\r\n", cSVFormat0.getRecordSeparator());
+assertNull(cSVFormat0.getCommentMarker());
+assertFalse(cSVFormat0.getIgnoreHeaderCase());
+assertTrue(cSVFormat0.getIgnoreSurroundingSpaces());
+assertTrue(cSVFormat0.isQuoteCharacterSet());
+assertFalse(cSVFormat0.getSkipHeaderRecord());
+assertNull(cSVFormat0.getEscapeCharacter());
+assertTrue(cSVFormat0.getIgnoreEmptyLines());
+assertEquals('\t', cSVFormat0.getDelimiter());
+assertNull(cSVFormat0.getQuoteMode());
+assertNull(cSVFormat1.getNullString());
+assertFalse(cSVFormat1.isCommentMarkerSet());
+assertEquals('0', cSVFormat1.getDelimiter());
+assertFalse(cSVFormat1.getIgnoreHeaderCase());
+assertFalse(cSVFormat1.getAllowMissingColumnNames());
+assertNull(cSVFormat1.getEscapeCharacter());
+assertFalse(cSVFormat1.isNullStringSet());
+assertFalse(cSVFormat1.isEscapeCharacterSet());
+assertNull(cSVFormat1.getQuoteMode());
+assertEquals("\r\n", cSVFormat1.getRecordSeparator());
+assertNull(cSVFormat1.getCommentMarker());
+assertTrue(cSVFormat1.getIgnoreSurroundingSpaces());
+assertEquals('\"', (char)cSVFormat1.getQuoteCharacter());
+assertTrue(cSVFormat1.isQuoteCharacterSet());
+assertTrue(cSVFormat1.getIgnoreEmptyLines());
+assertFalse(cSVFormat1.getSkipHeaderRecord());
+assertNotSame(cSVFormat0, cSVFormat1);
+assertNotSame(cSVFormat1, cSVFormat0);
+assertNotNull(cSVFormat1);
+
+FileDescriptor fileDescriptor0 = new FileDescriptor();
+assertFalse(fileDescriptor0.valid());
+assertNotNull(fileDescriptor0);
+
+MockFileWriter mockFileWriter0 = new MockFileWriter(fileDescriptor0);
+assertNotNull(mockFileWriter0);
+
+CSVPrinter cSVPrinter0 = new CSVPrinter(mockFileWriter0, cSVFormat1);
+assertFalse(cSVFormat0.equals((Object)cSVFormat1));
+assertFalse(cSVFormat1.equals((Object)cSVFormat0));
+assertEquals('\"', (char)cSVFormat0.getQuoteCharacter());
+assertFalse(cSVFormat0.isNullStringSet());
+assertNull(cSVFormat0.getNullString());
+assertFalse(cSVFormat0.getAllowMissingColumnNames());
+assertFalse(cSVFormat0.isCommentMarkerSet());
+assertFalse(cSVFormat0.isEscapeCharacterSet());
+assertEquals("\r\n", cSVFormat0.getRecordSeparator());
+assertNull(cSVFormat0.getCommentMarker());
+assertFalse(cSVFormat0.getIgnoreHeaderCase());
+assertTrue(cSVFormat0.getIgnoreSurroundingSpaces());
+assertTrue(cSVFormat0.isQuoteCharacterSet());
+assertFalse(cSVFormat0.getSkipHeaderRecord());
+assertNull(cSVFormat0.getEscapeCharacter());
+assertTrue(cSVFormat0.getIgnoreEmptyLines());
+assertEquals('\t', cSVFormat0.getDelimiter());
+assertNull(cSVFormat0.getQuoteMode());
+assertNull(cSVFormat1.getNullString());
+assertFalse(cSVFormat1.isCommentMarkerSet());
+assertEquals('0', cSVFormat1.getDelimiter());
+assertFalse(cSVFormat1.getIgnoreHeaderCase());
+assertFalse(cSVFormat1.getAllowMissingColumnNames());
+assertNull(cSVFormat1.getEscapeCharacter());
+assertFalse(cSVFormat1.isNullStringSet());
+assertFalse(cSVFormat1.isEscapeCharacterSet());
+assertNull(cSVFormat1.getQuoteMode());
+assertEquals("\r\n", cSVFormat1.getRecordSeparator());
+assertNull(cSVFormat1.getCommentMarker());
+assertTrue(cSVFormat1.getIgnoreSurroundingSpaces());
+assertEquals('\"', (char)cSVFormat1.getQuoteCharacter());
+assertTrue(cSVFormat1.isQuoteCharacterSet());
+assertTrue(cSVFormat1.getIgnoreEmptyLines());
+assertFalse(cSVFormat1.getSkipHeaderRecord());
+assertFalse(fileDescriptor0.valid());
+assertNotNull(cSVPrinter0);
+
+SQLSyntaxErrorException sQLSyntaxErrorException0 = new SQLSyntaxErrorException();
+assertEquals(0, sQLSyntaxErrorException0.getErrorCode());
+assertNull(sQLSyntaxErrorException0.getMessage());
+assertNull(sQLSyntaxErrorException0.getSQLState());
+assertEquals("java.sql.SQLSyntaxErrorException", sQLSyntaxErrorException0.toString());
+assertNotNull(sQLSyntaxErrorException0);
+
+cSVPrinter0.print(sQLSyntaxErrorException0);
+
+[MASTER] 20:38:06.821 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class java.lang.SecurityException: Security manager blocks ("java.lang.RuntimePermission" "writeFileDescriptor")
+java.lang.Thread.getStackTrace(Thread.java:1559)
+org.evosuite.runtime.sandbox.MSecurityManager.checkPermission(MSecurityManager.java:433)
+java.lang.SecurityManager.checkWrite(SecurityManager.java:954)
+java.io.FileOutputStream.<init>(FileOutputStream.java:245)
+java.io.FileWriter.<init>(FileWriter.java:116)
+org.evosuite.runtime.mock.java.io.MockFileWriter.<init>(MockFileWriter.java:79)
+org.apache.commons.csv.CSVPrinter_98_tmp__ESTest.test0(CSVPrinter_98_tmp__ESTest.java:48)
+sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+java.lang.reflect.Method.invoke(Method.java:498)
+org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)
+org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56)
+org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+org.junit.internal.runners.statements.FailOnTimeout$CallableStatement.call(FailOnTimeout.java:288)
+org.junit.internal.runners.statements.FailOnTimeout$CallableStatement.call(FailOnTimeout.java:282)
+java.util.concurrent.FutureTask.run(FutureTask.java:266)
+java.lang.Thread.run(Thread.java:748)
+
+[MASTER] 20:38:06.821 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ CSVFormat cSVFormat0 = CSVFormat.TDF;
+assertFalse(cSVFormat0.getAllowMissingColumnNames());
+assertEquals('\"', (char)cSVFormat0.getQuoteCharacter());
+assertTrue(cSVFormat0.getIgnoreEmptyLines());
+assertFalse(cSVFormat0.getSkipHeaderRecord());
+assertFalse(cSVFormat0.isEscapeCharacterSet());
+assertTrue(cSVFormat0.isQuoteCharacterSet());
+assertFalse(cSVFormat0.isCommentMarkerSet());
+assertTrue(cSVFormat0.getIgnoreSurroundingSpaces());
+assertFalse(cSVFormat0.getIgnoreHeaderCase());
+assertNull(cSVFormat0.getNullString());
+assertEquals("\r\n", cSVFormat0.getRecordSeparator());
+assertNull(cSVFormat0.getCommentMarker());
+assertNull(cSVFormat0.getQuoteMode());
+assertFalse(cSVFormat0.isNullStringSet());
+assertNull(cSVFormat0.getEscapeCharacter());
+assertEquals('\t', cSVFormat0.getDelimiter());
+assertNotNull(cSVFormat0);
+
+FileDescriptor fileDescriptor0 = new FileDescriptor();
+assertFalse(fileDescriptor0.valid());
+assertNotNull(fileDescriptor0);
+
+MockFileWriter mockFileWriter0 = new MockFileWriter(fileDescriptor0);
+assertNotNull(mockFileWriter0);
+
+MockPrintWriter mockPrintWriter0 = new MockPrintWriter(mockFileWriter0, false);
+assertNotNull(mockPrintWriter0);
+
+CSVPrinter cSVPrinter0 = cSVFormat0.print(mockPrintWriter0);
+assertFalse(cSVFormat0.getAllowMissingColumnNames());
+assertEquals('\"', (char)cSVFormat0.getQuoteCharacter());
+assertTrue(cSVFormat0.getIgnoreEmptyLines());
+assertFalse(cSVFormat0.getSkipHeaderRecord());
+assertFalse(cSVFormat0.isEscapeCharacterSet());
+assertTrue(cSVFormat0.isQuoteCharacterSet());
+assertFalse(cSVFormat0.isCommentMarkerSet());
+assertTrue(cSVFormat0.getIgnoreSurroundingSpaces());
+assertFalse(cSVFormat0.getIgnoreHeaderCase());
+assertNull(cSVFormat0.getNullString());
+assertEquals("\r\n", cSVFormat0.getRecordSeparator());
+assertNull(cSVFormat0.getCommentMarker());
+assertNull(cSVFormat0.getQuoteMode());
+assertFalse(cSVFormat0.isNullStringSet());
+assertNull(cSVFormat0.getEscapeCharacter());
+assertEquals('\t', cSVFormat0.getDelimiter());
+assertFalse(fileDescriptor0.valid());
+assertNotNull(cSVPrinter0);
+
+cSVPrinter0.println();
+
+[MASTER] 20:38:10.159 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class java.lang.SecurityException: Security manager blocks ("java.lang.RuntimePermission" "writeFileDescriptor")
+java.lang.Thread.getStackTrace(Thread.java:1559)
+org.evosuite.runtime.sandbox.MSecurityManager.checkPermission(MSecurityManager.java:433)
+java.lang.SecurityManager.checkWrite(SecurityManager.java:954)
+java.io.FileOutputStream.<init>(FileOutputStream.java:245)
+java.io.FileWriter.<init>(FileWriter.java:116)
+org.evosuite.runtime.mock.java.io.MockFileWriter.<init>(MockFileWriter.java:79)
+org.apache.commons.csv.CSVPrinter_101_tmp__ESTest.test0(CSVPrinter_101_tmp__ESTest.java:49)
+sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+java.lang.reflect.Method.invoke(Method.java:498)
+org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)
+org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56)
+org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+org.junit.internal.runners.statements.FailOnTimeout$CallableStatement.call(FailOnTimeout.java:288)
+org.junit.internal.runners.statements.FailOnTimeout$CallableStatement.call(FailOnTimeout.java:282)
+java.util.concurrent.FutureTask.run(FutureTask.java:266)
+java.lang.Thread.run(Thread.java:748)
+
+[MASTER] 20:38:10.160 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ CSVFormat cSVFormat0 = CSVFormat.EXCEL;
+assertFalse(cSVFormat0.getSkipHeaderRecord());
+assertEquals(',', cSVFormat0.getDelimiter());
+assertEquals("\r\n", cSVFormat0.getRecordSeparator());
+assertNull(cSVFormat0.getCommentMarker());
+assertFalse(cSVFormat0.getIgnoreHeaderCase());
+assertTrue(cSVFormat0.isQuoteCharacterSet());
+assertFalse(cSVFormat0.isEscapeCharacterSet());
+assertFalse(cSVFormat0.isCommentMarkerSet());
+assertFalse(cSVFormat0.getIgnoreEmptyLines());
+assertEquals('\"', (char)cSVFormat0.getQuoteCharacter());
+assertNull(cSVFormat0.getQuoteMode());
+assertNull(cSVFormat0.getEscapeCharacter());
+assertNull(cSVFormat0.getNullString());
+assertTrue(cSVFormat0.getAllowMissingColumnNames());
+assertFalse(cSVFormat0.isNullStringSet());
+assertFalse(cSVFormat0.getIgnoreSurroundingSpaces());
+assertNotNull(cSVFormat0);
+
+FileDescriptor fileDescriptor0 = new FileDescriptor();
+assertFalse(fileDescriptor0.valid());
+assertNotNull(fileDescriptor0);
+
+MockFileWriter mockFileWriter0 = new MockFileWriter(fileDescriptor0);
+assertNotNull(mockFileWriter0);
+
+RowSetMetaDataImpl rowSetMetaDataImpl0 = new RowSetMetaDataImpl();
+assertNotNull(rowSetMetaDataImpl0);
+
+CSVFormat cSVFormat1 = cSVFormat0.withHeader((ResultSetMetaData) rowSetMetaDataImpl0);
+assertFalse(cSVFormat1.equals((Object)cSVFormat0));
+assertFalse(cSVFormat0.getSkipHeaderRecord());
+assertEquals(',', cSVFormat0.getDelimiter());
+assertEquals("\r\n", cSVFormat0.getRecordSeparator());
+assertNull(cSVFormat0.getCommentMarker());
+assertFalse(cSVFormat0.getIgnoreHeaderCase());
+assertTrue(cSVFormat0.isQuoteCharacterSet());
+assertFalse(cSVFormat0.isEscapeCharacterSet());
+assertFalse(cSVFormat0.isCommentMarkerSet());
+assertFalse(cSVFormat0.getIgnoreEmptyLines());
+assertEquals('\"', (char)cSVFormat0.getQuoteCharacter());
+assertNull(cSVFormat0.getQuoteMode());
+assertNull(cSVFormat0.getEscapeCharacter());
+assertNull(cSVFormat0.getNullString());
+assertTrue(cSVFormat0.getAllowMissingColumnNames());
+assertFalse(cSVFormat0.isNullStringSet());
+assertFalse(cSVFormat0.getIgnoreSurroundingSpaces());
+assertFalse(cSVFormat1.getIgnoreEmptyLines());
+assertFalse(cSVFormat1.getIgnoreHeaderCase());
+assertFalse(cSVFormat1.isCommentMarkerSet());
+assertEquals("\r\n", cSVFormat1.getRecordSeparator());
+assertNull(cSVFormat1.getCommentMarker());
+assertFalse(cSVFormat1.getSkipHeaderRecord());
+assertFalse(cSVFormat1.isEscapeCharacterSet());
+assertTrue(cSVFormat1.isQuoteCharacterSet());
+assertEquals('\"', (char)cSVFormat1.getQuoteCharacter());
+assertNull(cSVFormat1.getQuoteMode());
+assertEquals(',', cSVFormat1.getDelimiter());
+assertTrue(cSVFormat1.getAllowMissingColumnNames());
+assertNull(cSVFormat1.getEscapeCharacter());
+assertNull(cSVFormat1.getNullString());
+assertFalse(cSVFormat1.isNullStringSet());
+assertFalse(cSVFormat1.getIgnoreSurroundingSpaces());
+assertNotSame(cSVFormat0, cSVFormat1);
+assertNotSame(cSVFormat1, cSVFormat0);
+assertNotNull(cSVFormat1);
+
+CSVPrinter cSVPrinter0 = new CSVPrinter(mockFileWriter0, cSVFormat1);
+
+* Permissions denied during test execution: 
+  - java.lang.RuntimePermission: 
+         writeFileDescriptor: 3
+* Writing tests to file
+* Writing JUnit test case 'CSVPrinter_ESTest' to results/Csv-13/org.apache.commons.csv.CSVPrinter/BBC-F0-50/tests/21
+* Done!
+
+* Computation finished

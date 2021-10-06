@@ -1,0 +1,98 @@
+* EvoSuite 1.1.1-SNAPSHOT
+* Configuration: default
+* Going to generate test cases for class: com.fasterxml.jackson.databind.deser.CreatorProperty
+* Starting Client-0
+* Connecting to master process on port 8580
+* Analyzing classpath: 
+  - subjects/buggy-versions/JacksonDatabind-111/target/classes
+  - defects4j/framework/projects/JacksonDatabind/lib/com/fasterxml/jackson/core/jackson-annotations/2.9.0/jackson-annotations-2.9.0.jar
+  - defects4j/framework/projects/JacksonDatabind/lib/com/fasterxml/jackson/core/jackson-core/2.9.9/jackson-core-2.9.9.jar
+* Finished analyzing classpath
+* Generating tests for class com.fasterxml.jackson.databind.deser.CreatorProperty
+* Test criteria:
+  - Line Coverage
+  - Branch Coverage
+  - Exception
+  - Mutation testing (weak)
+  - Method-Output Coverage
+  - Top-Level Method Coverage
+  - No-Exception Top-Level Method Coverage
+  - Context Branch Coverage
+* Total number of test goals for DYNAMOSA: 308
+* Using seed 2934806639
+* Starting evolution
+* Initial Number of Goals in DynaMOSA = 215 / 308
+[MASTER] 03:11:27.788 [logback-1] ERROR TestCluster - Failed to check cache for java.util.Stack<E> : Type points to itself
+[MASTER] 03:11:27.789 [logback-1] ERROR TestCluster - Failed to check cache for java.util.LinkedHashMap<K, V> : Type points to itself
+[MASTER] 03:11:30.685 [logback-1] ERROR TestCluster - Failed to check cache for com.fasterxml.jackson.databind.JsonDeserializer<T> : Type points to itself
+[MASTER] 03:11:38.677 [logback-1] ERROR TestCluster - Failed to check cache for java.util.Enumeration<E> : Type points to itself
+[MASTER] 03:11:39.747 [logback-1] ERROR TestCluster - Failed to check cache for com.fasterxml.jackson.annotation.ObjectIdGenerator<T> : Type points to itself
+[MASTER] 03:11:59.686 [logback-1] ERROR TestCluster - Failed to check cache for com.fasterxml.jackson.databind.JsonSerializer<T> : Type points to itself
+[MASTER] 03:12:04.326 [logback-1] ERROR TestCluster - Failed to check cache for java.lang.Class<T> : Type points to itself
+[MASTER] 03:13:14.429 [logback-1] ERROR TestCluster - Failed to check cache for java.util.Comparator<T> : Type points to itself
+[MASTER] 03:13:58.448 [logback-2] WARN  TestChromosome - Functional mock problem: org.evosuite.ga.ConstructionFailedException: Failed to add constructor for com.fasterxml.jackson.databind.ser.BeanSerializerBuilder due to org.evosuite.ga.ConstructionFailedException: Failed to add constructor for com.fasterxml.jackson.databind.DeserializationConfig due to org.evosuite.ga.ConstructionFailedException: Failed to add constructor for com.fasterxml.jackson.databind.cfg.BaseSettings due to org.evosuite.ga.ConstructionFailedException: Invalid generic instance
+[MASTER] 03:13:59.967 [logback-2] WARN  TestChromosome - Functional mock problem: org.evosuite.ga.ConstructionFailedException: Invalid generic instance
+[MASTER] 03:14:03.012 [logback-1] ERROR TestCluster - Failed to check cache for java.util.List<E> : Type points to itself
+[MASTER] 03:14:30.505 [logback-2] WARN  TestChromosome - Functional mock problem: org.evosuite.ga.ConstructionFailedException: Failed to add constructor for com.fasterxml.jackson.databind.ser.BeanSerializerBuilder due to org.evosuite.ga.ConstructionFailedException: Have no generator for class com.fasterxml.jackson.databind.introspect.BasicClassIntrospector canUseFunctionalMocks=false, canBeMocked: true
+[MASTER] 03:18:02.025 [logback-2] WARN  TestChromosome - Functional mock problem: org.evosuite.ga.ConstructionFailedException: Failed to add constructor for com.fasterxml.jackson.databind.ser.BeanSerializerBuilder due to org.evosuite.ga.ConstructionFailedException: Max recursion depth reached
+Number of times BBC is called in total: 0
+* Search finished after 601s and 2762 generations, 787629 statements, best individual has fitness: 44.0
+* Minimizing test suite
+* Going to analyze the coverage criteria
+* Coverage analysis for criterion LINE
+* Coverage of criterion LINE: 92%
+* Total number of goals: 63
+* Number of covered goals: 58
+* Coverage analysis for criterion BRANCH
+* Coverage of criterion BRANCH: 97%
+* Total number of goals: 29
+* Number of covered goals: 28
+* Coverage analysis for criterion EXCEPTION
+* Coverage of criterion EXCEPTION: 100%
+* Total number of goals: 15
+* Number of covered goals: 15
+* Coverage analysis for criterion WEAKMUTATION
+* Coverage of criterion WEAKMUTATION: 99%
+* Total number of goals: 77
+* Number of covered goals: 76
+* Coverage analysis for criterion OUTPUT
+* Coverage of criterion OUTPUT: 76%
+* Total number of goals: 68
+* Number of covered goals: 52
+* Coverage analysis for criterion METHOD
+* Coverage of criterion METHOD: 100%
+* Total number of goals: 21
+* Number of covered goals: 21
+* Coverage analysis for criterion METHODNOEXCEPTION
+* Coverage of criterion METHODNOEXCEPTION: 76%
+* Total number of goals: 21
+* Number of covered goals: 16
+* Coverage analysis for criterion CBRANCH
+* Coverage of criterion CBRANCH: 97%
+* Total number of goals: 29
+* Number of covered goals: 28
+* Generated 49 tests with total length 401
+* Resulting test suite's coverage: 85% (average coverage for all fitness functions)
+* Generating assertions
+* Resulting test suite's mutation score: 47%
+* Compiling and checking tests
+[MASTER] 03:23:31.283 [logback-2] WARN  JUnitAnalyzer - Found unstable test named test0 -> class java.lang.StackOverflowError: null
+[MASTER] 03:23:31.284 [logback-2] WARN  JUnitAnalyzer - Failing test:
+ Class<Object> class0 = Object.class;
+SimpleType simpleType0 = SimpleType.constructUnsafe(class0);
+AnnotationMap annotationMap0 = new AnnotationMap();
+ValueInstantiator.Base valueInstantiator_Base0 = new ValueInstantiator.Base(class0);
+PropertyMetadata propertyMetadata0 = PropertyMetadata.STD_REQUIRED_OR_OPTIONAL;
+CreatorProperty creatorProperty0 = new CreatorProperty((PropertyName) null, simpleType0, (PropertyName) null, (TypeDeserializer) null, annotationMap0, (AnnotatedParameter) null, (-18), valueInstantiator_Base0, propertyMetadata0);
+creatorProperty0.setFallbackSetter(creatorProperty0);
+creatorProperty0.set(simpleType0, valueInstantiator_Base0);
+
+[MASTER] 03:23:37.749 [logback-1] ERROR JUnitAnalyzer - Ran out of time while checking tests
+* Permissions denied during test execution: 
+  - java.lang.RuntimePermission: 
+         writeFileDescriptor: 5
+* Writing tests to file
+* Writing JUnit test case 'CreatorProperty_ESTest' to results/JacksonDatabind-111/com.fasterxml.jackson.databind.deser.CreatorProperty/default/tests/30
+* Done!
+
+* Computation finished

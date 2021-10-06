@@ -1,0 +1,97 @@
+* EvoSuite 1.1.1-SNAPSHOT
+* Configuration: BBC-F0-50
+* Going to generate test cases for class: com.google.javascript.jscomp.ScopedAliases
+* Starting Client-0
+* Connecting to master process on port 7643
+* Analyzing classpath: 
+  - subjects/buggy-versions/Closure-110/build/classes
+  - subjects/buggy-versions/Closure-110/lib/args4j.jar
+  - subjects/buggy-versions/Closure-110/lib/guava.jar
+  - subjects/buggy-versions/Closure-110/lib/json.jar
+  - subjects/buggy-versions/Closure-110/lib/jsr305.jar
+  - subjects/buggy-versions/Closure-110/lib/protobuf-java.jar
+  - subjects/buggy-versions/Closure-110/build/lib/rhino.jar
+  - subjects/buggy-versions/Closure-110/lib/ant.jar
+* Finished analyzing classpath
+* Generating tests for class com.google.javascript.jscomp.ScopedAliases
+* Test criteria:
+  - Line Coverage
+  - Branch Coverage
+  - Exception
+  - Mutation testing (weak)
+  - Method-Output Coverage
+  - Top-Level Method Coverage
+  - No-Exception Top-Level Method Coverage
+  - Context Branch Coverage
+* Total number of test goals for DYNAMOSA: 893
+* Using seed 1556007532
+* Starting evolution
+bbc usage percentage is: 50%
+* Initial Number of Goals in DynaMOSA = 246 / 893
+[MASTER] 17:40:42.533 [logback-2] ERROR TestCluster - Failed to check cache for java.util.Comparator<T> : Type points to itself
+[MASTER] 17:41:10.612 [logback-2] ERROR TestCluster - Failed to check cache for java.util.Enumeration<E> : Type points to itself
+[MASTER] 17:41:13.091 [logback-2] ERROR TestCluster - Failed to check cache for java.util.Iterator<E> : Type points to itself
+* Search finished after 601s and 587 generations, 243646 statements, best individual has fitness: 745.0
+* Minimizing test suite
+* Going to analyze the coverage criteria
+* Coverage analysis for criterion LINE
+* Coverage of criterion LINE: 20%
+* Total number of goals: 220
+* Number of covered goals: 44
+* Coverage analysis for criterion BRANCH
+* Coverage of criterion BRANCH: 19%
+* Total number of goals: 161
+* Number of covered goals: 30
+* Coverage analysis for criterion EXCEPTION
+* Coverage of criterion EXCEPTION: 75%
+* Total number of goals: 8
+* Number of covered goals: 6
+* Coverage analysis for criterion WEAKMUTATION
+* Coverage of criterion WEAKMUTATION: 14%
+* Total number of goals: 323
+* Number of covered goals: 44
+* Coverage analysis for criterion OUTPUT
+* Coverage of criterion OUTPUT: 100% (no goals)
+* Coverage analysis for criterion METHOD
+* Coverage of criterion METHOD: 21%
+* Total number of goals: 14
+* Number of covered goals: 3
+* Coverage analysis for criterion METHODNOEXCEPTION
+* Coverage of criterion METHODNOEXCEPTION: 21%
+* Total number of goals: 14
+* Number of covered goals: 3
+* Coverage analysis for criterion CBRANCH
+* Coverage of criterion CBRANCH: 19%
+* Total number of goals: 161
+* Number of covered goals: 30
+* Generated 9 tests with total length 58
+* Resulting test suite's coverage: 34% (average coverage for all fitness functions)
+* Generating assertions
+* Resulting test suite's mutation score: 7%
+* Compiling and checking tests
+[MASTER] 17:51:14.371 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 17:51:21.558 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class java.lang.StackOverflowError: null
+[MASTER] 17:51:21.559 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ Compiler compiler0 = new Compiler();
+Node node0 = Normalize.parseAndNormalizeTestCode(compiler0, "JSC_GOOG_SCOPE_HAS_BAD_PARAMETERS");
+Node node1 = new Node(2, node0, node0, node0);
+CompilerOptions.AliasTransformationHandler compilerOptions_AliasTransformationHandler0 = CompilerOptions.NULL_ALIAS_TRANSFORMATION_HANDLER;
+node0.addChildToBack(node1);
+ScopedAliases scopedAliases0 = new ScopedAliases(compiler0, (PreprocessorSymbolTable) null, compilerOptions_AliasTransformationHandler0);
+scopedAliases0.hotSwapScript(node1, node0);
+
+[MASTER] 17:51:27.687 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class java.lang.StackOverflowError: null
+[MASTER] 17:51:27.689 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ Compiler compiler0 = new Compiler();
+Node node0 = Normalize.parseAndNormalizeTestCode(compiler0, "JSC_GOOG_SCOPE_HAS_BAD_PARAMETERS");
+Node node1 = new Node(2, node0, node0, node0);
+CompilerOptions.AliasTransformationHandler compilerOptions_AliasTransformationHandler0 = CompilerOptions.NULL_ALIAS_TRANSFORMATION_HANDLER;
+node0.addChildToBack(node1);
+ScopedAliases scopedAliases0 = new ScopedAliases(compiler0, (PreprocessorSymbolTable) null, compilerOptions_AliasTransformationHandler0);
+scopedAliases0.process(node0, node0);
+
+* Writing tests to file
+* Writing JUnit test case 'ScopedAliases_ESTest' to results/Closure-110/com.google.javascript.jscomp.ScopedAliases/BBC-F0-50/tests/18
+* Done!
+
+* Computation finished

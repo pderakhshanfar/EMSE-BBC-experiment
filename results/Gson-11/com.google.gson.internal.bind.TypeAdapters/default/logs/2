@@ -1,0 +1,93 @@
+* EvoSuite 1.1.1-SNAPSHOT
+* Configuration: default
+* Going to generate test cases for class: com.google.gson.internal.bind.TypeAdapters
+* Starting Client-0
+* Connecting to master process on port 2538
+* Analyzing classpath: 
+  - subjects/buggy-versions/Gson-11/target/classes
+* Finished analyzing classpath
+* Generating tests for class com.google.gson.internal.bind.TypeAdapters
+* Test criteria:
+  - Line Coverage
+  - Branch Coverage
+  - Exception
+  - Mutation testing (weak)
+  - Method-Output Coverage
+  - Top-Level Method Coverage
+  - No-Exception Top-Level Method Coverage
+  - Context Branch Coverage
+* Total number of test goals for DYNAMOSA: 1475
+* Using seed 3254645830
+* Starting evolution
+* Initial Number of Goals in DynaMOSA = 537 / 1475
+[MASTER] 00:47:36.074 [logback-2] ERROR TestCluster - Failed to check cache for com.google.gson.reflect.TypeToken<T> : Type points to itself
+[MASTER] 00:47:36.862 [logback-1] WARN  TestChromosome - Functional mock problem: org.evosuite.ga.ConstructionFailedException: Have no generator for class com.google.gson.internal.bind.ReflectiveTypeAdapterFactory$BoundField canUseFunctionalMocks=true, canBeMocked: false
+[MASTER] 00:47:51.367 [logback-1] WARN  TestChromosome - Functional mock problem: org.evosuite.ga.ConstructionFailedException: No generators of type java.lang.Class<org.evosuite.runtime.mock.java.util.MockCalendar>
+[MASTER] 00:47:55.050 [logback-1] WARN  CoverageArchive - A solution with a timeout/exception result has been added to the archive. The covered goal was com.google.gson.internal.bind.TypeAdapters$7.read(Lcom/google/gson/stream/JsonReader;)Ljava/lang/Boolean;: I19 Branch 16 IF_ACMPNE L157 - false
+[MASTER] 00:48:06.398 [logback-2] ERROR TestCluster - Failed to check cache for java.util.function.Function<T, R> : Type points to itself
+[MASTER] 00:48:32.444 [logback-2] ERROR TestCluster - Failed to check cache for java.time.temporal.TemporalQuery<R> : Type points to itself
+[MASTER] 00:49:05.608 [logback-1] WARN  TestChromosome - Functional mock problem: org.evosuite.ga.ConstructionFailedException: No generators of type java.lang.Class<java.net.InetAddress>
+[MASTER] 00:51:16.943 [logback-1] WARN  TestChromosome - Functional mock problem: org.evosuite.ga.ConstructionFailedException: Max recursion depth reached
+Number of times BBC is called in total: 0
+* Search finished after 602s and 470 generations, 212497 statements, best individual has fitness: 578.0
+* Minimizing test suite
+* Going to analyze the coverage criteria
+* Coverage analysis for criterion LINE
+* Coverage of criterion LINE: 64%
+* Total number of goals: 388
+* Number of covered goals: 249
+* Coverage analysis for criterion BRANCH
+* Coverage of criterion BRANCH: 56%
+* Total number of goals: 283
+* Number of covered goals: 158
+* Coverage analysis for criterion EXCEPTION
+* Coverage of criterion EXCEPTION: 100% (no goals)
+* Coverage analysis for criterion WEAKMUTATION
+* Coverage of criterion WEAKMUTATION: 64%
+* Total number of goals: 497
+* Number of covered goals: 319
+* Coverage analysis for criterion OUTPUT
+* Coverage of criterion OUTPUT: 50%
+* Total number of goals: 10
+* Number of covered goals: 5
+* Coverage analysis for criterion METHOD
+* Coverage of criterion METHOD: 71%
+* Total number of goals: 7
+* Number of covered goals: 5
+* Coverage analysis for criterion METHODNOEXCEPTION
+* Coverage of criterion METHODNOEXCEPTION: 71%
+* Total number of goals: 7
+* Number of covered goals: 5
+* Coverage analysis for criterion CBRANCH
+* Coverage of criterion CBRANCH: 56%
+* Total number of goals: 283
+* Number of covered goals: 158
+* Generated 81 tests with total length 325
+* Resulting test suite's coverage: 67% (average coverage for all fitness functions)
+* Generating assertions
+* Resulting test suite's mutation score: 29%
+* Compiling and checking tests
+[MASTER] 00:57:56.878 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class java.lang.AssertionError: expected:<{}> but was:<null>
+[MASTER] 00:57:56.878 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ Gson gson0 = new Gson();
+JsonObject jsonObject0 = new JsonObject();
+JsonSerializer<Object> jsonSerializer0 = (JsonSerializer<Object>) mock(JsonSerializer.class, new ViolatedAssumptionAnswer());
+JsonDeserializer<Object> jsonDeserializer0 = (JsonDeserializer<Object>) mock(JsonDeserializer.class, new ViolatedAssumptionAnswer());
+doReturn((Object) null).when(jsonDeserializer0).deserialize(any(com.google.gson.JsonElement.class) , any(java.lang.reflect.Type.class) , any(com.google.gson.JsonDeserializationContext.class));
+Class<Object> class0 = Object.class;
+TypeToken<Object> typeToken0 = TypeToken.get(class0);
+jsonObject0.addProperty("3u{jjvs(H[#o(S", "3u{jjvs(H[#o(S");
+Excluder excluder0 = new Excluder();
+TreeTypeAdapter<Object> treeTypeAdapter0 = new TreeTypeAdapter<Object>(jsonSerializer0, jsonDeserializer0, gson0, typeToken0, excluder0);
+Object object0 = treeTypeAdapter0.fromJsonTree(jsonObject0);
+assertEquals("{}", object0);
+
+
+* Permissions denied during test execution: 
+  - java.lang.RuntimePermission: 
+         writeFileDescriptor: 23
+* Writing tests to file
+* Writing JUnit test case 'TypeAdapters_ESTest' to results/Gson-11/com.google.gson.internal.bind.TypeAdapters/default/tests/2
+* Done!
+
+* Computation finished

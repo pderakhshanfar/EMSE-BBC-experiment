@@ -1,0 +1,113 @@
+* EvoSuite 1.1.1-SNAPSHOT
+* Configuration: BBC-F0-50
+* Going to generate test cases for class: com.fasterxml.jackson.databind.node.TreeTraversingParser
+* Starting Client-0
+* Connecting to master process on port 20865
+* Analyzing classpath: 
+  - subjects/buggy-versions/JacksonDatabind-106/target/classes
+  - defects4j/framework/projects/JacksonDatabind/lib/com/fasterxml/jackson/core/jackson-annotations/2.10.0-SNAPSHOT/jackson-annotations-2.10.0-20190519.085045-3.jar
+  - defects4j/framework/projects/JacksonDatabind/lib/com/fasterxml/jackson/core/jackson-core/2.10.0-SNAPSHOT/jackson-core-2.10.0-20190518.180547-60.jar
+* Finished analyzing classpath
+* Generating tests for class com.fasterxml.jackson.databind.node.TreeTraversingParser
+* Test criteria:
+  - Line Coverage
+  - Branch Coverage
+  - Exception
+  - Mutation testing (weak)
+  - Method-Output Coverage
+  - Top-Level Method Coverage
+  - No-Exception Top-Level Method Coverage
+  - Context Branch Coverage
+* Total number of test goals for DYNAMOSA: 699
+* Using seed 4113916309
+* Starting evolution
+bbc usage percentage is: 50%
+* Initial Number of Goals in DynaMOSA = 355 / 699
+[MASTER] 00:08:42.919 [logback-2] ERROR TestCluster - Failed to check cache for java.util.EnumSet<E> : Type points to itself
+[MASTER] 00:08:46.131 [logback-2] ERROR TestCluster - Failed to check cache for com.fasterxml.jackson.databind.JsonDeserializer<T> : Type points to itself
+[MASTER] 00:08:50.032 [logback-2] ERROR TestCluster - Failed to check cache for java.util.Map<K, V> : Type points to itself
+[MASTER] 00:08:50.269 [logback-2] ERROR TestCluster - Failed to check cache for java.util.Comparator<T> : Type points to itself
+[MASTER] 00:09:02.897 [logback-2] ERROR TestCluster - Failed to check cache for java.util.Enumeration<E> : Type points to itself
+[MASTER] 00:09:32.639 [logback-2] ERROR TestCluster - Failed to check cache for java.lang.Class<T> : Type points to itself
+[MASTER] 00:10:29.574 [logback-2] ERROR TestCluster - Failed to check cache for com.fasterxml.jackson.databind.JsonSerializer<T> : Type points to itself
+[MASTER] 00:10:44.615 [logback-2] ERROR TestCluster - Failed to check cache for java.util.function.BiFunction<T, U, R> : Type points to itself
+[MASTER] 00:11:22.279 [logback-2] ERROR TestCluster - Failed to check cache for com.fasterxml.jackson.annotation.ObjectIdGenerator<T> : Type points to itself
+[MASTER] 00:11:39.764 [logback-2] ERROR TestCluster - Failed to check cache for java.util.function.Function<T, R> : Type points to itself
+[MASTER] 00:15:04.090 [logback-1] WARN  TestChromosome - Functional mock problem: org.evosuite.ga.ConstructionFailedException: Invalid generic instance
+[MASTER] 00:15:04.108 [logback-1] WARN  TestChromosome - Functional mock problem: org.evosuite.ga.ConstructionFailedException: Failed to add constructor for com.fasterxml.jackson.databind.DeserializationConfig due to org.evosuite.ga.ConstructionFailedException: Failed to add constructor for com.fasterxml.jackson.databind.cfg.BaseSettings due to org.evosuite.ga.ConstructionFailedException: Invalid generic instance
+* Search finished after 601s and 3497 generations, 1073865 statements, best individual has fitness: 126.0
+* Minimizing test suite
+* Going to analyze the coverage criteria
+* Coverage analysis for criterion LINE
+* Coverage of criterion LINE: 95%
+* Total number of goals: 119
+* Number of covered goals: 113
+* Coverage analysis for criterion BRANCH
+* Coverage of criterion BRANCH: 92%
+* Total number of goals: 104
+* Number of covered goals: 96
+* Coverage analysis for criterion EXCEPTION
+* Coverage of criterion EXCEPTION: 100%
+* Total number of goals: 24
+* Number of covered goals: 24
+* Coverage analysis for criterion WEAKMUTATION
+* Coverage of criterion WEAKMUTATION: 92%
+* Total number of goals: 76
+* Number of covered goals: 70
+* Coverage analysis for criterion OUTPUT
+* Coverage of criterion OUTPUT: 67%
+* Total number of goals: 228
+* Number of covered goals: 153
+* Coverage analysis for criterion METHOD
+* Coverage of criterion METHOD: 100%
+* Total number of goals: 34
+* Number of covered goals: 34
+* Coverage analysis for criterion METHODNOEXCEPTION
+* Coverage of criterion METHODNOEXCEPTION: 97%
+* Total number of goals: 34
+* Number of covered goals: 33
+* Coverage analysis for criterion CBRANCH
+* Coverage of criterion CBRANCH: 92%
+* Total number of goals: 104
+* Number of covered goals: 96
+* Generated 121 tests with total length 528
+* Resulting test suite's coverage: 86% (average coverage for all fitness functions)
+* Generating assertions
+* Resulting test suite's mutation score: 63%
+* Compiling and checking tests
+[MASTER] 00:18:52.205 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 00:19:29.064 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class java.lang.SecurityException: Security manager blocks ("java.lang.RuntimePermission" "writeFileDescriptor")
+java.lang.Thread.getStackTrace(Thread.java:1559)
+org.evosuite.runtime.sandbox.MSecurityManager.checkPermission(MSecurityManager.java:433)
+java.lang.SecurityManager.checkWrite(SecurityManager.java:954)
+java.io.FileOutputStream.<init>(FileOutputStream.java:245)
+org.evosuite.runtime.mock.java.io.MockFileOutputStream.<init>(MockFileOutputStream.java:114)
+com.fasterxml.jackson.databind.node.TreeTraversingParser_165_tmp__ESTest.test0(TreeTraversingParser_165_tmp__ESTest.java:30)
+sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+java.lang.reflect.Method.invoke(Method.java:498)
+org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)
+org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56)
+org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+org.junit.internal.runners.statements.FailOnTimeout$CallableStatement.call(FailOnTimeout.java:288)
+org.junit.internal.runners.statements.FailOnTimeout$CallableStatement.call(FailOnTimeout.java:282)
+java.util.concurrent.FutureTask.run(FutureTask.java:266)
+java.lang.Thread.run(Thread.java:748)
+
+[MASTER] 00:19:29.065 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ BinaryNode binaryNode0 = BinaryNode.EMPTY_BINARY_NODE;
+TreeTraversingParser treeTraversingParser0 = new TreeTraversingParser(binaryNode0);
+FileDescriptor fileDescriptor0 = new FileDescriptor();
+MockFileOutputStream mockFileOutputStream0 = new MockFileOutputStream(fileDescriptor0);
+treeTraversingParser0.readBinaryValue((Base64Variant) null, (OutputStream) mockFileOutputStream0);
+
+* Permissions denied during test execution: 
+  - java.lang.RuntimePermission: 
+         writeFileDescriptor: 1
+* Writing tests to file
+* Writing JUnit test case 'TreeTraversingParser_ESTest' to results/JacksonDatabind-106/com.fasterxml.jackson.databind.node.TreeTraversingParser/BBC-F0-50/tests/20
+* Done!
+
+* Computation finished

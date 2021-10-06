@@ -1,0 +1,199 @@
+* EvoSuite 1.1.1-SNAPSHOT
+* Configuration: BBC-F0-50
+* Going to generate test cases for class: com.google.javascript.jscomp.NameAnalyzer
+* Starting Client-0
+* Connecting to master process on port 4530
+* Analyzing classpath: 
+  - subjects/buggy-versions/Closure-114/build/classes
+  - subjects/buggy-versions/Closure-114/lib/args4j.jar
+  - subjects/buggy-versions/Closure-114/lib/guava.jar
+  - subjects/buggy-versions/Closure-114/lib/json.jar
+  - subjects/buggy-versions/Closure-114/lib/jsr305.jar
+  - subjects/buggy-versions/Closure-114/lib/protobuf-java.jar
+  - subjects/buggy-versions/Closure-114/build/lib/rhino.jar
+  - subjects/buggy-versions/Closure-114/lib/ant.jar
+* Finished analyzing classpath
+* Generating tests for class com.google.javascript.jscomp.NameAnalyzer
+* Test criteria:
+  - Line Coverage
+  - Branch Coverage
+  - Exception
+  - Mutation testing (weak)
+  - Method-Output Coverage
+  - Top-Level Method Coverage
+  - No-Exception Top-Level Method Coverage
+  - Context Branch Coverage
+* Total number of test goals for DYNAMOSA: 2352
+* Using seed 856187882
+* Starting evolution
+bbc usage percentage is: 50%
+* Initial Number of Goals in DynaMOSA = 531 / 2352
+[MASTER] 18:04:55.363 [logback-2] ERROR TestCluster - Failed to check cache for java.util.AbstractMap<K, V>.SimpleEntry<K, V> : Type points to itself
+[MASTER] 18:04:55.363 [logback-2] ERROR TestCluster - Failed to check cache for java.util.AbstractMap<K, V>.SimpleImmutableEntry<K, V> : Type points to itself
+[MASTER] 18:07:28.428 [logback-2] ERROR TestCluster - Failed to check cache for java.util.Enumeration<E> : Type points to itself
+[MASTER] 18:07:35.142 [logback-2] ERROR TestCluster - Failed to check cache for java.util.Iterator<E> : Type points to itself
+[MASTER] 18:13:27.823 [logback-2] ERROR TestCluster - Failed to check cache for java.util.Comparator<T> : Type points to itself
+* Search finished after 602s and 445 generations, 187614 statements, best individual has fitness: 1482.0
+* Minimizing test suite
+* Going to analyze the coverage criteria
+* Coverage analysis for criterion LINE
+* Coverage of criterion LINE: 41%
+* Total number of goals: 685
+* Number of covered goals: 283
+* Coverage analysis for criterion BRANCH
+* Coverage of criterion BRANCH: 34%
+* Total number of goals: 561
+* Number of covered goals: 193
+* Coverage analysis for criterion EXCEPTION
+* Coverage of criterion EXCEPTION: 100%
+* Total number of goals: 3
+* Number of covered goals: 3
+* Coverage analysis for criterion WEAKMUTATION
+* Coverage of criterion WEAKMUTATION: 39%
+* Total number of goals: 506
+* Number of covered goals: 199
+* Coverage analysis for criterion OUTPUT
+* Coverage of criterion OUTPUT: 33%
+* Total number of goals: 3
+* Number of covered goals: 1
+* Coverage analysis for criterion METHOD
+* Coverage of criterion METHOD: 22%
+* Total number of goals: 18
+* Number of covered goals: 4
+* Coverage analysis for criterion METHODNOEXCEPTION
+* Coverage of criterion METHODNOEXCEPTION: 22%
+* Total number of goals: 18
+* Number of covered goals: 4
+* Coverage analysis for criterion CBRANCH
+* Coverage of criterion CBRANCH: 34%
+* Total number of goals: 561
+* Number of covered goals: 193
+* Generated 21 tests with total length 112
+* Resulting test suite's coverage: 35% (average coverage for all fitness functions)
+* Generating assertions
+* Resulting test suite's mutation score: 11%
+* Compiling and checking tests
+[MASTER] 18:15:03.970 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 18:15:14.078 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class java.lang.AssertionError: Expecting exception: RuntimeException
+[MASTER] 18:15:14.079 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ Compiler compiler0 = new Compiler();
+Node node0 = compiler0.parseTestCode("L5ed|");
+Node node1 = new Node(86, node0, node0, 40, 52);
+Node node2 = new Node(4, node1, node1, 1, 16);
+NameAnalyzer nameAnalyzer0 = new NameAnalyzer(compiler0, true);
+nameAnalyzer0.process(node1, node2);
+
+[MASTER] 18:15:26.478 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test18 -> class org.evosuite.runtime.mock.java.lang.MockIllegalArgumentException: Multiple entries with same key: author=NOT_IMPLEMENTED and author=AUTHOR
+[MASTER] 18:15:26.478 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ Compiler compiler0 = new Compiler();
+Node node0 = compiler0.parseSyntheticCode("window", "window");
+Node node1 = new Node(86, node0, node0, 1, 52);
+Node node2 = new Node(86, node1, node1, 40, 52);
+Node node3 = new Node(50, node2, node2, (-1961), (-1792273232));
+NameAnalyzer nameAnalyzer0 = new NameAnalyzer(compiler0, false);
+nameAnalyzer0.process(node0, node1);
+assertFalse(node1.isThis());
+
+
+[MASTER] 18:15:26.478 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test19 -> class org.evosuite.runtime.mock.java.lang.MockIllegalArgumentException: Multiple entries with same key: author=NOT_IMPLEMENTED and author=AUTHOR
+[MASTER] 18:15:26.479 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ ByteArrayOutputStream byteArrayOutputStream0 = new ByteArrayOutputStream(0);
+BufferedOutputStream bufferedOutputStream0 = new BufferedOutputStream(byteArrayOutputStream0);
+MockPrintStream mockPrintStream0 = new MockPrintStream(bufferedOutputStream0);
+Compiler compiler0 = new Compiler(mockPrintStream0);
+NameAnalyzer nameAnalyzer0 = new NameAnalyzer(compiler0, true);
+nameAnalyzer0.removeUnreferenced();
+
+[MASTER] 18:15:26.479 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test01 -> class org.evosuite.runtime.mock.java.lang.MockIllegalArgumentException: Multiple entries with same key: author=NOT_IMPLEMENTED and author=AUTHOR
+[MASTER] 18:15:26.479 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ Compiler compiler0 = new Compiler();
+Node node0 = compiler0.parseSyntheticCode("comgoogle.javascript.jscomp.NameAnal=zer$FindReYerences$NodeAccumulator", "comgoogle.javascript.jscomp.NameAnal=zer$FindReYerences$NodeAccumulator");
+NameAnalyzer nameAnalyzer0 = new NameAnalyzer(compiler0, false);
+nameAnalyzer0.process(node0, node0);
+assertFalse(node0.isInstanceOf());
+
+
+[MASTER] 18:15:26.479 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test00 -> class org.evosuite.runtime.mock.java.lang.MockIllegalArgumentException: Multiple entries with same key: author=NOT_IMPLEMENTED and author=AUTHOR
+[MASTER] 18:15:26.479 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ Compiler compiler0 = new Compiler();
+Node node0 = compiler0.parseSyntheticCode("this.", "this.");
+NameAnalyzer nameAnalyzer0 = new NameAnalyzer(compiler0, true);
+nameAnalyzer0.process(node0, node0);
+String string0 = nameAnalyzer0.getHtmlReport();
+assertEquals("<html><body><style type=\"text/css\">body, td, p {font-family: Arial; font-size: 83%} ul {margin-top:2px; margin-left:0px; padding-left:1em;} li {margin-top:3px; margin-left:24px; padding-left:0px;padding-bottom: 4px}</style>OVERALL STATS<ul><li>Total Names: 3</li>\n<li>Total Classes: 0</li>\n<li>Total Static Functions: 3</li>\n<li>Referenced Names: 3</li>\n<li>Referenced Classes: 0</li>\n<li>Referenced Functions: 3</li>\n</ul>ALL NAMES<ul>\n<li><a name=\"Function\">Function</a><ul></li></ul></li><li><a name=\"this\">this</a><ul><li>REFERENCED BY: </li></ul></li><li><a name=\"window\">window</a><ul><li>REFERS TO: <a href=\"#this\">this</a></li></ul></li></ul></body></html>", string0);
+
+
+[MASTER] 18:15:26.479 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test14 -> class org.evosuite.runtime.mock.java.lang.MockIllegalArgumentException: Multiple entries with same key: author=NOT_IMPLEMENTED and author=AUTHOR
+[MASTER] 18:15:26.479 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ Compiler compiler0 = new Compiler();
+Node node0 = compiler0.parseSyntheticCode("this.", "this.");
+Node node1 = new Node(38, node0, node0, (-1187), 29);
+Node node2 = new Node(0, node1, node1, 47, 878);
+NameAnalyzer nameAnalyzer0 = new NameAnalyzer(compiler0, false);
+nameAnalyzer0.process(node0, node1);
+
+[MASTER] 18:15:26.479 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test02 -> class org.evosuite.runtime.mock.java.lang.MockIllegalArgumentException: Multiple entries with same key: author=NOT_IMPLEMENTED and author=AUTHOR
+[MASTER] 18:15:26.479 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ Compiler compiler0 = new Compiler();
+Node node0 = compiler0.parseTestCode("t2ds*J,[");
+Node node1 = new Node(86, node0, node0, 40, 52);
+Node node2 = new Node(38, node1, node1, (-1097969732), 47);
+NameAnalyzer nameAnalyzer0 = new NameAnalyzer(compiler0, true);
+nameAnalyzer0.process(node1, node2);
+
+[MASTER] 18:15:26.479 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test05 -> class org.evosuite.runtime.mock.java.lang.MockIllegalArgumentException: Multiple entries with same key: author=NOT_IMPLEMENTED and author=AUTHOR
+[MASTER] 18:15:26.480 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ Compiler compiler0 = new Compiler();
+Node node0 = compiler0.parseTestCode("!");
+NameAnalyzer nameAnalyzer0 = new NameAnalyzer(compiler0, false);
+Node node1 = new Node(118, node0, node0, 54, 31);
+nameAnalyzer0.process(node0, node1);
+assertEquals(53, Node.INPUT_ID);
+
+
+[MASTER] 18:15:26.480 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test16 -> class org.evosuite.runtime.mock.java.lang.MockIllegalArgumentException: Multiple entries with same key: author=NOT_IMPLEMENTED and author=AUTHOR
+[MASTER] 18:15:26.480 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test15 -> class org.evosuite.runtime.mock.java.lang.MockIllegalArgumentException: Multiple entries with same key: author=NOT_IMPLEMENTED and author=AUTHOR
+[MASTER] 18:15:27.579 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test11 -> class org.evosuite.runtime.mock.java.lang.MockIllegalArgumentException: Multiple entries with same key: author=NOT_IMPLEMENTED and author=AUTHOR
+[MASTER] 18:15:27.579 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ Compiler compiler0 = new Compiler();
+Node node0 = compiler0.parseSyntheticCode("window", "window");
+Node node1 = new Node(86, node0, node0, 1, 52);
+Node node2 = new Node(86, node1, node1, 40, 52);
+NameAnalyzer nameAnalyzer0 = new NameAnalyzer(compiler0, false);
+nameAnalyzer0.process(node0, node1);
+
+[MASTER] 18:15:27.580 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test02 -> class org.evosuite.runtime.mock.java.lang.MockIllegalArgumentException: Multiple entries with same key: author=NOT_IMPLEMENTED and author=AUTHOR
+[MASTER] 18:15:27.580 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ Compiler compiler0 = new Compiler();
+Node node0 = compiler0.parseSyntheticCode("com.google.javascript.jscomp.NameAnalyzer$FindReferences$NodeAccumulator", "com.google.javascript.jscomp.NameAnalyzer$FindReferences$NodeAccumulator");
+NameAnalyzer nameAnalyzer0 = new NameAnalyzer(compiler0, false);
+nameAnalyzer0.process(node0, node0);
+assertEquals(0, node0.getChangeTime());
+
+
+[MASTER] 18:15:27.580 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test13 -> class org.evosuite.runtime.mock.java.lang.MockIllegalArgumentException: Multiple entries with same key: author=NOT_IMPLEMENTED and author=AUTHOR
+[MASTER] 18:15:27.580 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test03 -> class org.evosuite.runtime.mock.java.lang.MockIllegalArgumentException: Multiple entries with same key: author=NOT_IMPLEMENTED and author=AUTHOR
+[MASTER] 18:15:27.580 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ Compiler compiler0 = new Compiler();
+Node node0 = new Node(2, 2, 2);
+NameAnalyzer nameAnalyzer0 = new NameAnalyzer(compiler0, false);
+Node node1 = new Node(111, node0, node0, 43, 56);
+nameAnalyzer0.process(node1, node1);
+assertEquals(55, Node.INFERRED_FUNCTION);
+
+
+[MASTER] 18:15:27.580 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test09 -> class org.evosuite.runtime.mock.java.lang.MockIllegalArgumentException: Multiple entries with same key: author=NOT_IMPLEMENTED and author=AUTHOR
+[MASTER] 18:15:27.581 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ Compiler compiler0 = new Compiler();
+Node node0 = Node.newString("window");
+Node node1 = new Node(86, node0, node0, 1, 52);
+NameAnalyzer nameAnalyzer0 = new NameAnalyzer(compiler0, false);
+nameAnalyzer0.process(node0, node1);
+assertFalse(node0.isDelProp());
+
+
+* Writing tests to file
+* Writing JUnit test case 'NameAnalyzer_ESTest' to results/Closure-114/com.google.javascript.jscomp.NameAnalyzer/BBC-F0-50/tests/18
+* Done!
+
+* Computation finished

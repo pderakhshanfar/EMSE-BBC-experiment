@@ -1,0 +1,116 @@
+* EvoSuite 1.1.1-SNAPSHOT
+* Configuration: BBC-F0-50
+* Going to generate test cases for class: com.google.javascript.jscomp.NameAnalyzer
+* Starting Client-0
+* Connecting to master process on port 21845
+* Analyzing classpath: 
+  - subjects/buggy-versions/Closure-114/build/classes
+  - subjects/buggy-versions/Closure-114/lib/args4j.jar
+  - subjects/buggy-versions/Closure-114/lib/guava.jar
+  - subjects/buggy-versions/Closure-114/lib/json.jar
+  - subjects/buggy-versions/Closure-114/lib/jsr305.jar
+  - subjects/buggy-versions/Closure-114/lib/protobuf-java.jar
+  - subjects/buggy-versions/Closure-114/build/lib/rhino.jar
+  - subjects/buggy-versions/Closure-114/lib/ant.jar
+* Finished analyzing classpath
+* Generating tests for class com.google.javascript.jscomp.NameAnalyzer
+* Test criteria:
+  - Line Coverage
+  - Branch Coverage
+  - Exception
+  - Mutation testing (weak)
+  - Method-Output Coverage
+  - Top-Level Method Coverage
+  - No-Exception Top-Level Method Coverage
+  - Context Branch Coverage
+* Total number of test goals for DYNAMOSA: 2352
+* Using seed 2915629969
+* Starting evolution
+bbc usage percentage is: 50%
+* Initial Number of Goals in DynaMOSA = 531 / 2352
+[MASTER] 18:11:09.989 [logback-2] ERROR TestCluster - Failed to check cache for java.util.AbstractMap<K, V>.SimpleEntry<K, V> : Type points to itself
+[MASTER] 18:11:09.989 [logback-2] ERROR TestCluster - Failed to check cache for java.util.AbstractMap<K, V>.SimpleImmutableEntry<K, V> : Type points to itself
+[MASTER] 18:12:12.913 [logback-2] ERROR TestCluster - Failed to check cache for java.util.Iterator<E> : Type points to itself
+[MASTER] 18:15:05.816 [logback-2] ERROR TestCluster - Failed to check cache for java.util.Comparator<T> : Type points to itself
+[MASTER] 18:20:05.100 [logback-2] ERROR TestCluster - Failed to check cache for java.util.Enumeration<E> : Type points to itself
+* Search finished after 602s and 516 generations, 208201 statements, best individual has fitness: 1554.0
+* Minimizing test suite
+* Going to analyze the coverage criteria
+* Coverage analysis for criterion LINE
+* Coverage of criterion LINE: 38%
+* Total number of goals: 685
+* Number of covered goals: 257
+* Coverage analysis for criterion BRANCH
+* Coverage of criterion BRANCH: 31%
+* Total number of goals: 561
+* Number of covered goals: 176
+* Coverage analysis for criterion EXCEPTION
+* Coverage of criterion EXCEPTION: 100%
+* Total number of goals: 3
+* Number of covered goals: 3
+* Coverage analysis for criterion WEAKMUTATION
+* Coverage of criterion WEAKMUTATION: 37%
+* Total number of goals: 506
+* Number of covered goals: 186
+* Coverage analysis for criterion OUTPUT
+* Coverage of criterion OUTPUT: 33%
+* Total number of goals: 3
+* Number of covered goals: 1
+* Coverage analysis for criterion METHOD
+* Coverage of criterion METHOD: 22%
+* Total number of goals: 18
+* Number of covered goals: 4
+* Coverage analysis for criterion METHODNOEXCEPTION
+* Coverage of criterion METHODNOEXCEPTION: 22%
+* Total number of goals: 18
+* Number of covered goals: 4
+* Coverage analysis for criterion CBRANCH
+* Coverage of criterion CBRANCH: 31%
+* Total number of goals: 561
+* Number of covered goals: 176
+* Generated 21 tests with total length 111
+* Resulting test suite's coverage: 33% (average coverage for all fitness functions)
+* Generating assertions
+* Resulting test suite's mutation score: 11%
+* Compiling and checking tests
+[MASTER] 18:21:28.641 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 18:21:52.253 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test17 -> class org.evosuite.runtime.mock.java.lang.MockIllegalArgumentException: Multiple entries with same key: author=NOT_IMPLEMENTED and author=AUTHOR
+[MASTER] 18:21:52.253 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ Compiler compiler0 = new Compiler();
+Node node0 = compiler0.parseSyntheticCode("t=y.prototype;", "t=y.prototype;");
+NameAnalyzer nameAnalyzer0 = new NameAnalyzer(compiler0, false);
+nameAnalyzer0.process(node0, node0);
+assertFalse(node0.isBlock());
+
+
+[MASTER] 18:21:52.253 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test03 -> class org.evosuite.runtime.mock.java.lang.MockIllegalArgumentException: Multiple entries with same key: author=NOT_IMPLEMENTED and author=AUTHOR
+[MASTER] 18:21:52.253 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ Compiler compiler0 = new Compiler();
+Node node0 = compiler0.parseSyntheticCode(";4Y0>0", "var JSCompiler_lcov_executedLines;\nvar JSCompiler_lcov_instrumentedLines;\nvar JSCompiler_lcov_fileNames;\n");
+NameAnalyzer nameAnalyzer0 = new NameAnalyzer(compiler0, true);
+nameAnalyzer0.process(node0, node0);
+
+[MASTER] 18:21:52.253 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test02 -> class org.evosuite.runtime.mock.java.lang.MockIllegalArgumentException: Multiple entries with same key: author=NOT_IMPLEMENTED and author=AUTHOR
+[MASTER] 18:21:52.253 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ Compiler compiler0 = new Compiler();
+Node node0 = compiler0.parseSyntheticCode("t=y.pZototype;", "t=y.pZototype;");
+NameAnalyzer nameAnalyzer0 = new NameAnalyzer(compiler0, true);
+nameAnalyzer0.process(node0, node0);
+assertFalse(node0.isNumber());
+
+
+[MASTER] 18:21:53.619 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test12 -> class org.evosuite.runtime.mock.java.lang.MockIllegalArgumentException: Multiple entries with same key: constructor=NOT_IMPLEMENTED and constructor=CONSTRUCTOR
+[MASTER] 18:21:53.619 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ Compiler compiler0 = new Compiler();
+NameAnalyzer nameAnalyzer0 = new NameAnalyzer(compiler0, false);
+Node node0 = new Node((-688));
+Node node1 = compiler0.parseSyntheticCode("ty", "ty");
+node0.addChildrenToBack(node1);
+Node node2 = new Node(118, node0, (-1614074286), 38);
+nameAnalyzer0.process(node2, node2);
+
+* Writing tests to file
+* Writing JUnit test case 'NameAnalyzer_ESTest' to results/Closure-114/com.google.javascript.jscomp.NameAnalyzer/BBC-F0-50/tests/30
+* Done!
+
+* Computation finished

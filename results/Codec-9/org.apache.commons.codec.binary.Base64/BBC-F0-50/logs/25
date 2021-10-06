@@ -1,0 +1,948 @@
+* EvoSuite 1.1.1-SNAPSHOT
+* Configuration: BBC-F0-50
+* Going to generate test cases for class: org.apache.commons.codec.binary.Base64
+* Starting Client-0
+* Connecting to master process on port 18676
+* Analyzing classpath: 
+  - subjects/buggy-versions/Codec-9/target/classes
+* Finished analyzing classpath
+* Generating tests for class org.apache.commons.codec.binary.Base64
+* Test criteria:
+  - Line Coverage
+  - Branch Coverage
+  - Exception
+  - Mutation testing (weak)
+  - Method-Output Coverage
+  - Top-Level Method Coverage
+  - No-Exception Top-Level Method Coverage
+  - Context Branch Coverage
+* Total number of test goals for DYNAMOSA: 1539
+* Using seed 2596091259
+* Starting evolution
+bbc usage percentage is: 50%
+* Initial Number of Goals in DynaMOSA = 419 / 1539
+* Search finished after 601s and 563 generations, 281357 statements, best individual has fitness: 77.0
+* Minimizing test suite
+* Going to analyze the coverage criteria
+* Coverage analysis for criterion LINE
+[MASTER] 19:08:50.761 [logback-1] WARN  TestSuiteMinimizer - Minimization timeout. Roll back to original test suite
+* Coverage of criterion LINE: 100%
+* Total number of goals: 216
+* Number of covered goals: 215
+* Coverage analysis for criterion BRANCH
+* Coverage of criterion BRANCH: 96%
+* Total number of goals: 193
+* Number of covered goals: 186
+* Coverage analysis for criterion EXCEPTION
+* Coverage of criterion EXCEPTION: 100%
+* Total number of goals: 28
+* Number of covered goals: 28
+* Coverage analysis for criterion WEAKMUTATION
+* Coverage of criterion WEAKMUTATION: 97%
+* Total number of goals: 787
+* Number of covered goals: 760
+* Coverage analysis for criterion OUTPUT
+* Coverage of criterion OUTPUT: 91%
+* Total number of goals: 80
+* Number of covered goals: 73
+* Coverage analysis for criterion METHOD
+* Coverage of criterion METHOD: 100%
+* Total number of goals: 35
+* Number of covered goals: 35
+* Coverage analysis for criterion METHODNOEXCEPTION
+* Coverage of criterion METHODNOEXCEPTION: 100%
+* Total number of goals: 35
+* Number of covered goals: 35
+* Coverage analysis for criterion CBRANCH
+* Coverage of criterion CBRANCH: 95%
+* Total number of goals: 193
+* Number of covered goals: 184
+* Generated 109 tests with total length 1530
+* Resulting test suite's coverage: 91% (average coverage for all fitness functions)
+* Generating assertions
+* Resulting test suite's mutation score: 27%
+[MASTER] 19:09:52.297 [logback-1] WARN  SimpleMutationAssertionGenerator - Reached maximum time to generate assertions, aborting assertion generation
+* Compiling and checking tests
+[MASTER] 19:10:01.789 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 19:10:01.793 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class java.lang.AssertionError: Expecting exception: IllegalArgumentException
+[MASTER] 19:10:01.794 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ byte[] byteArray0 = new byte[1];
+byteArray0[0] = (byte) (-42);
+Base64.encodeBase64(byteArray0, true, false);
+
+[MASTER] 19:10:01.913 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 19:10:01.913 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class java.lang.AssertionError: Expecting exception: IllegalArgumentException
+[MASTER] 19:10:01.914 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ String string0 = "";
+Base64.decodeBase64("");
+
+[MASTER] 19:10:01.987 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 19:10:01.990 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class java.lang.AssertionError: Expecting exception: IllegalArgumentException
+[MASTER] 19:10:01.990 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ Base64 base64_0 = new Base64();
+
+[MASTER] 19:10:02.055 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 19:10:02.055 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class java.lang.AssertionError: Expecting exception: IllegalArgumentException
+[MASTER] 19:10:02.056 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ Base64.encodeBase64((byte[]) null, false, false);
+byte[] byteArray0 = new byte[2];
+byteArray0[0] = (byte) (-1);
+byteArray0[1] = (byte) (-1);
+Base64.decodeInteger(byteArray0);
+
+[MASTER] 19:10:02.114 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 19:10:02.115 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class java.lang.AssertionError: Expecting exception: IllegalArgumentException
+[MASTER] 19:10:02.115 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ byte[] byteArray0 = new byte[2];
+byteArray0[0] = (byte)100;
+byteArray0[1] = (byte) (-1);
+Base64.encodeBase64String(byteArray0);
+
+[MASTER] 19:10:02.209 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 19:10:02.210 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class java.lang.AssertionError: Expecting exception: IllegalArgumentException
+[MASTER] 19:10:02.211 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ byte[] byteArray0 = new byte[3];
+byte byte0 = (byte)63;
+byteArray0[0] = (byte)63;
+byte byte1 = (byte)0;
+byteArray0[1] = (byte)0;
+byte byte2 = (byte)27;
+byteArray0[2] = (byte)27;
+Base64.encodeBase64(byteArray0);
+
+[MASTER] 19:10:02.312 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 19:10:02.313 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class java.lang.AssertionError: Expecting exception: IllegalArgumentException
+[MASTER] 19:10:02.313 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ Base64 base64_0 = new Base64();
+
+[MASTER] 19:10:02.401 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 19:10:02.402 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class java.lang.AssertionError: Expecting exception: IllegalArgumentException
+[MASTER] 19:10:02.402 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ BigInteger bigInteger0 = BigInteger.ZERO;
+BigInteger bigInteger1 = BigInteger.ONE;
+bigInteger1.getLowestSetBit();
+bigInteger0.add(bigInteger1);
+byte[] byteArray0 = Base64.toIntegerBytes(bigInteger0);
+Base64 base64_0 = new Base64(0, byteArray0);
+bigInteger0.pow(64);
+bigInteger1.min(bigInteger0);
+bigInteger1.longValue();
+base64_0.decode(byteArray0);
+base64_0.decode("");
+Base64.isBase64("");
+Base64.encodeInteger(bigInteger1);
+
+[MASTER] 19:10:02.496 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 19:10:02.548 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 19:10:02.554 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class java.lang.AssertionError: Expecting exception: IllegalArgumentException
+[MASTER] 19:10:02.554 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ Base64 base64_0 = new Base64(true);
+
+[MASTER] 19:10:02.606 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 19:10:02.607 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class java.lang.AssertionError: Expecting exception: IllegalArgumentException
+[MASTER] 19:10:02.607 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ byte[] byteArray0 = new byte[7];
+byteArray0[0] = (byte) (-80);
+byteArray0[1] = (byte)49;
+byteArray0[2] = (byte)69;
+byteArray0[3] = (byte) (-116);
+byteArray0[4] = (byte)30;
+byteArray0[5] = (byte) (-32);
+byteArray0[6] = (byte)58;
+Base64.encodeBase64(byteArray0, true, true);
+
+[MASTER] 19:10:02.662 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 19:10:02.662 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class java.lang.AssertionError: Expecting exception: IllegalArgumentException
+[MASTER] 19:10:02.663 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ byte[] byteArray0 = new byte[9];
+byteArray0[0] = (byte)82;
+byteArray0[1] = (byte)26;
+byteArray0[2] = (byte)69;
+byteArray0[3] = (byte) (-19);
+byteArray0[4] = (byte)0;
+byteArray0[5] = (byte)93;
+byteArray0[6] = (byte)50;
+byteArray0[7] = (byte) (-1);
+byteArray0[8] = (byte)0;
+Base64.isBase64(byteArray0);
+Base64 base64_0 = new Base64((byte) (-19));
+
+[MASTER] 19:10:02.704 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 19:10:02.705 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class java.lang.AssertionError: Expecting exception: IllegalArgumentException
+[MASTER] 19:10:02.705 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ byte[] byteArray0 = new byte[0];
+boolean boolean0 = false;
+int int0 = (-218);
+Base64.encodeBase64(byteArray0, false, false, (-218));
+Base64 base64_0 = new Base64((-218));
+
+[MASTER] 19:10:02.828 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 19:10:02.829 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class java.lang.AssertionError: Expecting exception: IllegalArgumentException
+[MASTER] 19:10:02.829 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ Base64 base64_0 = new Base64();
+
+[MASTER] 19:10:02.902 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 19:10:02.904 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class java.lang.AssertionError: Expecting exception: IllegalArgumentException
+[MASTER] 19:10:02.904 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ Base64 base64_0 = new Base64(0);
+
+[MASTER] 19:10:02.954 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 19:10:02.956 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class java.lang.AssertionError: Expecting exception: IllegalArgumentException
+[MASTER] 19:10:02.956 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ BigInteger bigInteger0 = BigInteger.TEN;
+Base64.encodeInteger(bigInteger0);
+
+[MASTER] 19:10:03.020 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 19:10:03.117 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 19:10:03.118 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class java.lang.AssertionError: Expecting exception: IllegalArgumentException
+[MASTER] 19:10:03.118 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ Base64 base64_0 = new Base64((-1813));
+
+[MASTER] 19:10:03.179 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 19:10:03.180 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class java.lang.AssertionError: Expecting exception: IllegalArgumentException
+[MASTER] 19:10:03.180 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ byte[] byteArray0 = new byte[5];
+byteArray0[0] = (byte)70;
+byteArray0[1] = (byte)95;
+byteArray0[2] = (byte)0;
+byteArray0[3] = (byte)0;
+byteArray0[4] = (byte) (-42);
+Base64.encodeBase64Chunked(byteArray0);
+
+[MASTER] 19:10:03.222 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 19:10:03.225 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class java.lang.AssertionError: Expecting exception: IllegalArgumentException
+[MASTER] 19:10:03.225 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ Base64 base64_0 = new Base64((-685));
+
+[MASTER] 19:10:03.283 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 19:10:03.344 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 19:10:03.344 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class java.lang.AssertionError: Expecting exception: IllegalArgumentException
+[MASTER] 19:10:03.345 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ byte[] byteArray0 = new byte[2];
+byteArray0[0] = (byte)0;
+byteArray0[1] = (byte) (-1);
+Base64.encodeBase64String(byteArray0);
+
+[MASTER] 19:10:03.382 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 19:10:03.390 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class java.lang.AssertionError: Expecting exception: IllegalArgumentException
+[MASTER] 19:10:03.391 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ Base64 base64_0 = new Base64(0, (byte[]) null);
+
+[MASTER] 19:10:03.443 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 19:10:03.443 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class java.lang.AssertionError: Expecting exception: IllegalArgumentException
+[MASTER] 19:10:03.443 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ byte[] byteArray0 = new byte[8];
+byteArray0[0] = (byte)0;
+byteArray0[1] = (byte) (-1);
+byteArray0[2] = (byte) (-1);
+byteArray0[3] = (byte)0;
+byteArray0[4] = (byte)0;
+byteArray0[5] = (byte)111;
+byteArray0[6] = (byte)107;
+byteArray0[7] = (byte)0;
+Base64.encodeBase64(byteArray0, true, true, 2315);
+
+[MASTER] 19:10:03.478 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 19:10:03.479 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class java.lang.AssertionError: Expecting exception: IllegalArgumentException
+[MASTER] 19:10:03.479 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ Base64 base64_0 = new Base64(false);
+
+[MASTER] 19:10:03.533 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 19:10:03.533 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class java.lang.AssertionError: Expecting exception: IllegalArgumentException
+[MASTER] 19:10:03.533 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ byte[] byteArray0 = new byte[5];
+byteArray0[0] = (byte)0;
+byteArray0[1] = (byte)0;
+byteArray0[2] = (byte)1;
+byteArray0[3] = (byte)0;
+byteArray0[4] = (byte) (-1);
+byte[] byteArray1 = Base64.discardWhitespace(byteArray0);
+Base64.isBase64(byteArray1);
+Base64.encodeBase64(byteArray0, false, false);
+
+[MASTER] 19:10:03.623 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 19:10:03.689 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 19:10:03.689 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class java.lang.AssertionError: Expecting exception: IllegalArgumentException
+[MASTER] 19:10:03.690 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ Base64.isBase64((byte)0);
+byte[] byteArray0 = new byte[0];
+Base64.encodeBase64String(byteArray0);
+Base64 base64_0 = new Base64(true);
+
+[MASTER] 19:10:03.730 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 19:10:03.731 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class java.lang.AssertionError: Expecting exception: IllegalArgumentException
+[MASTER] 19:10:03.731 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ Base64 base64_0 = new Base64(false);
+
+[MASTER] 19:10:03.780 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 19:10:03.780 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class java.lang.AssertionError: Expecting exception: IllegalArgumentException
+[MASTER] 19:10:03.780 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ byte[] byteArray0 = new byte[5];
+Base64.isBase64((byte)67);
+Base64.encodeBase64String(byteArray0);
+
+[MASTER] 19:10:03.835 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 19:10:03.900 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 19:10:03.943 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 19:10:03.943 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class java.lang.AssertionError: Expecting exception: IllegalArgumentException
+[MASTER] 19:10:03.943 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ Base64 base64_0 = new Base64((-685));
+
+[MASTER] 19:10:03.987 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 19:10:03.987 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class java.lang.AssertionError: Expecting exception: IllegalArgumentException
+[MASTER] 19:10:03.988 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ byte[] byteArray0 = new byte[1];
+Base64 base64_0 = new Base64(1, byteArray0);
+base64_0.encode(byteArray0);
+Base64.decodeBase64("WRv_'ZHiS&?SXr\"(:'");
+
+[MASTER] 19:10:04.039 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 19:10:04.041 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class java.lang.AssertionError: Expecting exception: IllegalArgumentException
+[MASTER] 19:10:04.041 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ Base64 base64_0 = new Base64();
+
+[MASTER] 19:10:04.095 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 19:10:04.096 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class java.lang.AssertionError: Expecting exception: IllegalArgumentException
+[MASTER] 19:10:04.096 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ Base64 base64_0 = new Base64(true);
+
+[MASTER] 19:10:04.169 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 19:10:04.170 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class java.lang.AssertionError: Expecting exception: IllegalArgumentException
+[MASTER] 19:10:04.170 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ byte[] byteArray0 = new byte[5];
+byteArray0[0] = (byte)70;
+byteArray0[1] = (byte)95;
+byteArray0[2] = (byte)0;
+byteArray0[3] = (byte)0;
+byte[] byteArray1 = Base64.discardWhitespace(byteArray0);
+Base64.isBase64(byteArray0);
+Base64.encodeBase64(byteArray1, true, true);
+
+[MASTER] 19:10:04.229 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 19:10:04.230 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class java.lang.AssertionError: Expecting exception: IllegalArgumentException
+[MASTER] 19:10:04.230 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ BigInteger bigInteger0 = BigInteger.ZERO;
+BigInteger bigInteger1 = BigInteger.ONE;
+bigInteger1.getLowestSetBit();
+bigInteger0.add(bigInteger1);
+byte[] byteArray0 = Base64.toIntegerBytes(bigInteger0);
+Base64 base64_0 = new Base64(0, byteArray0);
+bigInteger0.pow(64);
+Object object0 = new Object();
+Base64.encodeBase64(byteArray0);
+BigInteger bigInteger2 = BigInteger.ONE;
+bigInteger0.longValue();
+Base64.decodeBase64("");
+
+[MASTER] 19:10:04.283 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 19:10:04.284 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class java.lang.AssertionError: Expecting exception: IllegalArgumentException
+[MASTER] 19:10:04.284 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ Base64 base64_0 = new Base64();
+
+[MASTER] 19:10:04.367 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 19:10:04.367 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class java.lang.AssertionError: Expecting exception: IllegalArgumentException
+[MASTER] 19:10:04.368 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ byte[] byteArray0 = new byte[2];
+byteArray0[0] = (byte)100;
+Base64 base64_0 = new Base64(7);
+
+[MASTER] 19:10:04.425 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 19:10:04.425 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class java.lang.AssertionError: Expecting exception: IllegalArgumentException
+[MASTER] 19:10:04.425 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ byte[] byteArray0 = new byte[1];
+byte byte0 = (byte)115;
+byteArray0[0] = (byte)115;
+Base64.decodeInteger(byteArray0);
+
+[MASTER] 19:10:04.512 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 19:10:04.513 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class java.lang.AssertionError: Expecting exception: IllegalArgumentException
+[MASTER] 19:10:04.513 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ Base64 base64_0 = new Base64(10);
+
+[MASTER] 19:10:04.567 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 19:10:04.568 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class java.lang.AssertionError: Expecting exception: IllegalArgumentException
+[MASTER] 19:10:04.568 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ byte[] byteArray0 = new byte[1];
+byteArray0[0] = (byte)115;
+Base64.decodeInteger(byteArray0);
+
+[MASTER] 19:10:04.678 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 19:10:04.679 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class java.lang.AssertionError: Expecting exception: IllegalArgumentException
+[MASTER] 19:10:04.679 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ Base64.isBase64((byte) (-40));
+byte[] byteArray0 = new byte[0];
+byte[] byteArray1 = new byte[0];
+Base64.encodeBase64String(byteArray1);
+Base64 base64_0 = new Base64(false);
+
+[MASTER] 19:10:04.711 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 19:10:04.712 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class java.lang.AssertionError: Expecting exception: IllegalArgumentException
+[MASTER] 19:10:04.712 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ Base64 base64_0 = new Base64();
+
+[MASTER] 19:10:04.761 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 19:10:04.762 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class java.lang.AssertionError: Expecting exception: IllegalArgumentException
+[MASTER] 19:10:04.762 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ byte[] byteArray0 = new byte[2];
+Base64 base64_0 = new Base64((byte)100, byteArray0, true);
+base64_0.encode(byteArray0);
+Base64.decodeBase64("Oo`%LW{:WW1nHt\"");
+
+[MASTER] 19:10:04.839 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 19:10:04.900 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 19:10:04.901 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class java.lang.AssertionError: Expecting exception: IllegalArgumentException
+[MASTER] 19:10:04.901 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ Base64.isBase64((byte)0);
+byte[] byteArray0 = new byte[0];
+Base64.encodeBase64String(byteArray0);
+Base64.decodeBase64(byteArray0);
+
+[MASTER] 19:10:04.956 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 19:10:04.957 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class java.lang.AssertionError: Expecting exception: IllegalArgumentException
+[MASTER] 19:10:04.957 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ Base64.isBase64((byte)0);
+byte[] byteArray0 = new byte[0];
+Base64.encodeBase64String(byteArray0);
+Base64 base64_0 = new Base64(true);
+
+[MASTER] 19:10:05.020 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 19:10:05.070 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 19:10:05.070 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class java.lang.AssertionError: Expecting exception: IllegalArgumentException
+[MASTER] 19:10:05.070 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ byte[] byteArray0 = new byte[2];
+byteArray0[0] = (byte)1;
+byteArray0[1] = (byte) (-1);
+Base64.discardWhitespace(byteArray0);
+Base64.isBase64(byteArray0);
+Base64 base64_0 = new Base64(true);
+
+[MASTER] 19:10:05.109 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 19:10:05.110 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class java.lang.AssertionError: Expecting exception: IllegalArgumentException
+[MASTER] 19:10:05.110 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ byte[] byteArray0 = new byte[4];
+Base64.isBase64((byte)67);
+Base64.encodeBase64String(byteArray0);
+
+[MASTER] 19:10:05.166 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 19:10:05.166 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class java.lang.AssertionError: Expecting exception: IllegalArgumentException
+[MASTER] 19:10:05.167 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ byte[] byteArray0 = new byte[5];
+byteArray0[0] = (byte)70;
+byteArray0[1] = (byte)95;
+byteArray0[2] = (byte)0;
+byteArray0[3] = (byte)0;
+byte[] byteArray1 = Base64.discardWhitespace(byteArray0);
+Base64.isBase64(byteArray0);
+Base64.encodeBase64(byteArray1, true, true);
+
+[MASTER] 19:10:05.241 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 19:10:05.242 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class java.lang.AssertionError: Expecting exception: IllegalArgumentException
+[MASTER] 19:10:05.242 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ byte[] byteArray0 = new byte[2];
+byteArray0[0] = (byte)1;
+byteArray0[0] = (byte) (-1);
+BigInteger bigInteger0 = BigInteger.TEN;
+bigInteger0.longValue();
+Base64 base64_0 = new Base64(1, byteArray0, true);
+base64_0.decode(byteArray0);
+base64_0.decode("lineSeperator must not contain base64 characters: [");
+BigInteger bigInteger1 = bigInteger0.nextProbablePrime();
+Base64.isBase64("lineSeperator must not contain base64 characters: [");
+Base64.encodeInteger(bigInteger1);
+
+[MASTER] 19:10:05.331 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 19:10:05.332 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class java.lang.AssertionError: Expecting exception: IllegalArgumentException
+[MASTER] 19:10:05.332 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ BigInteger bigInteger0 = BigInteger.ZERO;
+BigInteger bigInteger1 = BigInteger.ONE;
+bigInteger1.getLowestSetBit();
+BigInteger bigInteger2 = bigInteger0.add(bigInteger1);
+byte[] byteArray0 = Base64.toIntegerBytes(bigInteger0);
+Base64 base64_0 = new Base64(0, byteArray0);
+bigInteger0.pow(64);
+BigInteger bigInteger3 = bigInteger1.min(bigInteger0);
+bigInteger3.longValue();
+bigInteger3.longValue();
+base64_0.decode(byteArray0);
+byte[] byteArray1 = base64_0.decode("ISO-8859-1");
+Base64.isBase64("yVJqV{FcLtEMz>U~");
+BigInteger bigInteger4 = BigInteger.ZERO;
+Base64.encodeInteger(bigInteger4);
+bigInteger1.doubleValue();
+BigInteger bigInteger5 = BigInteger.ONE;
+bigInteger5.byteValueExact();
+bigInteger2.byteValueExact();
+Base64.toIntegerBytes(bigInteger2);
+Base64.encodeBase64(byteArray1);
+
+[MASTER] 19:10:05.411 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 19:10:05.411 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class java.lang.AssertionError: Expecting exception: IllegalArgumentException
+[MASTER] 19:10:05.411 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ byte[] byteArray0 = new byte[5];
+byteArray0[0] = (byte)39;
+byteArray0[1] = (byte)0;
+byteArray0[2] = (byte)1;
+byteArray0[3] = (byte)0;
+byteArray0[4] = (byte) (-1);
+Base64.discardWhitespace(byteArray0);
+Base64.encodeBase64String(byteArray0);
+
+[MASTER] 19:10:05.483 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 19:10:05.484 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class java.lang.AssertionError: Expecting exception: IllegalArgumentException
+[MASTER] 19:10:05.484 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ byte[] byteArray0 = new byte[9];
+byteArray0[0] = (byte) (-42);
+byteArray0[1] = (byte) (-24);
+byteArray0[2] = (byte)1;
+byteArray0[4] = (byte) (-42);
+byteArray0[5] = (byte) (-116);
+byteArray0[6] = (byte) (-42);
+byteArray0[7] = (byte) (-42);
+byteArray0[8] = (byte) (-42);
+Base64.encodeBase64(byteArray0, true, false);
+
+[MASTER] 19:10:05.576 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 19:10:05.577 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class java.lang.AssertionError: Expecting exception: IllegalArgumentException
+[MASTER] 19:10:05.577 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ BigInteger bigInteger0 = BigInteger.TEN;
+bigInteger0.longValue();
+byte[] byteArray0 = new byte[3];
+byteArray0[0] = (byte)0;
+byteArray0[1] = (byte)0;
+byteArray0[2] = (byte)0;
+Base64 base64_0 = new Base64(4, byteArray0, false);
+base64_0.decode(byteArray0);
+base64_0.decode("");
+bigInteger0.nextProbablePrime();
+Base64.isBase64("");
+Base64.encodeInteger(bigInteger0);
+
+[MASTER] 19:10:05.613 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 19:10:05.614 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class java.lang.AssertionError: Expecting exception: IllegalArgumentException
+[MASTER] 19:10:05.614 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ byte[] byteArray0 = new byte[5];
+byteArray0[0] = (byte)10;
+Base64.discardWhitespace(byteArray0);
+Base64.isBase64(byteArray0);
+Base64 base64_0 = new Base64(true);
+
+[MASTER] 19:10:05.693 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 19:10:05.693 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class java.lang.AssertionError: Expecting exception: IllegalArgumentException
+[MASTER] 19:10:05.693 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ byte[] byteArray0 = new byte[2];
+byteArray0[0] = (byte)1;
+byteArray0[0] = (byte) (-1);
+BigInteger bigInteger0 = BigInteger.TEN;
+bigInteger0.longValue();
+boolean boolean0 = true;
+Base64 base64_0 = new Base64(1, byteArray0, true);
+base64_0.decode(byteArray0);
+base64_0.decode("lineSeperator must not contain base64 characters: [");
+BigInteger bigInteger1 = bigInteger0.nextProbablePrime();
+Base64.isBase64("lineSeperator must not contain base64 characters: [");
+Base64.encodeInteger(bigInteger1);
+
+[MASTER] 19:10:05.770 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 19:10:05.770 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class java.lang.AssertionError: Expecting exception: IllegalArgumentException
+[MASTER] 19:10:05.770 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ Base64.decodeBase64("Oo`%LW{:WW1nHt\"");
+
+[MASTER] 19:10:05.844 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 19:10:05.844 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class java.lang.AssertionError: Expecting exception: IllegalArgumentException
+[MASTER] 19:10:05.844 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ byte[] byteArray0 = null;
+boolean boolean0 = true;
+Base64.encodeBase64((byte[]) null, true, true, (-1));
+Base64 base64_0 = new Base64(2002, (byte[]) null);
+
+[MASTER] 19:10:06.084 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 19:10:06.085 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class java.lang.AssertionError: Expecting exception: IllegalArgumentException
+[MASTER] 19:10:06.085 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ byte[] byteArray0 = new byte[5];
+BigInteger bigInteger0 = BigInteger.TEN;
+bigInteger0.longValue();
+Base64 base64_0 = new Base64(1, byteArray0, false);
+byte[] byteArray1 = base64_0.decode(byteArray0);
+Base64 base64_1 = new Base64(586, byteArray1, true);
+base64_1.decode("lineSeperator must not contain base64 characters: [");
+bigInteger0.nextProbablePrime();
+Base64.isBase64("lineSeperator must not contain base64 characters: [");
+BigInteger bigInteger1 = BigInteger.TEN;
+Base64.encodeInteger(bigInteger1);
+
+[MASTER] 19:10:06.193 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 19:10:06.194 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class java.lang.AssertionError: Expecting exception: IllegalArgumentException
+[MASTER] 19:10:06.194 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ byte[] byteArray0 = new byte[2];
+byteArray0[0] = (byte)100;
+Base64 base64_0 = new Base64((byte)100);
+
+[MASTER] 19:10:06.272 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 19:10:06.272 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class java.lang.AssertionError: Expecting exception: IllegalArgumentException
+[MASTER] 19:10:06.272 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ byte[] byteArray0 = new byte[5];
+byteArray0[0] = (byte)70;
+byteArray0[1] = (byte)61;
+byteArray0[2] = (byte)0;
+byteArray0[3] = (byte)0;
+byte[] byteArray1 = Base64.discardWhitespace(byteArray0);
+Base64.isBase64(byteArray0);
+Base64.encodeBase64(byteArray1, true, true);
+
+[MASTER] 19:10:06.335 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 19:10:06.335 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class java.lang.AssertionError: Expecting exception: IllegalArgumentException
+[MASTER] 19:10:06.335 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ byte[] byteArray0 = new byte[5];
+byteArray0[0] = (byte)70;
+byteArray0[1] = (byte)61;
+byteArray0[2] = (byte)0;
+byteArray0[3] = (byte)0;
+byte[] byteArray1 = Base64.discardWhitespace(byteArray0);
+Base64.isBase64((byte)61);
+Base64.encodeBase64(byteArray1, true, true);
+
+[MASTER] 19:10:06.388 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 19:10:06.388 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class java.lang.AssertionError: Expecting exception: IllegalArgumentException
+[MASTER] 19:10:06.388 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ byte[] byteArray0 = new byte[5];
+byteArray0[0] = (byte)10;
+Base64.discardWhitespace(byteArray0);
+Base64.isBase64(byteArray0);
+Base64 base64_0 = new Base64(true);
+
+[MASTER] 19:10:06.455 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 19:10:06.455 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class java.lang.AssertionError: Expecting exception: IllegalArgumentException
+[MASTER] 19:10:06.455 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ byte[] byteArray0 = new byte[2];
+byte byte0 = (byte)100;
+byteArray0[0] = (byte)100;
+Base64 base64_0 = new Base64();
+
+[MASTER] 19:10:06.524 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 19:10:06.524 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class java.lang.AssertionError: Expecting exception: IllegalArgumentException
+[MASTER] 19:10:06.524 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ byte[] byteArray0 = new byte[5];
+byte[] byteArray1 = Base64.discardWhitespace(byteArray0);
+Base64.encodeBase64String(byteArray1);
+
+[MASTER] 19:10:06.595 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 19:10:06.595 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class java.lang.AssertionError: Expecting exception: IllegalArgumentException
+[MASTER] 19:10:06.595 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ Base64 base64_0 = new Base64();
+
+[MASTER] 19:10:06.668 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 19:10:06.668 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class java.lang.AssertionError: Expecting exception: IllegalArgumentException
+[MASTER] 19:10:06.669 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ byte[] byteArray0 = new byte[5];
+byteArray0[1] = (byte)95;
+Base64.encodeBase64String(byteArray0);
+
+[MASTER] 19:10:06.756 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 19:10:06.756 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class java.lang.AssertionError: Expecting exception: IllegalArgumentException
+[MASTER] 19:10:06.756 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ byte[] byteArray0 = new byte[2];
+byteArray0[0] = (byte)1;
+byteArray0[0] = (byte) (-1);
+BigInteger bigInteger0 = BigInteger.TEN;
+bigInteger0.longValue();
+Base64 base64_0 = new Base64(1, byteArray0, true);
+base64_0.decode(byteArray0);
+base64_0.decode("lineSeperator must not contain base64 characters: [");
+BigInteger bigInteger1 = bigInteger0.nextProbablePrime();
+Base64.isBase64("lineSeperator must not contain base64 characters: [");
+Base64.encodeInteger(bigInteger1);
+
+[MASTER] 19:10:06.807 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 19:10:06.808 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class java.lang.AssertionError: Expecting exception: IllegalArgumentException
+[MASTER] 19:10:06.808 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ byte[] byteArray0 = new byte[2];
+Base64.encodeBase64String(byteArray0);
+
+[MASTER] 19:10:06.880 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 19:10:06.927 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 19:10:07.019 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 19:10:07.020 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class java.lang.AssertionError: Expecting exception: IllegalArgumentException
+[MASTER] 19:10:07.020 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ byte[] byteArray0 = new byte[2];
+byteArray0[0] = (byte)1;
+byteArray0[0] = (byte) (-1);
+BigInteger bigInteger0 = BigInteger.TEN;
+bigInteger0.longValue();
+Base64 base64_0 = new Base64(1, byteArray0, true);
+base64_0.decode(byteArray0);
+base64_0.decode("lineSeperator must not contain base64 characters: [");
+bigInteger0.nextProbablePrime();
+Base64.isBase64("lineSeperator must not contain base64 characters: [");
+BigInteger bigInteger1 = new BigInteger(byteArray0);
+Base64.encodeInteger(bigInteger1);
+
+[MASTER] 19:10:07.066 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 19:10:07.066 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class java.lang.AssertionError: Expecting exception: IllegalArgumentException
+[MASTER] 19:10:07.067 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ byte[] byteArray0 = new byte[4];
+byteArray0[0] = (byte)70;
+byteArray0[1] = (byte)61;
+byteArray0[2] = (byte)0;
+byteArray0[3] = (byte)0;
+Base64.discardWhitespace(byteArray0);
+Base64.isBase64((byte)0);
+Base64.encodeBase64URLSafeString(byteArray0);
+
+[MASTER] 19:10:07.128 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 19:10:07.128 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class java.lang.AssertionError: Expecting exception: IllegalArgumentException
+[MASTER] 19:10:07.128 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ byte[] byteArray0 = new byte[5];
+byte[] byteArray1 = Base64.discardWhitespace(byteArray0);
+assertEquals(5, byteArray1.length);
+
+Base64.encodeBase64String(byteArray0);
+
+[MASTER] 19:10:07.214 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 19:10:07.215 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class java.lang.AssertionError: Expecting exception: IllegalArgumentException
+[MASTER] 19:10:07.215 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ BigInteger bigInteger0 = BigInteger.TEN;
+bigInteger0.toByteArray();
+bigInteger0.longValue();
+Base64 base64_0 = new Base64(true);
+
+[MASTER] 19:10:07.275 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 19:10:07.275 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class java.lang.AssertionError: Expecting exception: IllegalArgumentException
+[MASTER] 19:10:07.276 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ byte[] byteArray0 = new byte[5];
+byteArray0[1] = (byte)95;
+byteArray0[3] = (byte)0;
+Base64.discardWhitespace(byteArray0);
+Base64.isBase64(byteArray0);
+Base64 base64_0 = new Base64(true);
+
+[MASTER] 19:10:07.329 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 19:10:07.329 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class java.lang.AssertionError: Expecting exception: IllegalArgumentException
+[MASTER] 19:10:07.329 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ byte[] byteArray0 = new byte[0];
+Base64.decodeInteger(byteArray0);
+
+[MASTER] 19:10:07.373 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 19:10:07.432 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 19:10:07.432 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class java.lang.AssertionError: Expecting exception: IllegalArgumentException
+[MASTER] 19:10:07.432 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ Base64 base64_0 = new Base64();
+
+[MASTER] 19:10:07.490 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 19:10:07.490 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class java.lang.AssertionError: Expecting exception: IllegalArgumentException
+[MASTER] 19:10:07.490 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ Base64 base64_0 = new Base64(2953);
+
+[MASTER] 19:10:07.560 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 19:10:07.560 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class java.lang.AssertionError: Expecting exception: IllegalArgumentException
+[MASTER] 19:10:07.560 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ byte[] byteArray0 = new byte[4];
+byteArray0[0] = (byte)70;
+byteArray0[1] = (byte)32;
+byteArray0[2] = (byte)0;
+Base64.discardWhitespace(byteArray0);
+Base64 base64_0 = new Base64();
+
+[MASTER] 19:10:07.618 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 19:10:07.618 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class java.lang.AssertionError: Expecting exception: IllegalArgumentException
+[MASTER] 19:10:07.618 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ Base64 base64_0 = new Base64(21);
+
+[MASTER] 19:10:07.669 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 19:10:07.670 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class java.lang.AssertionError: Expecting exception: IllegalArgumentException
+[MASTER] 19:10:07.670 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ Base64 base64_0 = new Base64(21);
+
+[MASTER] 19:10:07.721 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 19:10:07.721 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class java.lang.AssertionError: Expecting exception: IllegalArgumentException
+[MASTER] 19:10:07.721 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ byte[] byteArray0 = new byte[20];
+int int0 = 17;
+Base64 base64_0 = new Base64(17, byteArray0, true);
+Base64.encodeBase64(byteArray0, true, true);
+
+[MASTER] 19:10:07.762 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 19:10:07.762 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class java.lang.AssertionError: Expecting exception: IllegalArgumentException
+[MASTER] 19:10:07.762 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ byte[] byteArray0 = new byte[9];
+byteArray0[0] = (byte) (-13);
+byteArray0[1] = (byte)123;
+byteArray0[2] = (byte)49;
+byteArray0[3] = (byte)0;
+byteArray0[4] = (byte)33;
+byteArray0[5] = (byte)76;
+byteArray0[6] = (byte) (-107);
+byteArray0[7] = (byte)114;
+byteArray0[8] = (byte)83;
+Base64.isBase64(byteArray0);
+Base64 base64_0 = new Base64();
+
+[MASTER] 19:10:07.832 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 19:10:07.833 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class java.lang.AssertionError: Expecting exception: IllegalArgumentException
+[MASTER] 19:10:07.833 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ byte[] byteArray0 = new byte[0];
+Base64 base64_0 = new Base64(7, byteArray0);
+Base64.decodeBase64(byteArray0);
+
+[MASTER] 19:10:07.892 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 19:10:07.893 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class java.lang.AssertionError: Expecting exception: IllegalArgumentException
+[MASTER] 19:10:07.893 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ byte[] byteArray0 = Base64.CHUNK_SEPARATOR;
+MockRandom mockRandom0 = new MockRandom();
+mockRandom0.nextLong();
+BigInteger bigInteger0 = new BigInteger(8192, mockRandom0);
+BigInteger.valueOf(2384L);
+Base64.encodeInteger(bigInteger0);
+
+[MASTER] 19:10:07.964 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 19:10:07.964 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class java.lang.AssertionError: Expecting exception: IllegalArgumentException
+[MASTER] 19:10:07.965 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ byte[] byteArray0 = new byte[5];
+byteArray0[0] = (byte)9;
+byteArray0[1] = (byte)109;
+byteArray0[2] = (byte)0;
+byteArray0[3] = (byte)0;
+byteArray0[4] = (byte) (-1);
+Base64.isBase64(byteArray0);
+Base64.decodeInteger(byteArray0);
+
+[MASTER] 19:10:08.034 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 19:10:08.034 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class java.lang.AssertionError: Expecting exception: IllegalArgumentException
+[MASTER] 19:10:08.035 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ MockRandom mockRandom0 = new MockRandom();
+mockRandom0.nextLong();
+BigInteger bigInteger0 = new BigInteger(8090, mockRandom0);
+BigInteger.valueOf((-1153L));
+BigInteger bigInteger1 = BigInteger.TEN;
+Base64.encodeInteger(bigInteger0);
+
+[MASTER] 19:10:08.105 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 19:10:08.105 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class java.lang.AssertionError: Expecting exception: IllegalArgumentException
+[MASTER] 19:10:08.105 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ int int0 = 8095;
+MockRandom mockRandom0 = new MockRandom();
+mockRandom0.nextLong();
+BigInteger bigInteger0 = new BigInteger(8095, mockRandom0);
+BigInteger bigInteger1 = BigInteger.ZERO;
+Base64.encodeInteger(bigInteger0);
+
+[MASTER] 19:10:08.176 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 19:10:08.176 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class java.lang.AssertionError: Expecting exception: IllegalArgumentException
+[MASTER] 19:10:08.176 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ MockRandom mockRandom0 = new MockRandom();
+mockRandom0.nextLong();
+BigInteger bigInteger0 = new BigInteger(8095, mockRandom0);
+BigInteger bigInteger1 = BigInteger.ZERO;
+Base64.encodeInteger(bigInteger0);
+
+[MASTER] 19:10:08.233 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 19:10:08.233 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class java.lang.AssertionError: Expecting exception: IllegalArgumentException
+[MASTER] 19:10:08.234 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ MockRandom mockRandom0 = new MockRandom();
+mockRandom0.nextLong();
+BigInteger bigInteger0 = new BigInteger(8095, mockRandom0);
+BigInteger bigInteger1 = BigInteger.ZERO;
+Base64.encodeInteger(bigInteger0);
+
+[MASTER] 19:10:08.315 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 19:10:08.316 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class java.lang.AssertionError: Expecting exception: IllegalArgumentException
+[MASTER] 19:10:08.316 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ MockRandom mockRandom0 = new MockRandom();
+mockRandom0.nextLong();
+BigInteger bigInteger0 = new BigInteger(8156, mockRandom0);
+BigInteger bigInteger1 = BigInteger.TEN;
+Base64.encodeInteger(bigInteger0);
+
+[MASTER] 19:10:11.960 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 19:10:12.015 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 19:10:12.015 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class java.lang.AssertionError: Expecting exception: IllegalArgumentException
+[MASTER] 19:10:12.015 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ MockRandom mockRandom0 = new MockRandom();
+mockRandom0.nextLong();
+BigInteger bigInteger0 = new BigInteger(8156, mockRandom0);
+Base64.encodeInteger(bigInteger0);
+
+[MASTER] 19:10:12.097 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 19:10:12.097 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class java.lang.AssertionError: Expecting exception: IllegalArgumentException
+[MASTER] 19:10:12.097 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ MockRandom mockRandom0 = new MockRandom();
+mockRandom0.nextLong();
+BigInteger bigInteger0 = new BigInteger(8160, mockRandom0);
+Base64.encodeInteger(bigInteger0);
+
+[MASTER] 19:10:12.160 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 19:10:12.160 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class java.lang.AssertionError: Expecting exception: IllegalArgumentException
+[MASTER] 19:10:12.160 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ MockRandom mockRandom0 = new MockRandom();
+mockRandom0.nextLong();
+BigInteger bigInteger0 = new BigInteger(8160, mockRandom0);
+Base64.encodeInteger(bigInteger0);
+
+[MASTER] 19:10:12.237 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 19:10:12.237 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class java.lang.AssertionError: Expecting exception: IllegalArgumentException
+[MASTER] 19:10:12.237 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ MockRandom mockRandom0 = new MockRandom();
+mockRandom0.nextLong();
+BigInteger bigInteger0 = new BigInteger(8156, mockRandom0);
+Base64.encodeInteger(bigInteger0);
+
+[MASTER] 19:10:12.278 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 19:10:12.279 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class java.lang.AssertionError: Expecting exception: IllegalArgumentException
+[MASTER] 19:10:12.280 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ MockRandom mockRandom0 = new MockRandom();
+BigInteger bigInteger0 = BigInteger.ONE;
+Base64.encodeInteger(bigInteger0);
+
+[MASTER] 19:10:12.319 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 19:10:12.319 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class java.lang.AssertionError: Expecting exception: IllegalArgumentException
+[MASTER] 19:10:12.319 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ MockRandom mockRandom0 = new MockRandom();
+mockRandom0.nextLong();
+BigInteger bigInteger0 = new BigInteger(8156, mockRandom0);
+Base64.encodeInteger(bigInteger0);
+
+[MASTER] 19:10:12.440 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 19:10:12.441 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class java.lang.AssertionError: Expecting exception: IllegalArgumentException
+[MASTER] 19:10:12.441 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ MockRandom mockRandom0 = new MockRandom();
+BigInteger bigInteger0 = new BigInteger(8160, mockRandom0);
+Base64.encodeInteger(bigInteger0);
+
+[MASTER] 19:10:12.508 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 19:10:12.508 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class java.lang.AssertionError: Expecting exception: IllegalArgumentException
+[MASTER] 19:10:12.509 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ MockRandom mockRandom0 = new MockRandom();
+mockRandom0.nextLong();
+BigInteger bigInteger0 = new BigInteger(8160, mockRandom0);
+Base64.encodeInteger(bigInteger0);
+
+[MASTER] 19:10:12.566 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 19:10:12.567 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class java.lang.AssertionError: Expecting exception: IllegalArgumentException
+[MASTER] 19:10:12.567 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ MockRandom mockRandom0 = new MockRandom();
+mockRandom0.nextLong();
+BigInteger bigInteger0 = new BigInteger(8160, mockRandom0);
+Base64.encodeInteger(bigInteger0);
+
+[MASTER] 19:10:12.618 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 19:10:12.618 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class java.lang.AssertionError: Expecting exception: IllegalArgumentException
+[MASTER] 19:10:12.618 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ MockRandom mockRandom0 = new MockRandom();
+mockRandom0.nextLong();
+BigInteger bigInteger0 = new BigInteger(8170, mockRandom0);
+Base64.encodeInteger(bigInteger0);
+
+[MASTER] 19:10:12.672 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 19:10:12.672 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class java.lang.AssertionError: Expecting exception: IllegalArgumentException
+[MASTER] 19:10:12.672 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ MockRandom mockRandom0 = new MockRandom();
+mockRandom0.nextLong();
+BigInteger bigInteger0 = new BigInteger(8170, mockRandom0);
+Base64.encodeInteger(bigInteger0);
+
+[MASTER] 19:10:18.402 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 19:10:22.916 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+* Writing tests to file
+* Writing JUnit test case 'Base64_ESTest' to results/Codec-9/org.apache.commons.codec.binary.Base64/BBC-F0-50/tests/25
+* Done!
+
+* Computation finished

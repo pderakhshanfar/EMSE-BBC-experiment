@@ -1,0 +1,2072 @@
+* EvoSuite 1.1.1-SNAPSHOT
+* Configuration: default
+* Going to generate test cases for class: org.apache.commons.collections4.map.MultiValueMap
+* Starting Client-0
+* Connecting to master process on port 13863
+* Analyzing classpath: 
+  - subjects/buggy-versions/Collections-27/target/classes
+* Finished analyzing classpath
+* Generating tests for class org.apache.commons.collections4.map.MultiValueMap
+* Test criteria:
+  - Line Coverage
+  - Branch Coverage
+  - Exception
+  - Mutation testing (weak)
+  - Method-Output Coverage
+  - Top-Level Method Coverage
+  - No-Exception Top-Level Method Coverage
+  - Context Branch Coverage
+* Total number of test goals for DYNAMOSA: 498
+* Using seed 1037168341
+* Starting evolution
+* Initial Number of Goals in DynaMOSA = 206 / 498
+[MASTER] 21:17:40.719 [logback-2] ERROR TestCluster - Failed to check cache for java.util.LinkedList<E> : Type points to itself
+[MASTER] 21:17:40.721 [logback-2] ERROR TestCluster - Failed to check cache for java.util.AbstractMap<K, V>.SimpleEntry<K, V> : Type points to itself
+[MASTER] 21:17:40.721 [logback-2] ERROR TestCluster - Failed to check cache for java.util.AbstractMap<K, V>.SimpleImmutableEntry<K, V> : Type points to itself
+[MASTER] 21:17:40.722 [logback-2] ERROR TestCluster - Failed to check cache for java.util.HashMap<K, V> : Type points to itself
+[MASTER] 21:17:40.722 [logback-2] ERROR TestCluster - Failed to check cache for java.util.Collection<E> : Type points to itself
+[MASTER] 21:18:22.332 [logback-2] ERROR TestCluster - Failed to check cache for java.util.Comparator<T> : Type points to itself
+[MASTER] 21:19:35.518 [logback-2] ERROR TestCluster - Failed to check cache for java.util.ArrayList<E> : Type points to itself
+[MASTER] 21:23:25.886 [logback-2] ERROR TestCluster - Failed to check cache for java.util.function.Function<T, R> : Type points to itself
+Number of times BBC is called in total: 0
+* Search finished after 603s and 105 generations, 21174 statements, best individual has fitness: 169.0
+* Minimizing test suite
+* Going to analyze the coverage criteria
+* Coverage analysis for criterion LINE
+* Coverage of criterion LINE: 74%
+* Total number of goals: 123
+* Number of covered goals: 91
+* Coverage analysis for criterion BRANCH
+* Coverage of criterion BRANCH: 64%
+* Total number of goals: 83
+* Number of covered goals: 53
+* Coverage analysis for criterion EXCEPTION
+* Coverage of criterion EXCEPTION: 100%
+* Total number of goals: 22
+* Number of covered goals: 22
+* Coverage analysis for criterion WEAKMUTATION
+* Coverage of criterion WEAKMUTATION: 70%
+* Total number of goals: 105
+* Number of covered goals: 73
+* Coverage analysis for criterion OUTPUT
+* Coverage of criterion OUTPUT: 60%
+* Total number of goals: 50
+* Number of covered goals: 30
+* Coverage analysis for criterion METHOD
+* Coverage of criterion METHOD: 74%
+* Total number of goals: 27
+* Number of covered goals: 20
+* Coverage analysis for criterion METHODNOEXCEPTION
+* Coverage of criterion METHODNOEXCEPTION: 74%
+* Total number of goals: 27
+* Number of covered goals: 20
+* Coverage analysis for criterion CBRANCH
+* Coverage of criterion CBRANCH: 63%
+* Total number of goals: 83
+* Number of covered goals: 52
+* Generated 46 tests with total length 204
+* Resulting test suite's coverage: 68% (average coverage for all fitness functions)
+* Generating assertions
+* Resulting test suite's mutation score: 53%
+* Compiling and checking tests
+[MASTER] 21:28:04.060 [logback-2] ERROR JUnitAnalyzer - Compilation failed on compilation units: [RegularFileObject[/tmp/EvoSuite_2_1627594083941/org/apache/commons/collections4/map/MultiValueMap_2_tmp__ESTest.java], RegularFileObject[/tmp/EvoSuite_2_1627594083941/org/apache/commons/collections4/map/MultiValueMap_2_tmp__ESTest_scaffolding.java]]
+[MASTER] 21:28:04.060 [logback-2] ERROR JUnitAnalyzer - Classpath: subjects/buggy-versions/Collections-27/target/classes:/experiment/tools/evosuite.jar:/experiment/subjects/buggy-versions/Collections-27/target/classes
+[MASTER] 21:28:04.060 [logback-2] ERROR JUnitAnalyzer - evosuiteCP: /experiment/tools/evosuite.jar:/experiment/subjects/buggy-versions/Collections-27/target/classes
+[MASTER] 21:28:04.064 [logback-2] ERROR JUnitAnalyzer - Diagnostic: constructor MultiValueMap in class org.apache.commons.collections4.map.MultiValueMap<K,V> cannot be applied to given types;
+  required: java.util.Map<java.util.Collection<java.util.Collection<java.lang.Object>>,? super C>,org.apache.commons.collections4.Factory<C>
+  found: java.util.Map<java.util.Collection<java.util.Collection<java.lang.Object>>,capture#1 of ? super java.util.Collection<java.lang.Object>>,org.apache.commons.collections4.Factory<java.util.Collection<java.lang.Object>>
+  reason: inference variable C has incompatible bounds
+    equality constraints: java.util.Collection<java.lang.Object>
+    upper bounds: java.util.Collection<java.lang.Object>,java.util.Collection<java.lang.Integer>: 30
+[MASTER] 21:28:04.064 [logback-2] ERROR JUnitAnalyzer - Diagnostic: /tmp/EvoSuite_2_1627594083941/org/apache/commons/collections4/map/MultiValueMap_2_tmp__ESTest.java uses or overrides a deprecated API.: -1
+[MASTER] 21:28:04.064 [logback-2] ERROR JUnitAnalyzer - Diagnostic: Recompile with -Xlint:deprecation for details.: -1
+[MASTER] 21:28:04.064 [logback-2] ERROR JUnitAnalyzer - Diagnostic: Some messages have been simplified; recompile with -Xdiags:verbose to get full output: -1
+[MASTER] 21:28:04.065 [logback-2] ERROR JUnitAnalyzer - RegularFileObject[/tmp/EvoSuite_2_1627594083941/org/apache/commons/collections4/map/MultiValueMap_2_tmp__ESTest.java]
+1: /*
+2:  * This file was automatically generated by EvoSuite
+3:  * Thu Jul 29 21:28:03 GMT 2021
+4:  */
+5: 
+6: package org.apache.commons.collections4.map;
+7: 
+8: import org.junit.Test;
+9: import static org.junit.Assert.*;
+10: import java.util.ArrayList;
+11: import java.util.Collection;
+12: import java.util.HashMap;
+13: import java.util.Map;
+14: import org.apache.commons.collections4.Factory;
+15: import org.apache.commons.collections4.functors.ConstantFactory;
+16: import org.apache.commons.collections4.map.MultiValueMap;
+17: import org.evosuite.runtime.EvoRunner;
+18: import org.evosuite.runtime.EvoRunnerParameters;
+19: import org.junit.runner.RunWith;
+20: 
+21: @RunWith(EvoRunner.class) @EvoRunnerParameters(mockJVMNonDeterminism = true, useVFS = true, useVNET = true, resetStaticState = true) 
+22: public class MultiValueMap_2_tmp__ESTest extends MultiValueMap_2_tmp__ESTest_scaffolding {
+23: 
+24:   @Test(timeout = 4000)
+25:   public void test0()  throws Throwable  {
+26:       ArrayList<ArrayList<Collection<Object>>> arrayList0 = new ArrayList<ArrayList<Collection<Object>>>();
+27:       HashMap<Collection<Collection<Object>>, Collection<Object>> hashMap0 = new HashMap<Collection<Collection<Object>>, Collection<Object>>();
+28:       ArrayList<Object> arrayList1 = new ArrayList<Object>();
+29:       ConstantFactory<Collection<Object>> constantFactory0 = new ConstantFactory<Collection<Object>>(arrayList1);
+30:       MultiValueMap<Collection<Collection<Object>>, Integer> multiValueMap0 = new MultiValueMap<Collection<Collection<Object>>, Integer>((Map<Collection<Collection<Object>>, ? super Collection<Object>>) hashMap0, (Factory<Collection<Object>>) constantFactory0);
+31:       boolean boolean0 = multiValueMap0.removeMapping(hashMap0, arrayList0);
+32:       assertFalse(boolean0);
+33:   }
+34: }
+RegularFileObject[/tmp/EvoSuite_2_1627594083941/org/apache/commons/collections4/map/MultiValueMap_2_tmp__ESTest.java]
+1: /**
+2:  * Scaffolding file used to store all the setups needed to run 
+3:  * tests automatically generated by EvoSuite
+4:  * Thu Jul 29 21:28:03 GMT 2021
+5:  */
+6: 
+7: package org.apache.commons.collections4.map;
+8: 
+9: import org.evosuite.runtime.annotation.EvoSuiteClassExclude;
+10: import org.junit.BeforeClass;
+11: import org.junit.Before;
+12: import org.junit.After;
+13: import org.junit.AfterClass;
+14: import org.evosuite.runtime.sandbox.Sandbox;
+15: import org.evosuite.runtime.sandbox.Sandbox.SandboxMode;
+16: 
+17: @EvoSuiteClassExclude
+18: public class MultiValueMap_2_tmp__ESTest_scaffolding {
+19: 
+20:   @org.junit.Rule 
+21:   public org.evosuite.runtime.vnet.NonFunctionalRequirementRule nfr = new org.evosuite.runtime.vnet.NonFunctionalRequirementRule();
+22: 
+23:   private static final java.util.Properties defaultProperties = (java.util.Properties) java.lang.System.getProperties().clone(); 
+24: 
+25:   private org.evosuite.runtime.thread.ThreadStopper threadStopper =  new org.evosuite.runtime.thread.ThreadStopper (org.evosuite.runtime.thread.KillSwitchHandler.getInstance(), 3000);
+26: 
+27: 
+28:   @BeforeClass 
+29:   public static void initEvoSuiteFramework() { 
+30:     org.evosuite.runtime.RuntimeSettings.className = "org.apache.commons.collections4.map.MultiValueMap"; 
+31:     org.evosuite.runtime.GuiSupport.initialize(); 
+32:     org.evosuite.runtime.RuntimeSettings.maxNumberOfThreads = 100; 
+33:     org.evosuite.runtime.RuntimeSettings.maxNumberOfIterationsPerLoop = 10000; 
+34:     org.evosuite.runtime.RuntimeSettings.mockSystemIn = true; 
+35:     org.evosuite.runtime.RuntimeSettings.sandboxMode = org.evosuite.runtime.sandbox.Sandbox.SandboxMode.RECOMMENDED; 
+36:     org.evosuite.runtime.sandbox.Sandbox.initializeSecurityManagerForSUT(); 
+37:     org.evosuite.runtime.classhandling.JDKClassResetter.init();
+38:     setSystemProperties();
+39:     initializeClasses();
+40:     org.evosuite.runtime.Runtime.getInstance().resetRuntime(); 
+41:   } 
+42: 
+43:   @AfterClass 
+44:   public static void clearEvoSuiteFramework(){ 
+45:     Sandbox.resetDefaultSecurityManager(); 
+46:     java.lang.System.setProperties((java.util.Properties) defaultProperties.clone()); 
+47:   } 
+48: 
+49:   @Before 
+50:   public void initTestCase(){ 
+51:     threadStopper.storeCurrentThreads();
+52:     threadStopper.startRecordingTime();
+53:     org.evosuite.runtime.jvm.ShutdownHookHandler.getInstance().initHandler(); 
+54:     org.evosuite.runtime.sandbox.Sandbox.goingToExecuteSUTCode(); 
+55:     setSystemProperties(); 
+56:     org.evosuite.runtime.GuiSupport.setHeadless(); 
+57:     org.evosuite.runtime.Runtime.getInstance().resetRuntime(); 
+58:     org.evosuite.runtime.agent.InstrumentingAgent.activate(); 
+59:   } 
+60: 
+61:   @After 
+62:   public void doneWithTestCase(){ 
+63:     threadStopper.killAndJoinClientThreads();
+64:     org.evosuite.runtime.jvm.ShutdownHookHandler.getInstance().safeExecuteAddedHooks(); 
+65:     org.evosuite.runtime.classhandling.JDKClassResetter.reset(); 
+66:     resetClasses(); 
+67:     org.evosuite.runtime.sandbox.Sandbox.doneWithExecutingSUTCode(); 
+68:     org.evosuite.runtime.agent.InstrumentingAgent.deactivate(); 
+69:     org.evosuite.runtime.GuiSupport.restoreHeadlessMode(); 
+70:   } 
+71: 
+72:   public static void setSystemProperties() {
+73:  
+74:     java.lang.System.setProperties((java.util.Properties) defaultProperties.clone()); 
+75:     java.lang.System.setProperty("user.dir", "/experiment"); 
+76:     java.lang.System.setProperty("java.io.tmpdir", "/tmp"); 
+77:   }
+78: 
+79:   private static void initializeClasses() {
+80:     org.evosuite.runtime.classhandling.ClassStateSupport.initializeClasses(MultiValueMap_2_tmp__ESTest_scaffolding.class.getClassLoader() ,
+81:       "org.apache.commons.collections4.MapIterator",
+82:       "org.apache.commons.collections4.iterators.IteratorChain",
+83:       "org.apache.commons.collections4.functors.ExceptionFactory",
+84:       "org.apache.commons.collections4.map.MultiValueMap$Values",
+85:       "org.apache.commons.collections4.map.EntrySetToMapIteratorAdapter",
+86:       "org.apache.commons.collections4.map.AbstractMapDecorator",
+87:       "org.apache.commons.collections4.Get",
+88:       "org.apache.commons.collections4.iterators.AbstractEmptyIterator",
+89:       "org.apache.commons.collections4.CollectionUtils",
+90:       "org.apache.commons.collections4.map.MultiValueMap",
+91:       "org.apache.commons.collections4.FunctorException",
+92:       "org.apache.commons.collections4.map.AbstractIterableMap",
+93:       "org.apache.commons.collections4.Factory",
+94:       "org.apache.commons.collections4.iterators.LazyIteratorChain",
+95:       "org.apache.commons.collections4.Unmodifiable",
+96:       "org.apache.commons.collections4.map.MultiValueMap$ReflectionFactory",
+97:       "org.apache.commons.collections4.Transformer",
+98:       "org.apache.commons.collections4.map.MultiValueMap$1",
+99:       "org.apache.commons.collections4.map.MultiValueMap$ValuesIterator",
+100:       "org.apache.commons.collections4.collection.UnmodifiableCollection",
+101:       "org.apache.commons.collections4.ResettableIterator",
+102:       "org.apache.commons.collections4.iterators.EmptyIterator",
+103:       "org.apache.commons.collections4.functors.ConstantFactory",
+104:       "org.apache.commons.collections4.collection.AbstractCollectionDecorator",
+105:       "org.apache.commons.collections4.Put",
+106:       "org.apache.commons.collections4.MultiMap",
+107:       "org.apache.commons.collections4.IterableMap",
+108:       "org.apache.commons.collections4.IterableGet"
+109:     );
+110:   } 
+111: 
+112:   private static void resetClasses() {
+113:     org.evosuite.runtime.classhandling.ClassResetter.getInstance().setClassLoader(MultiValueMap_2_tmp__ESTest_scaffolding.class.getClassLoader()); 
+114: 
+115:     org.evosuite.runtime.classhandling.ClassStateSupport.resetClasses(
+116:       "org.apache.commons.collections4.map.AbstractIterableMap",
+117:       "org.apache.commons.collections4.map.AbstractMapDecorator",
+118:       "org.apache.commons.collections4.map.MultiValueMap",
+119:       "org.apache.commons.collections4.map.MultiValueMap$ReflectionFactory",
+120:       "org.apache.commons.collections4.map.MultiValueMap$Values",
+121:       "org.apache.commons.collections4.map.MultiValueMap$ValuesIterator",
+122:       "org.apache.commons.collections4.iterators.LazyIteratorChain",
+123:       "org.apache.commons.collections4.map.MultiValueMap$1",
+124:       "org.apache.commons.collections4.iterators.AbstractEmptyIterator",
+125:       "org.apache.commons.collections4.iterators.EmptyIterator",
+126:       "org.apache.commons.collections4.iterators.EmptyListIterator",
+127:       "org.apache.commons.collections4.iterators.EmptyOrderedIterator",
+128:       "org.apache.commons.collections4.iterators.AbstractEmptyMapIterator",
+129:       "org.apache.commons.collections4.iterators.EmptyMapIterator",
+130:       "org.apache.commons.collections4.iterators.EmptyOrderedMapIterator",
+131:       "org.apache.commons.collections4.functors.ConstantFactory",
+132:       "org.apache.commons.collections4.map.EntrySetToMapIteratorAdapter",
+133:       "org.apache.commons.collections4.iterators.IteratorChain",
+134:       "org.apache.commons.collections4.functors.ExceptionFactory",
+135:       "org.apache.commons.collections4.FunctorException",
+136:       "org.apache.commons.collections4.collection.AbstractCollectionDecorator",
+137:       "org.apache.commons.collections4.collection.UnmodifiableCollection",
+138:       "org.apache.commons.collections4.CollectionUtils",
+139:       "org.apache.commons.collections4.functors.InstantiateFactory"
+140:     );
+141:   }
+142: }
+
+[MASTER] 21:28:04.066 [logback-2] ERROR JUnitAnalyzer - Failed to compile test case:
+ArrayList<ArrayList<Collection<Object>>> arrayList0 = new ArrayList<ArrayList<Collection<Object>>>();
+HashMap<Collection<Collection<Object>>, Collection<Object>> hashMap0 = new HashMap<Collection<Collection<Object>>, Collection<Object>>();
+ArrayList<Object> arrayList1 = new ArrayList<Object>();
+ConstantFactory<Collection<Object>> constantFactory0 = new ConstantFactory<Collection<Object>>(arrayList1);
+MultiValueMap<Collection<Collection<Object>>, Integer> multiValueMap0 = new MultiValueMap<Collection<Collection<Object>>, Integer>((Map<Collection<Collection<Object>>, ? super Collection<Object>>) hashMap0, (Factory<Collection<Object>>) constantFactory0);
+boolean boolean0 = multiValueMap0.removeMapping(hashMap0, arrayList0);
+assertFalse(boolean0);
+
+
+[MASTER] 21:28:04.899 [logback-2] ERROR JUnitAnalyzer - Compilation failed on compilation units: [RegularFileObject[/tmp/EvoSuite_11_1627594084839/org/apache/commons/collections4/map/MultiValueMap_11_tmp__ESTest.java], RegularFileObject[/tmp/EvoSuite_11_1627594084839/org/apache/commons/collections4/map/MultiValueMap_11_tmp__ESTest_scaffolding.java]]
+[MASTER] 21:28:04.899 [logback-2] ERROR JUnitAnalyzer - Classpath: subjects/buggy-versions/Collections-27/target/classes:/experiment/tools/evosuite.jar:/experiment/subjects/buggy-versions/Collections-27/target/classes
+[MASTER] 21:28:04.899 [logback-2] ERROR JUnitAnalyzer - evosuiteCP: /experiment/tools/evosuite.jar:/experiment/subjects/buggy-versions/Collections-27/target/classes
+[MASTER] 21:28:04.901 [logback-2] ERROR JUnitAnalyzer - Diagnostic: constructor MultiValueMap in class org.apache.commons.collections4.map.MultiValueMap<K,V> cannot be applied to given types;
+  required: java.util.Map<java.util.AbstractMap.SimpleEntry<java.util.Collection<java.lang.Object>,java.lang.Object>,? super C>,org.apache.commons.collections4.Factory<C>
+  found: java.util.Map<java.util.AbstractMap.SimpleEntry<java.util.Collection<java.lang.Object>,java.lang.Object>,capture#1 of ? super java.util.LinkedList<java.lang.Object>>,org.apache.commons.collections4.Factory<java.util.LinkedList<java.lang.Object>>
+  reason: inference variable C has incompatible bounds
+    equality constraints: java.util.LinkedList<java.lang.Object>
+    upper bounds: java.util.LinkedList<java.lang.Object>,java.util.Collection<java.lang.Integer>: 28
+[MASTER] 21:28:04.901 [logback-2] ERROR JUnitAnalyzer - Diagnostic: /tmp/EvoSuite_11_1627594084839/org/apache/commons/collections4/map/MultiValueMap_11_tmp__ESTest.java uses or overrides a deprecated API.: -1
+[MASTER] 21:28:04.901 [logback-2] ERROR JUnitAnalyzer - Diagnostic: Recompile with -Xlint:deprecation for details.: -1
+[MASTER] 21:28:04.901 [logback-2] ERROR JUnitAnalyzer - Diagnostic: Some messages have been simplified; recompile with -Xdiags:verbose to get full output: -1
+[MASTER] 21:28:04.902 [logback-2] ERROR JUnitAnalyzer - RegularFileObject[/tmp/EvoSuite_11_1627594084839/org/apache/commons/collections4/map/MultiValueMap_11_tmp__ESTest.java]
+1: /*
+2:  * This file was automatically generated by EvoSuite
+3:  * Thu Jul 29 21:28:04 GMT 2021
+4:  */
+5: 
+6: package org.apache.commons.collections4.map;
+7: 
+8: import org.junit.Test;
+9: import static org.junit.Assert.*;
+10: import java.util.AbstractMap;
+11: import java.util.Collection;
+12: import java.util.LinkedList;
+13: import java.util.Map;
+14: import org.apache.commons.collections4.Factory;
+15: import org.apache.commons.collections4.functors.ConstantFactory;
+16: import org.apache.commons.collections4.map.MultiValueMap;
+17: import org.evosuite.runtime.EvoRunner;
+18: import org.evosuite.runtime.EvoRunnerParameters;
+19: import org.junit.runner.RunWith;
+20: 
+21: @RunWith(EvoRunner.class) @EvoRunnerParameters(mockJVMNonDeterminism = true, useVFS = true, useVNET = true, resetStaticState = true) 
+22: public class MultiValueMap_11_tmp__ESTest extends MultiValueMap_11_tmp__ESTest_scaffolding {
+23: 
+24:   @Test(timeout = 4000)
+25:   public void test0()  throws Throwable  {
+26:       MultiValueMap<AbstractMap.SimpleEntry<Collection<Object>, Object>, Object> multiValueMap0 = new MultiValueMap<AbstractMap.SimpleEntry<Collection<Object>, Object>, Object>();
+27:       Factory<LinkedList<Object>> factory0 = ConstantFactory.constantFactory((LinkedList<Object>) null);
+28:       MultiValueMap<AbstractMap.SimpleEntry<Collection<Object>, Object>, Integer> multiValueMap1 = new MultiValueMap<AbstractMap.SimpleEntry<Collection<Object>, Object>, Integer>((Map<AbstractMap.SimpleEntry<Collection<Object>, Object>, ? super LinkedList<Object>>) multiValueMap0, factory0);
+29:       Integer integer0 = new Integer(0);
+30:       boolean boolean0 = multiValueMap1.containsValue((Object) multiValueMap0, (Object) integer0);
+31:       assertFalse(boolean0);
+32:   }
+33: }
+RegularFileObject[/tmp/EvoSuite_11_1627594084839/org/apache/commons/collections4/map/MultiValueMap_11_tmp__ESTest.java]
+1: /**
+2:  * Scaffolding file used to store all the setups needed to run 
+3:  * tests automatically generated by EvoSuite
+4:  * Thu Jul 29 21:28:04 GMT 2021
+5:  */
+6: 
+7: package org.apache.commons.collections4.map;
+8: 
+9: import org.evosuite.runtime.annotation.EvoSuiteClassExclude;
+10: import org.junit.BeforeClass;
+11: import org.junit.Before;
+12: import org.junit.After;
+13: import org.junit.AfterClass;
+14: import org.evosuite.runtime.sandbox.Sandbox;
+15: import org.evosuite.runtime.sandbox.Sandbox.SandboxMode;
+16: 
+17: @EvoSuiteClassExclude
+18: public class MultiValueMap_11_tmp__ESTest_scaffolding {
+19: 
+20:   @org.junit.Rule 
+21:   public org.evosuite.runtime.vnet.NonFunctionalRequirementRule nfr = new org.evosuite.runtime.vnet.NonFunctionalRequirementRule();
+22: 
+23:   private static final java.util.Properties defaultProperties = (java.util.Properties) java.lang.System.getProperties().clone(); 
+24: 
+25:   private org.evosuite.runtime.thread.ThreadStopper threadStopper =  new org.evosuite.runtime.thread.ThreadStopper (org.evosuite.runtime.thread.KillSwitchHandler.getInstance(), 3000);
+26: 
+27: 
+28:   @BeforeClass 
+29:   public static void initEvoSuiteFramework() { 
+30:     org.evosuite.runtime.RuntimeSettings.className = "org.apache.commons.collections4.map.MultiValueMap"; 
+31:     org.evosuite.runtime.GuiSupport.initialize(); 
+32:     org.evosuite.runtime.RuntimeSettings.maxNumberOfThreads = 100; 
+33:     org.evosuite.runtime.RuntimeSettings.maxNumberOfIterationsPerLoop = 10000; 
+34:     org.evosuite.runtime.RuntimeSettings.mockSystemIn = true; 
+35:     org.evosuite.runtime.RuntimeSettings.sandboxMode = org.evosuite.runtime.sandbox.Sandbox.SandboxMode.RECOMMENDED; 
+36:     org.evosuite.runtime.sandbox.Sandbox.initializeSecurityManagerForSUT(); 
+37:     org.evosuite.runtime.classhandling.JDKClassResetter.init();
+38:     setSystemProperties();
+39:     initializeClasses();
+40:     org.evosuite.runtime.Runtime.getInstance().resetRuntime(); 
+41:   } 
+42: 
+43:   @AfterClass 
+44:   public static void clearEvoSuiteFramework(){ 
+45:     Sandbox.resetDefaultSecurityManager(); 
+46:     java.lang.System.setProperties((java.util.Properties) defaultProperties.clone()); 
+47:   } 
+48: 
+49:   @Before 
+50:   public void initTestCase(){ 
+51:     threadStopper.storeCurrentThreads();
+52:     threadStopper.startRecordingTime();
+53:     org.evosuite.runtime.jvm.ShutdownHookHandler.getInstance().initHandler(); 
+54:     org.evosuite.runtime.sandbox.Sandbox.goingToExecuteSUTCode(); 
+55:     setSystemProperties(); 
+56:     org.evosuite.runtime.GuiSupport.setHeadless(); 
+57:     org.evosuite.runtime.Runtime.getInstance().resetRuntime(); 
+58:     org.evosuite.runtime.agent.InstrumentingAgent.activate(); 
+59:   } 
+60: 
+61:   @After 
+62:   public void doneWithTestCase(){ 
+63:     threadStopper.killAndJoinClientThreads();
+64:     org.evosuite.runtime.jvm.ShutdownHookHandler.getInstance().safeExecuteAddedHooks(); 
+65:     org.evosuite.runtime.classhandling.JDKClassResetter.reset(); 
+66:     resetClasses(); 
+67:     org.evosuite.runtime.sandbox.Sandbox.doneWithExecutingSUTCode(); 
+68:     org.evosuite.runtime.agent.InstrumentingAgent.deactivate(); 
+69:     org.evosuite.runtime.GuiSupport.restoreHeadlessMode(); 
+70:   } 
+71: 
+72:   public static void setSystemProperties() {
+73:  
+74:     java.lang.System.setProperties((java.util.Properties) defaultProperties.clone()); 
+75:     java.lang.System.setProperty("user.dir", "/experiment"); 
+76:     java.lang.System.setProperty("java.io.tmpdir", "/tmp"); 
+77:   }
+78: 
+79:   private static void initializeClasses() {
+80:     org.evosuite.runtime.classhandling.ClassStateSupport.initializeClasses(MultiValueMap_11_tmp__ESTest_scaffolding.class.getClassLoader() ,
+81:       "org.apache.commons.collections4.MapIterator",
+82:       "org.apache.commons.collections4.iterators.IteratorChain",
+83:       "org.apache.commons.collections4.functors.ExceptionFactory",
+84:       "org.apache.commons.collections4.map.MultiValueMap$Values",
+85:       "org.apache.commons.collections4.map.EntrySetToMapIteratorAdapter",
+86:       "org.apache.commons.collections4.map.AbstractMapDecorator",
+87:       "org.apache.commons.collections4.Get",
+88:       "org.apache.commons.collections4.iterators.AbstractEmptyIterator",
+89:       "org.apache.commons.collections4.CollectionUtils",
+90:       "org.apache.commons.collections4.map.MultiValueMap",
+91:       "org.apache.commons.collections4.FunctorException",
+92:       "org.apache.commons.collections4.map.AbstractIterableMap",
+93:       "org.apache.commons.collections4.Factory",
+94:       "org.apache.commons.collections4.iterators.LazyIteratorChain",
+95:       "org.apache.commons.collections4.Unmodifiable",
+96:       "org.apache.commons.collections4.map.MultiValueMap$ReflectionFactory",
+97:       "org.apache.commons.collections4.Transformer",
+98:       "org.apache.commons.collections4.map.MultiValueMap$1",
+99:       "org.apache.commons.collections4.map.MultiValueMap$ValuesIterator",
+100:       "org.apache.commons.collections4.collection.UnmodifiableCollection",
+101:       "org.apache.commons.collections4.ResettableIterator",
+102:       "org.apache.commons.collections4.iterators.EmptyIterator",
+103:       "org.apache.commons.collections4.functors.ConstantFactory",
+104:       "org.apache.commons.collections4.collection.AbstractCollectionDecorator",
+105:       "org.apache.commons.collections4.Put",
+106:       "org.apache.commons.collections4.MultiMap",
+107:       "org.apache.commons.collections4.IterableMap",
+108:       "org.apache.commons.collections4.IterableGet"
+109:     );
+110:   } 
+111: 
+112:   private static void resetClasses() {
+113:     org.evosuite.runtime.classhandling.ClassResetter.getInstance().setClassLoader(MultiValueMap_11_tmp__ESTest_scaffolding.class.getClassLoader()); 
+114: 
+115:     org.evosuite.runtime.classhandling.ClassStateSupport.resetClasses(
+116:       "org.apache.commons.collections4.map.AbstractIterableMap",
+117:       "org.apache.commons.collections4.map.AbstractMapDecorator",
+118:       "org.apache.commons.collections4.map.MultiValueMap",
+119:       "org.apache.commons.collections4.map.MultiValueMap$ReflectionFactory",
+120:       "org.apache.commons.collections4.map.MultiValueMap$Values",
+121:       "org.apache.commons.collections4.map.MultiValueMap$ValuesIterator",
+122:       "org.apache.commons.collections4.iterators.LazyIteratorChain",
+123:       "org.apache.commons.collections4.map.MultiValueMap$1",
+124:       "org.apache.commons.collections4.iterators.AbstractEmptyIterator",
+125:       "org.apache.commons.collections4.iterators.EmptyIterator",
+126:       "org.apache.commons.collections4.iterators.EmptyListIterator",
+127:       "org.apache.commons.collections4.iterators.EmptyOrderedIterator",
+128:       "org.apache.commons.collections4.iterators.AbstractEmptyMapIterator",
+129:       "org.apache.commons.collections4.iterators.EmptyMapIterator",
+130:       "org.apache.commons.collections4.iterators.EmptyOrderedMapIterator",
+131:       "org.apache.commons.collections4.functors.ConstantFactory",
+132:       "org.apache.commons.collections4.map.EntrySetToMapIteratorAdapter",
+133:       "org.apache.commons.collections4.iterators.IteratorChain",
+134:       "org.apache.commons.collections4.functors.ExceptionFactory",
+135:       "org.apache.commons.collections4.FunctorException",
+136:       "org.apache.commons.collections4.collection.AbstractCollectionDecorator",
+137:       "org.apache.commons.collections4.collection.UnmodifiableCollection",
+138:       "org.apache.commons.collections4.CollectionUtils",
+139:       "org.apache.commons.collections4.functors.InstantiateFactory"
+140:     );
+141:   }
+142: }
+
+[MASTER] 21:28:04.902 [logback-2] ERROR JUnitAnalyzer - Failed to compile test case:
+MultiValueMap<AbstractMap.SimpleEntry<Collection<Object>, Object>, Object> multiValueMap0 = new MultiValueMap<AbstractMap.SimpleEntry<Collection<Object>, Object>, Object>();
+Factory<LinkedList<Object>> factory0 = ConstantFactory.constantFactory((LinkedList<Object>) null);
+MultiValueMap<AbstractMap.SimpleEntry<Collection<Object>, Object>, Integer> multiValueMap1 = new MultiValueMap<AbstractMap.SimpleEntry<Collection<Object>, Object>, Integer>((Map<AbstractMap.SimpleEntry<Collection<Object>, Object>, ? super LinkedList<Object>>) multiValueMap0, factory0);
+Integer integer0 = new Integer(0);
+boolean boolean0 = multiValueMap1.containsValue((Object) multiValueMap0, (Object) integer0);
+assertFalse(boolean0);
+
+
+[MASTER] 21:28:05.295 [logback-2] ERROR JUnitAnalyzer - Compilation failed on compilation units: [RegularFileObject[/tmp/EvoSuite_16_1627594085225/org/apache/commons/collections4/map/MultiValueMap_16_tmp__ESTest.java], RegularFileObject[/tmp/EvoSuite_16_1627594085225/org/apache/commons/collections4/map/MultiValueMap_16_tmp__ESTest_scaffolding.java]]
+[MASTER] 21:28:05.295 [logback-2] ERROR JUnitAnalyzer - Classpath: subjects/buggy-versions/Collections-27/target/classes:/experiment/tools/evosuite.jar:/experiment/subjects/buggy-versions/Collections-27/target/classes
+[MASTER] 21:28:05.295 [logback-2] ERROR JUnitAnalyzer - evosuiteCP: /experiment/tools/evosuite.jar:/experiment/subjects/buggy-versions/Collections-27/target/classes
+[MASTER] 21:28:05.295 [logback-2] ERROR JUnitAnalyzer - Diagnostic: incompatible types: java.lang.Class<java.lang.Object> cannot be converted to java.lang.Class<java.util.ArrayList<java.util.Collection<java.util.LinkedList>>>: 26
+[MASTER] 21:28:05.298 [logback-2] ERROR JUnitAnalyzer - Diagnostic: /tmp/EvoSuite_16_1627594085225/org/apache/commons/collections4/map/MultiValueMap_16_tmp__ESTest.java uses or overrides a deprecated API.: -1
+[MASTER] 21:28:05.298 [logback-2] ERROR JUnitAnalyzer - Diagnostic: Recompile with -Xlint:deprecation for details.: -1
+[MASTER] 21:28:05.298 [logback-2] ERROR JUnitAnalyzer - RegularFileObject[/tmp/EvoSuite_16_1627594085225/org/apache/commons/collections4/map/MultiValueMap_16_tmp__ESTest.java]
+1: /*
+2:  * This file was automatically generated by EvoSuite
+3:  * Thu Jul 29 21:28:05 GMT 2021
+4:  */
+5: 
+6: package org.apache.commons.collections4.map;
+7: 
+8: import org.junit.Test;
+9: import static org.junit.Assert.*;
+10: import java.util.ArrayList;
+11: import java.util.Collection;
+12: import java.util.LinkedList;
+13: import java.util.Map;
+14: import org.apache.commons.collections4.map.MultiValueMap;
+15: import org.evosuite.runtime.EvoRunner;
+16: import org.evosuite.runtime.EvoRunnerParameters;
+17: import org.junit.runner.RunWith;
+18: 
+19: @RunWith(EvoRunner.class) @EvoRunnerParameters(mockJVMNonDeterminism = true, useVFS = true, useVNET = true, resetStaticState = true) 
+20: public class MultiValueMap_16_tmp__ESTest extends MultiValueMap_16_tmp__ESTest_scaffolding {
+21: 
+22:   @Test(timeout = 4000)
+23:   public void test0()  throws Throwable  {
+24:       MultiValueMap<Object, Integer> multiValueMap0 = new MultiValueMap<Object, Integer>();
+25:       Class<Object> class0 = Object.class;
+26:       MultiValueMap<Object, Collection<LinkedList>> multiValueMap1 = MultiValueMap.multiValueMap((Map<Object, ? super ArrayList<Collection<LinkedList>>>) multiValueMap0, (Class<ArrayList<Collection<LinkedList>>>) class0);
+27:       assertTrue(multiValueMap1.isEmpty());
+28:   }
+29: }
+RegularFileObject[/tmp/EvoSuite_16_1627594085225/org/apache/commons/collections4/map/MultiValueMap_16_tmp__ESTest.java]
+1: /**
+2:  * Scaffolding file used to store all the setups needed to run 
+3:  * tests automatically generated by EvoSuite
+4:  * Thu Jul 29 21:28:05 GMT 2021
+5:  */
+6: 
+7: package org.apache.commons.collections4.map;
+8: 
+9: import org.evosuite.runtime.annotation.EvoSuiteClassExclude;
+10: import org.junit.BeforeClass;
+11: import org.junit.Before;
+12: import org.junit.After;
+13: import org.junit.AfterClass;
+14: import org.evosuite.runtime.sandbox.Sandbox;
+15: import org.evosuite.runtime.sandbox.Sandbox.SandboxMode;
+16: 
+17: @EvoSuiteClassExclude
+18: public class MultiValueMap_16_tmp__ESTest_scaffolding {
+19: 
+20:   @org.junit.Rule 
+21:   public org.evosuite.runtime.vnet.NonFunctionalRequirementRule nfr = new org.evosuite.runtime.vnet.NonFunctionalRequirementRule();
+22: 
+23:   private static final java.util.Properties defaultProperties = (java.util.Properties) java.lang.System.getProperties().clone(); 
+24: 
+25:   private org.evosuite.runtime.thread.ThreadStopper threadStopper =  new org.evosuite.runtime.thread.ThreadStopper (org.evosuite.runtime.thread.KillSwitchHandler.getInstance(), 3000);
+26: 
+27: 
+28:   @BeforeClass 
+29:   public static void initEvoSuiteFramework() { 
+30:     org.evosuite.runtime.RuntimeSettings.className = "org.apache.commons.collections4.map.MultiValueMap"; 
+31:     org.evosuite.runtime.GuiSupport.initialize(); 
+32:     org.evosuite.runtime.RuntimeSettings.maxNumberOfThreads = 100; 
+33:     org.evosuite.runtime.RuntimeSettings.maxNumberOfIterationsPerLoop = 10000; 
+34:     org.evosuite.runtime.RuntimeSettings.mockSystemIn = true; 
+35:     org.evosuite.runtime.RuntimeSettings.sandboxMode = org.evosuite.runtime.sandbox.Sandbox.SandboxMode.RECOMMENDED; 
+36:     org.evosuite.runtime.sandbox.Sandbox.initializeSecurityManagerForSUT(); 
+37:     org.evosuite.runtime.classhandling.JDKClassResetter.init();
+38:     setSystemProperties();
+39:     initializeClasses();
+40:     org.evosuite.runtime.Runtime.getInstance().resetRuntime(); 
+41:   } 
+42: 
+43:   @AfterClass 
+44:   public static void clearEvoSuiteFramework(){ 
+45:     Sandbox.resetDefaultSecurityManager(); 
+46:     java.lang.System.setProperties((java.util.Properties) defaultProperties.clone()); 
+47:   } 
+48: 
+49:   @Before 
+50:   public void initTestCase(){ 
+51:     threadStopper.storeCurrentThreads();
+52:     threadStopper.startRecordingTime();
+53:     org.evosuite.runtime.jvm.ShutdownHookHandler.getInstance().initHandler(); 
+54:     org.evosuite.runtime.sandbox.Sandbox.goingToExecuteSUTCode(); 
+55:     setSystemProperties(); 
+56:     org.evosuite.runtime.GuiSupport.setHeadless(); 
+57:     org.evosuite.runtime.Runtime.getInstance().resetRuntime(); 
+58:     org.evosuite.runtime.agent.InstrumentingAgent.activate(); 
+59:   } 
+60: 
+61:   @After 
+62:   public void doneWithTestCase(){ 
+63:     threadStopper.killAndJoinClientThreads();
+64:     org.evosuite.runtime.jvm.ShutdownHookHandler.getInstance().safeExecuteAddedHooks(); 
+65:     org.evosuite.runtime.classhandling.JDKClassResetter.reset(); 
+66:     resetClasses(); 
+67:     org.evosuite.runtime.sandbox.Sandbox.doneWithExecutingSUTCode(); 
+68:     org.evosuite.runtime.agent.InstrumentingAgent.deactivate(); 
+69:     org.evosuite.runtime.GuiSupport.restoreHeadlessMode(); 
+70:   } 
+71: 
+72:   public static void setSystemProperties() {
+73:  
+74:     java.lang.System.setProperties((java.util.Properties) defaultProperties.clone()); 
+75:     java.lang.System.setProperty("user.dir", "/experiment"); 
+76:     java.lang.System.setProperty("java.io.tmpdir", "/tmp"); 
+77:   }
+78: 
+79:   private static void initializeClasses() {
+80:     org.evosuite.runtime.classhandling.ClassStateSupport.initializeClasses(MultiValueMap_16_tmp__ESTest_scaffolding.class.getClassLoader() ,
+81:       "org.apache.commons.collections4.MapIterator",
+82:       "org.apache.commons.collections4.iterators.IteratorChain",
+83:       "org.apache.commons.collections4.functors.ExceptionFactory",
+84:       "org.apache.commons.collections4.map.MultiValueMap$Values",
+85:       "org.apache.commons.collections4.map.EntrySetToMapIteratorAdapter",
+86:       "org.apache.commons.collections4.map.AbstractMapDecorator",
+87:       "org.apache.commons.collections4.Get",
+88:       "org.apache.commons.collections4.iterators.AbstractEmptyIterator",
+89:       "org.apache.commons.collections4.CollectionUtils",
+90:       "org.apache.commons.collections4.map.MultiValueMap",
+91:       "org.apache.commons.collections4.FunctorException",
+92:       "org.apache.commons.collections4.map.AbstractIterableMap",
+93:       "org.apache.commons.collections4.Factory",
+94:       "org.apache.commons.collections4.iterators.LazyIteratorChain",
+95:       "org.apache.commons.collections4.Unmodifiable",
+96:       "org.apache.commons.collections4.map.MultiValueMap$ReflectionFactory",
+97:       "org.apache.commons.collections4.Transformer",
+98:       "org.apache.commons.collections4.map.MultiValueMap$1",
+99:       "org.apache.commons.collections4.map.MultiValueMap$ValuesIterator",
+100:       "org.apache.commons.collections4.collection.UnmodifiableCollection",
+101:       "org.apache.commons.collections4.ResettableIterator",
+102:       "org.apache.commons.collections4.iterators.EmptyIterator",
+103:       "org.apache.commons.collections4.functors.ConstantFactory",
+104:       "org.apache.commons.collections4.collection.AbstractCollectionDecorator",
+105:       "org.apache.commons.collections4.Put",
+106:       "org.apache.commons.collections4.MultiMap",
+107:       "org.apache.commons.collections4.IterableMap",
+108:       "org.apache.commons.collections4.IterableGet"
+109:     );
+110:   } 
+111: 
+112:   private static void resetClasses() {
+113:     org.evosuite.runtime.classhandling.ClassResetter.getInstance().setClassLoader(MultiValueMap_16_tmp__ESTest_scaffolding.class.getClassLoader()); 
+114: 
+115:     org.evosuite.runtime.classhandling.ClassStateSupport.resetClasses(
+116:       "org.apache.commons.collections4.map.AbstractIterableMap",
+117:       "org.apache.commons.collections4.map.AbstractMapDecorator",
+118:       "org.apache.commons.collections4.map.MultiValueMap",
+119:       "org.apache.commons.collections4.map.MultiValueMap$ReflectionFactory",
+120:       "org.apache.commons.collections4.map.MultiValueMap$Values",
+121:       "org.apache.commons.collections4.map.MultiValueMap$ValuesIterator",
+122:       "org.apache.commons.collections4.iterators.LazyIteratorChain",
+123:       "org.apache.commons.collections4.map.MultiValueMap$1",
+124:       "org.apache.commons.collections4.iterators.AbstractEmptyIterator",
+125:       "org.apache.commons.collections4.iterators.EmptyIterator",
+126:       "org.apache.commons.collections4.iterators.EmptyListIterator",
+127:       "org.apache.commons.collections4.iterators.EmptyOrderedIterator",
+128:       "org.apache.commons.collections4.iterators.AbstractEmptyMapIterator",
+129:       "org.apache.commons.collections4.iterators.EmptyMapIterator",
+130:       "org.apache.commons.collections4.iterators.EmptyOrderedMapIterator",
+131:       "org.apache.commons.collections4.functors.ConstantFactory",
+132:       "org.apache.commons.collections4.map.EntrySetToMapIteratorAdapter",
+133:       "org.apache.commons.collections4.iterators.IteratorChain",
+134:       "org.apache.commons.collections4.functors.ExceptionFactory",
+135:       "org.apache.commons.collections4.FunctorException",
+136:       "org.apache.commons.collections4.collection.AbstractCollectionDecorator",
+137:       "org.apache.commons.collections4.collection.UnmodifiableCollection",
+138:       "org.apache.commons.collections4.CollectionUtils",
+139:       "org.apache.commons.collections4.functors.InstantiateFactory"
+140:     );
+141:   }
+142: }
+
+[MASTER] 21:28:05.299 [logback-2] ERROR JUnitAnalyzer - Failed to compile test case:
+MultiValueMap<Object, Integer> multiValueMap0 = new MultiValueMap<Object, Integer>();
+Class<Object> class0 = Object.class;
+MultiValueMap<Object, Collection<LinkedList>> multiValueMap1 = MultiValueMap.multiValueMap((Map<Object, ? super ArrayList<Collection<LinkedList>>>) multiValueMap0, (Class<ArrayList<Collection<LinkedList>>>) class0);
+assertTrue(multiValueMap1.isEmpty());
+
+
+[MASTER] 21:28:05.382 [logback-2] ERROR JUnitAnalyzer - Compilation failed on compilation units: [RegularFileObject[/tmp/EvoSuite_17_1627594085300/org/apache/commons/collections4/map/MultiValueMap_17_tmp__ESTest.java], RegularFileObject[/tmp/EvoSuite_17_1627594085300/org/apache/commons/collections4/map/MultiValueMap_17_tmp__ESTest_scaffolding.java]]
+[MASTER] 21:28:05.383 [logback-2] ERROR JUnitAnalyzer - Classpath: subjects/buggy-versions/Collections-27/target/classes:/experiment/tools/evosuite.jar:/experiment/subjects/buggy-versions/Collections-27/target/classes
+[MASTER] 21:28:05.383 [logback-2] ERROR JUnitAnalyzer - evosuiteCP: /experiment/tools/evosuite.jar:/experiment/subjects/buggy-versions/Collections-27/target/classes
+[MASTER] 21:28:05.384 [logback-2] ERROR JUnitAnalyzer - Diagnostic: constructor MultiValueMap in class org.apache.commons.collections4.map.MultiValueMap<K,V> cannot be applied to given types;
+  required: java.util.Map<java.util.ArrayList<java.lang.Object>,? super C>,org.apache.commons.collections4.Factory<C>
+  found: java.util.Map<java.util.ArrayList<java.lang.Object>,capture#1 of ? super java.util.LinkedList<java.lang.Object>>,org.apache.commons.collections4.Factory<java.util.LinkedList<java.lang.Object>>
+  reason: inference variable C has incompatible bounds
+    equality constraints: java.util.LinkedList<java.lang.Object>
+    upper bounds: java.util.LinkedList<java.lang.Object>,java.util.Collection<java.util.LinkedList<java.lang.Integer>>: 29
+[MASTER] 21:28:05.385 [logback-2] ERROR JUnitAnalyzer - Diagnostic: /tmp/EvoSuite_17_1627594085300/org/apache/commons/collections4/map/MultiValueMap_17_tmp__ESTest.java uses or overrides a deprecated API.: -1
+[MASTER] 21:28:05.385 [logback-2] ERROR JUnitAnalyzer - Diagnostic: Recompile with -Xlint:deprecation for details.: -1
+[MASTER] 21:28:05.385 [logback-2] ERROR JUnitAnalyzer - Diagnostic: Some messages have been simplified; recompile with -Xdiags:verbose to get full output: -1
+[MASTER] 21:28:05.386 [logback-2] ERROR JUnitAnalyzer - RegularFileObject[/tmp/EvoSuite_17_1627594085300/org/apache/commons/collections4/map/MultiValueMap_17_tmp__ESTest.java]
+1: /*
+2:  * This file was automatically generated by EvoSuite
+3:  * Thu Jul 29 21:28:05 GMT 2021
+4:  */
+5: 
+6: package org.apache.commons.collections4.map;
+7: 
+8: import org.junit.Test;
+9: import static org.junit.Assert.*;
+10: import static org.evosuite.runtime.EvoAssertions.*;
+11: import java.util.ArrayList;
+12: import java.util.HashMap;
+13: import java.util.LinkedList;
+14: import java.util.Map;
+15: import org.apache.commons.collections4.Factory;
+16: import org.apache.commons.collections4.map.MultiValueMap;
+17: import org.evosuite.runtime.EvoRunner;
+18: import org.evosuite.runtime.EvoRunnerParameters;
+19: import org.junit.runner.RunWith;
+20: 
+21: @RunWith(EvoRunner.class) @EvoRunnerParameters(mockJVMNonDeterminism = true, useVFS = true, useVNET = true, resetStaticState = true) 
+22: public class MultiValueMap_17_tmp__ESTest extends MultiValueMap_17_tmp__ESTest_scaffolding {
+23: 
+24:   @Test(timeout = 4000)
+25:   public void test0()  throws Throwable  {
+26:       HashMap<ArrayList<Object>, Object> hashMap0 = new HashMap<ArrayList<Object>, Object>();
+27:       MultiValueMap<ArrayList<Object>, LinkedList<Integer>> multiValueMap0 = null;
+28:       try {
+29:         multiValueMap0 = new MultiValueMap<ArrayList<Object>, LinkedList<Integer>>((Map<ArrayList<Object>, ? super LinkedList<Object>>) hashMap0, (Factory<LinkedList<Object>>) null);
+30:         fail("Expecting exception: IllegalArgumentException");
+31:       
+32:       } catch(IllegalArgumentException e) {
+33:          //
+34:          // The factory must not be null
+35:          //
+36:          verifyException("org.apache.commons.collections4.map.MultiValueMap", e);
+37:       }
+38:   }
+39: }
+RegularFileObject[/tmp/EvoSuite_17_1627594085300/org/apache/commons/collections4/map/MultiValueMap_17_tmp__ESTest.java]
+1: /**
+2:  * Scaffolding file used to store all the setups needed to run 
+3:  * tests automatically generated by EvoSuite
+4:  * Thu Jul 29 21:28:05 GMT 2021
+5:  */
+6: 
+7: package org.apache.commons.collections4.map;
+8: 
+9: import org.evosuite.runtime.annotation.EvoSuiteClassExclude;
+10: import org.junit.BeforeClass;
+11: import org.junit.Before;
+12: import org.junit.After;
+13: import org.junit.AfterClass;
+14: import org.evosuite.runtime.sandbox.Sandbox;
+15: import org.evosuite.runtime.sandbox.Sandbox.SandboxMode;
+16: 
+17: @EvoSuiteClassExclude
+18: public class MultiValueMap_17_tmp__ESTest_scaffolding {
+19: 
+20:   @org.junit.Rule 
+21:   public org.evosuite.runtime.vnet.NonFunctionalRequirementRule nfr = new org.evosuite.runtime.vnet.NonFunctionalRequirementRule();
+22: 
+23:   private static final java.util.Properties defaultProperties = (java.util.Properties) java.lang.System.getProperties().clone(); 
+24: 
+25:   private org.evosuite.runtime.thread.ThreadStopper threadStopper =  new org.evosuite.runtime.thread.ThreadStopper (org.evosuite.runtime.thread.KillSwitchHandler.getInstance(), 3000);
+26: 
+27: 
+28:   @BeforeClass 
+29:   public static void initEvoSuiteFramework() { 
+30:     org.evosuite.runtime.RuntimeSettings.className = "org.apache.commons.collections4.map.MultiValueMap"; 
+31:     org.evosuite.runtime.GuiSupport.initialize(); 
+32:     org.evosuite.runtime.RuntimeSettings.maxNumberOfThreads = 100; 
+33:     org.evosuite.runtime.RuntimeSettings.maxNumberOfIterationsPerLoop = 10000; 
+34:     org.evosuite.runtime.RuntimeSettings.mockSystemIn = true; 
+35:     org.evosuite.runtime.RuntimeSettings.sandboxMode = org.evosuite.runtime.sandbox.Sandbox.SandboxMode.RECOMMENDED; 
+36:     org.evosuite.runtime.sandbox.Sandbox.initializeSecurityManagerForSUT(); 
+37:     org.evosuite.runtime.classhandling.JDKClassResetter.init();
+38:     setSystemProperties();
+39:     initializeClasses();
+40:     org.evosuite.runtime.Runtime.getInstance().resetRuntime(); 
+41:   } 
+42: 
+43:   @AfterClass 
+44:   public static void clearEvoSuiteFramework(){ 
+45:     Sandbox.resetDefaultSecurityManager(); 
+46:     java.lang.System.setProperties((java.util.Properties) defaultProperties.clone()); 
+47:   } 
+48: 
+49:   @Before 
+50:   public void initTestCase(){ 
+51:     threadStopper.storeCurrentThreads();
+52:     threadStopper.startRecordingTime();
+53:     org.evosuite.runtime.jvm.ShutdownHookHandler.getInstance().initHandler(); 
+54:     org.evosuite.runtime.sandbox.Sandbox.goingToExecuteSUTCode(); 
+55:     setSystemProperties(); 
+56:     org.evosuite.runtime.GuiSupport.setHeadless(); 
+57:     org.evosuite.runtime.Runtime.getInstance().resetRuntime(); 
+58:     org.evosuite.runtime.agent.InstrumentingAgent.activate(); 
+59:   } 
+60: 
+61:   @After 
+62:   public void doneWithTestCase(){ 
+63:     threadStopper.killAndJoinClientThreads();
+64:     org.evosuite.runtime.jvm.ShutdownHookHandler.getInstance().safeExecuteAddedHooks(); 
+65:     org.evosuite.runtime.classhandling.JDKClassResetter.reset(); 
+66:     resetClasses(); 
+67:     org.evosuite.runtime.sandbox.Sandbox.doneWithExecutingSUTCode(); 
+68:     org.evosuite.runtime.agent.InstrumentingAgent.deactivate(); 
+69:     org.evosuite.runtime.GuiSupport.restoreHeadlessMode(); 
+70:   } 
+71: 
+72:   public static void setSystemProperties() {
+73:  
+74:     java.lang.System.setProperties((java.util.Properties) defaultProperties.clone()); 
+75:     java.lang.System.setProperty("user.dir", "/experiment"); 
+76:     java.lang.System.setProperty("java.io.tmpdir", "/tmp"); 
+77:   }
+78: 
+79:   private static void initializeClasses() {
+80:     org.evosuite.runtime.classhandling.ClassStateSupport.initializeClasses(MultiValueMap_17_tmp__ESTest_scaffolding.class.getClassLoader() ,
+81:       "org.apache.commons.collections4.MapIterator",
+82:       "org.apache.commons.collections4.iterators.IteratorChain",
+83:       "org.apache.commons.collections4.functors.ExceptionFactory",
+84:       "org.apache.commons.collections4.map.MultiValueMap$Values",
+85:       "org.apache.commons.collections4.map.EntrySetToMapIteratorAdapter",
+86:       "org.apache.commons.collections4.map.AbstractMapDecorator",
+87:       "org.apache.commons.collections4.Get",
+88:       "org.apache.commons.collections4.iterators.AbstractEmptyIterator",
+89:       "org.apache.commons.collections4.CollectionUtils",
+90:       "org.apache.commons.collections4.map.MultiValueMap",
+91:       "org.apache.commons.collections4.FunctorException",
+92:       "org.apache.commons.collections4.map.AbstractIterableMap",
+93:       "org.apache.commons.collections4.Factory",
+94:       "org.apache.commons.collections4.iterators.LazyIteratorChain",
+95:       "org.apache.commons.collections4.Unmodifiable",
+96:       "org.apache.commons.collections4.map.MultiValueMap$ReflectionFactory",
+97:       "org.apache.commons.collections4.Transformer",
+98:       "org.apache.commons.collections4.map.MultiValueMap$1",
+99:       "org.apache.commons.collections4.map.MultiValueMap$ValuesIterator",
+100:       "org.apache.commons.collections4.collection.UnmodifiableCollection",
+101:       "org.apache.commons.collections4.ResettableIterator",
+102:       "org.apache.commons.collections4.iterators.EmptyIterator",
+103:       "org.apache.commons.collections4.functors.ConstantFactory",
+104:       "org.apache.commons.collections4.collection.AbstractCollectionDecorator",
+105:       "org.apache.commons.collections4.Put",
+106:       "org.apache.commons.collections4.MultiMap",
+107:       "org.apache.commons.collections4.IterableMap",
+108:       "org.apache.commons.collections4.IterableGet"
+109:     );
+110:   } 
+111: 
+112:   private static void resetClasses() {
+113:     org.evosuite.runtime.classhandling.ClassResetter.getInstance().setClassLoader(MultiValueMap_17_tmp__ESTest_scaffolding.class.getClassLoader()); 
+114: 
+115:     org.evosuite.runtime.classhandling.ClassStateSupport.resetClasses(
+116:       "org.apache.commons.collections4.map.AbstractIterableMap",
+117:       "org.apache.commons.collections4.map.AbstractMapDecorator",
+118:       "org.apache.commons.collections4.map.MultiValueMap",
+119:       "org.apache.commons.collections4.map.MultiValueMap$ReflectionFactory",
+120:       "org.apache.commons.collections4.map.MultiValueMap$Values",
+121:       "org.apache.commons.collections4.map.MultiValueMap$ValuesIterator",
+122:       "org.apache.commons.collections4.iterators.LazyIteratorChain",
+123:       "org.apache.commons.collections4.map.MultiValueMap$1",
+124:       "org.apache.commons.collections4.iterators.AbstractEmptyIterator",
+125:       "org.apache.commons.collections4.iterators.EmptyIterator",
+126:       "org.apache.commons.collections4.iterators.EmptyListIterator",
+127:       "org.apache.commons.collections4.iterators.EmptyOrderedIterator",
+128:       "org.apache.commons.collections4.iterators.AbstractEmptyMapIterator",
+129:       "org.apache.commons.collections4.iterators.EmptyMapIterator",
+130:       "org.apache.commons.collections4.iterators.EmptyOrderedMapIterator",
+131:       "org.apache.commons.collections4.functors.ConstantFactory",
+132:       "org.apache.commons.collections4.map.EntrySetToMapIteratorAdapter",
+133:       "org.apache.commons.collections4.iterators.IteratorChain",
+134:       "org.apache.commons.collections4.functors.ExceptionFactory",
+135:       "org.apache.commons.collections4.FunctorException",
+136:       "org.apache.commons.collections4.collection.AbstractCollectionDecorator",
+137:       "org.apache.commons.collections4.collection.UnmodifiableCollection",
+138:       "org.apache.commons.collections4.CollectionUtils",
+139:       "org.apache.commons.collections4.functors.InstantiateFactory"
+140:     );
+141:   }
+142: }
+
+[MASTER] 21:28:05.386 [logback-2] ERROR JUnitAnalyzer - Failed to compile test case:
+HashMap<ArrayList<Object>, Object> hashMap0 = new HashMap<ArrayList<Object>, Object>();
+MultiValueMap<ArrayList<Object>, LinkedList<Integer>> multiValueMap0 = new MultiValueMap<ArrayList<Object>, LinkedList<Integer>>((Map<ArrayList<Object>, ? super LinkedList<Object>>) hashMap0, (Factory<LinkedList<Object>>) null);
+
+[MASTER] 21:28:05.528 [logback-2] ERROR JUnitAnalyzer - Compilation failed on compilation units: [RegularFileObject[/tmp/EvoSuite_19_1627594085468/org/apache/commons/collections4/map/MultiValueMap_19_tmp__ESTest.java], RegularFileObject[/tmp/EvoSuite_19_1627594085468/org/apache/commons/collections4/map/MultiValueMap_19_tmp__ESTest_scaffolding.java]]
+[MASTER] 21:28:05.528 [logback-2] ERROR JUnitAnalyzer - Classpath: subjects/buggy-versions/Collections-27/target/classes:/experiment/tools/evosuite.jar:/experiment/subjects/buggy-versions/Collections-27/target/classes
+[MASTER] 21:28:05.528 [logback-2] ERROR JUnitAnalyzer - evosuiteCP: /experiment/tools/evosuite.jar:/experiment/subjects/buggy-versions/Collections-27/target/classes
+[MASTER] 21:28:05.531 [logback-2] ERROR JUnitAnalyzer - Diagnostic: constructor MultiValueMap in class org.apache.commons.collections4.map.MultiValueMap<K,V> cannot be applied to given types;
+  required: java.util.Map<java.util.LinkedList<java.lang.Object>,? super C>,org.apache.commons.collections4.Factory<C>
+  found: java.util.Map<java.util.LinkedList<java.lang.Object>,capture#1 of ? super java.util.LinkedList<java.util.Collection<java.lang.Object>>>,org.apache.commons.collections4.Factory<java.util.LinkedList<java.util.Collection<java.lang.Object>>>
+  reason: inference variable C has incompatible bounds
+    equality constraints: java.util.LinkedList<java.util.Collection<java.lang.Object>>
+    upper bounds: java.util.LinkedList<java.util.Collection<java.lang.Object>>,java.util.Collection<java.lang.Object>: 29
+[MASTER] 21:28:05.531 [logback-2] ERROR JUnitAnalyzer - Diagnostic: /tmp/EvoSuite_19_1627594085468/org/apache/commons/collections4/map/MultiValueMap_19_tmp__ESTest.java uses or overrides a deprecated API.: -1
+[MASTER] 21:28:05.531 [logback-2] ERROR JUnitAnalyzer - Diagnostic: Recompile with -Xlint:deprecation for details.: -1
+[MASTER] 21:28:05.531 [logback-2] ERROR JUnitAnalyzer - Diagnostic: Some messages have been simplified; recompile with -Xdiags:verbose to get full output: -1
+[MASTER] 21:28:05.532 [logback-2] ERROR JUnitAnalyzer - RegularFileObject[/tmp/EvoSuite_19_1627594085468/org/apache/commons/collections4/map/MultiValueMap_19_tmp__ESTest.java]
+1: /*
+2:  * This file was automatically generated by EvoSuite
+3:  * Thu Jul 29 21:28:05 GMT 2021
+4:  */
+5: 
+6: package org.apache.commons.collections4.map;
+7: 
+8: import org.junit.Test;
+9: import static org.junit.Assert.*;
+10: import static org.evosuite.runtime.EvoAssertions.*;
+11: import java.util.Collection;
+12: import java.util.LinkedList;
+13: import java.util.Map;
+14: import org.apache.commons.collections4.Factory;
+15: import org.apache.commons.collections4.functors.ExceptionFactory;
+16: import org.apache.commons.collections4.map.MultiValueMap;
+17: import org.evosuite.runtime.EvoRunner;
+18: import org.evosuite.runtime.EvoRunnerParameters;
+19: import org.junit.runner.RunWith;
+20: 
+21: @RunWith(EvoRunner.class) @EvoRunnerParameters(mockJVMNonDeterminism = true, useVFS = true, useVNET = true, resetStaticState = true) 
+22: public class MultiValueMap_19_tmp__ESTest extends MultiValueMap_19_tmp__ESTest_scaffolding {
+23: 
+24:   @Test(timeout = 4000)
+25:   public void test0()  throws Throwable  {
+26:       Factory<LinkedList<Collection<Object>>> factory0 = ExceptionFactory.exceptionFactory();
+27:       MultiValueMap<LinkedList<Object>, Object> multiValueMap0 = null;
+28:       try {
+29:         multiValueMap0 = new MultiValueMap<LinkedList<Object>, Object>((Map<LinkedList<Object>, ? super LinkedList<Collection<Object>>>) null, factory0);
+30:         fail("Expecting exception: NullPointerException");
+31:       
+32:       } catch(NullPointerException e) {
+33:          //
+34:          // Map must not be null.
+35:          //
+36:          verifyException("org.apache.commons.collections4.map.AbstractMapDecorator", e);
+37:       }
+38:   }
+39: }
+RegularFileObject[/tmp/EvoSuite_19_1627594085468/org/apache/commons/collections4/map/MultiValueMap_19_tmp__ESTest.java]
+1: /**
+2:  * Scaffolding file used to store all the setups needed to run 
+3:  * tests automatically generated by EvoSuite
+4:  * Thu Jul 29 21:28:05 GMT 2021
+5:  */
+6: 
+7: package org.apache.commons.collections4.map;
+8: 
+9: import org.evosuite.runtime.annotation.EvoSuiteClassExclude;
+10: import org.junit.BeforeClass;
+11: import org.junit.Before;
+12: import org.junit.After;
+13: import org.junit.AfterClass;
+14: import org.evosuite.runtime.sandbox.Sandbox;
+15: import org.evosuite.runtime.sandbox.Sandbox.SandboxMode;
+16: 
+17: @EvoSuiteClassExclude
+18: public class MultiValueMap_19_tmp__ESTest_scaffolding {
+19: 
+20:   @org.junit.Rule 
+21:   public org.evosuite.runtime.vnet.NonFunctionalRequirementRule nfr = new org.evosuite.runtime.vnet.NonFunctionalRequirementRule();
+22: 
+23:   private static final java.util.Properties defaultProperties = (java.util.Properties) java.lang.System.getProperties().clone(); 
+24: 
+25:   private org.evosuite.runtime.thread.ThreadStopper threadStopper =  new org.evosuite.runtime.thread.ThreadStopper (org.evosuite.runtime.thread.KillSwitchHandler.getInstance(), 3000);
+26: 
+27: 
+28:   @BeforeClass 
+29:   public static void initEvoSuiteFramework() { 
+30:     org.evosuite.runtime.RuntimeSettings.className = "org.apache.commons.collections4.map.MultiValueMap"; 
+31:     org.evosuite.runtime.GuiSupport.initialize(); 
+32:     org.evosuite.runtime.RuntimeSettings.maxNumberOfThreads = 100; 
+33:     org.evosuite.runtime.RuntimeSettings.maxNumberOfIterationsPerLoop = 10000; 
+34:     org.evosuite.runtime.RuntimeSettings.mockSystemIn = true; 
+35:     org.evosuite.runtime.RuntimeSettings.sandboxMode = org.evosuite.runtime.sandbox.Sandbox.SandboxMode.RECOMMENDED; 
+36:     org.evosuite.runtime.sandbox.Sandbox.initializeSecurityManagerForSUT(); 
+37:     org.evosuite.runtime.classhandling.JDKClassResetter.init();
+38:     setSystemProperties();
+39:     initializeClasses();
+40:     org.evosuite.runtime.Runtime.getInstance().resetRuntime(); 
+41:   } 
+42: 
+43:   @AfterClass 
+44:   public static void clearEvoSuiteFramework(){ 
+45:     Sandbox.resetDefaultSecurityManager(); 
+46:     java.lang.System.setProperties((java.util.Properties) defaultProperties.clone()); 
+47:   } 
+48: 
+49:   @Before 
+50:   public void initTestCase(){ 
+51:     threadStopper.storeCurrentThreads();
+52:     threadStopper.startRecordingTime();
+53:     org.evosuite.runtime.jvm.ShutdownHookHandler.getInstance().initHandler(); 
+54:     org.evosuite.runtime.sandbox.Sandbox.goingToExecuteSUTCode(); 
+55:     setSystemProperties(); 
+56:     org.evosuite.runtime.GuiSupport.setHeadless(); 
+57:     org.evosuite.runtime.Runtime.getInstance().resetRuntime(); 
+58:     org.evosuite.runtime.agent.InstrumentingAgent.activate(); 
+59:   } 
+60: 
+61:   @After 
+62:   public void doneWithTestCase(){ 
+63:     threadStopper.killAndJoinClientThreads();
+64:     org.evosuite.runtime.jvm.ShutdownHookHandler.getInstance().safeExecuteAddedHooks(); 
+65:     org.evosuite.runtime.classhandling.JDKClassResetter.reset(); 
+66:     resetClasses(); 
+67:     org.evosuite.runtime.sandbox.Sandbox.doneWithExecutingSUTCode(); 
+68:     org.evosuite.runtime.agent.InstrumentingAgent.deactivate(); 
+69:     org.evosuite.runtime.GuiSupport.restoreHeadlessMode(); 
+70:   } 
+71: 
+72:   public static void setSystemProperties() {
+73:  
+74:     java.lang.System.setProperties((java.util.Properties) defaultProperties.clone()); 
+75:     java.lang.System.setProperty("user.dir", "/experiment"); 
+76:     java.lang.System.setProperty("java.io.tmpdir", "/tmp"); 
+77:   }
+78: 
+79:   private static void initializeClasses() {
+80:     org.evosuite.runtime.classhandling.ClassStateSupport.initializeClasses(MultiValueMap_19_tmp__ESTest_scaffolding.class.getClassLoader() ,
+81:       "org.apache.commons.collections4.MapIterator",
+82:       "org.apache.commons.collections4.iterators.IteratorChain",
+83:       "org.apache.commons.collections4.functors.ExceptionFactory",
+84:       "org.apache.commons.collections4.map.MultiValueMap$Values",
+85:       "org.apache.commons.collections4.map.EntrySetToMapIteratorAdapter",
+86:       "org.apache.commons.collections4.map.AbstractMapDecorator",
+87:       "org.apache.commons.collections4.Get",
+88:       "org.apache.commons.collections4.iterators.AbstractEmptyIterator",
+89:       "org.apache.commons.collections4.CollectionUtils",
+90:       "org.apache.commons.collections4.map.MultiValueMap",
+91:       "org.apache.commons.collections4.FunctorException",
+92:       "org.apache.commons.collections4.map.AbstractIterableMap",
+93:       "org.apache.commons.collections4.Factory",
+94:       "org.apache.commons.collections4.iterators.LazyIteratorChain",
+95:       "org.apache.commons.collections4.Unmodifiable",
+96:       "org.apache.commons.collections4.map.MultiValueMap$ReflectionFactory",
+97:       "org.apache.commons.collections4.Transformer",
+98:       "org.apache.commons.collections4.map.MultiValueMap$1",
+99:       "org.apache.commons.collections4.map.MultiValueMap$ValuesIterator",
+100:       "org.apache.commons.collections4.collection.UnmodifiableCollection",
+101:       "org.apache.commons.collections4.ResettableIterator",
+102:       "org.apache.commons.collections4.iterators.EmptyIterator",
+103:       "org.apache.commons.collections4.functors.ConstantFactory",
+104:       "org.apache.commons.collections4.collection.AbstractCollectionDecorator",
+105:       "org.apache.commons.collections4.Put",
+106:       "org.apache.commons.collections4.MultiMap",
+107:       "org.apache.commons.collections4.IterableMap",
+108:       "org.apache.commons.collections4.IterableGet"
+109:     );
+110:   } 
+111: 
+112:   private static void resetClasses() {
+113:     org.evosuite.runtime.classhandling.ClassResetter.getInstance().setClassLoader(MultiValueMap_19_tmp__ESTest_scaffolding.class.getClassLoader()); 
+114: 
+115:     org.evosuite.runtime.classhandling.ClassStateSupport.resetClasses(
+116:       "org.apache.commons.collections4.map.AbstractIterableMap",
+117:       "org.apache.commons.collections4.map.AbstractMapDecorator",
+118:       "org.apache.commons.collections4.map.MultiValueMap",
+119:       "org.apache.commons.collections4.map.MultiValueMap$ReflectionFactory",
+120:       "org.apache.commons.collections4.map.MultiValueMap$Values",
+121:       "org.apache.commons.collections4.map.MultiValueMap$ValuesIterator",
+122:       "org.apache.commons.collections4.iterators.LazyIteratorChain",
+123:       "org.apache.commons.collections4.map.MultiValueMap$1",
+124:       "org.apache.commons.collections4.iterators.AbstractEmptyIterator",
+125:       "org.apache.commons.collections4.iterators.EmptyIterator",
+126:       "org.apache.commons.collections4.iterators.EmptyListIterator",
+127:       "org.apache.commons.collections4.iterators.EmptyOrderedIterator",
+128:       "org.apache.commons.collections4.iterators.AbstractEmptyMapIterator",
+129:       "org.apache.commons.collections4.iterators.EmptyMapIterator",
+130:       "org.apache.commons.collections4.iterators.EmptyOrderedMapIterator",
+131:       "org.apache.commons.collections4.functors.ConstantFactory",
+132:       "org.apache.commons.collections4.map.EntrySetToMapIteratorAdapter",
+133:       "org.apache.commons.collections4.iterators.IteratorChain",
+134:       "org.apache.commons.collections4.functors.ExceptionFactory",
+135:       "org.apache.commons.collections4.FunctorException",
+136:       "org.apache.commons.collections4.collection.AbstractCollectionDecorator",
+137:       "org.apache.commons.collections4.collection.UnmodifiableCollection",
+138:       "org.apache.commons.collections4.CollectionUtils",
+139:       "org.apache.commons.collections4.functors.InstantiateFactory"
+140:     );
+141:   }
+142: }
+
+[MASTER] 21:28:05.532 [logback-2] ERROR JUnitAnalyzer - Failed to compile test case:
+Factory<LinkedList<Collection<Object>>> factory0 = ExceptionFactory.exceptionFactory();
+MultiValueMap<LinkedList<Object>, Object> multiValueMap0 = new MultiValueMap<LinkedList<Object>, Object>((Map<LinkedList<Object>, ? super LinkedList<Collection<Object>>>) null, factory0);
+
+[MASTER] 21:28:06.197 [logback-2] ERROR JUnitAnalyzer - Compilation failed on compilation units: [RegularFileObject[/tmp/EvoSuite_26_1627594086138/org/apache/commons/collections4/map/MultiValueMap_26_tmp__ESTest.java], RegularFileObject[/tmp/EvoSuite_26_1627594086138/org/apache/commons/collections4/map/MultiValueMap_26_tmp__ESTest_scaffolding.java]]
+[MASTER] 21:28:06.197 [logback-2] ERROR JUnitAnalyzer - Classpath: subjects/buggy-versions/Collections-27/target/classes:/experiment/tools/evosuite.jar:/experiment/subjects/buggy-versions/Collections-27/target/classes
+[MASTER] 21:28:06.197 [logback-2] ERROR JUnitAnalyzer - evosuiteCP: /experiment/tools/evosuite.jar:/experiment/subjects/buggy-versions/Collections-27/target/classes
+[MASTER] 21:28:06.201 [logback-2] ERROR JUnitAnalyzer - Diagnostic: incompatible types: java.lang.Class<java.util.Collection> cannot be converted to java.lang.Class<java.util.ArrayList<java.util.LinkedList<java.util.LinkedList>>>: 28
+[MASTER] 21:28:06.201 [logback-2] ERROR JUnitAnalyzer - Diagnostic: /tmp/EvoSuite_26_1627594086138/org/apache/commons/collections4/map/MultiValueMap_26_tmp__ESTest.java uses or overrides a deprecated API.: -1
+[MASTER] 21:28:06.201 [logback-2] ERROR JUnitAnalyzer - Diagnostic: Recompile with -Xlint:deprecation for details.: -1
+[MASTER] 21:28:06.202 [logback-2] ERROR JUnitAnalyzer - RegularFileObject[/tmp/EvoSuite_26_1627594086138/org/apache/commons/collections4/map/MultiValueMap_26_tmp__ESTest.java]
+1: /*
+2:  * This file was automatically generated by EvoSuite
+3:  * Thu Jul 29 21:28:06 GMT 2021
+4:  */
+5: 
+6: package org.apache.commons.collections4.map;
+7: 
+8: import org.junit.Test;
+9: import static org.junit.Assert.*;
+10: import static org.evosuite.runtime.EvoAssertions.*;
+11: import java.util.ArrayList;
+12: import java.util.Collection;
+13: import java.util.LinkedList;
+14: import java.util.Map;
+15: import org.apache.commons.collections4.map.MultiValueMap;
+16: import org.evosuite.runtime.EvoRunner;
+17: import org.evosuite.runtime.EvoRunnerParameters;
+18: import org.junit.runner.RunWith;
+19: 
+20: @RunWith(EvoRunner.class) @EvoRunnerParameters(mockJVMNonDeterminism = true, useVFS = true, useVNET = true, resetStaticState = true) 
+21: public class MultiValueMap_26_tmp__ESTest extends MultiValueMap_26_tmp__ESTest_scaffolding {
+22: 
+23:   @Test(timeout = 4000)
+24:   public void test0()  throws Throwable  {
+25:       Class<Collection> class0 = Collection.class;
+26:       // Undeclared exception!
+27:       try { 
+28:         MultiValueMap.multiValueMap((Map<ArrayList<String>, ? super ArrayList<LinkedList<LinkedList>>>) null, (Class<ArrayList<LinkedList<LinkedList>>>) class0);
+29:         fail("Expecting exception: NullPointerException");
+30:       
+31:       } catch(NullPointerException e) {
+32:          //
+33:          // Map must not be null.
+34:          //
+35:          verifyException("org.apache.commons.collections4.map.AbstractMapDecorator", e);
+36:       }
+37:   }
+38: }
+RegularFileObject[/tmp/EvoSuite_26_1627594086138/org/apache/commons/collections4/map/MultiValueMap_26_tmp__ESTest.java]
+1: /**
+2:  * Scaffolding file used to store all the setups needed to run 
+3:  * tests automatically generated by EvoSuite
+4:  * Thu Jul 29 21:28:06 GMT 2021
+5:  */
+6: 
+7: package org.apache.commons.collections4.map;
+8: 
+9: import org.evosuite.runtime.annotation.EvoSuiteClassExclude;
+10: import org.junit.BeforeClass;
+11: import org.junit.Before;
+12: import org.junit.After;
+13: import org.junit.AfterClass;
+14: import org.evosuite.runtime.sandbox.Sandbox;
+15: import org.evosuite.runtime.sandbox.Sandbox.SandboxMode;
+16: 
+17: @EvoSuiteClassExclude
+18: public class MultiValueMap_26_tmp__ESTest_scaffolding {
+19: 
+20:   @org.junit.Rule 
+21:   public org.evosuite.runtime.vnet.NonFunctionalRequirementRule nfr = new org.evosuite.runtime.vnet.NonFunctionalRequirementRule();
+22: 
+23:   private static final java.util.Properties defaultProperties = (java.util.Properties) java.lang.System.getProperties().clone(); 
+24: 
+25:   private org.evosuite.runtime.thread.ThreadStopper threadStopper =  new org.evosuite.runtime.thread.ThreadStopper (org.evosuite.runtime.thread.KillSwitchHandler.getInstance(), 3000);
+26: 
+27: 
+28:   @BeforeClass 
+29:   public static void initEvoSuiteFramework() { 
+30:     org.evosuite.runtime.RuntimeSettings.className = "org.apache.commons.collections4.map.MultiValueMap"; 
+31:     org.evosuite.runtime.GuiSupport.initialize(); 
+32:     org.evosuite.runtime.RuntimeSettings.maxNumberOfThreads = 100; 
+33:     org.evosuite.runtime.RuntimeSettings.maxNumberOfIterationsPerLoop = 10000; 
+34:     org.evosuite.runtime.RuntimeSettings.mockSystemIn = true; 
+35:     org.evosuite.runtime.RuntimeSettings.sandboxMode = org.evosuite.runtime.sandbox.Sandbox.SandboxMode.RECOMMENDED; 
+36:     org.evosuite.runtime.sandbox.Sandbox.initializeSecurityManagerForSUT(); 
+37:     org.evosuite.runtime.classhandling.JDKClassResetter.init();
+38:     setSystemProperties();
+39:     initializeClasses();
+40:     org.evosuite.runtime.Runtime.getInstance().resetRuntime(); 
+41:   } 
+42: 
+43:   @AfterClass 
+44:   public static void clearEvoSuiteFramework(){ 
+45:     Sandbox.resetDefaultSecurityManager(); 
+46:     java.lang.System.setProperties((java.util.Properties) defaultProperties.clone()); 
+47:   } 
+48: 
+49:   @Before 
+50:   public void initTestCase(){ 
+51:     threadStopper.storeCurrentThreads();
+52:     threadStopper.startRecordingTime();
+53:     org.evosuite.runtime.jvm.ShutdownHookHandler.getInstance().initHandler(); 
+54:     org.evosuite.runtime.sandbox.Sandbox.goingToExecuteSUTCode(); 
+55:     setSystemProperties(); 
+56:     org.evosuite.runtime.GuiSupport.setHeadless(); 
+57:     org.evosuite.runtime.Runtime.getInstance().resetRuntime(); 
+58:     org.evosuite.runtime.agent.InstrumentingAgent.activate(); 
+59:   } 
+60: 
+61:   @After 
+62:   public void doneWithTestCase(){ 
+63:     threadStopper.killAndJoinClientThreads();
+64:     org.evosuite.runtime.jvm.ShutdownHookHandler.getInstance().safeExecuteAddedHooks(); 
+65:     org.evosuite.runtime.classhandling.JDKClassResetter.reset(); 
+66:     resetClasses(); 
+67:     org.evosuite.runtime.sandbox.Sandbox.doneWithExecutingSUTCode(); 
+68:     org.evosuite.runtime.agent.InstrumentingAgent.deactivate(); 
+69:     org.evosuite.runtime.GuiSupport.restoreHeadlessMode(); 
+70:   } 
+71: 
+72:   public static void setSystemProperties() {
+73:  
+74:     java.lang.System.setProperties((java.util.Properties) defaultProperties.clone()); 
+75:     java.lang.System.setProperty("user.dir", "/experiment"); 
+76:     java.lang.System.setProperty("java.io.tmpdir", "/tmp"); 
+77:   }
+78: 
+79:   private static void initializeClasses() {
+80:     org.evosuite.runtime.classhandling.ClassStateSupport.initializeClasses(MultiValueMap_26_tmp__ESTest_scaffolding.class.getClassLoader() ,
+81:       "org.apache.commons.collections4.MapIterator",
+82:       "org.apache.commons.collections4.iterators.IteratorChain",
+83:       "org.apache.commons.collections4.functors.ExceptionFactory",
+84:       "org.apache.commons.collections4.map.MultiValueMap$Values",
+85:       "org.apache.commons.collections4.map.EntrySetToMapIteratorAdapter",
+86:       "org.apache.commons.collections4.map.AbstractMapDecorator",
+87:       "org.apache.commons.collections4.Get",
+88:       "org.apache.commons.collections4.iterators.AbstractEmptyIterator",
+89:       "org.apache.commons.collections4.CollectionUtils",
+90:       "org.apache.commons.collections4.map.MultiValueMap",
+91:       "org.apache.commons.collections4.FunctorException",
+92:       "org.apache.commons.collections4.map.AbstractIterableMap",
+93:       "org.apache.commons.collections4.Factory",
+94:       "org.apache.commons.collections4.iterators.LazyIteratorChain",
+95:       "org.apache.commons.collections4.Unmodifiable",
+96:       "org.apache.commons.collections4.map.MultiValueMap$ReflectionFactory",
+97:       "org.apache.commons.collections4.Transformer",
+98:       "org.apache.commons.collections4.map.MultiValueMap$1",
+99:       "org.apache.commons.collections4.map.MultiValueMap$ValuesIterator",
+100:       "org.apache.commons.collections4.collection.UnmodifiableCollection",
+101:       "org.apache.commons.collections4.ResettableIterator",
+102:       "org.apache.commons.collections4.iterators.EmptyIterator",
+103:       "org.apache.commons.collections4.functors.ConstantFactory",
+104:       "org.apache.commons.collections4.collection.AbstractCollectionDecorator",
+105:       "org.apache.commons.collections4.Put",
+106:       "org.apache.commons.collections4.MultiMap",
+107:       "org.apache.commons.collections4.IterableMap",
+108:       "org.apache.commons.collections4.IterableGet"
+109:     );
+110:   } 
+111: 
+112:   private static void resetClasses() {
+113:     org.evosuite.runtime.classhandling.ClassResetter.getInstance().setClassLoader(MultiValueMap_26_tmp__ESTest_scaffolding.class.getClassLoader()); 
+114: 
+115:     org.evosuite.runtime.classhandling.ClassStateSupport.resetClasses(
+116:       "org.apache.commons.collections4.map.AbstractIterableMap",
+117:       "org.apache.commons.collections4.map.AbstractMapDecorator",
+118:       "org.apache.commons.collections4.map.MultiValueMap",
+119:       "org.apache.commons.collections4.map.MultiValueMap$ReflectionFactory",
+120:       "org.apache.commons.collections4.map.MultiValueMap$Values",
+121:       "org.apache.commons.collections4.map.MultiValueMap$ValuesIterator",
+122:       "org.apache.commons.collections4.iterators.LazyIteratorChain",
+123:       "org.apache.commons.collections4.map.MultiValueMap$1",
+124:       "org.apache.commons.collections4.iterators.AbstractEmptyIterator",
+125:       "org.apache.commons.collections4.iterators.EmptyIterator",
+126:       "org.apache.commons.collections4.iterators.EmptyListIterator",
+127:       "org.apache.commons.collections4.iterators.EmptyOrderedIterator",
+128:       "org.apache.commons.collections4.iterators.AbstractEmptyMapIterator",
+129:       "org.apache.commons.collections4.iterators.EmptyMapIterator",
+130:       "org.apache.commons.collections4.iterators.EmptyOrderedMapIterator",
+131:       "org.apache.commons.collections4.functors.ConstantFactory",
+132:       "org.apache.commons.collections4.map.EntrySetToMapIteratorAdapter",
+133:       "org.apache.commons.collections4.iterators.IteratorChain",
+134:       "org.apache.commons.collections4.functors.ExceptionFactory",
+135:       "org.apache.commons.collections4.FunctorException",
+136:       "org.apache.commons.collections4.collection.AbstractCollectionDecorator",
+137:       "org.apache.commons.collections4.collection.UnmodifiableCollection",
+138:       "org.apache.commons.collections4.CollectionUtils",
+139:       "org.apache.commons.collections4.functors.InstantiateFactory"
+140:     );
+141:   }
+142: }
+
+[MASTER] 21:28:06.202 [logback-2] ERROR JUnitAnalyzer - Failed to compile test case:
+Class<Collection> class0 = Collection.class;
+MultiValueMap.multiValueMap((Map<ArrayList<String>, ? super ArrayList<LinkedList<LinkedList>>>) null, (Class<ArrayList<LinkedList<LinkedList>>>) class0);
+
+[MASTER] 21:28:06.634 [logback-2] ERROR JUnitAnalyzer - Compilation failed on compilation units: [RegularFileObject[/tmp/EvoSuite_31_1627594086580/org/apache/commons/collections4/map/MultiValueMap_31_tmp__ESTest.java], RegularFileObject[/tmp/EvoSuite_31_1627594086580/org/apache/commons/collections4/map/MultiValueMap_31_tmp__ESTest_scaffolding.java]]
+[MASTER] 21:28:06.635 [logback-2] ERROR JUnitAnalyzer - Classpath: subjects/buggy-versions/Collections-27/target/classes:/experiment/tools/evosuite.jar:/experiment/subjects/buggy-versions/Collections-27/target/classes
+[MASTER] 21:28:06.635 [logback-2] ERROR JUnitAnalyzer - evosuiteCP: /experiment/tools/evosuite.jar:/experiment/subjects/buggy-versions/Collections-27/target/classes
+[MASTER] 21:28:06.635 [logback-2] ERROR JUnitAnalyzer - Diagnostic: constructor MultiValueMap in class org.apache.commons.collections4.map.MultiValueMap<K,V> cannot be applied to given types;
+  required: java.util.Map<java.util.Collection<java.lang.Object>,? super C>,org.apache.commons.collections4.Factory<C>
+  found: java.util.Map<java.util.Collection<java.lang.Object>,capture#1 of ? super java.util.Collection<java.lang.Object>>,org.apache.commons.collections4.Factory<java.util.Collection<java.lang.Object>>
+  reason: inference variable C has incompatible bounds
+    equality constraints: java.util.Collection<java.lang.Object>
+    upper bounds: java.util.Collection<java.lang.Object>,java.util.Collection<java.util.Collection<java.lang.Object>>: 32
+[MASTER] 21:28:06.636 [logback-2] ERROR JUnitAnalyzer - Diagnostic: /tmp/EvoSuite_31_1627594086580/org/apache/commons/collections4/map/MultiValueMap_31_tmp__ESTest.java uses or overrides a deprecated API.: -1
+[MASTER] 21:28:06.636 [logback-2] ERROR JUnitAnalyzer - Diagnostic: Recompile with -Xlint:deprecation for details.: -1
+[MASTER] 21:28:06.636 [logback-2] ERROR JUnitAnalyzer - Diagnostic: Some messages have been simplified; recompile with -Xdiags:verbose to get full output: -1
+[MASTER] 21:28:06.636 [logback-2] ERROR JUnitAnalyzer - RegularFileObject[/tmp/EvoSuite_31_1627594086580/org/apache/commons/collections4/map/MultiValueMap_31_tmp__ESTest.java]
+1: /*
+2:  * This file was automatically generated by EvoSuite
+3:  * Thu Jul 29 21:28:06 GMT 2021
+4:  */
+5: 
+6: package org.apache.commons.collections4.map;
+7: 
+8: import org.junit.Test;
+9: import static org.junit.Assert.*;
+10: import static org.evosuite.runtime.EvoAssertions.*;
+11: import java.util.ArrayList;
+12: import java.util.Collection;
+13: import java.util.HashMap;
+14: import java.util.Map;
+15: import org.apache.commons.collections4.Factory;
+16: import org.apache.commons.collections4.functors.ExceptionFactory;
+17: import org.apache.commons.collections4.map.MultiValueMap;
+18: import org.evosuite.runtime.EvoRunner;
+19: import org.evosuite.runtime.EvoRunnerParameters;
+20: import org.junit.runner.RunWith;
+21: 
+22: @RunWith(EvoRunner.class) @EvoRunnerParameters(mockJVMNonDeterminism = true, useVFS = true, useVNET = true, resetStaticState = true) 
+23: public class MultiValueMap_31_tmp__ESTest extends MultiValueMap_31_tmp__ESTest_scaffolding {
+24: 
+25:   @Test(timeout = 4000)
+26:   public void test0()  throws Throwable  {
+27:       ArrayList<Object> arrayList0 = new ArrayList<Object>();
+28:       ArrayList<Collection<Object>> arrayList1 = new ArrayList<Collection<Object>>();
+29:       arrayList1.add((Collection<Object>) arrayList0);
+30:       HashMap<Collection<Object>, Object> hashMap0 = new HashMap<Collection<Object>, Object>();
+31:       Factory<Collection<Object>> factory0 = ExceptionFactory.exceptionFactory();
+32:       MultiValueMap<Collection<Object>, Collection<Object>> multiValueMap0 = new MultiValueMap<Collection<Object>, Collection<Object>>((Map<Collection<Object>, ? super Collection<Object>>) hashMap0, factory0);
+33:       // Undeclared exception!
+34:       try { 
+35:         multiValueMap0.putAll((Collection<Object>) arrayList0, (Collection<Collection<Object>>) arrayList1);
+36:         fail("Expecting exception: RuntimeException");
+37:       
+38:       } catch(RuntimeException e) {
+39:          //
+40:          // ExceptionFactory invoked
+41:          //
+42:          verifyException("org.apache.commons.collections4.functors.ExceptionFactory", e);
+43:       }
+44:   }
+45: }
+RegularFileObject[/tmp/EvoSuite_31_1627594086580/org/apache/commons/collections4/map/MultiValueMap_31_tmp__ESTest.java]
+1: /**
+2:  * Scaffolding file used to store all the setups needed to run 
+3:  * tests automatically generated by EvoSuite
+4:  * Thu Jul 29 21:28:06 GMT 2021
+5:  */
+6: 
+7: package org.apache.commons.collections4.map;
+8: 
+9: import org.evosuite.runtime.annotation.EvoSuiteClassExclude;
+10: import org.junit.BeforeClass;
+11: import org.junit.Before;
+12: import org.junit.After;
+13: import org.junit.AfterClass;
+14: import org.evosuite.runtime.sandbox.Sandbox;
+15: import org.evosuite.runtime.sandbox.Sandbox.SandboxMode;
+16: 
+17: @EvoSuiteClassExclude
+18: public class MultiValueMap_31_tmp__ESTest_scaffolding {
+19: 
+20:   @org.junit.Rule 
+21:   public org.evosuite.runtime.vnet.NonFunctionalRequirementRule nfr = new org.evosuite.runtime.vnet.NonFunctionalRequirementRule();
+22: 
+23:   private static final java.util.Properties defaultProperties = (java.util.Properties) java.lang.System.getProperties().clone(); 
+24: 
+25:   private org.evosuite.runtime.thread.ThreadStopper threadStopper =  new org.evosuite.runtime.thread.ThreadStopper (org.evosuite.runtime.thread.KillSwitchHandler.getInstance(), 3000);
+26: 
+27: 
+28:   @BeforeClass 
+29:   public static void initEvoSuiteFramework() { 
+30:     org.evosuite.runtime.RuntimeSettings.className = "org.apache.commons.collections4.map.MultiValueMap"; 
+31:     org.evosuite.runtime.GuiSupport.initialize(); 
+32:     org.evosuite.runtime.RuntimeSettings.maxNumberOfThreads = 100; 
+33:     org.evosuite.runtime.RuntimeSettings.maxNumberOfIterationsPerLoop = 10000; 
+34:     org.evosuite.runtime.RuntimeSettings.mockSystemIn = true; 
+35:     org.evosuite.runtime.RuntimeSettings.sandboxMode = org.evosuite.runtime.sandbox.Sandbox.SandboxMode.RECOMMENDED; 
+36:     org.evosuite.runtime.sandbox.Sandbox.initializeSecurityManagerForSUT(); 
+37:     org.evosuite.runtime.classhandling.JDKClassResetter.init();
+38:     setSystemProperties();
+39:     initializeClasses();
+40:     org.evosuite.runtime.Runtime.getInstance().resetRuntime(); 
+41:   } 
+42: 
+43:   @AfterClass 
+44:   public static void clearEvoSuiteFramework(){ 
+45:     Sandbox.resetDefaultSecurityManager(); 
+46:     java.lang.System.setProperties((java.util.Properties) defaultProperties.clone()); 
+47:   } 
+48: 
+49:   @Before 
+50:   public void initTestCase(){ 
+51:     threadStopper.storeCurrentThreads();
+52:     threadStopper.startRecordingTime();
+53:     org.evosuite.runtime.jvm.ShutdownHookHandler.getInstance().initHandler(); 
+54:     org.evosuite.runtime.sandbox.Sandbox.goingToExecuteSUTCode(); 
+55:     setSystemProperties(); 
+56:     org.evosuite.runtime.GuiSupport.setHeadless(); 
+57:     org.evosuite.runtime.Runtime.getInstance().resetRuntime(); 
+58:     org.evosuite.runtime.agent.InstrumentingAgent.activate(); 
+59:   } 
+60: 
+61:   @After 
+62:   public void doneWithTestCase(){ 
+63:     threadStopper.killAndJoinClientThreads();
+64:     org.evosuite.runtime.jvm.ShutdownHookHandler.getInstance().safeExecuteAddedHooks(); 
+65:     org.evosuite.runtime.classhandling.JDKClassResetter.reset(); 
+66:     resetClasses(); 
+67:     org.evosuite.runtime.sandbox.Sandbox.doneWithExecutingSUTCode(); 
+68:     org.evosuite.runtime.agent.InstrumentingAgent.deactivate(); 
+69:     org.evosuite.runtime.GuiSupport.restoreHeadlessMode(); 
+70:   } 
+71: 
+72:   public static void setSystemProperties() {
+73:  
+74:     java.lang.System.setProperties((java.util.Properties) defaultProperties.clone()); 
+75:     java.lang.System.setProperty("user.dir", "/experiment"); 
+76:     java.lang.System.setProperty("java.io.tmpdir", "/tmp"); 
+77:   }
+78: 
+79:   private static void initializeClasses() {
+80:     org.evosuite.runtime.classhandling.ClassStateSupport.initializeClasses(MultiValueMap_31_tmp__ESTest_scaffolding.class.getClassLoader() ,
+81:       "org.apache.commons.collections4.MapIterator",
+82:       "org.apache.commons.collections4.iterators.IteratorChain",
+83:       "org.apache.commons.collections4.functors.ExceptionFactory",
+84:       "org.apache.commons.collections4.map.MultiValueMap$Values",
+85:       "org.apache.commons.collections4.map.EntrySetToMapIteratorAdapter",
+86:       "org.apache.commons.collections4.map.AbstractMapDecorator",
+87:       "org.apache.commons.collections4.Get",
+88:       "org.apache.commons.collections4.iterators.AbstractEmptyIterator",
+89:       "org.apache.commons.collections4.CollectionUtils",
+90:       "org.apache.commons.collections4.map.MultiValueMap",
+91:       "org.apache.commons.collections4.FunctorException",
+92:       "org.apache.commons.collections4.map.AbstractIterableMap",
+93:       "org.apache.commons.collections4.Factory",
+94:       "org.apache.commons.collections4.iterators.LazyIteratorChain",
+95:       "org.apache.commons.collections4.Unmodifiable",
+96:       "org.apache.commons.collections4.map.MultiValueMap$ReflectionFactory",
+97:       "org.apache.commons.collections4.Transformer",
+98:       "org.apache.commons.collections4.map.MultiValueMap$1",
+99:       "org.apache.commons.collections4.map.MultiValueMap$ValuesIterator",
+100:       "org.apache.commons.collections4.collection.UnmodifiableCollection",
+101:       "org.apache.commons.collections4.ResettableIterator",
+102:       "org.apache.commons.collections4.iterators.EmptyIterator",
+103:       "org.apache.commons.collections4.functors.ConstantFactory",
+104:       "org.apache.commons.collections4.collection.AbstractCollectionDecorator",
+105:       "org.apache.commons.collections4.Put",
+106:       "org.apache.commons.collections4.MultiMap",
+107:       "org.apache.commons.collections4.IterableMap",
+108:       "org.apache.commons.collections4.IterableGet"
+109:     );
+110:   } 
+111: 
+112:   private static void resetClasses() {
+113:     org.evosuite.runtime.classhandling.ClassResetter.getInstance().setClassLoader(MultiValueMap_31_tmp__ESTest_scaffolding.class.getClassLoader()); 
+114: 
+115:     org.evosuite.runtime.classhandling.ClassStateSupport.resetClasses(
+116:       "org.apache.commons.collections4.map.AbstractIterableMap",
+117:       "org.apache.commons.collections4.map.AbstractMapDecorator",
+118:       "org.apache.commons.collections4.map.MultiValueMap",
+119:       "org.apache.commons.collections4.map.MultiValueMap$ReflectionFactory",
+120:       "org.apache.commons.collections4.map.MultiValueMap$Values",
+121:       "org.apache.commons.collections4.map.MultiValueMap$ValuesIterator",
+122:       "org.apache.commons.collections4.iterators.LazyIteratorChain",
+123:       "org.apache.commons.collections4.map.MultiValueMap$1",
+124:       "org.apache.commons.collections4.iterators.AbstractEmptyIterator",
+125:       "org.apache.commons.collections4.iterators.EmptyIterator",
+126:       "org.apache.commons.collections4.iterators.EmptyListIterator",
+127:       "org.apache.commons.collections4.iterators.EmptyOrderedIterator",
+128:       "org.apache.commons.collections4.iterators.AbstractEmptyMapIterator",
+129:       "org.apache.commons.collections4.iterators.EmptyMapIterator",
+130:       "org.apache.commons.collections4.iterators.EmptyOrderedMapIterator",
+131:       "org.apache.commons.collections4.functors.ConstantFactory",
+132:       "org.apache.commons.collections4.map.EntrySetToMapIteratorAdapter",
+133:       "org.apache.commons.collections4.iterators.IteratorChain",
+134:       "org.apache.commons.collections4.functors.ExceptionFactory",
+135:       "org.apache.commons.collections4.FunctorException",
+136:       "org.apache.commons.collections4.collection.AbstractCollectionDecorator",
+137:       "org.apache.commons.collections4.collection.UnmodifiableCollection",
+138:       "org.apache.commons.collections4.CollectionUtils",
+139:       "org.apache.commons.collections4.functors.InstantiateFactory"
+140:     );
+141:   }
+142: }
+
+[MASTER] 21:28:06.637 [logback-2] ERROR JUnitAnalyzer - Failed to compile test case:
+ArrayList<Object> arrayList0 = new ArrayList<Object>();
+ArrayList<Collection<Object>> arrayList1 = new ArrayList<Collection<Object>>();
+arrayList1.add((Collection<Object>) arrayList0);
+HashMap<Collection<Object>, Object> hashMap0 = new HashMap<Collection<Object>, Object>();
+Factory<Collection<Object>> factory0 = ExceptionFactory.exceptionFactory();
+MultiValueMap<Collection<Object>, Collection<Object>> multiValueMap0 = new MultiValueMap<Collection<Object>, Collection<Object>>((Map<Collection<Object>, ? super Collection<Object>>) hashMap0, factory0);
+multiValueMap0.putAll((Collection<Object>) arrayList0, (Collection<Collection<Object>>) arrayList1);
+
+[MASTER] 21:28:07.638 [logback-2] ERROR JUnitAnalyzer - Compilation failed on compilation units: [RegularFileObject[/tmp/EvoSuite_38_1627594087357/org/apache/commons/collections4/map/MultiValueMap_38_tmp__ESTest.java], RegularFileObject[/tmp/EvoSuite_38_1627594087357/org/apache/commons/collections4/map/MultiValueMap_38_tmp__ESTest_scaffolding.java]]
+[MASTER] 21:28:07.638 [logback-2] ERROR JUnitAnalyzer - Classpath: subjects/buggy-versions/Collections-27/target/classes:/experiment/tools/evosuite.jar:/experiment/subjects/buggy-versions/Collections-27/target/classes
+[MASTER] 21:28:07.638 [logback-2] ERROR JUnitAnalyzer - evosuiteCP: /experiment/tools/evosuite.jar:/experiment/subjects/buggy-versions/Collections-27/target/classes
+[MASTER] 21:28:07.638 [logback-2] ERROR JUnitAnalyzer - Diagnostic: constructor MultiValueMap in class org.apache.commons.collections4.map.MultiValueMap<K,V> cannot be applied to given types;
+  required: java.util.Map<java.lang.Object,? super C>,org.apache.commons.collections4.Factory<C>
+  found: java.util.Map<java.lang.Object,capture#1 of ? super java.util.LinkedList<java.lang.String>>,org.apache.commons.collections4.Factory<java.util.LinkedList<java.lang.String>>
+  reason: inference variable C has incompatible bounds
+    equality constraints: java.util.LinkedList<java.lang.String>
+    upper bounds: java.util.LinkedList<java.lang.String>,java.util.Collection<java.util.LinkedList<java.lang.String>>: 29
+[MASTER] 21:28:07.639 [logback-2] ERROR JUnitAnalyzer - Diagnostic: /tmp/EvoSuite_38_1627594087357/org/apache/commons/collections4/map/MultiValueMap_38_tmp__ESTest.java uses or overrides a deprecated API.: -1
+[MASTER] 21:28:07.639 [logback-2] ERROR JUnitAnalyzer - Diagnostic: Recompile with -Xlint:deprecation for details.: -1
+[MASTER] 21:28:07.639 [logback-2] ERROR JUnitAnalyzer - Diagnostic: Some messages have been simplified; recompile with -Xdiags:verbose to get full output: -1
+[MASTER] 21:28:07.639 [logback-2] ERROR JUnitAnalyzer - RegularFileObject[/tmp/EvoSuite_38_1627594087357/org/apache/commons/collections4/map/MultiValueMap_38_tmp__ESTest.java]
+1: /*
+2:  * This file was automatically generated by EvoSuite
+3:  * Thu Jul 29 21:28:07 GMT 2021
+4:  */
+5: 
+6: package org.apache.commons.collections4.map;
+7: 
+8: import org.junit.Test;
+9: import static org.junit.Assert.*;
+10: import static org.evosuite.runtime.EvoAssertions.*;
+11: import java.util.LinkedList;
+12: import java.util.Map;
+13: import java.util.function.Function;
+14: import org.apache.commons.collections4.Factory;
+15: import org.apache.commons.collections4.functors.ConstantFactory;
+16: import org.apache.commons.collections4.map.MultiValueMap;
+17: import org.evosuite.runtime.EvoRunner;
+18: import org.evosuite.runtime.EvoRunnerParameters;
+19: import org.junit.runner.RunWith;
+20: 
+21: @RunWith(EvoRunner.class) @EvoRunnerParameters(mockJVMNonDeterminism = true, useVFS = true, useVNET = true, resetStaticState = true) 
+22: public class MultiValueMap_38_tmp__ESTest extends MultiValueMap_38_tmp__ESTest_scaffolding {
+23: 
+24:   @Test(timeout = 4000)
+25:   public void test0()  throws Throwable  {
+26:       MultiValueMap<Object, String> multiValueMap0 = new MultiValueMap<Object, String>();
+27:       LinkedList<String> linkedList0 = new LinkedList<String>();
+28:       Factory<LinkedList<String>> factory0 = ConstantFactory.constantFactory(linkedList0);
+29:       MultiValueMap<Object, LinkedList<String>> multiValueMap1 = new MultiValueMap<Object, LinkedList<String>>((Map<Object, ? super LinkedList<String>>) multiValueMap0, factory0);
+30:       Function<Object, Object> function0 = Function.identity();
+31:       multiValueMap1.computeIfAbsent(multiValueMap0, function0);
+32:       // Undeclared exception!
+33:       try { 
+34:         multiValueMap1.totalSize();
+35:         fail("Expecting exception: StackOverflowError");
+36:       
+37:       } catch(StackOverflowError e) {
+38:          //
+39:          // no message in exception (getMessage() returned null)
+40:          //
+41:       }
+42:   }
+43: }
+RegularFileObject[/tmp/EvoSuite_38_1627594087357/org/apache/commons/collections4/map/MultiValueMap_38_tmp__ESTest.java]
+1: /**
+2:  * Scaffolding file used to store all the setups needed to run 
+3:  * tests automatically generated by EvoSuite
+4:  * Thu Jul 29 21:28:07 GMT 2021
+5:  */
+6: 
+7: package org.apache.commons.collections4.map;
+8: 
+9: import org.evosuite.runtime.annotation.EvoSuiteClassExclude;
+10: import org.junit.BeforeClass;
+11: import org.junit.Before;
+12: import org.junit.After;
+13: import org.junit.AfterClass;
+14: import org.evosuite.runtime.sandbox.Sandbox;
+15: import org.evosuite.runtime.sandbox.Sandbox.SandboxMode;
+16: 
+17: @EvoSuiteClassExclude
+18: public class MultiValueMap_38_tmp__ESTest_scaffolding {
+19: 
+20:   @org.junit.Rule 
+21:   public org.evosuite.runtime.vnet.NonFunctionalRequirementRule nfr = new org.evosuite.runtime.vnet.NonFunctionalRequirementRule();
+22: 
+23:   private static final java.util.Properties defaultProperties = (java.util.Properties) java.lang.System.getProperties().clone(); 
+24: 
+25:   private org.evosuite.runtime.thread.ThreadStopper threadStopper =  new org.evosuite.runtime.thread.ThreadStopper (org.evosuite.runtime.thread.KillSwitchHandler.getInstance(), 3000);
+26: 
+27: 
+28:   @BeforeClass 
+29:   public static void initEvoSuiteFramework() { 
+30:     org.evosuite.runtime.RuntimeSettings.className = "org.apache.commons.collections4.map.MultiValueMap"; 
+31:     org.evosuite.runtime.GuiSupport.initialize(); 
+32:     org.evosuite.runtime.RuntimeSettings.maxNumberOfThreads = 100; 
+33:     org.evosuite.runtime.RuntimeSettings.maxNumberOfIterationsPerLoop = 10000; 
+34:     org.evosuite.runtime.RuntimeSettings.mockSystemIn = true; 
+35:     org.evosuite.runtime.RuntimeSettings.sandboxMode = org.evosuite.runtime.sandbox.Sandbox.SandboxMode.RECOMMENDED; 
+36:     org.evosuite.runtime.sandbox.Sandbox.initializeSecurityManagerForSUT(); 
+37:     org.evosuite.runtime.classhandling.JDKClassResetter.init();
+38:     setSystemProperties();
+39:     initializeClasses();
+40:     org.evosuite.runtime.Runtime.getInstance().resetRuntime(); 
+41:   } 
+42: 
+43:   @AfterClass 
+44:   public static void clearEvoSuiteFramework(){ 
+45:     Sandbox.resetDefaultSecurityManager(); 
+46:     java.lang.System.setProperties((java.util.Properties) defaultProperties.clone()); 
+47:   } 
+48: 
+49:   @Before 
+50:   public void initTestCase(){ 
+51:     threadStopper.storeCurrentThreads();
+52:     threadStopper.startRecordingTime();
+53:     org.evosuite.runtime.jvm.ShutdownHookHandler.getInstance().initHandler(); 
+54:     org.evosuite.runtime.sandbox.Sandbox.goingToExecuteSUTCode(); 
+55:     setSystemProperties(); 
+56:     org.evosuite.runtime.GuiSupport.setHeadless(); 
+57:     org.evosuite.runtime.Runtime.getInstance().resetRuntime(); 
+58:     org.evosuite.runtime.agent.InstrumentingAgent.activate(); 
+59:   } 
+60: 
+61:   @After 
+62:   public void doneWithTestCase(){ 
+63:     threadStopper.killAndJoinClientThreads();
+64:     org.evosuite.runtime.jvm.ShutdownHookHandler.getInstance().safeExecuteAddedHooks(); 
+65:     org.evosuite.runtime.classhandling.JDKClassResetter.reset(); 
+66:     resetClasses(); 
+67:     org.evosuite.runtime.sandbox.Sandbox.doneWithExecutingSUTCode(); 
+68:     org.evosuite.runtime.agent.InstrumentingAgent.deactivate(); 
+69:     org.evosuite.runtime.GuiSupport.restoreHeadlessMode(); 
+70:   } 
+71: 
+72:   public static void setSystemProperties() {
+73:  
+74:     java.lang.System.setProperties((java.util.Properties) defaultProperties.clone()); 
+75:     java.lang.System.setProperty("user.dir", "/experiment"); 
+76:     java.lang.System.setProperty("java.io.tmpdir", "/tmp"); 
+77:   }
+78: 
+79:   private static void initializeClasses() {
+80:     org.evosuite.runtime.classhandling.ClassStateSupport.initializeClasses(MultiValueMap_38_tmp__ESTest_scaffolding.class.getClassLoader() ,
+81:       "org.apache.commons.collections4.MapIterator",
+82:       "org.apache.commons.collections4.iterators.IteratorChain",
+83:       "org.apache.commons.collections4.functors.ExceptionFactory",
+84:       "org.apache.commons.collections4.map.MultiValueMap$Values",
+85:       "org.apache.commons.collections4.map.EntrySetToMapIteratorAdapter",
+86:       "org.apache.commons.collections4.map.AbstractMapDecorator",
+87:       "org.apache.commons.collections4.Get",
+88:       "org.apache.commons.collections4.iterators.AbstractEmptyIterator",
+89:       "org.apache.commons.collections4.CollectionUtils",
+90:       "org.apache.commons.collections4.map.MultiValueMap",
+91:       "org.apache.commons.collections4.FunctorException",
+92:       "org.apache.commons.collections4.map.AbstractIterableMap",
+93:       "org.apache.commons.collections4.Factory",
+94:       "org.apache.commons.collections4.iterators.LazyIteratorChain",
+95:       "org.apache.commons.collections4.Unmodifiable",
+96:       "org.apache.commons.collections4.map.MultiValueMap$ReflectionFactory",
+97:       "org.apache.commons.collections4.Transformer",
+98:       "org.apache.commons.collections4.map.MultiValueMap$1",
+99:       "org.apache.commons.collections4.map.MultiValueMap$ValuesIterator",
+100:       "org.apache.commons.collections4.collection.UnmodifiableCollection",
+101:       "org.apache.commons.collections4.ResettableIterator",
+102:       "org.apache.commons.collections4.iterators.EmptyIterator",
+103:       "org.apache.commons.collections4.functors.ConstantFactory",
+104:       "org.apache.commons.collections4.collection.AbstractCollectionDecorator",
+105:       "org.apache.commons.collections4.Put",
+106:       "org.apache.commons.collections4.MultiMap",
+107:       "org.apache.commons.collections4.IterableMap",
+108:       "org.apache.commons.collections4.IterableGet"
+109:     );
+110:   } 
+111: 
+112:   private static void resetClasses() {
+113:     org.evosuite.runtime.classhandling.ClassResetter.getInstance().setClassLoader(MultiValueMap_38_tmp__ESTest_scaffolding.class.getClassLoader()); 
+114: 
+115:     org.evosuite.runtime.classhandling.ClassStateSupport.resetClasses(
+116:       "org.apache.commons.collections4.map.AbstractIterableMap",
+117:       "org.apache.commons.collections4.map.AbstractMapDecorator",
+118:       "org.apache.commons.collections4.map.MultiValueMap",
+119:       "org.apache.commons.collections4.map.MultiValueMap$ReflectionFactory",
+120:       "org.apache.commons.collections4.map.MultiValueMap$Values",
+121:       "org.apache.commons.collections4.map.MultiValueMap$ValuesIterator",
+122:       "org.apache.commons.collections4.iterators.LazyIteratorChain",
+123:       "org.apache.commons.collections4.map.MultiValueMap$1",
+124:       "org.apache.commons.collections4.iterators.AbstractEmptyIterator",
+125:       "org.apache.commons.collections4.iterators.EmptyIterator",
+126:       "org.apache.commons.collections4.iterators.EmptyListIterator",
+127:       "org.apache.commons.collections4.iterators.EmptyOrderedIterator",
+128:       "org.apache.commons.collections4.iterators.AbstractEmptyMapIterator",
+129:       "org.apache.commons.collections4.iterators.EmptyMapIterator",
+130:       "org.apache.commons.collections4.iterators.EmptyOrderedMapIterator",
+131:       "org.apache.commons.collections4.functors.ConstantFactory",
+132:       "org.apache.commons.collections4.map.EntrySetToMapIteratorAdapter",
+133:       "org.apache.commons.collections4.iterators.IteratorChain",
+134:       "org.apache.commons.collections4.functors.ExceptionFactory",
+135:       "org.apache.commons.collections4.FunctorException",
+136:       "org.apache.commons.collections4.collection.AbstractCollectionDecorator",
+137:       "org.apache.commons.collections4.collection.UnmodifiableCollection",
+138:       "org.apache.commons.collections4.CollectionUtils",
+139:       "org.apache.commons.collections4.functors.InstantiateFactory"
+140:     );
+141:   }
+142: }
+
+[MASTER] 21:28:07.639 [logback-2] ERROR JUnitAnalyzer - Failed to compile test case:
+MultiValueMap<Object, String> multiValueMap0 = new MultiValueMap<Object, String>();
+LinkedList<String> linkedList0 = new LinkedList<String>();
+Factory<LinkedList<String>> factory0 = ConstantFactory.constantFactory(linkedList0);
+MultiValueMap<Object, LinkedList<String>> multiValueMap1 = new MultiValueMap<Object, LinkedList<String>>((Map<Object, ? super LinkedList<String>>) multiValueMap0, factory0);
+Function<Object, Object> function0 = Function.identity();
+multiValueMap1.computeIfAbsent(multiValueMap0, function0);
+multiValueMap1.totalSize();
+
+[MASTER] 21:28:07.846 [logback-2] ERROR JUnitAnalyzer - Compilation failed on compilation units: [RegularFileObject[/tmp/EvoSuite_40_1627594087754/org/apache/commons/collections4/map/MultiValueMap_40_tmp__ESTest.java], RegularFileObject[/tmp/EvoSuite_40_1627594087754/org/apache/commons/collections4/map/MultiValueMap_40_tmp__ESTest_scaffolding.java]]
+[MASTER] 21:28:07.847 [logback-2] ERROR JUnitAnalyzer - Classpath: subjects/buggy-versions/Collections-27/target/classes:/experiment/tools/evosuite.jar:/experiment/subjects/buggy-versions/Collections-27/target/classes
+[MASTER] 21:28:07.847 [logback-2] ERROR JUnitAnalyzer - evosuiteCP: /experiment/tools/evosuite.jar:/experiment/subjects/buggy-versions/Collections-27/target/classes
+[MASTER] 21:28:07.848 [logback-2] ERROR JUnitAnalyzer - Diagnostic: constructor MultiValueMap in class org.apache.commons.collections4.map.MultiValueMap<K,V> cannot be applied to given types;
+  required: java.util.Map<java.lang.Object,? super C>,org.apache.commons.collections4.Factory<C>
+  found: java.util.Map<java.lang.Object,capture#1 of ? super java.util.Collection<java.lang.String>>,org.apache.commons.collections4.Factory<java.util.Collection<java.lang.String>>
+  reason: inference variable C has incompatible bounds
+    equality constraints: java.util.Collection<java.lang.String>
+    upper bounds: java.util.Collection<java.lang.String>,java.util.Collection<java.lang.Integer>: 27
+[MASTER] 21:28:07.848 [logback-2] ERROR JUnitAnalyzer - Diagnostic: /tmp/EvoSuite_40_1627594087754/org/apache/commons/collections4/map/MultiValueMap_40_tmp__ESTest.java uses or overrides a deprecated API.: -1
+[MASTER] 21:28:07.848 [logback-2] ERROR JUnitAnalyzer - Diagnostic: Recompile with -Xlint:deprecation for details.: -1
+[MASTER] 21:28:07.849 [logback-2] ERROR JUnitAnalyzer - Diagnostic: Some messages have been simplified; recompile with -Xdiags:verbose to get full output: -1
+[MASTER] 21:28:07.850 [logback-2] ERROR JUnitAnalyzer - RegularFileObject[/tmp/EvoSuite_40_1627594087754/org/apache/commons/collections4/map/MultiValueMap_40_tmp__ESTest.java]
+1: /*
+2:  * This file was automatically generated by EvoSuite
+3:  * Thu Jul 29 21:28:07 GMT 2021
+4:  */
+5: 
+6: package org.apache.commons.collections4.map;
+7: 
+8: import org.junit.Test;
+9: import static org.junit.Assert.*;
+10: import java.util.Collection;
+11: import java.util.HashMap;
+12: import java.util.Map;
+13: import org.apache.commons.collections4.Factory;
+14: import org.apache.commons.collections4.functors.ConstantFactory;
+15: import org.apache.commons.collections4.map.MultiValueMap;
+16: import org.evosuite.runtime.EvoRunner;
+17: import org.evosuite.runtime.EvoRunnerParameters;
+18: import org.junit.runner.RunWith;
+19: 
+20: @RunWith(EvoRunner.class) @EvoRunnerParameters(mockJVMNonDeterminism = true, useVFS = true, useVNET = true, resetStaticState = true) 
+21: public class MultiValueMap_40_tmp__ESTest extends MultiValueMap_40_tmp__ESTest_scaffolding {
+22: 
+23:   @Test(timeout = 4000)
+24:   public void test0()  throws Throwable  {
+25:       HashMap<Object, Object> hashMap0 = new HashMap<Object, Object>();
+26:       ConstantFactory<Collection<String>> constantFactory0 = new ConstantFactory<Collection<String>>((Collection<String>) null);
+27:       MultiValueMap<Object, Integer> multiValueMap0 = new MultiValueMap<Object, Integer>((Map<Object, ? super Collection<String>>) hashMap0, (Factory<Collection<String>>) constantFactory0);
+28:       Collection<Integer> collection0 = multiValueMap0.createCollection((-1));
+29:       assertNull(collection0);
+30:   }
+31: }
+RegularFileObject[/tmp/EvoSuite_40_1627594087754/org/apache/commons/collections4/map/MultiValueMap_40_tmp__ESTest.java]
+1: /**
+2:  * Scaffolding file used to store all the setups needed to run 
+3:  * tests automatically generated by EvoSuite
+4:  * Thu Jul 29 21:28:07 GMT 2021
+5:  */
+6: 
+7: package org.apache.commons.collections4.map;
+8: 
+9: import org.evosuite.runtime.annotation.EvoSuiteClassExclude;
+10: import org.junit.BeforeClass;
+11: import org.junit.Before;
+12: import org.junit.After;
+13: import org.junit.AfterClass;
+14: import org.evosuite.runtime.sandbox.Sandbox;
+15: import org.evosuite.runtime.sandbox.Sandbox.SandboxMode;
+16: 
+17: @EvoSuiteClassExclude
+18: public class MultiValueMap_40_tmp__ESTest_scaffolding {
+19: 
+20:   @org.junit.Rule 
+21:   public org.evosuite.runtime.vnet.NonFunctionalRequirementRule nfr = new org.evosuite.runtime.vnet.NonFunctionalRequirementRule();
+22: 
+23:   private static final java.util.Properties defaultProperties = (java.util.Properties) java.lang.System.getProperties().clone(); 
+24: 
+25:   private org.evosuite.runtime.thread.ThreadStopper threadStopper =  new org.evosuite.runtime.thread.ThreadStopper (org.evosuite.runtime.thread.KillSwitchHandler.getInstance(), 3000);
+26: 
+27: 
+28:   @BeforeClass 
+29:   public static void initEvoSuiteFramework() { 
+30:     org.evosuite.runtime.RuntimeSettings.className = "org.apache.commons.collections4.map.MultiValueMap"; 
+31:     org.evosuite.runtime.GuiSupport.initialize(); 
+32:     org.evosuite.runtime.RuntimeSettings.maxNumberOfThreads = 100; 
+33:     org.evosuite.runtime.RuntimeSettings.maxNumberOfIterationsPerLoop = 10000; 
+34:     org.evosuite.runtime.RuntimeSettings.mockSystemIn = true; 
+35:     org.evosuite.runtime.RuntimeSettings.sandboxMode = org.evosuite.runtime.sandbox.Sandbox.SandboxMode.RECOMMENDED; 
+36:     org.evosuite.runtime.sandbox.Sandbox.initializeSecurityManagerForSUT(); 
+37:     org.evosuite.runtime.classhandling.JDKClassResetter.init();
+38:     setSystemProperties();
+39:     initializeClasses();
+40:     org.evosuite.runtime.Runtime.getInstance().resetRuntime(); 
+41:   } 
+42: 
+43:   @AfterClass 
+44:   public static void clearEvoSuiteFramework(){ 
+45:     Sandbox.resetDefaultSecurityManager(); 
+46:     java.lang.System.setProperties((java.util.Properties) defaultProperties.clone()); 
+47:   } 
+48: 
+49:   @Before 
+50:   public void initTestCase(){ 
+51:     threadStopper.storeCurrentThreads();
+52:     threadStopper.startRecordingTime();
+53:     org.evosuite.runtime.jvm.ShutdownHookHandler.getInstance().initHandler(); 
+54:     org.evosuite.runtime.sandbox.Sandbox.goingToExecuteSUTCode(); 
+55:     setSystemProperties(); 
+56:     org.evosuite.runtime.GuiSupport.setHeadless(); 
+57:     org.evosuite.runtime.Runtime.getInstance().resetRuntime(); 
+58:     org.evosuite.runtime.agent.InstrumentingAgent.activate(); 
+59:   } 
+60: 
+61:   @After 
+62:   public void doneWithTestCase(){ 
+63:     threadStopper.killAndJoinClientThreads();
+64:     org.evosuite.runtime.jvm.ShutdownHookHandler.getInstance().safeExecuteAddedHooks(); 
+65:     org.evosuite.runtime.classhandling.JDKClassResetter.reset(); 
+66:     resetClasses(); 
+67:     org.evosuite.runtime.sandbox.Sandbox.doneWithExecutingSUTCode(); 
+68:     org.evosuite.runtime.agent.InstrumentingAgent.deactivate(); 
+69:     org.evosuite.runtime.GuiSupport.restoreHeadlessMode(); 
+70:   } 
+71: 
+72:   public static void setSystemProperties() {
+73:  
+74:     java.lang.System.setProperties((java.util.Properties) defaultProperties.clone()); 
+75:     java.lang.System.setProperty("user.dir", "/experiment"); 
+76:     java.lang.System.setProperty("java.io.tmpdir", "/tmp"); 
+77:   }
+78: 
+79:   private static void initializeClasses() {
+80:     org.evosuite.runtime.classhandling.ClassStateSupport.initializeClasses(MultiValueMap_40_tmp__ESTest_scaffolding.class.getClassLoader() ,
+81:       "org.apache.commons.collections4.MapIterator",
+82:       "org.apache.commons.collections4.iterators.IteratorChain",
+83:       "org.apache.commons.collections4.functors.ExceptionFactory",
+84:       "org.apache.commons.collections4.map.MultiValueMap$Values",
+85:       "org.apache.commons.collections4.map.EntrySetToMapIteratorAdapter",
+86:       "org.apache.commons.collections4.map.AbstractMapDecorator",
+87:       "org.apache.commons.collections4.Get",
+88:       "org.apache.commons.collections4.iterators.AbstractEmptyIterator",
+89:       "org.apache.commons.collections4.CollectionUtils",
+90:       "org.apache.commons.collections4.map.MultiValueMap",
+91:       "org.apache.commons.collections4.FunctorException",
+92:       "org.apache.commons.collections4.map.AbstractIterableMap",
+93:       "org.apache.commons.collections4.Factory",
+94:       "org.apache.commons.collections4.iterators.LazyIteratorChain",
+95:       "org.apache.commons.collections4.Unmodifiable",
+96:       "org.apache.commons.collections4.map.MultiValueMap$ReflectionFactory",
+97:       "org.apache.commons.collections4.Transformer",
+98:       "org.apache.commons.collections4.map.MultiValueMap$1",
+99:       "org.apache.commons.collections4.map.MultiValueMap$ValuesIterator",
+100:       "org.apache.commons.collections4.collection.UnmodifiableCollection",
+101:       "org.apache.commons.collections4.ResettableIterator",
+102:       "org.apache.commons.collections4.iterators.EmptyIterator",
+103:       "org.apache.commons.collections4.functors.ConstantFactory",
+104:       "org.apache.commons.collections4.collection.AbstractCollectionDecorator",
+105:       "org.apache.commons.collections4.Put",
+106:       "org.apache.commons.collections4.MultiMap",
+107:       "org.apache.commons.collections4.IterableMap",
+108:       "org.apache.commons.collections4.IterableGet"
+109:     );
+110:   } 
+111: 
+112:   private static void resetClasses() {
+113:     org.evosuite.runtime.classhandling.ClassResetter.getInstance().setClassLoader(MultiValueMap_40_tmp__ESTest_scaffolding.class.getClassLoader()); 
+114: 
+115:     org.evosuite.runtime.classhandling.ClassStateSupport.resetClasses(
+116:       "org.apache.commons.collections4.map.AbstractIterableMap",
+117:       "org.apache.commons.collections4.map.AbstractMapDecorator",
+118:       "org.apache.commons.collections4.map.MultiValueMap",
+119:       "org.apache.commons.collections4.map.MultiValueMap$ReflectionFactory",
+120:       "org.apache.commons.collections4.map.MultiValueMap$Values",
+121:       "org.apache.commons.collections4.map.MultiValueMap$ValuesIterator",
+122:       "org.apache.commons.collections4.iterators.LazyIteratorChain",
+123:       "org.apache.commons.collections4.map.MultiValueMap$1",
+124:       "org.apache.commons.collections4.iterators.AbstractEmptyIterator",
+125:       "org.apache.commons.collections4.iterators.EmptyIterator",
+126:       "org.apache.commons.collections4.iterators.EmptyListIterator",
+127:       "org.apache.commons.collections4.iterators.EmptyOrderedIterator",
+128:       "org.apache.commons.collections4.iterators.AbstractEmptyMapIterator",
+129:       "org.apache.commons.collections4.iterators.EmptyMapIterator",
+130:       "org.apache.commons.collections4.iterators.EmptyOrderedMapIterator",
+131:       "org.apache.commons.collections4.functors.ConstantFactory",
+132:       "org.apache.commons.collections4.map.EntrySetToMapIteratorAdapter",
+133:       "org.apache.commons.collections4.iterators.IteratorChain",
+134:       "org.apache.commons.collections4.functors.ExceptionFactory",
+135:       "org.apache.commons.collections4.FunctorException",
+136:       "org.apache.commons.collections4.collection.AbstractCollectionDecorator",
+137:       "org.apache.commons.collections4.collection.UnmodifiableCollection",
+138:       "org.apache.commons.collections4.CollectionUtils",
+139:       "org.apache.commons.collections4.functors.InstantiateFactory"
+140:     );
+141:   }
+142: }
+
+[MASTER] 21:28:07.851 [logback-2] ERROR JUnitAnalyzer - Failed to compile test case:
+HashMap<Object, Object> hashMap0 = new HashMap<Object, Object>();
+ConstantFactory<Collection<String>> constantFactory0 = new ConstantFactory<Collection<String>>((Collection<String>) null);
+MultiValueMap<Object, Integer> multiValueMap0 = new MultiValueMap<Object, Integer>((Map<Object, ? super Collection<String>>) hashMap0, (Factory<Collection<String>>) constantFactory0);
+Collection<Integer> collection0 = multiValueMap0.createCollection((-1));
+assertNull(collection0);
+
+
+[MASTER] 21:28:08.026 [logback-2] ERROR JUnitAnalyzer - Compilation failed on compilation units: [RegularFileObject[/tmp/EvoSuite_42_1627594087939/org/apache/commons/collections4/map/MultiValueMap_42_tmp__ESTest.java], RegularFileObject[/tmp/EvoSuite_42_1627594087939/org/apache/commons/collections4/map/MultiValueMap_42_tmp__ESTest_scaffolding.java]]
+[MASTER] 21:28:08.026 [logback-2] ERROR JUnitAnalyzer - Classpath: subjects/buggy-versions/Collections-27/target/classes:/experiment/tools/evosuite.jar:/experiment/subjects/buggy-versions/Collections-27/target/classes
+[MASTER] 21:28:08.026 [logback-2] ERROR JUnitAnalyzer - evosuiteCP: /experiment/tools/evosuite.jar:/experiment/subjects/buggy-versions/Collections-27/target/classes
+[MASTER] 21:28:08.028 [logback-2] ERROR JUnitAnalyzer - Diagnostic: incompatible types: org.apache.commons.collections4.map.MultiValueMap<java.lang.Integer,java.util.AbstractMap.SimpleEntry<java.lang.Object,java.lang.String>> cannot be converted to java.util.Map<java.util.AbstractMap.SimpleImmutableEntry<java.util.HashMap,java.util.ArrayList<java.lang.Object>>,? super java.util.Collection<java.util.HashMap<java.util.ArrayList<java.lang.String>,java.util.LinkedList>>>: 32
+[MASTER] 21:28:08.028 [logback-2] ERROR JUnitAnalyzer - Diagnostic: incompatible types: java.lang.Class<java.lang.Object> cannot be converted to java.lang.Class<java.util.Collection<java.util.HashMap<java.util.ArrayList<java.lang.String>,java.util.LinkedList>>>: 32
+[MASTER] 21:28:08.028 [logback-2] ERROR JUnitAnalyzer - Diagnostic: /tmp/EvoSuite_42_1627594087939/org/apache/commons/collections4/map/MultiValueMap_42_tmp__ESTest.java uses or overrides a deprecated API.: -1
+[MASTER] 21:28:08.028 [logback-2] ERROR JUnitAnalyzer - Diagnostic: Recompile with -Xlint:deprecation for details.: -1
+[MASTER] 21:28:08.029 [logback-2] ERROR JUnitAnalyzer - RegularFileObject[/tmp/EvoSuite_42_1627594087939/org/apache/commons/collections4/map/MultiValueMap_42_tmp__ESTest.java]
+1: /*
+2:  * This file was automatically generated by EvoSuite
+3:  * Thu Jul 29 21:28:07 GMT 2021
+4:  */
+5: 
+6: package org.apache.commons.collections4.map;
+7: 
+8: import org.junit.Test;
+9: import static org.junit.Assert.*;
+10: import java.util.AbstractMap;
+11: import java.util.ArrayList;
+12: import java.util.Collection;
+13: import java.util.HashMap;
+14: import java.util.LinkedList;
+15: import java.util.Map;
+16: import org.apache.commons.collections4.map.MultiValueMap;
+17: import org.evosuite.runtime.EvoRunner;
+18: import org.evosuite.runtime.EvoRunnerParameters;
+19: import org.junit.runner.RunWith;
+20: 
+21: @RunWith(EvoRunner.class) @EvoRunnerParameters(mockJVMNonDeterminism = true, useVFS = true, useVNET = true, resetStaticState = true) 
+22: public class MultiValueMap_42_tmp__ESTest extends MultiValueMap_42_tmp__ESTest_scaffolding {
+23: 
+24:   @Test(timeout = 4000)
+25:   public void test0()  throws Throwable  {
+26:       MultiValueMap<Integer, AbstractMap.SimpleEntry<Object, String>> multiValueMap0 = new MultiValueMap<Integer, AbstractMap.SimpleEntry<Object, String>>();
+27:       MultiValueMap<Integer, LinkedList<String>> multiValueMap1 = new MultiValueMap<Integer, LinkedList<String>>();
+28:       Integer integer0 = new Integer(199);
+29:       multiValueMap1.put(integer0, multiValueMap0);
+30:       multiValueMap0.putAll((Map<? extends Integer, ?>) multiValueMap1);
+31:       Class<Object> class0 = Object.class;
+32:       MultiValueMap.multiValueMap((Map<AbstractMap.SimpleImmutableEntry<HashMap, ArrayList<Object>>, ? super Collection<HashMap<ArrayList<String>, LinkedList>>>) multiValueMap0, (Class<Collection<HashMap<ArrayList<String>, LinkedList>>>) class0);
+33:       assertFalse(multiValueMap0.isEmpty());
+34:       assertEquals(1, multiValueMap0.size());
+35:   }
+36: }
+RegularFileObject[/tmp/EvoSuite_42_1627594087939/org/apache/commons/collections4/map/MultiValueMap_42_tmp__ESTest.java]
+1: /**
+2:  * Scaffolding file used to store all the setups needed to run 
+3:  * tests automatically generated by EvoSuite
+4:  * Thu Jul 29 21:28:07 GMT 2021
+5:  */
+6: 
+7: package org.apache.commons.collections4.map;
+8: 
+9: import org.evosuite.runtime.annotation.EvoSuiteClassExclude;
+10: import org.junit.BeforeClass;
+11: import org.junit.Before;
+12: import org.junit.After;
+13: import org.junit.AfterClass;
+14: import org.evosuite.runtime.sandbox.Sandbox;
+15: import org.evosuite.runtime.sandbox.Sandbox.SandboxMode;
+16: 
+17: @EvoSuiteClassExclude
+18: public class MultiValueMap_42_tmp__ESTest_scaffolding {
+19: 
+20:   @org.junit.Rule 
+21:   public org.evosuite.runtime.vnet.NonFunctionalRequirementRule nfr = new org.evosuite.runtime.vnet.NonFunctionalRequirementRule();
+22: 
+23:   private static final java.util.Properties defaultProperties = (java.util.Properties) java.lang.System.getProperties().clone(); 
+24: 
+25:   private org.evosuite.runtime.thread.ThreadStopper threadStopper =  new org.evosuite.runtime.thread.ThreadStopper (org.evosuite.runtime.thread.KillSwitchHandler.getInstance(), 3000);
+26: 
+27: 
+28:   @BeforeClass 
+29:   public static void initEvoSuiteFramework() { 
+30:     org.evosuite.runtime.RuntimeSettings.className = "org.apache.commons.collections4.map.MultiValueMap"; 
+31:     org.evosuite.runtime.GuiSupport.initialize(); 
+32:     org.evosuite.runtime.RuntimeSettings.maxNumberOfThreads = 100; 
+33:     org.evosuite.runtime.RuntimeSettings.maxNumberOfIterationsPerLoop = 10000; 
+34:     org.evosuite.runtime.RuntimeSettings.mockSystemIn = true; 
+35:     org.evosuite.runtime.RuntimeSettings.sandboxMode = org.evosuite.runtime.sandbox.Sandbox.SandboxMode.RECOMMENDED; 
+36:     org.evosuite.runtime.sandbox.Sandbox.initializeSecurityManagerForSUT(); 
+37:     org.evosuite.runtime.classhandling.JDKClassResetter.init();
+38:     setSystemProperties();
+39:     initializeClasses();
+40:     org.evosuite.runtime.Runtime.getInstance().resetRuntime(); 
+41:   } 
+42: 
+43:   @AfterClass 
+44:   public static void clearEvoSuiteFramework(){ 
+45:     Sandbox.resetDefaultSecurityManager(); 
+46:     java.lang.System.setProperties((java.util.Properties) defaultProperties.clone()); 
+47:   } 
+48: 
+49:   @Before 
+50:   public void initTestCase(){ 
+51:     threadStopper.storeCurrentThreads();
+52:     threadStopper.startRecordingTime();
+53:     org.evosuite.runtime.jvm.ShutdownHookHandler.getInstance().initHandler(); 
+54:     org.evosuite.runtime.sandbox.Sandbox.goingToExecuteSUTCode(); 
+55:     setSystemProperties(); 
+56:     org.evosuite.runtime.GuiSupport.setHeadless(); 
+57:     org.evosuite.runtime.Runtime.getInstance().resetRuntime(); 
+58:     org.evosuite.runtime.agent.InstrumentingAgent.activate(); 
+59:   } 
+60: 
+61:   @After 
+62:   public void doneWithTestCase(){ 
+63:     threadStopper.killAndJoinClientThreads();
+64:     org.evosuite.runtime.jvm.ShutdownHookHandler.getInstance().safeExecuteAddedHooks(); 
+65:     org.evosuite.runtime.classhandling.JDKClassResetter.reset(); 
+66:     resetClasses(); 
+67:     org.evosuite.runtime.sandbox.Sandbox.doneWithExecutingSUTCode(); 
+68:     org.evosuite.runtime.agent.InstrumentingAgent.deactivate(); 
+69:     org.evosuite.runtime.GuiSupport.restoreHeadlessMode(); 
+70:   } 
+71: 
+72:   public static void setSystemProperties() {
+73:  
+74:     java.lang.System.setProperties((java.util.Properties) defaultProperties.clone()); 
+75:     java.lang.System.setProperty("user.dir", "/experiment"); 
+76:     java.lang.System.setProperty("java.io.tmpdir", "/tmp"); 
+77:   }
+78: 
+79:   private static void initializeClasses() {
+80:     org.evosuite.runtime.classhandling.ClassStateSupport.initializeClasses(MultiValueMap_42_tmp__ESTest_scaffolding.class.getClassLoader() ,
+81:       "org.apache.commons.collections4.MapIterator",
+82:       "org.apache.commons.collections4.iterators.IteratorChain",
+83:       "org.apache.commons.collections4.functors.ExceptionFactory",
+84:       "org.apache.commons.collections4.map.MultiValueMap$Values",
+85:       "org.apache.commons.collections4.map.EntrySetToMapIteratorAdapter",
+86:       "org.apache.commons.collections4.map.AbstractMapDecorator",
+87:       "org.apache.commons.collections4.Get",
+88:       "org.apache.commons.collections4.iterators.AbstractEmptyIterator",
+89:       "org.apache.commons.collections4.CollectionUtils",
+90:       "org.apache.commons.collections4.map.MultiValueMap",
+91:       "org.apache.commons.collections4.FunctorException",
+92:       "org.apache.commons.collections4.map.AbstractIterableMap",
+93:       "org.apache.commons.collections4.Factory",
+94:       "org.apache.commons.collections4.iterators.LazyIteratorChain",
+95:       "org.apache.commons.collections4.Unmodifiable",
+96:       "org.apache.commons.collections4.map.MultiValueMap$ReflectionFactory",
+97:       "org.apache.commons.collections4.Transformer",
+98:       "org.apache.commons.collections4.map.MultiValueMap$1",
+99:       "org.apache.commons.collections4.map.MultiValueMap$ValuesIterator",
+100:       "org.apache.commons.collections4.collection.UnmodifiableCollection",
+101:       "org.apache.commons.collections4.ResettableIterator",
+102:       "org.apache.commons.collections4.iterators.EmptyIterator",
+103:       "org.apache.commons.collections4.functors.ConstantFactory",
+104:       "org.apache.commons.collections4.collection.AbstractCollectionDecorator",
+105:       "org.apache.commons.collections4.Put",
+106:       "org.apache.commons.collections4.MultiMap",
+107:       "org.apache.commons.collections4.IterableMap",
+108:       "org.apache.commons.collections4.IterableGet"
+109:     );
+110:   } 
+111: 
+112:   private static void resetClasses() {
+113:     org.evosuite.runtime.classhandling.ClassResetter.getInstance().setClassLoader(MultiValueMap_42_tmp__ESTest_scaffolding.class.getClassLoader()); 
+114: 
+115:     org.evosuite.runtime.classhandling.ClassStateSupport.resetClasses(
+116:       "org.apache.commons.collections4.map.AbstractIterableMap",
+117:       "org.apache.commons.collections4.map.AbstractMapDecorator",
+118:       "org.apache.commons.collections4.map.MultiValueMap",
+119:       "org.apache.commons.collections4.map.MultiValueMap$ReflectionFactory",
+120:       "org.apache.commons.collections4.map.MultiValueMap$Values",
+121:       "org.apache.commons.collections4.map.MultiValueMap$ValuesIterator",
+122:       "org.apache.commons.collections4.iterators.LazyIteratorChain",
+123:       "org.apache.commons.collections4.map.MultiValueMap$1",
+124:       "org.apache.commons.collections4.iterators.AbstractEmptyIterator",
+125:       "org.apache.commons.collections4.iterators.EmptyIterator",
+126:       "org.apache.commons.collections4.iterators.EmptyListIterator",
+127:       "org.apache.commons.collections4.iterators.EmptyOrderedIterator",
+128:       "org.apache.commons.collections4.iterators.AbstractEmptyMapIterator",
+129:       "org.apache.commons.collections4.iterators.EmptyMapIterator",
+130:       "org.apache.commons.collections4.iterators.EmptyOrderedMapIterator",
+131:       "org.apache.commons.collections4.functors.ConstantFactory",
+132:       "org.apache.commons.collections4.map.EntrySetToMapIteratorAdapter",
+133:       "org.apache.commons.collections4.iterators.IteratorChain",
+134:       "org.apache.commons.collections4.functors.ExceptionFactory",
+135:       "org.apache.commons.collections4.FunctorException",
+136:       "org.apache.commons.collections4.collection.AbstractCollectionDecorator",
+137:       "org.apache.commons.collections4.collection.UnmodifiableCollection",
+138:       "org.apache.commons.collections4.CollectionUtils",
+139:       "org.apache.commons.collections4.functors.InstantiateFactory"
+140:     );
+141:   }
+142: }
+
+[MASTER] 21:28:08.030 [logback-2] ERROR JUnitAnalyzer - Failed to compile test case:
+MultiValueMap<Integer, AbstractMap.SimpleEntry<Object, String>> multiValueMap0 = new MultiValueMap<Integer, AbstractMap.SimpleEntry<Object, String>>();
+MultiValueMap<Integer, LinkedList<String>> multiValueMap1 = new MultiValueMap<Integer, LinkedList<String>>();
+Integer integer0 = new Integer(199);
+multiValueMap1.put(integer0, multiValueMap0);
+multiValueMap0.putAll((Map<? extends Integer, ?>) multiValueMap1);
+Class<Object> class0 = Object.class;
+MultiValueMap.multiValueMap((Map<AbstractMap.SimpleImmutableEntry<HashMap, ArrayList<Object>>, ? super Collection<HashMap<ArrayList<String>, LinkedList>>>) multiValueMap0, (Class<Collection<HashMap<ArrayList<String>, LinkedList>>>) class0);
+assertFalse(multiValueMap0.isEmpty());
+assertEquals(1, multiValueMap0.size());
+
+
+* Writing tests to file
+* Writing JUnit test case 'MultiValueMap_ESTest' to results/Collections-27/org.apache.commons.collections4.map.MultiValueMap/default/tests/4
+* Done!
+
+* Computation finished

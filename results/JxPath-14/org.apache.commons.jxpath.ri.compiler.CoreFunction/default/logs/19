@@ -1,0 +1,121 @@
+* EvoSuite 1.1.1-SNAPSHOT
+* Configuration: default
+* Going to generate test cases for class: org.apache.commons.jxpath.ri.compiler.CoreFunction
+* Starting Client-0
+* Connecting to master process on port 19687
+* Analyzing classpath: 
+  - subjects/buggy-versions/JxPath-14/target/classes
+  - subjects/buggy-versions/JxPath-14/src/java
+  - subjects/buggy-versions/JxPath-14/target/lib/commons-beanutils-1.7.0.jar
+  - subjects/buggy-versions/JxPath-14/target/lib/commons-logging-1.1.jar
+  - subjects/buggy-versions/JxPath-14/target/lib/jdom-1.0.jar
+  - subjects/buggy-versions/JxPath-14/target/lib/jsp-api-2.0.jar
+  - subjects/buggy-versions/JxPath-14/target/lib/junit-3.8.2.jar
+  - subjects/buggy-versions/JxPath-14/target/lib/mockrunner-0.4.1.jar
+  - subjects/buggy-versions/JxPath-14/target/lib/servletapi-2.4.jar
+  - subjects/buggy-versions/JxPath-14/target/lib/xerces-2.4.0.jar
+  - subjects/buggy-versions/JxPath-14/target/lib/xml-apis-2.0.2.jar
+* Finished analyzing classpath
+* Generating tests for class org.apache.commons.jxpath.ri.compiler.CoreFunction
+* Test criteria:
+  - Line Coverage
+  - Branch Coverage
+  - Exception
+  - Mutation testing (weak)
+  - Method-Output Coverage
+  - Top-Level Method Coverage
+  - No-Exception Top-Level Method Coverage
+  - Context Branch Coverage
+* Total number of test goals for DYNAMOSA: 1832
+* Using seed 3344088633
+* Starting evolution
+* Initial Number of Goals in DynaMOSA = 654 / 1832
+[MASTER] 10:31:39.098 [logback-2] ERROR TestCluster - Failed to check cache for java.util.LinkedList<E> : Type points to itself
+Number of times BBC is called in total: 0
+* Search finished after 605s and 179 generations, 70616 statements, best individual has fitness: 614.0
+* Minimizing test suite
+[MASTER] 10:42:46.792 [logback-1] WARN  TestSuiteMinimizer - Minimization timeout. Roll back to original test suite
+* Going to analyze the coverage criteria
+* Coverage analysis for criterion LINE
+* Coverage of criterion LINE: 72%
+* Total number of goals: 344
+* Number of covered goals: 249
+* Coverage analysis for criterion BRANCH
+* Coverage of criterion BRANCH: 79%
+* Total number of goals: 355
+* Number of covered goals: 279
+* Coverage analysis for criterion EXCEPTION
+* Coverage of criterion EXCEPTION: 100%
+* Total number of goals: 123
+* Number of covered goals: 123
+* Coverage analysis for criterion WEAKMUTATION
+* Coverage of criterion WEAKMUTATION: 64%
+* Total number of goals: 616
+* Number of covered goals: 393
+* Coverage analysis for criterion OUTPUT
+* Coverage of criterion OUTPUT: 35%
+* Total number of goals: 82
+* Number of covered goals: 29
+* Coverage analysis for criterion METHOD
+* Coverage of criterion METHOD: 100%
+* Total number of goals: 40
+* Number of covered goals: 40
+* Coverage analysis for criterion METHODNOEXCEPTION
+* Coverage of criterion METHODNOEXCEPTION: 92%
+* Total number of goals: 40
+* Number of covered goals: 37
+* Coverage analysis for criterion CBRANCH
+* Coverage of criterion CBRANCH: 79%
+* Total number of goals: 355
+* Number of covered goals: 279
+* Generated 395 tests with total length 4070
+* Resulting test suite's coverage: 72% (average coverage for all fitness functions)
+* Generating assertions
+[MASTER] 10:43:51.596 [logback-1] WARN  SimpleMutationAssertionGenerator - Reached maximum time to generate assertions, aborting assertion generation
+* Resulting test suite's mutation score: 21%
+* Compiling and checking tests
+[MASTER] 10:44:33.907 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class java.lang.StackOverflowError: null
+[MASTER] 10:44:33.909 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ Expression[] expressionArray0 = new Expression[3];
+CoreOperationAnd coreOperationAnd0 = new CoreOperationAnd(expressionArray0);
+expressionArray0[0] = (Expression) coreOperationAnd0;
+CoreFunction coreFunction0 = new CoreFunction((-3880), expressionArray0);
+EvalContext evalContext0 = null;
+coreFunction0.functionTranslate((EvalContext) null);
+
+[MASTER] 10:44:42.294 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class java.lang.StackOverflowError: null
+[MASTER] 10:44:42.296 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ Expression[] expressionArray0 = new Expression[1];
+QName qName0 = new QName(".*>`iY%PuF", ".*>`iY%PuF");
+ExtensionFunction extensionFunction0 = new ExtensionFunction(qName0, expressionArray0);
+expressionArray0[0] = (Expression) extensionFunction0;
+CoreFunction coreFunction0 = new CoreFunction((-2007), expressionArray0);
+coreFunction0.computeContextDependent();
+EvalContext evalContext0 = null;
+coreFunction0.compute((EvalContext) null);
+coreFunction0.functionString((EvalContext) null);
+
+[MASTER] 10:44:47.275 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class java.lang.StackOverflowError: null
+[MASTER] 10:44:47.276 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ Expression[] expressionArray0 = new Expression[1];
+CoreFunction coreFunction0 = new CoreFunction(820, (Expression[]) null);
+CoreOperationGreaterThanOrEqual coreOperationGreaterThanOrEqual0 = new CoreOperationGreaterThanOrEqual(coreFunction0, coreFunction0);
+CoreOperationOr coreOperationOr0 = new CoreOperationOr(expressionArray0);
+Expression[] expressionArray1 = new Expression[3];
+expressionArray1[0] = (Expression) coreFunction0;
+CoreOperationOr coreOperationOr1 = new CoreOperationOr(expressionArray1);
+expressionArray1[1] = (Expression) coreOperationOr1;
+expressionArray1[2] = (Expression) coreOperationGreaterThanOrEqual0;
+CoreFunction coreFunction1 = new CoreFunction(820, expressionArray1);
+coreFunction0.getArgumentCount();
+EvalContext evalContext0 = null;
+coreFunction1.functionConcat((EvalContext) null);
+
+* Permissions denied during test execution: 
+  - java.lang.RuntimePermission: 
+         writeFileDescriptor: 9
+* Writing tests to file
+* Writing JUnit test case 'CoreFunction_ESTest' to results/JxPath-14/org.apache.commons.jxpath.ri.compiler.CoreFunction/default/tests/19
+* Done!
+
+* Computation finished

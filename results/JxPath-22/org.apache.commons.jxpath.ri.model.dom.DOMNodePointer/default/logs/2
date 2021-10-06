@@ -1,0 +1,116 @@
+* EvoSuite 1.1.1-SNAPSHOT
+* Configuration: default
+* Going to generate test cases for class: org.apache.commons.jxpath.ri.model.dom.DOMNodePointer
+* Starting Client-0
+* Connecting to master process on port 21850
+* Analyzing classpath: 
+  - subjects/buggy-versions/JxPath-22/target/classes
+  - subjects/buggy-versions/JxPath-22/src/java
+  - subjects/buggy-versions/JxPath-22/target/lib/commons-beanutils-1.7.0.jar
+  - subjects/buggy-versions/JxPath-22/target/lib/commons-logging-1.1.jar
+  - subjects/buggy-versions/JxPath-22/target/lib/jdom-1.0.jar
+  - subjects/buggy-versions/JxPath-22/target/lib/jsp-api-2.0.jar
+  - subjects/buggy-versions/JxPath-22/target/lib/junit-3.8.1.jar
+  - subjects/buggy-versions/JxPath-22/target/lib/mockrunner-0.4.1.jar
+  - subjects/buggy-versions/JxPath-22/target/lib/mockrunner-jdk1.3-j2ee1.3-0.4.jar
+  - subjects/buggy-versions/JxPath-22/target/lib/servletapi-2.4.jar
+  - subjects/buggy-versions/JxPath-22/target/lib/xerces-2.4.0.jar
+  - subjects/buggy-versions/JxPath-22/target/lib/xml-apis-2.0.2.jar
+* Finished analyzing classpath
+* Generating tests for class org.apache.commons.jxpath.ri.model.dom.DOMNodePointer
+* Test criteria:
+  - Line Coverage
+  - Branch Coverage
+  - Exception
+  - Mutation testing (weak)
+  - Method-Output Coverage
+  - Top-Level Method Coverage
+  - No-Exception Top-Level Method Coverage
+  - Context Branch Coverage
+* Total number of test goals for DYNAMOSA: 2031
+* Using seed 651637272
+* Starting evolution
+* Initial Number of Goals in DynaMOSA = 453 / 2031
+[MASTER] 09:15:28.096 [logback-1] WARN  TestUsageChecker - class org.apache.xerces.dom.CharacterDataImpl$1 looks like an anonymous class, ignoring it (although reflection says false) CharacterDataImpl$1
+[MASTER] 09:16:28.989 [logback-2] ERROR TestCluster - Failed to check cache for java.util.Enumeration<E> : Type points to itself
+[MASTER] 09:21:31.634 [logback-1] WARN  MSecurityManager - SUT asked for a runtime permission that EvoSuite does not recognize: ftpClientProvider
+[MASTER] 09:23:11.469 [logback-1] WARN  TestUsageChecker - class org.apache.xerces.dom.ParentNode$1 looks like an anonymous class, ignoring it (although reflection says false) ParentNode$1
+Number of times BBC is called in total: 0
+* Search finished after 601s and 3444 generations, 1519497 statements, best individual has fitness: 482.0
+* Minimizing test suite
+* Going to analyze the coverage criteria
+* Coverage analysis for criterion LINE
+* Coverage of criterion LINE: 86%
+* Total number of goals: 337
+* Number of covered goals: 290
+* Coverage analysis for criterion BRANCH
+* Coverage of criterion BRANCH: 79%
+* Total number of goals: 311
+* Number of covered goals: 246
+* Coverage analysis for criterion EXCEPTION
+* Coverage of criterion EXCEPTION: 100%
+* Total number of goals: 53
+* Number of covered goals: 53
+* Coverage analysis for criterion WEAKMUTATION
+* Coverage of criterion WEAKMUTATION: 79%
+* Total number of goals: 878
+* Number of covered goals: 692
+* Coverage analysis for criterion OUTPUT
+* Coverage of criterion OUTPUT: 46%
+* Total number of goals: 120
+* Number of covered goals: 55
+* Coverage analysis for criterion METHOD
+* Coverage of criterion METHOD: 100%
+* Total number of goals: 37
+* Number of covered goals: 37
+* Coverage analysis for criterion METHODNOEXCEPTION
+* Coverage of criterion METHODNOEXCEPTION: 95%
+* Total number of goals: 37
+* Number of covered goals: 35
+* Coverage analysis for criterion CBRANCH
+* Coverage of criterion CBRANCH: 78%
+* Total number of goals: 311
+* Number of covered goals: 244
+* Generated 157 tests with total length 745
+* Resulting test suite's coverage: 77% (average coverage for all fitness functions)
+* Generating assertions
+* Resulting test suite's mutation score: 53%
+* Compiling and checking tests
+[MASTER] 09:25:25.808 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class java.lang.AssertionError: Expecting exception: IllegalArgumentException
+[MASTER] 09:25:25.808 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ Locale locale0 = Locale.KOREAN;
+HTMLDocumentImpl hTMLDocumentImpl0 = new HTMLDocumentImpl();
+DOMNodePointer dOMNodePointer0 = new DOMNodePointer(hTMLDocumentImpl0, locale0, "UnEnown namespac pre2ix: ");
+JXPathContext jXPathContext0 = JXPathContext.newContext((Object) hTMLDocumentImpl0);
+Pointer pointer0 = dOMNodePointer0.getPointerByID(jXPathContext0, "");
+pointer0.asPath();
+
+[MASTER] 09:25:34.298 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class java.lang.AssertionError: Expecting exception: IllegalArgumentException
+[MASTER] 09:25:34.298 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ HTMLDocumentImpl hTMLDocumentImpl0 = new HTMLDocumentImpl();
+Locale locale0 = Locale.US;
+DOMNodePointer dOMNodePointer0 = new DOMNodePointer(hTMLDocumentImpl0, locale0);
+JXPathContext jXPathContext0 = JXPathContext.newContext((Object) dOMNodePointer0);
+NullPointer nullPointer0 = (NullPointer)dOMNodePointer0.getPointerByID(jXPathContext0, "http://www.w3.org/XML/1998/namespace");
+nullPointer0.isActual();
+
+[MASTER] 09:25:35.100 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class java.lang.AssertionError: Expecting exception: IllegalArgumentException
+[MASTER] 09:25:35.100 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ HTMLDocumentImpl hTMLDocumentImpl0 = new HTMLDocumentImpl();
+Locale locale0 = Locale.US;
+DOMNodePointer dOMNodePointer0 = new DOMNodePointer(hTMLDocumentImpl0, locale0);
+QName qName0 = new QName("<<unknown namespace>>", "http://www.w3.org/XML/1998/namespace");
+NodePointer nodePointer0 = NodePointer.newChildNodePointer(dOMNodePointer0, qName0, (Object) null);
+nodePointer0.namespaceIterator();
+
+* Permissions denied during test execution: 
+  - java.lang.RuntimePermission: 
+         ftpClientProvider: 1
+         writeFileDescriptor: 3
+  - java.net.SocketPermission: 
+         resolve www.w3.org: 6
+* Writing tests to file
+* Writing JUnit test case 'DOMNodePointer_ESTest' to results/JxPath-22/org.apache.commons.jxpath.ri.model.dom.DOMNodePointer/default/tests/2
+* Done!
+
+* Computation finished
