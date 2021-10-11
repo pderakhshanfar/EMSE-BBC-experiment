@@ -123,10 +123,18 @@ do
     fi
     attempt_counter="$(( attempt_counter + 1 ))"
 
-
+    waiting_counter=0
     #After finishing tasks, wait for tools to finish their test generation processes.
     while (( $(pgrep -l java | wc -l) > 0 ))
     do
+      if [[ attempt_counter -eq 10 ]]; then
+        for PID in $(pgrep java) 
+        do
+          kill -9 $PID
+        done
+        break
+      fi
+      waiting_counter="$(( waiting_counter + 1 ))"
       activeProcesses=$(pgrep -l java | wc -l)
       echo "There are still $activeProcesses active java processes: "
       pgrep -l java
