@@ -1,0 +1,115 @@
+* EvoSuite 1.1.1-SNAPSHOT
+* Configuration: BBC-F0-opt-60
+* Going to generate test cases for class: org.apache.commons.cli.HelpFormatter
+* Starting Client-0
+* Connecting to master process on port 21417
+* Analyzing classpath: 
+  - subjects/buggy-versions/Cli-33/target/classes
+* Finished analyzing classpath
+* Generating tests for class org.apache.commons.cli.HelpFormatter
+* Test criteria:
+  - Line Coverage
+  - Branch Coverage
+  - Exception
+  - Mutation testing (weak)
+  - Method-Output Coverage
+  - Top-Level Method Coverage
+  - No-Exception Top-Level Method Coverage
+  - Context Branch Coverage
+* Total number of test goals for DYNAMOSA: 1103
+* Using seed 1347344704
+* Starting evolution
+bbc usage percentage is: 60%
+* Initial Number of Goals in DynaMOSA = 400 / 1103
+[MASTER] 08:26:04.545 [logback-2] ERROR TestCluster - Failed to check cache for java.util.Comparator<T> : Type points to itself
+* Search finished after 604s and 115 generations, 57946 statements, best individual has fitness: 121.0
+* Minimizing test suite
+[MASTER] 08:37:33.541 [logback-1] WARN  TestSuiteMinimizer - Minimization timeout. Roll back to original test suite
+* Going to analyze the coverage criteria
+* Coverage analysis for criterion LINE
+* Coverage of criterion LINE: 100%
+* Total number of goals: 201
+* Number of covered goals: 200
+* Coverage analysis for criterion BRANCH
+* Coverage of criterion BRANCH: 93%
+* Total number of goals: 149
+* Number of covered goals: 139
+* Coverage analysis for criterion EXCEPTION
+* Coverage of criterion EXCEPTION: 100%
+* Total number of goals: 55
+* Number of covered goals: 55
+* Coverage analysis for criterion WEAKMUTATION
+* Coverage of criterion WEAKMUTATION: 92%
+* Total number of goals: 478
+* Number of covered goals: 442
+* Coverage analysis for criterion OUTPUT
+* Coverage of criterion OUTPUT: 63%
+* Total number of goals: 46
+* Number of covered goals: 29
+* Coverage analysis for criterion METHOD
+* Coverage of criterion METHOD: 98%
+* Total number of goals: 40
+* Number of covered goals: 39
+* Coverage analysis for criterion METHODNOEXCEPTION
+* Coverage of criterion METHODNOEXCEPTION: 98%
+* Total number of goals: 40
+* Number of covered goals: 39
+* Coverage analysis for criterion CBRANCH
+* Coverage of criterion CBRANCH: 93%
+* Total number of goals: 149
+* Number of covered goals: 139
+* Generated 150 tests with total length 2447
+* Resulting test suite's coverage: 86% (average coverage for all fitness functions)
+* Generating assertions
+[MASTER] 08:38:20.062 [logback-1] WARN  SimpleMutationAssertionGenerator - Assertion minimization is taking too long (0.6914333333333333% of time used, but only 40/150 tests minimized), falling back to using all assertions
+[MASTER] 08:38:39.148 [logback-1] WARN  SimpleMutationAssertionGenerator - Reached maximum time to generate assertions, aborting assertion generation
+* Resulting test suite's mutation score: 16%
+* Compiling and checking tests
+[MASTER] 08:39:11.891 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 08:39:12.001 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 08:39:12.106 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 08:39:13.937 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class java.lang.SecurityException: Security manager blocks ("java.lang.RuntimePermission" "writeFileDescriptor")
+java.lang.Thread.getStackTrace(Thread.java:1559)
+org.evosuite.runtime.sandbox.MSecurityManager.checkPermission(MSecurityManager.java:433)
+java.lang.SecurityManager.checkWrite(SecurityManager.java:954)
+java.io.FileOutputStream.<init>(FileOutputStream.java:245)
+org.evosuite.runtime.mock.java.io.MockFileOutputStream.<init>(MockFileOutputStream.java:114)
+org.apache.commons.cli.HelpFormatter_168_tmp__ESTest.test0(HelpFormatter_168_tmp__ESTest.java:28)
+sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+java.lang.reflect.Method.invoke(Method.java:498)
+org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)
+org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56)
+org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+org.junit.internal.runners.statements.FailOnTimeout$CallableStatement.call(FailOnTimeout.java:288)
+org.junit.internal.runners.statements.FailOnTimeout$CallableStatement.call(FailOnTimeout.java:282)
+java.util.concurrent.FutureTask.run(FutureTask.java:266)
+java.lang.Thread.run(Thread.java:748)
+
+[MASTER] 08:39:13.937 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ HelpFormatter helpFormatter0 = new HelpFormatter();
+helpFormatter0.setArgName("b5^|w");
+FileDescriptor fileDescriptor0 = new FileDescriptor();
+MockFileOutputStream mockFileOutputStream0 = new MockFileOutputStream(fileDescriptor0);
+boolean boolean0 = false;
+MockPrintWriter mockPrintWriter0 = new MockPrintWriter(mockFileOutputStream0, false);
+String string0 = "6j#e";
+Object[] objectArray0 = new Object[4];
+objectArray0[0] = (Object) "6j#e";
+objectArray0[1] = (Object) "b5^|w";
+objectArray0[2] = (Object) "6j#e";
+objectArray0[3] = (Object) "6j#e";
+PrintWriter printWriter0 = mockPrintWriter0.format("6j#e", objectArray0);
+helpFormatter0.printWrapped(printWriter0, (-210), (-210), "b5^|w");
+
+[MASTER] 08:39:37.469 [logback-2] ERROR JUnitAnalyzer - Ran out of time while checking tests
+* Permissions denied during test execution: 
+  - java.lang.RuntimePermission: 
+         writeFileDescriptor: 1
+* Writing tests to file
+* Writing JUnit test case 'HelpFormatter_ESTest' to results/Cli-33/org.apache.commons.cli.HelpFormatter/BBC-F0-opt-60/tests/4
+* Done!
+
+* Computation finished

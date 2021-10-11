@@ -1,0 +1,69 @@
+* EvoSuite 1.1.1-SNAPSHOT
+* Configuration: BBC-F0-opt-70
+* Going to generate test cases for class: com.google.javascript.rhino.Node
+* Starting Client-0
+* Connecting to master process on port 21658
+* Analyzing classpath: 
+  - subjects/buggy-versions/Closure-110/build/classes
+  - subjects/buggy-versions/Closure-110/lib/args4j.jar
+  - subjects/buggy-versions/Closure-110/lib/guava.jar
+  - subjects/buggy-versions/Closure-110/lib/json.jar
+  - subjects/buggy-versions/Closure-110/lib/jsr305.jar
+  - subjects/buggy-versions/Closure-110/lib/protobuf-java.jar
+  - subjects/buggy-versions/Closure-110/build/lib/rhino.jar
+  - subjects/buggy-versions/Closure-110/lib/ant.jar
+* Finished analyzing classpath
+* Generating tests for class com.google.javascript.rhino.Node
+* Test criteria:
+  - Line Coverage
+  - Branch Coverage
+  - Exception
+  - Mutation testing (weak)
+  - Method-Output Coverage
+  - Top-Level Method Coverage
+  - No-Exception Top-Level Method Coverage
+  - Context Branch Coverage
+* Total number of test goals for DYNAMOSA: 7813
+* Using seed 3400630852
+* Starting evolution
+bbc usage percentage is: 70%
+* Initial Number of Goals in DynaMOSA = 5977 / 7813
+[MASTER] 21:28:56.394 [logback-2] ERROR TestCluster - Failed to check cache for java.util.LinkedHashSet<E> : Type points to itself
+[MASTER] 21:28:58.688 [logback-1] WARN  CoverageArchive - A solution with a timeout/exception result has been added to the archive. The covered goal was [METHOD] com.google.javascript.rhino.Node.getLineno()I
+[MASTER] 21:28:58.688 [logback-1] WARN  CoverageArchive - A solution with a timeout/exception result has been added to the archive. The covered goal was [METHODNOEX] com.google.javascript.rhino.Node.getLineno()I
+[MASTER] 21:28:58.689 [logback-1] WARN  CoverageArchive - A solution with a timeout/exception result has been added to the archive. The covered goal was Branch com.google.javascript.rhino.Node.getLineno()I: root-Branch in context: com.google.javascript.rhino.Node:getLineno()I
+[MASTER] 21:28:58.692 [logback-1] WARN  CoverageArchive - A solution with a timeout/exception result has been added to the archive. The covered goal was Weak Mutation 1919: com.google.javascript.rhino.Node.getChildAtIndex(I)Lcom/google/javascript/rhino/Node;:566 - ReplaceComparisonOperator <= -> ==
+[MASTER] 21:28:58.708 [logback-1] WARN  CoverageArchive - A solution with a timeout/exception result has been added to the archive. The covered goal was [METHODNOEX] com.google.javascript.rhino.Node.getChildAtIndex(I)Lcom/google/javascript/rhino/Node;
+[MASTER] 21:28:58.717 [logback-1] WARN  CoverageArchive - A solution with a timeout/exception result has been added to the archive. The covered goal was Branch com.google.javascript.rhino.Node.getChildBefore(Lcom/google/javascript/rhino/Node;)Lcom/google/javascript/rhino/Node;: I5 Branch 58 IF_ACMPNE L550 - false in context: com.google.javascript.rhino.Node:getChildBefore(Lcom/google/javascript/rhino/Node;)Lcom/google/javascript/rhino/Node;
+[MASTER] 21:28:58.752 [logback-1] WARN  CoverageArchive - A solution with a timeout/exception result has been added to the archive. The covered goal was [METHOD] com.google.javascript.rhino.Node.getChildBefore(Lcom/google/javascript/rhino/Node;)Lcom/google/javascript/rhino/Node;
+[MASTER] 21:28:58.752 [logback-1] WARN  CoverageArchive - A solution with a timeout/exception result has been added to the archive. The covered goal was [METHODNOEX] com.google.javascript.rhino.Node.getChildBefore(Lcom/google/javascript/rhino/Node;)Lcom/google/javascript/rhino/Node;
+[MASTER] 21:29:53.333 [logback-1] WARN  TestChromosome - Functional mock problem: org.evosuite.ga.ConstructionFailedException: Max recursion depth reached
+* Computation finished
+[MASTER] 21:29:57.730 [logback-2] ERROR ClientNodeImpl - Error when generating tests for: com.google.javascript.rhino.Node with seed 3400630852. Configuration id : BBC-F0-opt-70
+java.lang.NullPointerException: null
+	at org.evosuite.testcase.secondaryobjectives.basicblock.BasicBlockCoverage.compareChromosomes(BasicBlockCoverage.java:59)
+	at org.evosuite.testcase.TestChromosome.compareSecondaryObjective(TestChromosome.java:680)
+	at org.evosuite.testcase.TestChromosome.compareSecondaryObjective(TestChromosome.java:68)
+	at org.evosuite.ga.comparators.PreferenceSortingComparator.compare(PreferenceSortingComparator.java:74)
+	at org.evosuite.ga.operators.ranking.RankBasedPreferenceSorting.getZeroFront(RankBasedPreferenceSorting.java:111)
+	at org.evosuite.ga.operators.ranking.RankBasedPreferenceSorting.computeRankingAssignment(RankBasedPreferenceSorting.java:65)
+	at org.evosuite.ga.metaheuristics.mosa.DynaMOSA.evolve(DynaMOSA.java:83)
+	at org.evosuite.ga.metaheuristics.mosa.DynaMOSA.generateSolution(DynaMOSA.java:174)
+	at org.evosuite.ga.metaheuristics.TestSuiteAdapter.generateSolution(TestSuiteAdapter.java:114)
+	at org.evosuite.strategy.MOSuiteStrategy.generateTests(MOSuiteStrategy.java:123)
+	at org.evosuite.TestSuiteGenerator.generateTests(TestSuiteGenerator.java:630)
+	at org.evosuite.TestSuiteGenerator.generateTestSuite(TestSuiteGenerator.java:205)
+	at org.evosuite.rmi.service.ClientNodeImpl.lambda$startNewSearch$0(ClientNodeImpl.java:150)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+[MASTER] 21:29:57.870 [main] ERROR SearchStatistics - No obtained value for output variable: LineCoverage
+[MASTER] 21:29:59.874 [main] ERROR SearchStatistics - No obtained value for output variable: LineCoverage
+[MASTER] 21:30:00.875 [main] ERROR SearchStatistics - No obtained value for output variable: LineCoverage
+[MASTER] 21:30:01.876 [main] ERROR SearchStatistics - No obtained value for output variable: LineCoverage
+[MASTER] 21:30:02.876 [main] ERROR SearchStatistics - No obtained value for output variable: LineCoverage
+[MASTER] 21:30:03.877 [main] ERROR SearchStatistics - No obtained value for output variable: LineCoverage
+[MASTER] 21:30:03.877 [main] ERROR SearchStatistics - Not going to write down statistics data, as some are missing
+[MASTER] 21:30:03.979 [main] ERROR TestGeneration - failed to write statistics data

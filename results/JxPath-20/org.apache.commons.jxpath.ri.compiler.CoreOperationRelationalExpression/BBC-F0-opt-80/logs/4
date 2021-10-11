@@ -1,0 +1,189 @@
+* EvoSuite 1.1.1-SNAPSHOT
+* Configuration: BBC-F0-opt-80
+* Going to generate test cases for class: org.apache.commons.jxpath.ri.compiler.CoreOperationRelationalExpression
+* Starting Client-0
+* Connecting to master process on port 9975
+* Analyzing classpath: 
+  - subjects/buggy-versions/JxPath-20/target/classes
+  - subjects/buggy-versions/JxPath-20/src/java
+  - subjects/buggy-versions/JxPath-20/target/lib/commons-beanutils-1.7.0.jar
+  - subjects/buggy-versions/JxPath-20/target/lib/commons-logging-1.1.jar
+  - subjects/buggy-versions/JxPath-20/target/lib/jdom-1.0.jar
+  - subjects/buggy-versions/JxPath-20/target/lib/jsp-api-2.0.jar
+  - subjects/buggy-versions/JxPath-20/target/lib/junit-3.8.1.jar
+  - subjects/buggy-versions/JxPath-20/target/lib/mockrunner-0.4.1.jar
+  - subjects/buggy-versions/JxPath-20/target/lib/mockrunner-jdk1.3-j2ee1.3-0.4.jar
+  - subjects/buggy-versions/JxPath-20/target/lib/servletapi-2.4.jar
+  - subjects/buggy-versions/JxPath-20/target/lib/xerces-2.4.0.jar
+  - subjects/buggy-versions/JxPath-20/target/lib/xml-apis-2.0.2.jar
+* Finished analyzing classpath
+* Generating tests for class org.apache.commons.jxpath.ri.compiler.CoreOperationRelationalExpression
+* Test criteria:
+  - Line Coverage
+  - Branch Coverage
+  - Exception
+  - Mutation testing (weak)
+  - Method-Output Coverage
+  - Top-Level Method Coverage
+  - No-Exception Top-Level Method Coverage
+  - Context Branch Coverage
+* Total number of test goals for DYNAMOSA: 205
+* Using seed 1839553538
+* Starting evolution
+bbc usage percentage is: 80%
+* Initial Number of Goals in DynaMOSA = 59 / 205
+[MASTER] 00:23:52.377 [logback-2] ERROR TestCluster - Failed to check cache for java.util.LinkedList<E> : Type points to itself
+[MASTER] 00:23:56.532 [logback-1] WARN  TestChromosome - Functional mock problem: org.evosuite.ga.ConstructionFailedException: Failed to add constructor for org.apache.commons.jxpath.ri.NamespaceResolver due to org.evosuite.ga.ConstructionFailedException: Failed to add constructor for org.apache.commons.jxpath.ri.axes.ParentContext due to org.evosuite.ga.ConstructionFailedException: Failed to add constructor for org.apache.commons.jxpath.ri.axes.AncestorContext due to org.evosuite.ga.ConstructionFailedException: Failed to add constructor for org.apache.commons.jxpath.ri.axes.UnionContext due to org.evosuite.ga.ConstructionFailedException: Max recursion depth reached
+* Search finished after 602s and 1467 generations, 729299 statements, best individual has fitness: 19.0
+* Minimizing test suite
+[MASTER] 00:34:57.952 [logback-1] WARN  TestSuiteMinimizer - Minimization timeout. Roll back to original test suite
+* Going to analyze the coverage criteria
+* Coverage analysis for criterion LINE
+* Coverage of criterion LINE: 95%
+* Total number of goals: 42
+* Number of covered goals: 40
+* Coverage analysis for criterion BRANCH
+* Coverage of criterion BRANCH: 95%
+* Total number of goals: 39
+* Number of covered goals: 37
+* Coverage analysis for criterion EXCEPTION
+* Coverage of criterion EXCEPTION: 100%
+* Total number of goals: 7
+* Number of covered goals: 7
+* Coverage analysis for criterion WEAKMUTATION
+* Coverage of criterion WEAKMUTATION: 99%
+* Total number of goals: 72
+* Number of covered goals: 71
+* Coverage analysis for criterion OUTPUT
+* Coverage of criterion OUTPUT: 29%
+* Total number of goals: 7
+* Number of covered goals: 2
+* Coverage analysis for criterion METHOD
+* Coverage of criterion METHOD: 100%
+* Total number of goals: 3
+* Number of covered goals: 3
+* Coverage analysis for criterion METHODNOEXCEPTION
+* Coverage of criterion METHODNOEXCEPTION: 100%
+* Total number of goals: 3
+* Number of covered goals: 3
+* Coverage analysis for criterion CBRANCH
+* Coverage of criterion CBRANCH: 95%
+* Total number of goals: 39
+* Number of covered goals: 37
+* Generated 23 tests with total length 434
+* Resulting test suite's coverage: 83% (average coverage for all fitness functions)
+* Generating assertions
+* Resulting test suite's mutation score: 24%
+* Compiling and checking tests
+[MASTER] 00:35:03.049 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 00:35:07.217 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class java.lang.StackOverflowError: null
+[MASTER] 00:35:07.220 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ Expression[] expressionArray0 = new Expression[6];
+CoreOperationAdd coreOperationAdd0 = new CoreOperationAdd(expressionArray0);
+expressionArray0[0] = (Expression) coreOperationAdd0;
+Expression[] expressionArray1 = new Expression[7];
+expressionArray1[0] = (Expression) coreOperationAdd0;
+expressionArray1[1] = (Expression) coreOperationAdd0;
+expressionArray1[2] = (Expression) coreOperationAdd0;
+expressionArray1[3] = (Expression) coreOperationAdd0;
+expressionArray1[4] = (Expression) coreOperationAdd0;
+expressionArray1[5] = (Expression) coreOperationAdd0;
+expressionArray1[6] = (Expression) coreOperationAdd0;
+CoreOperationOr coreOperationOr0 = new CoreOperationOr(expressionArray1);
+expressionArray0[1] = (Expression) coreOperationOr0;
+CoreOperationSubtract coreOperationSubtract0 = new CoreOperationSubtract(expressionArray1[3], expressionArray1[4]);
+expressionArray0[2] = (Expression) coreOperationSubtract0;
+QName qName0 = new QName("", "");
+ExtensionFunction extensionFunction0 = new ExtensionFunction(qName0, expressionArray0);
+expressionArray0[3] = (Expression) extensionFunction0;
+CoreFunction coreFunction0 = new CoreFunction(1110, expressionArray1);
+Expression expression0 = coreFunction0.getArg3();
+expressionArray0[4] = expression0;
+CoreOperationEqual coreOperationEqual0 = new CoreOperationEqual(expressionArray0[3], expressionArray0[0]);
+expressionArray0[5] = (Expression) coreOperationEqual0;
+CoreOperationOr coreOperationOr1 = new CoreOperationOr(expressionArray0);
+CoreOperationLessThanOrEqual coreOperationLessThanOrEqual0 = new CoreOperationLessThanOrEqual(expressionArray1[1], expressionArray1[0]);
+coreOperationLessThanOrEqual0.computeValue((EvalContext) null);
+
+[MASTER] 00:35:07.485 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class java.lang.AssertionError: Expecting exception: ClassCastException
+[MASTER] 00:35:07.485 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ QName qName0 = new QName(">.{xm^}wz31CW?2:");
+VariableReference variableReference0 = new VariableReference(qName0);
+CoreOperationEqual coreOperationEqual0 = new CoreOperationEqual(variableReference0, variableReference0);
+CoreOperationDivide coreOperationDivide0 = new CoreOperationDivide(variableReference0, coreOperationEqual0);
+CoreOperationLessThanOrEqual coreOperationLessThanOrEqual0 = new CoreOperationLessThanOrEqual(coreOperationDivide0, variableReference0);
+Object object0 = new Object();
+JXPathContext.newContext(object0);
+
+[MASTER] 00:35:07.692 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class java.lang.AssertionError: Expecting exception: ClassCastException
+[MASTER] 00:35:07.692 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ FileSystemHandling fileSystemHandling0 = new FileSystemHandling();
+Step[] stepArray0 = new Step[0];
+LocationPath locationPath0 = new LocationPath(true, stepArray0);
+CoreOperationGreaterThan coreOperationGreaterThan0 = new CoreOperationGreaterThan(locationPath0, locationPath0);
+ProcessingInstructionTest processingInstructionTest0 = new ProcessingInstructionTest("?bTwT|b6|{");
+DescendantContext descendantContext0 = new DescendantContext((EvalContext) null, false, processingInstructionTest0);
+JXPathContext.newContext((Object) descendantContext0);
+
+[MASTER] 00:35:07.992 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class java.lang.AssertionError: Expecting exception: ClassCastException
+[MASTER] 00:35:07.993 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ FileSystemHandling fileSystemHandling0 = new FileSystemHandling();
+Step[] stepArray0 = new Step[0];
+LocationPath locationPath0 = new LocationPath(true, stepArray0);
+CoreOperationGreaterThan coreOperationGreaterThan0 = new CoreOperationGreaterThan(locationPath0, locationPath0);
+ProcessingInstructionTest processingInstructionTest0 = new ProcessingInstructionTest("?bTwT|b6|{");
+DescendantContext descendantContext0 = new DescendantContext((EvalContext) null, false, processingInstructionTest0);
+JXPathContext.newContext((Object) descendantContext0);
+
+[MASTER] 00:35:08.288 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class java.lang.AssertionError: Expecting exception: ClassCastException
+[MASTER] 00:35:08.289 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ FileSystemHandling fileSystemHandling0 = new FileSystemHandling();
+Step[] stepArray0 = new Step[0];
+LocationPath locationPath0 = new LocationPath(true, stepArray0);
+CoreOperationGreaterThan coreOperationGreaterThan0 = new CoreOperationGreaterThan(locationPath0, locationPath0);
+ProcessingInstructionTest processingInstructionTest0 = new ProcessingInstructionTest("?bTwT|b6|{");
+FileSystemHandling.shouldAllThrowIOExceptions();
+DescendantContext descendantContext0 = new DescendantContext((EvalContext) null, false, processingInstructionTest0);
+JXPathContext.newContext((Object) descendantContext0);
+
+[MASTER] 00:35:08.517 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class java.lang.AssertionError: Expecting exception: ClassCastException
+[MASTER] 00:35:08.517 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ Step[] stepArray0 = new Step[0];
+LocationPath locationPath0 = new LocationPath(false, stepArray0);
+CoreOperationGreaterThan coreOperationGreaterThan0 = new CoreOperationGreaterThan(locationPath0, locationPath0);
+JXPathContext.newContext((Object) null);
+
+[MASTER] 00:35:08.816 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class java.lang.AssertionError: Expecting exception: ClassCastException
+[MASTER] 00:35:08.816 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ Step[] stepArray0 = new Step[0];
+LocationPath locationPath0 = new LocationPath(true, stepArray0);
+CoreOperationLessThanOrEqual coreOperationLessThanOrEqual0 = new CoreOperationLessThanOrEqual(locationPath0, locationPath0);
+CoreOperationGreaterThan coreOperationGreaterThan0 = new CoreOperationGreaterThan(coreOperationLessThanOrEqual0, locationPath0);
+ProcessingInstructionTest processingInstructionTest0 = new ProcessingInstructionTest("org.apache.commons.jxpath.ri.compiler.CoreOperationRelationalExpression");
+DescendantContext descendantContext0 = new DescendantContext((EvalContext) null, true, processingInstructionTest0);
+JXPathContext.newContext((Object) processingInstructionTest0);
+
+[MASTER] 00:35:09.057 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class java.lang.AssertionError: Expecting exception: ClassCastException
+[MASTER] 00:35:09.057 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ FileSystemHandling fileSystemHandling0 = new FileSystemHandling();
+Step[] stepArray0 = new Step[0];
+LocationPath locationPath0 = new LocationPath(true, stepArray0);
+CoreOperationGreaterThan coreOperationGreaterThan0 = new CoreOperationGreaterThan(locationPath0, locationPath0);
+ProcessingInstructionTest processingInstructionTest0 = new ProcessingInstructionTest("?bTwT|b6|{");
+DescendantContext descendantContext0 = new DescendantContext((EvalContext) null, false, processingInstructionTest0);
+JXPathContext.newContext((Object) descendantContext0);
+
+[MASTER] 00:35:09.272 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class java.lang.AssertionError: Expecting exception: ClassCastException
+[MASTER] 00:35:09.273 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ Step[] stepArray0 = new Step[0];
+LocationPath locationPath0 = new LocationPath(true, stepArray0);
+CoreOperationGreaterThan coreOperationGreaterThan0 = new CoreOperationGreaterThan(locationPath0, locationPath0);
+ProcessingInstructionTest processingInstructionTest0 = new ProcessingInstructionTest("@mPyPt=O$l");
+DescendantContext descendantContext0 = new DescendantContext((EvalContext) null, true, processingInstructionTest0);
+JXPathContext.newContext((Object) descendantContext0);
+
+* Writing tests to file
+* Writing JUnit test case 'CoreOperationRelationalExpression_ESTest' to results/JxPath-20/org.apache.commons.jxpath.ri.compiler.CoreOperationRelationalExpression/BBC-F0-opt-80/tests/4
+* Done!
+
+* Computation finished

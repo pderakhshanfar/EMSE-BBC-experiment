@@ -1,0 +1,61 @@
+* EvoSuite 1.1.1-SNAPSHOT
+* Configuration: BBC-F0-opt-10
+* Going to generate test cases for class: com.google.javascript.jscomp.FunctionInjector
+* Starting Client-0
+* Connecting to master process on port 15552
+* Analyzing classpath: 
+  - subjects/buggy-versions/Closure-175/build/classes
+  - subjects/buggy-versions/Closure-175/lib/args4j.jar
+  - subjects/buggy-versions/Closure-175/lib/guava.jar
+  - subjects/buggy-versions/Closure-175/lib/json.jar
+  - subjects/buggy-versions/Closure-175/lib/jsr305.jar
+  - subjects/buggy-versions/Closure-175/lib/protobuf-java.jar
+  - subjects/buggy-versions/Closure-175/build/lib/rhino.jar
+  - subjects/buggy-versions/Closure-175/lib/ant.jar
+* Finished analyzing classpath
+* Generating tests for class com.google.javascript.jscomp.FunctionInjector
+* Test criteria:
+  - Line Coverage
+  - Branch Coverage
+  - Exception
+  - Mutation testing (weak)
+  - Method-Output Coverage
+  - Top-Level Method Coverage
+  - No-Exception Top-Level Method Coverage
+  - Context Branch Coverage
+* Total number of test goals for DYNAMOSA: 1880
+* Using seed 4279962192
+* Starting evolution
+bbc usage percentage is: 10%
+* Initial Number of Goals in DynaMOSA = 529 / 1880
+[MASTER] 21:26:50.866 [logback-2] ERROR TestCluster - Failed to check cache for java.util.Enumeration<E> : Type points to itself
+[MASTER] 21:26:52.177 [logback-2] ERROR TestCluster - Failed to check cache for java.util.Comparator<T> : Type points to itself
+[MASTER] 21:27:47.118 [logback-2] ERROR ClientNodeImpl - Error when generating tests for: com.google.javascript.jscomp.FunctionInjector with seed 4279962192. Configuration id : BBC-F0-opt-10
+java.lang.NullPointerException: null
+	at org.evosuite.testcase.secondaryobjectives.basicblock.BasicBlockCoverage.compareChromosomes(BasicBlockCoverage.java:59)
+	at org.evosuite.testcase.TestChromosome.compareSecondaryObjective(TestChromosome.java:680)
+	at org.evosuite.testcase.TestChromosome.compareSecondaryObjective(TestChromosome.java:68)
+	at org.evosuite.ga.comparators.PreferenceSortingComparator.compare(PreferenceSortingComparator.java:74)
+	at org.evosuite.ga.operators.ranking.RankBasedPreferenceSorting.getZeroFront(RankBasedPreferenceSorting.java:111)
+	at org.evosuite.ga.operators.ranking.RankBasedPreferenceSorting.computeRankingAssignment(RankBasedPreferenceSorting.java:65)
+	at org.evosuite.ga.metaheuristics.mosa.DynaMOSA.evolve(DynaMOSA.java:83)
+	at org.evosuite.ga.metaheuristics.mosa.DynaMOSA.generateSolution(DynaMOSA.java:174)
+	at org.evosuite.ga.metaheuristics.TestSuiteAdapter.generateSolution(TestSuiteAdapter.java:114)
+	at org.evosuite.strategy.MOSuiteStrategy.generateTests(MOSuiteStrategy.java:123)
+	at org.evosuite.TestSuiteGenerator.generateTests(TestSuiteGenerator.java:630)
+	at org.evosuite.TestSuiteGenerator.generateTestSuite(TestSuiteGenerator.java:205)
+	at org.evosuite.rmi.service.ClientNodeImpl.lambda$startNewSearch$0(ClientNodeImpl.java:150)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+* Computation finished
+[MASTER] 21:27:47.245 [main] ERROR SearchStatistics - No obtained value for output variable: LineCoverage
+[MASTER] 21:27:49.248 [main] ERROR SearchStatistics - No obtained value for output variable: LineCoverage
+[MASTER] 21:27:50.249 [main] ERROR SearchStatistics - No obtained value for output variable: LineCoverage
+[MASTER] 21:27:51.249 [main] ERROR SearchStatistics - No obtained value for output variable: LineCoverage
+[MASTER] 21:27:52.250 [main] ERROR SearchStatistics - No obtained value for output variable: LineCoverage
+[MASTER] 21:27:53.250 [main] ERROR SearchStatistics - No obtained value for output variable: LineCoverage
+[MASTER] 21:27:53.251 [main] ERROR SearchStatistics - Not going to write down statistics data, as some are missing
+[MASTER] 21:27:53.351 [main] ERROR TestGeneration - failed to write statistics data

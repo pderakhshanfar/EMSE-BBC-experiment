@@ -1,0 +1,164 @@
+* EvoSuite 1.1.1-SNAPSHOT
+* Configuration: BBC-F0-opt-60
+* Going to generate test cases for class: org.apache.commons.cli.HelpFormatter
+* Starting Client-0
+* Connecting to master process on port 4191
+* Analyzing classpath: 
+  - subjects/buggy-versions/Cli-31/target/classes
+* Finished analyzing classpath
+* Generating tests for class org.apache.commons.cli.HelpFormatter
+* Test criteria:
+  - Line Coverage
+  - Branch Coverage
+  - Exception
+  - Mutation testing (weak)
+  - Method-Output Coverage
+  - Top-Level Method Coverage
+  - No-Exception Top-Level Method Coverage
+  - Context Branch Coverage
+* Total number of test goals for DYNAMOSA: 1153
+* Using seed 2039343954
+* Starting evolution
+bbc usage percentage is: 60%
+* Initial Number of Goals in DynaMOSA = 401 / 1153
+[MASTER] 18:39:00.497 [logback-2] ERROR TestCluster - Failed to check cache for java.util.Comparator<T> : Type points to itself
+* Search finished after 602s and 112 generations, 41641 statements, best individual has fitness: 135.0
+* Minimizing test suite
+[MASTER] 18:50:16.129 [logback-1] WARN  TestSuiteMinimizer - Minimization timeout. Roll back to original test suite
+* Going to analyze the coverage criteria
+* Coverage analysis for criterion LINE
+* Coverage of criterion LINE: 99%
+* Total number of goals: 205
+* Number of covered goals: 203
+* Coverage analysis for criterion BRANCH
+* Coverage of criterion BRANCH: 89%
+* Total number of goals: 154
+* Number of covered goals: 137
+* Coverage analysis for criterion EXCEPTION
+* Coverage of criterion EXCEPTION: 100%
+* Total number of goals: 52
+* Number of covered goals: 52
+* Coverage analysis for criterion WEAKMUTATION
+* Coverage of criterion WEAKMUTATION: 93%
+* Total number of goals: 514
+* Number of covered goals: 476
+* Coverage analysis for criterion OUTPUT
+* Coverage of criterion OUTPUT: 67%
+* Total number of goals: 46
+* Number of covered goals: 31
+* Coverage analysis for criterion METHOD
+* Coverage of criterion METHOD: 98%
+* Total number of goals: 40
+* Number of covered goals: 39
+* Coverage analysis for criterion METHODNOEXCEPTION
+* Coverage of criterion METHODNOEXCEPTION: 98%
+* Total number of goals: 40
+* Number of covered goals: 39
+* Coverage analysis for criterion CBRANCH
+* Coverage of criterion CBRANCH: 88%
+* Total number of goals: 154
+* Number of covered goals: 136
+* Generated 116 tests with total length 1496
+* Resulting test suite's coverage: 86% (average coverage for all fitness functions)
+* Generating assertions
+[MASTER] 18:51:02.295 [logback-1] WARN  SimpleMutationAssertionGenerator - Assertion minimization is taking too long (0.7128333333333333% of time used, but only 7/116 tests minimized), falling back to using all assertions
+* Resulting test suite's mutation score: 3%
+* Compiling and checking tests
+[MASTER] 18:51:44.521 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 18:51:44.757 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 18:51:44.850 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 18:51:47.515 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class java.lang.SecurityException: Security manager blocks ("java.lang.RuntimePermission" "writeFileDescriptor")
+java.lang.Thread.getStackTrace(Thread.java:1559)
+org.evosuite.runtime.sandbox.MSecurityManager.checkPermission(MSecurityManager.java:433)
+java.lang.SecurityManager.checkWrite(SecurityManager.java:954)
+java.io.FileOutputStream.<init>(FileOutputStream.java:245)
+org.evosuite.runtime.mock.java.io.MockFileOutputStream.<init>(MockFileOutputStream.java:114)
+org.apache.commons.cli.HelpFormatter_124_tmp__ESTest.test0(HelpFormatter_124_tmp__ESTest.java:49)
+sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+java.lang.reflect.Method.invoke(Method.java:498)
+org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)
+org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56)
+org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+org.junit.internal.runners.statements.FailOnTimeout$CallableStatement.call(FailOnTimeout.java:288)
+org.junit.internal.runners.statements.FailOnTimeout$CallableStatement.call(FailOnTimeout.java:282)
+java.util.concurrent.FutureTask.run(FutureTask.java:266)
+java.lang.Thread.run(Thread.java:748)
+
+[MASTER] 18:51:47.516 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ HelpFormatter helpFormatter0 = new HelpFormatter();
+assertEquals(1, helpFormatter0.defaultLeftPad);
+assertEquals(74, helpFormatter0.defaultWidth);
+assertEquals(74, HelpFormatter.DEFAULT_WIDTH);
+assertEquals(3, HelpFormatter.DEFAULT_DESC_PAD);
+assertEquals(3, helpFormatter0.defaultDescPad);
+assertEquals(1, HelpFormatter.DEFAULT_LEFT_PAD);
+assertEquals("usage: ", helpFormatter0.getSyntaxPrefix());
+assertEquals("-", helpFormatter0.getOptPrefix());
+assertEquals("\n", helpFormatter0.getNewLine());
+assertEquals(1, helpFormatter0.getLeftPadding());
+assertEquals("arg", helpFormatter0.getArgName());
+assertEquals("--", helpFormatter0.getLongOptPrefix());
+assertEquals(74, helpFormatter0.getWidth());
+assertEquals(3, helpFormatter0.getDescPadding());
+assertEquals(" ", helpFormatter0.getLongOptSeparator());
+assertNotNull(helpFormatter0);
+
+FileDescriptor fileDescriptor0 = new FileDescriptor();
+assertFalse(fileDescriptor0.valid());
+assertNotNull(fileDescriptor0);
+
+MockFileOutputStream mockFileOutputStream0 = new MockFileOutputStream(fileDescriptor0);
+assertNotNull(mockFileOutputStream0);
+
+MockPrintStream mockPrintStream0 = new MockPrintStream(mockFileOutputStream0);
+assertNotNull(mockPrintStream0);
+
+mockFileOutputStream0.release();
+assertFalse(fileDescriptor0.valid());
+
+PrintStream printStream0 = mockPrintStream0.append((CharSequence) "-", 0, 1);
+assertSame(mockPrintStream0, printStream0);
+assertSame(printStream0, mockPrintStream0);
+assertFalse(fileDescriptor0.valid());
+assertNotNull(printStream0);
+
+boolean boolean0 = false;
+helpFormatter0.setArgName("-%jr%R2K}AY");
+assertEquals(1, helpFormatter0.defaultLeftPad);
+assertEquals(74, helpFormatter0.defaultWidth);
+assertEquals(74, HelpFormatter.DEFAULT_WIDTH);
+assertEquals(3, HelpFormatter.DEFAULT_DESC_PAD);
+assertEquals(3, helpFormatter0.defaultDescPad);
+assertEquals(1, HelpFormatter.DEFAULT_LEFT_PAD);
+assertEquals("usage: ", helpFormatter0.getSyntaxPrefix());
+assertEquals("-", helpFormatter0.getOptPrefix());
+assertEquals("\n", helpFormatter0.getNewLine());
+assertEquals(1, helpFormatter0.getLeftPadding());
+assertEquals("--", helpFormatter0.getLongOptPrefix());
+assertEquals(74, helpFormatter0.getWidth());
+assertEquals("-%jr%R2K}AY", helpFormatter0.getArgName());
+assertEquals(3, helpFormatter0.getDescPadding());
+assertEquals(" ", helpFormatter0.getLongOptSeparator());
+
+MockPrintWriter mockPrintWriter0 = new MockPrintWriter(printStream0, false);
+assertNotNull(mockPrintWriter0);
+
+mockPrintWriter0.println();
+assertSame(mockPrintStream0, printStream0);
+assertSame(printStream0, mockPrintStream0);
+assertFalse(fileDescriptor0.valid());
+
+String string0 = "A CloneNotSupportedException was thrown: ";
+helpFormatter0.printWrapped((PrintWriter) mockPrintWriter0, 0, 0, "A CloneNotSupportedException was thrown: ");
+
+* Permissions denied during test execution: 
+  - java.lang.RuntimePermission: 
+         writeFileDescriptor: 1
+* Writing tests to file
+* Writing JUnit test case 'HelpFormatter_ESTest' to results/Cli-31/org.apache.commons.cli.HelpFormatter/BBC-F0-opt-60/tests/8
+* Done!
+
+* Computation finished

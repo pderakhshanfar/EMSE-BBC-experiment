@@ -1,0 +1,61 @@
+* EvoSuite 1.1.1-SNAPSHOT
+* Configuration: BBC-F0-opt-30
+* Going to generate test cases for class: com.fasterxml.jackson.databind.ser.std.NumberSerializers
+* Starting Client-0
+* Connecting to master process on port 2334
+* Analyzing classpath: 
+  - subjects/buggy-versions/JacksonDatabind-109/target/classes
+  - defects4j/framework/projects/JacksonDatabind/lib/com/fasterxml/jackson/core/jackson-annotations/2.10.0-SNAPSHOT/jackson-annotations-2.10.0-20190519.085045-3.jar
+  - defects4j/framework/projects/JacksonDatabind/lib/com/fasterxml/jackson/core/jackson-core/2.10.0-SNAPSHOT/jackson-core-2.10.0-20190518.180547-60.jar
+* Finished analyzing classpath
+* Generating tests for class com.fasterxml.jackson.databind.ser.std.NumberSerializers
+* Test criteria:
+  - Line Coverage
+  - Branch Coverage
+  - Exception
+  - Mutation testing (weak)
+  - Method-Output Coverage
+  - Top-Level Method Coverage
+  - No-Exception Top-Level Method Coverage
+  - Context Branch Coverage
+* Total number of test goals for DYNAMOSA: 171
+* Using seed 267684551
+* Starting evolution
+bbc usage percentage is: 30%
+* Initial Number of Goals in DynaMOSA = 83 / 171
+[MASTER] 22:34:24.685 [logback-2] ERROR TestCluster - Failed to check cache for java.util.HashMap<K, V> : Type points to itself
+[MASTER] 22:34:28.995 [logback-2] ERROR TestCluster - Failed to check cache for java.util.Enumeration<E> : Type points to itself
+[MASTER] 22:34:29.427 [logback-2] ERROR TestCluster - Failed to check cache for com.fasterxml.jackson.databind.JsonSerializer<T> : Type points to itself
+[MASTER] 22:34:30.537 [logback-2] ERROR TestCluster - Failed to check cache for java.util.LinkedHashSet<E> : Type points to itself
+[MASTER] 22:34:31.668 [logback-2] ERROR TestCluster - Failed to check cache for com.fasterxml.jackson.annotation.ObjectIdGenerator<T> : Type points to itself
+[MASTER] 22:34:38.018 [logback-2] ERROR TestCluster - Failed to check cache for java.util.Comparator<T> : Type points to itself
+[MASTER] 22:34:58.300 [logback-2] ERROR TestCluster - Failed to check cache for java.lang.Class<T> : Type points to itself
+* Computation finished
+[MASTER] 22:35:24.958 [logback-2] ERROR ClientNodeImpl - Error when generating tests for: com.fasterxml.jackson.databind.ser.std.NumberSerializers with seed 267684551. Configuration id : BBC-F0-opt-30
+java.lang.NullPointerException: null
+	at org.evosuite.testcase.secondaryobjectives.basicblock.BasicBlockCoverage.compareChromosomes(BasicBlockCoverage.java:59)
+	at org.evosuite.testcase.TestChromosome.compareSecondaryObjective(TestChromosome.java:680)
+	at org.evosuite.testcase.TestChromosome.compareSecondaryObjective(TestChromosome.java:68)
+	at org.evosuite.ga.comparators.PreferenceSortingComparator.compare(PreferenceSortingComparator.java:74)
+	at org.evosuite.ga.operators.ranking.RankBasedPreferenceSorting.getZeroFront(RankBasedPreferenceSorting.java:111)
+	at org.evosuite.ga.operators.ranking.RankBasedPreferenceSorting.computeRankingAssignment(RankBasedPreferenceSorting.java:65)
+	at org.evosuite.ga.metaheuristics.mosa.DynaMOSA.evolve(DynaMOSA.java:83)
+	at org.evosuite.ga.metaheuristics.mosa.DynaMOSA.generateSolution(DynaMOSA.java:174)
+	at org.evosuite.ga.metaheuristics.TestSuiteAdapter.generateSolution(TestSuiteAdapter.java:114)
+	at org.evosuite.strategy.MOSuiteStrategy.generateTests(MOSuiteStrategy.java:123)
+	at org.evosuite.TestSuiteGenerator.generateTests(TestSuiteGenerator.java:630)
+	at org.evosuite.TestSuiteGenerator.generateTestSuite(TestSuiteGenerator.java:205)
+	at org.evosuite.rmi.service.ClientNodeImpl.lambda$startNewSearch$0(ClientNodeImpl.java:150)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+[MASTER] 22:35:25.082 [main] ERROR SearchStatistics - No obtained value for output variable: LineCoverage
+[MASTER] 22:35:27.086 [main] ERROR SearchStatistics - No obtained value for output variable: LineCoverage
+[MASTER] 22:35:28.087 [main] ERROR SearchStatistics - No obtained value for output variable: LineCoverage
+[MASTER] 22:35:29.087 [main] ERROR SearchStatistics - No obtained value for output variable: LineCoverage
+[MASTER] 22:35:30.088 [main] ERROR SearchStatistics - No obtained value for output variable: LineCoverage
+[MASTER] 22:35:31.088 [main] ERROR SearchStatistics - No obtained value for output variable: LineCoverage
+[MASTER] 22:35:31.089 [main] ERROR SearchStatistics - Not going to write down statistics data, as some are missing
+[MASTER] 22:35:31.190 [main] ERROR TestGeneration - failed to write statistics data

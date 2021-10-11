@@ -1,0 +1,57 @@
+* EvoSuite 1.1.1-SNAPSHOT
+* Configuration: BBC-F0-opt-10
+* Going to generate test cases for class: org.apache.commons.collections4.trie.AbstractPatriciaTrie
+* Starting Client-0
+* Connecting to master process on port 7806
+* Analyzing classpath: 
+  - subjects/buggy-versions/Collections-28/target/classes
+* Finished analyzing classpath
+* Generating tests for class org.apache.commons.collections4.trie.AbstractPatriciaTrie
+* Test criteria:
+  - Line Coverage
+  - Branch Coverage
+  - Exception
+  - Mutation testing (weak)
+  - Method-Output Coverage
+  - Top-Level Method Coverage
+  - No-Exception Top-Level Method Coverage
+  - Context Branch Coverage
+* Total number of test goals for DYNAMOSA: 3013
+* Using seed 373273779
+* Starting evolution
+bbc usage percentage is: 10%
+* Initial Number of Goals in DynaMOSA = 988 / 3013
+[MASTER] 21:39:27.626 [logback-2] ERROR TestCluster - Failed to check cache for java.util.AbstractMap<K, V>.SimpleEntry<K, V> : Type points to itself
+[MASTER] 21:39:27.626 [logback-2] ERROR TestCluster - Failed to check cache for java.util.AbstractMap<K, V>.SimpleImmutableEntry<K, V> : Type points to itself
+[MASTER] 21:39:30.856 [logback-2] ERROR TestCluster - Failed to check cache for java.util.Comparator<T> : Type points to itself
+[MASTER] 21:39:45.013 [logback-1] WARN  TestChromosome - Functional mock problem: org.evosuite.ga.ConstructionFailedException: Failed to add constructor for org.apache.commons.collections4.trie.AbstractPatriciaTrie$TrieEntry due to org.evosuite.ga.ConstructionFailedException: Have no generator for org.apache.commons.collections4.trie.AbstractPatriciaTrie<java.lang.Integer, java.lang.String>.TrieEntry<java.lang.Object, java.lang.String> canUseFunctionalMocks=false, canBeMocked: false
+[MASTER] 21:40:06.354 [logback-2] ERROR TestCluster - Failed to check cache for java.util.function.Function<T, R> : Type points to itself
+[MASTER] 21:40:28.760 [logback-2] ERROR ClientNodeImpl - Error when generating tests for: org.apache.commons.collections4.trie.AbstractPatriciaTrie with seed 373273779. Configuration id : BBC-F0-opt-10
+java.lang.NullPointerException: null
+	at org.evosuite.testcase.secondaryobjectives.basicblock.BasicBlockCoverage.compareChromosomes(BasicBlockCoverage.java:59)
+	at org.evosuite.testcase.TestChromosome.compareSecondaryObjective(TestChromosome.java:680)
+	at org.evosuite.testcase.TestChromosome.compareSecondaryObjective(TestChromosome.java:68)
+	at org.evosuite.ga.comparators.PreferenceSortingComparator.compare(PreferenceSortingComparator.java:74)
+	at org.evosuite.ga.operators.ranking.RankBasedPreferenceSorting.getZeroFront(RankBasedPreferenceSorting.java:111)
+	at org.evosuite.ga.operators.ranking.RankBasedPreferenceSorting.computeRankingAssignment(RankBasedPreferenceSorting.java:65)
+	at org.evosuite.ga.metaheuristics.mosa.DynaMOSA.evolve(DynaMOSA.java:83)
+	at org.evosuite.ga.metaheuristics.mosa.DynaMOSA.generateSolution(DynaMOSA.java:174)
+	at org.evosuite.ga.metaheuristics.TestSuiteAdapter.generateSolution(TestSuiteAdapter.java:114)
+	at org.evosuite.strategy.MOSuiteStrategy.generateTests(MOSuiteStrategy.java:123)
+	at org.evosuite.TestSuiteGenerator.generateTests(TestSuiteGenerator.java:630)
+	at org.evosuite.TestSuiteGenerator.generateTestSuite(TestSuiteGenerator.java:205)
+	at org.evosuite.rmi.service.ClientNodeImpl.lambda$startNewSearch$0(ClientNodeImpl.java:150)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+* Computation finished
+[MASTER] 21:40:28.890 [main] ERROR SearchStatistics - No obtained value for output variable: LineCoverage
+[MASTER] 21:40:30.893 [main] ERROR SearchStatistics - No obtained value for output variable: LineCoverage
+[MASTER] 21:40:31.894 [main] ERROR SearchStatistics - No obtained value for output variable: LineCoverage
+[MASTER] 21:40:32.894 [main] ERROR SearchStatistics - No obtained value for output variable: LineCoverage
+[MASTER] 21:40:33.895 [main] ERROR SearchStatistics - No obtained value for output variable: LineCoverage
+[MASTER] 21:40:34.896 [main] ERROR SearchStatistics - No obtained value for output variable: LineCoverage
+[MASTER] 21:40:34.896 [main] ERROR SearchStatistics - Not going to write down statistics data, as some are missing
+[MASTER] 21:40:34.997 [main] ERROR TestGeneration - failed to write statistics data

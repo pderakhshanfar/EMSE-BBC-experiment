@@ -1,0 +1,109 @@
+* EvoSuite 1.1.1-SNAPSHOT
+* Configuration: BBC-F0-opt-10
+* Going to generate test cases for class: org.apache.commons.collections4.keyvalue.MultiKey
+* Starting Client-0
+* Connecting to master process on port 12853
+* Analyzing classpath: 
+  - subjects/buggy-versions/Collections-26/target/classes
+* Finished analyzing classpath
+* Generating tests for class org.apache.commons.collections4.keyvalue.MultiKey
+* Test criteria:
+  - Line Coverage
+  - Branch Coverage
+  - Exception
+  - Mutation testing (weak)
+  - Method-Output Coverage
+  - Top-Level Method Coverage
+  - No-Exception Top-Level Method Coverage
+  - Context Branch Coverage
+* Total number of test goals for DYNAMOSA: 152
+* Using seed 3708553490
+* Starting evolution
+bbc usage percentage is: 10%
+* Initial Number of Goals in DynaMOSA = 68 / 152
+* Search finished after 602s and 4562 generations, 2694394 statements, best individual has fitness: 17.0
+* Minimizing test suite
+* Going to analyze the coverage criteria
+* Coverage analysis for criterion LINE
+* Coverage of criterion LINE: 84%
+* Total number of goals: 37
+* Number of covered goals: 31
+* Coverage analysis for criterion BRANCH
+* Coverage of criterion BRANCH: 96%
+* Total number of goals: 23
+* Number of covered goals: 22
+* Coverage analysis for criterion EXCEPTION
+* Coverage of criterion EXCEPTION: 100%
+* Total number of goals: 5
+* Number of covered goals: 5
+* Coverage analysis for criterion WEAKMUTATION
+* Coverage of criterion WEAKMUTATION: 97%
+* Total number of goals: 32
+* Number of covered goals: 31
+* Coverage analysis for criterion OUTPUT
+* Coverage of criterion OUTPUT: 69%
+* Total number of goals: 13
+* Number of covered goals: 9
+* Coverage analysis for criterion METHOD
+* Coverage of criterion METHOD: 100%
+* Total number of goals: 12
+* Number of covered goals: 12
+* Coverage analysis for criterion METHODNOEXCEPTION
+* Coverage of criterion METHODNOEXCEPTION: 100%
+* Total number of goals: 12
+* Number of covered goals: 12
+* Coverage analysis for criterion CBRANCH
+* Coverage of criterion CBRANCH: 96%
+* Total number of goals: 23
+* Number of covered goals: 22
+* Generated 15 tests with total length 60
+* Resulting test suite's coverage: 87% (average coverage for all fitness functions)
+* Generating assertions
+* Resulting test suite's mutation score: 38%
+* Compiling and checking tests
+[MASTER] 21:04:16.767 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 21:04:16.839 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 21:04:16.894 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 21:04:16.936 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 21:04:16.994 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 21:04:17.066 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 21:04:17.150 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 21:04:17.197 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 21:04:17.245 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 21:04:17.285 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 21:04:17.339 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 21:04:17.347 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class java.lang.ClassCastException: java.lang.Integer cannot be cast to org.apache.commons.collections4.keyvalue.MultiKey
+[MASTER] 21:04:17.347 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ Integer integer0 = new Integer(2);
+MultiKey<Integer> multiKey0 = new MultiKey<Integer>(integer0, integer0, integer0, integer0, integer0);
+MultiKey<Object> multiKey1 = new MultiKey<Object>(multiKey0, integer0, integer0);
+MultiKey multiKey2 = (MultiKey)multiKey1.getKey(2);
+multiKey2.getKey(0);
+
+[MASTER] 21:04:19.658 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 21:04:19.689 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class java.lang.StackOverflowError: null
+[MASTER] 21:04:19.693 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ MultiKey<Object>[] multiKeyArray0 = (MultiKey<Object>[]) Array.newInstance(MultiKey.class, 8);
+MultiKey<Object> multiKey0 = new MultiKey<Object>("GI5tp [c6,|i", "GI5tp [c6,|i");
+MultiKey<Object> multiKey1 = new MultiKey<Object>("GI5tp [c6,|i", multiKey0);
+multiKeyArray0[0] = multiKey1;
+MultiKey<Object> multiKey2 = new MultiKey<Object>(multiKey1, "GI5tp [c6,|i");
+multiKeyArray0[1] = multiKey2;
+multiKeyArray0[2] = multiKeyArray0[1];
+MultiKey<Object> multiKey3 = new MultiKey<Object>((Object[]) multiKeyArray0, true);
+multiKeyArray0[3] = multiKey3;
+MultiKey<Object> multiKey4 = new MultiKey<Object>((Object[]) multiKeyArray0, false);
+multiKeyArray0[5] = multiKey4;
+MultiKey<MultiKey<Object>> multiKey5 = new MultiKey<MultiKey<Object>>(multiKeyArray0);
+multiKey5.toString();
+
+[MASTER] 21:04:19.762 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 21:04:19.887 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 21:04:19.944 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 21:04:20.108 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 21:04:20.363 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+* Writing tests to file
+* Writing JUnit test case 'MultiKey_ESTest' to results/Collections-26/org.apache.commons.collections4.keyvalue.MultiKey/BBC-F0-opt-10/tests/5
+* Done!
+
+* Computation finished

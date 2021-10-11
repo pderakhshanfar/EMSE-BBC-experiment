@@ -1,0 +1,623 @@
+* EvoSuite 1.1.1-SNAPSHOT
+* Configuration: BBC-F0-opt-10
+* Going to generate test cases for class: org.apache.commons.math3.analysis.differentiation.DSCompiler
+* Starting Client-0
+* Connecting to master process on port 7437
+* Analyzing classpath: 
+  - subjects/buggy-versions/Math-10/target/classes
+* Finished analyzing classpath
+* Generating tests for class org.apache.commons.math3.analysis.differentiation.DSCompiler
+* Test criteria:
+  - Line Coverage
+  - Branch Coverage
+  - Exception
+  - Mutation testing (weak)
+  - Method-Output Coverage
+  - Top-Level Method Coverage
+  - No-Exception Top-Level Method Coverage
+  - Context Branch Coverage
+* Total number of test goals for DYNAMOSA: 1519
+* Using seed 3169128085
+* Starting evolution
+bbc usage percentage is: 10%
+* Initial Number of Goals in DynaMOSA = 366 / 1519
+* Search finished after 603s and 117 generations, 42143 statements, best individual has fitness: 184.0
+* Minimizing test suite
+[MASTER] 00:05:11.228 [logback-1] WARN  TestSuiteMinimizer - Minimization timeout. Roll back to original test suite
+* Going to analyze the coverage criteria
+* Coverage analysis for criterion LINE
+* Coverage of criterion LINE: 98%
+* Total number of goals: 544
+* Number of covered goals: 535
+* Coverage analysis for criterion BRANCH
+* Coverage of criterion BRANCH: 97%
+* Total number of goals: 295
+* Number of covered goals: 285
+* Coverage analysis for criterion EXCEPTION
+* Coverage of criterion EXCEPTION: 100%
+* Total number of goals: 79
+* Number of covered goals: 79
+* Coverage analysis for criterion WEAKMUTATION
+* Coverage of criterion WEAKMUTATION: 80%
+* Total number of goals: 279
+* Number of covered goals: 224
+* Coverage analysis for criterion OUTPUT
+* Coverage of criterion OUTPUT: 50%
+* Total number of goals: 28
+* Number of covered goals: 14
+* Coverage analysis for criterion METHOD
+* Coverage of criterion METHOD: 100%
+* Total number of goals: 39
+* Number of covered goals: 39
+* Coverage analysis for criterion METHODNOEXCEPTION
+* Coverage of criterion METHODNOEXCEPTION: 100%
+* Total number of goals: 39
+* Number of covered goals: 39
+* Coverage analysis for criterion CBRANCH
+* Coverage of criterion CBRANCH: 94%
+* Total number of goals: 295
+* Number of covered goals: 276
+* Generated 161 tests with total length 2378
+* Resulting test suite's coverage: 84% (average coverage for all fitness functions)
+* Generating assertions
+[MASTER] 00:06:03.443 [logback-1] WARN  SimpleMutationAssertionGenerator - Assertion minimization is taking too long (0.8501% of time used, but only 5/161 tests minimized), falling back to using all assertions
+* Resulting test suite's mutation score: 1%
+* Compiling and checking tests
+[MASTER] 00:06:23.888 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 00:06:24.151 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 00:06:24.552 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 00:06:24.816 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 00:06:25.309 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 00:06:25.622 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 00:06:25.813 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 00:06:26.014 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 00:06:26.218 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 00:06:27.241 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 00:06:27.460 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 00:06:27.661 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 00:06:27.826 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 00:06:27.965 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 00:06:28.330 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 00:06:28.529 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 00:06:28.535 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class java.lang.AssertionError: expected:<10> but was:<20>
+[MASTER] 00:06:28.535 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ DSCompiler dSCompiler0 = DSCompiler.getCompiler(3, 3);
+assertEquals(10, dSCompiler0.getSize());
+assertEquals(3, dSCompiler0.getOrder());
+assertEquals(3, dSCompiler0.getFreeParameters());
+assertNotNull(dSCompiler0);
+
+DSCompiler dSCompiler1 = DSCompiler.getCompiler(3, 0);
+assertEquals(1, dSCompiler1.getSize());
+assertEquals(0, dSCompiler1.getOrder());
+assertEquals(3, dSCompiler1.getFreeParameters());
+assertFalse(dSCompiler1.equals((Object)dSCompiler0));
+assertNotNull(dSCompiler1);
+assertNotSame(dSCompiler1, dSCompiler0);
+
+dSCompiler0.checkCompatibility(dSCompiler1);
+
+[MASTER] 00:06:28.719 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 00:06:28.969 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 00:06:29.221 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 00:06:29.455 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 00:06:29.456 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class java.lang.AssertionError: expected:<10> but was:<20>
+[MASTER] 00:06:29.456 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ int int0 = 3;
+DSCompiler dSCompiler0 = DSCompiler.getCompiler(3, 3);
+assertEquals(10, dSCompiler0.getSize());
+assertEquals(3, dSCompiler0.getOrder());
+assertEquals(3, dSCompiler0.getFreeParameters());
+assertNotNull(dSCompiler0);
+
+int int1 = 178;
+double[] doubleArray0 = new double[6];
+doubleArray0[0] = (double) 1608;
+double double0 = (-2776.787698);
+int[] intArray0 = new int[8];
+intArray0[0] = 3;
+intArray0[1] = 597;
+intArray0[2] = 1608;
+intArray0[3] = 860;
+intArray0[4] = 178;
+intArray0[5] = 1608;
+intArray0[6] = 1608;
+intArray0[7] = 3;
+dSCompiler0.getPartialDerivativeIndex(intArray0);
+
+[MASTER] 00:06:29.625 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 00:06:29.883 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 00:06:30.072 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 00:06:30.219 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 00:06:30.426 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 00:06:30.664 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 00:06:30.872 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 00:06:31.059 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 00:06:31.279 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 00:06:31.498 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 00:06:31.499 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class java.lang.AssertionError: expected:<10> but was:<20>
+[MASTER] 00:06:31.499 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ DSCompiler dSCompiler0 = DSCompiler.getCompiler(3, 3);
+assertEquals(10, dSCompiler0.getSize());
+assertEquals(3, dSCompiler0.getOrder());
+assertEquals(3, dSCompiler0.getFreeParameters());
+assertNotNull(dSCompiler0);
+
+dSCompiler0.linearCombination(0.0, (double[]) null, (-333), 0.42225050926208496, (double[]) null, 940, (double[]) null, 66);
+
+[MASTER] 00:06:31.855 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 00:06:32.260 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 00:06:32.430 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 00:06:32.594 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 00:06:32.739 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 00:06:32.903 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 00:06:32.904 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class java.lang.AssertionError: expected:<10> but was:<20>
+[MASTER] 00:06:32.904 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ DSCompiler dSCompiler0 = DSCompiler.getCompiler(3, 3);
+assertEquals(3, dSCompiler0.getFreeParameters());
+assertEquals(10, dSCompiler0.getSize());
+assertEquals(3, dSCompiler0.getOrder());
+assertNotNull(dSCompiler0);
+
+dSCompiler0.sinh((double[]) null, 3, (double[]) null, (-2985));
+
+[MASTER] 00:06:33.117 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 00:06:33.287 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 00:06:33.511 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 00:06:33.828 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 00:06:33.995 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 00:06:34.155 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 00:06:34.390 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 00:06:34.633 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 00:06:34.844 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 00:06:35.092 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 00:06:35.237 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 00:06:35.432 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 00:06:35.585 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 00:06:35.759 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 00:06:35.925 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 00:06:36.100 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 00:06:36.319 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 00:06:36.491 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 00:06:36.633 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 00:06:36.793 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 00:06:37.003 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 00:06:37.012 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class java.lang.AssertionError: expected:<10> but was:<20>
+[MASTER] 00:06:37.012 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ int int0 = 3;
+DSCompiler dSCompiler0 = DSCompiler.getCompiler(3, 3);
+assertEquals(3, dSCompiler0.getOrder());
+assertEquals(10, dSCompiler0.getSize());
+assertEquals(3, dSCompiler0.getFreeParameters());
+assertNotNull(dSCompiler0);
+
+int int1 = 0;
+DSCompiler dSCompiler1 = DSCompiler.getCompiler(3, 0);
+assertEquals(3, dSCompiler1.getFreeParameters());
+assertEquals(0, dSCompiler1.getOrder());
+assertEquals(1, dSCompiler1.getSize());
+assertFalse(dSCompiler1.equals((Object)dSCompiler0));
+assertNotNull(dSCompiler1);
+assertNotSame(dSCompiler1, dSCompiler0);
+
+int int2 = (-2271);
+double[] doubleArray0 = new double[9];
+doubleArray0[0] = (double) 3;
+doubleArray0[1] = (double) (-2271);
+doubleArray0[2] = (double) (-2271);
+dSCompiler1.cosh(doubleArray0, 3, doubleArray0, 1092);
+
+[MASTER] 00:06:37.223 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 00:06:37.223 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class java.lang.AssertionError: expected:<10> but was:<20>
+[MASTER] 00:06:37.224 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ int int0 = 3;
+DSCompiler dSCompiler0 = DSCompiler.getCompiler(3, 3);
+assertEquals(10, dSCompiler0.getSize());
+assertEquals(3, dSCompiler0.getFreeParameters());
+assertEquals(3, dSCompiler0.getOrder());
+assertNotNull(dSCompiler0);
+
+int int1 = 0;
+DSCompiler dSCompiler1 = DSCompiler.getCompiler(3, 0);
+assertEquals(1, dSCompiler1.getSize());
+assertEquals(3, dSCompiler1.getFreeParameters());
+assertEquals(0, dSCompiler1.getOrder());
+assertFalse(dSCompiler1.equals((Object)dSCompiler0));
+assertNotNull(dSCompiler1);
+assertNotSame(dSCompiler1, dSCompiler0);
+
+double[] doubleArray0 = new double[5];
+doubleArray0[0] = (double) 3;
+doubleArray0[1] = (double) 3;
+doubleArray0[2] = (double) 0;
+doubleArray0[3] = (double) 3;
+doubleArray0[4] = (double) 0;
+double[] doubleArray1 = new double[0];
+assertFalse(doubleArray1.equals((Object)doubleArray0));
+
+dSCompiler1.rootN(doubleArray0, 3, 30, doubleArray1, 0);
+
+[MASTER] 00:06:37.378 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 00:06:37.538 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 00:06:37.917 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 00:06:39.275 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 00:06:39.276 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class java.lang.AssertionError: expected:<10> but was:<20>
+[MASTER] 00:06:39.276 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ int int0 = 3;
+DSCompiler dSCompiler0 = DSCompiler.getCompiler(3, 3);
+assertEquals(3, dSCompiler0.getOrder());
+assertEquals(3, dSCompiler0.getFreeParameters());
+assertEquals(10, dSCompiler0.getSize());
+assertNotNull(dSCompiler0);
+
+int int1 = 489;
+double[] doubleArray0 = new double[1];
+doubleArray0[0] = (double) 0;
+int int2 = 0;
+dSCompiler0.cosh(doubleArray0, 0, doubleArray0, 0);
+
+[MASTER] 00:06:39.427 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 00:06:39.624 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 00:06:39.805 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 00:06:39.957 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 00:06:40.121 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 00:06:40.488 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 00:06:40.651 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 00:06:40.781 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 00:06:40.907 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 00:06:41.089 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 00:06:41.311 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 00:06:41.473 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 00:06:41.612 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 00:06:41.745 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 00:06:41.746 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class java.lang.AssertionError: expected:<10> but was:<20>
+[MASTER] 00:06:41.746 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ int int0 = 3;
+DSCompiler dSCompiler0 = DSCompiler.getCompiler(3, 3);
+assertEquals(3, dSCompiler0.getFreeParameters());
+assertEquals(10, dSCompiler0.getSize());
+assertEquals(3, dSCompiler0.getOrder());
+assertNotNull(dSCompiler0);
+
+int int1 = 0;
+DSCompiler dSCompiler1 = DSCompiler.getCompiler(3, 0);
+assertEquals(1, dSCompiler1.getSize());
+assertEquals(0, dSCompiler1.getOrder());
+assertEquals(3, dSCompiler1.getFreeParameters());
+assertFalse(dSCompiler1.equals((Object)dSCompiler0));
+assertNotNull(dSCompiler1);
+assertNotSame(dSCompiler1, dSCompiler0);
+
+double[] doubleArray0 = new double[7];
+doubleArray0[0] = (double) 3;
+doubleArray0[1] = (double) 3;
+doubleArray0[2] = 3.141592653589793;
+doubleArray0[3] = (double) 3;
+doubleArray0[4] = (double) 3;
+doubleArray0[5] = (double) 0;
+doubleArray0[6] = (double) 3;
+dSCompiler1.pow(doubleArray0, 0, doubleArray0, 769, doubleArray0, 4919);
+
+[MASTER] 00:06:41.897 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 00:06:42.072 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 00:06:42.292 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 00:06:42.458 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 00:06:42.621 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 00:06:42.770 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 00:06:42.997 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 00:06:43.226 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 00:06:43.471 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 00:06:43.632 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 00:06:43.758 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 00:06:43.916 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 00:06:44.109 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 00:06:44.279 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 00:06:44.453 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 00:06:44.850 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 00:06:45.059 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 00:06:45.253 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 00:06:45.731 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 00:06:45.880 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 00:06:46.065 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 00:06:46.204 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 00:06:46.374 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 00:06:46.549 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 00:06:46.725 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 00:06:46.906 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 00:06:47.618 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 00:06:47.781 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 00:06:47.940 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 00:06:48.091 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 00:06:48.332 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 00:06:48.543 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 00:06:48.813 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 00:06:48.989 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 00:06:49.197 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 00:06:49.207 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class java.lang.AssertionError: expected:<10> but was:<20>
+[MASTER] 00:06:49.208 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ DSCompiler dSCompiler0 = DSCompiler.getCompiler(3, 3);
+assertEquals(3, dSCompiler0.getFreeParameters());
+assertEquals(10, dSCompiler0.getSize());
+assertEquals(3, dSCompiler0.getOrder());
+assertNotNull(dSCompiler0);
+
+DSCompiler dSCompiler1 = DSCompiler.getCompiler(3, 0);
+assertEquals(0, dSCompiler1.getOrder());
+assertEquals(1, dSCompiler1.getSize());
+assertEquals(3, dSCompiler1.getFreeParameters());
+assertFalse(dSCompiler1.equals((Object)dSCompiler0));
+assertNotNull(dSCompiler1);
+assertNotSame(dSCompiler1, dSCompiler0);
+
+double[] doubleArray0 = new double[5];
+doubleArray0[0] = (double) 3;
+doubleArray0[1] = (double) 3;
+doubleArray0[2] = (double) 3;
+doubleArray0[3] = (double) 0;
+doubleArray0[4] = (double) 0;
+dSCompiler0.taylor(doubleArray0, 3, doubleArray0);
+
+[MASTER] 00:06:49.458 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 00:06:49.663 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 00:06:49.665 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class java.lang.AssertionError: expected:<10> but was:<20>
+[MASTER] 00:06:49.665 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ DSCompiler dSCompiler0 = DSCompiler.getCompiler(3, 3);
+assertEquals(3, dSCompiler0.getOrder());
+assertEquals(3, dSCompiler0.getFreeParameters());
+assertEquals(10, dSCompiler0.getSize());
+assertNotNull(dSCompiler0);
+
+DSCompiler dSCompiler1 = DSCompiler.getCompiler(1, 3);
+assertEquals(4, dSCompiler1.getSize());
+assertEquals(3, dSCompiler1.getOrder());
+assertEquals(1, dSCompiler1.getFreeParameters());
+assertFalse(dSCompiler1.equals((Object)dSCompiler0));
+assertNotNull(dSCompiler1);
+assertNotSame(dSCompiler1, dSCompiler0);
+
+double[] doubleArray0 = new double[5];
+doubleArray0[0] = (double) 1;
+doubleArray0[1] = (double) 1;
+doubleArray0[2] = (double) 3;
+doubleArray0[3] = (double) 3;
+doubleArray0[4] = (double) 3;
+double[] doubleArray1 = new double[7];
+assertFalse(doubleArray1.equals((Object)doubleArray0));
+
+doubleArray1[0] = (double) 3;
+doubleArray1[1] = (double) 3;
+doubleArray1[2] = (double) 1;
+doubleArray1[3] = (double) 3;
+doubleArray1[4] = (double) 3;
+doubleArray1[5] = (double) 3;
+doubleArray1[6] = (double) 1;
+dSCompiler0.acos(doubleArray0, 3, doubleArray1, (-3309));
+
+[MASTER] 00:06:49.844 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 00:06:50.048 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 00:06:50.229 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 00:06:50.782 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 00:06:50.932 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 00:06:51.329 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 00:06:51.479 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 00:06:51.708 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 00:06:52.078 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 00:06:52.199 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 00:06:52.382 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 00:06:52.929 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 00:06:53.062 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 00:06:53.242 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 00:06:53.546 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 00:06:53.737 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 00:06:53.885 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 00:06:53.888 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class org.junit.internal.ArrayComparisonFailure: arrays first differed at element [0]; expected:<-2.0> but was:<0.0>
+[MASTER] 00:06:53.889 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ DSCompiler dSCompiler0 = DSCompiler.getCompiler(0, 0);
+assertEquals(1, dSCompiler0.getSize());
+assertEquals(0, dSCompiler0.getOrder());
+assertEquals(0, dSCompiler0.getFreeParameters());
+assertNotNull(dSCompiler0);
+
+double[] doubleArray0 = new double[1];
+doubleArray0[0] = (double) 0;
+double[] doubleArray1 = new double[3];
+assertFalse(doubleArray1.equals((Object)doubleArray0));
+
+doubleArray1[0] = (double) 0;
+DSCompiler dSCompiler1 = DSCompiler.getCompiler(0, 3);
+assertEquals(1, dSCompiler1.getSize());
+assertEquals(3, dSCompiler1.getOrder());
+assertEquals(0, dSCompiler1.getFreeParameters());
+assertFalse(dSCompiler1.equals((Object)dSCompiler0));
+assertNotNull(dSCompiler1);
+assertNotSame(dSCompiler1, dSCompiler0);
+
+dSCompiler1.tanh(doubleArray1, 1, doubleArray1, 0);
+assertEquals(1, dSCompiler1.getSize());
+assertEquals(3, dSCompiler1.getOrder());
+assertEquals(0, dSCompiler1.getFreeParameters());
+assertFalse(doubleArray1.equals((Object)doubleArray0));
+assertFalse(dSCompiler1.equals((Object)dSCompiler0));
+assertArrayEquals(new double[] {(-2.0), 0.0, 0.0}, doubleArray1, 0.01);
+assertNotSame(doubleArray1, doubleArray0);
+assertNotSame(dSCompiler1, dSCompiler0);
+assertEquals(3, doubleArray1.length);
+
+dSCompiler0.rootN(doubleArray1, 0, 2, doubleArray0, 3);
+
+[MASTER] 00:06:54.061 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 00:06:54.278 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 00:06:54.421 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 00:06:54.540 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 00:06:54.702 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 00:06:54.863 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 00:06:54.992 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 00:06:55.171 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 00:06:55.324 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 00:06:55.483 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 00:06:55.716 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 00:06:55.883 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 00:06:55.884 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class java.lang.AssertionError: expected:<10> but was:<20>
+[MASTER] 00:06:55.884 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ int int0 = 638;
+int int1 = 3;
+DSCompiler dSCompiler0 = DSCompiler.getCompiler(3, 3);
+assertEquals(10, dSCompiler0.getSize());
+assertEquals(3, dSCompiler0.getFreeParameters());
+assertEquals(3, dSCompiler0.getOrder());
+assertNotNull(dSCompiler0);
+
+double[] doubleArray0 = new double[9];
+doubleArray0[0] = (double) 3;
+doubleArray0[1] = (double) 638;
+doubleArray0[2] = 0.0;
+doubleArray0[3] = (double) 3;
+doubleArray0[4] = (double) 638;
+doubleArray0[5] = (double) 638;
+int int2 = 3699;
+int int3 = 3;
+dSCompiler0.atanh(doubleArray0, 4, doubleArray0, 3699);
+
+[MASTER] 00:06:56.063 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 00:06:56.224 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 00:06:56.363 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 00:06:56.364 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class java.lang.AssertionError: expected:<10> but was:<20>
+[MASTER] 00:06:56.364 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ DSCompiler dSCompiler0 = DSCompiler.getCompiler(3, 3);
+assertEquals(3, dSCompiler0.getFreeParameters());
+assertEquals(10, dSCompiler0.getSize());
+assertEquals(3, dSCompiler0.getOrder());
+assertNotNull(dSCompiler0);
+
+double[] doubleArray0 = null;
+int int0 = (-332);
+double[] doubleArray1 = new double[2];
+doubleArray1[0] = (double) 3;
+doubleArray1[1] = (-1165.44977839);
+dSCompiler0.linearCombination(1392.826303, (double[]) null, (-332), (-1165.44977839), doubleArray1, 0, (-1165.44977839), doubleArray1, 7, (-18.337136923997047), doubleArray1, 3, doubleArray1, 0);
+
+[MASTER] 00:06:56.545 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 00:06:56.764 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 00:06:56.765 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class org.junit.internal.ArrayComparisonFailure: arrays first differed at element [2]; expected:<1.0> but was:<0.0>
+[MASTER] 00:06:56.766 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ DSCompiler dSCompiler0 = DSCompiler.getCompiler(0, 2);
+assertEquals(1, dSCompiler0.getSize());
+assertEquals(0, dSCompiler0.getFreeParameters());
+assertEquals(2, dSCompiler0.getOrder());
+assertNotNull(dSCompiler0);
+
+double[] doubleArray0 = new double[9];
+doubleArray0[0] = (double) 0;
+doubleArray0[1] = (double) 0;
+doubleArray0[2] = (double) 2;
+doubleArray0[3] = (double) 0;
+doubleArray0[4] = (double) 0;
+doubleArray0[5] = (double) 0;
+doubleArray0[6] = 3.141592653589793;
+doubleArray0[7] = (double) 0;
+doubleArray0[8] = (double) 0;
+double[] doubleArray1 = new double[8];
+assertFalse(doubleArray1.equals((Object)doubleArray0));
+
+doubleArray1[0] = (double) 0;
+doubleArray1[1] = (double) 2;
+doubleArray1[2] = 3.141592653589793;
+doubleArray1[3] = (double) 2;
+doubleArray1[4] = (double) 0;
+doubleArray1[5] = 3.141592653589793;
+doubleArray1[6] = (double) 2;
+doubleArray1[7] = 0.0;
+dSCompiler0.asinh(doubleArray0, 0, doubleArray1, 2);
+assertEquals(1, dSCompiler0.getSize());
+assertEquals(0, dSCompiler0.getFreeParameters());
+assertEquals(2, dSCompiler0.getOrder());
+assertFalse(doubleArray0.equals((Object)doubleArray1));
+assertFalse(doubleArray1.equals((Object)doubleArray0));
+assertArrayEquals(new double[] {0.0, 0.0, 2.0, 0.0, 0.0, 0.0, 3.141592653589793, 0.0, 0.0}, doubleArray0, 0.01);
+assertArrayEquals(new double[] {0.0, 2.0, 1.0, 2.0, 0.0, 3.141592653589793, 2.0, 0.0}, doubleArray1, 0.01);
+assertNotSame(doubleArray0, doubleArray1);
+assertNotSame(doubleArray1, doubleArray0);
+assertEquals(9, doubleArray0.length);
+assertEquals(8, doubleArray1.length);
+
+double[] doubleArray2 = new double[9];
+assertFalse(doubleArray2.equals((Object)doubleArray1));
+assertFalse(doubleArray2.equals((Object)doubleArray0));
+
+doubleArray2[0] = (double) 0;
+doubleArray2[1] = (double) 0;
+doubleArray2[2] = (double) 0;
+doubleArray2[3] = (double) 0;
+doubleArray2[4] = (double) 0;
+doubleArray2[5] = (double) 0;
+doubleArray2[6] = (-1365.1489679);
+dSCompiler0.linearCombination(0.3034266233444214, doubleArray2, 0, (-1365.1489679), doubleArray2, 1, doubleArray2, 0);
+assertEquals(1, dSCompiler0.getSize());
+assertEquals(0, dSCompiler0.getFreeParameters());
+assertEquals(2, dSCompiler0.getOrder());
+assertFalse(doubleArray2.equals((Object)doubleArray1));
+assertFalse(doubleArray2.equals((Object)doubleArray0));
+assertArrayEquals(new double[] {0.0, 0.0, 0.0, 0.0, 0.0, 0.0, (-1365.1489679), 0.0, 0.0}, doubleArray2, 0.01);
+assertNotSame(doubleArray2, doubleArray1);
+assertNotSame(doubleArray2, doubleArray0);
+assertEquals(9, doubleArray2.length);
+
+doubleArray2[7] = (double) 2;
+doubleArray2[8] = (double) 0;
+dSCompiler0.pow(doubleArray2, 0, (-1365.1489679), doubleArray2, 15);
+
+[MASTER] 00:06:56.917 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 00:06:57.625 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 00:06:57.765 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 00:06:57.958 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 00:06:58.082 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 00:06:58.083 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class java.lang.AssertionError: Expecting exception: ArrayIndexOutOfBoundsException
+[MASTER] 00:06:58.083 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ DSCompiler dSCompiler0 = DSCompiler.getCompiler(1, 1);
+assertEquals(2, dSCompiler0.getSize());
+assertEquals(1, dSCompiler0.getOrder());
+assertEquals(1, dSCompiler0.getFreeParameters());
+assertNotNull(dSCompiler0);
+
+double[] doubleArray0 = new double[32];
+doubleArray0[0] = (double) 1;
+doubleArray0[7] = (double) 1;
+dSCompiler0.remainder(doubleArray0, 2, doubleArray0, 2, doubleArray0, 2);
+assertEquals(2, dSCompiler0.getSize());
+assertEquals(1, dSCompiler0.getOrder());
+assertEquals(1, dSCompiler0.getFreeParameters());
+assertEquals(32, doubleArray0.length);
+
+dSCompiler0.asinh(doubleArray0, 2, doubleArray0, 1);
+
+[MASTER] 00:06:58.277 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 00:06:58.506 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 00:06:58.701 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 00:06:58.990 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 00:06:59.170 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 00:06:59.171 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class java.lang.AssertionError: expected:<10> but was:<20>
+[MASTER] 00:06:59.172 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ int int0 = 3;
+DSCompiler dSCompiler0 = DSCompiler.getCompiler(3, 3);
+assertEquals(3, dSCompiler0.getOrder());
+assertEquals(10, dSCompiler0.getSize());
+assertEquals(3, dSCompiler0.getFreeParameters());
+assertNotNull(dSCompiler0);
+
+double[] doubleArray0 = new double[6];
+doubleArray0[0] = (double) 3;
+doubleArray0[1] = (double) 3;
+doubleArray0[2] = 1.7740094661712646;
+doubleArray0[3] = (double) 3;
+int int1 = (-1825);
+dSCompiler0.pow(doubleArray0, 3, doubleArray0, 3, doubleArray0, (-1825));
+
+[MASTER] 00:06:59.335 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 00:06:59.476 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 00:06:59.657 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 00:06:59.880 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+* Writing tests to file
+* Writing JUnit test case 'DSCompiler_ESTest' to results/Math-10/org.apache.commons.math3.analysis.differentiation.DSCompiler/BBC-F0-opt-10/tests/5
+* Done!
+
+* Computation finished

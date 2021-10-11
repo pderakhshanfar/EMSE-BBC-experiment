@@ -1,0 +1,62 @@
+* EvoSuite 1.1.1-SNAPSHOT
+* Configuration: BBC-F0-opt-20
+* Going to generate test cases for class: org.apache.commons.compress.archivers.zip.ZipArchiveInputStream
+* Starting Client-0
+* Connecting to master process on port 17873
+* Analyzing classpath: 
+  - subjects/buggy-versions/Compress-41/target/classes
+  - defects4j/framework/projects/Compress/lib/org/tukaani/xz/1.6/xz-1.6.jar
+* Finished analyzing classpath
+* Generating tests for class org.apache.commons.compress.archivers.zip.ZipArchiveInputStream
+* Test criteria:
+  - Line Coverage
+  - Branch Coverage
+  - Exception
+  - Mutation testing (weak)
+  - Method-Output Coverage
+  - Top-Level Method Coverage
+  - No-Exception Top-Level Method Coverage
+  - Context Branch Coverage
+* Total number of test goals for DYNAMOSA: 1778
+* Using seed 830182830
+* Starting evolution
+bbc usage percentage is: 20%
+* Initial Number of Goals in DynaMOSA = 421 / 1778
+[MASTER] 21:49:10.295 [logback-2] ERROR TestCluster - Failed to check cache for java.util.Enumeration<E> : Type points to itself
+[MASTER] 21:49:36.978 [logback-1] WARN  CoverageArchive - A solution with a timeout/exception result has been added to the archive. The covered goal was org.apache.commons.compress.archivers.zip.ZipArchiveInputStream.skip(J)J: I34 Branch 57 IFLE L552 - true
+[MASTER] 21:49:37.023 [logback-1] WARN  CoverageArchive - A solution with a timeout/exception result has been added to the archive. The covered goal was Weak Mutation 382: org.apache.commons.compress.archivers.zip.ZipArchiveInputStream.skip(J)J:553 - ReplaceComparisonOperator != -> -1
+[MASTER] 21:49:37.026 [logback-1] WARN  CoverageArchive - A solution with a timeout/exception result has been added to the archive. The covered goal was Weak Mutation 380: org.apache.commons.compress.archivers.zip.ZipArchiveInputStream.skip(J)J:553 - ReplaceConstant - -1 -> 1
+[MASTER] 21:49:37.026 [logback-1] WARN  CoverageArchive - A solution with a timeout/exception result has been added to the archive. The covered goal was Weak Mutation 381: org.apache.commons.compress.archivers.zip.ZipArchiveInputStream.skip(J)J:553 - ReplaceConstant - -1 -> -2
+[MASTER] 21:49:37.027 [logback-1] WARN  CoverageArchive - A solution with a timeout/exception result has been added to the archive. The covered goal was Weak Mutation 379: org.apache.commons.compress.archivers.zip.ZipArchiveInputStream.skip(J)J:553 - ReplaceConstant - -1 -> 0
+[MASTER] 21:49:37.033 [logback-1] WARN  CoverageArchive - A solution with a timeout/exception result has been added to the archive. The covered goal was Weak Mutation 371: org.apache.commons.compress.archivers.zip.ZipArchiveInputStream.skip(J)J:552 - ReplaceComparisonOperator <= -> ==
+[MASTER] 21:49:37.082 [logback-1] WARN  CoverageArchive - A solution with a timeout/exception result has been added to the archive. The covered goal was org.apache.commons.compress.archivers.zip.ZipArchiveInputStream.skip(J)J: Line 553
+[MASTER] 21:49:37.088 [logback-1] WARN  CoverageArchive - A solution with a timeout/exception result has been added to the archive. The covered goal was org.apache.commons.compress.archivers.zip.ZipArchiveInputStream.skip(J)J: I50 Branch 58 IF_ICMPNE L553 - false
+[MASTER] 21:50:16.833 [logback-2] ERROR ClientNodeImpl - Error when generating tests for: org.apache.commons.compress.archivers.zip.ZipArchiveInputStream with seed 830182830. Configuration id : BBC-F0-opt-20
+java.lang.NullPointerException: null
+	at org.evosuite.testcase.secondaryobjectives.basicblock.BasicBlockCoverage.compareChromosomes(BasicBlockCoverage.java:59)
+	at org.evosuite.testcase.TestChromosome.compareSecondaryObjective(TestChromosome.java:680)
+	at org.evosuite.testcase.TestChromosome.compareSecondaryObjective(TestChromosome.java:68)
+	at org.evosuite.ga.comparators.PreferenceSortingComparator.compare(PreferenceSortingComparator.java:74)
+	at org.evosuite.ga.operators.ranking.RankBasedPreferenceSorting.getZeroFront(RankBasedPreferenceSorting.java:111)
+	at org.evosuite.ga.operators.ranking.RankBasedPreferenceSorting.computeRankingAssignment(RankBasedPreferenceSorting.java:65)
+	at org.evosuite.ga.metaheuristics.mosa.DynaMOSA.evolve(DynaMOSA.java:83)
+	at org.evosuite.ga.metaheuristics.mosa.DynaMOSA.generateSolution(DynaMOSA.java:174)
+	at org.evosuite.ga.metaheuristics.TestSuiteAdapter.generateSolution(TestSuiteAdapter.java:114)
+	at org.evosuite.strategy.MOSuiteStrategy.generateTests(MOSuiteStrategy.java:123)
+	at org.evosuite.TestSuiteGenerator.generateTests(TestSuiteGenerator.java:630)
+	at org.evosuite.TestSuiteGenerator.generateTestSuite(TestSuiteGenerator.java:205)
+	at org.evosuite.rmi.service.ClientNodeImpl.lambda$startNewSearch$0(ClientNodeImpl.java:150)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+* Computation finished
+[MASTER] 21:50:16.978 [main] ERROR SearchStatistics - No obtained value for output variable: LineCoverage
+[MASTER] 21:50:18.980 [main] ERROR SearchStatistics - No obtained value for output variable: LineCoverage
+[MASTER] 21:50:19.981 [main] ERROR SearchStatistics - No obtained value for output variable: LineCoverage
+[MASTER] 21:50:20.981 [main] ERROR SearchStatistics - No obtained value for output variable: LineCoverage
+[MASTER] 21:50:21.982 [main] ERROR SearchStatistics - No obtained value for output variable: LineCoverage
+[MASTER] 21:50:22.983 [main] ERROR SearchStatistics - No obtained value for output variable: LineCoverage
+[MASTER] 21:50:22.983 [main] ERROR SearchStatistics - Not going to write down statistics data, as some are missing
+[MASTER] 21:50:23.084 [main] ERROR TestGeneration - failed to write statistics data

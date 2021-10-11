@@ -1,0 +1,292 @@
+* EvoSuite 1.1.1-SNAPSHOT
+* Configuration: BBC-F0-opt-40
+* Going to generate test cases for class: org.apache.commons.cli.HelpFormatter
+* Starting Client-0
+* Connecting to master process on port 4089
+* Analyzing classpath: 
+  - subjects/buggy-versions/Cli-31/target/classes
+* Finished analyzing classpath
+* Generating tests for class org.apache.commons.cli.HelpFormatter
+* Test criteria:
+  - Line Coverage
+  - Branch Coverage
+  - Exception
+  - Mutation testing (weak)
+  - Method-Output Coverage
+  - Top-Level Method Coverage
+  - No-Exception Top-Level Method Coverage
+  - Context Branch Coverage
+* Total number of test goals for DYNAMOSA: 1153
+* Using seed 2331665339
+* Starting evolution
+bbc usage percentage is: 40%
+* Initial Number of Goals in DynaMOSA = 401 / 1153
+[MASTER] 18:15:32.534 [logback-2] ERROR TestCluster - Failed to check cache for java.util.Comparator<T> : Type points to itself
+*C2*
+*C2*
+*C2*
+*C2*
+*C2*
+*C2*
+*C2*
+*C2*
+*C2*
+*C2*
+*C2*
+*C2*
+*C2*
+*C2*
+* Search finished after 602s and 142 generations, 60680 statements, best individual has fitness: 137.0
+* Minimizing test suite
+* Going to analyze the coverage criteria
+* Coverage analysis for criterion LINE
+[MASTER] 18:26:45.342 [logback-1] WARN  TestSuiteMinimizer - Minimization timeout. Roll back to original test suite
+* Coverage of criterion LINE: 100%
+* Total number of goals: 205
+* Number of covered goals: 204
+* Coverage analysis for criterion BRANCH
+* Coverage of criterion BRANCH: 91%
+* Total number of goals: 154
+* Number of covered goals: 140
+* Coverage analysis for criterion EXCEPTION
+* Coverage of criterion EXCEPTION: 100%
+* Total number of goals: 52
+* Number of covered goals: 52
+* Coverage analysis for criterion WEAKMUTATION
+* Coverage of criterion WEAKMUTATION: 94%
+* Total number of goals: 514
+* Number of covered goals: 482
+* Coverage analysis for criterion OUTPUT
+* Coverage of criterion OUTPUT: 57%
+* Total number of goals: 46
+* Number of covered goals: 26
+* Coverage analysis for criterion METHOD
+* Coverage of criterion METHOD: 98%
+* Total number of goals: 40
+* Number of covered goals: 39
+* Coverage analysis for criterion METHODNOEXCEPTION
+* Coverage of criterion METHODNOEXCEPTION: 98%
+* Total number of goals: 40
+* Number of covered goals: 39
+* Coverage analysis for criterion CBRANCH
+* Coverage of criterion CBRANCH: 90%
+* Total number of goals: 154
+* Number of covered goals: 138
+* Generated 112 tests with total length 1562
+* Resulting test suite's coverage: 85% (average coverage for all fitness functions)
+* Generating assertions
+[MASTER] 18:27:49.400 [logback-1] WARN  SimpleMutationAssertionGenerator - Reached maximum time to generate assertions, aborting assertion generation
+* Resulting test suite's mutation score: 4%
+* Compiling and checking tests
+[MASTER] 18:28:08.004 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 18:28:08.074 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 18:28:16.469 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class java.lang.SecurityException: Security manager blocks ("java.lang.RuntimePermission" "writeFileDescriptor")
+java.lang.Thread.getStackTrace(Thread.java:1559)
+org.evosuite.runtime.sandbox.MSecurityManager.checkPermission(MSecurityManager.java:433)
+java.lang.SecurityManager.checkWrite(SecurityManager.java:954)
+java.io.FileOutputStream.<init>(FileOutputStream.java:245)
+org.evosuite.runtime.mock.java.io.MockFileOutputStream.<init>(MockFileOutputStream.java:114)
+org.apache.commons.cli.HelpFormatter_168_tmp__ESTest.test0(HelpFormatter_168_tmp__ESTest.java:30)
+sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+java.lang.reflect.Method.invoke(Method.java:498)
+org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)
+org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56)
+org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+org.junit.internal.runners.statements.FailOnTimeout$CallableStatement.call(FailOnTimeout.java:288)
+org.junit.internal.runners.statements.FailOnTimeout$CallableStatement.call(FailOnTimeout.java:282)
+java.util.concurrent.FutureTask.run(FutureTask.java:266)
+java.lang.Thread.run(Thread.java:748)
+
+[MASTER] 18:28:16.470 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ HelpFormatter helpFormatter0 = new HelpFormatter();
+FileDescriptor fileDescriptor0 = new FileDescriptor();
+MockFileOutputStream mockFileOutputStream0 = new MockFileOutputStream(fileDescriptor0);
+MockPrintWriter mockPrintWriter0 = new MockPrintWriter(mockFileOutputStream0);
+MockPrintWriter mockPrintWriter1 = new MockPrintWriter(mockPrintWriter0);
+PrintWriter printWriter0 = mockPrintWriter1.append((CharSequence) "arg", 0, 1);
+Options options0 = new Options();
+OptionGroup optionGroup0 = new OptionGroup();
+Option option0 = new Option("", true, "-");
+OptionGroup optionGroup1 = optionGroup0.addOption(option0);
+Options options1 = options0.addOptionGroup(optionGroup1);
+helpFormatter0.printHelp(printWriter0, 0, "~];i'py5Wev", "~];i'py5Wev", options1, 64, 0, "", true);
+
+[MASTER] 18:28:19.574 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class java.lang.SecurityException: Security manager blocks ("java.lang.RuntimePermission" "writeFileDescriptor")
+java.lang.Thread.getStackTrace(Thread.java:1559)
+org.evosuite.runtime.sandbox.MSecurityManager.checkPermission(MSecurityManager.java:433)
+java.lang.SecurityManager.checkWrite(SecurityManager.java:954)
+java.io.FileOutputStream.<init>(FileOutputStream.java:245)
+org.evosuite.runtime.mock.java.io.MockFileOutputStream.<init>(MockFileOutputStream.java:114)
+org.apache.commons.cli.HelpFormatter_170_tmp__ESTest.test0(HelpFormatter_170_tmp__ESTest.java:28)
+sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+java.lang.reflect.Method.invoke(Method.java:498)
+org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)
+org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56)
+org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+org.junit.internal.runners.statements.FailOnTimeout$CallableStatement.call(FailOnTimeout.java:288)
+org.junit.internal.runners.statements.FailOnTimeout$CallableStatement.call(FailOnTimeout.java:282)
+java.util.concurrent.FutureTask.run(FutureTask.java:266)
+java.lang.Thread.run(Thread.java:748)
+
+[MASTER] 18:28:19.574 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ HelpFormatter helpFormatter0 = new HelpFormatter();
+FileDescriptor fileDescriptor0 = new FileDescriptor();
+MockFileOutputStream mockFileOutputStream0 = new MockFileOutputStream(fileDescriptor0);
+MockPrintWriter mockPrintWriter0 = new MockPrintWriter(mockFileOutputStream0);
+MockPrintWriter mockPrintWriter1 = new MockPrintWriter(mockPrintWriter0);
+mockPrintWriter1.append((CharSequence) "arg", 0, 1);
+Options options0 = new Options();
+OptionGroup optionGroup0 = new OptionGroup();
+StringBuffer stringBuffer0 = new StringBuffer(3);
+StringBuffer stringBuffer1 = helpFormatter0.renderWrappedText(stringBuffer0, 13, 0, "");
+helpFormatter0.renderWrappedText(stringBuffer1, 9, 71, "]");
+StringWriter stringWriter0 = new StringWriter();
+Options options1 = new Options();
+helpFormatter0.getSyntaxPrefix();
+Options options2 = options0.addOption("b0gjytWhMus_", "]", false, "=zg,f");
+helpFormatter0.printHelp(13, "h,YL-mEe\"(`9IE\"Pp8o", "usage: ", options2, "b0gjytWhMus_", false);
+
+[MASTER] 18:28:22.816 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class java.lang.SecurityException: Security manager blocks ("java.lang.RuntimePermission" "writeFileDescriptor")
+java.lang.Thread.getStackTrace(Thread.java:1559)
+org.evosuite.runtime.sandbox.MSecurityManager.checkPermission(MSecurityManager.java:433)
+java.lang.SecurityManager.checkWrite(SecurityManager.java:954)
+java.io.FileOutputStream.<init>(FileOutputStream.java:245)
+org.evosuite.runtime.mock.java.io.MockFileOutputStream.<init>(MockFileOutputStream.java:114)
+org.apache.commons.cli.HelpFormatter_174_tmp__ESTest.test0(HelpFormatter_174_tmp__ESTest.java:29)
+sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+java.lang.reflect.Method.invoke(Method.java:498)
+org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)
+org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56)
+org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+org.junit.internal.runners.statements.FailOnTimeout$CallableStatement.call(FailOnTimeout.java:288)
+org.junit.internal.runners.statements.FailOnTimeout$CallableStatement.call(FailOnTimeout.java:282)
+java.util.concurrent.FutureTask.run(FutureTask.java:266)
+java.lang.Thread.run(Thread.java:748)
+
+[MASTER] 18:28:22.816 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ HelpFormatter helpFormatter0 = new HelpFormatter();
+FileDescriptor fileDescriptor0 = new FileDescriptor();
+MockFileOutputStream mockFileOutputStream0 = new MockFileOutputStream(fileDescriptor0);
+MockPrintWriter mockPrintWriter0 = new MockPrintWriter(mockFileOutputStream0);
+MockPrintWriter mockPrintWriter1 = new MockPrintWriter(mockPrintWriter0);
+PrintWriter printWriter0 = mockPrintWriter1.append((CharSequence) "arg", 0, 1);
+Options options0 = new Options();
+OptionGroup optionGroup0 = new OptionGroup();
+StringBuffer stringBuffer0 = new StringBuffer(3);
+StringBuffer stringBuffer1 = helpFormatter0.renderWrappedText(stringBuffer0, 13, 0, "");
+helpFormatter0.renderWrappedText(stringBuffer1, 9, 71, "]");
+StringWriter stringWriter0 = new StringWriter();
+Options options1 = new Options();
+helpFormatter0.getSyntaxPrefix();
+helpFormatter0.printUsage(printWriter0, 42, "usage: ");
+
+[MASTER] 18:28:27.763 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class java.lang.SecurityException: Security manager blocks ("java.lang.RuntimePermission" "writeFileDescriptor")
+java.lang.Thread.getStackTrace(Thread.java:1559)
+org.evosuite.runtime.sandbox.MSecurityManager.checkPermission(MSecurityManager.java:433)
+java.lang.SecurityManager.checkWrite(SecurityManager.java:954)
+java.io.FileOutputStream.<init>(FileOutputStream.java:245)
+org.evosuite.runtime.mock.java.io.MockFileOutputStream.<init>(MockFileOutputStream.java:114)
+org.apache.commons.cli.HelpFormatter_178_tmp__ESTest.test0(HelpFormatter_178_tmp__ESTest.java:28)
+sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+java.lang.reflect.Method.invoke(Method.java:498)
+org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)
+org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56)
+org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+org.junit.internal.runners.statements.FailOnTimeout$CallableStatement.call(FailOnTimeout.java:288)
+org.junit.internal.runners.statements.FailOnTimeout$CallableStatement.call(FailOnTimeout.java:282)
+java.util.concurrent.FutureTask.run(FutureTask.java:266)
+java.lang.Thread.run(Thread.java:748)
+
+[MASTER] 18:28:27.763 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ HelpFormatter helpFormatter0 = new HelpFormatter();
+FileDescriptor fileDescriptor0 = new FileDescriptor();
+MockFileOutputStream mockFileOutputStream0 = new MockFileOutputStream(fileDescriptor0);
+MockPrintWriter mockPrintWriter0 = new MockPrintWriter(mockFileOutputStream0);
+MockPrintWriter mockPrintWriter1 = new MockPrintWriter(mockPrintWriter0);
+mockPrintWriter1.append((CharSequence) "arg", 0, 1);
+Options options0 = new Options();
+OptionGroup optionGroup0 = new OptionGroup();
+helpFormatter0.printHelp(0, " 38N'5WB3zIbrCo?o", "~];i'py5Wev", options0, "~];i'py5Wev", true);
+
+[MASTER] 18:28:30.808 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class java.util.concurrent.ExecutionException: java.lang.SecurityException: Security manager blocks ("java.lang.RuntimePermission" "writeFileDescriptor")
+java.lang.Thread.getStackTrace(Thread.java:1559)
+org.evosuite.runtime.sandbox.MSecurityManager.checkPermission(MSecurityManager.java:433)
+java.lang.SecurityManager.checkWrite(SecurityManager.java:954)
+java.io.FileOutputStream.<init>(FileOutputStream.java:245)
+org.evosuite.runtime.mock.java.io.MockFileOutputStream.<init>(MockFileOutputStream.java:114)
+org.apache.commons.cli.HelpFormatter_179_tmp__ESTest$1.run(HelpFormatter_179_tmp__ESTest.java:35)
+java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+java.util.concurrent.FutureTask.run(FutureTask.java:266)
+java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+java.lang.Thread.run(Thread.java:748)
+
+[MASTER] 18:28:30.808 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ HelpFormatter helpFormatter0 = new HelpFormatter();
+FileDescriptor fileDescriptor0 = new FileDescriptor();
+MockFileOutputStream mockFileOutputStream0 = new MockFileOutputStream(fileDescriptor0);
+MockPrintWriter mockPrintWriter0 = new MockPrintWriter(mockFileOutputStream0);
+MockPrintWriter mockPrintWriter1 = new MockPrintWriter(mockPrintWriter0);
+PrintWriter printWriter0 = mockPrintWriter1.append((CharSequence) "arg", 0, 1);
+Options options0 = new Options();
+OptionGroup optionGroup0 = new OptionGroup();
+helpFormatter0.printHelp(printWriter0, (-1), (String) null, "~];i'py5Wev", options0, (-1652), 0, "Cannot add value, list full.", true);
+
+[MASTER] 18:28:38.247 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class java.lang.SecurityException: Security manager blocks ("java.lang.RuntimePermission" "writeFileDescriptor")
+java.lang.Thread.getStackTrace(Thread.java:1559)
+org.evosuite.runtime.sandbox.MSecurityManager.checkPermission(MSecurityManager.java:433)
+java.lang.SecurityManager.checkWrite(SecurityManager.java:954)
+java.io.FileOutputStream.<init>(FileOutputStream.java:245)
+org.evosuite.runtime.mock.java.io.MockFileOutputStream.<init>(MockFileOutputStream.java:114)
+org.apache.commons.cli.HelpFormatter_202_tmp__ESTest.test0(HelpFormatter_202_tmp__ESTest.java:35)
+sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+java.lang.reflect.Method.invoke(Method.java:498)
+org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)
+org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56)
+org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+org.junit.internal.runners.statements.FailOnTimeout$CallableStatement.call(FailOnTimeout.java:288)
+org.junit.internal.runners.statements.FailOnTimeout$CallableStatement.call(FailOnTimeout.java:282)
+java.util.concurrent.FutureTask.run(FutureTask.java:266)
+java.lang.Thread.run(Thread.java:748)
+
+[MASTER] 18:28:38.248 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ HelpFormatter helpFormatter0 = new HelpFormatter();
+Options options0 = new Options();
+helpFormatter0.getArgName();
+helpFormatter0.getLeftPadding();
+helpFormatter0.getSyntaxPrefix();
+ByteArrayOutputStream byteArrayOutputStream0 = new ByteArrayOutputStream();
+FileDescriptor fileDescriptor0 = new FileDescriptor();
+MockFileOutputStream mockFileOutputStream0 = new MockFileOutputStream(fileDescriptor0);
+BufferedOutputStream bufferedOutputStream0 = new BufferedOutputStream(mockFileOutputStream0, 3);
+byte[] byteArray0 = new byte[1];
+byteArray0[0] = (byte) (-33);
+byteArrayOutputStream0.write(byteArray0);
+MockPrintWriter mockPrintWriter0 = new MockPrintWriter(mockFileOutputStream0, false);
+helpFormatter0.printWrapped((PrintWriter) mockPrintWriter0, 2656, 21, "");
+HelpFormatter helpFormatter1 = new HelpFormatter();
+helpFormatter1.printWrapped((PrintWriter) mockPrintWriter0, (int) (byte)0, 3, "usage: ");
+
+* Permissions denied during test execution: 
+  - java.lang.RuntimePermission: 
+         writeFileDescriptor: 6
+* Writing tests to file
+* Writing JUnit test case 'HelpFormatter_ESTest' to results/Cli-31/org.apache.commons.cli.HelpFormatter/BBC-F0-opt-40/tests/9
+* Done!
+
+* Computation finished

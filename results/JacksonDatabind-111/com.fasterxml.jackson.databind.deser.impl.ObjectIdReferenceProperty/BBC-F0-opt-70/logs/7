@@ -1,0 +1,69 @@
+* EvoSuite 1.1.1-SNAPSHOT
+* Configuration: BBC-F0-opt-70
+* Going to generate test cases for class: com.fasterxml.jackson.databind.deser.impl.ObjectIdReferenceProperty
+* Starting Client-0
+* Connecting to master process on port 11323
+* Analyzing classpath: 
+  - subjects/buggy-versions/JacksonDatabind-111/target/classes
+  - defects4j/framework/projects/JacksonDatabind/lib/com/fasterxml/jackson/core/jackson-annotations/2.9.0/jackson-annotations-2.9.0.jar
+  - defects4j/framework/projects/JacksonDatabind/lib/com/fasterxml/jackson/core/jackson-core/2.9.9/jackson-core-2.9.9.jar
+* Finished analyzing classpath
+* Generating tests for class com.fasterxml.jackson.databind.deser.impl.ObjectIdReferenceProperty
+* Test criteria:
+  - Line Coverage
+  - Branch Coverage
+  - Exception
+  - Mutation testing (weak)
+  - Method-Output Coverage
+  - Top-Level Method Coverage
+  - No-Exception Top-Level Method Coverage
+  - Context Branch Coverage
+* Total number of test goals for DYNAMOSA: 209
+* Using seed 2803219077
+* Starting evolution
+bbc usage percentage is: 70%
+* Initial Number of Goals in DynaMOSA = 132 / 209
+[MASTER] 18:41:53.975 [logback-2] ERROR TestCluster - Failed to check cache for java.util.ArrayDeque<E> : Type points to itself
+[MASTER] 18:41:54.887 [logback-2] ERROR TestCluster - Failed to check cache for java.util.List<E> : Type points to itself
+[MASTER] 18:41:54.956 [logback-2] ERROR TestCluster - Failed to check cache for java.util.HashMap<K, V> : Type points to itself
+[MASTER] 18:41:58.502 [logback-1] WARN  TestChromosome - Functional mock problem: org.evosuite.ga.ConstructionFailedException: Failed to add constructor for com.fasterxml.jackson.databind.ser.BeanSerializerBuilder due to org.evosuite.ga.ConstructionFailedException: Failed to add constructor for com.fasterxml.jackson.databind.DeserializationConfig due to org.evosuite.ga.ConstructionFailedException: Failed to add constructor for com.fasterxml.jackson.databind.cfg.BaseSettings due to org.evosuite.ga.ConstructionFailedException: Max recursion depth reached
+[MASTER] 18:41:58.660 [logback-1] WARN  TestChromosome - Functional mock problem: org.evosuite.ga.ConstructionFailedException: Invalid generic instance
+[MASTER] 18:41:59.795 [logback-1] WARN  TestChromosome - Functional mock problem: org.evosuite.ga.ConstructionFailedException: Failed to add constructor for com.fasterxml.jackson.databind.ser.BeanSerializerBuilder due to org.evosuite.ga.ConstructionFailedException: Failed to add constructor for com.fasterxml.jackson.databind.DeserializationConfig due to org.evosuite.ga.ConstructionFailedException: Failed to add constructor for com.fasterxml.jackson.databind.cfg.BaseSettings due to org.evosuite.ga.ConstructionFailedException: Invalid generic instance
+[MASTER] 18:42:00.422 [logback-1] WARN  TestChromosome - Functional mock problem: org.evosuite.ga.ConstructionFailedException: Failed to add constructor for com.fasterxml.jackson.databind.ser.BeanSerializerBuilder due to org.evosuite.ga.ConstructionFailedException: Invalid generic instance
+[MASTER] 18:42:02.567 [logback-2] ERROR TestCluster - Failed to check cache for com.fasterxml.jackson.databind.JsonSerializer<T> : Type points to itself
+[MASTER] 18:42:04.374 [logback-1] WARN  TestChromosome - Functional mock problem: org.evosuite.ga.ConstructionFailedException: Failed to add constructor for com.fasterxml.jackson.databind.ser.BeanSerializerBuilder due to org.evosuite.ga.ConstructionFailedException: Failed to add constructor for com.fasterxml.jackson.databind.SerializationConfig due to org.evosuite.ga.ConstructionFailedException: Failed to add constructor for com.fasterxml.jackson.databind.cfg.BaseSettings due to org.evosuite.ga.ConstructionFailedException: Invalid generic instance
+[MASTER] 18:42:04.471 [logback-1] WARN  TestChromosome - Functional mock problem: org.evosuite.ga.ConstructionFailedException: Failed to add constructor for com.fasterxml.jackson.databind.ser.BeanSerializerBuilder due to org.evosuite.ga.ConstructionFailedException: Max recursion depth reached
+[MASTER] 18:42:07.266 [logback-2] ERROR TestCluster - Failed to check cache for java.lang.Class<T> : Type points to itself
+[MASTER] 18:42:07.268 [logback-2] ERROR TestCluster - Failed to check cache for com.fasterxml.jackson.databind.JsonDeserializer<T> : Type points to itself
+[MASTER] 18:42:09.318 [logback-2] ERROR TestCluster - Failed to check cache for java.util.Comparator<T> : Type points to itself
+[MASTER] 18:42:09.422 [logback-2] ERROR TestCluster - Failed to check cache for java.util.Enumeration<E> : Type points to itself
+[MASTER] 18:42:21.624 [logback-2] ERROR TestCluster - Failed to check cache for com.fasterxml.jackson.annotation.ObjectIdGenerator<T> : Type points to itself
+[MASTER] 18:42:53.863 [logback-2] ERROR ClientNodeImpl - Error when generating tests for: com.fasterxml.jackson.databind.deser.impl.ObjectIdReferenceProperty with seed 2803219077. Configuration id : BBC-F0-opt-70
+java.lang.NullPointerException: null
+	at org.evosuite.testcase.secondaryobjectives.basicblock.BasicBlockCoverage.compareChromosomes(BasicBlockCoverage.java:59)
+	at org.evosuite.testcase.TestChromosome.compareSecondaryObjective(TestChromosome.java:680)
+	at org.evosuite.testcase.TestChromosome.compareSecondaryObjective(TestChromosome.java:68)
+	at org.evosuite.ga.comparators.PreferenceSortingComparator.compare(PreferenceSortingComparator.java:74)
+	at org.evosuite.ga.operators.ranking.RankBasedPreferenceSorting.getZeroFront(RankBasedPreferenceSorting.java:111)
+	at org.evosuite.ga.operators.ranking.RankBasedPreferenceSorting.computeRankingAssignment(RankBasedPreferenceSorting.java:65)
+	at org.evosuite.ga.metaheuristics.mosa.DynaMOSA.evolve(DynaMOSA.java:83)
+	at org.evosuite.ga.metaheuristics.mosa.DynaMOSA.generateSolution(DynaMOSA.java:174)
+	at org.evosuite.ga.metaheuristics.TestSuiteAdapter.generateSolution(TestSuiteAdapter.java:114)
+	at org.evosuite.strategy.MOSuiteStrategy.generateTests(MOSuiteStrategy.java:123)
+	at org.evosuite.TestSuiteGenerator.generateTests(TestSuiteGenerator.java:630)
+	at org.evosuite.TestSuiteGenerator.generateTestSuite(TestSuiteGenerator.java:205)
+	at org.evosuite.rmi.service.ClientNodeImpl.lambda$startNewSearch$0(ClientNodeImpl.java:150)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+* Computation finished
+[MASTER] 18:42:54.013 [main] ERROR SearchStatistics - No obtained value for output variable: LineCoverage
+[MASTER] 18:42:56.016 [main] ERROR SearchStatistics - No obtained value for output variable: LineCoverage
+[MASTER] 18:42:57.017 [main] ERROR SearchStatistics - No obtained value for output variable: LineCoverage
+[MASTER] 18:42:58.017 [main] ERROR SearchStatistics - No obtained value for output variable: LineCoverage
+[MASTER] 18:42:59.018 [main] ERROR SearchStatistics - No obtained value for output variable: LineCoverage
+[MASTER] 18:43:00.019 [main] ERROR SearchStatistics - No obtained value for output variable: LineCoverage
+[MASTER] 18:43:00.019 [main] ERROR SearchStatistics - Not going to write down statistics data, as some are missing
+[MASTER] 18:43:00.120 [main] ERROR TestGeneration - failed to write statistics data

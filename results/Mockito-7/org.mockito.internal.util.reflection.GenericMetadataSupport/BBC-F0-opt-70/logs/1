@@ -1,0 +1,78 @@
+* EvoSuite 1.1.1-SNAPSHOT
+* Configuration: BBC-F0-opt-70
+* Going to generate test cases for class: org.mockito.internal.util.reflection.GenericMetadataSupport
+* Starting Client-0
+* Connecting to master process on port 5567
+* Analyzing classpath: 
+  - subjects/buggy-versions/Mockito-7/build/classes/main
+  - defects4j/framework/projects/Mockito/lib/asm-all-5.0.4.jar
+  - defects4j/framework/projects/Mockito/lib/assertj-core-2.1.0.jar
+  - defects4j/framework/projects/Mockito/lib/cglib-and-asm-1.0.jar
+  - defects4j/framework/projects/Mockito/lib/cobertura-2.0.3.jar
+  - defects4j/framework/projects/Mockito/lib/fest-assert-1.3.jar
+  - defects4j/framework/projects/Mockito/lib/fest-util-1.1.4.jar
+  - defects4j/framework/projects/Mockito/lib/hamcrest-all-1.3.jar
+  - defects4j/framework/projects/Mockito/lib/hamcrest-core-1.1.jar
+  - defects4j/framework/projects/Mockito/lib/objenesis-2.1.jar
+  - defects4j/framework/projects/Mockito/lib/objenesis-2.2.jar
+  - defects4j/framework/projects/Mockito/lib/powermock-reflect-1.2.5.jar
+* Finished analyzing classpath
+* Generating tests for class org.mockito.internal.util.reflection.GenericMetadataSupport
+* Test criteria:
+  - Line Coverage
+  - Branch Coverage
+  - Exception
+  - Mutation testing (weak)
+  - Method-Output Coverage
+  - Top-Level Method Coverage
+  - No-Exception Top-Level Method Coverage
+  - Context Branch Coverage
+* Total number of test goals for DYNAMOSA: 629
+* Using seed 3805777038
+* Starting evolution
+bbc usage percentage is: 70%
+* Initial Number of Goals in DynaMOSA = 270 / 629
+[MASTER] 08:24:37.992 [logback-2] ERROR TestCluster - Failed to check cache for java.lang.reflect.TypeVariable<D> : Type points to itself
+[MASTER] 08:24:38.709 [logback-1] WARN  TestChromosome - Functional mock problem: org.evosuite.ga.ConstructionFailedException: Failed to add constructor for org.mockito.internal.util.reflection.GenericMetadataSupport$TypeVarBoundedType due to org.evosuite.ga.ConstructionFailedException: Invalid generic instance
+[MASTER] 08:24:38.878 [logback-1] WARN  TestChromosome - Functional mock problem: org.evosuite.ga.ConstructionFailedException: Have no generator for class org.mockito.internal.util.reflection.GenericMetadataSupport$TypeVarBoundedType canUseFunctionalMocks=false, canBeMocked: true
+[MASTER] 08:24:38.900 [logback-1] WARN  TestChromosome - Functional mock problem: org.evosuite.ga.ConstructionFailedException: Have no generator for class org.mockito.internal.util.reflection.GenericMetadataSupport canUseFunctionalMocks=false, canBeMocked: false
+[MASTER] 08:24:39.058 [logback-1] WARN  TestChromosome - Functional mock problem: org.evosuite.ga.ConstructionFailedException: Have no generator for class java.lang.reflect.Method canUseFunctionalMocks=true, canBeMocked: false
+[MASTER] 08:24:39.527 [logback-1] WARN  TestChromosome - Functional mock problem: org.evosuite.ga.ConstructionFailedException: Invalid generic instance
+[MASTER] 08:25:28.506 [logback-1] WARN  ExecutionTrace - Current stack: [org.mockito.internal.util.reflection.GenericMetadataSupport$WildCardBoundedType:toString()Ljava/lang/String;
+Branches: 
+True Distances: 
+False Distances: 
+, :
+Branches: 
+True Distances: 
+False Distances: 
+]
+[MASTER] 08:25:37.661 [logback-2] ERROR ClientNodeImpl - Error when generating tests for: org.mockito.internal.util.reflection.GenericMetadataSupport with seed 3805777038. Configuration id : BBC-F0-opt-70
+java.lang.NullPointerException: null
+	at org.evosuite.testcase.secondaryobjectives.basicblock.BasicBlockCoverage.compareChromosomes(BasicBlockCoverage.java:59)
+	at org.evosuite.testcase.TestChromosome.compareSecondaryObjective(TestChromosome.java:680)
+	at org.evosuite.testcase.TestChromosome.compareSecondaryObjective(TestChromosome.java:68)
+	at org.evosuite.ga.comparators.PreferenceSortingComparator.compare(PreferenceSortingComparator.java:74)
+	at org.evosuite.ga.operators.ranking.RankBasedPreferenceSorting.getZeroFront(RankBasedPreferenceSorting.java:111)
+	at org.evosuite.ga.operators.ranking.RankBasedPreferenceSorting.computeRankingAssignment(RankBasedPreferenceSorting.java:65)
+	at org.evosuite.ga.metaheuristics.mosa.DynaMOSA.evolve(DynaMOSA.java:83)
+	at org.evosuite.ga.metaheuristics.mosa.DynaMOSA.generateSolution(DynaMOSA.java:174)
+	at org.evosuite.ga.metaheuristics.TestSuiteAdapter.generateSolution(TestSuiteAdapter.java:114)
+	at org.evosuite.strategy.MOSuiteStrategy.generateTests(MOSuiteStrategy.java:123)
+	at org.evosuite.TestSuiteGenerator.generateTests(TestSuiteGenerator.java:630)
+	at org.evosuite.TestSuiteGenerator.generateTestSuite(TestSuiteGenerator.java:205)
+	at org.evosuite.rmi.service.ClientNodeImpl.lambda$startNewSearch$0(ClientNodeImpl.java:150)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+* Computation finished
+[MASTER] 08:25:37.774 [main] ERROR SearchStatistics - No obtained value for output variable: LineCoverage
+[MASTER] 08:25:39.778 [main] ERROR SearchStatistics - No obtained value for output variable: LineCoverage
+[MASTER] 08:25:40.779 [main] ERROR SearchStatistics - No obtained value for output variable: LineCoverage
+[MASTER] 08:25:41.779 [main] ERROR SearchStatistics - No obtained value for output variable: LineCoverage
+[MASTER] 08:25:42.780 [main] ERROR SearchStatistics - No obtained value for output variable: LineCoverage
+[MASTER] 08:25:43.781 [main] ERROR SearchStatistics - No obtained value for output variable: LineCoverage
+[MASTER] 08:25:43.781 [main] ERROR SearchStatistics - Not going to write down statistics data, as some are missing
+[MASTER] 08:25:43.882 [main] ERROR TestGeneration - failed to write statistics data

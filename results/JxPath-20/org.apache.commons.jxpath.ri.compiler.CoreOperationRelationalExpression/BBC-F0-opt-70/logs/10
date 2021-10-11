@@ -1,0 +1,164 @@
+* EvoSuite 1.1.1-SNAPSHOT
+* Configuration: BBC-F0-opt-70
+* Going to generate test cases for class: org.apache.commons.jxpath.ri.compiler.CoreOperationRelationalExpression
+* Starting Client-0
+* Connecting to master process on port 15202
+* Analyzing classpath: 
+  - subjects/buggy-versions/JxPath-20/target/classes
+  - subjects/buggy-versions/JxPath-20/src/java
+  - subjects/buggy-versions/JxPath-20/target/lib/commons-beanutils-1.7.0.jar
+  - subjects/buggy-versions/JxPath-20/target/lib/commons-logging-1.1.jar
+  - subjects/buggy-versions/JxPath-20/target/lib/jdom-1.0.jar
+  - subjects/buggy-versions/JxPath-20/target/lib/jsp-api-2.0.jar
+  - subjects/buggy-versions/JxPath-20/target/lib/junit-3.8.1.jar
+  - subjects/buggy-versions/JxPath-20/target/lib/mockrunner-0.4.1.jar
+  - subjects/buggy-versions/JxPath-20/target/lib/mockrunner-jdk1.3-j2ee1.3-0.4.jar
+  - subjects/buggy-versions/JxPath-20/target/lib/servletapi-2.4.jar
+  - subjects/buggy-versions/JxPath-20/target/lib/xerces-2.4.0.jar
+  - subjects/buggy-versions/JxPath-20/target/lib/xml-apis-2.0.2.jar
+* Finished analyzing classpath
+* Generating tests for class org.apache.commons.jxpath.ri.compiler.CoreOperationRelationalExpression
+* Test criteria:
+  - Line Coverage
+  - Branch Coverage
+  - Exception
+  - Mutation testing (weak)
+  - Method-Output Coverage
+  - Top-Level Method Coverage
+  - No-Exception Top-Level Method Coverage
+  - Context Branch Coverage
+* Total number of test goals for DYNAMOSA: 205
+* Using seed 3392482634
+* Starting evolution
+bbc usage percentage is: 70%
+* Initial Number of Goals in DynaMOSA = 59 / 205
+[MASTER] 00:35:24.953 [logback-2] ERROR TestCluster - Failed to check cache for java.util.LinkedList<E> : Type points to itself
+* Search finished after 603s and 588 generations, 343969 statements, best individual has fitness: 18.0
+* Minimizing test suite
+* Going to analyze the coverage criteria
+* Coverage analysis for criterion LINE
+* Coverage of criterion LINE: 95%
+* Total number of goals: 42
+* Number of covered goals: 40
+* Coverage analysis for criterion BRANCH
+* Coverage of criterion BRANCH: 95%
+* Total number of goals: 39
+* Number of covered goals: 37
+* Coverage analysis for criterion EXCEPTION
+* Coverage of criterion EXCEPTION: 86%
+* Total number of goals: 7
+* Number of covered goals: 6
+* Coverage analysis for criterion WEAKMUTATION
+* Coverage of criterion WEAKMUTATION: 99%
+* Total number of goals: 72
+* Number of covered goals: 71
+* Coverage analysis for criterion OUTPUT
+* Coverage of criterion OUTPUT: 29%
+* Total number of goals: 7
+* Number of covered goals: 2
+* Coverage analysis for criterion METHOD
+* Coverage of criterion METHOD: 100%
+* Total number of goals: 3
+* Number of covered goals: 3
+* Coverage analysis for criterion METHODNOEXCEPTION
+* Coverage of criterion METHODNOEXCEPTION: 100%
+* Total number of goals: 3
+* Number of covered goals: 3
+* Coverage analysis for criterion CBRANCH
+* Coverage of criterion CBRANCH: 95%
+* Total number of goals: 39
+* Number of covered goals: 37
+* Generated 14 tests with total length 163
+* Resulting test suite's coverage: 83% (average coverage for all fitness functions)
+* Generating assertions
+* Resulting test suite's mutation score: 32%
+* Compiling and checking tests
+[MASTER] 00:45:35.430 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 00:45:35.435 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class java.lang.AssertionError: Expecting exception: ClassCastException
+[MASTER] 00:45:35.435 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ Expression[] expressionArray0 = new Expression[0];
+CoreOperationAdd coreOperationAdd0 = new CoreOperationAdd(expressionArray0);
+CoreOperationUnion coreOperationUnion0 = new CoreOperationUnion(expressionArray0);
+JXPathContext.newContext((Object) coreOperationUnion0);
+
+[MASTER] 00:45:35.763 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class java.lang.AssertionError: Expecting exception: ClassCastException
+[MASTER] 00:45:35.763 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ Expression[] expressionArray0 = new Expression[2];
+Constant constant0 = new Constant("ko(&");
+expressionArray0[0] = (Expression) constant0;
+expressionArray0[1] = (Expression) constant0;
+CoreOperationAdd coreOperationAdd0 = new CoreOperationAdd(expressionArray0);
+CoreOperationDivide coreOperationDivide0 = new CoreOperationDivide(coreOperationAdd0, constant0);
+CoreOperationNegate coreOperationNegate0 = new CoreOperationNegate(coreOperationDivide0);
+Step[] stepArray0 = new Step[6];
+ProcessingInstructionTest processingInstructionTest0 = new ProcessingInstructionTest("ko(&");
+Step step0 = new Step((-1856815486), processingInstructionTest0, expressionArray0);
+stepArray0[0] = step0;
+stepArray0[1] = stepArray0[0];
+stepArray0[2] = step0;
+stepArray0[3] = step0;
+stepArray0[4] = step0;
+stepArray0[5] = stepArray0[1];
+ExpressionPath expressionPath0 = new ExpressionPath(coreOperationNegate0, expressionArray0, stepArray0);
+JXPathContext.newContext((Object) null);
+
+[MASTER] 00:45:36.037 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class java.lang.AssertionError: Expecting exception: ClassCastException
+[MASTER] 00:45:36.037 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ Expression[] expressionArray0 = new Expression[2];
+Constant constant0 = new Constant("ko(&");
+CoreOperationAdd coreOperationAdd0 = new CoreOperationAdd(expressionArray0);
+CoreOperationDivide coreOperationDivide0 = new CoreOperationDivide(coreOperationAdd0, constant0);
+CoreOperationUnion coreOperationUnion0 = new CoreOperationUnion(coreOperationDivide0.args);
+JXPathContext.newContext((Object) coreOperationUnion0);
+
+[MASTER] 00:45:36.741 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class java.lang.AssertionError: Expecting exception: ClassCastException
+[MASTER] 00:45:36.742 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ Expression[] expressionArray0 = new Expression[2];
+Constant constant0 = new Constant("kHdZ^q^OsaY");
+expressionArray0[0] = (Expression) constant0;
+expressionArray0[1] = (Expression) constant0;
+CoreOperationAdd coreOperationAdd0 = new CoreOperationAdd(expressionArray0);
+CoreOperationDivide coreOperationDivide0 = new CoreOperationDivide(coreOperationAdd0, constant0);
+CoreOperationNegate coreOperationNegate0 = new CoreOperationNegate(coreOperationDivide0);
+Step[] stepArray0 = new Step[6];
+ProcessingInstructionTest processingInstructionTest0 = new ProcessingInstructionTest("kHdZ^q^OsaY");
+Step step0 = new Step((-1856815486), processingInstructionTest0, expressionArray0);
+stepArray0[0] = step0;
+stepArray0[1] = step0;
+stepArray0[2] = step0;
+stepArray0[3] = stepArray0[2];
+stepArray0[4] = step0;
+stepArray0[5] = stepArray0[0];
+ExpressionPath expressionPath0 = new ExpressionPath(coreOperationNegate0, expressionArray0, stepArray0);
+CoreOperationGreaterThan coreOperationGreaterThan0 = new CoreOperationGreaterThan(expressionPath0, expressionArray0[0]);
+JXPathContext.newContext((Object) null);
+
+[MASTER] 00:45:37.738 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class java.lang.AssertionError: Expecting exception: ClassCastException
+[MASTER] 00:45:37.739 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ Double double0 = Expression.ONE;
+Constant constant0 = new Constant(double0);
+Expression[] expressionArray0 = new Expression[1];
+CoreFunction coreFunction0 = new CoreFunction(1, expressionArray0);
+CoreOperationLessThanOrEqual coreOperationLessThanOrEqual0 = new CoreOperationLessThanOrEqual(coreFunction0, coreFunction0);
+CoreOperationGreaterThanOrEqual coreOperationGreaterThanOrEqual0 = new CoreOperationGreaterThanOrEqual(constant0, coreFunction0);
+JXPathContext.newContext((Object) coreOperationGreaterThanOrEqual0);
+
+[MASTER] 00:45:38.557 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class java.lang.AssertionError: Expecting exception: ClassCastException
+[MASTER] 00:45:38.558 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ Long long0 = new Long(452L);
+Constant constant0 = new Constant(long0);
+CoreOperationLessThanOrEqual coreOperationLessThanOrEqual0 = new CoreOperationLessThanOrEqual(constant0, constant0);
+Expression[] expressionArray0 = new Expression[2];
+QName qName0 = new QName("@1.+M");
+VariableReference variableReference0 = new VariableReference(qName0);
+expressionArray0[0] = (Expression) variableReference0;
+CoreOperationOr coreOperationOr0 = new CoreOperationOr(expressionArray0);
+CoreOperationLessThanOrEqual coreOperationLessThanOrEqual1 = new CoreOperationLessThanOrEqual(coreOperationOr0, coreOperationLessThanOrEqual0);
+Integer integer0 = new Integer(1518);
+JXPathContext.newContext((Object) integer0);
+
+* Writing tests to file
+* Writing JUnit test case 'CoreOperationRelationalExpression_ESTest' to results/JxPath-20/org.apache.commons.jxpath.ri.compiler.CoreOperationRelationalExpression/BBC-F0-opt-70/tests/10
+* Done!
+
+* Computation finished

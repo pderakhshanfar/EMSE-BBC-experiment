@@ -1,0 +1,63 @@
+* EvoSuite 1.1.1-SNAPSHOT
+* Configuration: BBC-F0-opt-70
+* Going to generate test cases for class: com.google.javascript.jscomp.ProcessClosurePrimitives
+* Starting Client-0
+* Connecting to master process on port 5519
+* Analyzing classpath: 
+  - subjects/buggy-versions/Closure-113/build/classes
+  - subjects/buggy-versions/Closure-113/lib/args4j.jar
+  - subjects/buggy-versions/Closure-113/lib/guava.jar
+  - subjects/buggy-versions/Closure-113/lib/json.jar
+  - subjects/buggy-versions/Closure-113/lib/jsr305.jar
+  - subjects/buggy-versions/Closure-113/lib/protobuf-java.jar
+  - subjects/buggy-versions/Closure-113/build/lib/rhino.jar
+  - subjects/buggy-versions/Closure-113/lib/ant.jar
+* Finished analyzing classpath
+* Generating tests for class com.google.javascript.jscomp.ProcessClosurePrimitives
+* Test criteria:
+  - Line Coverage
+  - Branch Coverage
+  - Exception
+  - Mutation testing (weak)
+  - Method-Output Coverage
+  - Top-Level Method Coverage
+  - No-Exception Top-Level Method Coverage
+  - Context Branch Coverage
+* Total number of test goals for DYNAMOSA: 1637
+* Using seed 2271667696
+* Starting evolution
+bbc usage percentage is: 70%
+* Initial Number of Goals in DynaMOSA = 361 / 1637
+[MASTER] 21:35:36.016 [logback-2] ERROR TestCluster - Failed to check cache for java.util.AbstractMap<K, V>.SimpleEntry<K, V> : Type points to itself
+[MASTER] 21:35:36.016 [logback-2] ERROR TestCluster - Failed to check cache for java.util.AbstractMap<K, V>.SimpleImmutableEntry<K, V> : Type points to itself
+[MASTER] 21:35:36.029 [logback-2] ERROR TestCluster - Failed to check cache for java.lang.Comparable<T> : Type points to itself
+[MASTER] 21:36:15.672 [logback-2] ERROR TestCluster - Failed to check cache for java.util.Enumeration<E> : Type points to itself
+[MASTER] 21:36:21.412 [logback-2] ERROR ClientNodeImpl - Error when generating tests for: com.google.javascript.jscomp.ProcessClosurePrimitives with seed 2271667696. Configuration id : BBC-F0-opt-70
+java.lang.NullPointerException: null
+	at org.evosuite.testcase.secondaryobjectives.basicblock.BasicBlockCoverage.compareChromosomes(BasicBlockCoverage.java:59)
+	at org.evosuite.testcase.TestChromosome.compareSecondaryObjective(TestChromosome.java:680)
+	at org.evosuite.testcase.TestChromosome.compareSecondaryObjective(TestChromosome.java:68)
+	at org.evosuite.ga.comparators.PreferenceSortingComparator.compare(PreferenceSortingComparator.java:74)
+	at org.evosuite.ga.operators.ranking.RankBasedPreferenceSorting.getZeroFront(RankBasedPreferenceSorting.java:111)
+	at org.evosuite.ga.operators.ranking.RankBasedPreferenceSorting.computeRankingAssignment(RankBasedPreferenceSorting.java:65)
+	at org.evosuite.ga.metaheuristics.mosa.DynaMOSA.evolve(DynaMOSA.java:83)
+	at org.evosuite.ga.metaheuristics.mosa.DynaMOSA.generateSolution(DynaMOSA.java:174)
+	at org.evosuite.ga.metaheuristics.TestSuiteAdapter.generateSolution(TestSuiteAdapter.java:114)
+	at org.evosuite.strategy.MOSuiteStrategy.generateTests(MOSuiteStrategy.java:123)
+	at org.evosuite.TestSuiteGenerator.generateTests(TestSuiteGenerator.java:630)
+	at org.evosuite.TestSuiteGenerator.generateTestSuite(TestSuiteGenerator.java:205)
+	at org.evosuite.rmi.service.ClientNodeImpl.lambda$startNewSearch$0(ClientNodeImpl.java:150)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+* Computation finished
+[MASTER] 21:36:21.526 [main] ERROR SearchStatistics - No obtained value for output variable: LineCoverage
+[MASTER] 21:36:23.528 [main] ERROR SearchStatistics - No obtained value for output variable: LineCoverage
+[MASTER] 21:36:24.529 [main] ERROR SearchStatistics - No obtained value for output variable: LineCoverage
+[MASTER] 21:36:25.529 [main] ERROR SearchStatistics - No obtained value for output variable: LineCoverage
+[MASTER] 21:36:26.530 [main] ERROR SearchStatistics - No obtained value for output variable: LineCoverage
+[MASTER] 21:36:27.530 [main] ERROR SearchStatistics - No obtained value for output variable: LineCoverage
+[MASTER] 21:36:27.531 [main] ERROR SearchStatistics - Not going to write down statistics data, as some are missing
+[MASTER] 21:36:27.631 [main] ERROR TestGeneration - failed to write statistics data

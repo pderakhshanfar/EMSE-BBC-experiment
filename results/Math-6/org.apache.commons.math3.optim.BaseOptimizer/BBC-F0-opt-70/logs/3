@@ -1,0 +1,53 @@
+* EvoSuite 1.1.1-SNAPSHOT
+* Configuration: BBC-F0-opt-70
+* Going to generate test cases for class: org.apache.commons.math3.optim.BaseOptimizer
+* Starting Client-0
+* Connecting to master process on port 9749
+* Analyzing classpath: 
+  - subjects/buggy-versions/Math-6/target/classes
+* Finished analyzing classpath
+* Generating tests for class org.apache.commons.math3.optim.BaseOptimizer
+* Test criteria:
+  - Line Coverage
+  - Branch Coverage
+  - Exception
+  - Mutation testing (weak)
+  - Method-Output Coverage
+  - Top-Level Method Coverage
+  - No-Exception Top-Level Method Coverage
+  - Context Branch Coverage
+* Total number of test goals for DYNAMOSA: 141
+* Using seed 2222595251
+* Starting evolution
+bbc usage percentage is: 70%
+* Initial Number of Goals in DynaMOSA = 71 / 141
+[MASTER] 21:58:13.318 [logback-2] ERROR TestCluster - Failed to check cache for org.apache.commons.math3.optim.ConvergenceChecker<PAIR> : Type points to itself
+[MASTER] 21:59:12.774 [logback-2] ERROR ClientNodeImpl - Error when generating tests for: org.apache.commons.math3.optim.BaseOptimizer with seed 2222595251. Configuration id : BBC-F0-opt-70
+java.lang.NullPointerException: null
+	at org.evosuite.testcase.secondaryobjectives.basicblock.BasicBlockCoverage.compareChromosomes(BasicBlockCoverage.java:59)
+	at org.evosuite.testcase.TestChromosome.compareSecondaryObjective(TestChromosome.java:680)
+	at org.evosuite.testcase.TestChromosome.compareSecondaryObjective(TestChromosome.java:68)
+	at org.evosuite.ga.comparators.PreferenceSortingComparator.compare(PreferenceSortingComparator.java:74)
+	at org.evosuite.ga.operators.ranking.RankBasedPreferenceSorting.getZeroFront(RankBasedPreferenceSorting.java:111)
+	at org.evosuite.ga.operators.ranking.RankBasedPreferenceSorting.computeRankingAssignment(RankBasedPreferenceSorting.java:65)
+	at org.evosuite.ga.metaheuristics.mosa.DynaMOSA.evolve(DynaMOSA.java:83)
+	at org.evosuite.ga.metaheuristics.mosa.DynaMOSA.generateSolution(DynaMOSA.java:174)
+	at org.evosuite.ga.metaheuristics.TestSuiteAdapter.generateSolution(TestSuiteAdapter.java:114)
+	at org.evosuite.strategy.MOSuiteStrategy.generateTests(MOSuiteStrategy.java:123)
+	at org.evosuite.TestSuiteGenerator.generateTests(TestSuiteGenerator.java:630)
+	at org.evosuite.TestSuiteGenerator.generateTestSuite(TestSuiteGenerator.java:205)
+	at org.evosuite.rmi.service.ClientNodeImpl.lambda$startNewSearch$0(ClientNodeImpl.java:150)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+* Computation finished
+[MASTER] 21:59:12.922 [main] ERROR SearchStatistics - No obtained value for output variable: LineCoverage
+[MASTER] 21:59:14.925 [main] ERROR SearchStatistics - No obtained value for output variable: LineCoverage
+[MASTER] 21:59:15.925 [main] ERROR SearchStatistics - No obtained value for output variable: LineCoverage
+[MASTER] 21:59:16.926 [main] ERROR SearchStatistics - No obtained value for output variable: LineCoverage
+[MASTER] 21:59:17.926 [main] ERROR SearchStatistics - No obtained value for output variable: LineCoverage
+[MASTER] 21:59:18.927 [main] ERROR SearchStatistics - No obtained value for output variable: LineCoverage
+[MASTER] 21:59:18.927 [main] ERROR SearchStatistics - Not going to write down statistics data, as some are missing
+[MASTER] 21:59:19.028 [main] ERROR TestGeneration - failed to write statistics data

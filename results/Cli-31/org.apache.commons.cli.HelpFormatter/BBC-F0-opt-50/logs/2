@@ -1,0 +1,560 @@
+* EvoSuite 1.1.1-SNAPSHOT
+* Configuration: BBC-F0-opt-50
+* Going to generate test cases for class: org.apache.commons.cli.HelpFormatter
+* Starting Client-0
+* Connecting to master process on port 11725
+* Analyzing classpath: 
+  - subjects/buggy-versions/Cli-31/target/classes
+* Finished analyzing classpath
+* Generating tests for class org.apache.commons.cli.HelpFormatter
+* Test criteria:
+  - Line Coverage
+  - Branch Coverage
+  - Exception
+  - Mutation testing (weak)
+  - Method-Output Coverage
+  - Top-Level Method Coverage
+  - No-Exception Top-Level Method Coverage
+  - Context Branch Coverage
+* Total number of test goals for DYNAMOSA: 1153
+* Using seed 1468653255
+* Starting evolution
+bbc usage percentage is: 50%
+* Initial Number of Goals in DynaMOSA = 401 / 1153
+[MASTER] 18:03:34.766 [logback-2] ERROR TestCluster - Failed to check cache for java.util.Comparator<T> : Type points to itself
+*C2*
+*C2*
+*C2*
+*C2*
+*C2*
+*C2*
+*C2*
+*C2*
+*C2*
+*C2*
+*C2*
+*C2*
+*C2*
+*C2*
+*C2*
+*C2*
+*C2*
+*C2*
+*C2*
+*C2*
+*C2*
+*C2*
+*C2*
+*C2*
+*C2*
+*C2*
+*C2*
+*C2*
+*C2*
+*C2*
+*C2*
+*C2*
+*C2*
+*C2*
+*C2*
+*C2*
+*C2*
+*C2*
+*C2*
+*C2*
+*C2*
+*C2*
+*C2*
+*C2*
+* Search finished after 603s and 144 generations, 60309 statements, best individual has fitness: 137.0
+* Minimizing test suite
+[MASTER] 18:15:12.298 [logback-1] WARN  TestSuiteMinimizer - Minimization timeout. Roll back to original test suite
+* Going to analyze the coverage criteria
+* Coverage analysis for criterion LINE
+* Coverage of criterion LINE: 99%
+* Total number of goals: 205
+* Number of covered goals: 203
+* Coverage analysis for criterion BRANCH
+* Coverage of criterion BRANCH: 90%
+* Total number of goals: 154
+* Number of covered goals: 138
+* Coverage analysis for criterion EXCEPTION
+* Coverage of criterion EXCEPTION: 100%
+* Total number of goals: 58
+* Number of covered goals: 58
+* Coverage analysis for criterion WEAKMUTATION
+* Coverage of criterion WEAKMUTATION: 93%
+* Total number of goals: 514
+* Number of covered goals: 478
+* Coverage analysis for criterion OUTPUT
+* Coverage of criterion OUTPUT: 61%
+* Total number of goals: 46
+* Number of covered goals: 28
+* Coverage analysis for criterion METHOD
+* Coverage of criterion METHOD: 98%
+* Total number of goals: 40
+* Number of covered goals: 39
+* Coverage analysis for criterion METHODNOEXCEPTION
+* Coverage of criterion METHODNOEXCEPTION: 98%
+* Total number of goals: 40
+* Number of covered goals: 39
+* Coverage analysis for criterion CBRANCH
+* Coverage of criterion CBRANCH: 90%
+* Total number of goals: 154
+* Number of covered goals: 138
+* Generated 131 tests with total length 1844
+* Resulting test suite's coverage: 85% (average coverage for all fitness functions)
+* Generating assertions
+[MASTER] 18:16:02.541 [logback-1] WARN  SimpleMutationAssertionGenerator - Assertion minimization is taking too long (0.7199% of time used, but only 14/131 tests minimized), falling back to using all assertions
+[MASTER] 18:16:19.518 [logback-1] WARN  SimpleMutationAssertionGenerator - Reached maximum time to generate assertions, aborting assertion generation
+* Resulting test suite's mutation score: 8%
+* Compiling and checking tests
+[MASTER] 18:17:00.116 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 18:17:00.177 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 18:17:00.246 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 18:17:00.292 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 18:17:00.988 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class java.lang.SecurityException: Security manager blocks ("java.lang.RuntimePermission" "writeFileDescriptor")
+java.lang.Thread.getStackTrace(Thread.java:1559)
+org.evosuite.runtime.sandbox.MSecurityManager.checkPermission(MSecurityManager.java:433)
+java.lang.SecurityManager.checkWrite(SecurityManager.java:954)
+java.io.FileOutputStream.<init>(FileOutputStream.java:245)
+org.evosuite.runtime.mock.java.io.MockFileOutputStream.<init>(MockFileOutputStream.java:114)
+org.apache.commons.cli.HelpFormatter_145_tmp__ESTest.test0(HelpFormatter_145_tmp__ESTest.java:99)
+sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+java.lang.reflect.Method.invoke(Method.java:498)
+org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)
+org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56)
+org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+org.junit.internal.runners.statements.FailOnTimeout$CallableStatement.call(FailOnTimeout.java:288)
+org.junit.internal.runners.statements.FailOnTimeout$CallableStatement.call(FailOnTimeout.java:282)
+java.util.concurrent.FutureTask.run(FutureTask.java:266)
+java.lang.Thread.run(Thread.java:748)
+
+[MASTER] 18:17:00.989 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ HelpFormatter helpFormatter0 = new HelpFormatter();
+assertEquals(1, helpFormatter0.getLeftPadding());
+assertEquals("-", helpFormatter0.getOptPrefix());
+assertEquals(" ", helpFormatter0.getLongOptSeparator());
+assertEquals("\n", helpFormatter0.getNewLine());
+assertEquals("arg", helpFormatter0.getArgName());
+assertEquals(3, helpFormatter0.getDescPadding());
+assertEquals("usage: ", helpFormatter0.getSyntaxPrefix());
+assertEquals(74, helpFormatter0.getWidth());
+assertEquals("--", helpFormatter0.getLongOptPrefix());
+assertNotNull(helpFormatter0);
+assertEquals(1, helpFormatter0.defaultLeftPad);
+assertEquals(3, HelpFormatter.DEFAULT_DESC_PAD);
+assertEquals(1, HelpFormatter.DEFAULT_LEFT_PAD);
+assertEquals(74, HelpFormatter.DEFAULT_WIDTH);
+assertEquals(3, helpFormatter0.defaultDescPad);
+assertEquals(74, helpFormatter0.defaultWidth);
+
+Options options0 = new Options();
+assertNotNull(options0);
+
+helpFormatter0.printHelp(" q2UQ?+q!PY%5\"H*9", "N", options0, " q2UQ?+q!PY%5\"H*9");
+assertEquals(1, helpFormatter0.getLeftPadding());
+assertEquals("-", helpFormatter0.getOptPrefix());
+assertEquals(" ", helpFormatter0.getLongOptSeparator());
+assertEquals("\n", helpFormatter0.getNewLine());
+assertEquals("arg", helpFormatter0.getArgName());
+assertEquals(3, helpFormatter0.getDescPadding());
+assertEquals("usage: ", helpFormatter0.getSyntaxPrefix());
+assertEquals(74, helpFormatter0.getWidth());
+assertEquals("--", helpFormatter0.getLongOptPrefix());
+assertEquals(1, helpFormatter0.defaultLeftPad);
+assertEquals(3, HelpFormatter.DEFAULT_DESC_PAD);
+assertEquals(1, HelpFormatter.DEFAULT_LEFT_PAD);
+assertEquals(74, HelpFormatter.DEFAULT_WIDTH);
+assertEquals(3, helpFormatter0.defaultDescPad);
+assertEquals(74, helpFormatter0.defaultWidth);
+
+boolean boolean0 = options0.hasShortOption("");
+assertFalse(boolean0);
+
+Options options1 = new Options();
+assertFalse(options1.equals((Object)options0));
+assertNotNull(options1);
+
+HelpFormatter helpFormatter1 = new HelpFormatter();
+assertFalse(helpFormatter1.equals((Object)helpFormatter0));
+assertEquals("\n", helpFormatter1.getNewLine());
+assertEquals(" ", helpFormatter1.getLongOptSeparator());
+assertEquals("usage: ", helpFormatter1.getSyntaxPrefix());
+assertEquals(3, helpFormatter1.getDescPadding());
+assertEquals("-", helpFormatter1.getOptPrefix());
+assertEquals("--", helpFormatter1.getLongOptPrefix());
+assertEquals(1, helpFormatter1.getLeftPadding());
+assertEquals(74, helpFormatter1.getWidth());
+assertEquals("arg", helpFormatter1.getArgName());
+assertNotNull(helpFormatter1);
+assertEquals(74, HelpFormatter.DEFAULT_WIDTH);
+assertEquals(74, helpFormatter1.defaultWidth);
+assertEquals(1, HelpFormatter.DEFAULT_LEFT_PAD);
+assertEquals(3, helpFormatter1.defaultDescPad);
+assertEquals(1, helpFormatter1.defaultLeftPad);
+assertEquals(3, HelpFormatter.DEFAULT_DESC_PAD);
+
+FileDescriptor fileDescriptor0 = new FileDescriptor();
+assertFalse(fileDescriptor0.valid());
+assertNotNull(fileDescriptor0);
+
+FileDescriptor fileDescriptor1 = new FileDescriptor();
+assertFalse(fileDescriptor1.equals((Object)fileDescriptor0));
+assertFalse(fileDescriptor1.valid());
+assertNotNull(fileDescriptor1);
+
+MockFileOutputStream mockFileOutputStream0 = new MockFileOutputStream(fileDescriptor1);
+assertFalse(fileDescriptor1.equals((Object)fileDescriptor0));
+assertNotNull(mockFileOutputStream0);
+
+MockPrintWriter mockPrintWriter0 = new MockPrintWriter(mockFileOutputStream0);
+assertFalse(fileDescriptor1.equals((Object)fileDescriptor0));
+assertNotNull(mockPrintWriter0);
+
+helpFormatter1.printUsage((PrintWriter) mockPrintWriter0, 3, ";I:24tLHRSO?pu-[-C");
+
+[MASTER] 18:17:07.432 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class java.lang.SecurityException: Security manager blocks ("java.lang.RuntimePermission" "writeFileDescriptor")
+java.lang.Thread.getStackTrace(Thread.java:1559)
+org.evosuite.runtime.sandbox.MSecurityManager.checkPermission(MSecurityManager.java:433)
+java.lang.SecurityManager.checkWrite(SecurityManager.java:954)
+java.io.FileOutputStream.<init>(FileOutputStream.java:245)
+org.evosuite.runtime.mock.java.io.MockFileOutputStream.<init>(MockFileOutputStream.java:114)
+org.apache.commons.cli.HelpFormatter_173_tmp__ESTest.test0(HelpFormatter_173_tmp__ESTest.java:130)
+sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+java.lang.reflect.Method.invoke(Method.java:498)
+org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)
+org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56)
+org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+org.junit.internal.runners.statements.FailOnTimeout$CallableStatement.call(FailOnTimeout.java:288)
+org.junit.internal.runners.statements.FailOnTimeout$CallableStatement.call(FailOnTimeout.java:282)
+java.util.concurrent.FutureTask.run(FutureTask.java:266)
+java.lang.Thread.run(Thread.java:748)
+
+[MASTER] 18:17:07.433 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ HelpFormatter helpFormatter0 = new HelpFormatter();
+assertEquals(1, helpFormatter0.getLeftPadding());
+assertEquals("-", helpFormatter0.getOptPrefix());
+assertEquals("usage: ", helpFormatter0.getSyntaxPrefix());
+assertEquals("\n", helpFormatter0.getNewLine());
+assertEquals("--", helpFormatter0.getLongOptPrefix());
+assertEquals(74, helpFormatter0.getWidth());
+assertEquals("arg", helpFormatter0.getArgName());
+assertEquals(3, helpFormatter0.getDescPadding());
+assertEquals(" ", helpFormatter0.getLongOptSeparator());
+assertNotNull(helpFormatter0);
+assertEquals(3, helpFormatter0.defaultDescPad);
+assertEquals(74, helpFormatter0.defaultWidth);
+assertEquals(1, HelpFormatter.DEFAULT_LEFT_PAD);
+assertEquals(74, HelpFormatter.DEFAULT_WIDTH);
+assertEquals(1, helpFormatter0.defaultLeftPad);
+assertEquals(3, HelpFormatter.DEFAULT_DESC_PAD);
+
+Options options0 = new Options();
+assertNotNull(options0);
+
+helpFormatter0.printHelp(" q2UQ?+q!PY%5\"H*9", "N", options0, " q2UQ?+q!PY%5\"H*9");
+assertEquals(1, helpFormatter0.getLeftPadding());
+assertEquals("-", helpFormatter0.getOptPrefix());
+assertEquals("usage: ", helpFormatter0.getSyntaxPrefix());
+assertEquals("\n", helpFormatter0.getNewLine());
+assertEquals("--", helpFormatter0.getLongOptPrefix());
+assertEquals(74, helpFormatter0.getWidth());
+assertEquals("arg", helpFormatter0.getArgName());
+assertEquals(3, helpFormatter0.getDescPadding());
+assertEquals(" ", helpFormatter0.getLongOptSeparator());
+assertEquals(3, helpFormatter0.defaultDescPad);
+assertEquals(74, helpFormatter0.defaultWidth);
+assertEquals(1, HelpFormatter.DEFAULT_LEFT_PAD);
+assertEquals(74, HelpFormatter.DEFAULT_WIDTH);
+assertEquals(1, helpFormatter0.defaultLeftPad);
+assertEquals(3, HelpFormatter.DEFAULT_DESC_PAD);
+
+Comparator<String> comparator0 = (Comparator<String>) mock(Comparator.class, new ViolatedAssumptionAnswer());
+helpFormatter0.setOptionComparator(comparator0);
+assertEquals(1, helpFormatter0.getLeftPadding());
+assertEquals("-", helpFormatter0.getOptPrefix());
+assertEquals("usage: ", helpFormatter0.getSyntaxPrefix());
+assertEquals("\n", helpFormatter0.getNewLine());
+assertEquals("--", helpFormatter0.getLongOptPrefix());
+assertEquals(74, helpFormatter0.getWidth());
+assertEquals("arg", helpFormatter0.getArgName());
+assertEquals(3, helpFormatter0.getDescPadding());
+assertEquals(" ", helpFormatter0.getLongOptSeparator());
+assertEquals(3, helpFormatter0.defaultDescPad);
+assertEquals(74, helpFormatter0.defaultWidth);
+assertEquals(1, HelpFormatter.DEFAULT_LEFT_PAD);
+assertEquals(74, HelpFormatter.DEFAULT_WIDTH);
+assertEquals(1, helpFormatter0.defaultLeftPad);
+assertEquals(3, HelpFormatter.DEFAULT_DESC_PAD);
+
+boolean boolean0 = options0.hasShortOption("");
+assertFalse(boolean0);
+
+Option option0 = options0.getOption("");
+assertNull(option0);
+
+helpFormatter0.setSyntaxPrefix("");
+assertEquals(1, helpFormatter0.getLeftPadding());
+assertEquals("-", helpFormatter0.getOptPrefix());
+assertEquals("", helpFormatter0.getSyntaxPrefix());
+assertEquals("\n", helpFormatter0.getNewLine());
+assertEquals("--", helpFormatter0.getLongOptPrefix());
+assertEquals(74, helpFormatter0.getWidth());
+assertEquals("arg", helpFormatter0.getArgName());
+assertEquals(3, helpFormatter0.getDescPadding());
+assertEquals(" ", helpFormatter0.getLongOptSeparator());
+assertEquals(3, helpFormatter0.defaultDescPad);
+assertEquals(74, helpFormatter0.defaultWidth);
+assertEquals(1, HelpFormatter.DEFAULT_LEFT_PAD);
+assertEquals(74, HelpFormatter.DEFAULT_WIDTH);
+assertEquals(1, helpFormatter0.defaultLeftPad);
+assertEquals(3, HelpFormatter.DEFAULT_DESC_PAD);
+
+helpFormatter0.setLongOptSeparator("");
+assertEquals(1, helpFormatter0.getLeftPadding());
+assertEquals("-", helpFormatter0.getOptPrefix());
+assertEquals("", helpFormatter0.getSyntaxPrefix());
+assertEquals("\n", helpFormatter0.getNewLine());
+assertEquals("--", helpFormatter0.getLongOptPrefix());
+assertEquals(74, helpFormatter0.getWidth());
+assertEquals("arg", helpFormatter0.getArgName());
+assertEquals(3, helpFormatter0.getDescPadding());
+assertEquals("", helpFormatter0.getLongOptSeparator());
+assertEquals(3, helpFormatter0.defaultDescPad);
+assertEquals(74, helpFormatter0.defaultWidth);
+assertEquals(1, HelpFormatter.DEFAULT_LEFT_PAD);
+assertEquals(74, HelpFormatter.DEFAULT_WIDTH);
+assertEquals(1, helpFormatter0.defaultLeftPad);
+assertEquals(3, HelpFormatter.DEFAULT_DESC_PAD);
+
+FileDescriptor fileDescriptor0 = new FileDescriptor();
+assertFalse(fileDescriptor0.valid());
+assertNotNull(fileDescriptor0);
+
+MockFileOutputStream mockFileOutputStream0 = new MockFileOutputStream(fileDescriptor0);
+assertNotNull(mockFileOutputStream0);
+
+MockPrintWriter mockPrintWriter0 = new MockPrintWriter(mockFileOutputStream0);
+assertNotNull(mockPrintWriter0);
+
+helpFormatter0.printUsage((PrintWriter) mockPrintWriter0, (-1), "");
+
+[MASTER] 18:17:15.549 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class java.lang.SecurityException: Security manager blocks ("java.lang.RuntimePermission" "writeFileDescriptor")
+java.lang.Thread.getStackTrace(Thread.java:1559)
+org.evosuite.runtime.sandbox.MSecurityManager.checkPermission(MSecurityManager.java:433)
+java.lang.SecurityManager.checkWrite(SecurityManager.java:954)
+java.io.FileOutputStream.<init>(FileOutputStream.java:245)
+org.evosuite.runtime.mock.java.io.MockFileOutputStream.<init>(MockFileOutputStream.java:114)
+org.apache.commons.cli.HelpFormatter_194_tmp__ESTest.test0(HelpFormatter_194_tmp__ESTest.java:150)
+sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+java.lang.reflect.Method.invoke(Method.java:498)
+org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)
+org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56)
+org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+org.junit.internal.runners.statements.FailOnTimeout$CallableStatement.call(FailOnTimeout.java:288)
+org.junit.internal.runners.statements.FailOnTimeout$CallableStatement.call(FailOnTimeout.java:282)
+java.util.concurrent.FutureTask.run(FutureTask.java:266)
+java.lang.Thread.run(Thread.java:748)
+
+[MASTER] 18:17:15.551 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ HelpFormatter helpFormatter0 = new HelpFormatter();
+assertEquals("usage: ", helpFormatter0.getSyntaxPrefix());
+assertEquals(" ", helpFormatter0.getLongOptSeparator());
+assertEquals(3, helpFormatter0.getDescPadding());
+assertEquals("--", helpFormatter0.getLongOptPrefix());
+assertEquals(1, helpFormatter0.getLeftPadding());
+assertEquals(74, helpFormatter0.getWidth());
+assertEquals("\n", helpFormatter0.getNewLine());
+assertEquals("arg", helpFormatter0.getArgName());
+assertEquals("-", helpFormatter0.getOptPrefix());
+assertNotNull(helpFormatter0);
+assertEquals(74, HelpFormatter.DEFAULT_WIDTH);
+assertEquals(74, helpFormatter0.defaultWidth);
+assertEquals(1, HelpFormatter.DEFAULT_LEFT_PAD);
+assertEquals(3, helpFormatter0.defaultDescPad);
+assertEquals(3, HelpFormatter.DEFAULT_DESC_PAD);
+assertEquals(1, helpFormatter0.defaultLeftPad);
+
+MockFile mockFile0 = new MockFile("", "\n");
+assertNotNull(mockFile0);
+
+MockPrintWriter mockPrintWriter0 = new MockPrintWriter(mockFile0);
+assertNotNull(mockPrintWriter0);
+
+PrintWriter printWriter0 = mockPrintWriter0.append('4');
+assertSame(mockPrintWriter0, printWriter0);
+assertSame(printWriter0, mockPrintWriter0);
+assertTrue(mockFile0.isFile());
+assertFalse(mockFile0.isHidden());
+assertEquals(0L, mockFile0.getUsableSpace());
+assertEquals("/", mockFile0.getParent());
+assertTrue(mockFile0.canExecute());
+assertEquals(0L, mockFile0.getTotalSpace());
+assertEquals(1392409281320L, mockFile0.lastModified());
+assertTrue(mockFile0.exists());
+assertTrue(mockFile0.canRead());
+assertFalse(mockFile0.isDirectory());
+assertEquals(0L, mockFile0.length());
+assertEquals("\n", mockFile0.getName());
+assertEquals("/\n", mockFile0.toString());
+assertTrue(mockFile0.isAbsolute());
+assertEquals(0L, mockFile0.getFreeSpace());
+assertTrue(mockFile0.canWrite());
+assertNotNull(printWriter0);
+
+Options options0 = new Options();
+assertNotNull(options0);
+
+MockFileOutputStream mockFileOutputStream0 = new MockFileOutputStream(mockFile0);
+assertNotNull(mockFileOutputStream0);
+
+MockPrintWriter mockPrintWriter1 = new MockPrintWriter(mockFileOutputStream0);
+assertFalse(mockPrintWriter1.equals((Object)printWriter0));
+assertFalse(mockPrintWriter1.equals((Object)mockPrintWriter0));
+assertNotNull(mockPrintWriter1);
+
+char[] charArray0 = new char[3];
+charArray0[0] = '4';
+charArray0[1] = '4';
+charArray0[2] = '4';
+printWriter0.print(charArray0);
+assertFalse(mockPrintWriter0.equals((Object)mockPrintWriter1));
+assertFalse(printWriter0.equals((Object)mockPrintWriter1));
+assertSame(mockPrintWriter0, printWriter0);
+assertNotSame(mockPrintWriter0, mockPrintWriter1);
+assertSame(printWriter0, mockPrintWriter0);
+assertNotSame(printWriter0, mockPrintWriter1);
+assertTrue(mockFile0.isFile());
+assertFalse(mockFile0.isHidden());
+assertEquals(0L, mockFile0.getUsableSpace());
+assertEquals("/", mockFile0.getParent());
+assertTrue(mockFile0.canExecute());
+assertEquals(0L, mockFile0.getTotalSpace());
+assertEquals(1392409281320L, mockFile0.lastModified());
+assertTrue(mockFile0.exists());
+assertTrue(mockFile0.canRead());
+assertFalse(mockFile0.isDirectory());
+assertEquals(0L, mockFile0.length());
+assertEquals("\n", mockFile0.getName());
+assertEquals("/\n", mockFile0.toString());
+assertTrue(mockFile0.isAbsolute());
+assertEquals(0L, mockFile0.getFreeSpace());
+assertTrue(mockFile0.canWrite());
+assertArrayEquals(new char[] {'4', '4', '4'}, charArray0);
+assertEquals(3, charArray0.length);
+
+Options options1 = new Options();
+assertFalse(options1.equals((Object)options0));
+assertNotNull(options1);
+
+HelpFormatter helpFormatter1 = new HelpFormatter();
+assertFalse(helpFormatter1.equals((Object)helpFormatter0));
+assertEquals(" ", helpFormatter1.getLongOptSeparator());
+assertEquals("usage: ", helpFormatter1.getSyntaxPrefix());
+assertEquals("\n", helpFormatter1.getNewLine());
+assertEquals("arg", helpFormatter1.getArgName());
+assertEquals(3, helpFormatter1.getDescPadding());
+assertEquals("--", helpFormatter1.getLongOptPrefix());
+assertEquals(1, helpFormatter1.getLeftPadding());
+assertEquals(74, helpFormatter1.getWidth());
+assertEquals("-", helpFormatter1.getOptPrefix());
+assertNotNull(helpFormatter1);
+assertEquals(74, helpFormatter1.defaultWidth);
+assertEquals(3, HelpFormatter.DEFAULT_DESC_PAD);
+assertEquals(3, helpFormatter1.defaultDescPad);
+assertEquals(1, HelpFormatter.DEFAULT_LEFT_PAD);
+assertEquals(74, HelpFormatter.DEFAULT_WIDTH);
+assertEquals(1, helpFormatter1.defaultLeftPad);
+
+FileDescriptor fileDescriptor0 = new FileDescriptor();
+assertFalse(fileDescriptor0.valid());
+assertNotNull(fileDescriptor0);
+
+FileDescriptor fileDescriptor1 = new FileDescriptor();
+assertFalse(fileDescriptor1.equals((Object)fileDescriptor0));
+assertFalse(fileDescriptor1.valid());
+assertNotNull(fileDescriptor1);
+
+FileDescriptor fileDescriptor2 = new FileDescriptor();
+assertFalse(fileDescriptor2.equals((Object)fileDescriptor0));
+assertFalse(fileDescriptor2.equals((Object)fileDescriptor1));
+assertFalse(fileDescriptor2.valid());
+assertNotNull(fileDescriptor2);
+
+MockFileOutputStream mockFileOutputStream1 = new MockFileOutputStream(fileDescriptor2);
+assertFalse(fileDescriptor2.equals((Object)fileDescriptor0));
+assertFalse(fileDescriptor2.equals((Object)fileDescriptor1));
+assertFalse(mockFileOutputStream1.equals((Object)mockFileOutputStream0));
+assertNotNull(mockFileOutputStream1);
+
+MockPrintWriter mockPrintWriter2 = new MockPrintWriter(mockFileOutputStream0);
+assertFalse(mockPrintWriter2.equals((Object)printWriter0));
+assertFalse(mockPrintWriter2.equals((Object)mockPrintWriter1));
+assertFalse(mockPrintWriter2.equals((Object)mockPrintWriter0));
+assertFalse(mockFileOutputStream0.equals((Object)mockFileOutputStream1));
+assertNotNull(mockPrintWriter2);
+
+helpFormatter0.printUsage(printWriter0, 1056, "org.apache.commons.cli.OptionValidator");
+assertFalse(helpFormatter0.equals((Object)helpFormatter1));
+assertFalse(mockPrintWriter0.equals((Object)mockPrintWriter1));
+assertFalse(mockPrintWriter0.equals((Object)mockPrintWriter2));
+assertFalse(printWriter0.equals((Object)mockPrintWriter2));
+assertFalse(printWriter0.equals((Object)mockPrintWriter1));
+assertNotSame(helpFormatter0, helpFormatter1);
+assertSame(mockPrintWriter0, printWriter0);
+assertNotSame(mockPrintWriter0, mockPrintWriter1);
+assertNotSame(mockPrintWriter0, mockPrintWriter2);
+assertNotSame(printWriter0, mockPrintWriter2);
+assertSame(printWriter0, mockPrintWriter0);
+assertNotSame(printWriter0, mockPrintWriter1);
+assertEquals("usage: ", helpFormatter0.getSyntaxPrefix());
+assertEquals(" ", helpFormatter0.getLongOptSeparator());
+assertEquals(3, helpFormatter0.getDescPadding());
+assertEquals("--", helpFormatter0.getLongOptPrefix());
+assertEquals(1, helpFormatter0.getLeftPadding());
+assertEquals(74, helpFormatter0.getWidth());
+assertEquals("\n", helpFormatter0.getNewLine());
+assertEquals("arg", helpFormatter0.getArgName());
+assertEquals("-", helpFormatter0.getOptPrefix());
+assertTrue(mockFile0.isFile());
+assertFalse(mockFile0.isHidden());
+assertEquals(0L, mockFile0.getUsableSpace());
+assertEquals("/", mockFile0.getParent());
+assertTrue(mockFile0.canExecute());
+assertEquals(0L, mockFile0.getTotalSpace());
+assertEquals(1392409281320L, mockFile0.lastModified());
+assertTrue(mockFile0.exists());
+assertTrue(mockFile0.canRead());
+assertFalse(mockFile0.isDirectory());
+assertEquals(0L, mockFile0.length());
+assertEquals("\n", mockFile0.getName());
+assertEquals("/\n", mockFile0.toString());
+assertTrue(mockFile0.isAbsolute());
+assertEquals(0L, mockFile0.getFreeSpace());
+assertTrue(mockFile0.canWrite());
+assertEquals(74, HelpFormatter.DEFAULT_WIDTH);
+assertEquals(74, helpFormatter0.defaultWidth);
+assertEquals(1, HelpFormatter.DEFAULT_LEFT_PAD);
+assertEquals(3, helpFormatter0.defaultDescPad);
+assertEquals(3, HelpFormatter.DEFAULT_DESC_PAD);
+assertEquals(1, helpFormatter0.defaultLeftPad);
+
+
+* Permissions denied during test execution: 
+  - java.lang.RuntimePermission: 
+         writeFileDescriptor: 3
+* Writing tests to file
+* Writing JUnit test case 'HelpFormatter_ESTest' to results/Cli-31/org.apache.commons.cli.HelpFormatter/BBC-F0-opt-50/tests/2
+* Done!
+
+* Computation finished

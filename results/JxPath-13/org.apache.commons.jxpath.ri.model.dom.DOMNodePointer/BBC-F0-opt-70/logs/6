@@ -1,0 +1,124 @@
+* EvoSuite 1.1.1-SNAPSHOT
+* Configuration: BBC-F0-opt-70
+* Going to generate test cases for class: org.apache.commons.jxpath.ri.model.dom.DOMNodePointer
+* Starting Client-0
+* Connecting to master process on port 20423
+* Analyzing classpath: 
+  - subjects/buggy-versions/JxPath-13/target/classes
+  - subjects/buggy-versions/JxPath-13/src/java
+  - subjects/buggy-versions/JxPath-13/target/lib/commons-beanutils-1.4.jar
+  - subjects/buggy-versions/JxPath-13/target/lib/commons-collections-2.0.jar
+  - subjects/buggy-versions/JxPath-13/target/lib/commons-logging-1.0.4.jar
+  - subjects/buggy-versions/JxPath-13/target/lib/jdom-1.0.jar
+  - subjects/buggy-versions/JxPath-13/target/lib/junit-3.8.1.jar
+  - subjects/buggy-versions/JxPath-13/target/lib/junit-3.8.jar
+  - subjects/buggy-versions/JxPath-13/target/lib/mockrunner-0.4.1.jar
+  - subjects/buggy-versions/JxPath-13/target/lib/servletapi-2.2.jar
+  - subjects/buggy-versions/JxPath-13/target/lib/xerces-2.4.0.jar
+  - subjects/buggy-versions/JxPath-13/target/lib/xml-apis-2.0.2.jar
+* Finished analyzing classpath
+* Generating tests for class org.apache.commons.jxpath.ri.model.dom.DOMNodePointer
+* Test criteria:
+  - Line Coverage
+  - Branch Coverage
+  - Exception
+  - Mutation testing (weak)
+  - Method-Output Coverage
+  - Top-Level Method Coverage
+  - No-Exception Top-Level Method Coverage
+  - Context Branch Coverage
+* Total number of test goals for DYNAMOSA: 2132
+* Using seed 1837141078
+* Starting evolution
+bbc usage percentage is: 70%
+* Initial Number of Goals in DynaMOSA = 469 / 2132
+[MASTER] 09:05:52.484 [logback-1] WARN  TestUsageChecker - class org.apache.xerces.dom.CharacterDataImpl$1 looks like an anonymous class, ignoring it (although reflection says false) CharacterDataImpl$1
+[MASTER] 09:08:26.797 [logback-2] ERROR TestCluster - Failed to check cache for java.util.List<E> : Type points to itself
+[MASTER] 09:15:31.393 [logback-2] ERROR TestCluster - Failed to check cache for java.util.Enumeration<E> : Type points to itself
+* Search finished after 602s and 1890 generations, 850384 statements, best individual has fitness: 444.0
+* Minimizing test suite
+* Going to analyze the coverage criteria
+* Coverage analysis for criterion LINE
+* Coverage of criterion LINE: 85%
+* Total number of goals: 342
+* Number of covered goals: 292
+* Coverage analysis for criterion BRANCH
+* Coverage of criterion BRANCH: 84%
+* Total number of goals: 311
+* Number of covered goals: 260
+* Coverage analysis for criterion EXCEPTION
+* Coverage of criterion EXCEPTION: 100%
+* Total number of goals: 45
+* Number of covered goals: 45
+* Coverage analysis for criterion WEAKMUTATION
+* Coverage of criterion WEAKMUTATION: 82%
+* Total number of goals: 979
+* Number of covered goals: 801
+* Coverage analysis for criterion OUTPUT
+* Coverage of criterion OUTPUT: 46%
+* Total number of goals: 117
+* Number of covered goals: 54
+* Coverage analysis for criterion METHOD
+* Coverage of criterion METHOD: 100%
+* Total number of goals: 36
+* Number of covered goals: 36
+* Coverage analysis for criterion METHODNOEXCEPTION
+* Coverage of criterion METHODNOEXCEPTION: 94%
+* Total number of goals: 36
+* Number of covered goals: 34
+* Coverage analysis for criterion CBRANCH
+* Coverage of criterion CBRANCH: 83%
+* Total number of goals: 311
+* Number of covered goals: 259
+* Generated 153 tests with total length 817
+* Resulting test suite's coverage: 78% (average coverage for all fitness functions)
+* Generating assertions
+[MASTER] 09:16:49.041 [logback-1] WARN  SimpleMutationAssertionGenerator - Assertion minimization is taking too long (0.7305833333333334% of time used, but only 69/153 tests minimized), falling back to using all assertions
+* Resulting test suite's mutation score: 36%
+* Compiling and checking tests
+[MASTER] 09:16:59.364 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 09:17:11.578 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class java.lang.AssertionError: expected:<http://www.w3.org/1999/xhtml> but was:<null>
+[MASTER] 09:17:11.578 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ Locale locale0 = Locale.ITALY;
+SymbolTable symbolTable0 = new SymbolTable(7);
+XMLGrammarCachingConfiguration xMLGrammarCachingConfiguration0 = new XMLGrammarCachingConfiguration(symbolTable0);
+DOMASBuilderImpl dOMASBuilderImpl0 = new DOMASBuilderImpl(xMLGrammarCachingConfiguration0);
+Document document0 = dOMASBuilderImpl0.parseURI("http://www.w3.org/2000/xmlns/");
+DOMNodePointer dOMNodePointer0 = new DOMNodePointer(document0, locale0);
+String string0 = dOMNodePointer0.getDefaultNamespaceURI();
+assertEquals("http://www.w3.org/1999/xhtml", string0);
+assertNotNull(string0);
+
+
+[MASTER] 09:17:16.010 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class java.lang.NullPointerException: null
+[MASTER] 09:17:16.011 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ DOMASBuilderImpl dOMASBuilderImpl0 = new DOMASBuilderImpl();
+Document document0 = dOMASBuilderImpl0.parseURI("http://www.w3.org/XML/1998/namespace");
+Locale locale0 = Locale.KOREA;
+DOMNodePointer dOMNodePointer0 = new DOMNodePointer(document0, locale0);
+Object object0 = dOMNodePointer0.getValue();
+assertNotNull(object0);
+
+
+[MASTER] 09:17:29.555 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class org.junit.ComparisonFailure: expected:<...w.w3.org/2000/xmlns/[<<UNKNOWN NAMESPACE>>[1]]> but was:<...w.w3.org/2000/xmlns/[]>
+[MASTER] 09:17:29.555 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ DOMASBuilderImpl dOMASBuilderImpl0 = new DOMASBuilderImpl();
+Document document0 = dOMASBuilderImpl0.parseURI("http://www.w3.org/2000/xmlns/");
+QName qName0 = new QName("http://www.w3.org/2000/xmlns/");
+VariablePointer variablePointer0 = new VariablePointer(qName0);
+HTMLDocumentImpl hTMLDocumentImpl0 = new HTMLDocumentImpl();
+HTMLHeadingElementImpl hTMLHeadingElementImpl0 = new HTMLHeadingElementImpl(hTMLDocumentImpl0, "<<unknown namespace>>");
+NodePointer nodePointer0 = NodePointer.newChildNodePointer(variablePointer0, qName0, document0);
+DOMNodePointer dOMNodePointer0 = new DOMNodePointer(nodePointer0, hTMLHeadingElementImpl0);
+String string0 = dOMNodePointer0.asPath();
+assertEquals("$http://www.w3.org/2000/xmlns/<<UNKNOWN NAMESPACE>>[1]", string0);
+
+
+* Permissions denied during test execution: 
+  - java.net.SocketPermission: 
+         resolve www.w3.org: 4
+* Writing tests to file
+* Writing JUnit test case 'DOMNodePointer_ESTest' to results/JxPath-13/org.apache.commons.jxpath.ri.model.dom.DOMNodePointer/BBC-F0-opt-70/tests/6
+* Done!
+
+* Computation finished
