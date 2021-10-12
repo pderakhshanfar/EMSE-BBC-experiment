@@ -127,7 +127,7 @@ do
     #After finishing tasks, wait for tools to finish their test generation processes.
     while (( $(pgrep -l java | wc -l) > 0 ))
     do
-      if [[ attempt_counter -eq 10 ]]; then
+      if [[ waiting_counter -eq 20 ]]; then
         for PID in $(pgrep java) 
         do
           kill -9 $PID
