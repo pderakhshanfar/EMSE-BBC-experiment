@@ -11,7 +11,8 @@ ${COMMAND} run -dit -u ${UID} --name test-generation-container  \
 --mount type=bind,source="$(pwd)/results/SEED",target=/experiment/SEED \
 --mount type=bind,source="$(pwd)/tools",target=/experiment/tools \
 --mount type=bind,source="$(pwd)/configurations",target=/experiment/configurations \
---mount type=bind,source="$(pwd)/console-logs",target=/experiment/console-logs \
+--mount type=bind,source="/scratch/console-logs",target=/experiment/console-logs \
 --mount type=bind,source="$(pwd)/libs",target=/experiment/libs \
 --mount type=bind,source="$(pwd)/data",target=/experiment/data \
+--mount type=bind,source="/scratch/logs",target=/experiment/logs \
 test-generation-img

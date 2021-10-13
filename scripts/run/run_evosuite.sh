@@ -33,7 +33,7 @@ echo -n $seed_value > "results/SEED/$project_name/$target_class/$configuration_n
 # Prepare variables for output directories
 report_dir="results/$project_name/$target_class/$configuration_name/reports/$round"
 test_dir="results/$project_name/$target_class/$configuration_name/tests/$round"
-log_file="/scratch/logs/$project_name-$target_class-$configuration_name-$round"
+log_file="logs/$project_name-$target_class-$configuration_name-$round"
 
 # "results/$project_name/$target_class/$configuration_name/logs/$round"
 
