@@ -2,7 +2,7 @@
 * Configuration: BBC-F0-opt-60
 * Going to generate test cases for class: org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream
 * Starting Client-0
-* Connecting to master process on port 14711
+* Connecting to master process on port 2908
 * Analyzing classpath: 
   - subjects/buggy-versions/Compress-43/target/classes
   - defects4j/framework/projects/Compress/lib/org/brotli/dec/0.1.2/dec-0.1.2.jar
@@ -19,37 +19,292 @@
   - No-Exception Top-Level Method Coverage
   - Context Branch Coverage
 * Total number of test goals for DYNAMOSA: 2207
-* Using seed 2935299964
+* Using seed 2120091851
 * Starting evolution
 bbc usage percentage is: 60%
 * Initial Number of Goals in DynaMOSA = 864 / 2207
-[MASTER] 21:46:59.892 [logback-2] ERROR TestCluster - Failed to check cache for java.util.Enumeration<E> : Type points to itself
+[MASTER] 11:49:26.806 [logback-2] ERROR TestCluster - Failed to check cache for java.util.Enumeration<E> : Type points to itself
+* Search finished after 602s and 951 generations, 467304 statements, best individual has fitness: 236.0
+* Minimizing test suite
+* Going to analyze the coverage criteria
+* Coverage analysis for criterion LINE
+* Coverage of criterion LINE: 97%
+* Total number of goals: 514
+* Number of covered goals: 501
+* Coverage analysis for criterion BRANCH
+* Coverage of criterion BRANCH: 89%
+* Total number of goals: 320
+* Number of covered goals: 286
+* Coverage analysis for criterion EXCEPTION
+* Coverage of criterion EXCEPTION: 99%
+* Total number of goals: 74
+* Number of covered goals: 73
+* Coverage analysis for criterion WEAKMUTATION
+* Coverage of criterion WEAKMUTATION: 93%
+* Total number of goals: 978
+* Number of covered goals: 911
+* Coverage analysis for criterion OUTPUT
+* Coverage of criterion OUTPUT: 82%
+* Total number of goals: 11
+* Number of covered goals: 9
+* Coverage analysis for criterion METHOD
+* Coverage of criterion METHOD: 100%
+* Total number of goals: 32
+* Number of covered goals: 32
+* Coverage analysis for criterion METHODNOEXCEPTION
+* Coverage of criterion METHODNOEXCEPTION: 100%
+* Total number of goals: 32
+* Number of covered goals: 32
+* Coverage analysis for criterion CBRANCH
+* Coverage of criterion CBRANCH: 84%
+* Total number of goals: 320
+* Number of covered goals: 269
+* Generated 134 tests with total length 690
+* Resulting test suite's coverage: 87% (average coverage for all fitness functions)
+* Generating assertions
+* Resulting test suite's mutation score: 29%
+* Compiling and checking tests
+[MASTER] 12:00:35.380 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 12:00:35.401 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class java.lang.SecurityException: Security manager blocks ("java.io.FilePermission" "/tmp/;l4oBOrlgclB0;l4oBOrlgclB" "write")
+java.lang.Thread.getStackTrace(Thread.java:1559)
+org.evosuite.runtime.sandbox.MSecurityManager.checkPermission(MSecurityManager.java:433)
+java.lang.SecurityManager.checkWrite(SecurityManager.java:979)
+sun.nio.fs.UnixChannelFactory.open(UnixChannelFactory.java:247)
+sun.nio.fs.UnixChannelFactory.newFileChannel(UnixChannelFactory.java:136)
+sun.nio.fs.UnixChannelFactory.newFileChannel(UnixChannelFactory.java:148)
+sun.nio.fs.UnixFileSystemProvider.newByteChannel(UnixFileSystemProvider.java:212)
+java.nio.file.Files.newByteChannel(Files.java:361)
+org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream.<init>(ZipArchiveOutputStream.java:292)
+org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream_134_tmp__ESTest.test0(ZipArchiveOutputStream_134_tmp__ESTest.java:24)
+sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+java.lang.reflect.Method.invoke(Method.java:498)
+org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)
+org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56)
+org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+org.junit.internal.runners.statements.FailOnTimeout$CallableStatement.call(FailOnTimeout.java:288)
+org.junit.internal.runners.statements.FailOnTimeout$CallableStatement.call(FailOnTimeout.java:282)
+java.util.concurrent.FutureTask.run(FutureTask.java:266)
+java.lang.Thread.run(Thread.java:748)
+
+[MASTER] 12:00:35.402 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ File file0 = MockFile.createTempFile(";l4oBOrlgclB", ";l4oBOrlgclB");
+ZipArchiveOutputStream zipArchiveOutputStream0 = new ZipArchiveOutputStream(file0);
+JarArchiveEntry jarArchiveEntry0 = new JarArchiveEntry(";l4oBOrlgclB");
+zipArchiveOutputStream0.putArchiveEntry(jarArchiveEntry0);
+zipArchiveOutputStream0.writeZip64CentralDirectory();
+assertEquals("UTF8", zipArchiveOutputStream0.getEncoding());
+
+
+[MASTER] 12:00:43.074 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class java.lang.SecurityException: Security manager blocks ("java.io.FilePermission" "/experiment/B}.GsVEj@n=;+7$& $b/B}.GsVEj@n=;+7$& $b" "write")
+java.lang.Thread.getStackTrace(Thread.java:1559)
+org.evosuite.runtime.sandbox.MSecurityManager.checkPermission(MSecurityManager.java:433)
+java.lang.SecurityManager.checkWrite(SecurityManager.java:979)
+sun.nio.fs.UnixChannelFactory.open(UnixChannelFactory.java:247)
+sun.nio.fs.UnixChannelFactory.newFileChannel(UnixChannelFactory.java:136)
+sun.nio.fs.UnixChannelFactory.newFileChannel(UnixChannelFactory.java:148)
+sun.nio.fs.UnixFileSystemProvider.newByteChannel(UnixFileSystemProvider.java:212)
+java.nio.file.Files.newByteChannel(Files.java:361)
+org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream.<init>(ZipArchiveOutputStream.java:292)
+org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream_138_tmp__ESTest.test0(ZipArchiveOutputStream_138_tmp__ESTest.java:22)
+sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+java.lang.reflect.Method.invoke(Method.java:498)
+org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)
+org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56)
+org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+org.junit.internal.runners.statements.FailOnTimeout$CallableStatement.call(FailOnTimeout.java:288)
+org.junit.internal.runners.statements.FailOnTimeout$CallableStatement.call(FailOnTimeout.java:282)
+java.util.concurrent.FutureTask.run(FutureTask.java:266)
+java.lang.Thread.run(Thread.java:748)
+
+[MASTER] 12:00:43.074 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ MockFile mockFile0 = new MockFile("B}.GsVEj@n=;+7$& $b", "B}.GsVEj@n=;+7$& $b");
+ZipArchiveOutputStream zipArchiveOutputStream0 = new ZipArchiveOutputStream(mockFile0);
+zipArchiveOutputStream0.deflate();
+assertEquals("UTF8", zipArchiveOutputStream0.getEncoding());
+
+
+[MASTER] 12:00:47.336 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class java.lang.SecurityException: Security manager blocks ("java.io.FilePermission" "/tmp/=61weUlvCvqvj0=61weUlvCvqvj" "write")
+java.lang.Thread.getStackTrace(Thread.java:1559)
+org.evosuite.runtime.sandbox.MSecurityManager.checkPermission(MSecurityManager.java:433)
+java.lang.SecurityManager.checkWrite(SecurityManager.java:979)
+sun.nio.fs.UnixChannelFactory.open(UnixChannelFactory.java:247)
+sun.nio.fs.UnixChannelFactory.newFileChannel(UnixChannelFactory.java:136)
+sun.nio.fs.UnixChannelFactory.newFileChannel(UnixChannelFactory.java:148)
+sun.nio.fs.UnixFileSystemProvider.newByteChannel(UnixFileSystemProvider.java:212)
+java.nio.file.Files.newByteChannel(Files.java:361)
+org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream.<init>(ZipArchiveOutputStream.java:292)
+org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream_144_tmp__ESTest.test0(ZipArchiveOutputStream_144_tmp__ESTest.java:23)
+sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+java.lang.reflect.Method.invoke(Method.java:498)
+org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)
+org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56)
+org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+org.junit.internal.runners.statements.FailOnTimeout$CallableStatement.call(FailOnTimeout.java:288)
+org.junit.internal.runners.statements.FailOnTimeout$CallableStatement.call(FailOnTimeout.java:282)
+java.util.concurrent.FutureTask.run(FutureTask.java:266)
+java.lang.Thread.run(Thread.java:748)
+
+[MASTER] 12:00:47.337 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ File file0 = MockFile.createTempFile("=61weUlvCvqvj", "=61weUlvCvqvj");
+ZipArchiveOutputStream zipArchiveOutputStream0 = new ZipArchiveOutputStream(file0);
+ZipArchiveOutputStream zipArchiveOutputStream1 = new ZipArchiveOutputStream(zipArchiveOutputStream0);
+boolean boolean0 = zipArchiveOutputStream1.isSeekable();
+assertEquals("UTF8", zipArchiveOutputStream1.getEncoding());
+assertFalse(boolean0);
+assertEquals("UTF8", zipArchiveOutputStream0.getEncoding());
+
+
+[MASTER] 12:00:57.049 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class java.lang.SecurityException: Security manager blocks ("java.io.FilePermission" "/experiment/n+oF" "write")
+java.lang.Thread.getStackTrace(Thread.java:1559)
+org.evosuite.runtime.sandbox.MSecurityManager.checkPermission(MSecurityManager.java:433)
+java.lang.SecurityManager.checkWrite(SecurityManager.java:979)
+sun.nio.fs.UnixChannelFactory.open(UnixChannelFactory.java:247)
+sun.nio.fs.UnixChannelFactory.newFileChannel(UnixChannelFactory.java:136)
+sun.nio.fs.UnixChannelFactory.newFileChannel(UnixChannelFactory.java:148)
+sun.nio.fs.UnixFileSystemProvider.newByteChannel(UnixFileSystemProvider.java:212)
+java.nio.file.Files.newByteChannel(Files.java:361)
+org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream.<init>(ZipArchiveOutputStream.java:292)
+org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream_148_tmp__ESTest.test0(ZipArchiveOutputStream_148_tmp__ESTest.java:22)
+sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+java.lang.reflect.Method.invoke(Method.java:498)
+org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)
+org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56)
+org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+org.junit.internal.runners.statements.FailOnTimeout$CallableStatement.call(FailOnTimeout.java:288)
+org.junit.internal.runners.statements.FailOnTimeout$CallableStatement.call(FailOnTimeout.java:282)
+java.util.concurrent.FutureTask.run(FutureTask.java:266)
+java.lang.Thread.run(Thread.java:748)
+
+[MASTER] 12:00:57.050 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ MockFile mockFile0 = new MockFile("n+oF", "");
+ZipArchiveOutputStream zipArchiveOutputStream0 = new ZipArchiveOutputStream(mockFile0);
+zipArchiveOutputStream0.setUseLanguageEncodingFlag(false);
+assertEquals("UTF8", zipArchiveOutputStream0.getEncoding());
+
+
+[MASTER] 12:01:00.539 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class java.lang.SecurityException: Security manager blocks ("java.io.FilePermission" "/tmp/hjmZ<2,o2il1UFu,cWN0" "write")
+java.lang.Thread.getStackTrace(Thread.java:1559)
+org.evosuite.runtime.sandbox.MSecurityManager.checkPermission(MSecurityManager.java:433)
+java.lang.SecurityManager.checkWrite(SecurityManager.java:979)
+sun.nio.fs.UnixChannelFactory.open(UnixChannelFactory.java:247)
+sun.nio.fs.UnixChannelFactory.newFileChannel(UnixChannelFactory.java:136)
+sun.nio.fs.UnixChannelFactory.newFileChannel(UnixChannelFactory.java:148)
+sun.nio.fs.UnixFileSystemProvider.newByteChannel(UnixFileSystemProvider.java:212)
+java.nio.file.Files.newByteChannel(Files.java:361)
+org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream.<init>(ZipArchiveOutputStream.java:292)
+org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream_152_tmp__ESTest.test0(ZipArchiveOutputStream_152_tmp__ESTest.java:25)
+sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+java.lang.reflect.Method.invoke(Method.java:498)
+org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)
+org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56)
+org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+org.junit.internal.runners.statements.FailOnTimeout$CallableStatement.call(FailOnTimeout.java:288)
+org.junit.internal.runners.statements.FailOnTimeout$CallableStatement.call(FailOnTimeout.java:282)
+java.util.concurrent.FutureTask.run(FutureTask.java:266)
+java.lang.Thread.run(Thread.java:748)
+
+[MASTER] 12:01:00.539 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ File file0 = MockFile.createTempFile("hjmZ<2,o2il1UFu,cWN", "");
+ZipArchiveOutputStream zipArchiveOutputStream0 = new ZipArchiveOutputStream(file0);
+zipArchiveOutputStream0.close();
+zipArchiveOutputStream0.finish();
+
+[MASTER] 12:01:04.101 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class java.lang.SecurityException: Security manager blocks ("java.io.FilePermission" "/tmp/X6Ulvv#zj0org.apache.common!.compress.archilers.zipTZipArchiveOutputStream$1" "write")
+java.lang.Thread.getStackTrace(Thread.java:1559)
+org.evosuite.runtime.sandbox.MSecurityManager.checkPermission(MSecurityManager.java:433)
+java.lang.SecurityManager.checkWrite(SecurityManager.java:979)
+sun.nio.fs.UnixChannelFactory.open(UnixChannelFactory.java:247)
+sun.nio.fs.UnixChannelFactory.newFileChannel(UnixChannelFactory.java:136)
+sun.nio.fs.UnixChannelFactory.newFileChannel(UnixChannelFactory.java:148)
+sun.nio.fs.UnixFileSystemProvider.newByteChannel(UnixFileSystemProvider.java:212)
+java.nio.file.Files.newByteChannel(Files.java:361)
+org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream.<init>(ZipArchiveOutputStream.java:292)
+org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream_154_tmp__ESTest.test0(ZipArchiveOutputStream_154_tmp__ESTest.java:25)
+sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+java.lang.reflect.Method.invoke(Method.java:498)
+org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)
+org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56)
+org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+org.junit.internal.runners.statements.FailOnTimeout$CallableStatement.call(FailOnTimeout.java:288)
+org.junit.internal.runners.statements.FailOnTimeout$CallableStatement.call(FailOnTimeout.java:282)
+java.util.concurrent.FutureTask.run(FutureTask.java:266)
+java.lang.Thread.run(Thread.java:748)
+
+[MASTER] 12:01:04.101 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ File file0 = MockFile.createTempFile("X6Ulvv#zj", "org.apache.common!.compress.archilers.zipTZipArchiveOutputStream$1");
+ZipArchiveOutputStream zipArchiveOutputStream0 = new ZipArchiveOutputStream(file0);
+JarArchiveEntry jarArchiveEntry0 = new JarArchiveEntry("org.apache.common!.compress.archilers.zipTZipArchiveOutputStream$1");
+zipArchiveOutputStream0.putArchiveEntry(jarArchiveEntry0);
+byte[] byteArray0 = new byte[5];
+ByteArrayInputStream byteArrayInputStream0 = new ByteArrayInputStream(byteArray0, 1073741824, 2940);
+zipArchiveOutputStream0.addRawArchiveEntry(jarArchiveEntry0, byteArrayInputStream0);
+zipArchiveOutputStream0.addRawArchiveEntry(jarArchiveEntry0, byteArrayInputStream0);
+assertEquals(8, jarArchiveEntry0.getMethod());
+assertEquals(2L, jarArchiveEntry0.getCompressedSize());
+
+
+[MASTER] 12:01:07.336 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class java.lang.SecurityException: Security manager blocks ("java.io.FilePermission" "SF,9?[Z|f0zk+0_%Bf" "write")
+java.lang.Thread.getStackTrace(Thread.java:1559)
+org.evosuite.runtime.sandbox.MSecurityManager.checkPermission(MSecurityManager.java:433)
+java.lang.SecurityManager.checkWrite(SecurityManager.java:979)
+sun.nio.fs.UnixChannelFactory.open(UnixChannelFactory.java:247)
+sun.nio.fs.UnixChannelFactory.newFileChannel(UnixChannelFactory.java:136)
+sun.nio.fs.UnixChannelFactory.newFileChannel(UnixChannelFactory.java:148)
+sun.nio.fs.UnixFileSystemProvider.newByteChannel(UnixFileSystemProvider.java:212)
+java.nio.file.Files.newByteChannel(Files.java:361)
+org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream.<init>(ZipArchiveOutputStream.java:292)
+org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream_156_tmp__ESTest.test0(ZipArchiveOutputStream_156_tmp__ESTest.java:25)
+sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+java.lang.reflect.Method.invoke(Method.java:498)
+org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)
+org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56)
+org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+org.junit.internal.runners.statements.FailOnTimeout$CallableStatement.call(FailOnTimeout.java:288)
+org.junit.internal.runners.statements.FailOnTimeout$CallableStatement.call(FailOnTimeout.java:282)
+java.util.concurrent.FutureTask.run(FutureTask.java:266)
+java.lang.Thread.run(Thread.java:748)
+
+[MASTER] 12:01:07.336 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ MockFile mockFile0 = new MockFile("SF,9?[Z|f0zk+0_%Bf");
+ZipArchiveOutputStream zipArchiveOutputStream0 = new ZipArchiveOutputStream(mockFile0);
+JarArchiveEntry jarArchiveEntry0 = new JarArchiveEntry("SF,9?[Z|f0zk+0_%Bf");
+zipArchiveOutputStream0.putArchiveEntry(jarArchiveEntry0);
+zipArchiveOutputStream0.putArchiveEntry(jarArchiveEntry0);
+jarArchiveEntry0.setCompressedSize((-1));
+byte[] byteArray0 = new byte[3];
+ByteArrayInputStream byteArrayInputStream0 = new ByteArrayInputStream(byteArray0, (-2841), 2147268942);
+zipArchiveOutputStream0.addRawArchiveEntry(jarArchiveEntry0, byteArrayInputStream0);
+
+[MASTER] 12:01:27.198 [logback-1] WARN  TestSuiteGenerator - JUnit checking timed out
+* Permissions denied during test execution: 
+  - java.io.FilePermission: 
+         write /tmp/X6U,lvxv#zvj0!: 1
+         write /experiment/n+oF: 1
+         write /tmp/)hq`wh+M^;7^U%Hz"0)hq`wh+M^;7^U%Hz": 2
+         and other 10 cases of action/name for this exception class
+* Writing tests to file
+* Writing JUnit test case 'ZipArchiveOutputStream_ESTest' to results/Compress-43/org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream/BBC-F0-opt-60/tests/2
+* Done!
+
 * Computation finished
-[MASTER] 21:48:00.507 [logback-2] ERROR ClientNodeImpl - Error when generating tests for: org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream with seed 2935299964. Configuration id : BBC-F0-opt-60
-java.lang.NullPointerException: null
-	at org.evosuite.testcase.secondaryobjectives.basicblock.BasicBlockCoverage.compareChromosomes(BasicBlockCoverage.java:59)
-	at org.evosuite.testcase.TestChromosome.compareSecondaryObjective(TestChromosome.java:680)
-	at org.evosuite.testcase.TestChromosome.compareSecondaryObjective(TestChromosome.java:68)
-	at org.evosuite.ga.comparators.PreferenceSortingComparator.compare(PreferenceSortingComparator.java:74)
-	at org.evosuite.ga.operators.ranking.RankBasedPreferenceSorting.getZeroFront(RankBasedPreferenceSorting.java:111)
-	at org.evosuite.ga.operators.ranking.RankBasedPreferenceSorting.computeRankingAssignment(RankBasedPreferenceSorting.java:65)
-	at org.evosuite.ga.metaheuristics.mosa.DynaMOSA.evolve(DynaMOSA.java:83)
-	at org.evosuite.ga.metaheuristics.mosa.DynaMOSA.generateSolution(DynaMOSA.java:174)
-	at org.evosuite.ga.metaheuristics.TestSuiteAdapter.generateSolution(TestSuiteAdapter.java:114)
-	at org.evosuite.strategy.MOSuiteStrategy.generateTests(MOSuiteStrategy.java:123)
-	at org.evosuite.TestSuiteGenerator.generateTests(TestSuiteGenerator.java:630)
-	at org.evosuite.TestSuiteGenerator.generateTestSuite(TestSuiteGenerator.java:205)
-	at org.evosuite.rmi.service.ClientNodeImpl.lambda$startNewSearch$0(ClientNodeImpl.java:150)
-	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
-	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
-	at java.lang.Thread.run(Thread.java:748)
-[MASTER] 21:48:00.646 [main] ERROR SearchStatistics - No obtained value for output variable: LineCoverage
-[MASTER] 21:48:02.649 [main] ERROR SearchStatistics - No obtained value for output variable: LineCoverage
-[MASTER] 21:48:03.649 [main] ERROR SearchStatistics - No obtained value for output variable: LineCoverage
-[MASTER] 21:48:04.650 [main] ERROR SearchStatistics - No obtained value for output variable: LineCoverage
-[MASTER] 21:48:05.651 [main] ERROR SearchStatistics - No obtained value for output variable: LineCoverage
-[MASTER] 21:48:06.652 [main] ERROR SearchStatistics - No obtained value for output variable: LineCoverage
-[MASTER] 21:48:06.652 [main] ERROR SearchStatistics - Not going to write down statistics data, as some are missing
-[MASTER] 21:48:06.753 [main] ERROR TestGeneration - failed to write statistics data

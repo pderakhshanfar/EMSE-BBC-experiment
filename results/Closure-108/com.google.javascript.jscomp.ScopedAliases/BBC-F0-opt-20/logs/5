@@ -2,7 +2,7 @@
 * Configuration: BBC-F0-opt-20
 * Going to generate test cases for class: com.google.javascript.jscomp.ScopedAliases
 * Starting Client-0
-* Connecting to master process on port 11319
+* Connecting to master process on port 3784
 * Analyzing classpath: 
   - subjects/buggy-versions/Closure-108/build/classes
   - subjects/buggy-versions/Closure-108/lib/args4j.jar
@@ -24,38 +24,76 @@
   - No-Exception Top-Level Method Coverage
   - Context Branch Coverage
 * Total number of test goals for DYNAMOSA: 930
-* Using seed 733127184
+* Using seed 2137981719
 * Starting evolution
 bbc usage percentage is: 20%
 * Initial Number of Goals in DynaMOSA = 250 / 930
-[MASTER] 21:20:58.163 [logback-2] ERROR TestCluster - Failed to check cache for java.util.Iterator<E> : Type points to itself
-[MASTER] 21:21:20.636 [logback-2] ERROR TestCluster - Failed to check cache for java.util.Enumeration<E> : Type points to itself
-[MASTER] 21:21:42.076 [logback-2] ERROR ClientNodeImpl - Error when generating tests for: com.google.javascript.jscomp.ScopedAliases with seed 733127184. Configuration id : BBC-F0-opt-20
-java.lang.NullPointerException: null
-	at org.evosuite.testcase.secondaryobjectives.basicblock.BasicBlockCoverage.compareChromosomes(BasicBlockCoverage.java:59)
-	at org.evosuite.testcase.TestChromosome.compareSecondaryObjective(TestChromosome.java:680)
-	at org.evosuite.testcase.TestChromosome.compareSecondaryObjective(TestChromosome.java:68)
-	at org.evosuite.ga.comparators.PreferenceSortingComparator.compare(PreferenceSortingComparator.java:74)
-	at org.evosuite.ga.operators.ranking.RankBasedPreferenceSorting.getZeroFront(RankBasedPreferenceSorting.java:111)
-	at org.evosuite.ga.operators.ranking.RankBasedPreferenceSorting.computeRankingAssignment(RankBasedPreferenceSorting.java:65)
-	at org.evosuite.ga.metaheuristics.mosa.DynaMOSA.evolve(DynaMOSA.java:83)
-	at org.evosuite.ga.metaheuristics.mosa.DynaMOSA.generateSolution(DynaMOSA.java:174)
-	at org.evosuite.ga.metaheuristics.TestSuiteAdapter.generateSolution(TestSuiteAdapter.java:114)
-	at org.evosuite.strategy.MOSuiteStrategy.generateTests(MOSuiteStrategy.java:123)
-	at org.evosuite.TestSuiteGenerator.generateTests(TestSuiteGenerator.java:630)
-	at org.evosuite.TestSuiteGenerator.generateTestSuite(TestSuiteGenerator.java:205)
-	at org.evosuite.rmi.service.ClientNodeImpl.lambda$startNewSearch$0(ClientNodeImpl.java:150)
-	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
-	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
-	at java.lang.Thread.run(Thread.java:748)
+[MASTER] 08:33:30.796 [logback-2] ERROR TestCluster - Failed to check cache for java.util.Iterator<E> : Type points to itself
+[MASTER] 08:34:23.542 [logback-2] ERROR TestCluster - Failed to check cache for java.util.Comparator<T> : Type points to itself
+[MASTER] 08:35:41.678 [logback-2] ERROR TestCluster - Failed to check cache for java.util.Enumeration<E> : Type points to itself
+* Search finished after 602s and 806 generations, 341914 statements, best individual has fitness: 783.0
+* Minimizing test suite
+* Going to analyze the coverage criteria
+* Coverage analysis for criterion LINE
+* Coverage of criterion LINE: 19%
+* Total number of goals: 235
+* Number of covered goals: 44
+* Coverage analysis for criterion BRANCH
+* Coverage of criterion BRANCH: 18%
+* Total number of goals: 169
+* Number of covered goals: 30
+* Coverage analysis for criterion EXCEPTION
+* Coverage of criterion EXCEPTION: 86%
+* Total number of goals: 7
+* Number of covered goals: 6
+* Coverage analysis for criterion WEAKMUTATION
+* Coverage of criterion WEAKMUTATION: 13%
+* Total number of goals: 329
+* Number of covered goals: 44
+* Coverage analysis for criterion OUTPUT
+* Coverage of criterion OUTPUT: 100% (no goals)
+* Coverage analysis for criterion METHOD
+* Coverage of criterion METHOD: 21%
+* Total number of goals: 14
+* Number of covered goals: 3
+* Coverage analysis for criterion METHODNOEXCEPTION
+* Coverage of criterion METHODNOEXCEPTION: 21%
+* Total number of goals: 14
+* Number of covered goals: 3
+* Coverage analysis for criterion CBRANCH
+* Coverage of criterion CBRANCH: 18%
+* Total number of goals: 169
+* Number of covered goals: 30
+* Generated 9 tests with total length 63
+* Resulting test suite's coverage: 33% (average coverage for all fitness functions)
+* Generating assertions
+* Resulting test suite's mutation score: 9%
+* Compiling and checking tests
+[MASTER] 08:38:35.917 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 08:38:41.068 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class java.lang.StackOverflowError: null
+[MASTER] 08:38:41.070 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ Compiler compiler0 = new Compiler();
+Node node0 = compiler0.parseTestCode("The local variable {0} is in a goog.scope and is not an alias.");
+PreprocessorSymbolTable preprocessorSymbolTable0 = new PreprocessorSymbolTable(node0);
+Node node1 = new Node(157, node0, node0, node0);
+node0.addChildrenToFront(node1);
+CompilerOptions.AliasTransformationHandler compilerOptions_AliasTransformationHandler0 = CompilerOptions.NULL_ALIAS_TRANSFORMATION_HANDLER;
+ScopedAliases scopedAliases0 = new ScopedAliases(compiler0, preprocessorSymbolTable0, compilerOptions_AliasTransformationHandler0);
+scopedAliases0.hotSwapScript(node0, node1);
+
+[MASTER] 08:38:51.662 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test5 -> class java.lang.StackOverflowError: null
+[MASTER] 08:38:51.663 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ Compiler compiler0 = new Compiler();
+Node node0 = compiler0.parseTestCode("The local variable {0} is in a goog.scope and is not an alias.");
+PreprocessorSymbolTable preprocessorSymbolTable0 = new PreprocessorSymbolTable(node0);
+Node node1 = new Node(157, node0, node0, node0);
+node0.addChildrenToFront(node1);
+CompilerOptions.AliasTransformationHandler compilerOptions_AliasTransformationHandler0 = CompilerOptions.NULL_ALIAS_TRANSFORMATION_HANDLER;
+ScopedAliases scopedAliases0 = new ScopedAliases(compiler0, preprocessorSymbolTable0, compilerOptions_AliasTransformationHandler0);
+scopedAliases0.process(node0, node0);
+
+* Writing tests to file
+* Writing JUnit test case 'ScopedAliases_ESTest' to results/Closure-108/com.google.javascript.jscomp.ScopedAliases/BBC-F0-opt-20/tests/5
+* Done!
+
 * Computation finished
-[MASTER] 21:21:42.188 [main] ERROR SearchStatistics - No obtained value for output variable: LineCoverage
-[MASTER] 21:21:44.191 [main] ERROR SearchStatistics - No obtained value for output variable: LineCoverage
-[MASTER] 21:21:45.192 [main] ERROR SearchStatistics - No obtained value for output variable: LineCoverage
-[MASTER] 21:21:46.192 [main] ERROR SearchStatistics - No obtained value for output variable: LineCoverage
-[MASTER] 21:21:47.193 [main] ERROR SearchStatistics - No obtained value for output variable: LineCoverage
-[MASTER] 21:21:48.193 [main] ERROR SearchStatistics - No obtained value for output variable: LineCoverage
-[MASTER] 21:21:48.193 [main] ERROR SearchStatistics - Not going to write down statistics data, as some are missing
-[MASTER] 21:21:48.294 [main] ERROR TestGeneration - failed to write statistics data

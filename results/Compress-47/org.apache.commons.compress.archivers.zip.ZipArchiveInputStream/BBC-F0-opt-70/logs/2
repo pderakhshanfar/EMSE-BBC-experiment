@@ -2,7 +2,7 @@
 * Configuration: BBC-F0-opt-70
 * Going to generate test cases for class: org.apache.commons.compress.archivers.zip.ZipArchiveInputStream
 * Starting Client-0
-* Connecting to master process on port 16327
+* Connecting to master process on port 12943
 * Analyzing classpath: 
   - subjects/buggy-versions/Compress-47/target/classes
   - defects4j/framework/projects/Compress/lib/org/objenesis/objenesis/2.6/objenesis-2.6.jar
@@ -21,37 +21,58 @@
   - No-Exception Top-Level Method Coverage
   - Context Branch Coverage
 * Total number of test goals for DYNAMOSA: 1841
-* Using seed 3688805943
+* Using seed 3924869649
 * Starting evolution
 bbc usage percentage is: 70%
 * Initial Number of Goals in DynaMOSA = 422 / 1841
-[MASTER] 21:43:18.067 [logback-2] ERROR TestCluster - Failed to check cache for java.util.Enumeration<E> : Type points to itself
-[MASTER] 21:44:18.667 [logback-2] ERROR ClientNodeImpl - Error when generating tests for: org.apache.commons.compress.archivers.zip.ZipArchiveInputStream with seed 3688805943. Configuration id : BBC-F0-opt-70
-java.lang.NullPointerException: null
-	at org.evosuite.testcase.secondaryobjectives.basicblock.BasicBlockCoverage.compareChromosomes(BasicBlockCoverage.java:59)
-	at org.evosuite.testcase.TestChromosome.compareSecondaryObjective(TestChromosome.java:680)
-	at org.evosuite.testcase.TestChromosome.compareSecondaryObjective(TestChromosome.java:68)
-	at org.evosuite.ga.comparators.PreferenceSortingComparator.compare(PreferenceSortingComparator.java:74)
-	at org.evosuite.ga.operators.ranking.RankBasedPreferenceSorting.getZeroFront(RankBasedPreferenceSorting.java:111)
-	at org.evosuite.ga.operators.ranking.RankBasedPreferenceSorting.computeRankingAssignment(RankBasedPreferenceSorting.java:65)
-	at org.evosuite.ga.metaheuristics.mosa.DynaMOSA.evolve(DynaMOSA.java:83)
-	at org.evosuite.ga.metaheuristics.mosa.DynaMOSA.generateSolution(DynaMOSA.java:174)
-	at org.evosuite.ga.metaheuristics.TestSuiteAdapter.generateSolution(TestSuiteAdapter.java:114)
-	at org.evosuite.strategy.MOSuiteStrategy.generateTests(MOSuiteStrategy.java:123)
-	at org.evosuite.TestSuiteGenerator.generateTests(TestSuiteGenerator.java:630)
-	at org.evosuite.TestSuiteGenerator.generateTestSuite(TestSuiteGenerator.java:205)
-	at org.evosuite.rmi.service.ClientNodeImpl.lambda$startNewSearch$0(ClientNodeImpl.java:150)
-	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
-	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
-	at java.lang.Thread.run(Thread.java:748)
+[MASTER] 11:26:41.337 [logback-2] ERROR TestCluster - Failed to check cache for java.util.Enumeration<E> : Type points to itself
+[MASTER] 11:29:10.704 [logback-1] WARN  TestChromosome - Functional mock problem: org.evosuite.ga.ConstructionFailedException: Failed to add constructor for java.io.PushbackInputStream due to org.evosuite.ga.ConstructionFailedException: Failed to add constructor for java.io.PushbackInputStream due to org.evosuite.ga.ConstructionFailedException: Failed to add constructor for org.apache.commons.compress.archivers.zip.ZipArchiveInputStream due to org.evosuite.ga.ConstructionFailedException: Failed to add constructor for org.apache.commons.compress.archivers.zip.ZipArchiveInputStream due to org.evosuite.ga.ConstructionFailedException: Failed to add constructor for java.io.BufferedInputStream due to org.evosuite.ga.ConstructionFailedException: Max recursion depth reached
+[MASTER] 11:32:04.085 [logback-1] WARN  TestChromosome - Functional mock problem: org.evosuite.ga.ConstructionFailedException: Failed to add constructor for java.io.PushbackInputStream due to org.evosuite.ga.ConstructionFailedException: Failed to add constructor for org.apache.commons.compress.archivers.zip.ZipArchiveInputStream due to org.evosuite.ga.ConstructionFailedException: Failed to add constructor for java.io.BufferedInputStream due to org.evosuite.ga.ConstructionFailedException: Failed to add constructor for java.io.DataInputStream due to org.evosuite.ga.ConstructionFailedException: Failed to add constructor for org.apache.commons.compress.archivers.zip.ZipArchiveInputStream due to org.evosuite.ga.ConstructionFailedException: Max recursion depth reached
+[MASTER] 11:36:32.825 [logback-1] WARN  TestChromosome - Functional mock problem: org.evosuite.ga.ConstructionFailedException: Failed to add constructor for java.io.PushbackInputStream due to org.evosuite.ga.ConstructionFailedException: Failed to add constructor for java.io.ObjectInputStream due to org.evosuite.ga.ConstructionFailedException: Failed to add constructor for java.io.BufferedInputStream due to org.evosuite.ga.ConstructionFailedException: Failed to add constructor for org.evosuite.runtime.mock.java.io.MockFileInputStream due to org.evosuite.ga.ConstructionFailedException: Failed to add constructor for org.evosuite.runtime.mock.java.io.MockFile due to org.evosuite.ga.ConstructionFailedException: Max recursion depth reached
+* Search finished after 622s and 188 generations, 70954 statements, best individual has fitness: 1567.0
+* Minimizing test suite
+* Going to analyze the coverage criteria
+* Coverage analysis for criterion LINE
+* Coverage of criterion LINE: 20%
+* Total number of goals: 405
+* Number of covered goals: 81
+* Coverage analysis for criterion BRANCH
+* Coverage of criterion BRANCH: 14%
+* Total number of goals: 287
+* Number of covered goals: 41
+* Coverage analysis for criterion EXCEPTION
+* Coverage of criterion EXCEPTION: 100%
+* Total number of goals: 17
+* Number of covered goals: 17
+* Coverage analysis for criterion WEAKMUTATION
+* Coverage of criterion WEAKMUTATION: 12%
+* Total number of goals: 773
+* Number of covered goals: 96
+* Coverage analysis for criterion OUTPUT
+* Coverage of criterion OUTPUT: 11%
+* Total number of goals: 57
+* Number of covered goals: 6
+* Coverage analysis for criterion METHOD
+* Coverage of criterion METHOD: 69%
+* Total number of goals: 16
+* Number of covered goals: 11
+* Coverage analysis for criterion METHODNOEXCEPTION
+* Coverage of criterion METHODNOEXCEPTION: 69%
+* Total number of goals: 16
+* Number of covered goals: 11
+* Coverage analysis for criterion CBRANCH
+* Coverage of criterion CBRANCH: 14%
+* Total number of goals: 287
+* Number of covered goals: 41
+* Generated 31 tests with total length 102
+* Resulting test suite's coverage: 33% (average coverage for all fitness functions)
+* Generating assertions
+* Resulting test suite's mutation score: 2%
+[MASTER] 11:39:13.253 [logback-1] WARN  SimpleMutationAssertionGenerator - Reached maximum time to generate assertions, aborting assertion generation
+* Compiling and checking tests
+[MASTER] 11:39:14.009 [logback-1] WARN  TimeController - Phase ASSERTION_GENERATION lasted too long, 24 seconds more than allowed.
+* Writing tests to file
+* Writing JUnit test case 'ZipArchiveInputStream_ESTest' to results/Compress-47/org.apache.commons.compress.archivers.zip.ZipArchiveInputStream/BBC-F0-opt-70/tests/2
+* Done!
+
 * Computation finished
-[MASTER] 21:44:18.809 [main] ERROR SearchStatistics - No obtained value for output variable: LineCoverage
-[MASTER] 21:44:20.812 [main] ERROR SearchStatistics - No obtained value for output variable: LineCoverage
-[MASTER] 21:44:21.813 [main] ERROR SearchStatistics - No obtained value for output variable: LineCoverage
-[MASTER] 21:44:22.813 [main] ERROR SearchStatistics - No obtained value for output variable: LineCoverage
-[MASTER] 21:44:23.814 [main] ERROR SearchStatistics - No obtained value for output variable: LineCoverage
-[MASTER] 21:44:24.814 [main] ERROR SearchStatistics - No obtained value for output variable: LineCoverage
-[MASTER] 21:44:24.815 [main] ERROR SearchStatistics - Not going to write down statistics data, as some are missing
-[MASTER] 21:44:24.915 [main] ERROR TestGeneration - failed to write statistics data

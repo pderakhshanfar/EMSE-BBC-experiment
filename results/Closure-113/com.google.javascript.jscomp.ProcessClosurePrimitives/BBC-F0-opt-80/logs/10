@@ -2,7 +2,7 @@
 * Configuration: BBC-F0-opt-80
 * Going to generate test cases for class: com.google.javascript.jscomp.ProcessClosurePrimitives
 * Starting Client-0
-* Connecting to master process on port 4258
+* Connecting to master process on port 2303
 * Analyzing classpath: 
   - subjects/buggy-versions/Closure-113/build/classes
   - subjects/buggy-versions/Closure-113/lib/args4j.jar
@@ -24,39 +24,123 @@
   - No-Exception Top-Level Method Coverage
   - Context Branch Coverage
 * Total number of test goals for DYNAMOSA: 1637
-* Using seed 1226088484
+* Using seed 4170213934
 * Starting evolution
 bbc usage percentage is: 80%
 * Initial Number of Goals in DynaMOSA = 361 / 1637
-[MASTER] 21:36:00.357 [logback-2] ERROR TestCluster - Failed to check cache for java.util.AbstractMap<K, V>.SimpleEntry<K, V> : Type points to itself
-[MASTER] 21:36:00.358 [logback-2] ERROR TestCluster - Failed to check cache for java.util.AbstractMap<K, V>.SimpleImmutableEntry<K, V> : Type points to itself
-[MASTER] 21:37:00.862 [logback-2] ERROR TestCluster - Failed to check cache for java.util.Enumeration<E> : Type points to itself
-[MASTER] 21:37:01.460 [logback-2] ERROR ClientNodeImpl - Error when generating tests for: com.google.javascript.jscomp.ProcessClosurePrimitives with seed 1226088484. Configuration id : BBC-F0-opt-80
-java.lang.NullPointerException: null
-	at org.evosuite.testcase.secondaryobjectives.basicblock.BasicBlockCoverage.compareChromosomes(BasicBlockCoverage.java:59)
-	at org.evosuite.testcase.TestChromosome.compareSecondaryObjective(TestChromosome.java:680)
-	at org.evosuite.testcase.TestChromosome.compareSecondaryObjective(TestChromosome.java:68)
-	at org.evosuite.ga.comparators.PreferenceSortingComparator.compare(PreferenceSortingComparator.java:74)
-	at org.evosuite.ga.operators.ranking.RankBasedPreferenceSorting.getZeroFront(RankBasedPreferenceSorting.java:111)
-	at org.evosuite.ga.operators.ranking.RankBasedPreferenceSorting.computeRankingAssignment(RankBasedPreferenceSorting.java:65)
-	at org.evosuite.ga.metaheuristics.mosa.DynaMOSA.evolve(DynaMOSA.java:83)
-	at org.evosuite.ga.metaheuristics.mosa.DynaMOSA.generateSolution(DynaMOSA.java:174)
-	at org.evosuite.ga.metaheuristics.TestSuiteAdapter.generateSolution(TestSuiteAdapter.java:114)
-	at org.evosuite.strategy.MOSuiteStrategy.generateTests(MOSuiteStrategy.java:123)
-	at org.evosuite.TestSuiteGenerator.generateTests(TestSuiteGenerator.java:630)
-	at org.evosuite.TestSuiteGenerator.generateTestSuite(TestSuiteGenerator.java:205)
-	at org.evosuite.rmi.service.ClientNodeImpl.lambda$startNewSearch$0(ClientNodeImpl.java:150)
-	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
-	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
-	at java.lang.Thread.run(Thread.java:748)
+[MASTER] 10:34:32.449 [logback-2] ERROR TestCluster - Failed to check cache for java.util.AbstractMap<K, V>.SimpleEntry<K, V> : Type points to itself
+[MASTER] 10:34:32.449 [logback-2] ERROR TestCluster - Failed to check cache for java.util.AbstractMap<K, V>.SimpleImmutableEntry<K, V> : Type points to itself
+[MASTER] 10:35:11.886 [logback-2] ERROR TestCluster - Failed to check cache for java.util.Iterator<E> : Type points to itself
+[MASTER] 10:35:25.710 [logback-2] ERROR TestCluster - Failed to check cache for java.util.Enumeration<E> : Type points to itself
+[MASTER] 10:37:53.607 [logback-2] ERROR TestCluster - Failed to check cache for java.util.Comparator<T> : Type points to itself
+*C2*
+*C2*
+*C2*
+*C2*
+*C2*
+*C2*
+*C2*
+*C2*
+* Search finished after 603s and 547 generations, 232215 statements, best individual has fitness: 1438.0
+* Minimizing test suite
+* Going to analyze the coverage criteria
+* Coverage analysis for criterion LINE
+* Coverage of criterion LINE: 14%
+* Total number of goals: 472
+* Number of covered goals: 67
+* Coverage analysis for criterion BRANCH
+* Coverage of criterion BRANCH: 14%
+* Total number of goals: 350
+* Number of covered goals: 49
+* Coverage analysis for criterion EXCEPTION
+* Coverage of criterion EXCEPTION: 100%
+* Total number of goals: 5
+* Number of covered goals: 5
+* Coverage analysis for criterion WEAKMUTATION
+* Coverage of criterion WEAKMUTATION: 7%
+* Total number of goals: 441
+* Number of covered goals: 30
+* Coverage analysis for criterion OUTPUT
+* Coverage of criterion OUTPUT: 33%
+* Total number of goals: 6
+* Number of covered goals: 2
+* Coverage analysis for criterion METHOD
+* Coverage of criterion METHOD: 56%
+* Total number of goals: 9
+* Number of covered goals: 5
+* Coverage analysis for criterion METHODNOEXCEPTION
+* Coverage of criterion METHODNOEXCEPTION: 44%
+* Total number of goals: 9
+* Number of covered goals: 4
+* Coverage analysis for criterion CBRANCH
+* Coverage of criterion CBRANCH: 14%
+* Total number of goals: 350
+* Number of covered goals: 48
+* Generated 14 tests with total length 86
+* Resulting test suite's coverage: 29% (average coverage for all fitness functions)
+* Generating assertions
+* Resulting test suite's mutation score: 4%
+* Compiling and checking tests
+[MASTER] 10:44:44.147 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 10:44:44.151 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class java.lang.AssertionError: Expecting exception: IllegalArgumentException
+[MASTER] 10:44:44.151 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ Compiler compiler0 = new Compiler();
+compiler0.ensureDefaultPassConfig();
+Normalize.parseAndNormalizeTestCode(compiler0, "goog.base");
+
+[MASTER] 10:44:49.490 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class java.lang.AssertionError: Expecting exception: IllegalArgumentException
+[MASTER] 10:44:49.490 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ Compiler compiler0 = new Compiler();
+compiler0.ensureDefaultPassConfig();
+CheckLevel checkLevel0 = CheckLevel.ERROR;
+Normalize.parseAndNormalizeTestCode(compiler0, "Hashi^g.sha51,2()");
+
+[MASTER] 10:44:53.967 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class java.lang.AssertionError: Expecting exception: IllegalArgumentException
+[MASTER] 10:44:53.967 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ Compiler compiler0 = new Compiler();
+CompilerOptions compilerOptions0 = new CompilerOptions();
+DefaultPassConfig defaultPassConfig0 = new DefaultPassConfig(compilerOptions0);
+ProcessClosurePrimitives processClosurePrimitives0 = new ProcessClosurePrimitives(compiler0, (PreprocessorSymbolTable) null, compilerOptions0.checkMissingReturn);
+Normalize.parseAndNormalizeTestCode(compiler0, "Hashing.sha512()");
+
+[MASTER] 10:44:55.575 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class java.lang.AssertionError: Expecting exception: IllegalArgumentException
+[MASTER] 10:44:55.575 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ Compiler compiler0 = new Compiler();
+compiler0.ensureDefaultPassConfig();
+CheckLevel checkLevel0 = CheckLevel.ERROR;
+Normalize.parseAndNormalizeTestCode(compiler0, "Hashi^g.sha51,2()");
+
+[MASTER] 10:44:57.029 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class java.lang.AssertionError: Expecting exception: IllegalArgumentException
+[MASTER] 10:44:57.030 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ Compiler compiler0 = new Compiler();
+CompilerOptions compilerOptions0 = new CompilerOptions();
+DefaultPassConfig defaultPassConfig0 = new DefaultPassConfig(compilerOptions0);
+ProcessClosurePrimitives processClosurePrimitives0 = new ProcessClosurePrimitives(compiler0, (PreprocessorSymbolTable) null, compilerOptions0.checkMissingReturn);
+Normalize.parseAndNormalizeTestCode(compiler0, "Hashing.sha512()");
+
+[MASTER] 10:45:06.439 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test11 -> class org.evosuite.runtime.mock.java.lang.MockIllegalArgumentException: Multiple entries with same key: enum=NOT_IMPLEMENTED and enum=ENUM
+[MASTER] 10:45:06.441 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ Node node0 = new Node(104, 104, 104);
+Compiler compiler0 = new Compiler();
+CompilerOptions compilerOptions0 = compiler0.newCompilerOptions();
+Node node1 = Normalize.parseAndNormalizeTestCode(compiler0, "goog.base");
+Compiler compiler1 = new Compiler();
+ProcessClosurePrimitives processClosurePrimitives0 = new ProcessClosurePrimitives(compiler1, (PreprocessorSymbolTable) null, compilerOptions0.brokenClosureRequiresLevel);
+processClosurePrimitives0.process(node0, node1);
+
+[MASTER] 10:45:06.441 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test04 -> class org.evosuite.runtime.mock.java.lang.MockIllegalArgumentException: Multiple entries with same key: author=NOT_IMPLEMENTED and author=AUTHOR
+[MASTER] 10:45:06.441 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ Compiler compiler0 = new Compiler();
+Node node0 = compiler0.parseSyntheticCode("~h.g.sh21()", "~h.g.sh21()");
+PreprocessorSymbolTable preprocessorSymbolTable0 = new PreprocessorSymbolTable(node0);
+CheckLevel checkLevel0 = CheckLevel.OFF;
+ProcessClosurePrimitives processClosurePrimitives0 = new ProcessClosurePrimitives(compiler0, preprocessorSymbolTable0, checkLevel0);
+processClosurePrimitives0.process(node0, node0);
+assertEquals(48, Node.DIRECTIVES);
+
+
+* Writing tests to file
+* Writing JUnit test case 'ProcessClosurePrimitives_ESTest' to results/Closure-113/com.google.javascript.jscomp.ProcessClosurePrimitives/BBC-F0-opt-80/tests/10
+* Done!
+
 * Computation finished
-[MASTER] 21:37:01.572 [main] ERROR SearchStatistics - No obtained value for output variable: LineCoverage
-[MASTER] 21:37:03.575 [main] ERROR SearchStatistics - No obtained value for output variable: LineCoverage
-[MASTER] 21:37:04.576 [main] ERROR SearchStatistics - No obtained value for output variable: LineCoverage
-[MASTER] 21:37:05.576 [main] ERROR SearchStatistics - No obtained value for output variable: LineCoverage
-[MASTER] 21:37:06.577 [main] ERROR SearchStatistics - No obtained value for output variable: LineCoverage
-[MASTER] 21:37:07.578 [main] ERROR SearchStatistics - No obtained value for output variable: LineCoverage
-[MASTER] 21:37:07.578 [main] ERROR SearchStatistics - Not going to write down statistics data, as some are missing
-[MASTER] 21:37:07.679 [main] ERROR TestGeneration - failed to write statistics data

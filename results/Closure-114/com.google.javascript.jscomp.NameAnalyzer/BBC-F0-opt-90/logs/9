@@ -2,7 +2,7 @@
 * Configuration: BBC-F0-opt-90
 * Going to generate test cases for class: com.google.javascript.jscomp.NameAnalyzer
 * Starting Client-0
-* Connecting to master process on port 6002
+* Connecting to master process on port 6333
 * Analyzing classpath: 
   - subjects/buggy-versions/Closure-114/build/classes
   - subjects/buggy-versions/Closure-114/lib/args4j.jar
@@ -24,40 +24,70 @@
   - No-Exception Top-Level Method Coverage
   - Context Branch Coverage
 * Total number of test goals for DYNAMOSA: 2352
-* Using seed 2090051472
+* Using seed 3788439563
 * Starting evolution
 bbc usage percentage is: 90%
 * Initial Number of Goals in DynaMOSA = 531 / 2352
-[MASTER] 21:37:49.762 [logback-2] ERROR TestCluster - Failed to check cache for java.util.AbstractMap<K, V>.SimpleEntry<K, V> : Type points to itself
-[MASTER] 21:37:49.764 [logback-2] ERROR TestCluster - Failed to check cache for java.util.AbstractMap<K, V>.SimpleImmutableEntry<K, V> : Type points to itself
-[MASTER] 21:38:23.727 [logback-2] ERROR TestCluster - Failed to check cache for java.util.Enumeration<E> : Type points to itself
-[MASTER] 21:38:29.458 [logback-2] ERROR TestCluster - Failed to check cache for java.util.Iterator<E> : Type points to itself
+[MASTER] 10:45:22.950 [logback-2] ERROR TestCluster - Failed to check cache for java.util.AbstractMap<K, V>.SimpleEntry<K, V> : Type points to itself
+[MASTER] 10:45:22.950 [logback-2] ERROR TestCluster - Failed to check cache for java.util.AbstractMap<K, V>.SimpleImmutableEntry<K, V> : Type points to itself
+[MASTER] 10:46:08.066 [logback-2] ERROR TestCluster - Failed to check cache for java.util.Iterator<E> : Type points to itself
+[MASTER] 10:46:14.759 [logback-2] ERROR TestCluster - Failed to check cache for java.util.Enumeration<E> : Type points to itself
+[MASTER] 10:46:23.323 [logback-2] ERROR TestCluster - Failed to check cache for java.lang.Comparable<T> : Type points to itself
+[MASTER] 10:50:43.170 [logback-2] ERROR TestCluster - Failed to check cache for java.util.Comparator<T> : Type points to itself
+* Search finished after 605s and 563 generations, 220548 statements, best individual has fitness: 1565.0
+* Minimizing test suite
+* Going to analyze the coverage criteria
+* Coverage analysis for criterion LINE
+* Coverage of criterion LINE: 37%
+* Total number of goals: 685
+* Number of covered goals: 253
+* Coverage analysis for criterion BRANCH
+* Coverage of criterion BRANCH: 31%
+* Total number of goals: 561
+* Number of covered goals: 175
+* Coverage analysis for criterion EXCEPTION
+* Coverage of criterion EXCEPTION: 100%
+* Total number of goals: 3
+* Number of covered goals: 3
+* Coverage analysis for criterion WEAKMUTATION
+* Coverage of criterion WEAKMUTATION: 36%
+* Total number of goals: 506
+* Number of covered goals: 182
+* Coverage analysis for criterion OUTPUT
+* Coverage of criterion OUTPUT: 33%
+* Total number of goals: 3
+* Number of covered goals: 1
+* Coverage analysis for criterion METHOD
+* Coverage of criterion METHOD: 22%
+* Total number of goals: 18
+* Number of covered goals: 4
+* Coverage analysis for criterion METHODNOEXCEPTION
+* Coverage of criterion METHODNOEXCEPTION: 22%
+* Total number of goals: 18
+* Number of covered goals: 4
+* Coverage analysis for criterion CBRANCH
+* Coverage of criterion CBRANCH: 31%
+* Total number of goals: 561
+* Number of covered goals: 175
+* Generated 22 tests with total length 122
+* Resulting test suite's coverage: 33% (average coverage for all fitness functions)
+* Generating assertions
+* Resulting test suite's mutation score: 7%
+* Compiling and checking tests
+[MASTER] 10:55:39.748 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 10:56:08.658 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class java.lang.StackOverflowError: null
+[MASTER] 10:56:08.659 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ Compiler compiler0 = new Compiler();
+NameAnalyzer nameAnalyzer0 = new NameAnalyzer(compiler0, true);
+SyntheticAst syntheticAst0 = new SyntheticAst("FmT]()F=WqvaJ0hO");
+CompilerInput compilerInput0 = new CompilerInput(syntheticAst0, false);
+Node node0 = compilerInput0.getAstRoot(compiler0);
+Node node1 = new Node(0, node0, node0);
+node0.addChildrenToFront(node1);
+nameAnalyzer0.process(node0, node0);
+
+* Writing tests to file
+* Writing JUnit test case 'NameAnalyzer_ESTest' to results/Closure-114/com.google.javascript.jscomp.NameAnalyzer/BBC-F0-opt-90/tests/9
+* Done!
+
 * Computation finished
-[MASTER] 21:38:45.268 [logback-2] ERROR ClientNodeImpl - Error when generating tests for: com.google.javascript.jscomp.NameAnalyzer with seed 2090051472. Configuration id : BBC-F0-opt-90
-java.lang.NullPointerException: null
-	at org.evosuite.testcase.secondaryobjectives.basicblock.BasicBlockCoverage.compareChromosomes(BasicBlockCoverage.java:59)
-	at org.evosuite.testcase.TestChromosome.compareSecondaryObjective(TestChromosome.java:680)
-	at org.evosuite.testcase.TestChromosome.compareSecondaryObjective(TestChromosome.java:68)
-	at org.evosuite.ga.comparators.PreferenceSortingComparator.compare(PreferenceSortingComparator.java:74)
-	at org.evosuite.ga.operators.ranking.RankBasedPreferenceSorting.getZeroFront(RankBasedPreferenceSorting.java:111)
-	at org.evosuite.ga.operators.ranking.RankBasedPreferenceSorting.computeRankingAssignment(RankBasedPreferenceSorting.java:65)
-	at org.evosuite.ga.metaheuristics.mosa.DynaMOSA.evolve(DynaMOSA.java:83)
-	at org.evosuite.ga.metaheuristics.mosa.DynaMOSA.generateSolution(DynaMOSA.java:174)
-	at org.evosuite.ga.metaheuristics.TestSuiteAdapter.generateSolution(TestSuiteAdapter.java:114)
-	at org.evosuite.strategy.MOSuiteStrategy.generateTests(MOSuiteStrategy.java:123)
-	at org.evosuite.TestSuiteGenerator.generateTests(TestSuiteGenerator.java:630)
-	at org.evosuite.TestSuiteGenerator.generateTestSuite(TestSuiteGenerator.java:205)
-	at org.evosuite.rmi.service.ClientNodeImpl.lambda$startNewSearch$0(ClientNodeImpl.java:150)
-	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
-	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
-	at java.lang.Thread.run(Thread.java:748)
-[MASTER] 21:38:45.386 [main] ERROR SearchStatistics - No obtained value for output variable: LineCoverage
-[MASTER] 21:38:47.392 [main] ERROR SearchStatistics - No obtained value for output variable: LineCoverage
-[MASTER] 21:38:48.392 [main] ERROR SearchStatistics - No obtained value for output variable: LineCoverage
-[MASTER] 21:38:49.393 [main] ERROR SearchStatistics - No obtained value for output variable: LineCoverage
-[MASTER] 21:38:50.393 [main] ERROR SearchStatistics - No obtained value for output variable: LineCoverage
-[MASTER] 21:38:51.397 [main] ERROR SearchStatistics - No obtained value for output variable: LineCoverage
-[MASTER] 21:38:51.398 [main] ERROR SearchStatistics - Not going to write down statistics data, as some are missing
-[MASTER] 21:38:51.500 [main] ERROR TestGeneration - failed to write statistics data

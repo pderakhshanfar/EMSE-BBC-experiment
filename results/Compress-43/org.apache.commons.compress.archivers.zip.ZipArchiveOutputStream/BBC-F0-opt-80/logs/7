@@ -2,7 +2,7 @@
 * Configuration: BBC-F0-opt-80
 * Going to generate test cases for class: org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream
 * Starting Client-0
-* Connecting to master process on port 2573
+* Connecting to master process on port 13362
 * Analyzing classpath: 
   - subjects/buggy-versions/Compress-43/target/classes
   - defects4j/framework/projects/Compress/lib/org/brotli/dec/0.1.2/dec-0.1.2.jar
@@ -19,36 +19,501 @@
   - No-Exception Top-Level Method Coverage
   - Context Branch Coverage
 * Total number of test goals for DYNAMOSA: 2207
-* Using seed 552232622
+* Using seed 2677183443
 * Starting evolution
 bbc usage percentage is: 80%
 * Initial Number of Goals in DynaMOSA = 864 / 2207
-[MASTER] 21:49:07.305 [logback-2] ERROR ClientNodeImpl - Error when generating tests for: org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream with seed 552232622. Configuration id : BBC-F0-opt-80
-java.lang.NullPointerException: null
-	at org.evosuite.testcase.secondaryobjectives.basicblock.BasicBlockCoverage.compareChromosomes(BasicBlockCoverage.java:59)
-	at org.evosuite.testcase.TestChromosome.compareSecondaryObjective(TestChromosome.java:680)
-	at org.evosuite.testcase.TestChromosome.compareSecondaryObjective(TestChromosome.java:68)
-	at org.evosuite.ga.comparators.PreferenceSortingComparator.compare(PreferenceSortingComparator.java:74)
-	at org.evosuite.ga.operators.ranking.RankBasedPreferenceSorting.getZeroFront(RankBasedPreferenceSorting.java:111)
-	at org.evosuite.ga.operators.ranking.RankBasedPreferenceSorting.computeRankingAssignment(RankBasedPreferenceSorting.java:65)
-	at org.evosuite.ga.metaheuristics.mosa.DynaMOSA.evolve(DynaMOSA.java:83)
-	at org.evosuite.ga.metaheuristics.mosa.DynaMOSA.generateSolution(DynaMOSA.java:174)
-	at org.evosuite.ga.metaheuristics.TestSuiteAdapter.generateSolution(TestSuiteAdapter.java:114)
-	at org.evosuite.strategy.MOSuiteStrategy.generateTests(MOSuiteStrategy.java:123)
-	at org.evosuite.TestSuiteGenerator.generateTests(TestSuiteGenerator.java:630)
-	at org.evosuite.TestSuiteGenerator.generateTestSuite(TestSuiteGenerator.java:205)
-	at org.evosuite.rmi.service.ClientNodeImpl.lambda$startNewSearch$0(ClientNodeImpl.java:150)
-	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
-	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
-	at java.lang.Thread.run(Thread.java:748)
+[MASTER] 11:52:44.055 [logback-2] ERROR TestCluster - Failed to check cache for java.util.Enumeration<E> : Type points to itself
+[MASTER] 11:53:23.086 [logback-2] ERROR TestCluster - Failed to check cache for java.util.Comparator<T> : Type points to itself
+* Search finished after 602s and 1159 generations, 473971 statements, best individual has fitness: 236.0
+* Minimizing test suite
+* Going to analyze the coverage criteria
+* Coverage analysis for criterion LINE
+* Coverage of criterion LINE: 98%
+* Total number of goals: 514
+* Number of covered goals: 502
+* Coverage analysis for criterion BRANCH
+* Coverage of criterion BRANCH: 89%
+* Total number of goals: 320
+* Number of covered goals: 285
+* Coverage analysis for criterion EXCEPTION
+* Coverage of criterion EXCEPTION: 100%
+* Total number of goals: 76
+* Number of covered goals: 76
+* Coverage analysis for criterion WEAKMUTATION
+* Coverage of criterion WEAKMUTATION: 93%
+* Total number of goals: 978
+* Number of covered goals: 906
+* Coverage analysis for criterion OUTPUT
+* Coverage of criterion OUTPUT: 73%
+* Total number of goals: 11
+* Number of covered goals: 8
+* Coverage analysis for criterion METHOD
+* Coverage of criterion METHOD: 100%
+* Total number of goals: 32
+* Number of covered goals: 32
+* Coverage analysis for criterion METHODNOEXCEPTION
+* Coverage of criterion METHODNOEXCEPTION: 100%
+* Total number of goals: 32
+* Number of covered goals: 32
+* Coverage analysis for criterion CBRANCH
+* Coverage of criterion CBRANCH: 84%
+* Total number of goals: 320
+* Number of covered goals: 268
+* Generated 141 tests with total length 747
+* Resulting test suite's coverage: 86% (average coverage for all fitness functions)
+* Generating assertions
+[MASTER] 12:03:40.092 [logback-1] WARN  SimpleMutationAssertionGenerator - Assertion minimization is taking too long (0.6705166666666666% of time used, but only 45/141 tests minimized), falling back to using all assertions
+* Resulting test suite's mutation score: 20%
+* Compiling and checking tests
+[MASTER] 12:04:00.459 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 12:04:02.525 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class java.lang.SecurityException: Security manager blocks ("java.io.FilePermission" "/experiment/!D/!D" "write")
+java.lang.Thread.getStackTrace(Thread.java:1559)
+org.evosuite.runtime.sandbox.MSecurityManager.checkPermission(MSecurityManager.java:433)
+java.lang.SecurityManager.checkWrite(SecurityManager.java:979)
+sun.nio.fs.UnixChannelFactory.open(UnixChannelFactory.java:247)
+sun.nio.fs.UnixChannelFactory.newFileChannel(UnixChannelFactory.java:136)
+sun.nio.fs.UnixChannelFactory.newFileChannel(UnixChannelFactory.java:148)
+sun.nio.fs.UnixFileSystemProvider.newByteChannel(UnixFileSystemProvider.java:212)
+java.nio.file.Files.newByteChannel(Files.java:361)
+org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream.<init>(ZipArchiveOutputStream.java:292)
+org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream_148_tmp__ESTest.test0(ZipArchiveOutputStream_148_tmp__ESTest.java:23)
+sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+java.lang.reflect.Method.invoke(Method.java:498)
+org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)
+org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56)
+org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+org.junit.internal.runners.statements.FailOnTimeout$CallableStatement.call(FailOnTimeout.java:288)
+org.junit.internal.runners.statements.FailOnTimeout$CallableStatement.call(FailOnTimeout.java:282)
+java.util.concurrent.FutureTask.run(FutureTask.java:266)
+java.lang.Thread.run(Thread.java:748)
+
+[MASTER] 12:04:02.526 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ MockFile mockFile0 = new MockFile("!D", "!D");
+ZipArchiveOutputStream zipArchiveOutputStream0 = new ZipArchiveOutputStream(mockFile0);
+zipArchiveOutputStream0.writeOut((byte[]) null, 8804, 4287);
+
+[MASTER] 12:04:18.739 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class java.lang.SecurityException: Security manager blocks ("java.io.FilePermission" "/experiment/gJj.gw/gJj.gw" "write")
+java.lang.Thread.getStackTrace(Thread.java:1559)
+org.evosuite.runtime.sandbox.MSecurityManager.checkPermission(MSecurityManager.java:433)
+java.lang.SecurityManager.checkWrite(SecurityManager.java:979)
+sun.nio.fs.UnixChannelFactory.open(UnixChannelFactory.java:247)
+sun.nio.fs.UnixChannelFactory.newFileChannel(UnixChannelFactory.java:136)
+sun.nio.fs.UnixChannelFactory.newFileChannel(UnixChannelFactory.java:148)
+sun.nio.fs.UnixFileSystemProvider.newByteChannel(UnixFileSystemProvider.java:212)
+java.nio.file.Files.newByteChannel(Files.java:361)
+org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream.<init>(ZipArchiveOutputStream.java:292)
+org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream_180_tmp__ESTest.test0(ZipArchiveOutputStream_180_tmp__ESTest.java:23)
+sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+java.lang.reflect.Method.invoke(Method.java:498)
+org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)
+org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56)
+org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+org.junit.internal.runners.statements.FailOnTimeout$CallableStatement.call(FailOnTimeout.java:288)
+org.junit.internal.runners.statements.FailOnTimeout$CallableStatement.call(FailOnTimeout.java:282)
+java.util.concurrent.FutureTask.run(FutureTask.java:266)
+java.lang.Thread.run(Thread.java:748)
+
+[MASTER] 12:04:18.740 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ MockFile mockFile0 = new MockFile("gJj.gw", "gJj.gw");
+ZipArchiveOutputStream zipArchiveOutputStream0 = new ZipArchiveOutputStream(mockFile0);
+TarArchiveEntry tarArchiveEntry0 = new TarArchiveEntry(" T ");
+boolean boolean0 = zipArchiveOutputStream0.canWriteEntryData(tarArchiveEntry0);
+assertEquals("UTF8", zipArchiveOutputStream0.getEncoding());
+assertFalse(boolean0);
+
+
+[MASTER] 12:04:29.087 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class java.lang.SecurityException: Security manager blocks ("java.lang.RuntimePermission" "writeFileDescriptor")
+java.lang.Thread.getStackTrace(Thread.java:1559)
+org.evosuite.runtime.sandbox.MSecurityManager.checkPermission(MSecurityManager.java:433)
+java.lang.SecurityManager.checkWrite(SecurityManager.java:954)
+java.io.FileOutputStream.<init>(FileOutputStream.java:245)
+org.evosuite.runtime.mock.java.io.MockFileOutputStream.<init>(MockFileOutputStream.java:114)
+org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream_200_tmp__ESTest.test0(ZipArchiveOutputStream_200_tmp__ESTest.java:30)
+sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+java.lang.reflect.Method.invoke(Method.java:498)
+org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)
+org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56)
+org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+org.junit.internal.runners.statements.FailOnTimeout$CallableStatement.call(FailOnTimeout.java:288)
+org.junit.internal.runners.statements.FailOnTimeout$CallableStatement.call(FailOnTimeout.java:282)
+java.util.concurrent.FutureTask.run(FutureTask.java:266)
+java.lang.Thread.run(Thread.java:748)
+
+[MASTER] 12:04:29.090 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ FileDescriptor fileDescriptor0 = new FileDescriptor();
+assertNotNull(fileDescriptor0);
+assertFalse(fileDescriptor0.valid());
+
+MockFileOutputStream mockFileOutputStream0 = new MockFileOutputStream(fileDescriptor0);
+assertNotNull(mockFileOutputStream0);
+
+FileChannel fileChannel0 = mockFileOutputStream0.getChannel();
+assertNotNull(fileChannel0);
+assertFalse(fileDescriptor0.valid());
+assertTrue(fileChannel0.isOpen());
+assertEquals(0L, fileChannel0.position());
+
+ZipArchiveOutputStream zipArchiveOutputStream0 = new ZipArchiveOutputStream(fileChannel0);
+assertEquals(0, ZipArchiveOutputStream.STORED);
+assertEquals((-1), ZipArchiveOutputStream.DEFAULT_COMPRESSION);
+assertEquals(8, ZipArchiveOutputStream.DEFLATED);
+assertEquals(2048, ZipArchiveOutputStream.EFS_FLAG);
+assertNotNull(zipArchiveOutputStream0);
+assertFalse(fileDescriptor0.valid());
+assertTrue(fileChannel0.isOpen());
+assertEquals(0L, fileChannel0.position());
+assertEquals("UTF8", zipArchiveOutputStream0.getEncoding());
+assertEquals(0, zipArchiveOutputStream0.getCount());
+assertEquals(0L, zipArchiveOutputStream0.getBytesWritten());
+assertTrue(zipArchiveOutputStream0.isSeekable());
+
+Zip64Mode zip64Mode0 = Zip64Mode.Never;
+zipArchiveOutputStream0.setUseZip64(zip64Mode0);
+assertEquals(0, ZipArchiveOutputStream.STORED);
+assertEquals((-1), ZipArchiveOutputStream.DEFAULT_COMPRESSION);
+assertEquals(8, ZipArchiveOutputStream.DEFLATED);
+assertEquals(2048, ZipArchiveOutputStream.EFS_FLAG);
+assertFalse(fileDescriptor0.valid());
+assertTrue(fileChannel0.isOpen());
+assertEquals(0L, fileChannel0.position());
+assertEquals("UTF8", zipArchiveOutputStream0.getEncoding());
+assertEquals(0, zipArchiveOutputStream0.getCount());
+assertEquals(0L, zipArchiveOutputStream0.getBytesWritten());
+assertTrue(zipArchiveOutputStream0.isSeekable());
+
+zipArchiveOutputStream0.close();
+
+[MASTER] 12:04:33.692 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class org.junit.ComparisonFailure: expected:<[    -  ??ND    ????????  S ~k_`wH`Qp&xfE:g+                      -  ??ND    ????????  S ~k_`wH`Qp&xfE:g+                      ]????????????????   > but was:<[PK-  ??ND    ????????  S ~k_`wH`Qp&xfE:g+                  PK-  ??ND    ????????  S ~k_`wH`Qp&xfE:g+                  PK]????????????????   >
+[MASTER] 12:04:33.694 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ MockPrintStream mockPrintStream0 = new MockPrintStream("S ~k_`wH`Qp&xfE:g+");
+assertNotNull(mockPrintStream0);
+
+ZipArchiveOutputStream zipArchiveOutputStream0 = new ZipArchiveOutputStream(mockPrintStream0);
+assertEquals(0, ZipArchiveOutputStream.STORED);
+assertEquals(2048, ZipArchiveOutputStream.EFS_FLAG);
+assertEquals(8, ZipArchiveOutputStream.DEFLATED);
+assertEquals((-1), ZipArchiveOutputStream.DEFAULT_COMPRESSION);
+assertNotNull(zipArchiveOutputStream0);
+assertFalse(zipArchiveOutputStream0.isSeekable());
+assertEquals("UTF8", zipArchiveOutputStream0.getEncoding());
+assertEquals(0, zipArchiveOutputStream0.getCount());
+assertEquals(0L, zipArchiveOutputStream0.getBytesWritten());
+
+ZipArchiveEntry zipArchiveEntry0 = new ZipArchiveEntry("S ~k_`wH`Qp&xfE:g+");
+assertEquals(3, ZipArchiveEntry.PLATFORM_UNIX);
+assertEquals((-1), ZipArchiveEntry.CRC_UNKNOWN);
+assertEquals(0, ZipArchiveEntry.PLATFORM_FAT);
+assertNotNull(zipArchiveEntry0);
+assertEquals((-1), zipArchiveEntry0.getMethod());
+assertNull(zipArchiveEntry0.getComment());
+assertEquals(0, zipArchiveEntry0.getInternalAttributes());
+assertEquals((-1L), zipArchiveEntry0.getSize());
+assertEquals("S ~k_`wH`Qp&xfE:g+", zipArchiveEntry0.toString());
+assertFalse(zipArchiveEntry0.isUnixSymlink());
+assertFalse(zipArchiveEntry0.isDirectory());
+assertEquals((-1L), zipArchiveEntry0.getDataOffset());
+assertEquals((-1L), zipArchiveEntry0.getCrc());
+assertFalse(zipArchiveEntry0.isStreamContiguous());
+assertEquals(0, zipArchiveEntry0.getVersionRequired());
+assertEquals((-1L), zipArchiveEntry0.getCompressedSize());
+assertEquals(0, zipArchiveEntry0.getVersionMadeBy());
+assertEquals(0, zipArchiveEntry0.getUnixMode());
+assertEquals(0L, zipArchiveEntry0.getExternalAttributes());
+assertEquals(0, zipArchiveEntry0.getRawFlag());
+assertEquals(0, zipArchiveEntry0.getPlatform());
+assertEquals("S ~k_`wH`Qp&xfE:g+", zipArchiveEntry0.getName());
+
+zipArchiveEntry0.setSize(8589934591L);
+assertEquals(3, ZipArchiveEntry.PLATFORM_UNIX);
+assertEquals((-1), ZipArchiveEntry.CRC_UNKNOWN);
+assertEquals(0, ZipArchiveEntry.PLATFORM_FAT);
+assertEquals((-1), zipArchiveEntry0.getMethod());
+assertNull(zipArchiveEntry0.getComment());
+assertEquals(0, zipArchiveEntry0.getInternalAttributes());
+assertEquals("S ~k_`wH`Qp&xfE:g+", zipArchiveEntry0.toString());
+assertFalse(zipArchiveEntry0.isUnixSymlink());
+assertEquals(8589934591L, zipArchiveEntry0.getSize());
+assertFalse(zipArchiveEntry0.isDirectory());
+assertEquals((-1L), zipArchiveEntry0.getDataOffset());
+assertEquals((-1L), zipArchiveEntry0.getCrc());
+assertFalse(zipArchiveEntry0.isStreamContiguous());
+assertEquals(0, zipArchiveEntry0.getVersionRequired());
+assertEquals((-1L), zipArchiveEntry0.getCompressedSize());
+assertEquals(0, zipArchiveEntry0.getVersionMadeBy());
+assertEquals(0, zipArchiveEntry0.getUnixMode());
+assertEquals(0L, zipArchiveEntry0.getExternalAttributes());
+assertEquals(0, zipArchiveEntry0.getRawFlag());
+assertEquals(0, zipArchiveEntry0.getPlatform());
+assertEquals("S ~k_`wH`Qp&xfE:g+", zipArchiveEntry0.getName());
+
+zipArchiveOutputStream0.putArchiveEntry(zipArchiveEntry0);
+assertEquals(0, ZipArchiveOutputStream.STORED);
+assertEquals(2048, ZipArchiveOutputStream.EFS_FLAG);
+assertEquals(8, ZipArchiveOutputStream.DEFLATED);
+assertEquals((-1), ZipArchiveOutputStream.DEFAULT_COMPRESSION);
+assertEquals(3, ZipArchiveEntry.PLATFORM_UNIX);
+assertEquals((-1), ZipArchiveEntry.CRC_UNKNOWN);
+assertEquals(0, ZipArchiveEntry.PLATFORM_FAT);
+assertFalse(zipArchiveOutputStream0.isSeekable());
+assertEquals("UTF8", zipArchiveOutputStream0.getEncoding());
+assertEquals(0, zipArchiveOutputStream0.getCount());
+assertEquals(0L, zipArchiveOutputStream0.getBytesWritten());
+assertNull(zipArchiveEntry0.getComment());
+assertEquals(0, zipArchiveEntry0.getInternalAttributes());
+assertEquals("S ~k_`wH`Qp&xfE:g+", zipArchiveEntry0.toString());
+assertFalse(zipArchiveEntry0.isUnixSymlink());
+assertEquals(8589934591L, zipArchiveEntry0.getSize());
+assertFalse(zipArchiveEntry0.isDirectory());
+assertEquals((-1L), zipArchiveEntry0.getDataOffset());
+assertEquals(8, zipArchiveEntry0.getMethod());
+assertEquals((-1L), zipArchiveEntry0.getCrc());
+assertFalse(zipArchiveEntry0.isStreamContiguous());
+assertEquals(0, zipArchiveEntry0.getVersionRequired());
+assertEquals((-1L), zipArchiveEntry0.getCompressedSize());
+assertEquals(0, zipArchiveEntry0.getVersionMadeBy());
+assertEquals(0, zipArchiveEntry0.getUnixMode());
+assertEquals(0L, zipArchiveEntry0.getExternalAttributes());
+assertEquals(0, zipArchiveEntry0.getRawFlag());
+assertEquals(0, zipArchiveEntry0.getPlatform());
+assertEquals("S ~k_`wH`Qp&xfE:g+", zipArchiveEntry0.getName());
+
+MockFileInputStream mockFileInputStream0 = new MockFileInputStream("S ~k_`wH`Qp&xfE:g+");
+assertNotNull(mockFileInputStream0);
+
+ByteArrayOutputStream byteArrayOutputStream0 = new ByteArrayOutputStream();
+assertNotNull(byteArrayOutputStream0);
+assertEquals(0, byteArrayOutputStream0.size());
+assertEquals("", byteArrayOutputStream0.toString());
+
+ZipArchiveOutputStream zipArchiveOutputStream1 = new ZipArchiveOutputStream(byteArrayOutputStream0);
+assertEquals(8, ZipArchiveOutputStream.DEFLATED);
+assertEquals((-1), ZipArchiveOutputStream.DEFAULT_COMPRESSION);
+assertEquals(0, ZipArchiveOutputStream.STORED);
+assertEquals(2048, ZipArchiveOutputStream.EFS_FLAG);
+assertNotNull(zipArchiveOutputStream1);
+assertFalse(zipArchiveOutputStream1.equals((Object)zipArchiveOutputStream0));
+assertEquals(0, byteArrayOutputStream0.size());
+assertEquals("", byteArrayOutputStream0.toString());
+assertEquals(0, zipArchiveOutputStream1.getCount());
+assertEquals(0L, zipArchiveOutputStream1.getBytesWritten());
+assertEquals("UTF8", zipArchiveOutputStream1.getEncoding());
+assertFalse(zipArchiveOutputStream1.isSeekable());
+
+zipArchiveOutputStream1.addRawArchiveEntry(zipArchiveEntry0, mockFileInputStream0);
+assertEquals(3, ZipArchiveEntry.PLATFORM_UNIX);
+assertEquals((-1), ZipArchiveEntry.CRC_UNKNOWN);
+assertEquals(0, ZipArchiveEntry.PLATFORM_FAT);
+assertEquals(8, ZipArchiveOutputStream.DEFLATED);
+assertEquals((-1), ZipArchiveOutputStream.DEFAULT_COMPRESSION);
+assertEquals(0, ZipArchiveOutputStream.STORED);
+assertEquals(2048, ZipArchiveOutputStream.EFS_FLAG);
+assertNotSame(zipArchiveOutputStream1, zipArchiveOutputStream0);
+assertFalse(zipArchiveOutputStream1.equals((Object)zipArchiveOutputStream0));
+assertNull(zipArchiveEntry0.getComment());
+assertEquals(0, zipArchiveEntry0.getInternalAttributes());
+assertEquals("S ~k_`wH`Qp&xfE:g+", zipArchiveEntry0.toString());
+assertFalse(zipArchiveEntry0.isUnixSymlink());
+assertEquals(8589934591L, zipArchiveEntry0.getSize());
+assertFalse(zipArchiveEntry0.isDirectory());
+assertEquals((-1L), zipArchiveEntry0.getDataOffset());
+assertEquals(8, zipArchiveEntry0.getMethod());
+assertEquals((-1L), zipArchiveEntry0.getCrc());
+assertFalse(zipArchiveEntry0.isStreamContiguous());
+assertEquals(0, zipArchiveEntry0.getVersionRequired());
+assertEquals((-1L), zipArchiveEntry0.getCompressedSize());
+assertEquals(0, zipArchiveEntry0.getVersionMadeBy());
+assertEquals(0, zipArchiveEntry0.getUnixMode());
+assertEquals(0L, zipArchiveEntry0.getExternalAttributes());
+assertEquals(0, zipArchiveEntry0.getRawFlag());
+assertEquals(0, zipArchiveEntry0.getPlatform());
+assertEquals("S ~k_`wH`Qp&xfE:g+", zipArchiveEntry0.getName());
+assertEquals((-2), mockFileInputStream0.available());
+assertEquals(160, byteArrayOutputStream0.size());
+assertEquals("\u0000\u0000\u0000\u0000-\u0000\b\b\b\u0000\uFFFD\uFFFDND\u0000\u0000\u0000\u0000\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\u0012\u0000\u0014\u0000S ~k_`wH`Qp&xfE:g+\u0001\u0000\u0010\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000-\u0000\b\b\b\u0000\uFFFD\uFFFDND\u0000\u0000\u0000\u0000\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\u0012\u0000\u0014\u0000S ~k_`wH`Qp&xfE:g+\u0001\u0000\u0010\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\u0001\u0000\u0000\u0000", byteArrayOutputStream0.toString());
+assertEquals("UTF8", zipArchiveOutputStream1.getEncoding());
+assertFalse(zipArchiveOutputStream1.isSeekable());
+assertEquals(68, zipArchiveOutputStream1.getCount());
+assertEquals(68L, zipArchiveOutputStream1.getBytesWritten());
+
+
+[MASTER] 12:04:33.925 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class java.lang.SecurityException: Security manager blocks ("java.io.FilePermission" "gJj.gw" "write")
+java.lang.Thread.getStackTrace(Thread.java:1559)
+org.evosuite.runtime.sandbox.MSecurityManager.checkPermission(MSecurityManager.java:433)
+java.lang.SecurityManager.checkWrite(SecurityManager.java:979)
+sun.nio.fs.UnixChannelFactory.open(UnixChannelFactory.java:247)
+sun.nio.fs.UnixChannelFactory.newFileChannel(UnixChannelFactory.java:136)
+sun.nio.fs.UnixChannelFactory.newFileChannel(UnixChannelFactory.java:148)
+sun.nio.fs.UnixFileSystemProvider.newByteChannel(UnixFileSystemProvider.java:212)
+java.nio.file.Files.newByteChannel(Files.java:361)
+org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream.<init>(ZipArchiveOutputStream.java:292)
+org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream_205_tmp__ESTest.test0(ZipArchiveOutputStream_205_tmp__ESTest.java:26)
+sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+java.lang.reflect.Method.invoke(Method.java:498)
+org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)
+org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56)
+org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+org.junit.internal.runners.statements.FailOnTimeout$CallableStatement.call(FailOnTimeout.java:288)
+org.junit.internal.runners.statements.FailOnTimeout$CallableStatement.call(FailOnTimeout.java:282)
+java.util.concurrent.FutureTask.run(FutureTask.java:266)
+java.lang.Thread.run(Thread.java:748)
+
+[MASTER] 12:04:33.926 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ MockFile mockFile0 = new MockFile("gJj.gw");
+assertNotNull(mockFile0);
+
+ZipArchiveOutputStream zipArchiveOutputStream0 = new ZipArchiveOutputStream(mockFile0);
+assertEquals(2048, ZipArchiveOutputStream.EFS_FLAG);
+assertEquals(0, ZipArchiveOutputStream.STORED);
+assertEquals(8, ZipArchiveOutputStream.DEFLATED);
+assertEquals((-1), ZipArchiveOutputStream.DEFAULT_COMPRESSION);
+assertNotNull(zipArchiveOutputStream0);
+assertEquals("gJj.gw", mockFile0.getName());
+assertEquals(0L, mockFile0.getUsableSpace());
+assertTrue(mockFile0.exists());
+assertEquals(1392409281320L, mockFile0.lastModified());
+assertTrue(mockFile0.canRead());
+assertTrue(mockFile0.isFile());
+assertEquals("gJj.gw", mockFile0.toString());
+assertTrue(mockFile0.canExecute());
+assertEquals(0L, mockFile0.getTotalSpace());
+assertNull(mockFile0.getParent());
+assertEquals(0L, mockFile0.length());
+assertFalse(mockFile0.isHidden());
+assertEquals(0L, mockFile0.getFreeSpace());
+assertTrue(mockFile0.canWrite());
+assertFalse(mockFile0.isAbsolute());
+assertFalse(mockFile0.isDirectory());
+assertFalse(zipArchiveOutputStream0.isSeekable());
+assertEquals(0, zipArchiveOutputStream0.getCount());
+assertEquals(0L, zipArchiveOutputStream0.getBytesWritten());
+assertEquals("UTF8", zipArchiveOutputStream0.getEncoding());
+
+ZipArchiveEntry zipArchiveEntry0 = new ZipArchiveEntry();
+assertEquals((-1), ZipArchiveEntry.CRC_UNKNOWN);
+assertEquals(0, ZipArchiveEntry.PLATFORM_FAT);
+assertEquals(3, ZipArchiveEntry.PLATFORM_UNIX);
+assertNotNull(zipArchiveEntry0);
+assertEquals(0, zipArchiveEntry0.getInternalAttributes());
+assertFalse(zipArchiveEntry0.isStreamContiguous());
+assertEquals(0, zipArchiveEntry0.getPlatform());
+assertFalse(zipArchiveEntry0.isDirectory());
+assertEquals("", zipArchiveEntry0.toString());
+assertNull(zipArchiveEntry0.getComment());
+assertEquals((-1L), zipArchiveEntry0.getDataOffset());
+assertFalse(zipArchiveEntry0.isUnixSymlink());
+assertEquals(0, zipArchiveEntry0.getRawFlag());
+assertEquals(0, zipArchiveEntry0.getUnixMode());
+assertEquals((-1L), zipArchiveEntry0.getSize());
+assertEquals(0, zipArchiveEntry0.getVersionMadeBy());
+assertEquals((-1L), zipArchiveEntry0.getCrc());
+assertEquals((-1L), zipArchiveEntry0.getCompressedSize());
+assertEquals(0L, zipArchiveEntry0.getExternalAttributes());
+assertEquals(0, zipArchiveEntry0.getVersionRequired());
+assertEquals("", zipArchiveEntry0.getName());
+assertEquals((-1), zipArchiveEntry0.getMethod());
+
+zipArchiveOutputStream0.putArchiveEntry(zipArchiveEntry0);
+assertEquals(2048, ZipArchiveOutputStream.EFS_FLAG);
+assertEquals(0, ZipArchiveOutputStream.STORED);
+assertEquals(8, ZipArchiveOutputStream.DEFLATED);
+assertEquals((-1), ZipArchiveOutputStream.DEFAULT_COMPRESSION);
+assertEquals((-1), ZipArchiveEntry.CRC_UNKNOWN);
+assertEquals(0, ZipArchiveEntry.PLATFORM_FAT);
+assertEquals(3, ZipArchiveEntry.PLATFORM_UNIX);
+assertEquals("gJj.gw", mockFile0.getName());
+assertEquals(0L, mockFile0.getUsableSpace());
+assertTrue(mockFile0.exists());
+assertEquals(1392409281320L, mockFile0.lastModified());
+assertTrue(mockFile0.canRead());
+assertTrue(mockFile0.isFile());
+assertEquals("gJj.gw", mockFile0.toString());
+assertTrue(mockFile0.canExecute());
+assertEquals(0L, mockFile0.getTotalSpace());
+assertNull(mockFile0.getParent());
+assertFalse(mockFile0.isHidden());
+assertEquals(0L, mockFile0.getFreeSpace());
+assertTrue(mockFile0.canWrite());
+assertFalse(mockFile0.isAbsolute());
+assertFalse(mockFile0.isDirectory());
+assertEquals(30L, mockFile0.length());
+assertFalse(zipArchiveOutputStream0.isSeekable());
+assertEquals(0, zipArchiveOutputStream0.getCount());
+assertEquals(0L, zipArchiveOutputStream0.getBytesWritten());
+assertEquals("UTF8", zipArchiveOutputStream0.getEncoding());
+assertEquals(0, zipArchiveEntry0.getInternalAttributes());
+assertFalse(zipArchiveEntry0.isStreamContiguous());
+assertEquals(8, zipArchiveEntry0.getMethod());
+assertEquals(0, zipArchiveEntry0.getPlatform());
+assertFalse(zipArchiveEntry0.isDirectory());
+assertEquals("", zipArchiveEntry0.toString());
+assertNull(zipArchiveEntry0.getComment());
+assertEquals((-1L), zipArchiveEntry0.getDataOffset());
+assertFalse(zipArchiveEntry0.isUnixSymlink());
+assertEquals(0, zipArchiveEntry0.getRawFlag());
+assertEquals(0, zipArchiveEntry0.getUnixMode());
+assertEquals((-1L), zipArchiveEntry0.getSize());
+assertEquals(0, zipArchiveEntry0.getVersionMadeBy());
+assertEquals((-1L), zipArchiveEntry0.getCrc());
+assertEquals((-1L), zipArchiveEntry0.getCompressedSize());
+assertEquals(0L, zipArchiveEntry0.getExternalAttributes());
+assertEquals(0, zipArchiveEntry0.getVersionRequired());
+assertEquals("", zipArchiveEntry0.getName());
+
+zipArchiveOutputStream0.write((byte[]) null, (-1), 1188);
+
+[MASTER] 12:04:37.568 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class java.lang.AssertionError: Exception was not thrown in org.evosuite.runtime.mock.java.io.MockFileOutputStream but in org.evosuite.runtime.sandbox.MSecurityManager.checkPermission(MSecurityManager.java:445): java.lang.SecurityException: Security manager blocks ("java.io.FilePermission" "/" "write")
+java.lang.Thread.getStackTrace(Thread.java:1559)
+org.evosuite.runtime.sandbox.MSecurityManager.checkPermission(MSecurityManager.java:433)
+java.lang.SecurityManager.checkWrite(SecurityManager.java:979)
+sun.nio.fs.UnixChannelFactory.open(UnixChannelFactory.java:247)
+sun.nio.fs.UnixChannelFactory.newFileChannel(UnixChannelFactory.java:136)
+sun.nio.fs.UnixChannelFactory.newFileChannel(UnixChannelFactory.java:148)
+sun.nio.fs.UnixFileSystemProvider.newByteChannel(UnixFileSystemProvider.java:212)
+java.nio.file.Files.newByteChannel(Files.java:361)
+org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream.<init>(ZipArchiveOutputStream.java:292)
+org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream_207_tmp__ESTest.test0(ZipArchiveOutputStream_207_tmp__ESTest.java:28)
+sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+java.lang.reflect.Method.invoke(Method.java:498)
+org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)
+org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56)
+org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+org.junit.internal.runners.statements.FailOnTimeout$CallableStatement.call(FailOnTimeout.java:288)
+org.junit.internal.runners.statements.FailOnTimeout$CallableStatement.call(FailOnTimeout.java:282)
+java.util.concurrent.FutureTask.run(FutureTask.java:266)
+java.lang.Thread.run(Thread.java:748)
+
+[MASTER] 12:04:37.569 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ MockFile mockFile0 = new MockFile("", "");
+assertNotNull(mockFile0);
+
+ZipArchiveOutputStream zipArchiveOutputStream0 = new ZipArchiveOutputStream(mockFile0);
+
+* Permissions denied during test execution: 
+  - java.io.FilePermission: 
+         write /experiment/!D/!D: 1
+         write /experiment/gJj.gw/gJj.gw: 1
+         write /: 1
+         write gJj.gw: 1
+  - java.lang.RuntimePermission: 
+         writeFileDescriptor: 1
+* Writing tests to file
+* Writing JUnit test case 'ZipArchiveOutputStream_ESTest' to results/Compress-43/org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream/BBC-F0-opt-80/tests/7
+* Done!
+
 * Computation finished
-[MASTER] 21:49:07.434 [main] ERROR SearchStatistics - No obtained value for output variable: LineCoverage
-[MASTER] 21:49:09.436 [main] ERROR SearchStatistics - No obtained value for output variable: LineCoverage
-[MASTER] 21:49:10.437 [main] ERROR SearchStatistics - No obtained value for output variable: LineCoverage
-[MASTER] 21:49:11.437 [main] ERROR SearchStatistics - No obtained value for output variable: LineCoverage
-[MASTER] 21:49:12.437 [main] ERROR SearchStatistics - No obtained value for output variable: LineCoverage
-[MASTER] 21:49:13.438 [main] ERROR SearchStatistics - No obtained value for output variable: LineCoverage
-[MASTER] 21:49:13.438 [main] ERROR SearchStatistics - Not going to write down statistics data, as some are missing
-[MASTER] 21:49:13.539 [main] ERROR TestGeneration - failed to write statistics data

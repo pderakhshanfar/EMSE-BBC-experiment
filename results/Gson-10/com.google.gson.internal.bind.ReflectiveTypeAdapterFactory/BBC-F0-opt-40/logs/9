@@ -2,7 +2,7 @@
 * Configuration: BBC-F0-opt-40
 * Going to generate test cases for class: com.google.gson.internal.bind.ReflectiveTypeAdapterFactory
 * Starting Client-0
-* Connecting to master process on port 16158
+* Connecting to master process on port 3522
 * Analyzing classpath: 
   - subjects/buggy-versions/Gson-10/target/classes
 * Finished analyzing classpath
@@ -17,36 +17,61 @@
   - No-Exception Top-Level Method Coverage
   - Context Branch Coverage
 * Total number of test goals for DYNAMOSA: 411
-* Using seed 124166381
+* Using seed 2840780824
 * Starting evolution
 bbc usage percentage is: 40%
 * Initial Number of Goals in DynaMOSA = 123 / 411
-[MASTER] 22:13:52.389 [logback-2] ERROR ClientNodeImpl - Error when generating tests for: com.google.gson.internal.bind.ReflectiveTypeAdapterFactory with seed 124166381. Configuration id : BBC-F0-opt-40
-java.lang.NullPointerException: null
-	at org.evosuite.testcase.secondaryobjectives.basicblock.BasicBlockCoverage.compareChromosomes(BasicBlockCoverage.java:59)
-	at org.evosuite.testcase.TestChromosome.compareSecondaryObjective(TestChromosome.java:680)
-	at org.evosuite.testcase.TestChromosome.compareSecondaryObjective(TestChromosome.java:68)
-	at org.evosuite.ga.comparators.PreferenceSortingComparator.compare(PreferenceSortingComparator.java:74)
-	at org.evosuite.ga.operators.ranking.RankBasedPreferenceSorting.getZeroFront(RankBasedPreferenceSorting.java:111)
-	at org.evosuite.ga.operators.ranking.RankBasedPreferenceSorting.computeRankingAssignment(RankBasedPreferenceSorting.java:65)
-	at org.evosuite.ga.metaheuristics.mosa.DynaMOSA.evolve(DynaMOSA.java:83)
-	at org.evosuite.ga.metaheuristics.mosa.DynaMOSA.generateSolution(DynaMOSA.java:174)
-	at org.evosuite.ga.metaheuristics.TestSuiteAdapter.generateSolution(TestSuiteAdapter.java:114)
-	at org.evosuite.strategy.MOSuiteStrategy.generateTests(MOSuiteStrategy.java:123)
-	at org.evosuite.TestSuiteGenerator.generateTests(TestSuiteGenerator.java:630)
-	at org.evosuite.TestSuiteGenerator.generateTestSuite(TestSuiteGenerator.java:205)
-	at org.evosuite.rmi.service.ClientNodeImpl.lambda$startNewSearch$0(ClientNodeImpl.java:150)
-	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
-	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
-	at java.lang.Thread.run(Thread.java:748)
+* Search finished after 601s and 786 generations, 197091 statements, best individual has fitness: 152.0
+* Minimizing test suite
+* Going to analyze the coverage criteria
+* Coverage analysis for criterion LINE
+* Coverage of criterion LINE: 72%
+* Total number of goals: 114
+* Number of covered goals: 82
+* Coverage analysis for criterion BRANCH
+* Coverage of criterion BRANCH: 62%
+* Total number of goals: 64
+* Number of covered goals: 40
+* Coverage analysis for criterion EXCEPTION
+* Coverage of criterion EXCEPTION: 67%
+* Total number of goals: 3
+* Number of covered goals: 2
+* Coverage analysis for criterion WEAKMUTATION
+* Coverage of criterion WEAKMUTATION: 64%
+* Total number of goals: 149
+* Number of covered goals: 96
+* Coverage analysis for criterion OUTPUT
+* Coverage of criterion OUTPUT: 17%
+* Total number of goals: 6
+* Number of covered goals: 1
+* Coverage analysis for criterion METHOD
+* Coverage of criterion METHOD: 100%
+* Total number of goals: 7
+* Number of covered goals: 7
+* Coverage analysis for criterion METHODNOEXCEPTION
+* Coverage of criterion METHODNOEXCEPTION: 71%
+* Total number of goals: 7
+* Number of covered goals: 5
+* Coverage analysis for criterion CBRANCH
+* Coverage of criterion CBRANCH: 58%
+* Total number of goals: 64
+* Number of covered goals: 37
+* Generated 9 tests with total length 36
+* Resulting test suite's coverage: 51% (average coverage for all fitness functions)
+* Generating assertions
+* Resulting test suite's mutation score: 39%
+* Compiling and checking tests
+[MASTER] 14:38:44.488 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 14:38:44.702 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 14:38:44.894 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 14:38:45.078 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 14:38:45.245 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 14:38:45.400 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 14:38:45.585 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 14:38:45.717 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 14:38:45.853 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+* Writing tests to file
+* Writing JUnit test case 'ReflectiveTypeAdapterFactory_ESTest' to results/Gson-10/com.google.gson.internal.bind.ReflectiveTypeAdapterFactory/BBC-F0-opt-40/tests/9
+* Done!
+
 * Computation finished
-[MASTER] 22:13:52.506 [main] ERROR SearchStatistics - No obtained value for output variable: LineCoverage
-[MASTER] 22:13:54.509 [main] ERROR SearchStatistics - No obtained value for output variable: LineCoverage
-[MASTER] 22:13:55.509 [main] ERROR SearchStatistics - No obtained value for output variable: LineCoverage
-[MASTER] 22:13:56.510 [main] ERROR SearchStatistics - No obtained value for output variable: LineCoverage
-[MASTER] 22:13:57.510 [main] ERROR SearchStatistics - No obtained value for output variable: LineCoverage
-[MASTER] 22:13:58.511 [main] ERROR SearchStatistics - No obtained value for output variable: LineCoverage
-[MASTER] 22:13:58.511 [main] ERROR SearchStatistics - Not going to write down statistics data, as some are missing
-[MASTER] 22:13:58.612 [main] ERROR TestGeneration - failed to write statistics data

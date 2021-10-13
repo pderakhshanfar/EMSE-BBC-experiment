@@ -2,7 +2,7 @@
 * Configuration: BBC-F0-opt-70
 * Going to generate test cases for class: com.google.javascript.jscomp.ScopedAliases
 * Starting Client-0
-* Connecting to master process on port 15354
+* Connecting to master process on port 9154
 * Analyzing classpath: 
   - subjects/buggy-versions/Closure-110/build/classes
   - subjects/buggy-versions/Closure-110/lib/args4j.jar
@@ -24,37 +24,54 @@
   - No-Exception Top-Level Method Coverage
   - Context Branch Coverage
 * Total number of test goals for DYNAMOSA: 893
-* Using seed 2914562054
+* Using seed 2866110661
 * Starting evolution
 bbc usage percentage is: 70%
 * Initial Number of Goals in DynaMOSA = 246 / 893
-[MASTER] 21:27:28.326 [logback-2] ERROR TestCluster - Failed to check cache for java.util.Comparator<T> : Type points to itself
-[MASTER] 21:28:24.940 [logback-2] ERROR ClientNodeImpl - Error when generating tests for: com.google.javascript.jscomp.ScopedAliases with seed 2914562054. Configuration id : BBC-F0-opt-70
-java.lang.NullPointerException: null
-	at org.evosuite.testcase.secondaryobjectives.basicblock.BasicBlockCoverage.compareChromosomes(BasicBlockCoverage.java:59)
-	at org.evosuite.testcase.TestChromosome.compareSecondaryObjective(TestChromosome.java:680)
-	at org.evosuite.testcase.TestChromosome.compareSecondaryObjective(TestChromosome.java:68)
-	at org.evosuite.ga.comparators.PreferenceSortingComparator.compare(PreferenceSortingComparator.java:74)
-	at org.evosuite.ga.operators.ranking.RankBasedPreferenceSorting.getZeroFront(RankBasedPreferenceSorting.java:111)
-	at org.evosuite.ga.operators.ranking.RankBasedPreferenceSorting.computeRankingAssignment(RankBasedPreferenceSorting.java:65)
-	at org.evosuite.ga.metaheuristics.mosa.DynaMOSA.evolve(DynaMOSA.java:83)
-	at org.evosuite.ga.metaheuristics.mosa.DynaMOSA.generateSolution(DynaMOSA.java:174)
-	at org.evosuite.ga.metaheuristics.TestSuiteAdapter.generateSolution(TestSuiteAdapter.java:114)
-	at org.evosuite.strategy.MOSuiteStrategy.generateTests(MOSuiteStrategy.java:123)
-	at org.evosuite.TestSuiteGenerator.generateTests(TestSuiteGenerator.java:630)
-	at org.evosuite.TestSuiteGenerator.generateTestSuite(TestSuiteGenerator.java:205)
-	at org.evosuite.rmi.service.ClientNodeImpl.lambda$startNewSearch$0(ClientNodeImpl.java:150)
-	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
-	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
-	at java.lang.Thread.run(Thread.java:748)
+[MASTER] 09:14:06.460 [logback-2] ERROR TestCluster - Failed to check cache for java.util.Enumeration<E> : Type points to itself
+[MASTER] 09:16:13.031 [logback-2] ERROR TestCluster - Failed to check cache for java.util.function.Predicate<T> : Type points to itself
+[MASTER] 09:17:14.605 [logback-2] ERROR TestCluster - Failed to check cache for java.util.Iterator<E> : Type points to itself
+* Search finished after 602s and 721 generations, 308642 statements, best individual has fitness: 743.0
+* Minimizing test suite
+* Going to analyze the coverage criteria
+* Coverage analysis for criterion LINE
+* Coverage of criterion LINE: 20%
+* Total number of goals: 220
+* Number of covered goals: 44
+* Coverage analysis for criterion BRANCH
+* Coverage of criterion BRANCH: 19%
+* Total number of goals: 161
+* Number of covered goals: 30
+* Coverage analysis for criterion EXCEPTION
+* Coverage of criterion EXCEPTION: 100%
+* Total number of goals: 4
+* Number of covered goals: 4
+* Coverage analysis for criterion WEAKMUTATION
+* Coverage of criterion WEAKMUTATION: 14%
+* Total number of goals: 323
+* Number of covered goals: 44
+* Coverage analysis for criterion OUTPUT
+* Coverage of criterion OUTPUT: 100% (no goals)
+* Coverage analysis for criterion METHOD
+* Coverage of criterion METHOD: 21%
+* Total number of goals: 14
+* Number of covered goals: 3
+* Coverage analysis for criterion METHODNOEXCEPTION
+* Coverage of criterion METHODNOEXCEPTION: 21%
+* Total number of goals: 14
+* Number of covered goals: 3
+* Coverage analysis for criterion CBRANCH
+* Coverage of criterion CBRANCH: 19%
+* Total number of goals: 161
+* Number of covered goals: 30
+* Generated 8 tests with total length 49
+* Resulting test suite's coverage: 33% (average coverage for all fitness functions)
+* Generating assertions
+* Resulting test suite's mutation score: 7%
+* Compiling and checking tests
+[MASTER] 09:24:08.936 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+* Writing tests to file
+* Writing JUnit test case 'ScopedAliases_ESTest' to results/Closure-110/com.google.javascript.jscomp.ScopedAliases/BBC-F0-opt-70/tests/2
+* Done!
+
 * Computation finished
-[MASTER] 21:28:25.054 [main] ERROR SearchStatistics - No obtained value for output variable: LineCoverage
-[MASTER] 21:28:27.057 [main] ERROR SearchStatistics - No obtained value for output variable: LineCoverage
-[MASTER] 21:28:28.058 [main] ERROR SearchStatistics - No obtained value for output variable: LineCoverage
-[MASTER] 21:28:29.058 [main] ERROR SearchStatistics - No obtained value for output variable: LineCoverage
-[MASTER] 21:28:30.059 [main] ERROR SearchStatistics - No obtained value for output variable: LineCoverage
-[MASTER] 21:28:31.060 [main] ERROR SearchStatistics - No obtained value for output variable: LineCoverage
-[MASTER] 21:28:31.060 [main] ERROR SearchStatistics - Not going to write down statistics data, as some are missing
-[MASTER] 21:28:31.161 [main] ERROR TestGeneration - failed to write statistics data

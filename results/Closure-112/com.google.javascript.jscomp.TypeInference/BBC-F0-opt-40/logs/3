@@ -2,7 +2,7 @@
 * Configuration: BBC-F0-opt-40
 * Going to generate test cases for class: com.google.javascript.jscomp.TypeInference
 * Starting Client-0
-* Connecting to master process on port 21150
+* Connecting to master process on port 15125
 * Analyzing classpath: 
   - subjects/buggy-versions/Closure-112/build/classes
   - subjects/buggy-versions/Closure-112/lib/args4j.jar
@@ -24,37 +24,233 @@
   - No-Exception Top-Level Method Coverage
   - Context Branch Coverage
 * Total number of test goals for DYNAMOSA: 2994
-* Using seed 3502491218
+* Using seed 893182720
 * Starting evolution
 bbc usage percentage is: 40%
 * Initial Number of Goals in DynaMOSA = 886 / 2994
-[MASTER] 21:32:57.135 [logback-2] ERROR TestCluster - Failed to check cache for java.util.Comparator<T> : Type points to itself
-[MASTER] 21:34:00.069 [logback-2] ERROR ClientNodeImpl - Error when generating tests for: com.google.javascript.jscomp.TypeInference with seed 3502491218. Configuration id : BBC-F0-opt-40
-java.lang.NullPointerException: null
-	at org.evosuite.testcase.secondaryobjectives.basicblock.BasicBlockCoverage.compareChromosomes(BasicBlockCoverage.java:59)
-	at org.evosuite.testcase.TestChromosome.compareSecondaryObjective(TestChromosome.java:680)
-	at org.evosuite.testcase.TestChromosome.compareSecondaryObjective(TestChromosome.java:68)
-	at org.evosuite.ga.comparators.PreferenceSortingComparator.compare(PreferenceSortingComparator.java:74)
-	at org.evosuite.ga.operators.ranking.RankBasedPreferenceSorting.getZeroFront(RankBasedPreferenceSorting.java:111)
-	at org.evosuite.ga.operators.ranking.RankBasedPreferenceSorting.computeRankingAssignment(RankBasedPreferenceSorting.java:65)
-	at org.evosuite.ga.metaheuristics.mosa.DynaMOSA.evolve(DynaMOSA.java:83)
-	at org.evosuite.ga.metaheuristics.mosa.DynaMOSA.generateSolution(DynaMOSA.java:174)
-	at org.evosuite.ga.metaheuristics.TestSuiteAdapter.generateSolution(TestSuiteAdapter.java:114)
-	at org.evosuite.strategy.MOSuiteStrategy.generateTests(MOSuiteStrategy.java:123)
-	at org.evosuite.TestSuiteGenerator.generateTests(TestSuiteGenerator.java:630)
-	at org.evosuite.TestSuiteGenerator.generateTestSuite(TestSuiteGenerator.java:205)
-	at org.evosuite.rmi.service.ClientNodeImpl.lambda$startNewSearch$0(ClientNodeImpl.java:150)
-	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
-	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
-	at java.lang.Thread.run(Thread.java:748)
+[MASTER] 10:20:40.678 [logback-2] ERROR TestCluster - Failed to check cache for java.util.Comparator<T> : Type points to itself
+[MASTER] 10:21:49.125 [logback-2] ERROR TestCluster - Failed to check cache for java.util.Iterator<E> : Type points to itself
+[MASTER] 10:23:28.748 [logback-2] ERROR TestCluster - Failed to check cache for java.util.Enumeration<E> : Type points to itself
+*C1*
+*C1*
+*C1*
+*C1*
+*C1*
+*C1*
+*C1*
+*C1*
+*C1*
+*C1*
+*C1*
+*C1*
+*C1*
+*C1*
+*C1*
+*C1*
+*C1*
+*C1*
+*C1*
+*C1*
+*C1*
+*C1*
+*C1*
+*C1*
+*C1*
+*C1*
+*C1*
+*C1*
+*C1*
+*C1*
+*C1*
+*C1*
+* Search finished after 601s and 728 generations, 483561 statements, best individual has fitness: 2076.0
+* Minimizing test suite
+* Going to analyze the coverage criteria
+* Coverage analysis for criterion LINE
+* Coverage of criterion LINE: 29%
+* Total number of goals: 603
+* Number of covered goals: 174
+* Coverage analysis for criterion BRANCH
+* Coverage of criterion BRANCH: 40%
+* Total number of goals: 769
+* Number of covered goals: 309
+* Coverage analysis for criterion EXCEPTION
+* Coverage of criterion EXCEPTION: 89%
+* Total number of goals: 9
+* Number of covered goals: 8
+* Coverage analysis for criterion WEAKMUTATION
+* Coverage of criterion WEAKMUTATION: 16%
+* Total number of goals: 821
+* Number of covered goals: 128
+* Coverage analysis for criterion OUTPUT
+* Coverage of criterion OUTPUT: 43%
+* Total number of goals: 14
+* Number of covered goals: 6
+* Coverage analysis for criterion METHOD
+* Coverage of criterion METHOD: 67%
+* Total number of goals: 9
+* Number of covered goals: 6
+* Coverage analysis for criterion METHODNOEXCEPTION
+* Coverage of criterion METHODNOEXCEPTION: 67%
+* Total number of goals: 9
+* Number of covered goals: 6
+* Coverage analysis for criterion CBRANCH
+* Coverage of criterion CBRANCH: 40%
+* Total number of goals: 769
+* Number of covered goals: 307
+* Generated 121 tests with total length 1361
+* Resulting test suite's coverage: 44% (average coverage for all fitness functions)
+* Generating assertions
+* Resulting test suite's mutation score: 10%
+* Compiling and checking tests
+[MASTER] 10:31:11.044 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 10:31:11.050 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class java.lang.AssertionError: Expecting exception: IllegalArgumentException
+[MASTER] 10:31:11.050 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ Compiler compiler0 = new Compiler();
+compiler0.parseTestCode("DIV");
+
+[MASTER] 10:31:12.618 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class java.lang.AssertionError: Expecting exception: IllegalArgumentException
+[MASTER] 10:31:12.618 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ Compiler compiler0 = new Compiler();
+compiler0.parseSyntheticCode("defieProperties", "defieProperties");
+
+[MASTER] 10:31:14.142 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class java.lang.AssertionError: Expecting exception: IllegalArgumentException
+[MASTER] 10:31:14.143 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ Compiler compiler0 = new Compiler();
+compiler0.parseTestCode("groupVariableDeclarations");
+
+[MASTER] 10:31:16.244 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class java.lang.AssertionError: Expecting exception: IllegalArgumentException
+[MASTER] 10:31:16.244 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ Compiler compiler0 = new Compiler();
+compiler0.parseSyntheticCode("com.google.javascript.jscomp.TypeInference$TemplateTypeReplacer", "com.google.javascript.jscomp.TypeInference$TemplateTypeReplacer");
+
+[MASTER] 10:31:17.768 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class java.lang.AssertionError: Expecting exception: IllegalArgumentException
+[MASTER] 10:31:17.768 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ Compiler compiler0 = new Compiler();
+compiler0.parseTestCode("defineProperties");
+
+[MASTER] 10:31:19.254 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class java.lang.AssertionError: Expecting exception: IllegalArgumentException
+[MASTER] 10:31:19.254 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ Compiler compiler0 = new Compiler();
+compiler0.parseSyntheticCode("newChild had siblings in addChildBefore", "D");
+
+[MASTER] 10:31:20.793 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class java.lang.AssertionError: Expecting exception: IllegalArgumentException
+[MASTER] 10:31:20.793 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ Compiler compiler0 = new Compiler();
+compiler0.parseTestCode("groupVariableDeclarations");
+
+[MASTER] 10:31:22.235 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class java.lang.AssertionError: Expecting exception: IllegalArgumentException
+[MASTER] 10:31:22.235 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ Compiler compiler0 = new Compiler();
+compiler0.parseTestCode("DIV");
+
+[MASTER] 10:31:23.827 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class java.lang.AssertionError: Expecting exception: IllegalArgumentException
+[MASTER] 10:31:23.827 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ Compiler compiler0 = new Compiler();
+compiler0.parseSyntheticCode("defineProperties", "defineProperties");
+
+[MASTER] 10:31:25.419 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class java.lang.AssertionError: Expecting exception: IllegalArgumentException
+[MASTER] 10:31:25.419 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ Compiler compiler0 = new Compiler();
+compiler0.parseTestCode("groupVariableDeclarations");
+
+[MASTER] 10:31:27.090 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class java.lang.AssertionError: Expecting exception: IllegalArgumentException
+[MASTER] 10:31:27.091 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ Compiler compiler0 = new Compiler();
+compiler0.parseTestCode("A");
+
+[MASTER] 10:31:29.303 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class java.lang.AssertionError: Expecting exception: IllegalArgumentException
+[MASTER] 10:31:29.304 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ Compiler compiler0 = new Compiler();
+compiler0.parseSyntheticCode("com.googl7.jav4script.scoz.TypeInfernce$0emplateTpeReplacer", "com.googl7.jav4script.scoz.TypeInfernce$0emplateTpeReplacer");
+
+[MASTER] 10:31:30.915 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class java.lang.AssertionError: Expecting exception: IllegalArgumentException
+[MASTER] 10:31:30.916 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ Compiler compiler0 = new Compiler();
+compiler0.parseTestCode("groupVariableDeclarations");
+
+[MASTER] 10:31:32.541 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class java.lang.AssertionError: Expecting exception: IllegalArgumentException
+[MASTER] 10:31:32.541 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ Compiler compiler0 = new Compiler();
+compiler0.parseSyntheticCode("defineProperties", "defineProperties");
+
+[MASTER] 10:31:34.026 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class java.lang.AssertionError: Expecting exception: IllegalArgumentException
+[MASTER] 10:31:34.026 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ Compiler compiler0 = new Compiler();
+compiler0.parseSyntheticCode("com.googl7.jav4script.scoz.TypeInfernce$0emplateTpeReplacer", "com.googl7.jav4script.scoz.TypeInfernce$0emplateTpeReplacer");
+
+[MASTER] 10:31:35.774 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class java.lang.AssertionError: Expecting exception: IllegalArgumentException
+[MASTER] 10:31:35.774 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ Compiler compiler0 = new Compiler();
+compiler0.parseTestCode("defineProperties");
+
+[MASTER] 10:31:37.324 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class java.lang.AssertionError: Expecting exception: IllegalArgumentException
+[MASTER] 10:31:37.325 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ Compiler compiler0 = new Compiler();
+compiler0.parseTestCode("DV");
+
+[MASTER] 10:31:38.888 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class java.lang.AssertionError: Expecting exception: IllegalArgumentException
+[MASTER] 10:31:38.889 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ Compiler compiler0 = new Compiler();
+compiler0.parseTestCode("defineProperties");
+
+[MASTER] 10:31:40.511 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class java.lang.AssertionError: Expecting exception: IllegalArgumentException
+[MASTER] 10:31:40.511 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ Compiler compiler0 = new Compiler();
+compiler0.parseTestCode("defineProperties");
+
+[MASTER] 10:31:42.115 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class java.lang.AssertionError: Expecting exception: IllegalArgumentException
+[MASTER] 10:31:42.115 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ Compiler compiler0 = new Compiler();
+compiler0.parseTestCode("defineProperties");
+
+[MASTER] 10:31:43.690 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class java.lang.AssertionError: Expecting exception: IllegalArgumentException
+[MASTER] 10:31:43.690 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ Compiler compiler0 = new Compiler();
+compiler0.parseTestCode("DIV");
+
+[MASTER] 10:31:45.250 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class java.lang.AssertionError: Expecting exception: IllegalArgumentException
+[MASTER] 10:31:45.251 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ Compiler compiler0 = new Compiler();
+compiler0.parseTestCode("9F=={ZK:1");
+
+[MASTER] 10:31:46.955 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class java.lang.AssertionError: Expecting exception: IllegalArgumentException
+[MASTER] 10:31:46.955 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ Compiler compiler0 = new Compiler();
+compiler0.parseTestCode("defineProperties");
+
+[MASTER] 10:31:49.209 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class java.lang.AssertionError: Expecting exception: IllegalArgumentException
+[MASTER] 10:31:49.209 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ Compiler compiler0 = new Compiler();
+compiler0.parseTestCode("DIV");
+
+[MASTER] 10:31:50.960 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class java.lang.AssertionError: Expecting exception: IllegalArgumentException
+[MASTER] 10:31:50.961 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ Compiler compiler0 = new Compiler();
+compiler0.parseTestCode("A");
+
+[MASTER] 10:31:52.812 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class java.lang.AssertionError: Expecting exception: IllegalArgumentException
+[MASTER] 10:31:52.813 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ Compiler compiler0 = new Compiler();
+compiler0.parseTestCode("");
+
+[MASTER] 10:31:54.573 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class java.lang.AssertionError: Expecting exception: IllegalArgumentException
+[MASTER] 10:31:54.574 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ Compiler compiler0 = new Compiler();
+compiler0.parseTestCode("com.google.javascript.jscomp.DefaultPassConfig$79");
+
+[MASTER] 10:31:56.345 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class java.lang.AssertionError: Expecting exception: IllegalArgumentException
+[MASTER] 10:31:56.345 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ Compiler compiler0 = new Compiler();
+compiler0.parseTestCode("A");
+
+[MASTER] 10:31:58.096 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class java.lang.AssertionError: Expecting exception: IllegalArgumentException
+[MASTER] 10:31:58.097 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ Compiler compiler0 = new Compiler();
+compiler0.parseTestCode("j");
+
+* Writing tests to file
+* Writing JUnit test case 'TypeInference_ESTest' to results/Closure-112/com.google.javascript.jscomp.TypeInference/BBC-F0-opt-40/tests/3
+* Done!
+
 * Computation finished
-[MASTER] 21:34:00.191 [main] ERROR SearchStatistics - No obtained value for output variable: LineCoverage
-[MASTER] 21:34:02.194 [main] ERROR SearchStatistics - No obtained value for output variable: LineCoverage
-[MASTER] 21:34:03.195 [main] ERROR SearchStatistics - No obtained value for output variable: LineCoverage
-[MASTER] 21:34:04.195 [main] ERROR SearchStatistics - No obtained value for output variable: LineCoverage
-[MASTER] 21:34:05.196 [main] ERROR SearchStatistics - No obtained value for output variable: LineCoverage
-[MASTER] 21:34:06.197 [main] ERROR SearchStatistics - No obtained value for output variable: LineCoverage
-[MASTER] 21:34:06.197 [main] ERROR SearchStatistics - Not going to write down statistics data, as some are missing
-[MASTER] 21:34:06.298 [main] ERROR TestGeneration - failed to write statistics data

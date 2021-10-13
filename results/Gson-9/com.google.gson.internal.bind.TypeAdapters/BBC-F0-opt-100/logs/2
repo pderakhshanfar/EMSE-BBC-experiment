@@ -2,7 +2,7 @@
 * Configuration: BBC-F0-opt-100
 * Going to generate test cases for class: com.google.gson.internal.bind.TypeAdapters
 * Starting Client-0
-* Connecting to master process on port 7445
+* Connecting to master process on port 14287
 * Analyzing classpath: 
   - subjects/buggy-versions/Gson-9/target/classes
 * Finished analyzing classpath
@@ -17,40 +17,56 @@
   - No-Exception Top-Level Method Coverage
   - Context Branch Coverage
 * Total number of test goals for DYNAMOSA: 1481
-* Using seed 2468929550
+* Using seed 2220936992
 * Starting evolution
 bbc usage percentage is: 100%
 * Initial Number of Goals in DynaMOSA = 538 / 1481
-[MASTER] 22:15:24.727 [logback-1] WARN  CoverageArchive - A solution with a timeout/exception result has been added to the archive. The covered goal was com.google.gson.internal.bind.TypeAdapters$29.write(Lcom/google/gson/stream/JsonWriter;Lcom/google/gson/JsonElement;)V: I62 Branch 85 IFEQ L769 - true
-[MASTER] 22:15:24.735 [logback-1] WARN  CoverageArchive - A solution with a timeout/exception result has been added to the archive. The covered goal was com.google.gson.internal.bind.TypeAdapters$29.write(Lcom/google/gson/stream/JsonWriter;Lcom/google/gson/JsonElement;)V: I101 Branch 87 IFEQ L776 - false
-[MASTER] 22:15:35.536 [logback-2] ERROR TestCluster - Failed to check cache for com.google.gson.reflect.TypeToken<T> : Type points to itself
-[MASTER] 22:15:37.424 [logback-2] ERROR TestCluster - Failed to check cache for java.util.function.Function<T, R> : Type points to itself
+[MASTER] 14:44:34.237 [logback-2] ERROR TestCluster - Failed to check cache for com.google.gson.reflect.TypeToken<T> : Type points to itself
+[MASTER] 14:50:08.593 [logback-2] ERROR TestCluster - Failed to check cache for java.util.function.Function<T, R> : Type points to itself
+* Search finished after 601s and 543 generations, 247180 statements, best individual has fitness: 495.0
+* Minimizing test suite
+* Going to analyze the coverage criteria
+* Coverage analysis for criterion LINE
+* Coverage of criterion LINE: 73%
+* Total number of goals: 391
+* Number of covered goals: 284
+* Coverage analysis for criterion BRANCH
+* Coverage of criterion BRANCH: 62%
+* Total number of goals: 284
+* Number of covered goals: 175
+* Coverage analysis for criterion EXCEPTION
+* Coverage of criterion EXCEPTION: 100% (no goals)
+* Coverage analysis for criterion WEAKMUTATION
+* Coverage of criterion WEAKMUTATION: 69%
+* Total number of goals: 498
+* Number of covered goals: 342
+* Coverage analysis for criterion OUTPUT
+* Coverage of criterion OUTPUT: 50%
+* Total number of goals: 10
+* Number of covered goals: 5
+* Coverage analysis for criterion METHOD
+* Coverage of criterion METHOD: 71%
+* Total number of goals: 7
+* Number of covered goals: 5
+* Coverage analysis for criterion METHODNOEXCEPTION
+* Coverage of criterion METHODNOEXCEPTION: 71%
+* Total number of goals: 7
+* Number of covered goals: 5
+* Coverage analysis for criterion CBRANCH
+* Coverage of criterion CBRANCH: 62%
+* Total number of goals: 284
+* Number of covered goals: 175
+* Generated 76 tests with total length 325
+* Resulting test suite's coverage: 70% (average coverage for all fitness functions)
+* Generating assertions
+* Resulting test suite's mutation score: 33%
+* Compiling and checking tests
+[MASTER] 14:54:40.522 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 14:54:40.703 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 14:54:40.843 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 14:54:40.996 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+* Writing tests to file
+* Writing JUnit test case 'TypeAdapters_ESTest' to results/Gson-9/com.google.gson.internal.bind.TypeAdapters/BBC-F0-opt-100/tests/2
+* Done!
+
 * Computation finished
-[MASTER] 22:16:15.720 [logback-2] ERROR ClientNodeImpl - Error when generating tests for: com.google.gson.internal.bind.TypeAdapters with seed 2468929550. Configuration id : BBC-F0-opt-100
-java.lang.NullPointerException: null
-	at org.evosuite.testcase.secondaryobjectives.basicblock.BasicBlockCoverage.compareChromosomes(BasicBlockCoverage.java:59)
-	at org.evosuite.testcase.TestChromosome.compareSecondaryObjective(TestChromosome.java:680)
-	at org.evosuite.testcase.TestChromosome.compareSecondaryObjective(TestChromosome.java:68)
-	at org.evosuite.ga.comparators.PreferenceSortingComparator.compare(PreferenceSortingComparator.java:74)
-	at org.evosuite.ga.operators.ranking.RankBasedPreferenceSorting.getZeroFront(RankBasedPreferenceSorting.java:111)
-	at org.evosuite.ga.operators.ranking.RankBasedPreferenceSorting.computeRankingAssignment(RankBasedPreferenceSorting.java:65)
-	at org.evosuite.ga.metaheuristics.mosa.DynaMOSA.evolve(DynaMOSA.java:83)
-	at org.evosuite.ga.metaheuristics.mosa.DynaMOSA.generateSolution(DynaMOSA.java:174)
-	at org.evosuite.ga.metaheuristics.TestSuiteAdapter.generateSolution(TestSuiteAdapter.java:114)
-	at org.evosuite.strategy.MOSuiteStrategy.generateTests(MOSuiteStrategy.java:123)
-	at org.evosuite.TestSuiteGenerator.generateTests(TestSuiteGenerator.java:630)
-	at org.evosuite.TestSuiteGenerator.generateTestSuite(TestSuiteGenerator.java:205)
-	at org.evosuite.rmi.service.ClientNodeImpl.lambda$startNewSearch$0(ClientNodeImpl.java:150)
-	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
-	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
-	at java.lang.Thread.run(Thread.java:748)
-[MASTER] 22:16:15.831 [main] ERROR SearchStatistics - No obtained value for output variable: LineCoverage
-[MASTER] 22:16:17.834 [main] ERROR SearchStatistics - No obtained value for output variable: LineCoverage
-[MASTER] 22:16:18.834 [main] ERROR SearchStatistics - No obtained value for output variable: LineCoverage
-[MASTER] 22:16:19.835 [main] ERROR SearchStatistics - No obtained value for output variable: LineCoverage
-[MASTER] 22:16:20.835 [main] ERROR SearchStatistics - No obtained value for output variable: LineCoverage
-[MASTER] 22:16:21.836 [main] ERROR SearchStatistics - No obtained value for output variable: LineCoverage
-[MASTER] 22:16:21.836 [main] ERROR SearchStatistics - Not going to write down statistics data, as some are missing
-[MASTER] 22:16:21.937 [main] ERROR TestGeneration - failed to write statistics data

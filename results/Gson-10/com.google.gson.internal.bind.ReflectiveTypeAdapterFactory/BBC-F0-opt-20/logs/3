@@ -2,7 +2,7 @@
 * Configuration: BBC-F0-opt-20
 * Going to generate test cases for class: com.google.gson.internal.bind.ReflectiveTypeAdapterFactory
 * Starting Client-0
-* Connecting to master process on port 6947
+* Connecting to master process on port 6945
 * Analyzing classpath: 
   - subjects/buggy-versions/Gson-10/target/classes
 * Finished analyzing classpath
@@ -17,37 +17,73 @@
   - No-Exception Top-Level Method Coverage
   - Context Branch Coverage
 * Total number of test goals for DYNAMOSA: 411
-* Using seed 4219356173
+* Using seed 438785533
 * Starting evolution
 bbc usage percentage is: 20%
 * Initial Number of Goals in DynaMOSA = 123 / 411
-[MASTER] 22:11:58.719 [logback-1] WARN  TestChromosome - Functional mock problem: org.evosuite.ga.ConstructionFailedException: Have no generator for class com.google.gson.internal.bind.ReflectiveTypeAdapterFactory$BoundField canUseFunctionalMocks=true, canBeMocked: false
-[MASTER] 22:12:49.125 [logback-2] ERROR ClientNodeImpl - Error when generating tests for: com.google.gson.internal.bind.ReflectiveTypeAdapterFactory with seed 4219356173. Configuration id : BBC-F0-opt-20
-java.lang.NullPointerException: null
-	at org.evosuite.testcase.secondaryobjectives.basicblock.BasicBlockCoverage.compareChromosomes(BasicBlockCoverage.java:59)
-	at org.evosuite.testcase.TestChromosome.compareSecondaryObjective(TestChromosome.java:680)
-	at org.evosuite.testcase.TestChromosome.compareSecondaryObjective(TestChromosome.java:68)
-	at org.evosuite.ga.comparators.PreferenceSortingComparator.compare(PreferenceSortingComparator.java:74)
-	at org.evosuite.ga.operators.ranking.RankBasedPreferenceSorting.getZeroFront(RankBasedPreferenceSorting.java:111)
-	at org.evosuite.ga.operators.ranking.RankBasedPreferenceSorting.computeRankingAssignment(RankBasedPreferenceSorting.java:65)
-	at org.evosuite.ga.metaheuristics.mosa.DynaMOSA.evolve(DynaMOSA.java:83)
-	at org.evosuite.ga.metaheuristics.mosa.DynaMOSA.generateSolution(DynaMOSA.java:174)
-	at org.evosuite.ga.metaheuristics.TestSuiteAdapter.generateSolution(TestSuiteAdapter.java:114)
-	at org.evosuite.strategy.MOSuiteStrategy.generateTests(MOSuiteStrategy.java:123)
-	at org.evosuite.TestSuiteGenerator.generateTests(TestSuiteGenerator.java:630)
-	at org.evosuite.TestSuiteGenerator.generateTestSuite(TestSuiteGenerator.java:205)
-	at org.evosuite.rmi.service.ClientNodeImpl.lambda$startNewSearch$0(ClientNodeImpl.java:150)
-	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
-	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
-	at java.lang.Thread.run(Thread.java:748)
+[MASTER] 14:27:11.712 [logback-2] ERROR TestCluster - Failed to check cache for java.util.List<E> : Type points to itself
+* Search finished after 603s and 805 generations, 229822 statements, best individual has fitness: 125.0
+* Minimizing test suite
+* Going to analyze the coverage criteria
+* Coverage analysis for criterion LINE
+* Coverage of criterion LINE: 86%
+* Total number of goals: 114
+* Number of covered goals: 98
+* Coverage analysis for criterion BRANCH
+* Coverage of criterion BRANCH: 67%
+* Total number of goals: 64
+* Number of covered goals: 43
+* Coverage analysis for criterion EXCEPTION
+* Coverage of criterion EXCEPTION: 100%
+* Total number of goals: 3
+* Number of covered goals: 3
+* Coverage analysis for criterion WEAKMUTATION
+* Coverage of criterion WEAKMUTATION: 69%
+* Total number of goals: 149
+* Number of covered goals: 103
+* Coverage analysis for criterion OUTPUT
+* Coverage of criterion OUTPUT: 0%
+* Total number of goals: 6
+* Number of covered goals: 0
+* Coverage analysis for criterion METHOD
+* Coverage of criterion METHOD: 71%
+* Total number of goals: 7
+* Number of covered goals: 5
+* Coverage analysis for criterion METHODNOEXCEPTION
+* Coverage of criterion METHODNOEXCEPTION: 29%
+* Total number of goals: 7
+* Number of covered goals: 2
+* Coverage analysis for criterion CBRANCH
+* Coverage of criterion CBRANCH: 62%
+* Total number of goals: 64
+* Number of covered goals: 40
+* Generated 8 tests with total length 34
+* Resulting test suite's coverage: 51% (average coverage for all fitness functions)
+* Generating assertions
+* Resulting test suite's mutation score: 19%
+* Compiling and checking tests
+[MASTER] 14:34:34.808 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 14:34:34.812 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class java.lang.AssertionError: null
+[MASTER] 14:34:34.812 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ Gson gson0 = new Gson();
+Locale.LanguageRange locale_LanguageRange0 = new Locale.LanguageRange("OE", 0.0);
+JsonElement jsonElement0 = gson0.toJsonTree((Object) locale_LanguageRange0);
+Class<Locale.LanguageRange> class0 = Locale.LanguageRange.class;
+Locale.LanguageRange locale_LanguageRange1 = gson0.fromJson(jsonElement0, class0);
+assertFalse(locale_LanguageRange1.equals((Object)locale_LanguageRange0));
+
+
+[MASTER] 14:34:34.971 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 14:34:35.128 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 14:34:35.278 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 14:34:35.433 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 14:34:35.574 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 14:34:35.689 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 14:34:35.806 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 14:34:36.001 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 14:34:36.153 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+* Writing tests to file
+* Writing JUnit test case 'ReflectiveTypeAdapterFactory_ESTest' to results/Gson-10/com.google.gson.internal.bind.ReflectiveTypeAdapterFactory/BBC-F0-opt-20/tests/3
+* Done!
+
 * Computation finished
-[MASTER] 22:12:49.234 [main] ERROR SearchStatistics - No obtained value for output variable: LineCoverage
-[MASTER] 22:12:51.236 [main] ERROR SearchStatistics - No obtained value for output variable: LineCoverage
-[MASTER] 22:12:52.236 [main] ERROR SearchStatistics - No obtained value for output variable: LineCoverage
-[MASTER] 22:12:53.237 [main] ERROR SearchStatistics - No obtained value for output variable: LineCoverage
-[MASTER] 22:12:54.238 [main] ERROR SearchStatistics - No obtained value for output variable: LineCoverage
-[MASTER] 22:12:55.238 [main] ERROR SearchStatistics - No obtained value for output variable: LineCoverage
-[MASTER] 22:12:55.238 [main] ERROR SearchStatistics - Not going to write down statistics data, as some are missing
-[MASTER] 22:12:55.339 [main] ERROR TestGeneration - failed to write statistics data

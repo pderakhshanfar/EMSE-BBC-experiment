@@ -2,7 +2,7 @@
 * Configuration: BBC-F0-opt-80
 * Going to generate test cases for class: org.apache.commons.csv.CSVFormat
 * Starting Client-0
-* Connecting to master process on port 12668
+* Connecting to master process on port 12610
 * Analyzing classpath: 
   - subjects/buggy-versions/Csv-15/target/classes
 * Finished analyzing classpath
@@ -17,56 +17,60 @@
   - No-Exception Top-Level Method Coverage
   - Context Branch Coverage
 * Total number of test goals for DYNAMOSA: 3008
-* Using seed 3278505887
+* Using seed 2654499751
 * Starting evolution
 bbc usage percentage is: 80%
 * Initial Number of Goals in DynaMOSA = 1645 / 3008
-[MASTER] 21:53:53.653 [RMI TCP Connection(3)-127.0.0.1] ERROR ExecutionTracer - CurrentThread has not been set!
-[MASTER] 21:53:53.655 [RMI TCP Connection(3)-127.0.0.1] ERROR ExecutionTracer - Thread: Thread[pool-2-thread-1,5,main]
- -> java.net.PlainSocketImpl.socketAccept(Native Method)
- -> java.net.AbstractPlainSocketImpl.accept(AbstractPlainSocketImpl.java:409)
- -> java.net.ServerSocket.implAccept(ServerSocket.java:560)
- -> java.net.ServerSocket.accept(ServerSocket.java:528)
- -> org.evosuite.utils.LoggingUtils$1.call(LoggingUtils.java:141)
- -> org.evosuite.utils.LoggingUtils$1.call(LoggingUtils.java:137)
+[MASTER] 12:29:29.679 [RMI TCP Connection(3)-127.0.0.1] ERROR ExecutionTracer - CurrentThread has not been set!
+[MASTER] 12:29:29.682 [RMI TCP Connection(3)-127.0.0.1] ERROR ExecutionTracer - Thread: Thread[logback-3,5,main]
+ -> java.lang.Thread.sleep(Native Method)
+ -> ch.qos.logback.core.net.DefaultSocketConnector.call(DefaultSocketConnector.java:73)
+ -> ch.qos.logback.core.net.AbstractSocketAppender.socketConnectionCouldBeEstablished(AbstractSocketAppender.java:209)
+ -> ch.qos.logback.core.net.AbstractSocketAppender.connectSocketAndDispatchEvents(AbstractSocketAppender.java:189)
+ -> ch.qos.logback.core.net.AbstractSocketAppender.access$000(AbstractSocketAppender.java:44)
+ -> ch.qos.logback.core.net.AbstractSocketAppender$1.run(AbstractSocketAppender.java:150)
+ -> java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
  -> java.util.concurrent.FutureTask.run(FutureTask.java:266)
+ -> java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180)
+ -> java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293)
  -> java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
  -> java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
  -> java.lang.Thread.run(Thread.java:748)
 
-[MASTER] 21:53:53.656 [RMI TCP Connection(3)-127.0.0.1] ERROR ExecutionTracer - Thread: Thread[main,5,main]
- -> java.net.SocketInputStream.socketRead0(Native Method)
- -> java.net.SocketInputStream.socketRead(SocketInputStream.java:116)
- -> java.net.SocketInputStream.read(SocketInputStream.java:171)
- -> java.net.SocketInputStream.read(SocketInputStream.java:141)
- -> java.io.BufferedInputStream.fill(BufferedInputStream.java:246)
- -> java.io.BufferedInputStream.read(BufferedInputStream.java:265)
- -> java.io.DataInputStream.readByte(DataInputStream.java:265)
- -> sun.rmi.transport.StreamRemoteCall.executeCall(StreamRemoteCall.java:240)
- -> sun.rmi.server.UnicastRef.invoke(UnicastRef.java:164)
- -> java.rmi.server.RemoteObjectInvocationHandler.invokeRemoteMethod(RemoteObjectInvocationHandler.java:235)
- -> java.rmi.server.RemoteObjectInvocationHandler.invoke(RemoteObjectInvocationHandler.java:180)
- -> com.sun.proxy.$Proxy7.waitUntilFinished(Unknown Source)
- -> org.evosuite.utils.ExternalProcessGroupHandler.waitForResult(ExternalProcessGroupHandler.java:694)
- -> org.evosuite.executionmode.TestGeneration.generateTests(TestGeneration.java:515)
- -> org.evosuite.executionmode.TestGeneration.executeTestGeneration(TestGeneration.java:80)
- -> org.evosuite.EvoSuite.parseCommandLine(EvoSuite.java:349)
- -> org.evosuite.EvoSuite.main(EvoSuite.java:115)
+[MASTER] 12:29:29.682 [RMI TCP Connection(3)-127.0.0.1] ERROR ExecutionTracer - Thread: Thread[RMI Reaper,5,system]
+ -> java.lang.Object.wait(Native Method)
+ -> java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:144)
+ -> java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:165)
+ -> sun.rmi.transport.ObjectTable$Reaper.run(ObjectTable.java:351)
+ -> java.lang.Thread.run(Thread.java:748)
 
-[MASTER] 21:53:53.656 [RMI TCP Connection(3)-127.0.0.1] ERROR ExecutionTracer - Thread: Thread[Thread-2,5,main]
- -> java.io.FileInputStream.readBytes(Native Method)
- -> java.io.FileInputStream.read(FileInputStream.java:255)
- -> java.io.BufferedInputStream.read1(BufferedInputStream.java:284)
- -> java.io.BufferedInputStream.read(BufferedInputStream.java:345)
- -> sun.nio.cs.StreamDecoder.readBytes(StreamDecoder.java:284)
- -> sun.nio.cs.StreamDecoder.implRead(StreamDecoder.java:326)
- -> sun.nio.cs.StreamDecoder.read(StreamDecoder.java:178)
- -> java.io.InputStreamReader.read(InputStreamReader.java:184)
- -> java.io.BufferedReader.fill(BufferedReader.java:161)
- -> java.io.BufferedReader.read(BufferedReader.java:182)
- -> org.evosuite.utils.ExternalProcessGroupHandler$3.run(ExternalProcessGroupHandler.java:482)
+[MASTER] 12:29:29.682 [RMI TCP Connection(3)-127.0.0.1] ERROR ExecutionTracer - Thread: Thread[Signal Dispatcher,9,system]
 
-[MASTER] 21:53:53.656 [RMI TCP Connection(3)-127.0.0.1] ERROR ExecutionTracer - Thread: Thread[pool-3-thread-1,5,main]
+[MASTER] 12:29:29.682 [RMI TCP Connection(3)-127.0.0.1] ERROR ExecutionTracer - Thread: Thread[RMI TCP Accept-12610,5,system]
+ -> java.net.PlainSocketImpl.socketAccept(Native Method)
+ -> java.net.AbstractPlainSocketImpl.accept(AbstractPlainSocketImpl.java:409)
+ -> java.net.ServerSocket.implAccept(ServerSocket.java:560)
+ -> java.net.ServerSocket.accept(ServerSocket.java:528)
+ -> sun.rmi.transport.tcp.TCPTransport$AcceptLoop.executeAcceptLoop(TCPTransport.java:405)
+ -> sun.rmi.transport.tcp.TCPTransport$AcceptLoop.run(TCPTransport.java:377)
+ -> java.lang.Thread.run(Thread.java:748)
+
+[MASTER] 12:29:29.682 [RMI TCP Connection(3)-127.0.0.1] ERROR ExecutionTracer - Thread: Thread[logback-1,5,main]
+ -> java.lang.Thread.sleep(Native Method)
+ -> ch.qos.logback.core.net.DefaultSocketConnector.call(DefaultSocketConnector.java:73)
+ -> ch.qos.logback.core.net.AbstractSocketAppender.socketConnectionCouldBeEstablished(AbstractSocketAppender.java:209)
+ -> ch.qos.logback.core.net.AbstractSocketAppender.connectSocketAndDispatchEvents(AbstractSocketAppender.java:189)
+ -> ch.qos.logback.core.net.AbstractSocketAppender.access$000(AbstractSocketAppender.java:44)
+ -> ch.qos.logback.core.net.AbstractSocketAppender$1.run(AbstractSocketAppender.java:150)
+ -> java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+ -> java.util.concurrent.FutureTask.run(FutureTask.java:266)
+ -> java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180)
+ -> java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293)
+ -> java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+ -> java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+ -> java.lang.Thread.run(Thread.java:748)
+
+[MASTER] 12:29:29.682 [RMI TCP Connection(3)-127.0.0.1] ERROR ExecutionTracer - Thread: Thread[pool-3-thread-2,5,main]
  -> java.net.SocketInputStream.socketRead0(Native Method)
  -> java.net.SocketInputStream.socketRead(SocketInputStream.java:116)
  -> java.net.SocketInputStream.read(SocketInputStream.java:171)
@@ -86,61 +90,67 @@ bbc usage percentage is: 80%
  -> java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
  -> java.lang.Thread.run(Thread.java:748)
 
-[MASTER] 21:53:53.656 [RMI TCP Connection(3)-127.0.0.1] ERROR ExecutionTracer - Thread: Thread[Finalizer,8,system]
- -> java.lang.Object.wait(Native Method)
- -> java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:144)
- -> java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:165)
- -> java.lang.ref.Finalizer$FinalizerThread.run(Finalizer.java:216)
+[MASTER] 12:29:29.682 [RMI TCP Connection(3)-127.0.0.1] ERROR ExecutionTracer - Thread: Thread[pool-2-thread-1,5,main]
+ -> java.net.PlainSocketImpl.socketAccept(Native Method)
+ -> java.net.AbstractPlainSocketImpl.accept(AbstractPlainSocketImpl.java:409)
+ -> java.net.ServerSocket.implAccept(ServerSocket.java:560)
+ -> java.net.ServerSocket.accept(ServerSocket.java:528)
+ -> org.evosuite.utils.LoggingUtils$1.call(LoggingUtils.java:141)
+ -> org.evosuite.utils.LoggingUtils$1.call(LoggingUtils.java:137)
+ -> java.util.concurrent.FutureTask.run(FutureTask.java:266)
+ -> java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+ -> java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+ -> java.lang.Thread.run(Thread.java:748)
 
-[MASTER] 21:53:53.656 [RMI TCP Connection(3)-127.0.0.1] ERROR ExecutionTracer - Thread: Thread[RMI TCP Connection(1)-172.17.0.2,5,RMI Runtime]
+[MASTER] 12:29:29.682 [RMI TCP Connection(3)-127.0.0.1] ERROR ExecutionTracer - Thread: Thread[Reference Handler,10,system]
+ -> java.lang.Object.wait(Native Method)
+ -> java.lang.Object.wait(Object.java:502)
+ -> java.lang.ref.Reference.tryHandlePending(Reference.java:191)
+ -> java.lang.ref.Reference$ReferenceHandler.run(Reference.java:153)
+
+[MASTER] 12:29:29.683 [RMI TCP Connection(3)-127.0.0.1] ERROR ExecutionTracer - Thread: Thread[Thread-3,5,main]
+ -> java.io.FileInputStream.readBytes(Native Method)
+ -> java.io.FileInputStream.read(FileInputStream.java:255)
+ -> java.io.BufferedInputStream.read1(BufferedInputStream.java:284)
+ -> java.io.BufferedInputStream.read(BufferedInputStream.java:345)
+ -> sun.nio.cs.StreamDecoder.readBytes(StreamDecoder.java:284)
+ -> sun.nio.cs.StreamDecoder.implRead(StreamDecoder.java:326)
+ -> sun.nio.cs.StreamDecoder.read(StreamDecoder.java:178)
+ -> java.io.InputStreamReader.read(InputStreamReader.java:184)
+ -> java.io.BufferedReader.fill(BufferedReader.java:161)
+ -> java.io.BufferedReader.read(BufferedReader.java:182)
+ -> org.evosuite.utils.ExternalProcessGroupHandler$4.run(ExternalProcessGroupHandler.java:523)
+
+[MASTER] 12:29:29.683 [RMI TCP Connection(3)-127.0.0.1] ERROR ExecutionTracer - Thread: Thread[pool-3-thread-1,5,main]
  -> java.net.SocketInputStream.socketRead0(Native Method)
  -> java.net.SocketInputStream.socketRead(SocketInputStream.java:116)
  -> java.net.SocketInputStream.read(SocketInputStream.java:171)
  -> java.net.SocketInputStream.read(SocketInputStream.java:141)
  -> java.io.BufferedInputStream.fill(BufferedInputStream.java:246)
  -> java.io.BufferedInputStream.read(BufferedInputStream.java:265)
- -> java.io.FilterInputStream.read(FilterInputStream.java:83)
- -> sun.rmi.transport.tcp.TCPTransport.handleMessages(TCPTransport.java:555)
- -> sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run0(TCPTransport.java:834)
- -> sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.lambda$run$0(TCPTransport.java:688)
- -> sun.rmi.transport.tcp.TCPTransport$ConnectionHandler$$Lambda$20/768441986.run(Unknown Source)
- -> java.security.AccessController.doPrivileged(Native Method)
- -> sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run(TCPTransport.java:687)
- -> java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
- -> java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
- -> java.lang.Thread.run(Thread.java:748)
-
-[MASTER] 21:53:53.657 [RMI TCP Connection(3)-127.0.0.1] ERROR ExecutionTracer - Thread: Thread[logback-2,5,main]
- -> java.lang.Thread.sleep(Native Method)
- -> ch.qos.logback.core.net.DefaultSocketConnector.call(DefaultSocketConnector.java:73)
- -> ch.qos.logback.core.net.AbstractSocketAppender.socketConnectionCouldBeEstablished(AbstractSocketAppender.java:209)
- -> ch.qos.logback.core.net.AbstractSocketAppender.connectSocketAndDispatchEvents(AbstractSocketAppender.java:189)
- -> ch.qos.logback.core.net.AbstractSocketAppender.access$000(AbstractSocketAppender.java:44)
- -> ch.qos.logback.core.net.AbstractSocketAppender$1.run(AbstractSocketAppender.java:150)
- -> java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+ -> java.io.ObjectInputStream$PeekInputStream.peek(ObjectInputStream.java:2758)
+ -> java.io.ObjectInputStream$BlockDataInputStream.peek(ObjectInputStream.java:3065)
+ -> java.io.ObjectInputStream$BlockDataInputStream.peekByte(ObjectInputStream.java:3075)
+ -> java.io.ObjectInputStream.readObject0(ObjectInputStream.java:1617)
+ -> java.io.ObjectInputStream.readObject(ObjectInputStream.java:502)
+ -> java.io.ObjectInputStream.readObject(ObjectInputStream.java:460)
+ -> org.evosuite.utils.LoggingUtils$1$1.call(LoggingUtils.java:152)
+ -> org.evosuite.utils.LoggingUtils$1$1.call(LoggingUtils.java:143)
  -> java.util.concurrent.FutureTask.run(FutureTask.java:266)
- -> java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180)
- -> java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293)
  -> java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
  -> java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
  -> java.lang.Thread.run(Thread.java:748)
 
-[MASTER] 21:53:53.657 [RMI TCP Connection(3)-127.0.0.1] ERROR ExecutionTracer - Thread: Thread[logback-3,5,main]
- -> java.lang.Thread.sleep(Native Method)
- -> ch.qos.logback.core.net.DefaultSocketConnector.call(DefaultSocketConnector.java:73)
- -> ch.qos.logback.core.net.AbstractSocketAppender.socketConnectionCouldBeEstablished(AbstractSocketAppender.java:209)
- -> ch.qos.logback.core.net.AbstractSocketAppender.connectSocketAndDispatchEvents(AbstractSocketAppender.java:189)
- -> ch.qos.logback.core.net.AbstractSocketAppender.access$000(AbstractSocketAppender.java:44)
- -> ch.qos.logback.core.net.AbstractSocketAppender$1.run(AbstractSocketAppender.java:150)
- -> java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
- -> java.util.concurrent.FutureTask.run(FutureTask.java:266)
- -> java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180)
- -> java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293)
- -> java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
- -> java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+[MASTER] 12:29:29.683 [RMI TCP Connection(3)-127.0.0.1] ERROR ExecutionTracer - Thread: Thread[RMI TCP Accept-5059,5,system]
+ -> java.net.PlainSocketImpl.socketAccept(Native Method)
+ -> java.net.AbstractPlainSocketImpl.accept(AbstractPlainSocketImpl.java:409)
+ -> java.net.ServerSocket.implAccept(ServerSocket.java:560)
+ -> java.net.ServerSocket.accept(ServerSocket.java:528)
+ -> sun.rmi.transport.tcp.TCPTransport$AcceptLoop.executeAcceptLoop(TCPTransport.java:405)
+ -> sun.rmi.transport.tcp.TCPTransport$AcceptLoop.run(TCPTransport.java:377)
  -> java.lang.Thread.run(Thread.java:748)
 
-[MASTER] 21:53:53.658 [RMI TCP Connection(3)-127.0.0.1] ERROR ExecutionTracer - Thread: Thread[RMI TCP Connection(3)-127.0.0.1,5,RMI Runtime]
+[MASTER] 12:29:29.684 [RMI TCP Connection(3)-127.0.0.1] ERROR ExecutionTracer - Thread: Thread[RMI TCP Connection(3)-127.0.0.1,5,RMI Runtime]
  -> java.lang.Thread.dumpThreads(Native Method)
  -> java.lang.Thread.getAllStackTraces(Thread.java:1610)
  -> org.evosuite.testcase.execution.ExecutionTracer.isThreadNeqCurrentThread(ExecutionTracer.java:214)
@@ -220,14 +230,33 @@ bbc usage percentage is: 80%
  -> sun.rmi.transport.tcp.TCPTransport.handleMessages(TCPTransport.java:573)
  -> sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run0(TCPTransport.java:834)
  -> sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.lambda$run$0(TCPTransport.java:688)
- -> sun.rmi.transport.tcp.TCPTransport$ConnectionHandler$$Lambda$20/768441986.run(Unknown Source)
+ -> sun.rmi.transport.tcp.TCPTransport$ConnectionHandler$$Lambda$20/1136665173.run(Unknown Source)
  -> java.security.AccessController.doPrivileged(Native Method)
  -> sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run(TCPTransport.java:687)
  -> java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
  -> java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
  -> java.lang.Thread.run(Thread.java:748)
 
-[MASTER] 21:53:53.658 [RMI TCP Connection(3)-127.0.0.1] ERROR ExecutionTracer - Thread: Thread[pool-3-thread-2,5,main]
+[MASTER] 12:29:29.684 [RMI TCP Connection(3)-127.0.0.1] ERROR ExecutionTracer - Thread: Thread[main,5,main]
+ -> java.net.SocketInputStream.socketRead0(Native Method)
+ -> java.net.SocketInputStream.socketRead(SocketInputStream.java:116)
+ -> java.net.SocketInputStream.read(SocketInputStream.java:171)
+ -> java.net.SocketInputStream.read(SocketInputStream.java:141)
+ -> java.io.BufferedInputStream.fill(BufferedInputStream.java:246)
+ -> java.io.BufferedInputStream.read(BufferedInputStream.java:265)
+ -> java.io.DataInputStream.readByte(DataInputStream.java:265)
+ -> sun.rmi.transport.StreamRemoteCall.executeCall(StreamRemoteCall.java:240)
+ -> sun.rmi.server.UnicastRef.invoke(UnicastRef.java:164)
+ -> java.rmi.server.RemoteObjectInvocationHandler.invokeRemoteMethod(RemoteObjectInvocationHandler.java:235)
+ -> java.rmi.server.RemoteObjectInvocationHandler.invoke(RemoteObjectInvocationHandler.java:180)
+ -> com.sun.proxy.$Proxy7.waitUntilFinished(Unknown Source)
+ -> org.evosuite.utils.ExternalProcessGroupHandler.waitForResult(ExternalProcessGroupHandler.java:694)
+ -> org.evosuite.executionmode.TestGeneration.generateTests(TestGeneration.java:515)
+ -> org.evosuite.executionmode.TestGeneration.executeTestGeneration(TestGeneration.java:80)
+ -> org.evosuite.EvoSuite.parseCommandLine(EvoSuite.java:349)
+ -> org.evosuite.EvoSuite.main(EvoSuite.java:115)
+
+[MASTER] 12:29:29.684 [RMI TCP Connection(3)-127.0.0.1] ERROR ExecutionTracer - Thread: Thread[pool-3-thread-3,5,main]
  -> java.net.SocketInputStream.socketRead0(Native Method)
  -> java.net.SocketInputStream.socketRead(SocketInputStream.java:116)
  -> java.net.SocketInputStream.read(SocketInputStream.java:171)
@@ -247,34 +276,11 @@ bbc usage percentage is: 80%
  -> java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
  -> java.lang.Thread.run(Thread.java:748)
 
-[MASTER] 21:53:53.658 [RMI TCP Connection(3)-127.0.0.1] ERROR ExecutionTracer - Thread: Thread[Signal Dispatcher,9,system]
-
-[MASTER] 21:53:53.659 [RMI TCP Connection(3)-127.0.0.1] ERROR ExecutionTracer - Thread: Thread[RMI TCP Connection(2)-127.0.0.1,5,RMI Runtime]
- -> java.net.SocketInputStream.socketRead0(Native Method)
- -> java.net.SocketInputStream.socketRead(SocketInputStream.java:116)
- -> java.net.SocketInputStream.read(SocketInputStream.java:171)
- -> java.net.SocketInputStream.read(SocketInputStream.java:141)
- -> java.io.BufferedInputStream.fill(BufferedInputStream.java:246)
- -> java.io.BufferedInputStream.read(BufferedInputStream.java:265)
- -> java.io.FilterInputStream.read(FilterInputStream.java:83)
- -> sun.rmi.transport.tcp.TCPTransport.handleMessages(TCPTransport.java:555)
- -> sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run0(TCPTransport.java:834)
- -> sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.lambda$run$0(TCPTransport.java:688)
- -> sun.rmi.transport.tcp.TCPTransport$ConnectionHandler$$Lambda$20/768441986.run(Unknown Source)
- -> java.security.AccessController.doPrivileged(Native Method)
- -> sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run(TCPTransport.java:687)
- -> java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
- -> java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
- -> java.lang.Thread.run(Thread.java:748)
-
-[MASTER] 21:53:53.659 [RMI TCP Connection(3)-127.0.0.1] ERROR ExecutionTracer - Thread: Thread[RMI Reaper,5,system]
+[MASTER] 12:29:29.684 [RMI TCP Connection(3)-127.0.0.1] ERROR ExecutionTracer - Thread: Thread[GC Daemon,2,system]
  -> java.lang.Object.wait(Native Method)
- -> java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:144)
- -> java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:165)
- -> sun.rmi.transport.ObjectTable$Reaper.run(ObjectTable.java:351)
- -> java.lang.Thread.run(Thread.java:748)
+ -> sun.misc.GC$Daemon.run(GC.java:117)
 
-[MASTER] 21:53:53.659 [RMI TCP Connection(3)-127.0.0.1] ERROR ExecutionTracer - Thread: Thread[logback-1,5,main]
+[MASTER] 12:29:29.684 [RMI TCP Connection(3)-127.0.0.1] ERROR ExecutionTracer - Thread: Thread[logback-2,5,main]
  -> java.lang.Thread.sleep(Native Method)
  -> ch.qos.logback.core.net.DefaultSocketConnector.call(DefaultSocketConnector.java:73)
  -> ch.qos.logback.core.net.AbstractSocketAppender.socketConnectionCouldBeEstablished(AbstractSocketAppender.java:209)
@@ -289,7 +295,13 @@ bbc usage percentage is: 80%
  -> java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
  -> java.lang.Thread.run(Thread.java:748)
 
-[MASTER] 21:53:53.659 [RMI TCP Connection(3)-127.0.0.1] ERROR ExecutionTracer - Thread: Thread[Thread-3,5,main]
+[MASTER] 12:29:29.684 [RMI TCP Connection(3)-127.0.0.1] ERROR ExecutionTracer - Thread: Thread[Finalizer,8,system]
+ -> java.lang.Object.wait(Native Method)
+ -> java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:144)
+ -> java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:165)
+ -> java.lang.ref.Finalizer$FinalizerThread.run(Finalizer.java:216)
+
+[MASTER] 12:29:29.685 [RMI TCP Connection(3)-127.0.0.1] ERROR ExecutionTracer - Thread: Thread[Thread-2,5,main]
  -> java.io.FileInputStream.readBytes(Native Method)
  -> java.io.FileInputStream.read(FileInputStream.java:255)
  -> java.io.BufferedInputStream.read1(BufferedInputStream.java:284)
@@ -300,9 +312,9 @@ bbc usage percentage is: 80%
  -> java.io.InputStreamReader.read(InputStreamReader.java:184)
  -> java.io.BufferedReader.fill(BufferedReader.java:161)
  -> java.io.BufferedReader.read(BufferedReader.java:182)
- -> org.evosuite.utils.ExternalProcessGroupHandler$4.run(ExternalProcessGroupHandler.java:523)
+ -> org.evosuite.utils.ExternalProcessGroupHandler$3.run(ExternalProcessGroupHandler.java:482)
 
-[MASTER] 21:53:53.659 [RMI TCP Connection(3)-127.0.0.1] ERROR ExecutionTracer - Thread: Thread[process reaper,10,system]
+[MASTER] 12:29:29.685 [RMI TCP Connection(3)-127.0.0.1] ERROR ExecutionTracer - Thread: Thread[process reaper,10,system]
  -> java.lang.UNIXProcess.waitForProcessExit(Native Method)
  -> java.lang.UNIXProcess.lambda$initStreams$3(UNIXProcess.java:289)
  -> java.lang.UNIXProcess$$Lambda$16/540159270.run(Unknown Source)
@@ -310,61 +322,7 @@ bbc usage percentage is: 80%
  -> java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
  -> java.lang.Thread.run(Thread.java:748)
 
-[MASTER] 21:53:53.659 [RMI TCP Connection(3)-127.0.0.1] ERROR ExecutionTracer - Thread: Thread[RMI RenewClean-[127.0.0.1:12669],5,system]
- -> java.lang.Object.wait(Native Method)
- -> java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:144)
- -> sun.rmi.transport.DGCClient$EndpointEntry$RenewCleanThread.run(DGCClient.java:563)
- -> java.lang.Thread.run(Thread.java:748)
-
-[MASTER] 21:53:53.659 [RMI TCP Connection(3)-127.0.0.1] ERROR ExecutionTracer - Thread: Thread[Reference Handler,10,system]
- -> java.lang.Object.wait(Native Method)
- -> java.lang.Object.wait(Object.java:502)
- -> java.lang.ref.Reference.tryHandlePending(Reference.java:191)
- -> java.lang.ref.Reference$ReferenceHandler.run(Reference.java:153)
-
-[MASTER] 21:53:53.659 [RMI TCP Connection(3)-127.0.0.1] ERROR ExecutionTracer - Thread: Thread[GC Daemon,2,system]
- -> java.lang.Object.wait(Native Method)
- -> sun.misc.GC$Daemon.run(GC.java:117)
-
-[MASTER] 21:53:53.659 [RMI TCP Connection(3)-127.0.0.1] ERROR ExecutionTracer - Thread: Thread[RMI TCP Accept-19692,5,system]
- -> java.net.PlainSocketImpl.socketAccept(Native Method)
- -> java.net.AbstractPlainSocketImpl.accept(AbstractPlainSocketImpl.java:409)
- -> java.net.ServerSocket.implAccept(ServerSocket.java:560)
- -> java.net.ServerSocket.accept(ServerSocket.java:528)
- -> sun.rmi.transport.tcp.TCPTransport$AcceptLoop.executeAcceptLoop(TCPTransport.java:405)
- -> sun.rmi.transport.tcp.TCPTransport$AcceptLoop.run(TCPTransport.java:377)
- -> java.lang.Thread.run(Thread.java:748)
-
-[MASTER] 21:53:53.659 [RMI TCP Connection(3)-127.0.0.1] ERROR ExecutionTracer - Thread: Thread[pool-3-thread-3,5,main]
- -> java.net.SocketInputStream.socketRead0(Native Method)
- -> java.net.SocketInputStream.socketRead(SocketInputStream.java:116)
- -> java.net.SocketInputStream.read(SocketInputStream.java:171)
- -> java.net.SocketInputStream.read(SocketInputStream.java:141)
- -> java.io.BufferedInputStream.fill(BufferedInputStream.java:246)
- -> java.io.BufferedInputStream.read(BufferedInputStream.java:265)
- -> java.io.ObjectInputStream$PeekInputStream.peek(ObjectInputStream.java:2758)
- -> java.io.ObjectInputStream$BlockDataInputStream.peek(ObjectInputStream.java:3065)
- -> java.io.ObjectInputStream$BlockDataInputStream.peekByte(ObjectInputStream.java:3075)
- -> java.io.ObjectInputStream.readObject0(ObjectInputStream.java:1617)
- -> java.io.ObjectInputStream.readObject(ObjectInputStream.java:502)
- -> java.io.ObjectInputStream.readObject(ObjectInputStream.java:460)
- -> org.evosuite.utils.LoggingUtils$1$1.call(LoggingUtils.java:152)
- -> org.evosuite.utils.LoggingUtils$1$1.call(LoggingUtils.java:143)
- -> java.util.concurrent.FutureTask.run(FutureTask.java:266)
- -> java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
- -> java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
- -> java.lang.Thread.run(Thread.java:748)
-
-[MASTER] 21:53:53.659 [RMI TCP Connection(3)-127.0.0.1] ERROR ExecutionTracer - Thread: Thread[RMI TCP Accept-12668,5,system]
- -> java.net.PlainSocketImpl.socketAccept(Native Method)
- -> java.net.AbstractPlainSocketImpl.accept(AbstractPlainSocketImpl.java:409)
- -> java.net.ServerSocket.implAccept(ServerSocket.java:560)
- -> java.net.ServerSocket.accept(ServerSocket.java:528)
- -> sun.rmi.transport.tcp.TCPTransport$AcceptLoop.executeAcceptLoop(TCPTransport.java:405)
- -> sun.rmi.transport.tcp.TCPTransport$AcceptLoop.run(TCPTransport.java:377)
- -> java.lang.Thread.run(Thread.java:748)
-
-[MASTER] 21:53:53.659 [RMI TCP Connection(3)-127.0.0.1] ERROR ExecutionTracer - Thread: Thread[RMI Scheduler(0),5,system]
+[MASTER] 12:29:29.685 [RMI TCP Connection(3)-127.0.0.1] ERROR ExecutionTracer - Thread: Thread[RMI Scheduler(0),5,system]
  -> sun.misc.Unsafe.park(Native Method)
  -> java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:215)
  -> java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:2078)
@@ -375,32 +333,415 @@ bbc usage percentage is: 80%
  -> java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
  -> java.lang.Thread.run(Thread.java:748)
 
-[MASTER] 21:54:51.542 [logback-2] ERROR ClientNodeImpl - Error when generating tests for: org.apache.commons.csv.CSVFormat with seed 3278505887. Configuration id : BBC-F0-opt-80
-java.lang.NullPointerException: null
-	at org.evosuite.testcase.secondaryobjectives.basicblock.BasicBlockCoverage.compareChromosomes(BasicBlockCoverage.java:59)
-	at org.evosuite.testcase.TestChromosome.compareSecondaryObjective(TestChromosome.java:680)
-	at org.evosuite.testcase.TestChromosome.compareSecondaryObjective(TestChromosome.java:68)
-	at org.evosuite.ga.comparators.PreferenceSortingComparator.compare(PreferenceSortingComparator.java:74)
-	at org.evosuite.ga.operators.ranking.RankBasedPreferenceSorting.getZeroFront(RankBasedPreferenceSorting.java:111)
-	at org.evosuite.ga.operators.ranking.RankBasedPreferenceSorting.computeRankingAssignment(RankBasedPreferenceSorting.java:65)
-	at org.evosuite.ga.metaheuristics.mosa.DynaMOSA.evolve(DynaMOSA.java:83)
-	at org.evosuite.ga.metaheuristics.mosa.DynaMOSA.generateSolution(DynaMOSA.java:174)
-	at org.evosuite.ga.metaheuristics.TestSuiteAdapter.generateSolution(TestSuiteAdapter.java:114)
-	at org.evosuite.strategy.MOSuiteStrategy.generateTests(MOSuiteStrategy.java:123)
-	at org.evosuite.TestSuiteGenerator.generateTests(TestSuiteGenerator.java:630)
-	at org.evosuite.TestSuiteGenerator.generateTestSuite(TestSuiteGenerator.java:205)
-	at org.evosuite.rmi.service.ClientNodeImpl.lambda$startNewSearch$0(ClientNodeImpl.java:150)
-	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
-	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
-	at java.lang.Thread.run(Thread.java:748)
+[MASTER] 12:29:29.685 [RMI TCP Connection(3)-127.0.0.1] ERROR ExecutionTracer - Thread: Thread[RMI TCP Connection(2)-127.0.0.1,5,RMI Runtime]
+ -> java.net.SocketInputStream.socketRead0(Native Method)
+ -> java.net.SocketInputStream.socketRead(SocketInputStream.java:116)
+ -> java.net.SocketInputStream.read(SocketInputStream.java:171)
+ -> java.net.SocketInputStream.read(SocketInputStream.java:141)
+ -> java.io.BufferedInputStream.fill(BufferedInputStream.java:246)
+ -> java.io.BufferedInputStream.read(BufferedInputStream.java:265)
+ -> java.io.FilterInputStream.read(FilterInputStream.java:83)
+ -> sun.rmi.transport.tcp.TCPTransport.handleMessages(TCPTransport.java:555)
+ -> sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run0(TCPTransport.java:834)
+ -> sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.lambda$run$0(TCPTransport.java:688)
+ -> sun.rmi.transport.tcp.TCPTransport$ConnectionHandler$$Lambda$20/1136665173.run(Unknown Source)
+ -> java.security.AccessController.doPrivileged(Native Method)
+ -> sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run(TCPTransport.java:687)
+ -> java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+ -> java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+ -> java.lang.Thread.run(Thread.java:748)
+
+[MASTER] 12:29:29.685 [RMI TCP Connection(3)-127.0.0.1] ERROR ExecutionTracer - Thread: Thread[RMI RenewClean-[127.0.0.1:12611],5,system]
+ -> java.lang.Object.wait(Native Method)
+ -> java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:144)
+ -> sun.rmi.transport.DGCClient$EndpointEntry$RenewCleanThread.run(DGCClient.java:563)
+ -> java.lang.Thread.run(Thread.java:748)
+
+[MASTER] 12:29:29.685 [RMI TCP Connection(3)-127.0.0.1] ERROR ExecutionTracer - Thread: Thread[RMI TCP Connection(1)-172.17.0.2,5,RMI Runtime]
+ -> java.net.SocketInputStream.socketRead0(Native Method)
+ -> java.net.SocketInputStream.socketRead(SocketInputStream.java:116)
+ -> java.net.SocketInputStream.read(SocketInputStream.java:171)
+ -> java.net.SocketInputStream.read(SocketInputStream.java:141)
+ -> java.io.BufferedInputStream.fill(BufferedInputStream.java:246)
+ -> java.io.BufferedInputStream.read(BufferedInputStream.java:265)
+ -> java.io.FilterInputStream.read(FilterInputStream.java:83)
+ -> sun.rmi.transport.tcp.TCPTransport.handleMessages(TCPTransport.java:555)
+ -> sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run0(TCPTransport.java:834)
+ -> sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.lambda$run$0(TCPTransport.java:688)
+ -> sun.rmi.transport.tcp.TCPTransport$ConnectionHandler$$Lambda$20/1136665173.run(Unknown Source)
+ -> java.security.AccessController.doPrivileged(Native Method)
+ -> sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run(TCPTransport.java:687)
+ -> java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+ -> java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+ -> java.lang.Thread.run(Thread.java:748)
+
+* Search finished after 602s and 2448 generations, 953208 statements, best individual has fitness: 159.0
+* Minimizing test suite
+* Going to analyze the coverage criteria
+* Coverage analysis for criterion LINE
+* Coverage of criterion LINE: 98%
+* Total number of goals: 344
+* Number of covered goals: 338
+* Coverage analysis for criterion BRANCH
+* Coverage of criterion BRANCH: 98%
+* Total number of goals: 338
+* Number of covered goals: 332
+* Coverage analysis for criterion EXCEPTION
+* Coverage of criterion EXCEPTION: 100%
+* Total number of goals: 39
+* Number of covered goals: 39
+* Coverage analysis for criterion WEAKMUTATION
+* Coverage of criterion WEAKMUTATION: 98%
+* Total number of goals: 929
+* Number of covered goals: 913
+* Coverage analysis for criterion OUTPUT
+* Coverage of criterion OUTPUT: 92%
+* Total number of goals: 923
+* Number of covered goals: 848
+* Coverage analysis for criterion METHOD
+* Coverage of criterion METHOD: 100%
+* Total number of goals: 68
+* Number of covered goals: 68
+* Coverage analysis for criterion METHODNOEXCEPTION
+* Coverage of criterion METHODNOEXCEPTION: 100%
+* Total number of goals: 68
+* Number of covered goals: 68
+* Coverage analysis for criterion CBRANCH
+* Coverage of criterion CBRANCH: 95%
+* Total number of goals: 338
+* Number of covered goals: 320
+* Generated 355 tests with total length 1189
+* Resulting test suite's coverage: 91% (average coverage for all fitness functions)
+* Generating assertions
+[MASTER] 12:40:41.931 [logback-1] WARN  SimpleMutationAssertionGenerator - Assertion minimization is taking too long (0.6688333333333333% of time used, but only 104/355 tests minimized), falling back to using all assertions
+* Resulting test suite's mutation score: 33%
+* Compiling and checking tests
+[MASTER] 12:40:55.375 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 12:40:55.455 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 12:40:55.561 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 12:40:55.564 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class java.lang.SecurityException: Security manager blocks ("java.io.FilePermission" "H{$&" "write")
+java.lang.Thread.getStackTrace(Thread.java:1559)
+org.evosuite.runtime.sandbox.MSecurityManager.checkPermission(MSecurityManager.java:433)
+java.lang.SecurityManager.checkWrite(SecurityManager.java:979)
+sun.nio.fs.UnixChannelFactory.open(UnixChannelFactory.java:247)
+sun.nio.fs.UnixChannelFactory.newFileChannel(UnixChannelFactory.java:136)
+sun.nio.fs.UnixChannelFactory.newFileChannel(UnixChannelFactory.java:148)
+sun.nio.fs.UnixFileSystemProvider.newByteChannel(UnixFileSystemProvider.java:212)
+java.nio.file.spi.FileSystemProvider.newOutputStream(FileSystemProvider.java:434)
+java.nio.file.Files.newOutputStream(Files.java:216)
+java.nio.file.Files.newBufferedWriter(Files.java:2860)
+org.apache.commons.csv.CSVFormat.print(CSVFormat.java:1051)
+org.apache.commons.csv.CSVFormat_357_tmp__ESTest.test0(CSVFormat_357_tmp__ESTest.java:30)
+sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+java.lang.reflect.Method.invoke(Method.java:498)
+org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)
+org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56)
+org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+org.junit.internal.runners.statements.FailOnTimeout$CallableStatement.call(FailOnTimeout.java:288)
+org.junit.internal.runners.statements.FailOnTimeout$CallableStatement.call(FailOnTimeout.java:282)
+java.util.concurrent.FutureTask.run(FutureTask.java:266)
+java.lang.Thread.run(Thread.java:748)
+
+[MASTER] 12:40:55.565 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ CSVFormat cSVFormat0 = CSVFormat.INFORMIX_UNLOAD_CSV;
+MockFile mockFile0 = new MockFile("H{$&");
+Path path0 = mockFile0.toPath();
+Charset charset0 = Charset.defaultCharset();
+cSVFormat0.print(path0, charset0);
+
+[MASTER] 12:41:05.082 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class java.lang.SecurityException: Security manager blocks ("java.io.FilePermission" "/tmp/PostgreSQLCsv0/,>>,b$qGH-gW" "write")
+java.lang.Thread.getStackTrace(Thread.java:1559)
+org.evosuite.runtime.sandbox.MSecurityManager.checkPermission(MSecurityManager.java:433)
+java.lang.SecurityManager.checkWrite(SecurityManager.java:979)
+sun.nio.fs.UnixChannelFactory.open(UnixChannelFactory.java:247)
+sun.nio.fs.UnixChannelFactory.newFileChannel(UnixChannelFactory.java:136)
+sun.nio.fs.UnixChannelFactory.newFileChannel(UnixChannelFactory.java:148)
+sun.nio.fs.UnixFileSystemProvider.newByteChannel(UnixFileSystemProvider.java:212)
+java.nio.file.spi.FileSystemProvider.newOutputStream(FileSystemProvider.java:434)
+java.nio.file.Files.newOutputStream(Files.java:216)
+java.nio.file.Files.newBufferedWriter(Files.java:2860)
+org.apache.commons.csv.CSVFormat.print(CSVFormat.java:1051)
+org.apache.commons.csv.CSVFormat_484_tmp__ESTest.test0(CSVFormat_484_tmp__ESTest.java:119)
+sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+java.lang.reflect.Method.invoke(Method.java:498)
+org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)
+org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56)
+org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+org.junit.internal.runners.statements.FailOnTimeout$CallableStatement.call(FailOnTimeout.java:288)
+org.junit.internal.runners.statements.FailOnTimeout$CallableStatement.call(FailOnTimeout.java:282)
+java.util.concurrent.FutureTask.run(FutureTask.java:266)
+java.lang.Thread.run(Thread.java:748)
+
+[MASTER] 12:41:05.083 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ CSVFormat cSVFormat0 = CSVFormat.EXCEL;
+assertTrue(cSVFormat0.getAllowMissingColumnNames());
+assertNull(cSVFormat0.getNullString());
+assertFalse(cSVFormat0.getTrailingDelimiter());
+assertFalse(cSVFormat0.getIgnoreEmptyLines());
+assertNull(cSVFormat0.getEscapeCharacter());
+assertEquals('\"', (char)cSVFormat0.getQuoteCharacter());
+assertFalse(cSVFormat0.isNullStringSet());
+assertFalse(cSVFormat0.getTrim());
+assertFalse(cSVFormat0.getIgnoreSurroundingSpaces());
+assertNull(cSVFormat0.getQuoteMode());
+assertFalse(cSVFormat0.getSkipHeaderRecord());
+assertNull(cSVFormat0.getCommentMarker());
+assertEquals("\r\n", cSVFormat0.getRecordSeparator());
+assertFalse(cSVFormat0.isEscapeCharacterSet());
+assertFalse(cSVFormat0.getAutoFlush());
+assertEquals(',', cSVFormat0.getDelimiter());
+assertTrue(cSVFormat0.isQuoteCharacterSet());
+assertFalse(cSVFormat0.getIgnoreHeaderCase());
+assertFalse(cSVFormat0.isCommentMarkerSet());
+assertNotNull(cSVFormat0);
+
+File file0 = MockFile.createTempFile("PostgreSQLCsv", "");
+assertFalse(file0.isDirectory());
+assertEquals(1392409281320L, file0.lastModified());
+assertEquals(0L, file0.getFreeSpace());
+assertTrue(file0.exists());
+assertEquals(0L, file0.getTotalSpace());
+assertEquals(0L, file0.length());
+assertTrue(file0.canExecute());
+assertEquals("/tmp/PostgreSQLCsv0", file0.toString());
+assertTrue(file0.isFile());
+assertEquals("/tmp", file0.getParent());
+assertFalse(file0.isHidden());
+assertTrue(file0.isAbsolute());
+assertTrue(file0.canRead());
+assertTrue(file0.canWrite());
+assertEquals("PostgreSQLCsv0", file0.getName());
+assertEquals(0L, file0.getUsableSpace());
+assertNotNull(file0);
+
+MockFile mockFile0 = new MockFile(file0, ",>>,b$qGH-gW");
+assertNotNull(mockFile0);
+assertFalse(mockFile0.equals((Object)file0));
+
+Path path0 = mockFile0.toPath();
+assertFalse(file0.isDirectory());
+assertEquals(1392409281320L, file0.lastModified());
+assertEquals(0L, file0.getFreeSpace());
+assertTrue(file0.exists());
+assertEquals(0L, file0.getTotalSpace());
+assertEquals(0L, file0.length());
+assertTrue(file0.canExecute());
+assertEquals("/tmp/PostgreSQLCsv0", file0.toString());
+assertTrue(file0.isFile());
+assertEquals("/tmp", file0.getParent());
+assertFalse(file0.isHidden());
+assertTrue(file0.isAbsolute());
+assertTrue(file0.canRead());
+assertTrue(file0.canWrite());
+assertEquals("PostgreSQLCsv0", file0.getName());
+assertEquals(0L, file0.getUsableSpace());
+assertEquals(",>>,b$qGH-gW", mockFile0.getName());
+assertEquals(0L, mockFile0.getUsableSpace());
+assertFalse(mockFile0.isHidden());
+assertTrue(mockFile0.isFile());
+assertFalse(mockFile0.exists());
+assertFalse(mockFile0.canRead());
+assertFalse(mockFile0.canExecute());
+assertTrue(mockFile0.isAbsolute());
+assertEquals(0L, mockFile0.getTotalSpace());
+assertEquals(0L, mockFile0.lastModified());
+assertFalse(mockFile0.isDirectory());
+assertEquals(0L, mockFile0.getFreeSpace());
+assertEquals("/tmp/PostgreSQLCsv0", mockFile0.getParent());
+assertFalse(mockFile0.canWrite());
+assertEquals(0L, mockFile0.length());
+assertEquals("/tmp/PostgreSQLCsv0/,>>,b$qGH-gW", mockFile0.toString());
+assertNotSame(file0, mockFile0);
+assertNotSame(mockFile0, file0);
+assertNotNull(path0);
+assertFalse(file0.equals((Object)mockFile0));
+assertFalse(mockFile0.equals((Object)file0));
+
+Charset charset0 = Charset.defaultCharset();
+assertEquals("US-ASCII", charset0.name());
+assertTrue(charset0.isRegistered());
+assertEquals("US-ASCII", charset0.displayName());
+assertEquals("US-ASCII", charset0.toString());
+assertTrue(charset0.canEncode());
+assertNotNull(charset0);
+
+cSVFormat0.print(path0, charset0);
+
+[MASTER] 12:41:12.738 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class java.lang.SecurityException: Security manager blocks ("java.io.FilePermission" "/tmp/foo.bar" "write")
+java.lang.Thread.getStackTrace(Thread.java:1559)
+org.evosuite.runtime.sandbox.MSecurityManager.checkPermission(MSecurityManager.java:433)
+java.lang.SecurityManager.checkWrite(SecurityManager.java:979)
+sun.nio.fs.UnixChannelFactory.open(UnixChannelFactory.java:247)
+sun.nio.fs.UnixChannelFactory.newFileChannel(UnixChannelFactory.java:136)
+sun.nio.fs.UnixChannelFactory.newFileChannel(UnixChannelFactory.java:148)
+sun.nio.fs.UnixFileSystemProvider.newByteChannel(UnixFileSystemProvider.java:212)
+java.nio.file.spi.FileSystemProvider.newOutputStream(FileSystemProvider.java:434)
+java.nio.file.Files.newOutputStream(Files.java:216)
+java.nio.file.Files.newBufferedWriter(Files.java:2860)
+org.apache.commons.csv.CSVFormat.print(CSVFormat.java:1051)
+org.apache.commons.csv.CSVFormat_520_tmp__ESTest.test0(CSVFormat_520_tmp__ESTest.java:104)
+sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+java.lang.reflect.Method.invoke(Method.java:498)
+org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)
+org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56)
+org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+org.junit.internal.runners.statements.FailOnTimeout$CallableStatement.call(FailOnTimeout.java:288)
+org.junit.internal.runners.statements.FailOnTimeout$CallableStatement.call(FailOnTimeout.java:282)
+java.util.concurrent.FutureTask.run(FutureTask.java:266)
+java.lang.Thread.run(Thread.java:748)
+
+[MASTER] 12:41:12.740 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ CSVFormat cSVFormat0 = CSVFormat.POSTGRESQL_CSV;
+assertTrue(cSVFormat0.isNullStringSet());
+assertEquals("", cSVFormat0.getNullString());
+assertEquals("\n", cSVFormat0.getRecordSeparator());
+assertFalse(cSVFormat0.isCommentMarkerSet());
+assertEquals('\"', (char)cSVFormat0.getQuoteCharacter());
+assertFalse(cSVFormat0.getIgnoreEmptyLines());
+assertFalse(cSVFormat0.getTrim());
+assertFalse(cSVFormat0.getIgnoreSurroundingSpaces());
+assertEquals('\"', (char)cSVFormat0.getEscapeCharacter());
+assertEquals(QuoteMode.ALL_NON_NULL, cSVFormat0.getQuoteMode());
+assertFalse(cSVFormat0.getAllowMissingColumnNames());
+assertFalse(cSVFormat0.getTrailingDelimiter());
+assertFalse(cSVFormat0.getAutoFlush());
+assertEquals(',', cSVFormat0.getDelimiter());
+assertFalse(cSVFormat0.getSkipHeaderRecord());
+assertFalse(cSVFormat0.getIgnoreHeaderCase());
+assertNull(cSVFormat0.getCommentMarker());
+assertTrue(cSVFormat0.isQuoteCharacterSet());
+assertTrue(cSVFormat0.isEscapeCharacterSet());
+assertNotNull(cSVFormat0);
+
+URI uRI0 = MockURI.aFileURI;
+assertTrue(uRI0.isAbsolute());
+assertNull(uRI0.getRawAuthority());
+assertNull(uRI0.getRawFragment());
+assertEquals("file:///tmp/foo.bar", uRI0.toString());
+assertEquals((-1), uRI0.getPort());
+assertFalse(uRI0.isOpaque());
+assertNull(uRI0.getHost());
+assertEquals("/tmp/foo.bar", uRI0.getRawPath());
+assertNull(uRI0.getRawQuery());
+assertNull(uRI0.getRawUserInfo());
+assertEquals("file", uRI0.getScheme());
+assertNotNull(uRI0);
+
+MockFile mockFile0 = new MockFile(uRI0);
+assertNotNull(mockFile0);
+
+Path path0 = mockFile0.toPath();
+assertTrue(uRI0.isAbsolute());
+assertNull(uRI0.getRawAuthority());
+assertNull(uRI0.getRawFragment());
+assertEquals("file:///tmp/foo.bar", uRI0.toString());
+assertEquals((-1), uRI0.getPort());
+assertFalse(uRI0.isOpaque());
+assertNull(uRI0.getHost());
+assertEquals("/tmp/foo.bar", uRI0.getRawPath());
+assertNull(uRI0.getRawQuery());
+assertNull(uRI0.getRawUserInfo());
+assertEquals("file", uRI0.getScheme());
+assertFalse(mockFile0.exists());
+assertEquals(0L, mockFile0.getFreeSpace());
+assertEquals(0L, mockFile0.length());
+assertFalse(mockFile0.isDirectory());
+assertFalse(mockFile0.canExecute());
+assertEquals(0L, mockFile0.getTotalSpace());
+assertTrue(mockFile0.isFile());
+assertTrue(mockFile0.isAbsolute());
+assertEquals("/tmp", mockFile0.getParent());
+assertFalse(mockFile0.canWrite());
+assertEquals(0L, mockFile0.lastModified());
+assertEquals("/tmp/foo.bar", mockFile0.toString());
+assertFalse(mockFile0.canRead());
+assertFalse(mockFile0.isHidden());
+assertEquals(0L, mockFile0.getUsableSpace());
+assertEquals("foo.bar", mockFile0.getName());
+assertNotNull(path0);
+
+Charset charset0 = Charset.defaultCharset();
+assertTrue(charset0.canEncode());
+assertTrue(charset0.isRegistered());
+assertEquals("US-ASCII", charset0.name());
+assertEquals("US-ASCII", charset0.displayName());
+assertEquals("US-ASCII", charset0.toString());
+assertNotNull(charset0);
+
+CSVPrinter cSVPrinter0 = cSVFormat0.POSTGRESQL_CSV.print(path0, charset0);
+assertTrue(cSVFormat0.isNullStringSet());
+assertEquals("", cSVFormat0.getNullString());
+assertEquals("\n", cSVFormat0.getRecordSeparator());
+assertFalse(cSVFormat0.isCommentMarkerSet());
+assertEquals('\"', (char)cSVFormat0.getQuoteCharacter());
+assertFalse(cSVFormat0.getIgnoreEmptyLines());
+assertFalse(cSVFormat0.getTrim());
+assertFalse(cSVFormat0.getIgnoreSurroundingSpaces());
+assertEquals('\"', (char)cSVFormat0.getEscapeCharacter());
+assertEquals(QuoteMode.ALL_NON_NULL, cSVFormat0.getQuoteMode());
+assertFalse(cSVFormat0.getAllowMissingColumnNames());
+assertFalse(cSVFormat0.getTrailingDelimiter());
+assertFalse(cSVFormat0.getAutoFlush());
+assertEquals(',', cSVFormat0.getDelimiter());
+assertFalse(cSVFormat0.getSkipHeaderRecord());
+assertFalse(cSVFormat0.getIgnoreHeaderCase());
+assertNull(cSVFormat0.getCommentMarker());
+assertTrue(cSVFormat0.isQuoteCharacterSet());
+assertTrue(cSVFormat0.isEscapeCharacterSet());
+assertTrue(uRI0.isAbsolute());
+assertNull(uRI0.getRawAuthority());
+assertNull(uRI0.getRawFragment());
+assertEquals("file:///tmp/foo.bar", uRI0.toString());
+assertEquals((-1), uRI0.getPort());
+assertFalse(uRI0.isOpaque());
+assertNull(uRI0.getHost());
+assertEquals("/tmp/foo.bar", uRI0.getRawPath());
+assertNull(uRI0.getRawQuery());
+assertNull(uRI0.getRawUserInfo());
+assertEquals("file", uRI0.getScheme());
+assertFalse(mockFile0.exists());
+assertEquals(0L, mockFile0.getFreeSpace());
+assertEquals(0L, mockFile0.length());
+assertFalse(mockFile0.isDirectory());
+assertFalse(mockFile0.canExecute());
+assertEquals(0L, mockFile0.getTotalSpace());
+assertTrue(mockFile0.isFile());
+assertTrue(mockFile0.isAbsolute());
+assertEquals("/tmp", mockFile0.getParent());
+assertFalse(mockFile0.canWrite());
+assertEquals(0L, mockFile0.lastModified());
+assertEquals("/tmp/foo.bar", mockFile0.toString());
+assertFalse(mockFile0.canRead());
+assertFalse(mockFile0.isHidden());
+assertEquals(0L, mockFile0.getUsableSpace());
+assertEquals("foo.bar", mockFile0.getName());
+assertTrue(charset0.canEncode());
+assertTrue(charset0.isRegistered());
+assertEquals("US-ASCII", charset0.name());
+assertEquals("US-ASCII", charset0.displayName());
+assertEquals("US-ASCII", charset0.toString());
+assertNotNull(cSVPrinter0);
+
+
+* Permissions denied during test execution: 
+  - java.io.FilePermission: 
+         write /experiment/Delimiter=<	> QuoteChar=<"> RecordSeparator=<
+> EmptyLines:ignored SurroundingSpaces:ignored SkipHeaderRecord:false/Delimiter=<	> QuoteChar=<"> RecordSeparator=<
+> EmptyLines:ignored SurroundingSpaces:ignored SkipHeaderRecord:false: 1
+         write H{$&: 1
+         write /tmp/foo.bar: 1
+         write /tmp/PostgreSQLCsv0/,>>,b$qGH-gW: 1
+* Writing tests to file
+* Writing JUnit test case 'CSVFormat_ESTest' to results/Csv-15/org.apache.commons.csv.CSVFormat/BBC-F0-opt-80/tests/9
+* Done!
+
 * Computation finished
-[MASTER] 21:54:51.670 [main] ERROR SearchStatistics - No obtained value for output variable: LineCoverage
-[MASTER] 21:54:53.675 [main] ERROR SearchStatistics - No obtained value for output variable: LineCoverage
-[MASTER] 21:54:54.676 [main] ERROR SearchStatistics - No obtained value for output variable: LineCoverage
-[MASTER] 21:54:55.676 [main] ERROR SearchStatistics - No obtained value for output variable: LineCoverage
-[MASTER] 21:54:56.677 [main] ERROR SearchStatistics - No obtained value for output variable: LineCoverage
-[MASTER] 21:54:57.677 [main] ERROR SearchStatistics - No obtained value for output variable: LineCoverage
-[MASTER] 21:54:57.678 [main] ERROR SearchStatistics - Not going to write down statistics data, as some are missing
-[MASTER] 21:54:57.779 [main] ERROR TestGeneration - failed to write statistics data

@@ -2,7 +2,7 @@
 * Configuration: BBC-F0-opt-20
 * Going to generate test cases for class: org.apache.commons.compress.archivers.zip.ZipArchiveInputStream
 * Starting Client-0
-* Connecting to master process on port 17873
+* Connecting to master process on port 13182
 * Analyzing classpath: 
   - subjects/buggy-versions/Compress-41/target/classes
   - defects4j/framework/projects/Compress/lib/org/tukaani/xz/1.6/xz-1.6.jar
@@ -18,45 +18,72 @@
   - No-Exception Top-Level Method Coverage
   - Context Branch Coverage
 * Total number of test goals for DYNAMOSA: 1778
-* Using seed 830182830
+* Using seed 4264045390
 * Starting evolution
 bbc usage percentage is: 20%
 * Initial Number of Goals in DynaMOSA = 421 / 1778
-[MASTER] 21:49:10.295 [logback-2] ERROR TestCluster - Failed to check cache for java.util.Enumeration<E> : Type points to itself
-[MASTER] 21:49:36.978 [logback-1] WARN  CoverageArchive - A solution with a timeout/exception result has been added to the archive. The covered goal was org.apache.commons.compress.archivers.zip.ZipArchiveInputStream.skip(J)J: I34 Branch 57 IFLE L552 - true
-[MASTER] 21:49:37.023 [logback-1] WARN  CoverageArchive - A solution with a timeout/exception result has been added to the archive. The covered goal was Weak Mutation 382: org.apache.commons.compress.archivers.zip.ZipArchiveInputStream.skip(J)J:553 - ReplaceComparisonOperator != -> -1
-[MASTER] 21:49:37.026 [logback-1] WARN  CoverageArchive - A solution with a timeout/exception result has been added to the archive. The covered goal was Weak Mutation 380: org.apache.commons.compress.archivers.zip.ZipArchiveInputStream.skip(J)J:553 - ReplaceConstant - -1 -> 1
-[MASTER] 21:49:37.026 [logback-1] WARN  CoverageArchive - A solution with a timeout/exception result has been added to the archive. The covered goal was Weak Mutation 381: org.apache.commons.compress.archivers.zip.ZipArchiveInputStream.skip(J)J:553 - ReplaceConstant - -1 -> -2
-[MASTER] 21:49:37.027 [logback-1] WARN  CoverageArchive - A solution with a timeout/exception result has been added to the archive. The covered goal was Weak Mutation 379: org.apache.commons.compress.archivers.zip.ZipArchiveInputStream.skip(J)J:553 - ReplaceConstant - -1 -> 0
-[MASTER] 21:49:37.033 [logback-1] WARN  CoverageArchive - A solution with a timeout/exception result has been added to the archive. The covered goal was Weak Mutation 371: org.apache.commons.compress.archivers.zip.ZipArchiveInputStream.skip(J)J:552 - ReplaceComparisonOperator <= -> ==
-[MASTER] 21:49:37.082 [logback-1] WARN  CoverageArchive - A solution with a timeout/exception result has been added to the archive. The covered goal was org.apache.commons.compress.archivers.zip.ZipArchiveInputStream.skip(J)J: Line 553
-[MASTER] 21:49:37.088 [logback-1] WARN  CoverageArchive - A solution with a timeout/exception result has been added to the archive. The covered goal was org.apache.commons.compress.archivers.zip.ZipArchiveInputStream.skip(J)J: I50 Branch 58 IF_ICMPNE L553 - false
-[MASTER] 21:50:16.833 [logback-2] ERROR ClientNodeImpl - Error when generating tests for: org.apache.commons.compress.archivers.zip.ZipArchiveInputStream with seed 830182830. Configuration id : BBC-F0-opt-20
-java.lang.NullPointerException: null
-	at org.evosuite.testcase.secondaryobjectives.basicblock.BasicBlockCoverage.compareChromosomes(BasicBlockCoverage.java:59)
-	at org.evosuite.testcase.TestChromosome.compareSecondaryObjective(TestChromosome.java:680)
-	at org.evosuite.testcase.TestChromosome.compareSecondaryObjective(TestChromosome.java:68)
-	at org.evosuite.ga.comparators.PreferenceSortingComparator.compare(PreferenceSortingComparator.java:74)
-	at org.evosuite.ga.operators.ranking.RankBasedPreferenceSorting.getZeroFront(RankBasedPreferenceSorting.java:111)
-	at org.evosuite.ga.operators.ranking.RankBasedPreferenceSorting.computeRankingAssignment(RankBasedPreferenceSorting.java:65)
-	at org.evosuite.ga.metaheuristics.mosa.DynaMOSA.evolve(DynaMOSA.java:83)
-	at org.evosuite.ga.metaheuristics.mosa.DynaMOSA.generateSolution(DynaMOSA.java:174)
-	at org.evosuite.ga.metaheuristics.TestSuiteAdapter.generateSolution(TestSuiteAdapter.java:114)
-	at org.evosuite.strategy.MOSuiteStrategy.generateTests(MOSuiteStrategy.java:123)
-	at org.evosuite.TestSuiteGenerator.generateTests(TestSuiteGenerator.java:630)
-	at org.evosuite.TestSuiteGenerator.generateTestSuite(TestSuiteGenerator.java:205)
-	at org.evosuite.rmi.service.ClientNodeImpl.lambda$startNewSearch$0(ClientNodeImpl.java:150)
-	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
-	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
-	at java.lang.Thread.run(Thread.java:748)
+[MASTER] 12:03:00.260 [logback-2] ERROR TestCluster - Failed to check cache for java.util.Enumeration<E> : Type points to itself
+[MASTER] 12:04:34.314 [logback-1] WARN  TestChromosome - Functional mock problem: org.evosuite.ga.ConstructionFailedException: Failed to add constructor for java.io.PushbackInputStream due to org.evosuite.ga.ConstructionFailedException: Failed to add constructor for org.evosuite.runtime.mock.java.io.MockFileInputStream due to org.evosuite.ga.ConstructionFailedException: Failed to add constructor for org.evosuite.runtime.mock.java.io.MockRandomAccessFile due to org.evosuite.ga.ConstructionFailedException: Failed to add constructor for org.evosuite.runtime.mock.java.io.MockFile due to org.evosuite.ga.ConstructionFailedException: Max recursion depth reached
+* Search finished after 616s and 234 generations, 86176 statements, best individual has fitness: 1509.0
+* Minimizing test suite
+* Going to analyze the coverage criteria
+* Coverage analysis for criterion LINE
+* Coverage of criterion LINE: 21%
+* Total number of goals: 389
+* Number of covered goals: 80
+* Coverage analysis for criterion BRANCH
+* Coverage of criterion BRANCH: 15%
+* Total number of goals: 269
+* Number of covered goals: 41
+* Coverage analysis for criterion EXCEPTION
+* Coverage of criterion EXCEPTION: 100%
+* Total number of goals: 16
+* Number of covered goals: 16
+* Coverage analysis for criterion WEAKMUTATION
+* Coverage of criterion WEAKMUTATION: 12%
+* Total number of goals: 767
+* Number of covered goals: 93
+* Coverage analysis for criterion OUTPUT
+* Coverage of criterion OUTPUT: 12%
+* Total number of goals: 52
+* Number of covered goals: 6
+* Coverage analysis for criterion METHOD
+* Coverage of criterion METHOD: 69%
+* Total number of goals: 16
+* Number of covered goals: 11
+* Coverage analysis for criterion METHODNOEXCEPTION
+* Coverage of criterion METHODNOEXCEPTION: 69%
+* Total number of goals: 16
+* Number of covered goals: 11
+* Coverage analysis for criterion CBRANCH
+* Coverage of criterion CBRANCH: 15%
+* Total number of goals: 269
+* Number of covered goals: 41
+* Generated 29 tests with total length 102
+* Resulting test suite's coverage: 33% (average coverage for all fitness functions)
+* Generating assertions
+* Resulting test suite's mutation score: 5%
+* Compiling and checking tests
+[MASTER] 12:14:19.107 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 12:14:20.852 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 12:14:26.497 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 12:14:28.066 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 12:14:28.757 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 12:14:29.534 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 12:14:33.205 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 12:14:34.244 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 12:14:35.381 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 12:14:36.091 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 12:14:38.258 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 12:14:38.954 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 12:14:39.609 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 12:14:42.089 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 12:14:44.201 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 12:14:46.704 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 12:14:57.833 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 12:14:57.835 [logback-1] WARN  TestSuiteGenerator - JUnit checking timed out
+* Writing tests to file
+* Writing JUnit test case 'ZipArchiveInputStream_ESTest' to results/Compress-41/org.apache.commons.compress.archivers.zip.ZipArchiveInputStream/BBC-F0-opt-20/tests/4
+* Done!
+
 * Computation finished
-[MASTER] 21:50:16.978 [main] ERROR SearchStatistics - No obtained value for output variable: LineCoverage
-[MASTER] 21:50:18.980 [main] ERROR SearchStatistics - No obtained value for output variable: LineCoverage
-[MASTER] 21:50:19.981 [main] ERROR SearchStatistics - No obtained value for output variable: LineCoverage
-[MASTER] 21:50:20.981 [main] ERROR SearchStatistics - No obtained value for output variable: LineCoverage
-[MASTER] 21:50:21.982 [main] ERROR SearchStatistics - No obtained value for output variable: LineCoverage
-[MASTER] 21:50:22.983 [main] ERROR SearchStatistics - No obtained value for output variable: LineCoverage
-[MASTER] 21:50:22.983 [main] ERROR SearchStatistics - Not going to write down statistics data, as some are missing
-[MASTER] 21:50:23.084 [main] ERROR TestGeneration - failed to write statistics data

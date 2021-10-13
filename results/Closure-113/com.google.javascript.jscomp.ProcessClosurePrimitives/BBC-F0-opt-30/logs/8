@@ -2,7 +2,7 @@
 * Configuration: BBC-F0-opt-30
 * Going to generate test cases for class: com.google.javascript.jscomp.ProcessClosurePrimitives
 * Starting Client-0
-* Connecting to master process on port 20624
+* Connecting to master process on port 8242
 * Analyzing classpath: 
   - subjects/buggy-versions/Closure-113/build/classes
   - subjects/buggy-versions/Closure-113/lib/args4j.jar
@@ -24,40 +24,93 @@
   - No-Exception Top-Level Method Coverage
   - Context Branch Coverage
 * Total number of test goals for DYNAMOSA: 1637
-* Using seed 1727117422
+* Using seed 1141298778
 * Starting evolution
 bbc usage percentage is: 30%
 * Initial Number of Goals in DynaMOSA = 361 / 1637
-[MASTER] 21:35:34.762 [logback-2] ERROR TestCluster - Failed to check cache for java.util.AbstractMap<K, V>.SimpleEntry<K, V> : Type points to itself
-[MASTER] 21:35:34.762 [logback-2] ERROR TestCluster - Failed to check cache for java.util.AbstractMap<K, V>.SimpleImmutableEntry<K, V> : Type points to itself
-[MASTER] 21:36:09.823 [logback-2] ERROR TestCluster - Failed to check cache for java.util.Iterator<E> : Type points to itself
-[MASTER] 21:36:24.260 [logback-2] ERROR TestCluster - Failed to check cache for java.util.Enumeration<E> : Type points to itself
-[MASTER] 21:36:35.556 [logback-2] ERROR ClientNodeImpl - Error when generating tests for: com.google.javascript.jscomp.ProcessClosurePrimitives with seed 1727117422. Configuration id : BBC-F0-opt-30
-java.lang.NullPointerException: null
-	at org.evosuite.testcase.secondaryobjectives.basicblock.BasicBlockCoverage.compareChromosomes(BasicBlockCoverage.java:59)
-	at org.evosuite.testcase.TestChromosome.compareSecondaryObjective(TestChromosome.java:680)
-	at org.evosuite.testcase.TestChromosome.compareSecondaryObjective(TestChromosome.java:68)
-	at org.evosuite.ga.comparators.PreferenceSortingComparator.compare(PreferenceSortingComparator.java:74)
-	at org.evosuite.ga.operators.ranking.RankBasedPreferenceSorting.getZeroFront(RankBasedPreferenceSorting.java:111)
-	at org.evosuite.ga.operators.ranking.RankBasedPreferenceSorting.computeRankingAssignment(RankBasedPreferenceSorting.java:65)
-	at org.evosuite.ga.metaheuristics.mosa.DynaMOSA.evolve(DynaMOSA.java:83)
-	at org.evosuite.ga.metaheuristics.mosa.DynaMOSA.generateSolution(DynaMOSA.java:174)
-	at org.evosuite.ga.metaheuristics.TestSuiteAdapter.generateSolution(TestSuiteAdapter.java:114)
-	at org.evosuite.strategy.MOSuiteStrategy.generateTests(MOSuiteStrategy.java:123)
-	at org.evosuite.TestSuiteGenerator.generateTests(TestSuiteGenerator.java:630)
-	at org.evosuite.TestSuiteGenerator.generateTestSuite(TestSuiteGenerator.java:205)
-	at org.evosuite.rmi.service.ClientNodeImpl.lambda$startNewSearch$0(ClientNodeImpl.java:150)
-	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
-	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
-	at java.lang.Thread.run(Thread.java:748)
+[MASTER] 10:34:06.698 [logback-2] ERROR TestCluster - Failed to check cache for java.util.AbstractMap<K, V>.SimpleEntry<K, V> : Type points to itself
+[MASTER] 10:34:06.698 [logback-2] ERROR TestCluster - Failed to check cache for java.util.AbstractMap<K, V>.SimpleImmutableEntry<K, V> : Type points to itself
+[MASTER] 10:34:35.570 [logback-2] ERROR TestCluster - Failed to check cache for java.util.Iterator<E> : Type points to itself
+[MASTER] 10:36:08.123 [logback-2] ERROR TestCluster - Failed to check cache for java.util.Comparator<T> : Type points to itself
+[MASTER] 10:37:03.038 [logback-2] ERROR TestCluster - Failed to check cache for com.google.javascript.jscomp.ControlFlowGraph<N> : Type points to itself
+* Search finished after 603s and 720 generations, 299889 statements, best individual has fitness: 1448.0
+* Minimizing test suite
+* Going to analyze the coverage criteria
+* Coverage analysis for criterion LINE
+* Coverage of criterion LINE: 14%
+* Total number of goals: 472
+* Number of covered goals: 65
+* Coverage analysis for criterion BRANCH
+* Coverage of criterion BRANCH: 13%
+* Total number of goals: 350
+* Number of covered goals: 47
+* Coverage analysis for criterion EXCEPTION
+* Coverage of criterion EXCEPTION: 100%
+* Total number of goals: 6
+* Number of covered goals: 6
+* Coverage analysis for criterion WEAKMUTATION
+* Coverage of criterion WEAKMUTATION: 6%
+* Total number of goals: 441
+* Number of covered goals: 27
+* Coverage analysis for criterion OUTPUT
+* Coverage of criterion OUTPUT: 33%
+* Total number of goals: 6
+* Number of covered goals: 2
+* Coverage analysis for criterion METHOD
+* Coverage of criterion METHOD: 56%
+* Total number of goals: 9
+* Number of covered goals: 5
+* Coverage analysis for criterion METHODNOEXCEPTION
+* Coverage of criterion METHODNOEXCEPTION: 44%
+* Total number of goals: 9
+* Number of covered goals: 4
+* Coverage analysis for criterion CBRANCH
+* Coverage of criterion CBRANCH: 13%
+* Total number of goals: 350
+* Number of covered goals: 46
+* Generated 14 tests with total length 94
+* Resulting test suite's coverage: 29% (average coverage for all fitness functions)
+* Generating assertions
+* Resulting test suite's mutation score: 4%
+* Compiling and checking tests
+[MASTER] 10:44:17.025 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 10:44:17.029 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class java.lang.AssertionError: Expecting exception: IllegalArgumentException
+[MASTER] 10:44:17.030 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ Compiler compiler0 = new Compiler();
+compiler0.parseSyntheticCode("goog.base", "goog.base");
+
+[MASTER] 10:44:23.070 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class java.lang.AssertionError: Expecting exception: IllegalArgumentException
+[MASTER] 10:44:23.070 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ Compiler compiler0 = new Compiler();
+compiler0.parseSyntheticCode("goop.baGe", "goop.baGe");
+
+[MASTER] 10:44:25.976 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class java.lang.AssertionError: Expecting exception: IllegalArgumentException
+[MASTER] 10:44:25.976 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ Compiler compiler0 = new Compiler();
+compiler0.parseSyntheticCode("goop.baGe", "goop.baGe");
+
+[MASTER] 10:44:27.692 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class java.lang.AssertionError: Expecting exception: IllegalArgumentException
+[MASTER] 10:44:27.692 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ Compiler compiler0 = new Compiler();
+compiler0.parseSyntheticCode("goop.baGe", "goop.baGe");
+
+[MASTER] 10:44:29.185 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class java.lang.AssertionError: Expecting exception: IllegalArgumentException
+[MASTER] 10:44:29.186 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ Compiler compiler0 = new Compiler();
+compiler0.parseSyntheticCode(" ld<H", " ld<H");
+
+[MASTER] 10:44:30.598 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class java.lang.AssertionError: Expecting exception: IllegalArgumentException
+[MASTER] 10:44:30.598 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ Compiler compiler0 = new Compiler();
+compiler0.parseSyntheticCode("goop.baGe", "goop.baGe");
+
+[MASTER] 10:44:33.488 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class java.lang.AssertionError: Expecting exception: IllegalArgumentException
+[MASTER] 10:44:33.488 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ Compiler compiler0 = new Compiler();
+compiler0.parseSyntheticCode("goog.base", "goog.base");
+
+* Writing tests to file
+* Writing JUnit test case 'ProcessClosurePrimitives_ESTest' to results/Closure-113/com.google.javascript.jscomp.ProcessClosurePrimitives/BBC-F0-opt-30/tests/8
+* Done!
+
 * Computation finished
-[MASTER] 21:36:35.670 [main] ERROR SearchStatistics - No obtained value for output variable: LineCoverage
-[MASTER] 21:36:37.673 [main] ERROR SearchStatistics - No obtained value for output variable: LineCoverage
-[MASTER] 21:36:38.673 [main] ERROR SearchStatistics - No obtained value for output variable: LineCoverage
-[MASTER] 21:36:39.674 [main] ERROR SearchStatistics - No obtained value for output variable: LineCoverage
-[MASTER] 21:36:40.675 [main] ERROR SearchStatistics - No obtained value for output variable: LineCoverage
-[MASTER] 21:36:41.675 [main] ERROR SearchStatistics - No obtained value for output variable: LineCoverage
-[MASTER] 21:36:41.676 [main] ERROR SearchStatistics - Not going to write down statistics data, as some are missing
-[MASTER] 21:36:41.777 [main] ERROR TestGeneration - failed to write statistics data

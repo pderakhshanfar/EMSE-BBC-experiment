@@ -2,7 +2,7 @@
 * Configuration: BBC-F0-opt-60
 * Going to generate test cases for class: com.google.javascript.jscomp.type.ClosureReverseAbstractInterpreter
 * Starting Client-0
-* Connecting to master process on port 15661
+* Connecting to master process on port 10012
 * Analyzing classpath: 
   - subjects/buggy-versions/Closure-111/build/classes
   - subjects/buggy-versions/Closure-111/lib/args4j.jar
@@ -24,38 +24,78 @@
   - No-Exception Top-Level Method Coverage
   - Context Branch Coverage
 * Total number of test goals for DYNAMOSA: 305
-* Using seed 4016582798
+* Using seed 1714164428
 * Starting evolution
 bbc usage percentage is: 60%
 * Initial Number of Goals in DynaMOSA = 112 / 305
-[MASTER] 21:32:16.518 [logback-2] ERROR TestCluster - Failed to check cache for java.util.Iterator<E> : Type points to itself
-[MASTER] 21:32:37.274 [logback-2] ERROR TestCluster - Failed to check cache for java.util.Comparator<T> : Type points to itself
-[MASTER] 21:33:12.471 [logback-2] ERROR ClientNodeImpl - Error when generating tests for: com.google.javascript.jscomp.type.ClosureReverseAbstractInterpreter with seed 4016582798. Configuration id : BBC-F0-opt-60
-java.lang.NullPointerException: null
-	at org.evosuite.testcase.secondaryobjectives.basicblock.BasicBlockCoverage.compareChromosomes(BasicBlockCoverage.java:59)
-	at org.evosuite.testcase.TestChromosome.compareSecondaryObjective(TestChromosome.java:680)
-	at org.evosuite.testcase.TestChromosome.compareSecondaryObjective(TestChromosome.java:68)
-	at org.evosuite.ga.comparators.PreferenceSortingComparator.compare(PreferenceSortingComparator.java:74)
-	at org.evosuite.ga.operators.ranking.RankBasedPreferenceSorting.getZeroFront(RankBasedPreferenceSorting.java:111)
-	at org.evosuite.ga.operators.ranking.RankBasedPreferenceSorting.computeRankingAssignment(RankBasedPreferenceSorting.java:65)
-	at org.evosuite.ga.metaheuristics.mosa.DynaMOSA.evolve(DynaMOSA.java:83)
-	at org.evosuite.ga.metaheuristics.mosa.DynaMOSA.generateSolution(DynaMOSA.java:174)
-	at org.evosuite.ga.metaheuristics.TestSuiteAdapter.generateSolution(TestSuiteAdapter.java:114)
-	at org.evosuite.strategy.MOSuiteStrategy.generateTests(MOSuiteStrategy.java:123)
-	at org.evosuite.TestSuiteGenerator.generateTests(TestSuiteGenerator.java:630)
-	at org.evosuite.TestSuiteGenerator.generateTestSuite(TestSuiteGenerator.java:205)
-	at org.evosuite.rmi.service.ClientNodeImpl.lambda$startNewSearch$0(ClientNodeImpl.java:150)
-	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
-	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
-	at java.lang.Thread.run(Thread.java:748)
+[MASTER] 10:11:19.307 [logback-2] ERROR TestCluster - Failed to check cache for java.util.Iterator<E> : Type points to itself
+[MASTER] 10:11:37.792 [logback-2] ERROR TestCluster - Failed to check cache for java.util.Comparator<T> : Type points to itself
+* Search finished after 601s and 3397 generations, 1838791 statements, best individual has fitness: 203.0
+* Minimizing test suite
+* Going to analyze the coverage criteria
+* Coverage analysis for criterion LINE
+* Coverage of criterion LINE: 27%
+* Total number of goals: 60
+* Number of covered goals: 16
+* Coverage analysis for criterion BRANCH
+* Coverage of criterion BRANCH: 32%
+* Total number of goals: 71
+* Number of covered goals: 23
+* Coverage analysis for criterion EXCEPTION
+* Coverage of criterion EXCEPTION: 80%
+* Total number of goals: 5
+* Number of covered goals: 4
+* Coverage analysis for criterion WEAKMUTATION
+* Coverage of criterion WEAKMUTATION: 39%
+* Total number of goals: 97
+* Number of covered goals: 38
+* Coverage analysis for criterion OUTPUT
+* Coverage of criterion OUTPUT: 100%
+* Total number of goals: 2
+* Number of covered goals: 2
+* Coverage analysis for criterion METHOD
+* Coverage of criterion METHOD: 100%
+* Total number of goals: 2
+* Number of covered goals: 2
+* Coverage analysis for criterion METHODNOEXCEPTION
+* Coverage of criterion METHODNOEXCEPTION: 100%
+* Total number of goals: 2
+* Number of covered goals: 2
+* Coverage analysis for criterion CBRANCH
+* Coverage of criterion CBRANCH: 32%
+* Total number of goals: 71
+* Number of covered goals: 23
+* Generated 9 tests with total length 86
+* Resulting test suite's coverage: 61% (average coverage for all fitness functions)
+* Generating assertions
+* Resulting test suite's mutation score: 7%
+* Compiling and checking tests
+[MASTER] 10:21:26.649 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 10:21:27.312 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 10:21:27.984 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 10:21:28.432 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 10:21:28.925 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 10:21:29.425 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 10:21:29.929 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 10:21:30.480 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 10:21:30.492 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class java.lang.StackOverflowError: null
+[MASTER] 10:21:30.493 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ SimpleErrorReporter simpleErrorReporter0 = new SimpleErrorReporter();
+Node node0 = new Node(33);
+JSTypeRegistry jSTypeRegistry0 = new JSTypeRegistry(simpleErrorReporter0);
+node0.addChildrenToBack(node0);
+ClosureCodingConvention closureCodingConvention0 = new ClosureCodingConvention();
+ClosureReverseAbstractInterpreter closureReverseAbstractInterpreter0 = new ClosureReverseAbstractInterpreter(closureCodingConvention0, jSTypeRegistry0);
+JqueryCodingConvention jqueryCodingConvention0 = new JqueryCodingConvention(closureCodingConvention0);
+SemanticReverseAbstractInterpreter semanticReverseAbstractInterpreter0 = new SemanticReverseAbstractInterpreter(jqueryCodingConvention0, jSTypeRegistry0);
+closureReverseAbstractInterpreter0.append(semanticReverseAbstractInterpreter0);
+closureReverseAbstractInterpreter0.getPreciserScopeKnowingConditionOutcome(node0, (FlowScope) null, false);
+
+[MASTER] 10:21:30.956 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 10:21:31.899 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 10:21:32.589 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+* Writing tests to file
+* Writing JUnit test case 'ClosureReverseAbstractInterpreter_ESTest' to results/Closure-111/com.google.javascript.jscomp.type.ClosureReverseAbstractInterpreter/BBC-F0-opt-60/tests/9
+* Done!
+
 * Computation finished
-[MASTER] 21:33:12.589 [main] ERROR SearchStatistics - No obtained value for output variable: LineCoverage
-[MASTER] 21:33:14.591 [main] ERROR SearchStatistics - No obtained value for output variable: LineCoverage
-[MASTER] 21:33:15.592 [main] ERROR SearchStatistics - No obtained value for output variable: LineCoverage
-[MASTER] 21:33:16.593 [main] ERROR SearchStatistics - No obtained value for output variable: LineCoverage
-[MASTER] 21:33:17.594 [main] ERROR SearchStatistics - No obtained value for output variable: LineCoverage
-[MASTER] 21:33:18.594 [main] ERROR SearchStatistics - No obtained value for output variable: LineCoverage
-[MASTER] 21:33:18.595 [main] ERROR SearchStatistics - Not going to write down statistics data, as some are missing
-[MASTER] 21:33:18.695 [main] ERROR TestGeneration - failed to write statistics data

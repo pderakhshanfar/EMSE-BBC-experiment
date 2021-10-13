@@ -2,7 +2,7 @@
 * Configuration: BBC-F0-opt-40
 * Going to generate test cases for class: org.apache.commons.codec.language.bm.PhoneticEngine
 * Starting Client-0
-* Connecting to master process on port 20508
+* Connecting to master process on port 11400
 * Analyzing classpath: 
   - subjects/buggy-versions/Codec-14/target/classes
 * Finished analyzing classpath
@@ -17,39 +17,73 @@
   - No-Exception Top-Level Method Coverage
   - Context Branch Coverage
 * Total number of test goals for DYNAMOSA: 554
-* Using seed 2358029455
+* Using seed 300576922
 * Starting evolution
 bbc usage percentage is: 40%
 * Initial Number of Goals in DynaMOSA = 156 / 554
-[MASTER] 21:38:19.664 [logback-2] ERROR TestCluster - Failed to check cache for java.util.LinkedList<E> : Type points to itself
-[MASTER] 21:38:19.664 [logback-2] ERROR TestCluster - Failed to check cache for java.util.LinkedHashSet<E> : Type points to itself
-[MASTER] 21:38:32.344 [logback-2] ERROR TestCluster - Failed to check cache for java.util.function.Predicate<T> : Type points to itself
-[MASTER] 21:39:18.146 [logback-2] ERROR ClientNodeImpl - Error when generating tests for: org.apache.commons.codec.language.bm.PhoneticEngine with seed 2358029455. Configuration id : BBC-F0-opt-40
-java.lang.NullPointerException: null
-	at org.evosuite.testcase.secondaryobjectives.basicblock.BasicBlockCoverage.compareChromosomes(BasicBlockCoverage.java:59)
-	at org.evosuite.testcase.TestChromosome.compareSecondaryObjective(TestChromosome.java:680)
-	at org.evosuite.testcase.TestChromosome.compareSecondaryObjective(TestChromosome.java:68)
-	at org.evosuite.ga.comparators.PreferenceSortingComparator.compare(PreferenceSortingComparator.java:74)
-	at org.evosuite.ga.operators.ranking.RankBasedPreferenceSorting.getZeroFront(RankBasedPreferenceSorting.java:111)
-	at org.evosuite.ga.operators.ranking.RankBasedPreferenceSorting.computeRankingAssignment(RankBasedPreferenceSorting.java:65)
-	at org.evosuite.ga.metaheuristics.mosa.DynaMOSA.evolve(DynaMOSA.java:83)
-	at org.evosuite.ga.metaheuristics.mosa.DynaMOSA.generateSolution(DynaMOSA.java:174)
-	at org.evosuite.ga.metaheuristics.TestSuiteAdapter.generateSolution(TestSuiteAdapter.java:114)
-	at org.evosuite.strategy.MOSuiteStrategy.generateTests(MOSuiteStrategy.java:123)
-	at org.evosuite.TestSuiteGenerator.generateTests(TestSuiteGenerator.java:630)
-	at org.evosuite.TestSuiteGenerator.generateTestSuite(TestSuiteGenerator.java:205)
-	at org.evosuite.rmi.service.ClientNodeImpl.lambda$startNewSearch$0(ClientNodeImpl.java:150)
-	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
-	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
-	at java.lang.Thread.run(Thread.java:748)
+[MASTER] 10:54:39.850 [logback-2] ERROR TestCluster - Failed to check cache for java.util.LinkedList<E> : Type points to itself
+[MASTER] 10:54:39.850 [logback-2] ERROR TestCluster - Failed to check cache for java.util.LinkedHashSet<E> : Type points to itself
+[MASTER] 10:55:29.742 [logback-2] ERROR TestCluster - Failed to check cache for java.util.function.Predicate<T> : Type points to itself
+[MASTER] 11:01:59.347 [logback-2] ERROR TestCluster - Failed to check cache for java.util.function.Function<T, R> : Type points to itself
+* Search finished after 601s and 5295 generations, 1504068 statements, best individual has fitness: 481.0
+* Minimizing test suite
+* Going to analyze the coverage criteria
+* Coverage analysis for criterion LINE
+* Coverage of criterion LINE: 20%
+* Total number of goals: 156
+* Number of covered goals: 31
+* Coverage analysis for criterion BRANCH
+* Coverage of criterion BRANCH: 17%
+* Total number of goals: 84
+* Number of covered goals: 14
+* Coverage analysis for criterion EXCEPTION
+* Coverage of criterion EXCEPTION: 100%
+* Total number of goals: 4
+* Number of covered goals: 4
+* Coverage analysis for criterion WEAKMUTATION
+* Coverage of criterion WEAKMUTATION: 9%
+* Total number of goals: 179
+* Number of covered goals: 17
+* Coverage analysis for criterion OUTPUT
+* Coverage of criterion OUTPUT: 0%
+* Total number of goals: 17
+* Number of covered goals: 0
+* Coverage analysis for criterion METHOD
+* Coverage of criterion METHOD: 41%
+* Total number of goals: 17
+* Number of covered goals: 7
+* Coverage analysis for criterion METHODNOEXCEPTION
+* Coverage of criterion METHODNOEXCEPTION: 29%
+* Total number of goals: 17
+* Number of covered goals: 5
+* Coverage analysis for criterion CBRANCH
+* Coverage of criterion CBRANCH: 15%
+* Total number of goals: 84
+* Number of covered goals: 13
+* Generated 9 tests with total length 37
+* Resulting test suite's coverage: 15% (average coverage for all fitness functions)
+* Generating assertions
+* Resulting test suite's mutation score: 2%
+* Compiling and checking tests
+[MASTER] 11:04:41.454 [logback-2] ERROR ClassStateSupport - Could not initialize org.apache.commons.codec.language.bm.Rule: null
+[MASTER] 11:04:41.470 [logback-2] ERROR ClassStateSupport - Could not initialize org.apache.commons.codec.language.bm.Lang: Could not initialize class org.apache.commons.codec.language.bm.Languages
+[MASTER] 11:04:41.470 [logback-2] ERROR ClassStateSupport - Could not initialize org.apache.commons.codec.language.bm.Languages: Could not initialize class org.apache.commons.codec.language.bm.Languages
+[MASTER] 11:04:41.483 [logback-2] ERROR ClassResetter - java.lang.NoClassDefFoundError: Could not initialize class org.apache.commons.codec.language.bm.Languages
+[MASTER] 11:04:41.483 [logback-2] ERROR ClassResetter - java.lang.NoClassDefFoundError: Could not initialize class org.apache.commons.codec.language.bm.Lang
+[MASTER] 11:04:41.483 [logback-2] ERROR ClassResetter - java.lang.NoClassDefFoundError: Could not initialize class org.apache.commons.codec.language.bm.Rule
+[MASTER] 11:04:41.485 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 11:04:41.603 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 11:04:41.778 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 11:04:41.861 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 11:04:41.944 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 11:04:42.014 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 11:04:42.102 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 11:04:42.155 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 11:04:42.230 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 11:04:42.348 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+[MASTER] 11:04:42.454 [logback-1] WARN  JUnitAnalyzer - EvoSuite problem: tests set up a security manager, but they do not remove it after execution
+* Writing tests to file
+* Writing JUnit test case 'PhoneticEngine_ESTest' to results/Codec-14/org.apache.commons.codec.language.bm.PhoneticEngine/BBC-F0-opt-40/tests/4
+* Done!
+
 * Computation finished
-[MASTER] 21:39:18.254 [main] ERROR SearchStatistics - No obtained value for output variable: LineCoverage
-[MASTER] 21:39:20.257 [main] ERROR SearchStatistics - No obtained value for output variable: LineCoverage
-[MASTER] 21:39:21.257 [main] ERROR SearchStatistics - No obtained value for output variable: LineCoverage
-[MASTER] 21:39:22.258 [main] ERROR SearchStatistics - No obtained value for output variable: LineCoverage
-[MASTER] 21:39:23.258 [main] ERROR SearchStatistics - No obtained value for output variable: LineCoverage
-[MASTER] 21:39:24.259 [main] ERROR SearchStatistics - No obtained value for output variable: LineCoverage
-[MASTER] 21:39:24.259 [main] ERROR SearchStatistics - Not going to write down statistics data, as some are missing
-[MASTER] 21:39:24.360 [main] ERROR TestGeneration - failed to write statistics data
