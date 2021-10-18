@@ -46,9 +46,6 @@ while [ "$need_to_rerun" = true ] ;
 do
     echo "Attempt number $attempt_counter"
 
-    if [[ attempt_counter -eq 4 ]]; then
-      break
-    fi
 
     class_counter=0
     new_execution=false
