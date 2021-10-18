@@ -28,8 +28,7 @@ echo "project,bug_id,configuration,execution_idx,TARGET_CLASS,search_budget,Tota
 
 OLDIFS=$IFS
 IFS=,
-
-completed=1
+missing_counter=0
 class_counter=0
 while read target_class project bug_id
 do
@@ -58,7 +57,7 @@ do
                 containsElement "$temp" "${blacklist[@]}"
                 if [[ "$?" -eq "1" ]]; then
                   echo $report_file" Does not exist!"
-                  completed=0
+                  missing_counter="$(( missing_counter + 1 ))"
                 fi
                 continue
             fi
@@ -70,12 +69,9 @@ do
         done
         
       done < $CONFIGURATIONS_FILE
-       if [[ "$completed" -eq "0" ]]; then
-        echo "BREAK"
-        break
-      fi
       
 done < $INPUT
 
+echo "Missing cases: $missing_counter"
 
 IFS=$OLDIFS
