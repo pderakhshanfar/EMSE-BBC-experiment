@@ -43,6 +43,23 @@ getResultsWithInterval <- function(){
   return(df)
 }
 
+
+getNewResults <- function(){
+  csvFile='../results/results-with_intervals.csv'
+  df <- read.csv(csvFile, stringsAsFactors = TRUE) %>%
+    filter(! configuration %in% c("BBC-F0-50","default")) %>%
+    mutate(configuration = recode_factor(configuration,
+        `BBC-F0-opt-10`= 'bbc-opt-0.1', `BBC-F0-opt-20`= 'bbc-opt-0.2', `BBC-F0-opt-30`= 'bbc-opt-0.3',  
+        `BBC-F0-opt-40`= 'bbc-opt-0.4', `BBC-F0-opt-50`= 'bbc-opt-0.5', `BBC-F0-opt-60`= 'bbc-opt-0.6',  
+        `BBC-F0-opt-70`= 'bbc-opt-0.7', `BBC-F0-opt-80`= 'bbc-opt-0.8', `BBC-F0-opt-90`= 'bbc-opt-0.9',
+        `BBC-F0-opt-100`= 'bbc-opt-1.0'),
+           case = paste0(as.character(project), '-', bug_id)) %>%
+    # Normalise the Implicit_MethodExceptions
+    group_by(project, bug_id, TARGET_CLASS) %>%
+    mutate(ExceptionCoverage = (1.0 * Implicit_MethodExceptions) / max(Implicit_MethodExceptions)) %>%
+    ungroup()
+  return(df)
+}
 # Returns the results of the evaluation
 getResults <- function(){
   csvFile='../results/results.csv'
@@ -58,6 +75,23 @@ getResults <- function(){
     mutate(ExceptionCoverage = (1.0 * Implicit_MethodExceptions) / max(Implicit_MethodExceptions)) %>%
     ungroup()
   return(df)
+}
+
+
+getTempResults <- function(){
+  oldResult <- getResults()
+  newResults <- getNewResults()
+  
+  
+  
+  abstractResultsColNames = colnames(oldResult)
+  
+  newResults <- newResults %>%
+    select(abstractResultsColNames)
+  
+  
+  finalResult <- rbind(oldResult,newResults)
+  
 }
 
 

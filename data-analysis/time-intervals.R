@@ -17,7 +17,8 @@ filtered_df <- raw_df %>%
          group_by( case, configuration,TARGET_CLASS) %>%
          summarise(across(BranchCoverage:ExceptionCoverageTimeline_T60, mean)) %>%
          mutate(case = paste0(case, '-', TARGET_CLASS)) %>%
-         as.data.frame()
+         as.data.frame() %>%
+         filter(configuration %in% c("BBC-F0-opt-50","default"))
 
 
 
@@ -26,7 +27,7 @@ metrics <- c("BranchCoverageTimeline","OutputCoverageTimeline","WeakMutationCove
 
 
 pairwise_df <- raw_df %>%
-  filter(configuration == "BBC-F0-50") %>%
+  filter(configuration %in% c("BBC-F0-opt-50") ) %>%
   inner_join(
     raw_df %>%
       filter(configuration == "default"),
