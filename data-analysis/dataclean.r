@@ -38,15 +38,32 @@ getBBCDF <- function(){
 }
 
 getResultsWithInterval <- function(){
-  csvFile='../results/results-with_intervals.csv'
-  df <- read.csv(csvFile, stringsAsFactors = TRUE)
+  
+  csvFilesDir='../results/results-with-intervals'
+  files <- list.files(path=csvFilesDir, pattern="*.csv")
+  
+  flag = FALSE
+  for(csvFile in files)
+  {
+    if(flag){
+      colnames = colnames(df)
+      temp <- read.csv(paste0(csvFilesDir,"/",csvFile,sep=""), stringsAsFactors = TRUE,  header = FALSE)
+      colnames(temp)=colnames
+      df <-rbind(df, temp)
+    }else{
+      df <- read.csv(paste0(csvFilesDir,"/",csvFile,sep=""), stringsAsFactors = TRUE)
+      flag = TRUE
+    }
+  
+  }
+  
+  
   return(df)
 }
 
 
 getNewResults <- function(){
-  csvFile='../results/results-with_intervals.csv'
-  df <- read.csv(csvFile, stringsAsFactors = TRUE) %>%
+  df <- getResultsWithInterval() %>%
     filter(! configuration %in% c("BBC-F0-50","default")) %>%
     mutate(configuration = recode_factor(configuration,
         `BBC-F0-opt-10`= 'bbc-opt-0.1', `BBC-F0-opt-20`= 'bbc-opt-0.2', `BBC-F0-opt-30`= 'bbc-opt-0.3',  
@@ -78,7 +95,7 @@ getResults <- function(){
 }
 
 
-getTempResults <- function(){
+getFullResults <- function(){
   oldResult <- getResults()
   newResults <- getNewResults()
   

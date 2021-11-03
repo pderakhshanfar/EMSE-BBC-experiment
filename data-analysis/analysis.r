@@ -6,7 +6,7 @@ library(questionr)
 library(effsize)
 
 #results <- getResults()
-results <- getTempResults()
+results <- getFullResults()
 
 TT <- results %>%
   group_by(project,bug_id,TARGET_CLASS) %>%
