@@ -5,8 +5,12 @@ library(ggplot2)
 library(questionr)
 library(effsize)
 
-results <- getResults()
+#results <- getResults()
+results <- getFullResults()
 
+TT <- results %>%
+  group_by(project,bug_id,TARGET_CLASS) %>%
+  summarise(count = n())
 # Pairwise comparison between different cases and configuration
 pairwise <- results %>%
   filter(configuration != 'DynaMOSA') %>%

@@ -20,7 +20,7 @@ containsElement () {
 [ ! -f $INPUT ] && { die "$INPUT file not found"; }
 
 # Initialize the final CSV
-final_csv="results/results.csv"
+final_csv="results/results-with-intervals.csv"
 blacklist=()
 # blacklist=("Closure-110/com.google.javascript.rhino.Node" "Codec-14/org.apache.commons.codec.language.bm.Lang" "Codec-14/org.apache.commons.codec.language.bm.Rule" "Codec-13/org.apache.commons.codec.binary.CharSequenceUtils" "Collections-28/org.apache.commons.collections4.trie.AbstractPatriciaTrie" "Compress-47/org.apache.commons.compress.archivers.zip.ZipArchiveInputStream" "Compress-42/org.apache.commons.compress.archivers.zip.UnixStat" "Compress-41/org.apache.commons.compress.archivers.zip.ZipArchiveInputStream" "Gson-12/com.google.gson.internal.bind.JsonTreeReader" "Gson-9/com.google.gson.internal.bind.JsonTreeWriter" "JacksonCore-26/com.fasterxml.jackson.core.json.async.NonBlockingJsonParser" "JacksonDatabind-103/com.fasterxml.jackson.databind.deser.std.StdKeyDeserializer")
 # blacklist=("Closure-110/com.google.javascript.rhino.Node" "Collections-28/org.apache.commons.collections4.trie.AbstractPatriciaTrie" "Gson-12/com.google.gson.internal.bind.JsonTreeReader" "Gson-9/com.google.gson.internal.bind.JsonTreeWriter" "JacksonDatabind-103/com.fasterxml.jackson.databind.deser.std.StdKeyDeserializer" "Mockito-4/org.mockito.exceptions.Reporter" "Mockito-20/org.mockito.internal.creation.bytebuddy.ByteBuddyMockMaker" "Time-8/org.joda.time.DateTimeZone")
