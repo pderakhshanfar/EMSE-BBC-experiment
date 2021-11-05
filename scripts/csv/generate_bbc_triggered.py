@@ -18,7 +18,7 @@ with open(os.path.join(root_path, "subjects", "subjects.csv"), 'r') as _filehand
         bug_id = row["bug_id"]
 
         for execution_id in range(1,11):     
-            log_file_path = os.path.join(root_path,"logs",project_id+"-"+bug_id, target_class+"-"+str(execution_id))
+            log_file_path = os.path.join(root_path,"logs",project_id+"-"+bug_id+"-"+target_class+"-BBC-calls-"+str(execution_id))
             log_file = open(log_file_path)
             for line in log_file:
                 if line.startswith("Number of times BBC is called, activated, and useful for "):
