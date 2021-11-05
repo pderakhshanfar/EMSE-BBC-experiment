@@ -28,8 +28,10 @@ getSubjects <- function(){
 
 
 getBBCDF <- function(){
-  files <- c("../data/bbc_triggered-part1.csv", "../data/bbc_triggered-part2.csv", 
-             "../data/bbc_triggered-part3.csv", "../data/bbc_triggered-part4.csv")
+  # files <- c("../data/bbc_triggered-part1.csv", "../data/bbc_triggered-part2.csv", 
+  #            "../data/bbc_triggered-part3.csv", "../data/bbc_triggered-part4.csv")
+  
+  files <- c("../data/bbc_triggered.csv")
   tables <- lapply(files, function(x){read.csv(file = x, stringsAsFactors = TRUE, na.strings = c("null"))})
   df <- do.call(rbind, tables) %>%
     mutate(X = NULL) %>%
