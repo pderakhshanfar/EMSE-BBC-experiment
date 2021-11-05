@@ -5,7 +5,7 @@ dir_path = os.path.dirname(os.path.realpath(__file__))
 root_path = os.path.join(dir_path,"..","..")
 
 final_csv_dir = os.path.join(root_path,"data","bbc_triggered.csv")
-final_csv_file = open(final_csv_dir,"wb")
+final_csv_file = open(final_csv_dir,"w")
 final_csv_writer = csv.writer(final_csv_file)
 
 fields = ["project_id","bug_id","target_class","execution_id","objective","objective_type","called","activated","useful","ff_eval"]
@@ -16,11 +16,9 @@ with open(os.path.join(root_path, "subjects", "subjects.csv"), 'r') as _filehand
         target_class = row["target_class"]
         project_id = row["project_id"]
         bug_id = row["bug_id"]
-        
-        logs_dir = os.path.join(root_path, "results", project_id+"-"+bug_id, target_class, "BBC-F0-100", "logs")
-        print "Analyzing logs in "+logs_dir
-        for execution_id in range(1,31):
-            log_file_path = os.path.join(logs_dir,str(execution_id))
+
+        for execution_id in range(1,11):     
+            log_file_path = os.path.join(root_path,"logs",project_id+"-"+bug_id+"-"+target_class+"-BBC-calls-"+str(execution_id))
             log_file = open(log_file_path)
             for line in log_file:
                 if line.startswith("Number of times BBC is called, activated, and useful for "):
