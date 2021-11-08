@@ -5,12 +5,14 @@ library(ggplot2)
 library(questionr)
 library(effsize)
 
-#results <- getResults()
-results <- getFullResults()
+results <- getFullResults() %>%
+  filter(configuration %in% c('bbc-0.1', 'bbc-0.2', 'bbc-0.3', 'bbc-0.4', 'bbc-0.5', 'bbc-0.6',  
+                              'bbc-0.7', 'bbc-0.8', 'bbc-0.9', 'bbc-1.0', 'DynaMOSA'))
 
 TT <- results %>%
   group_by(project,bug_id,TARGET_CLASS) %>%
   summarise(count = n())
+
 # Pairwise comparison between different cases and configuration
 pairwise <- results %>%
   filter(configuration != 'DynaMOSA') %>%
@@ -52,7 +54,8 @@ results %>%
             sd_branch_coverage = sd(BranchCoverage),
             median_branch_coverage = median(BranchCoverage),
             iqr_branch_coverage = IQR(BranchCoverage)) %>%
-  arrange(mean_branch_coverage)
+  arrange(mean_branch_coverage) %>%
+  print(n=Inf)
 
 results %>%
   ggplot(aes(x = configuration, y = BranchCoverage)) +
@@ -106,15 +109,34 @@ pairwise %>%
   scale_y_continuous(limits = c (0.0, 1.2), breaks = c(0.25, 0.5, 0.75, 1.0))
 ggsave("output/branch-vd.pdf", width = 4.5, height = 3.5)
 
-cat("Branch coverage effect size magnitude: \n")
-branch_magnitudes <- pairwise %>%
-  filter(BranchCoverage.wilcox.test.pvalue <= SIGNIFICANCE_LEVEL) %>%
-  group_by(configuration.config, BranchCoverage.VD.estimate.category, BranchCoverage.VD.magnitude) %>%
-  summarise(count = n())
-print(branch_magnitudes)
+# Branch coverage effect size magnitude
 
-branch_magnitudes %>%
-  filter(BranchCoverage.VD.magnitude == 'large')
+pairwise_magnitude <- pairwise %>%
+  filter(BranchCoverage.wilcox.test.pvalue <= SIGNIFICANCE_LEVEL) %>%
+  filter(BranchCoverage.VD.magnitude != "negligible") %>%
+  rename(magnitude = BranchCoverage.VD.magnitude,
+         category = BranchCoverage.VD.estimate.category,
+         configuration = configuration.config) %>%
+  group_by(magnitude, category, configuration) %>%
+  summarise(count = n())
+
+pairwise_magnitude %>% 
+  ggplot(aes(x=configuration, fill=magnitude)) +
+  geom_bar(data = filter(pairwise_magnitude, category == '> 0.5'), 
+           aes(y = count, fill = magnitude), stat = "identity") +
+  geom_bar(data = filter(pairwise_magnitude, category == '< 0.5'), 
+           aes(y = -count, fill = magnitude), stat = "identity") +
+  geom_hline(yintercept=0) +
+  theme(axis.text.x = element_text(angle = 55, vjust = 0.5)) +
+  ylab("Count") +
+  scale_fill_brewer(palette = COLOR_PALETTE)
+ggsave("output/branch-magnitude.pdf", width = 4.5, height = 3.5)
+
+
+cat("Branch coverage effect size magnitude: \n")
+pairwise_magnitude %>%
+  filter(magnitude == 'large') %>%
+  print(n = Inf)
 
 # Analysis using Friedman's test
 
@@ -196,15 +218,33 @@ pairwise %>%
   scale_y_continuous(limits = c (0.0, 1.2), breaks = c(0.25, 0.5, 0.75, 1.0))
 ggsave("output/output-vd.pdf", width = 4.5, height = 3.5)
 
-cat("Output coverage effect size magnitude: \n")
-output_magnitudes <- pairwise %>%
-  filter(OutputCoverage.wilcox.test.pvalue <= SIGNIFICANCE_LEVEL) %>%
-  group_by(configuration.config, OutputCoverage.VD.estimate.category, OutputCoverage.VD.magnitude) %>%
-  summarise(count = n())
-print(output_magnitudes)
+# Output coverage effect size magnitude
 
-output_magnitudes %>%
-  filter(OutputCoverage.VD.magnitude == 'large')
+pairwise_magnitude <- pairwise %>%
+  filter(OutputCoverage.wilcox.test.pvalue <= SIGNIFICANCE_LEVEL) %>%
+  filter(OutputCoverage.VD.magnitude != "negligible") %>%
+  rename(magnitude = OutputCoverage.VD.magnitude,
+         category = OutputCoverage.VD.estimate.category,
+         configuration = configuration.config) %>%
+  group_by(magnitude, category, configuration) %>%
+  summarise(count = n())
+
+pairwise_magnitude %>% 
+  ggplot(aes(x=configuration, fill=magnitude)) +
+  geom_bar(data = filter(pairwise_magnitude, category == '> 0.5'), 
+           aes(y = count, fill = magnitude), stat = "identity") +
+  geom_bar(data = filter(pairwise_magnitude, category == '< 0.5'), 
+           aes(y = -count, fill = magnitude), stat = "identity") +
+  geom_hline(yintercept=0) +
+  theme(axis.text.x = element_text(angle = 55, vjust = 0.5)) +
+  ylab("Count") +
+  scale_fill_brewer(palette = COLOR_PALETTE)
+ggsave("output/output-magnitude.pdf", width = 4.5, height = 3.5)
+
+cat("Output coverage effect size magnitude: \n")
+pairwise_magnitude %>%
+  filter(magnitude == 'large') %>%
+  print(n = Inf)
 
 cat("Target classes for which BBC has a large negative effect size: \n")
 pairwise %>%
@@ -311,15 +351,33 @@ pairwiseExceptionCoverage %>%
   scale_y_continuous(limits = c (0.0, 1.2), breaks = c(0.25, 0.5, 0.75, 1.0))
 ggsave("output/exception-vd.pdf", width = 4.5, height = 3.5)
 
-cat("Output coverage effect size magnitude: \n")
-exception_magnitudes <- pairwiseExceptionCoverage %>%
-  filter(ExceptionCoverage.wilcox.test.pvalue <= SIGNIFICANCE_LEVEL) %>%
-  group_by(configuration.config, ExceptionCoverage.VD.estimate.category, ExceptionCoverage.VD.magnitude) %>%
-  summarise(count = n())
-print(exception_magnitudes)
+# Exception coverage effect size magnitude
 
-exception_magnitudes %>%
-  filter(ExceptionCoverage.VD.magnitude == 'large')
+pairwise_magnitude <- pairwiseExceptionCoverage %>%
+  filter(ExceptionCoverage.wilcox.test.pvalue <= SIGNIFICANCE_LEVEL) %>%
+  filter(ExceptionCoverage.VD.magnitude != "negligible") %>%
+  rename(magnitude = ExceptionCoverage.VD.magnitude,
+         category = ExceptionCoverage.VD.estimate.category,
+         configuration = configuration.config) %>%
+  group_by(magnitude, category, configuration) %>%
+  summarise(count = n())
+
+pairwise_magnitude %>% 
+  ggplot(aes(x=configuration, fill=magnitude)) +
+  geom_bar(data = filter(pairwise_magnitude, category == '> 0.5'), 
+           aes(y = count, fill = magnitude), stat = "identity") +
+  geom_bar(data = filter(pairwise_magnitude, category == '< 0.5'), 
+           aes(y = -count, fill = magnitude), stat = "identity") +
+  geom_hline(yintercept=0) +
+  theme(axis.text.x = element_text(angle = 55, vjust = 0.5)) +
+  ylab("Count") +
+  scale_fill_brewer(palette = COLOR_PALETTE)
+ggsave("output/exception-magnitude.pdf", width = 4.5, height = 3.5)
+
+cat("Exception coverage effect size magnitude: \n")
+pairwise_magnitude %>%
+  filter(magnitude == 'large') %>%
+  print(n = Inf)
 
 # Analysis using Friedman's test
 
@@ -401,15 +459,33 @@ pairwise %>%
   scale_y_continuous(limits = c (0.0, 1.2), breaks = c(0.25, 0.5, 0.75, 1.0))
 ggsave("output/weak-mutation-vd.pdf", width = 4.5, height = 3.5)
 
-cat("Weak mutation score effect size magnitude: \n")
-weak_mutation_magnitudes <- pairwise %>%
-  filter(WeakMutationScore.wilcox.test.pvalue <= SIGNIFICANCE_LEVEL) %>%
-  group_by(configuration.config, WeakMutationScore.VD.estimate.category, WeakMutationScore.VD.magnitude) %>%
-  summarise(count = n())
-print(weak_mutation_magnitudes)
+# Output coverage effect size magnitude
 
-weak_mutation_magnitudes %>%
-  filter(WeakMutationScore.VD.magnitude == 'large')
+pairwise_magnitude <- pairwise %>%
+  filter(WeakMutationScore.wilcox.test.pvalue <= SIGNIFICANCE_LEVEL) %>%
+  filter(WeakMutationScore.VD.magnitude != "negligible") %>%
+  rename(magnitude = WeakMutationScore.VD.magnitude,
+         category = WeakMutationScore.VD.estimate.category,
+         configuration = configuration.config) %>%
+  group_by(magnitude, category, configuration) %>%
+  summarise(count = n())
+
+pairwise_magnitude %>% 
+  ggplot(aes(x=configuration, fill=magnitude)) +
+  geom_bar(data = filter(pairwise_magnitude, category == '> 0.5'), 
+           aes(y = count, fill = magnitude), stat = "identity") +
+  geom_bar(data = filter(pairwise_magnitude, category == '< 0.5'), 
+           aes(y = -count, fill = magnitude), stat = "identity") +
+  geom_hline(yintercept=0) +
+  theme(axis.text.x = element_text(angle = 55, vjust = 0.5)) +
+  ylab("Count") +
+  scale_fill_brewer(palette = COLOR_PALETTE)
+ggsave("output/weak-mutation-magnitude.pdf", width = 4.5, height = 3.5)
+
+cat("Weak mutation effect size magnitude: \n")
+pairwise_magnitude %>%
+  filter(magnitude == 'large') %>%
+  print(n = Inf)
 
 # Analysis using Friedman's test
 
@@ -503,12 +579,16 @@ sink()
 # ######################################################
 
 results_evolution <- getResultsWithInterval() %>%
+  filter(configuration %in% c('BBC-F0-opt-10', 'BBC-F0-opt-20', 'BBC-F0-opt-30',  
+                              'BBC-F0-opt-40', 'BBC-F0-opt-50', 'BBC-F0-opt-60',  
+                              'BBC-F0-opt-70', 'BBC-F0-opt-80', 'BBC-F0-opt-90',
+                              'BBC-F0-opt-100', 'default')) %>% 
   mutate(case = paste0(project,'-', bug_id, '-', TARGET_CLASS ),
          configuration = recode_factor(configuration,
-                                       `BBC-F0-10`= 'bbc-0.1', `BBC-F0-20`= 'bbc-0.2', `BBC-F0-30`= 'bbc-0.3',  
-                                       `BBC-F0-40`= 'bbc-0.4', `BBC-F0-50`= 'bbc-0.5', `BBC-F0-60`= 'bbc-0.6',  
-                                       `BBC-F0-70`= 'bbc-0.7', `BBC-F0-80`= 'bbc-0.8', `BBC-F0-90`= 'bbc-0.9',
-                                       `BBC-F0-100`= 'bbc-1.0', `default`= 'DynaMOSA'))
+                                       `BBC-F0-opt-10`= 'bbc-0.1', `BBC-F0-opt-20`= 'bbc-0.2', `BBC-F0-opt-30`= 'bbc-0.3',  
+                                       `BBC-F0-opt-40`= 'bbc-0.4', `BBC-F0-opt-50`= 'bbc-0.5', `BBC-F0-opt-60`= 'bbc-0.6',  
+                                       `BBC-F0-opt-70`= 'bbc-0.7', `BBC-F0-opt-80`= 'bbc-0.8', `BBC-F0-opt-90`= 'bbc-0.9',
+                                       `BBC-F0-opt-100`= 'bbc-1.0', `default`= 'DynaMOSA'))
 
 branch_coverage_evolution <- results_evolution %>%
   select(case, execution_idx, configuration, BranchCoverageTimeline_T1:BranchCoverageTimeline_T60) %>%
@@ -516,13 +596,15 @@ branch_coverage_evolution <- results_evolution %>%
   mutate(elapsed_time = (str_remove(elapsed_time, 'BranchCoverageTimeline_T') %>% as.numeric())* 10)
 
 # Plotting regression for branch coverages
-pdf("output/branch-coverage-evolution.pdf", width = 4.5, height = 3)
-branch_coverage_evolution %>%
-  ggplot(aes(x=elapsed_time, y=branch_coverage, color=configuration)) +
+p <- branch_coverage_evolution %>%
+  ggplot(aes(x=elapsed_time, y=branch_coverage)) +
+  geom_boxplot(data = branch_coverage_evolution %>% filter( (elapsed_time %% 20) == 0),
+    aes(group=elapsed_time)) +
   geom_smooth(level = 1.0 - SIGNIFICANCE_LEVEL) +
   xlab("Elapsed budget (sec.)") +
-  ylab("Branch coverage") 
-dev.off()
+  ylab("Branch coverage") +
+  facet_wrap(~configuration, ncol = 4)
+ggsave("output/branch-coverage-evolution.pdf", plot = p, width = 31, height = 18, units="cm")
 
 # Pairwise comparison for the different elapsed times
 pairwise_branch_coverage_evolution <- branch_coverage_evolution %>%
@@ -547,23 +629,25 @@ branch_coverage_magnitude_evolution <- pairwise_branch_coverage_evolution %>%
   filter(branch_coverage.wilcox.test.pvalue < SIGNIFICANCE_LEVEL) %>%
   filter(branch_coverage.VD.magnitude != "negligible") %>%
   rename(magnitude = branch_coverage.VD.magnitude,
-         category = branch_coverage.VD.estimate.category) %>%
-  group_by(elapsed_time, magnitude, category) %>%
+         category = branch_coverage.VD.estimate.category,
+         configuration = configuration.config) %>%
+  group_by(elapsed_time, magnitude, category, configuration) %>%
   summarise(count = n())
 
 #Graph with the evoluation of the effect sizes per magnitude and category
-pdf("output/branch-coverage-effsize-evolution.pdf", width = 4.5, height = 3)
-branch_coverage_magnitude_evolution %>%
+p <- branch_coverage_magnitude_evolution %>% 
+  filter((elapsed_time %% 20) == 0) %>%
   ggplot(aes(x=elapsed_time, fill=magnitude)) +
-  geom_bar(data = filter(branch_coverage_magnitude_evolution, category == '> 0.5'), 
+  geom_bar(data = filter(branch_coverage_magnitude_evolution, category == '> 0.5', (elapsed_time %% 20) == 0), 
            aes(y = count, fill = magnitude), stat = "identity") +
-  geom_bar(data = filter(branch_coverage_magnitude_evolution, category == '< 0.5'), 
+  geom_bar(data = filter(branch_coverage_magnitude_evolution, category == '< 0.5', (elapsed_time %% 20) == 0), 
            aes(y = -count, fill = magnitude), stat = "identity") +
-  geom_line(aes(y = 0), color = 'black', linetype = 'dashed') +
+  geom_hline(yintercept = 0) +
   xlab("Elapsed time (sec.)") + 
   ylab("Count") +
-  scale_fill_brewer(palette = COLOR_PALETTE)
-dev.off()
+  scale_fill_brewer(palette = COLOR_PALETTE) +
+  facet_wrap(~configuration, ncol = 5)
+ggsave("output/branch-coverage-effsize-evolution.pdf", plot = p, width = 31, height = 18, units="cm")
   
 # Boxplot with the evolution of the VD values 
 pairwise_branch_coverage_evolution %>%
