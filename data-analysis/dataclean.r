@@ -102,8 +102,7 @@ getFullResults <- function(){
 }
 
 getFailureCoverage <- function(){
-  csvFile='../data/failure_coverage_ratio.csv'
-  df <- read.csv(csvFile, stringsAsFactors = TRUE) %>%
+  df <- getCapturedExceptions() %>%
     rename(configuration = tool, TARGET_CLASS = target_class) %>%
     mutate(bug_id = as.numeric(str_extract(as.character(project), "[0-9]+$")),
            project = as.factor(str_replace(as.character(project), "-[0-9]+$", "")),
@@ -111,8 +110,25 @@ getFailureCoverage <- function(){
               `BBC-F0-10`= 'bbc-0.1', `BBC-F0-20`= 'bbc-0.2', `BBC-F0-30`= 'bbc-0.3',  
               `BBC-F0-40`= 'bbc-0.4', `BBC-F0-50`= 'bbc-0.5', `BBC-F0-60`= 'bbc-0.6',  
               `BBC-F0-70`= 'bbc-0.7', `BBC-F0-80`= 'bbc-0.8', `BBC-F0-90`= 'bbc-0.9',
-              `BBC-F0-100`= 'bbc-1.0', `default`= 'DynaMOSA')) %>%
-    select(-X, -isAssertion)
+              `BBC-F0-100`= 'bbc-1.0', 
+              `BBC-F0-opt-10`= 'bbc-opt-0.1',
+              `BBC-F0-opt-20`= 'bbc-opt-0.2', `BBC-F0-opt-30`= 'bbc-opt-0.3',  
+              `BBC-F0-opt-40`= 'bbc-opt-0.4', `BBC-F0-opt-50`= 'bbc-opt-0.5', `BBC-F0-opt-60`= 'bbc-opt-0.6',  
+              `BBC-F0-opt-70`= 'bbc-opt-0.7', `BBC-F0-opt-80`= 'bbc-opt-0.8', `BBC-F0-opt-90`= 'bbc-opt-0.9',
+              `BBC-F0-opt-100`= 'bbc-opt-1.0', 
+              `default`= 'DynaMOSA')) %>%
+    select(-isAssertion)
+  return(df)
+}
+
+
+getCapturedExceptions <- function(){
+  csvFile = "../data/captured_exceptions.csv"
+  df <- read.csv(csvFile, stringsAsFactors = TRUE)
+  df <- df %>% 
+    group_by(tool,project,target_class,isAssertion) %>%
+    summarise(coverage_rate = sum(captured))
+  
   return(df)
 }
 
