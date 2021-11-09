@@ -5,9 +5,9 @@ library(ggplot2)
 library(questionr)
 library(effsize)
 
-results <- getFullResults() %>%
-  filter(configuration %in% c('bbc-0.1', 'bbc-0.2', 'bbc-0.3', 'bbc-0.4', 'bbc-0.5', 'bbc-0.6',  
-                              'bbc-0.7', 'bbc-0.8', 'bbc-0.9', 'bbc-1.0', 'DynaMOSA'))
+results <- getFullResults() #%>%
+#  filter(configuration %in% c('bbc-0.1', 'bbc-0.2', 'bbc-0.3', 'bbc-0.4', 'bbc-0.5', 'bbc-0.6',  
+#                              'bbc-0.7', 'bbc-0.8', 'bbc-0.9', 'bbc-1.0', 'DynaMOSA'))
 
 TT <- results %>%
   group_by(project,bug_id,TARGET_CLASS) %>%
@@ -136,6 +136,7 @@ ggsave("output/branch-magnitude.pdf", width = 4.5, height = 3.5)
 cat("Branch coverage effect size magnitude: \n")
 pairwise_magnitude %>%
   filter(magnitude == 'large') %>%
+  arrange(count) %>%
   print(n = Inf)
 
 # Analysis using Friedman's test
@@ -176,7 +177,8 @@ results %>%
   summarise(mean_output_coverage = mean(OutputCoverage),
             sd_output_coverage = sd(OutputCoverage),
             median_output_coverage = median(OutputCoverage),
-            iqr_output_coverage = IQR(OutputCoverage))
+            iqr_output_coverage = IQR(OutputCoverage)) %>%
+  arrange(mean_output_coverage)
 
 results %>%
   ggplot(aes(x = configuration, y = OutputCoverage)) +
@@ -244,6 +246,7 @@ ggsave("output/output-magnitude.pdf", width = 4.5, height = 3.5)
 cat("Output coverage effect size magnitude: \n")
 pairwise_magnitude %>%
   filter(magnitude == 'large') %>%
+  arrange(count)
   print(n = Inf)
 
 cat("Target classes for which BBC has a large negative effect size: \n")
@@ -309,7 +312,8 @@ resultsExceptionCoverage %>%
   summarise(mean_exception_coverage = mean(ExceptionCoverage),
             sd_exception_coverage = sd(ExceptionCoverage),
             median_exception_coverage = median(ExceptionCoverage),
-            iqr_exception_coverage = IQR(ExceptionCoverage))
+            iqr_exception_coverage = IQR(ExceptionCoverage)) %>%
+  arrange(mean_exception_coverage)
 
 resultsExceptionCoverage %>%
   ggplot(aes(x = configuration, y = ExceptionCoverage)) +
@@ -377,6 +381,7 @@ ggsave("output/exception-magnitude.pdf", width = 4.5, height = 3.5)
 cat("Exception coverage effect size magnitude: \n")
 pairwise_magnitude %>%
   filter(magnitude == 'large') %>%
+  arrange(count) %>%
   print(n = Inf)
 
 # Analysis using Friedman's test
@@ -417,7 +422,8 @@ results %>%
   summarise(mean_branch_coverage = mean(WeakMutationScore),
             sd_branch_coverage = sd(WeakMutationScore),
             median_branch_coverage = median(WeakMutationScore),
-            iqr_branch_coverage = IQR(WeakMutationScore))
+            iqr_branch_coverage = IQR(WeakMutationScore)) %>%
+  arrange(mean_branch_coverage)
 
 results %>%
   ggplot(aes(x = configuration, y = WeakMutationScore)) +
@@ -485,6 +491,7 @@ ggsave("output/weak-mutation-magnitude.pdf", width = 4.5, height = 3.5)
 cat("Weak mutation effect size magnitude: \n")
 pairwise_magnitude %>%
   filter(magnitude == 'large') %>%
+  arrange(count) %>%
   print(n = Inf)
 
 # Analysis using Friedman's test
@@ -662,18 +669,24 @@ pairwise_branch_coverage_evolution %>%
 
 df <- count_signif_pairwise_branch_coverage_evolution <- pairwise_branch_coverage_evolution %>%
   filter(branch_coverage.wilcox.test.pvalue < SIGNIFICANCE_LEVEL) %>%
-  group_by(elapsed_time) %>%
+  group_by(configuration.config, elapsed_time) %>%
   count()
 print(df)
 
 df2 <- pairwise_branch_coverage_evolution %>%
   filter(branch_coverage.wilcox.test.pvalue < SIGNIFICANCE_LEVEL) %>%
   rename(magnitude = branch_coverage.VD.magnitude,
-         category = branch_coverage.VD.estimate.category) %>%
-  group_by(elapsed_time, magnitude, category) %>%
+         category = branch_coverage.VD.estimate.category,
+         configuration = configuration.config) %>%
+  group_by(configuration, elapsed_time, magnitude, category) %>%
   summarise(count = n()) %>%
   pivot_wider(names_from = magnitude, values_from = count)
-print(df2)
+print(df2, n = Inf)
+
+df2 %>%
+  filter(elapsed_time %in% c(180, 300, 600)) %>%
+  arrange(elapsed_time, large, medium) %>%
+  print(n = Inf)
 
 # ########################################################################
 # Analysis of org.apache.commons.cli.HelpFormatter in Cli-31 and Cli-32

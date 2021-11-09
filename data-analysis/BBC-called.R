@@ -61,7 +61,7 @@ general_stats <- raw_df %>%
     useful_sd = sd(useful)
   )
 
-print(general_stats)
+print(general_stats, n=Inf)
 
 outputFile <- "output/tables/table-general-stats-bbc-preanalysis.tex"
 unlink(outputFile)
@@ -86,16 +86,19 @@ cat(" ", "&", " ", "&",
 cat(" \\\\", "\n")
 cat("\\hline", "\n")
 for(row in seq(from=1, to=nrow(general_stats), by=1)){
+  if(row == nrow(general_stats)){
+    cat("\\hline", "\n")
+  }
   cat(as.character(general_stats[[row, 'project_id']]), " & ", 
       general_stats[[row, 'objectives']], " & ", 
-      formatC(general_stats[[row, 'ff_eval_mean']], digits = 2, format = "f"), " & ", 
-      formatC(general_stats[[row, 'ff_eval_sd']], digits = 2, format = "f"), " & ", 
-      formatC(general_stats[[row, 'called_mean']], digits = 2, format = "f"), " & ", 
-      formatC(general_stats[[row, 'called_sd']], digits = 2, format = "f"), " & ", 
-      formatC(general_stats[[row, 'activated_mean']], digits = 2, format = "f"), " & ", 
-      formatC(general_stats[[row, 'activated_sd']], digits = 2, format = "f"), " & ", 
-      formatC(general_stats[[row, 'useful_mean']], digits = 2, format = "f"), " & ", 
-      formatC(general_stats[[row, 'useful_sd']], digits = 2, format = "f"), sep ="")
+      formatC(general_stats[[row, 'ff_eval_mean']], digits = 2, big.mark=",", format = "f"), " & ", 
+      formatC(general_stats[[row, 'ff_eval_sd']], digits = 2, big.mark=",", format = "f"), " & ", 
+      formatC(general_stats[[row, 'called_mean']], digits = 2, big.mark=",", format = "f"), " & ", 
+      formatC(general_stats[[row, 'called_sd']], digits = 2, big.mark=",", format = "f"), " & ", 
+      formatC(general_stats[[row, 'activated_mean']], digits = 2, big.mark=",", format = "f"), " & ", 
+      formatC(general_stats[[row, 'activated_sd']], digits = 2, big.mark=",", format = "f"), " & ", 
+      formatC(general_stats[[row, 'useful_mean']], digits = 2, big.mark=",", format = "f"), " & ", 
+      formatC(general_stats[[row, 'useful_sd']], digits = 2, big.mark=",", format = "f"), sep ="")
   cat(" \\\\", "\n")
 }
 cat("\\end{tabular}")
@@ -105,14 +108,30 @@ sink()
 # Number of time the call to BBC has been useful per fitness evaluation
 
 p <- raw_df %>%
+  rename(usefulness = usefulness_rate_activated) %>%
+  ggplot(aes(x = ff_eval, y = activated, fill = usefulness)) +
+  geom_point(shape = 21, size=3, alpha=0.75) +
+  scale_fill_gradient2(low = "#91bfdb", mid = "#ffffbf", high = "#fc8d59", midpoint = 0.5) +
+  xlab("fitness evaluations") +
+  ylab("activations")
+ggsave("output/usefulness-rate-distribution.pdf", plot = p, width = 8, height = 4)
+
+p <- raw_df %>%
   rbind(
     raw_df %>%
       mutate(project_id = "(all)")
   ) %>%
-  filter(usefulness_per_eval > 0) %>%
+  #filter(usefulness_per_eval > 0) %>%
   ggplot(aes(x = project_id, y = usefulness_per_eval)) +
   geom_boxplot() +
-  scale_y_log10() +
+  stat_summary(
+    fun = mean,
+    geom = "point",
+    shape = 0,
+    color = "black",
+    fill = "blue"
+  ) +
+  scale_y_log10(limits=c(0.0001, 10)) +
   xlab(NULL) +
   ylab("Usefulness per fit. eval. (log scale)") +
   theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust=1))
@@ -124,7 +143,7 @@ df <- raw_df %>%
     raw_df %>%
       mutate(project_id = "(all)")
   ) %>%
-  filter(is_activated == 1)%>%
+  #filter(is_activated == 1)%>%
   group_by(project_id) %>%
   summarise(count = n(),
             useful_count = sum(is_useful),
@@ -133,7 +152,13 @@ df <- raw_df %>%
             usefulness_per_eval_min = min(usefulness_per_eval, na.rm = TRUE), 
             usefulness_per_eval_med = median(usefulness_per_eval, na.rm = TRUE),
             usefulness_per_eval_IQR = IQR(usefulness_per_eval, na.rm = TRUE), 
-            usefulness_per_eval_max = max(usefulness_per_eval, na.rm = TRUE)) 
+            usefulness_per_eval_max = max(usefulness_per_eval, na.rm = TRUE), 
+            usefulness_rate_activated_mean = mean(usefulness_rate_activated, na.rm = TRUE),
+            usefulness_rate_activated_sd = sd(usefulness_rate_activated, na.rm = TRUE),
+            usefulness_rate_activated_min = min(usefulness_rate_activated, na.rm = TRUE), 
+            usefulness_rate_activated_med = median(usefulness_rate_activated, na.rm = TRUE),
+            usefulness_rate_activated_IQR = IQR(usefulness_rate_activated, na.rm = TRUE), 
+            usefulness_rate_activated_max = max(usefulness_rate_activated, na.rm = TRUE)) 
 
 print(df)
 
