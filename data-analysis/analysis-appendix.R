@@ -7,12 +7,16 @@ library(effsize)
 
 
 
-results <- getFullResults() %>%
-  filter(configuration %in% c('bbc-0.1', 'bbc-0.2', 'bbc-0.3', 'bbc-0.4', 'bbc-0.5', 'bbc-0.6',  
-                              'bbc-0.7', 'bbc-0.8', 'bbc-0.9', 'bbc-1.0', 'DynaMOSA'))
+results <- getFullResults() 
+
+
 
 TT <- results %>%
   group_by(project,bug_id,TARGET_CLASS) %>%
+  summarise(count = n())
+
+configs <- results %>%
+  group_by(configuration) %>%
   summarise(count = n())
 
 # Pairwise comparison between different cases and configuration
@@ -51,7 +55,7 @@ pairwise <- results %>%
 # ######################################################
 
 results %>%
-  group_by(configuration) %>%
+  group_by(configuration,project,bug_id) %>%
   summarise(mean_branch_coverage = mean(BranchCoverage),
             sd_branch_coverage = sd(BranchCoverage),
             median_branch_coverage = median(BranchCoverage),
@@ -72,7 +76,9 @@ results %>%
   xlab(NULL) +
   ylab('Branch coverage') +
   theme(axis.text.x = element_text(angle = 55, vjust = 0.5))
-ggsave("output/branch-coverage.pdf", width = 4.5, height = 3)
+ggsave("output/appendix-branch-coverage.pdf", width = 4.5, height = 3)
+
+
 
 results %>%
   ggplot(aes(x = configuration, y = BranchCoverage)) +
@@ -109,9 +115,8 @@ pairwise %>%
   theme(axis.text.x = element_text(angle = 55, vjust = 0.5)) +
   ylab('VD') +
   scale_y_continuous(limits = c (0.0, 1.2), breaks = c(0.25, 0.5, 0.75, 1.0))
-ggsave("output/branch-vd.pdf", width = 4.5, height = 3.5)
+ggsave("output/appendix-branch-vd.pdf", width = 4.5, height = 3.5)
 
-# Branch coverage effect size magnitude
 
 pairwise_magnitude <- pairwise %>%
   filter(BranchCoverage.wilcox.test.pvalue <= SIGNIFICANCE_LEVEL) %>%
@@ -132,7 +137,7 @@ pairwise_magnitude %>%
   theme(axis.text.x = element_text(angle = 55, vjust = 0.5)) +
   ylab("Count") +
   scale_fill_brewer(palette = COLOR_PALETTE)
-ggsave("output/branch-magnitude.pdf", width = 4.5, height = 3.5)
+ggsave("output/appendix-branch-magnitude.pdf", width = 4.5, height = 3.5)
 
 
 cat("Branch coverage effect size magnitude: \n")
@@ -140,6 +145,8 @@ pairwise_magnitude %>%
   filter(magnitude == 'large') %>%
   arrange(count) %>%
   print(n = Inf)
+
+
 
 # Analysis using Friedman's test
 
@@ -159,7 +166,7 @@ apply_friedman_test(meanBranchCoverage$mean_branch_coverage,
                     meanBranchCoverage$configuration, 
                     meanBranchCoverage$case)
 
-pdf("output/branch-friedman-nemenyi.pdf", width=7, height=4) 
+pdf("output/appendix-branch-friedman-nemenyi.pdf", width=7, height=6) 
 meanBranchCoverage %>%
   select(case, configuration, mean_branch_coverage) %>%
   mutate(mean_branch_coverage = 1 - mean_branch_coverage) %>% #The lowest is the best in our case
@@ -168,6 +175,7 @@ meanBranchCoverage %>%
   as.matrix() %>%
   nemenyi(plottype = "vmcb", conf.level = 1.0 - SIGNIFICANCE_LEVEL)
 dev.off()
+
 
 
 # ######################################################
@@ -195,7 +203,7 @@ results %>%
   xlab(NULL) +
   ylab('Output coverage') +
   theme(axis.text.x = element_text(angle = 55, vjust = 0.5))
-ggsave("output/output-coverage.pdf", width = 4.5, height = 3)
+ggsave("output/appendix-output-coverage.pdf", width = 4.5, height = 3)
 
 # Plotting VD-estimate for significant cases
 pairwise %>%
@@ -220,7 +228,7 @@ pairwise %>%
   theme(axis.text.x = element_text(angle = 55, vjust = 0.5)) +
   ylab('VD') +
   scale_y_continuous(limits = c (0.0, 1.2), breaks = c(0.25, 0.5, 0.75, 1.0))
-ggsave("output/output-vd.pdf", width = 4.5, height = 3.5)
+ggsave("output/appendix-output-vd.pdf", width = 4.5, height = 3.5)
 
 # Output coverage effect size magnitude
 
@@ -243,13 +251,13 @@ pairwise_magnitude %>%
   theme(axis.text.x = element_text(angle = 55, vjust = 0.5)) +
   ylab("Count") +
   scale_fill_brewer(palette = COLOR_PALETTE)
-ggsave("output/output-magnitude.pdf", width = 4.5, height = 3.5)
+ggsave("output/appendix-output-magnitude.pdf", width = 4.5, height = 3.5)
 
 cat("Output coverage effect size magnitude: \n")
 pairwise_magnitude %>%
   filter(magnitude == 'large') %>%
   arrange(count)
-  print(n = Inf)
+print(n = Inf)
 
 cat("Target classes for which BBC has a large negative effect size: \n")
 pairwise %>%
@@ -275,7 +283,7 @@ apply_friedman_test(meanOutputCoverage$mean_output_coverage,
                     meanOutputCoverage$configuration, 
                     meanOutputCoverage$case)
 
-pdf("output/output-friedman-nemenyi.pdf", width=7, height=4) 
+pdf("output/appendix-output-friedman-nemenyi.pdf", width=7, height=4) 
 meanOutputCoverage %>%
   select(case, configuration, mean_output_coverage) %>%
   mutate(mean_output_coverage = 1 - mean_output_coverage) %>% #The lowest is the best in our case
@@ -284,6 +292,7 @@ meanOutputCoverage %>%
   as.matrix() %>%
   nemenyi(plottype = "vmcb", conf.level = 1.0 - SIGNIFICANCE_LEVEL)
 dev.off()
+
 
 # ######################################################
 # Implicit Methods Exceptions
@@ -305,9 +314,9 @@ pairwiseExceptionCoverage <- resultsExceptionCoverage %>%
             ExceptionCoverage.VD.estimate = VD.A(ExceptionCoverage.config, ExceptionCoverage.base)$estimate,
             ExceptionCoverage.wilcox.test.pvalue = wilcox.test(ExceptionCoverage.config, ExceptionCoverage.base)$p.value) %>%
   mutate(ExceptionCoverage.VD.estimate.category = case_when(
-      ExceptionCoverage.VD.estimate < 0.5 ~ '< 0.5',
-      ExceptionCoverage.VD.estimate > 0.5 ~ '> 0.5',
-      TRUE ~ '= 0.5'))
+    ExceptionCoverage.VD.estimate < 0.5 ~ '< 0.5',
+    ExceptionCoverage.VD.estimate > 0.5 ~ '> 0.5',
+    TRUE ~ '= 0.5'))
 
 resultsExceptionCoverage %>%
   group_by(configuration) %>%
@@ -330,7 +339,7 @@ resultsExceptionCoverage %>%
   xlab(NULL) +
   ylab('Exception coverage') +
   theme(axis.text.x = element_text(angle = 55, vjust = 0.5))
-ggsave("output/exception-coverage.pdf", width = 4.5, height = 3)
+ggsave("output/appendix-exception-coverage.pdf", width = 4.5, height = 3)
 
 # Plotting VD-estimate for significant cases
 pairwiseExceptionCoverage %>%
@@ -355,7 +364,7 @@ pairwiseExceptionCoverage %>%
   theme(axis.text.x = element_text(angle = 55, vjust = 0.5)) +
   ylab('VD') +
   scale_y_continuous(limits = c (0.0, 1.2), breaks = c(0.25, 0.5, 0.75, 1.0))
-ggsave("output/exception-vd.pdf", width = 4.5, height = 3.5)
+ggsave("output/appendix-exception-vd.pdf", width = 4.5, height = 3.5)
 
 # Exception coverage effect size magnitude
 
@@ -378,7 +387,7 @@ pairwise_magnitude %>%
   theme(axis.text.x = element_text(angle = 55, vjust = 0.5)) +
   ylab("Count") +
   scale_fill_brewer(palette = COLOR_PALETTE)
-ggsave("output/exception-magnitude.pdf", width = 4.5, height = 3.5)
+ggsave("output/appendix-exception-magnitude.pdf", width = 4.5, height = 3.5)
 
 cat("Exception coverage effect size magnitude: \n")
 pairwise_magnitude %>%
@@ -404,7 +413,7 @@ apply_friedman_test(meanExceptionCoverage$mean_exception_coverage,
                     meanExceptionCoverage$configuration, 
                     meanExceptionCoverage$case)
 
-pdf("output/exception-friedman-nemenyi.pdf", width=7, height=4) 
+pdf("output/appendix-exception-friedman-nemenyi.pdf", width=7, height=4) 
 meanExceptionCoverage %>%
   select(case, configuration, mean_exception_coverage) %>%
   mutate(mean_exception_coverage = 1 - mean_exception_coverage) %>% #The lowest is the best in our case
@@ -413,6 +422,7 @@ meanExceptionCoverage %>%
   as.matrix() %>%
   nemenyi(plottype = "vmcb", conf.level = 1.0 - SIGNIFICANCE_LEVEL)
 dev.off()
+
 
 
 # ######################################################
@@ -440,7 +450,7 @@ results %>%
   xlab(NULL) +
   ylab('Weak mutation score') +
   theme(axis.text.x = element_text(angle = 55, vjust = 0.5))
-ggsave("output/weak-mutation-score.pdf", width = 4.5, height = 3)
+ggsave("output/appendix-weak-mutation-score.pdf", width = 4.5, height = 3)
 
 # Plotting VD-estimate for significant cases
 pairwise %>%
@@ -465,7 +475,7 @@ pairwise %>%
   theme(axis.text.x = element_text(angle = 55, vjust = 0.5)) +
   ylab('VD') +
   scale_y_continuous(limits = c (0.0, 1.2), breaks = c(0.25, 0.5, 0.75, 1.0))
-ggsave("output/weak-mutation-vd.pdf", width = 4.5, height = 3.5)
+ggsave("output/appendix-weak-mutation-vd.pdf", width = 4.5, height = 3.5)
 
 # Output coverage effect size magnitude
 
@@ -488,7 +498,7 @@ pairwise_magnitude %>%
   theme(axis.text.x = element_text(angle = 55, vjust = 0.5)) +
   ylab("Count") +
   scale_fill_brewer(palette = COLOR_PALETTE)
-ggsave("output/weak-mutation-magnitude.pdf", width = 4.5, height = 3.5)
+ggsave("output/appendix-weak-mutation-magnitude.pdf", width = 4.5, height = 3.5)
 
 cat("Weak mutation effect size magnitude: \n")
 pairwise_magnitude %>%
@@ -514,7 +524,7 @@ apply_friedman_test(meanWeakMutationScore$mean_weak_mutation_score,
                     meanWeakMutationScore$configuration, 
                     meanWeakMutationScore$case)
 
-pdf("output/weak-mutation-friedman-nemenyi.pdf", width=7, height=4)
+pdf("output/appendix-weak-mutation-friedman-nemenyi.pdf", width=7, height=4)
 meanWeakMutationScore %>%
   select(case, configuration, mean_weak_mutation_score) %>%
   mutate(mean_weak_mutation_score = 1 - mean_weak_mutation_score) %>% #The lowest is the best in our case
@@ -525,6 +535,7 @@ meanWeakMutationScore %>%
 dev.off()
 
 
+
 # ######################################################
 # Faults Coverage
 # ######################################################
@@ -532,7 +543,7 @@ dev.off()
 temp2 <- temp %>%
   filter(better == 1) %>%
   mutate(cases = paste0(project,"-",bug_id))
-  
+
 
 faults <- getFailureCoverage()
 
@@ -558,7 +569,7 @@ pairwise_faults <- faults %>%
             mean_coverage_rate.config = mean(coverage_rate.config),
             sd_coverage_rate.config = sd(coverage_rate.config)) 
 
-outputFile <- "output/table-real-faults.tex"
+outputFile <- "output/appendix-table-real-faults.tex"
 unlink(outputFile)
 # Redirect cat outputs to file
 sink(outputFile, append = TRUE, split = TRUE)
@@ -587,226 +598,3 @@ for(row in seq(from=1, to=nrow(pairwise_faults), by=1)){
 }
 cat("\\end{tabular}")
 sink()
-
-# ######################################################
-# Branch Coverage evolution over time 
-# ######################################################
-
-results_evolution <- getResultsWithInterval() %>%
-  filter(configuration %in% c('BBC-F0-opt-10', 'BBC-F0-opt-20', 'BBC-F0-opt-30',  
-                              'BBC-F0-opt-40', 'BBC-F0-opt-50', 'BBC-F0-opt-60',  
-                              'BBC-F0-opt-70', 'BBC-F0-opt-80', 'BBC-F0-opt-90',
-                              'BBC-F0-opt-100', 'default')) %>% 
-  mutate(case = paste0(project,'-', bug_id, '-', TARGET_CLASS ),
-         configuration = recode_factor(configuration,
-                                       `BBC-F0-opt-10`= 'bbc-0.1', `BBC-F0-opt-20`= 'bbc-0.2', `BBC-F0-opt-30`= 'bbc-0.3',  
-                                       `BBC-F0-opt-40`= 'bbc-0.4', `BBC-F0-opt-50`= 'bbc-0.5', `BBC-F0-opt-60`= 'bbc-0.6',  
-                                       `BBC-F0-opt-70`= 'bbc-0.7', `BBC-F0-opt-80`= 'bbc-0.8', `BBC-F0-opt-90`= 'bbc-0.9',
-                                       `BBC-F0-opt-100`= 'bbc-1.0', `default`= 'DynaMOSA'))
-
-branch_coverage_evolution <- results_evolution %>%
-  select(case, execution_idx, configuration, BranchCoverageTimeline_T1:BranchCoverageTimeline_T60) %>%
-  pivot_longer(BranchCoverageTimeline_T1:BranchCoverageTimeline_T60, names_to = "elapsed_time", values_to = "branch_coverage") %>%
-  mutate(elapsed_time = (str_remove(elapsed_time, 'BranchCoverageTimeline_T') %>% as.numeric())* 10)
-
-# Plotting regression for branch coverages
-p <- branch_coverage_evolution %>%
-  ggplot(aes(x=elapsed_time, y=branch_coverage)) +
-  geom_boxplot(data = branch_coverage_evolution %>% filter( (elapsed_time %% 20) == 0),
-    aes(group=elapsed_time)) +
-  geom_smooth(level = 1.0 - SIGNIFICANCE_LEVEL) +
-  xlab("Elapsed budget (sec.)") +
-  ylab("Branch coverage") +
-  facet_wrap(~configuration, ncol = 4)
-ggsave("output/branch-coverage-evolution.pdf", plot = p, width = 31, height = 18, units="cm")
-
-# Pairwise comparison for the different elapsed times
-pairwise_branch_coverage_evolution <- branch_coverage_evolution %>%
-  filter(configuration != 'DynaMOSA') %>%
-  inner_join(
-    branch_coverage_evolution %>%
-      filter(configuration == 'DynaMOSA'),
-    by = c('case', 'elapsed_time'),
-    suffix = c('.config', '.base')) %>%
-  group_by(case, elapsed_time, configuration.config)  %>%
-  summarise(branch_coverage.VD.magnitude = VD.A(branch_coverage.config, branch_coverage.base)$magnitude,
-            branch_coverage.VD.estimate = VD.A(branch_coverage.config, branch_coverage.base)$estimate,
-            branch_coverage.wilcox.test.pvalue = wilcox.test(branch_coverage.config, branch_coverage.base)$p.value) %>%
-  mutate(branch_coverage.VD.estimate.category = case_when(
-    branch_coverage.VD.estimate < 0.5 ~ '< 0.5',
-    branch_coverage.VD.estimate > 0.5 ~ '> 0.5',
-    TRUE ~ '= 0.5'),
-    branch_coverage.VD.magnitude = recode_factor(branch_coverage.VD.magnitude,
-                  `negligible`= 'negligible', `small`= 'small', `medium`= 'medium', `large`= 'large'))
- 
-branch_coverage_magnitude_evolution <- pairwise_branch_coverage_evolution %>%
-  filter(branch_coverage.wilcox.test.pvalue < SIGNIFICANCE_LEVEL) %>%
-  filter(branch_coverage.VD.magnitude != "negligible") %>%
-  rename(magnitude = branch_coverage.VD.magnitude,
-         category = branch_coverage.VD.estimate.category,
-         configuration = configuration.config) %>%
-  group_by(elapsed_time, magnitude, category, configuration) %>%
-  summarise(count = n())
-
-#Graph with the evoluation of the effect sizes per magnitude and category
-p <- branch_coverage_magnitude_evolution %>% 
-  filter((elapsed_time %% 20) == 0) %>%
-  ggplot(aes(x=elapsed_time, fill=magnitude)) +
-  geom_bar(data = filter(branch_coverage_magnitude_evolution, category == '> 0.5', (elapsed_time %% 20) == 0), 
-           aes(y = count, fill = magnitude), stat = "identity") +
-  geom_bar(data = filter(branch_coverage_magnitude_evolution, category == '< 0.5', (elapsed_time %% 20) == 0), 
-           aes(y = -count, fill = magnitude), stat = "identity") +
-  geom_hline(yintercept = 0) +
-  xlab("Elapsed time (sec.)") + 
-  ylab("Count") +
-  scale_fill_brewer(palette = COLOR_PALETTE) +
-  facet_wrap(~configuration, ncol = 5)
-ggsave("output/branch-coverage-effsize-evolution.pdf", plot = p, width = 31, height = 18, units="cm")
-  
-# Boxplot with the evolution of the VD values 
-pairwise_branch_coverage_evolution %>%
-  filter(branch_coverage.wilcox.test.pvalue < SIGNIFICANCE_LEVEL) %>%
-  rename(magnitude = branch_coverage.VD.magnitude,
-         estimate = branch_coverage.VD.estimate,
-         category = branch_coverage.VD.estimate.category) %>%
-  ggplot(aes(x=as.factor(elapsed_time), y=estimate)) + 
-  geom_boxplot() +
-  xlab("Elapsed time (sec.)") +
-  ylab("VD")
-
-df <- count_signif_pairwise_branch_coverage_evolution <- pairwise_branch_coverage_evolution %>%
-  filter(branch_coverage.wilcox.test.pvalue < SIGNIFICANCE_LEVEL) %>%
-  group_by(configuration.config, elapsed_time) %>%
-  count()
-print(df)
-
-df2 <- pairwise_branch_coverage_evolution %>%
-  filter(branch_coverage.wilcox.test.pvalue < SIGNIFICANCE_LEVEL) %>%
-  rename(magnitude = branch_coverage.VD.magnitude,
-         category = branch_coverage.VD.estimate.category,
-         configuration = configuration.config) %>%
-  group_by(configuration, elapsed_time, magnitude, category) %>%
-  summarise(count = n()) %>%
-  pivot_wider(names_from = magnitude, values_from = count)
-print(df2, n = Inf)
-
-df2 %>%
-  filter(elapsed_time %in% c(180, 300, 600)) %>%
-  arrange(elapsed_time, large, medium) %>%
-  print(n = Inf)
-
-# ########################################################################
-# Analysis of org.apache.commons.cli.HelpFormatter in Cli-31 and Cli-32
-# ########################################################################
-
-Cli31 <- results %>%
-  filter(project == 'Cli', bug_id == 31 ,TARGET_CLASS == 'org.apache.commons.cli.HelpFormatter')
-
-Cli31 %>%
-  group_by(configuration) %>%
-  summarise(mean(OutputCoverage), sd(OutputCoverage))
-
-Cli31 %>%
-  ggplot(aes(x = configuration, y = OutputCoverage)) +
-  geom_boxplot() +
-  stat_summary(
-    fun = mean,
-    geom = "point",
-    shape = 0,
-    color = "black",
-    fill = "white"
-  ) +
-  xlab(NULL) +
-  ylab('Output coverage') +
-  theme(axis.text.x = element_text(angle = 55, vjust = 0.5))
-
-faults %>%
-  filter(project == 'Cli', bug_id == 31 ,TARGET_CLASS == 'org.apache.commons.cli.HelpFormatter')
-
-Cli31 %>%
-  pivot_longer(cols = c(BranchCoverage, OutputCoverage, ExceptionCoverage, WeakMutationScore),
-               names_to = "Criterion", values_to = "Coverage") %>%
-  ggplot(aes(x = configuration, y = Coverage)) +
-  geom_boxplot() +
-  stat_summary(
-    fun = mean,
-    geom = "point",
-    shape = 0,
-    color = "black",
-    fill = "white"
-  ) +
-  xlab(NULL) +
-  ylab('Output coverage') +
-  theme(axis.text.x = element_text(angle = 55, vjust = 0.5)) +
-  facet_wrap(.~Criterion, ncol = 2)
-
-
-
-Cli3132 <- results %>%
-  filter(project == 'Cli', bug_id %in% c(31, 32) ,TARGET_CLASS == 'org.apache.commons.cli.HelpFormatter')
-
-Cli3132 %>%
-  group_by(configuration) %>%
-  summarise(mean(OutputCoverage), sd(OutputCoverage))
-
-Cli3132 %>%
-  pivot_longer(cols = c(BranchCoverage, OutputCoverage, ExceptionCoverage, WeakMutationScore),
-               names_to = "Criterion", values_to = "Coverage") %>%
-  ggplot(aes(x = configuration, y = Coverage, fill = as.factor(bug_id))) +
-  geom_boxplot() +
-  xlab(NULL) +
-  ylab(NULL) +
-  theme(axis.text.x = element_text(angle = 55, vjust = 0.5)) +
-  facet_wrap(.~Criterion, ncol = 2)
-
-Cli3132 %>%
-  ggplot(aes(x = configuration, y = Size, fill = as.factor(bug_id))) +
-  geom_boxplot() +
-  xlab(NULL) +
-  theme(axis.text.x = element_text(angle = 55, vjust = 0.5))
-
-Cli3132 %>%
-  ggplot(aes(x = configuration, y = Length, fill = as.factor(bug_id))) +
-  geom_boxplot() +
-  xlab(NULL) +
-  theme(axis.text.x = element_text(angle = 55, vjust = 0.5))
-
-Cli3132Pairwise <- pairwise %>%
-  filter(project == 'Cli', bug_id %in% c(31, 32) ,TARGET_CLASS == 'org.apache.commons.cli.HelpFormatter')
-
-Cli3132pairwiseExceptionCoverage <- pairwiseExceptionCoverage %>%
-  filter(project == 'Cli', bug_id %in% c(31, 32) ,TARGET_CLASS == 'org.apache.commons.cli.HelpFormatter')
-
-
-# ####################################################################
-# Correlation analysis between output coverage and exception coverage 
-# ####################################################################
-
-cor.test(results$OutputCoverage, results$ExceptionCoverage, method="kendall")
-cor.test(results$OutputCoverage, results$ExceptionCoverage, method="spearman")
-
-cor.test(results$OutputCoverage, results$BranchCoverage, method="spearman")
-cor.test(results$WeakMutationScore, results$BranchCoverage, method="spearman")
-
-
-
-raw_df <- getBBCDF()
-bbc_call <- raw_df %>% group_by(project_id,target_class,bug_id) %>% summarise(sum_called = median(called), sum_activated = sum(activated), sum_useful = sum(useful))
-pairwise_new <- pairwise %>%
-  inner_join(pairwiseExceptionCoverage,
-            by = c('project', 'bug_id', 'case','TARGET_CLASS','configuration.config'))
-
-
-temp_res <- pairwise_new %>% filter(configuration.config == "bbc-0.1")
-
-temp_res$target_class <- temp_res$TARGET_CLASS
-bbc_call$project <- bbc_call$project_id
-res <- bbc_call %>%
-  left_join(temp_res,
-            by = c('project', 'bug_id', 'target_class'))
-
-cor.test(res$sum_useful, res$BranchCoverage.VD.estimate, method="spearman")
-cor.test(res$sum_useful, res$WeakMutationScore.VD.estimate, method="spearman")
-cor.test(res$sum_useful, res$OutputCoverage.VD.estimate, method="spearman")
-res <- res %>% filter(! is.na(ExceptionCoverage.VD.estimate))
-cor.test(res$sum_useful, res$ExceptionCoverage.VD.estimate, method="spearman")
