@@ -46,6 +46,32 @@ pairwise <- results %>%
       OutputCoverage.VD.estimate > 0.5 ~ '> 0.5',
       TRUE ~ '= 0.5'))
 
+
+sample1 <- results %>%
+  filter(configuration == "DynaMOSA") %>%
+  select(BranchCoverage)
+
+
+sample2 <- results %>%
+  filter(configuration == "DynaMOSA") %>%
+  group_by(TARGET_CLASS,execution_idx) %>%
+  summarise(branch = first(BranchCoverage))
+
+wilcox.test(sample1$BranchCoverage, sample2$branch)
+
+
+
+sample1 <- results %>%
+  filter(configuration == "DynaMOSA") %>%
+  select(LineCoverage)
+
+
+sample2 <- results %>%
+  filter(configuration == "DynaMOSA") %>%
+  group_by(TARGET_CLASS,execution_idx) %>%
+  summarise(branch = first(LineCoverage))
+
+
 # ######################################################
 # Branch Coverage
 # ######################################################

@@ -190,19 +190,9 @@ public static double linearCombination(final double[] a, final double[] b)
 
 ```
 
-This exception can be triggered only in one specific case where the passed arrays (a and b) both has size 1.
+This exception can be triggered only in one specific case where the input parameters (a and b) both has size 1.
 
 If a and b does not have the same size this method throw an explicit branch. Hence, approach level and branch distance can guide the search process to make sure that the generated tests that assign arrays with the same sizes to a and b has higher fitness.
 However, since the explicit branch was the only control depdendent branch for the target lines. the search process does not have any guidance to cover the next lines (including the target line from the stacktrace). Assume that test T1 instantiate a and b with size 0. Then, this method throws ArrayIndexOutOfBoundsException in one line before the target line. This implicit branch will be hidden from approach level and branch distance. By adding BBC, the search process can differentiate these two tests and help the search process to generate tests that can cover next lines more often. By having more tests that can cover the target line, the search process ahs higher chance to execute the target line and thereby find the ArrayIndexOutOfBoundsException in this line. 
 
 DynaMOSA managed to detect this fault only 9/30. However, BBC-0.5 captured this fault 23/30 times. 
-
-## Codec-13
-
-stacktrace:
-```
-java.lang.NullPointerException
-	at org.apache.commons.codec.language.DoubleMetaphone.isDoubleMetaphoneEqual(DoubleMetaphone.java:244)
-```
-
-target class: org.apache.commons.codec.language.DoubleMetaphone
