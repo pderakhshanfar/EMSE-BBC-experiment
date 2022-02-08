@@ -15,5 +15,6 @@ ${COMMAND} run -dit -u ${UID} --name test-generation-container  \
 --mount type=bind,source="$(pwd)/libs",target=/experiment/libs \
 --mount type=bind,source="$(pwd)/data",target=/experiment/data \
 --mount type=bind,source="$(pwd)/logs",target=/experiment/logs \
+--mount type=bind,source="$(pwd)/tests-without-trycatch",target=/experiment/tests-without-trycatch \
 test-generation-img
 

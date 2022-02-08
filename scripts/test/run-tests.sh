@@ -42,7 +42,7 @@ do
         do
 
             # Now, we can do the main task for the current config, subject, and execution round
-            current_test_dir="results/tests-without-trycatch/$project_name/$target_class/$configuration_name/$round"
+            current_test_dir="tests-without-trycatch/$project_name/$target_class/$configuration_name/$round"
             
             if [ ! -d "$current_test_dir" ]; then
                 echo "$current_test_dir is missing!"
@@ -69,7 +69,7 @@ do
             for mainTest in `find "$current_test_dir" -name "*_ESTest.java" -type f`; do
                 testClass="$(basename $mainTest .java)"
                 package_name="${target_class%\.*}"
-                java -cp "$project_cp:$current_test_dir:$test_execution_cp" org.junit.runner.JUnitCore "$package_name.$testClass" > "$outputDir/$configuration_name.txt" &
+                java -Xmx1G -cp "$project_cp:$current_test_dir:$test_execution_cp" org.junit.runner.JUnitCore "$package_name.$testClass" > "$outputDir/$configuration_name.txt" &
             done
 
 
