@@ -5,6 +5,8 @@ library(ggplot2)
 library(questionr)
 library(effsize)
 
+
+
 results <- getFullResults() %>%
   filter(configuration %in% c('bbc-0.1', 'bbc-0.2', 'bbc-0.3', 'bbc-0.4', 'bbc-0.5', 'bbc-0.6',  
                               'bbc-0.7', 'bbc-0.8', 'bbc-0.9', 'bbc-1.0', 'DynaMOSA'))
@@ -43,6 +45,32 @@ pairwise <- results %>%
       OutputCoverage.VD.estimate < 0.5 ~ '< 0.5',
       OutputCoverage.VD.estimate > 0.5 ~ '> 0.5',
       TRUE ~ '= 0.5'))
+
+
+sample1 <- results %>%
+  filter(configuration == "DynaMOSA") %>%
+  select(BranchCoverage)
+
+
+sample2 <- results %>%
+  filter(configuration == "DynaMOSA") %>%
+  group_by(TARGET_CLASS,execution_idx) %>%
+  summarise(branch = first(BranchCoverage))
+
+wilcox.test(sample1$BranchCoverage, sample2$branch)
+
+
+
+sample1 <- results %>%
+  filter(configuration == "DynaMOSA") %>%
+  select(LineCoverage)
+
+
+sample2 <- results %>%
+  filter(configuration == "DynaMOSA") %>%
+  group_by(TARGET_CLASS,execution_idx) %>%
+  summarise(branch = first(LineCoverage))
+
 
 # ######################################################
 # Branch Coverage
@@ -136,6 +164,7 @@ ggsave("output/branch-magnitude.pdf", width = 4.5, height = 3.5)
 cat("Branch coverage effect size magnitude: \n")
 pairwise_magnitude %>%
   filter(magnitude == 'large') %>%
+  arrange(count) %>%
   print(n = Inf)
 
 # Analysis using Friedman's test
@@ -176,7 +205,8 @@ results %>%
   summarise(mean_output_coverage = mean(OutputCoverage),
             sd_output_coverage = sd(OutputCoverage),
             median_output_coverage = median(OutputCoverage),
-            iqr_output_coverage = IQR(OutputCoverage))
+            iqr_output_coverage = IQR(OutputCoverage)) %>%
+  arrange(mean_output_coverage)
 
 results %>%
   ggplot(aes(x = configuration, y = OutputCoverage)) +
@@ -244,6 +274,7 @@ ggsave("output/output-magnitude.pdf", width = 4.5, height = 3.5)
 cat("Output coverage effect size magnitude: \n")
 pairwise_magnitude %>%
   filter(magnitude == 'large') %>%
+  arrange(count)
   print(n = Inf)
 
 cat("Target classes for which BBC has a large negative effect size: \n")
@@ -309,7 +340,8 @@ resultsExceptionCoverage %>%
   summarise(mean_exception_coverage = mean(ExceptionCoverage),
             sd_exception_coverage = sd(ExceptionCoverage),
             median_exception_coverage = median(ExceptionCoverage),
-            iqr_exception_coverage = IQR(ExceptionCoverage))
+            iqr_exception_coverage = IQR(ExceptionCoverage)) %>%
+  arrange(mean_exception_coverage)
 
 resultsExceptionCoverage %>%
   ggplot(aes(x = configuration, y = ExceptionCoverage)) +
@@ -377,6 +409,7 @@ ggsave("output/exception-magnitude.pdf", width = 4.5, height = 3.5)
 cat("Exception coverage effect size magnitude: \n")
 pairwise_magnitude %>%
   filter(magnitude == 'large') %>%
+  arrange(count) %>%
   print(n = Inf)
 
 # Analysis using Friedman's test
@@ -417,7 +450,8 @@ results %>%
   summarise(mean_branch_coverage = mean(WeakMutationScore),
             sd_branch_coverage = sd(WeakMutationScore),
             median_branch_coverage = median(WeakMutationScore),
-            iqr_branch_coverage = IQR(WeakMutationScore))
+            iqr_branch_coverage = IQR(WeakMutationScore)) %>%
+  arrange(mean_branch_coverage)
 
 results %>%
   ggplot(aes(x = configuration, y = WeakMutationScore)) +
@@ -485,6 +519,7 @@ ggsave("output/weak-mutation-magnitude.pdf", width = 4.5, height = 3.5)
 cat("Weak mutation effect size magnitude: \n")
 pairwise_magnitude %>%
   filter(magnitude == 'large') %>%
+  arrange(count) %>%
   print(n = Inf)
 
 # Analysis using Friedman's test
@@ -519,6 +554,11 @@ dev.off()
 # ######################################################
 # Faults Coverage
 # ######################################################
+
+temp2 <- temp %>%
+  filter(better == 1) %>%
+  mutate(cases = paste0(project,"-",bug_id))
+  
 
 faults <- getFailureCoverage()
 
@@ -662,18 +702,24 @@ pairwise_branch_coverage_evolution %>%
 
 df <- count_signif_pairwise_branch_coverage_evolution <- pairwise_branch_coverage_evolution %>%
   filter(branch_coverage.wilcox.test.pvalue < SIGNIFICANCE_LEVEL) %>%
-  group_by(elapsed_time) %>%
+  group_by(configuration.config, elapsed_time) %>%
   count()
 print(df)
 
 df2 <- pairwise_branch_coverage_evolution %>%
   filter(branch_coverage.wilcox.test.pvalue < SIGNIFICANCE_LEVEL) %>%
   rename(magnitude = branch_coverage.VD.magnitude,
-         category = branch_coverage.VD.estimate.category) %>%
-  group_by(elapsed_time, magnitude, category) %>%
+         category = branch_coverage.VD.estimate.category,
+         configuration = configuration.config) %>%
+  group_by(configuration, elapsed_time, magnitude, category) %>%
   summarise(count = n()) %>%
   pivot_wider(names_from = magnitude, values_from = count)
-print(df2)
+print(df2, n = Inf)
+
+df2 %>%
+  filter(elapsed_time %in% c(180, 300, 600)) %>%
+  arrange(elapsed_time, large, medium) %>%
+  print(n = Inf)
 
 # ########################################################################
 # Analysis of org.apache.commons.cli.HelpFormatter in Cli-31 and Cli-32
@@ -763,11 +809,30 @@ Cli3132pairwiseExceptionCoverage <- pairwiseExceptionCoverage %>%
 # ####################################################################
 
 cor.test(results$OutputCoverage, results$ExceptionCoverage, method="kendall")
-
 cor.test(results$OutputCoverage, results$ExceptionCoverage, method="spearman")
 
+cor.test(results$OutputCoverage, results$BranchCoverage, method="spearman")
+cor.test(results$WeakMutationScore, results$BranchCoverage, method="spearman")
 
 
 
+raw_df <- getBBCDF()
+bbc_call <- raw_df %>% group_by(project_id,target_class,bug_id) %>% summarise(sum_called = median(called), sum_activated = sum(activated), sum_useful = sum(useful))
+pairwise_new <- pairwise %>%
+  inner_join(pairwiseExceptionCoverage,
+            by = c('project', 'bug_id', 'case','TARGET_CLASS','configuration.config'))
 
 
+temp_res <- pairwise_new %>% filter(configuration.config == "bbc-0.1")
+
+temp_res$target_class <- temp_res$TARGET_CLASS
+bbc_call$project <- bbc_call$project_id
+res <- bbc_call %>%
+  left_join(temp_res,
+            by = c('project', 'bug_id', 'target_class'))
+
+cor.test(res$sum_useful, res$BranchCoverage.VD.estimate, method="spearman")
+cor.test(res$sum_useful, res$WeakMutationScore.VD.estimate, method="spearman")
+cor.test(res$sum_useful, res$OutputCoverage.VD.estimate, method="spearman")
+res <- res %>% filter(! is.na(ExceptionCoverage.VD.estimate))
+cor.test(res$sum_useful, res$ExceptionCoverage.VD.estimate, method="spearman")

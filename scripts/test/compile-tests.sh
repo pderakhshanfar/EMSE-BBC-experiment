@@ -41,7 +41,7 @@ do
         for (( round=FirstRound; round<=LastRound; round++ ))
         do
             # Now, we can do the main task for the current config, subject, and execution round
-            current_test_dir="$root_dir/tests-without-trycatch/$project_name/$target_class/$configuration_name/$round"
+            current_test_dir="$root_dir/results/tests-without-trycatch/$project_name/$target_class/$configuration_name/$round"
             if [ ! -d "$current_test_dir" ]; then
                 echo "$current_test_dir is missing!"
                 continue
