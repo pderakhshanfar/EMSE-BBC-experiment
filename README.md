@@ -20,7 +20,7 @@
   * [Remove try/catches](#remove-try-catches)
   * [Analyze captured exceptions](#analyze-captured-exceptions)
 - [Data analysis](#data-analysis)
-- [License & Copyright](#license---copyright)
+- [License & Copyright](#license--copyright)
 # Subject selection
 __!__ Requirements: Defects4j, Rscript, and Docker
 
