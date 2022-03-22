@@ -1,7 +1,23 @@
 # EMSE-BBC-experiment
 
+# Table of contents
+
+- [EMSE-BBC-experiment](#emse-bbc-experiment)
+- [Subject selection](#subject-selection)
+- [Test Generation](#test-generation)
+  - [Docker container](#docker-container)
+  - [Main test generation](#main-test-generation)
+  - [Replicating the test generation](#replicating-the-test-generation)
+  - [Running the experiment with new seeds](#running-the-experiment-with-new-seeds)
+  - [Output](#output)
+  - [Collecting all results in a CSV file](#collecting-all-results-in-a-csv-file)
+- [Captured failures](#captured-failures)
+  - [Bug exposing stacktraces](#bug-exposing-stacktraces)
+  - [Remove try/catches](#remove-trycatches)
+  - [Analyze captured exceptions](#analyze-captured-exceptions)
+- [Data analysis](#data-analysis)
 # Subject selection
-__!__ Requirements: Defects4j
+__!__ Requirements: Defects4j, Rscript, and Docker
 
 ### Collect selected bugs:
 
@@ -92,8 +108,20 @@ The csv file reporting the fault coverages will be saved as `data/captured_excep
 
 # Data analysis
 
-The R scripts used for the data analysis are available in the `data-analysis/` folder. To run the data analysis on the results, run the following command from the `data-analysis/` folder:
+The R scripts used for the data analysis are available in the `data-analysis/` folder.
+
+To run the data analysis for RQ1, run the following command from the `data-analysis/` folder:
+```
+Rscript BBC-called.R
+```
+
+To run the data analysis for RQ1.1-1.3, run the following command from the `data-analysis/` folder:
 ```
 Rscript analysis.r
 ```
-The graphs and table will be generated in the `data-analysis/output/` folder.
+
+To run the data analysis for RQ1.1.4, run the following command from the `data-analysis/` folder:
+```
+Rscript time-intervals.R
+```
+The graphs and tables will be generated in the `data-analysis/output/` folder.
