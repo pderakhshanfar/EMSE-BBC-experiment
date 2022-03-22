@@ -3,19 +3,24 @@
 # Table of contents
 
 - [EMSE-BBC-experiment](#emse-bbc-experiment)
+- [Table of contents](#table-of-contents)
 - [Subject selection](#subject-selection)
+    + [Collect selected bugs:](#collect-selected-bugs-)
+    + [Collect subjects](#collect-subjects)
+    + [Collect and compile buggy versions](#collect-and-compile-buggy-versions)
 - [Test Generation](#test-generation)
-  - [Docker container](#docker-container)
-  - [Main test generation](#main-test-generation)
-  - [Replicating the test generation](#replicating-the-test-generation)
-  - [Running the experiment with new seeds](#running-the-experiment-with-new-seeds)
-  - [Output](#output)
-  - [Collecting all results in a CSV file](#collecting-all-results-in-a-csv-file)
+  * [Docker container](#docker-container)
+  * [Main test generation](#main-test-generation)
+  * [Replicating the test generation](#replicating-the-test-generation)
+  * [Running the experiment with new seeds](#running-the-experiment-with-new-seeds)
+  * [Output](#output)
+  * [Collecting all results in a CSV file](#collecting-all-results-in-a-csv-file)
 - [Captured failures](#captured-failures)
-  - [Bug exposing stacktraces](#bug-exposing-stacktraces)
-  - [Remove try/catches](#remove-trycatches)
-  - [Analyze captured exceptions](#analyze-captured-exceptions)
+  * [Bug exposing stacktraces](#bug-exposing-stacktraces)
+  * [Remove try/catches](#remove-try-catches)
+  * [Analyze captured exceptions](#analyze-captured-exceptions)
 - [Data analysis](#data-analysis)
+- [License & Copyright](#license---copyright)
 # Subject selection
 __!__ Requirements: Defects4j, Rscript, and Docker
 
@@ -125,3 +130,17 @@ To run the data analysis for RQ1.1.4, run the following command from the `data-a
 Rscript time-intervals.R
 ```
 The graphs and tables will be generated in the `data-analysis/output/` folder.
+
+
+# License & Copyright
+
+The materials herein are all copyright of Pouria Derakhshanfar and Xavier Devroey. The material was produced while working at Delft University of Technology and the University of Namur.
+
+All the source code in this repository is released under [MIT License](LICENSE).
+
+<a rel="license" href="https://creativecommons.org/licenses/by/4.0/">
+<img alt="Creative Commons License" style="border-width:0;width:100px" 
+src="https://mirrors.creativecommons.org/presskit/buttons/88x31/png/by.png" /></a>
+<br />
+
+The documentation and data are licensed under a [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/).
